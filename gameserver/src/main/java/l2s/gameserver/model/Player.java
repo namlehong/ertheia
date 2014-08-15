@@ -1062,9 +1062,6 @@ public final class Player extends Playable implements PlayerGroup
 	@Override
 	public final Sex getSex()
 	{
-		if(getRace() == Race.ERTHEIA)
-			return Sex.FEMALE;
-
 		return getTemplate().getSex();
 	}
 

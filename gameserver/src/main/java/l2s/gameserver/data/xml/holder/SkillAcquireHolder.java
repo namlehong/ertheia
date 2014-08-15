@@ -27,6 +27,7 @@ import l2s.gameserver.model.base.ClassLevel;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.pledge.Clan;
 import l2s.gameserver.model.pledge.SubUnit;
+import l2s.gameserver.tables.SkillTable;
 
 /**
  * @author: VISTALL
