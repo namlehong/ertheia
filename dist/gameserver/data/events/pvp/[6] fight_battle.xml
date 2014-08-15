@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "events.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<event id="6" name="Fight Battle" type="PVP_EVENT" impl="FightBattle">
+		<parameter name="allow" value="false"/>	<!--Allow event-->
+		<parameter name="start_time" value="30 0,2,4,8,10,12,14,16,18,20,22 * * *"/>	<!--In cron format-->
+		<parameter name="min_participants" value="2"/>	<!--2 patricipants is minimum-->
+		<parameter name="max_participants" value="50"/>	<!--odd value is recommended-->
+		<!--Registration conditions-->
+		<parameter name="min_level" value="85"/>
+		<parameter name="min_class_level" value="AWAKED"/>	<!--NONE, FIRST, SECOND, THIRD, AWAKED-->
+		<parameter name="multi_registration" value="true"/>	<!--Allowed to register multiple times with one HWID-->
+		<!--Battle parameters-->
+		<parameter name="battle_delay" value="300"/>	<!--Battle duration-->
+		<parameter name="allow_observ" value="true"/>	<!--Allow observer mode in battle-->
+		<on_stop>
+			<despawn name="manager"/>	<!--despawning event managers-->
+		</on_stop>
+		<on_time>
+			<on time="-900">	<!--15 minutes before the event starts-->
+				<start name="registration"/>	<!--start registration in event-->
+				<spawn name="manager"/>	<!--spawning event managers-->
+				<announce val="0"/>	<!--Registration on Fight Battle event started!-->
+			</on>
+			<on time="-600">	<!--10 minutes before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 10 minute(s).-->
+			</on>
+			<on time="-300">	<!--5 minutes before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 5 minute(s).-->
+			</on>
+			<on time="-180">	<!--3 minutes before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 3 minute(s).-->
+			</on>
+			<on time="-120">	<!--2 minutes before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 2 minute(s).-->
+			</on>
+			<on time="-60">	<!--1 minutes before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 1 minute(s).-->
+			</on>
+			<on time="-30">	<!--30 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 30 second(s).-->
+			</on>
+			<on time="-15">	<!--15 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 15 second(s).-->
+			</on>
+			<on time="-10">	<!--10 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 10 second(s).-->
+			</on>
+			<on time="-9">	<!--9 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 9 second(s).-->
+			</on>
+			<on time="-8">	<!--8 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 8 second(s).-->
+			</on>
+			<on time="-7">	<!--7 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 7 second(s).-->
+			</on>
+			<on time="-6">	<!--6 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 6 second(s).-->
+			</on>
+			<on time="-5">	<!--5 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 5 second(s).-->
+			</on>
+			<on time="-4">	<!--4 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 4 second(s).-->
+			</on>
+			<on time="-3">	<!--3 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 3 second(s).-->
+			</on>
+			<on time="-2">	<!--2 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 2 second(s).-->
+			</on>
+			<on time="-1">	<!--1 seconds before the event starts-->
+				<announce val="1"/>	<!--Fight Battle event starts in 1 second(s).-->
+			</on>
+			<on time="0">
+				<stop name="registration"/>	<!--stop registration on event-->
+				<start name="event"/>	<!--start fight battle event-->
+				<announce val="2"/>	<!--Fight Battle event has been started.-->
+			</on>
+			<on time="1500">	<!--5 minutes before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 5 minute(s).-->
+			</on>
+			<on time="1620">	<!--3 minutes before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 3 minute(s).-->
+			</on>
+			<on time="1680">	<!--2 minutes before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 2 minute(s).-->
+			</on>
+			<on time="1740">	<!--1 minutes before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 1 minute(s).-->
+			</on>
+			<on time="1770">	<!--30 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 30 second(s).-->
+			</on>
+			<on time="1785">	<!--15 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 15 second(s).-->
+			</on>
+			<on time="1790">	<!--10 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 10 second(s).-->
+			</on>
+			<on time="1791">	<!--9 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 9 second(s).-->
+			</on>
+			<on time="1792">	<!--8 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 8 second(s).-->
+			</on>
+			<on time="1793">	<!--7 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 7 second(s).-->
+			</on>
+			<on time="1794">	<!--6 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 6 second(s).-->
+			</on>
+			<on time="1795">	<!--5 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 5 second(s).-->
+			</on>
+			<on time="1796">	<!--4 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 4 second(s).-->
+			</on>
+			<on time="1797">	<!--3 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 3 second(s).-->
+			</on>
+			<on time="1798">	<!--2 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 2 second(s).-->
+			</on>
+			<on time="1799">	<!--1 seconds before the event ends-->
+				<announce val="3"/>	<!--Fight Battle event will end in 1 second(s).-->
+			</on>
+			<on time="1800">
+				<announce val="4"/>	<!--Fight Battle event ended.-->
+				<stop name="event"/>	<!--stop fight battle event-->
+			</on>
+		</on_time>
+		<objects name="manager">
+			<spawn_ex name="fight_battle_event"/>
+		</objects>
+		<objects name="rewards_0">	<!--Rewards with 0 battle win's-->
+			<reward item_id="57" min_count="10000" max_count="10000" chance="100.0"/>	<!--Adena-->
+		</objects>
+		<objects name="rewards_1">	<!--Rewards with 1 battle win's-->
+			<reward item_id="57" min_count="100000" max_count="100000" chance="100.0"/>	<!--Adena-->
+		</objects>
+		<objects name="rewards_2">	<!--Rewards with 2 battle win's-->
+			<reward item_id="57" min_count="200000" max_count="200000" chance="100.0"/>	<!--Adena-->
+		</objects>
+		<objects name="rewards_3">	<!--Rewards with 3 battle win's-->
+			<reward item_id="57" min_count="300000" max_count="300000" chance="100.0"/>	<!--Adena-->
+		</objects>
+	</event>
+</list>

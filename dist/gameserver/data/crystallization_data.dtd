@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT list (grade)*>
+
+<!ELEMENT grade (crystal)*>
+<!ATTLIST grade
+	type CDATA #REQUIRED>
+
+	<!ELEMENT crystal (item)*>
+	<!ATTLIST crystal
+		count CDATA #REQUIRED>
+
+		<!ELEMENT item (#PCDATA)>
+		<!ATTLIST item
+			id CDATA #REQUIRED
+			count CDATA #REQUIRED
+			chance CDATA #REQUIRED>

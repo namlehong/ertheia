@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="19100" levels="1" name="Великое Владение Легкой Броней - тест">
+		<set name="icon" value="icon.skill19100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19101" levels="1" name="Цепной Удар - тест">
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="699"/>
+		<set name="hitTime" value="1130"/>
+		<set name="icon" value="icon.skill19101"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19102" levels="1" name="Расположение Хаоса">
+		<set name="icon" value="icon.skill1505"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19103" levels="1" name="Война Обители">
+		<set name="icon" value="icon.skill0050"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" value="700"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.03"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.03"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.03"/>
+		</for>
+	</skill>
+	<skill id="19104" levels="2" name="Война Обители">
+		<set name="icon" value="icon.skill0050"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" value="1000"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="19105" levels="1" name="Преимущество Обители">
+		<set name="icon" value="icon.skill0820"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.13">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="mAtkSpd" value="1.13">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="runSpd" value="1.13">
+				<player maxLevel="84"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="19106" levels="2" name="Преимущество Обители">
+		<set name="icon" value="icon.skill0820"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.15">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="mAtkSpd" value="1.15">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="runSpd" value="1.15">
+				<player maxLevel="84"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="19107" levels="1" name="Рубеж Обители">
+		<set name="icon" value="icon.skill0788_3"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="ExpMultiplier" value="0.03"/>
+		</for>
+	</skill>
+	<skill id="19108" levels="2" name="Рубеж Обители">
+		<set name="icon" value="icon.skill0788_5"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="ExpMultiplier" value="0.05"/>
+		</for>
+	</skill>
+	<skill id="19109" levels="4" name="Дух Осадного Голема">
+		<set name="icon" value="icon.skill19109"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="10000"/>
+		<set name="mpConsume2" value="70"/>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<table name="#npcId">15054 15055 15056 15057</table>
+		<set name="hitCancelTime" value="500"/>
+		<set name="itemConsumeId" value="17371"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summonType" value="SIEGE_SUMMON"/>
+		<set name="is_saveable_summon" value="false"/>	<!--TODO: Check.-->
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="abnormal_time" value="300"/>
+		<!-- Summon-specific -->
+		<set name="npcId" value="#npcId"/>
+		<cond msgId="16">
+			<player summon_siege_golem=""/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="pAtk" value="1.5"/>
+				<add order="0x40" stat="mAtk" value="1.5"/>
+				<mul order="0x30" stat="crossbowWpnVuln" value="0.5"/>
+				<mul order="0x30" stat="bowWpnVuln" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19110" levels="5" name="Дух Выносливости Клана">
+		<table name="#resist">12 13 14 15 16</table>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill_tough_spirit"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="min_pledge_rank" value="WISEMAN"/>
+		<for>
+			<add order="0x40" stat="knockBackResist" value="#resist"/>
+			<add order="0x40" stat="knockDownResist" value="#resist"/>
+		</for>
+	</skill>
+	<skill id="19111" levels="5" name="Тяжелое Сердце Клана">
+		<table name="#airjokeResist">12 13 14 15 16</table>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill_heavy_heart"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="min_pledge_rank" value="WISEMAN"/>
+		<for>
+			<add order="0x40" stat="airjokeResist" value="#airjokeResist"/>
+		</for>
+	</skill>
+	<skill id="19112" levels="1" name="Мгновенное Возвращение Клана">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="3500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_pledge_party_recall"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CLAN_ONLY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="50"/>
+		<set name="fameConsume" value="2000"/>
+		<set name="min_pledge_rank" value="VISCOUNT"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+	<skill id="19113" levels="1" name="Запрет на Возвращение Клана">
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="180"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="clan_recall_block"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_recall"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="min_pledge_rank" value="MARQUIS"/>	<!--Маркиза-->
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="100"/>
+		<set name="castRange" value="600"/>
+		<set name="fameConsume" value="3000"/>
+		<for>
+			<effect name="TeleportBlock"/>
+		</for>
+	</skill>
+	<skill id="19114" levels="1" name="Запрет на Возкрешение Клана">
+		<set name="coolTime" value="500"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="180"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="clan_resurrection_block"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_resurrection"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="min_pledge_rank" value="MARQUIS"/>	<!--Маркиза-->
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="150"/>
+		<set name="castRange" value="600"/>
+		<set name="fameConsume" value="1000"/>
+		<for>
+			<effect name="ResurrectBlock"/>
+		</for>
+	</skill>
+	<skill id="19115" levels="1" name="Воздушное Транспортное Средство">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_dwarf_craft_vehicle"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<and>
+				<player min_clan_level="5"/>
+				<player can_transform="146"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="-1" value="146"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19116" levels="1" name="Оседлать Линдрако">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_lind_vehicle"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="147"/>
+		</cond>
+		<for>
+			<effect name="Transformation" time="-1" value="147"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="19117" levels="1" name="Пространственная Мощь">
+		<set name="icon" value="icon.skill14216"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19118" levels="4" name="Способность к Перемещению">
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19119" levels="1" name="Noblesse Grace">
+		<set name="icon" value="icon.skill1323"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19120" levels="4" name="Noble Shield">
+		<set name="icon" value="icon.skill19120"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19121" levels="4" name="Noble Magic Barrier">
+		<set name="icon" value="icon.skill19121"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19122" levels="4" name="Noble Blessed Body">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19123" levels="4" name="Noble Haste">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19124" levels="2" name="Noble Knight Buffs">
+		<set name="icon" value="icon.skill19124"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19125" levels="2" name="Noble Critical Focus">
+		<set name="icon" value="icon.skill0193"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19126" levels="2" name="Noble Mindset">
+		<set name="icon" value="icon.skill0229"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19127" levels="2" name="Noble Guidance">
+		<set name="icon" value="icon.skill19127"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19128" levels="2" name="Noble Sting">
+		<set name="icon" value="icon.skill10655"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19129" levels="2" name="Noble Protection">
+		<set name="icon" value="icon.skill19129"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19130" levels="2" name="Noble Attributes">
+		<set name="icon" value="icon.skill19130"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19131" levels="2" name="Noble Expertise">
+		<set name="icon" value="icon.skill19131"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19132" levels="2" name="Noble Mind">
+		<set name="icon" value="icon.skill19132"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19133" levels="1" name="Noble Heavy Armor Shield">
+		<set name="icon" value="icon.skill19133"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19134" levels="4" name="Noble Heavy Armor Defense">
+		<set name="icon" value="icon.skill19134"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19135" levels="4" name="Noble Heavy Armor Attack">
+		<set name="icon" value="icon.skill19135"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19136" levels="3" name="Noble Prayer">
+		<set name="icon" value="icon.skill1273"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19137" levels="1" name="Noble Guts">
+		<set name="icon" value="icon.skill19137"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19138" levels="1" name="Noble Frenzy">
+		<set name="icon" value="icon.skill19138"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19139" levels="4" name="Noble Might">
+		<set name="icon" value="icon.skill19139"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19140" levels="2" name="Noble Cost">
+		<set name="icon" value="icon.skill19140"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19141" levels="2" name="Noble Wind Walk">
+		<set name="icon" value="icon.skill1204"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19142" levels="2" name="Noble Warrior Buffs">
+		<set name="icon" value="icon.skill19142"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19143" levels="2" name="Noble Focus">
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19144" levels="2" name="Noble Backfire">
+		<set name="icon" value="icon.skill0030"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19145" levels="2" name="Noble Death Whisper">
+		<set name="icon" value="icon.skill4278"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19146" levels="2" name="Noble Protection Magic">
+		<set name="icon" value="icon.skill19146"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19147" levels="2" name="Noble Ambush">
+		<set name="icon" value="icon.skill1905"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19148" levels="1" name="Noble Light Armor Blessing">
+		<set name="icon" value="icon.skill19148"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19149" levels="4" name="Noble Anti Magic">
+		<set name="icon" value="icon.skill0146"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19150" levels="4" name="Noble Light Armor Attack">
+		<set name="icon" value="icon.skill19150"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19151" levels="3" name="Noble Vampiric Rage">
+		<set name="icon" value="icon.skill1268"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19152" levels="1" name="Noble Endurance">
+		<set name="icon" value="icon.skill19152"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19153" levels="1" name="Noble Critical Boost">
+		<set name="icon" value="icon.skill19153"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19154" levels="4" name="Noble Empower">
+		<set name="icon" value="icon.skill1059"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19155" levels="2" name="Noble Acumen">
+		<set name="icon" value="icon.skill1085"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19156" levels="2" name="Noble Wizard Buffs">
+		<set name="icon" value="icon.skill19156"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19157" levels="2" name="Noble Wild Magic">
+		<set name="icon" value="icon.skill1303"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19158" levels="2" name="Noble Blessed Soul">
+		<set name="icon" value="icon.skill1048"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19159" levels="2" name="Noble Resistance">
+		<set name="icon" value="icon.skill11567"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19160" levels="2" name="Noble Magic Death">
+		<set name="icon" value="icon.skill19160"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19161" levels="2" name="Noble Protection Armor">
+		<set name="icon" value="icon.skill19161"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19162" levels="2" name="Noble Recovery">
+		<set name="icon" value="icon.skill19162"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19163" levels="2" name="Noble Skill Mastery">
+		<set name="icon" value="icon.skill0330"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19164" levels="1" name="Noble Robe Shield">
+		<set name="icon" value="icon.skill19164"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19165" levels="4" name="Noble Robe Defense">
+		<set name="icon" value="icon.skill19165"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19166" levels="4" name="Noble Robe Attack">
+		<set name="icon" value="icon.skill19166"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19167" levels="3" name="Noble Heal Boost">
+		<set name="icon" value="icon.skill19167"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19168" levels="1" name="Noble Gain">
+		<set name="icon" value="icon.skill19168"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19169" levels="1" name="Noble Advance">
+		<set name="icon" value="icon.skill19169"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19170" levels="2" name="Noble Blessing">
+		<set name="icon" value="icon.skill19120"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19171" levels="4" name="Noble Condition">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19172" levels="2" name="Noble Eagle Eye">
+		<set name="icon" value="icon.skill19127"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19173" levels="2" name="Noble Emblem">
+		<set name="icon" value="icon.skill19130"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19174" levels="4" name="Noble Earth">
+		<set name="icon" value="icon.skill19121"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19175" levels="2" name="Noble Life">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19176" levels="2" name="Noble Vision">
+		<set name="icon" value="icon.skill19127"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19177" levels="2" name="Noble Spirit">
+		<set name="icon" value="icon.skill19130"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19178" levels="1" name="나이트 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19179" levels="1" name="워리어 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19180" levels="1" name="로그 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19181" levels="1" name="아처 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19182" levels="1" name="위저드 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19183" levels="1" name="인챈터 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19184" levels="1" name="서머너 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19185" levels="1" name="힐러 히든 트리거1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19186" levels="1" name="램페이지 실드">
+		<set name="icon" value="icon.skill19186"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19187" levels="1" name="블럭케이드">
+		<set name="icon" value="icon.skill19187"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19188" levels="1" name="스니커">
+		<set name="icon" value="icon.skill19188"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19189" levels="1" name="백 덤블링 샷">
+		<set name="icon" value="icon.skill10858"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19190" levels="1" name="브릴리언스 오브 마나">
+		<set name="icon" value="icon.skill19190"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19191" levels="1" name="미스트 아머">
+		<set name="icon" value="icon.skill19191"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19192" levels="1" name="매스 서비터 버서커">
+		<set name="icon" value="icon.skill19192"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19193" levels="1" name="디바인 블레싱">
+		<set name="icon" value="icon.skill19193"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19196" levels="1" name="램페이지 실드">
+		<set name="icon" value="icon.skill19186"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19197" levels="1" name="디바인 블레싱">
+		<set name="icon" value="icon.skill19193"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19198" levels="1" name="타겟 해제">
+		<set name="icon" value="icon.skill0445"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="19199" levels="1" name="싸인 오브 허리케인">
+		<set name="icon" value="icon.skill1996"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

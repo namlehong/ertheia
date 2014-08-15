@@ -1,0 +1,1 @@
+ALTER TABLE `accounts`  ADD COLUMN `allow_hwid` VARCHAR(255) NOT NULL DEFAULT '' AFTER `allow_ip`;

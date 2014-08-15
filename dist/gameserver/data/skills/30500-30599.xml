@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="30500" levels="25" name="Атака с двух сторон">
+		<table name="#effectPoint">96 100 104 111 115 119 128 132 136 145 150 154 164 169 173 182 194 205 217 226 237 246 1071 1168 1247 1344 1465 1575 1684 1773</table>
+		<table name="#mpConsume2">8 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77</table>
+		<table name="#power">22 77 141 221 669 856 1073 1323 1602 1913 2256 2629 3034 3879 4149 4434 4733 18990 20811 23098 25950 29500 33928 39478 46478</table>
+		<table name="#magicLevel">5 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 86 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30500"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="50"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pDef" value="0.9"/>
+				<!--TODO: Дополнительно урон +20%, если противник оглушен.-->
+			</effect>
+		</for>
+	</skill>
+	<skill id="30501" levels="24" name="Удар с разворота">
+		<table name="#mpConsume2">17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77</table>
+		<table name="#power">129 235 369 1116 1428 1789 2205 2671 3189 3760 4383 5058 6466 6916 7390 7888 28134 30832 34221 38446 43706 50268 58492 68865</table>
+		<table name="#magicLevel">20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30501"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+	</skill>
+	<skill id="30502" levels="21" name="Удар с Рассечением">
+		<table name="#mpConsume2">34 37 41 45 49 54 57 61 65 68 70 71 72 73 74 75 75 75 76 76 77</table>
+		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<table name="#activateRate">30 31 32 33 34 35 36 37 38 39 40 43 46 49 60 62 64 66 68 70 75</table>	<!--TODO: Check.-->
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="icon" value="icon.skill30502"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="KNOCKDOWN"/>
+		<set name="saveVs" value="CON"/>
+		<set name="nextAction" value="attack"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="KnockDown"/>
+		</for>
+	</skill>
+	<skill id="30503" levels="8" name="Удар ногой с разворота">
+		<table name="#mpConsume2">81 81 82 83 83 83 84 84</table>
+		<table name="#power">35167 36755 40540 45273 51165 58506 67683 79217</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="60"/>
+		<set name="hitTime" value="2000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30503"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<set name="shieldignore" value="true"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+	</skill>
+	<skill id="30504" levels="13" name="Встречный Ветер Гравитации">
+		<table name="#mpConsume2">75 77 78 79 80 81 82 82 83 83 84 84 85</table>
+		<table name="#power">10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 86081</table>
+		<table name="#magicLevel">76 78 80 82 84 85 87 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="9000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30504"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<set name="shield_ignore_procent" value="50"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<!--TODO: Поднимает в воздух.-->
+	</skill>
+	<skill id="30505" levels="7" name="Гравитационный Шок">
+		<table name="#mpConsume2">149 150 151 151 152 153 155</table>
+		<table name="#power">17266 19164 21530 24475 28150 32755 38563</table>
+		<table name="#magicLevel">87 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30505"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<!--TODO: Ударная волна швыряет цель к персонажу.-->
+	</skill>
+	<skill id="30506" levels="11" name="Удар ногой в голову с разворота">
+		<table name="#mpConsume2">141 143 146 147 149 150 151 151 152 153 155</table>
+		<table name="#power">5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48195</table>
+		<table name="#magicLevel">79 81 81 85 87 89 91 93 95 97 99</table>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="2000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30506"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<set name="trait" value="KNOCKDOWN"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="KnockDown">
+				<def name="fly_radius" value="200"/>	<!--TODO: Check.-->
+			</effect>
+		</for>
+	</skill>
+	<skill id="30507" levels="21" name="Шаг влево">
+		<table name="#mpConsume2">13 14 16 18 19 21 23 24 26 27 28 28 29 29 29 30 30 30 30 30 30</table>
+		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="100"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30508"/>
+		<set name="castRange" value="300"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="60"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="fly_radius" value="300"/>
+		<set name="fly_animation_speed" value="333"/>
+		<set name="fly_position_degree" value="90"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Dual Fist"/>
+				<target min_distance="150"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="RemoveTarget" time="0"/>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="30508" levels="24" name="Шаг вправо">
+		<table name="#mpConsume2">7 9 11 14 15 17 19 20 22 23 25 26 27 28 28 29 29 29 30 30 30 30 30 31</table>
+		<table name="#magicLevel">20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99</table>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="100"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30508"/>
+		<set name="castRange" value="300"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="60"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="CON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="fly_radius" value="300"/>
+		<set name="fly_animation_speed" value="333"/>
+		<set name="fly_position_degree" value="270"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Dual Fist"/>
+				<target min_distance="150"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="RemoveTarget" time="0"/>
+			<effect name="Debuff">
+				<mul order="0x30" stat="fistWpnVuln" value="1.1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30509" levels="4" name="백사이드 스탭">
+		<set name="icon" value="icon.skill30509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30510" levels="1" name="인파이터">
+		<set name="icon" value="icon.skill30510"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30511" levels="3" name="Сила Гравитации">
+		<table name="#mpConsume2">20 44 45</table>
+		<table name="#magicLevel">40 85 95</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<table name="#pDef">1.1 1.15 1.2</table>
+		<table name="#resist">0 15 20</table>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30511"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pDef" value="#pDef"/>
+				<add order="0x40" stat="knockDownPower" value="#resist"/>
+				<add order="0x40" stat="knockBackPower" value="#resist"/>
+				<add order="0x40" stat="pullPower" value="#resist"/>
+				<add order="0x40" stat="airjokePower" value="#resist"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30512" levels="1" name="디스토션">
+		<set name="icon" value="icon.skill30512"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30514" levels="2" name="Уклонение">
+		<table name="#mpConsume2">13 29</table>
+		<table name="#magicLevel">40 85</table>
+		<table name="#abnormal_level">1 2</table>
+		<table name="#pSkillEvasion">1.5 1.7</table>
+		<table name="#pEvasRate">50 70</table>
+		<table name="#mEvasRate">50 70</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30514"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pSkillEvasion" value="#pSkillEvasion"/>
+				<add order="0x40" stat="pEvasRate" value="#pEvasRate"/>
+				<add order="0x40" stat="mEvasRate" value="#mEvasRate"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30515" levels="1" name="스폴레이션">
+		<set name="icon" value="icon.skill30515"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30516" levels="1" name="그라비티 배리어">
+		<set name="icon" value="icon.skill30516"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30517" levels="8" name="Улучшенная Гравитация">
+		<table name="#mpConsume2">73 74 75 75 75 76 76 77</table>
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#activateRate">50 52 54 56 58 60 62 65</table>	<!--TODO: Check.-->
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="GREAT_GRAVITY"/>
+		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_physically"/>
+		<set name="icon" value="icon.skill30517"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="HOLD"/>
+		<set name="saveVs" value="CON"/>
+		<set name="levelModifier" value="2"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="Root"/>
+		</for>
+	</skill>
+	<skill id="30518" levels="8" name="Коварное Опрокидвание">
+		<table name="#mpConsume2">1479 1487 1500 1510 1516 1523 1532 1544</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#activateRate">50 52 54 56 58 60 62 65</table>	<!--TODO: Check.-->
+		<table name="#power">19693 20582 22701 25350 28648 32757 37894 44352</table>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="icon" value="icon.skill30518"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="power" value="#power"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="KNOCKDOWN"/>
+		<set name="saveVs" value="CON"/>
+		<set name="nextAction" value="attack"/>
+		<set name="levelModifier" value="2"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="KnockDown">
+				<def name="fly_radius" value="75"/>	<!--TODO: Check.-->
+			</effect>
+		</for>
+	</skill>
+	<skill id="30519" levels="1" name="워프트 스페이스">
+		<set name="icon" value="icon.skill30519"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30520" levels="2" name="마인드 오브 스틸">
+		<set name="icon" value="icon.skill30520"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30521" levels="1" name="퍼센트 대미지">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30522" levels="1" name="Боевое Ускорение">
+		<set name="icon" value="icon.skill30522"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="30523" level="1" type="RECEIVE_DAMAGE" chance="5" increasing="true">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+	<skill id="30523" levels="3" name="Ускорение Духа">
+		<table name="#runSpd">10 20 50</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill30523"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<set order="0x40" stat="runSpd" value="#runSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30524" levels="1" name="리얼 대미지">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30526" levels="1" name="Удар Гравитации">
+		<set name="icon" value="icon.skill30526"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<!--TODO: При увеличении силы удара урон от каждой атаки возрастает в 4 раза. Дополнительно восстанавливает 30% HP, если эффект Силы Воли заканчивается. Требуются Кастеты.-->
+		</for>
+	</skill>
+	<skill id="30527" levels="1" name="뒤틀린 공간-npc공간">
+		<set name="icon" value="icon.skill1042"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30528" levels="1" name="스페이스 이뮤어">
+		<set name="icon" value="icon.skill30525"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30530" levels="12" name="Искаженная Энергия">
+		<table name="#mpConsume2">34 35 35 36 36 37 37 37 37 38 38 38</table>
+		<table name="#magicLevel">76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<table name="#activateRate">40 40 43 46 49 60 62 64 66 68 70 75</table>	<!--TODO: Check.-->
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="OBLATE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="icon" value="icon.skill30530"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="Immobilize"/>
+		</for>
+	</skill>
+	<skill id="30532" levels="3" name="인사이드 포지션">
+		<set name="icon" value="icon.skill30510"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30540" levels="11" name="Превосходное Владение Кастетами">
+		<table name="#pAtk">1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.45 1.45 1.45 1.45</table>
+		<table name="#pAtkAdd">4 13 63 124 208 306 471 2156 2803 3342 4060</table>
+		<table name="#pAccCombat">0 2 3 3 3 4 4 8 8 8 8</table>
+		<table name="#pAtkSpd">1 1 1 1 1 1 1 1.1 1.1 1.1 1.1</table>
+		<table name="#basePCritRate">0 0 10 10 10 20 20 60 60 60 60</table>
+		<table name="#pCritDamage">1 1 1 1 1 1.1 1.1 1.45 1.45 1.45 1.45</table>
+		<set name="icon" value="icon.skill30524"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="#pAtk">
+				<using kind="Dual Fist"/>
+			</mul>
+			<add order="0x80" stat="pAtk" value="#pAtkAdd">
+				<using kind="Dual Fist"/>
+			</add>
+			<add order="0x40" stat="pAccCombat" value="#pAccCombat">
+				<using kind="Dual Fist"/>
+			</add>
+			<mul order="0x30" stat="pAtkSpd" value="#pAtkSpd">
+				<using kind="Dual Fist"/>
+			</mul>
+			<add order="0x40" stat="basePCritRate" value="#basePCritRate">
+				<using kind="Dual Fist"/>
+			</add>
+			<mul order="0x30" stat="pCritDamage" value="#pCritDamage">
+				<using kind="Dual Fist"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="30541" levels="11" name="Превосходное Владение Легкими Доспехами">
+		<table name="#pDef">14 17 34 51 69 91 99 1398 1520 1642 1807</table>
+		<table name="#pEvasRate">0 2 3 3 3 4 4 8 8 8 8</table>
+		<table name="#mDef">0 0 0 0 0 0 276 552 575 598 630</table>
+		<table name="#critChanceRcpt">1 0.85 0.8 0.8 0.8 0.75 0.75 0.65 0.65 0.65 0.65</table>
+		<set name="icon" value="icon.skill10254"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pDef" value="#pDef">
+				<using armor="Light"/>
+			</add>
+			<add order="0x40" stat="pEvasRate" value="#pEvasRate">
+				<using armor="Light"/>
+			</add>
+			<add order="0x40" stat="mDef" value="#mDef">
+				<using armor="Light"/>
+			</add>
+			<mul order="0x30" stat="critChanceRcpt" value="#critChanceRcpt">
+				<using armor="Light"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="30542" levels="7" name="Превосходная Устойчивость">
+		<table name="#maxHp">58 196 473 5961 6077 6194 6349</table>
+		<table name="#maxCp">0 0 231 291 347 404 481</table>
+		<table name="#regHp">2.5 4.5 6.5 9 10 11 12</table>
+		<table name="#regMp">1.2 1.8 2.4 3 4 5 6</table>
+		<table name="#regCp">0 0 2.4 3 4 5 6</table>
+		<table name="#runSpd">0 0 10 14 14 14 14</table>
+		<set name="icon" value="icon.skill11506"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxHp" value="#maxHp"/>
+			<add order="0x40" stat="maxCp" value="#maxCp"/>
+			<add order="0x40" stat="regHp" value="#regHp"/>
+			<add order="0x40" stat="regMp" value="#regMp"/>
+			<add order="0x40" stat="regCp" value="#regCp"/>
+			<add order="0x40" stat="runSpd" value="#runSpd"/>
+		</for>
+	</skill>
+	<skill id="30543" levels="2" name="슈페리얼 레지스트 어트리뷰트">
+		<set name="icon" value="icon.skill11006"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30544" levels="2" name="슈페리얼 트레이트 레지스턴스">
+		<set name="icon" value="icon.skill10005"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30545" levels="3" name="Превосходные Способности">
+		<table name="#STR">2 4 14</table>
+		<table name="#activateSkillMasterySTR">0 1 1</table>
+		<set name="icon" value="icon.skill0430"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="STR" value="#STR"/>
+			<set order="0x100" stat="activateSkillMasterySTR" value="#activateSkillMasterySTR"/>
+		</for>
+	</skill>
+</list>

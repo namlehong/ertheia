@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (sub_unit_skill_tree|pledge_skill_tree|collection_skill_tree|certification_skill_tree|dual_certification_skill_tree|transfer_skill_tree|normal_skill_tree|chaos_skill_tree|dual_chaos_skill_tree|dual_class_skill_tree|fishing_skill_tree|transformation_skill_tree|awake_parent_skill_tree|noblesse_skill_tree|hero_skill_tree|gm_skill_tree|forgotten_book_skill_tree|ability_skill_tree|abilities_settings)*>
+<!ELEMENT transfer_skill_tree (class)*>
+<!ELEMENT normal_skill_tree (class)*>
+<!ELEMENT dual_class_skill_tree (class)*>
+<!ELEMENT awake_parent_skill_tree (awake_class)*>
+<!ELEMENT sub_unit_skill_tree (skill)*>
+<!ELEMENT pledge_skill_tree (skill)*>
+<!ELEMENT collection_skill_tree (skill)*>
+<!ELEMENT certification_skill_tree (skill)*>
+<!ELEMENT dual_certification_skill_tree (skill)*>
+<!ELEMENT fishing_skill_tree (skill)*>
+<!ELEMENT transformation_skill_tree (skill)*>
+<!ELEMENT chaos_skill_tree (skill)*>
+<!ELEMENT dual_chaos_skill_tree (skill)*>
+<!ELEMENT noblesse_skill_tree (skill)*>
+<!ELEMENT hero_skill_tree (skill)*>
+<!ELEMENT gm_skill_tree (skill)*>
+<!ELEMENT forgotten_book_skill_tree (skill|class)*>
+<!ELEMENT ability_skill_tree (skill)*>
+	<!ELEMENT skill (#PCDATA)>
+		<!ATTLIST skill
+			id CDATA #REQUIRED
+			item_count CDATA #IMPLIED
+			item_id CDATA #IMPLIED
+			level CDATA #REQUIRED
+			min_level CDATA #IMPLIED
+			name CDATA #IMPLIED
+			cost CDATA #IMPLIED
+			race CDATA #IMPLIED
+			auto_get CDATA #IMPLIED
+			dual_class_min_level CDATA #IMPLIED>
+	<!ELEMENT class (skill)*>
+		<!ATTLIST class id CDATA #REQUIRED>
+	<!ELEMENT awake_class (parent_class)*>
+		<!ATTLIST awake_class id CDATA #REQUIRED>
+		<!ELEMENT parent_class (skill)*>
+			<!ATTLIST parent_class id CDATA #REQUIRED>
+
+<!ELEMENT abilities_settings (point)*>
+	<!ATTLIST abilities_settings
+		maximun_points CDATA #REQUIRED
+		refresh_price CDATA #REQUIRED>
+	<!ELEMENT point (#PCDATA)>
+		<!ATTLIST point
+			ordinal CDATA #REQUIRED
+			sp_cost CDATA #REQUIRED>

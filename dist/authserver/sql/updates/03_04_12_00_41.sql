@@ -1,0 +1,1 @@
+ALTER TABLE accounts CHANGE `bonus` `bonus` int NOT NULL;

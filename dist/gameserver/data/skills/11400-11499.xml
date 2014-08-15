@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="11496" levels="2" name="Штраф Призванного Босса">
+		<set name="icon" value="icon.skill0217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11497" levels="1" name="Уникальное Умение Призывателя - Пассивное">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11498" levels="1" name="Уникальное Умение Призывателя">
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="summon_condition"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="ITEM"/>
+		<!--
+		Предположительно яраость пета и тригес скила виликое владение призывом	Уровень: 1; Описание: В течение 5 сек. увеличивает Физ. Атк., Маг. Атк., шанс Крит. Атк., силу Крит. Атк. на 10%.
+		-->
+		<set name="icon" value="icon.skill1543"/>
+		<set name="target" value="TARGET_ONE_SERVITOR"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="mAtk" value="1.1"/>
+				<add order="0x40" stat="pCritRate" value="10"/>
+				<mul order="0x30" stat="pCritDamage" value="1.1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11499" levels="1" name="Сковывающая Атака Призывателя">
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="castRange" value="900"/>
+		<set name="mpConsume2" value="71"/>
+		<set name="power" value="5000"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

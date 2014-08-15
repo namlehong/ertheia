@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (path)*>
+
+<!ELEMENT path (point)*>
+<!ATTLIST path
+	id CDATA #REQUIRED
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED
+	avail_next_pathes CDATA #IMPLIED>
+
+	<!ELEMENT point (#PCDATA)>
+	<!ATTLIST point
+		id CDATA #REQUIRED
+		x CDATA #REQUIRED
+		y CDATA #REQUIRED
+		z CDATA #REQUIRED
+		next_point_id CDATA #IMPLIED
+		min_delay CDATA #IMPLIED
+		max_delay CDATA #IMPLIED
+		sitting CDATA #IMPLIED
+		offset CDATA #IMPLIED>

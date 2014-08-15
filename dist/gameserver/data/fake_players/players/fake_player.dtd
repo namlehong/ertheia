@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (fake_player)*>
+
+<!ELEMENT fake_player (set|equip|ai_params|buffs)*>
+<!ATTLIST fake_player
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED
+	title CDATA #IMPLIED>
+
+	<!ELEMENT set (#PCDATA)>
+	<!ATTLIST set
+		name CDATA #REQUIRED
+		value CDATA #REQUIRED>
+
+	<!ELEMENT equip (rhand|lhand|chest|legs|feet|gloves|back|hat|mask)*>
+
+		<!ELEMENT rhand (#PCDATA)>
+		<!ATTLIST rhand
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT lhand (#PCDATA)>
+		<!ATTLIST lhand
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT chest (#PCDATA)>
+		<!ATTLIST chest
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT legs (#PCDATA)>
+		<!ATTLIST legs
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT feet (#PCDATA)>
+		<!ATTLIST feet
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT gloves (#PCDATA)>
+		<!ATTLIST gloves
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT back (#PCDATA)>
+		<!ATTLIST back
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT hat (#PCDATA)>
+		<!ATTLIST hat
+			item_id CDATA #REQUIRED>
+
+		<!ELEMENT mask (#PCDATA)>
+		<!ATTLIST mask
+			item_id CDATA #REQUIRED>
+
+	<!ELEMENT ai_params (set)*>
+
+	<!ELEMENT buffs (skill)*>
+
+		<!ELEMENT skill (#PCDATA)>
+		<!ATTLIST skill
+			id CDATA #REQUIRED
+			level CDATA #REQUIRED>

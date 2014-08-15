@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="8900" levels="1" name="Запечатанная Сила Дракона - Воин">
+		<set name="icon" value="icon.skill5860"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="1.15"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" value="1.15"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="1.15"/>
+			<mul order="0x30" stat="maxHp" value="1.3"/>
+			<mul order="0x30" stat="maxCp" value="1.3"/>
+			<mul order="0x30" stat="maxMp" value="1.3"/>
+			<add order="0x40" stat="pAtkSpd" value="300"/>
+			<add order="0x40" stat="pCritRate" value="100"/>
+			<add order="0x40" stat="pAtk" value="100"/>
+		</for>
+	</skill>
+	<skill id="8901" levels="1" name="Сила Дракона - Воин">
+		<set name="icon" value="icon.skill5861"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="maxHp" value="2"/>
+			<mul order="0x30" stat="maxCp" value="2"/>
+			<mul order="0x30" stat="maxMp" value="3"/>
+			<add order="0x40" stat="pAtkSpd" value="1500"/>
+			<add order="0x40" stat="pCritRate" value="500"/>
+			<add order="0x40" stat="pAtk" value="300"/>
+		</for>
+	</skill>
+	<skill id="8902" levels="1" name="Запечатанная Сила Дракона - Маг">
+		<set name="icon" value="icon.skill5860"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="1.15"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" value="1.15"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="1.15"/>
+			<mul order="0x30" stat="maxHp" value="1.3"/>
+			<mul order="0x30" stat="maxCp" value="1.3"/>
+			<mul order="0x30" stat="maxMp" value="1.3"/>
+			<add order="0x40" stat="mAtkSpd" value="300"/>
+			<add order="0x40" stat="mCritRate" value="100"/>
+			<add order="0x40" stat="mAtk" value="100"/>
+		</for>
+	</skill>
+	<skill id="8903" levels="1" name="Сила Дракона - Маг">
+		<set name="icon" value="icon.skill5861"/>
+		<set name="magicLevel" value="85"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="maxHp" value="2"/>
+			<mul order="0x30" stat="maxCp" value="2"/>
+			<mul order="0x30" stat="maxMp" value="3"/>
+			<add order="0x40" stat="mAtkSpd" value="1500"/>
+			<add order="0x40" stat="mCritRate" value="500"/>
+			<add order="0x40" stat="mAtk" value="300"/>
+		</for>
+	</skill>
+	<skill id="8904" levels="1" name="라이딩 렝커 폭스">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill8904"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="154"/>
+		</cond>
+		<for>
+			<effect name="Transformation" time="-1" value="154"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="8905" levels="1" name="라이딩 시어 폭스">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill8905"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="155"/>
+		</cond>
+		<for>
+			<effect name="Transformation" time="-1" value="155"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+</list>

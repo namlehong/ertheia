@@ -1,0 +1,24 @@
+<!ELEMENT list (attribute_stone | default)*>
+
+	<!ELEMENT default (#PCDATA)>
+	<!ATTLIST default
+		chance CDATA #REQUIRED
+		enchant_power_weapon CDATA #REQUIRED
+		enchant_power_armor CDATA #REQUIRED
+		max_enchant_weapon CDATA #REQUIRED
+		max_enchant_armor CDATA #REQUIRED
+		first_enchant_power_weapon CDATA #IMPLIED
+		first_enchant_power_armor CDATA #IMPLIED>
+
+	<!ELEMENT attribute_stone (#PCDATA)>
+	<!ATTLIST attribute_stone
+		id CDATA #REQUIRED
+		element CDATA #REQUIRED
+		chance CDATA #IMPLIED
+		enchant_power_weapon CDATA #IMPLIED
+		enchant_power_armor CDATA #IMPLIED
+		max_enchant_weapon CDATA #IMPLIED
+		max_enchant_armor CDATA #IMPLIED
+		first_enchant_power_weapon CDATA #IMPLIED
+		first_enchant_power_armor CDATA #IMPLIED
+		item_type CDATA #IMPLIED>

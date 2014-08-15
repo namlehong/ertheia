@@ -1,0 +1,2 @@
+ALTER TABLE `accounts` ADD COLUMN `acc_switch_times` tinyint(5) NOT NULL DEFAULT '0' AFTER `points`;
+ALTER TABLE `accounts` ADD COLUMN `first_acc_switch_time` bigint(10) NOT NULL DEFAULT '0' AFTER `acc_switch_times`;

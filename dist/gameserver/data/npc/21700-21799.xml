@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "npc.dtd">
+<list>
+	<npc id="21797" name="Spirit of Timiniel" title="">
+		<set name="baseRandDam" value="50"/>
+		<set name="baseAttackType" value="BLUNT"/>
+		<set name="basePHitModify" value="9"/>
+		<set name="basePAvoidModify" value="0"/>
+		<set name="baseHitTimeFactor" value="0.72"/>
+		<set name="baseReuseDelay" value="0"/>
+		<set name="baseSafeHeight" value="100"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
+		<set name="basePCritRate" value="10"/>
+		<set name="baseMCritRate" value="50"/>	<!--TODO: Проверить.-->
+		<set name="baseDEX" value="42"/>
+		<set name="baseHpMax" value="1673"/>
+		<set name="baseHpRate" value="0.5"/>
+		<set name="baseHpReg" value="6.5"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMAtk" value="265.02979"/>
+		<set name="baseMDef" value="148.89951"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseMpMax" value="889"/>
+		<set name="baseMpReg" value="2.4"/>
+		<set name="basePAtk" value="388.11142"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="223.6362"/>
+		<set name="baseRunSpd" value="165"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseWalkSpd" value="80"/>
+		<set name="collision_height" value="25"/>
+		<set name="collision_radius" value="5"/>
+		<set name="level" value="55"/>
+		<set name="rewardExp" value="2375"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="230"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="Monster"/>
+		<faction names="timiniel_clan" range="300"/>
+		<skills>
+			<skill id="4011" level="5"/>	<!--Resist Wind-->
+			<skill id="4282" level="1"/>	<!--Earth Attack Weak Point-->
+			<skill id="4408" level="9"/>	<!--HP Increase (1/2x)-->
+			<skill id="4409" level="1"/>	<!--MP Increase (1x)-->
+			<skill id="4410" level="9"/>	<!--Slightly Weak P. Atk.-->
+			<skill id="4411" level="9"/>	<!--Slightly Weak M. Atk.-->
+			<skill id="4412" level="13"/>	<!--Slightly Strong P. Def.-->
+			<skill id="4413" level="13"/>	<!--Slightly Strong M. Def.-->
+			<skill id="4414" level="3"/>	<!--Light Armor Type-->
+			<skill id="4415" level="5"/>	<!--Blunt Weapons-->
+			<skill id="4416" level="13"/>	<!--Fairies-->
+			<skill id="4562" level="5"/>	<!--NPC Solar Flare-->
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70">
+				<reward item_id="57" min="315" max="643" chance="100"/>	<!--Adena-->
+			</group>
+			<group chance="0.6668">
+				<reward item_id="2497" min="1" max="1" chance="0.7653"/>	<!--Full Plate Shield-->
+				<reward item_id="2966" min="1" max="1" chance="60.4723"/>	<!--Full Plate Shield Fragment-->
+				<reward item_id="2414" min="1" max="1" chance="0.5357"/>	<!--Full Plate Helmet-->
+				<reward item_id="2959" min="1" max="1" chance="38.2267"/>	<!--Full Plate Helmet Design-->
+			</group>
+			<group chance="15.3182">
+				<reward item_id="1869" min="1" max="1" chance="17.4926"/>	<!--Iron Ore-->
+				<reward item_id="1870" min="1" max="1" chance="17.4926"/>	<!--Coal-->
+				<reward item_id="1871" min="1" max="1" chance="17.4926"/>	<!--Charcoal-->
+				<reward item_id="1872" min="1" max="1" chance="23.3234"/>	<!--Animal Bone-->
+				<reward item_id="1867" min="1" max="1" chance="23.3234"/>	<!--Animal Skin-->
+				<reward item_id="4175" min="1" max="1" chance="0.3370"/>	<!--Recipe: Sealed Avadon Boots (100%)-->
+				<reward item_id="4972" min="1" max="1" chance="0.0202"/>	<!--Recipe: Great Axe (60%)-->
+				<reward item_id="8726" min="1" max="1" chance="0.4049"/>	<!--Life Stone -  Level 55-->
+				<reward item_id="8736" min="1" max="1" chance="0.1012"/>	<!--Mid-Grade Life Stone -  Level 55-->
+				<reward item_id="8746" min="1" max="1" chance="0.0101"/>	<!--High-Grade Life Stone -  Level 55-->
+				<reward item_id="8756" min="1" max="1" chance="0.0020"/>	<!--Top-Grade Life Stone -  Level 55-->
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="2961" min="1" max="1" chance="4.3468"/>	<!--Full Plate Boots Part-->
+			<reward item_id="1867" min="1" max="3" chance="53.2190"/>	<!--Animal Skin-->
+			<reward item_id="1869" min="1" max="1" chance="79.8286"/>	<!--Iron Ore-->
+		</rewardlist>
+		<ai_params>
+			<set name="LongRangeGuardRate" value="5"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="earth" value="-5"/>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="189"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+</list>

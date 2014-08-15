@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="10300" levels="3" name="Последняя Атака">
+		<table name="#targetHp">20</table>
+		<table name="#magicLevel">90 95 99</table>
+		<table name="#activateRate">30 40 50</table>
+		<set name="icon" value="icon.skill10300"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<target percentHP="#targetHp"/>
+				<target mob="true"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="HpToOne"/>
+		</for>
+	</skill>
+	<skill id="10301" levels="1" name="Максимальное Владение Силой">
+		<set name="icon" value="icon.skill11842"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10302" levels="4" name="Тройное Звуковое Рассечение">
+		<set name="icon" value="icon.skill10302"/>
+		<table name="#mpConsume2">98 105 112 119</table>
+		<table name="#power">22531 26017 29503 33377</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="castRange" value="40"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="criticalRate" value="10"/>
+		<set name="nextAction" value="attack"/>
+		<set name="cond_charges" value="3"/>
+		<set name="useSS" value="false"/>
+		<cond msgId="113">
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Ancient Sword, Dual Blunt"/>
+		</cond>
+	</skill>
+	<skill id="10303" levels="4" name="Великий Мастер Битв">
+		<set name="icon" value="icon.skill0430"/>
+		<table name="#add">1.02 1.03 1.04 1.05</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="maxHp" value="#add"/>
+			<mul order="0x30" stat="maxCp" value="#add"/>
+		</for>
+	</skill>
+	<skill id="10304" levels="4" name="Великое Владение Парными Мечами">
+		<set name="icon" value="icon.skill11835"/>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill10001"/>
+		<table name="#pAtk">1.02 1.03 1.04 1.05</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="10305" levels="4" name="Дикая Провокация">
+		<set name="icon" value="icon.skill11833"/>
+		<table name="#pDef">1</table>
+		<table name="#pAtk">1</table>
+		<table name="#mpConsume2">62 69 76 83</table>
+		<table name="#power">7682 7742 7798 7850</table>
+		<table name="#vuln">1.1 1.12 1.15 1.2</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="icon" value="icon.skill0018"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#power"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="AGGRESSION"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="Aggression">
+				<mul order="0x30" stat="swordWpnVuln" value="#vuln"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10306" levels="4" name="Великое Владение Древковым Оружием">
+		<set name="icon" value="icon.skill11836"/>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#pAtk">1.02 1.03 1.04 1.05</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Ancient Sword"/>
+			</add>
+			<add order="0x40" stat="poleTargetCount" value="1">
+				<using kind="Ancient Sword"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="10307" levels="1" name="Мгновенная Ярость Орка">
+		<set name="icon" value="icon.skill10307new"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0475"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CONT"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<cond msgId="113">
+			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt, Dual Blunt, Dual Fist"/>
+		</cond>
+		<for>
+			<effect count="-1" name="DamOverTime"  time="3" value="150">
+				<add order="0x40" stat="pAtkSpd" value="80"/> <!-- find normal value -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="10308" levels="1" name="Крик Бизона">
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill11834"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Ancient Sword, Dual Fist"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.45"/>
+				<mul order="0x30" stat="pCritDamage" value="1.45"/>
+				<add order="0x40" stat="pCritRate" value="45"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.85"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10309" levels="4" name="Великое Владение Кастетами">
+		<set name="icon" value="icon.skill11837"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAtk" value="1.02">
+				<using kind="Dual Fist"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="10310" levels="1" name="Первобытный Гнев">
+		<set name="icon" value="icon.skill10310"/>
+		<table name="#magicLevel">99</table>
+		<table name="#abnormal_time">600</table>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt, Dual Blunt, Dual Fist"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10311" levels="4" name="Великое Владение Двуручным Оружием">
+		<set name="icon" value="icon.skill11838"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10312" levels="1" name="Владение Ремеслом">
+		<set name="icon" value="icon.skill10312"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10313" levels="4" name="Стремительный Бросок Вечности">
+		<set name="icon" value="icon.skill10313"/>
+		<table name="#magicLevel">99</table>
+		<table name="#activateRate">10 20 30 40</table>
+		<table name="#mpConsume2">92 98 104 110</table>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0217"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="saveVs" value="CON"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="skillRadius" value="500"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<cond msgId="113">
+			<target min_distance="200"/>
+		</cond>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="10314" levels="4" name="Полное Обезоруживание">
+		<set name="icon" value="icon.skill0485"/>
+		<table name="#activateRate">50 60 65 70</table>
+		<table name="#magicLevel">99</table>
+		<table name="#abnormal_time">5</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="disarm"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0485"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DISARM"/>
+		<set name="saveVs" value="STR"/>
+		<cond msgId="113">
+			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt, Dual Blunt, Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="Disarm">
+				<mul order="0x90" stat="pAtk" value="0.6"/>
+				<mul order="0x90" stat="mAtk" value="0.6"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10315" levels="2" name="Великое Владение Древковым Оружием">
+		<set name="icon" value="icon.skill11836"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10316" levels="1" name="Кровавая Душа">
+		<set name="icon" value="icon.skill0193"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10317" levels="4" name="Грозовой Резак">
+		<set name="icon" value="icon.skill10317new"/>
+		<table name="#mpConsume2">98 105 112 119</table>
+		<table name="#power">17348 20033 22717 25700</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="castRange" value="600"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="criticalRate" value="10"/>
+		<set name="nextAction" value="attack"/>
+		<set name="cond_charges" value="3"/>
+		<set name="useSS" value="false"/>
+		<cond msgId="113">
+			<using kind="Pole"/>
+		</cond>
+	</skill>
+	<skill id="10318" levels="4" name="Звуковой Удар">
+		<set name="icon" value="icon.skill10318new"/>
+		<table name="#mpConsume2">98 105 112 119</table>
+		<table name="#power">17348 20033 22717 25700</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="criticalRate" value="10"/>
+		<set name="nextAction" value="attack"/>
+		<set name="chargeBoost" value="true"/>
+		<set name="cond_charges" value="3"/>
+		<set name="useSS" value="false"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Dual Sword"/>
+		</cond>
+	</skill>
+	<skill id="10319" levels="1" name="Duelist's Fury">
+		<set name="icon" value="icon.skll10319"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10320" levels="1" name="Faceoff">
+		<set name="icon" value="icon.skll10319"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10321" levels="4" name="Thunder Spear">
+		<set name="icon" value="icon.skll10321"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10322" levels="1" name="Wolf's Cry">
+		<set name="icon" value="icon.skll10320"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10323" levels="1" name="Self Heal (Warrior)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10324" levels="3" name="마스터 오브 포스">
+		<set name="icon" value="icon.skill10324"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10325" levels="3" name="드레드 로어">
+		<set name="icon" value="icon.skill10325"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10326" levels="3" name="블러디 퓨리">
+		<set name="icon" value="icon.skill10326"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10327" levels="4" name="포스 플래시">
+		<set name="icon" value="icon.skill10327"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10328" levels="3" name="소울 버서커">
+		<set name="icon" value="icon.skill10328"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10329" levels="1" name="그랜드 블런트 마스터리">
+		<set name="icon" value="icon.skill10329"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10330" levels="4" name="파워 해머 크러시">
+		<set name="icon" value="icon.skill10330"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (config|set)*>
+
+	<!ELEMENT config (#PCDATA)*>
+	<!ATTLIST config
+		coin_item_id CDATA #REQUIRED
+		default_reset_price CDATA #REQUIRED>
+
+	<!ELEMENT set (hairs|faces)*>
+	<!ATTLIST set
+		race CDATA #REQUIRED
+		sex CDATA #REQUIRED
+		class CDATA #IMPLIED>
+
+		<!ELEMENT hairs (style)*>
+
+		<!ELEMENT faces (style)*>
+
+			<!ELEMENT style (color)*>
+			<!ATTLIST style
+				id CDATA #REQUIRED
+				adena CDATA #IMPLIED
+				coins CDATA #IMPLIED
+				reset_price CDATA #IMPLIED>
+
+				<!ELEMENT color (#PCDATA)>
+				<!ATTLIST color
+					id CDATA #REQUIRED
+					adena CDATA #IMPLIED
+					coins CDATA #IMPLIED>
