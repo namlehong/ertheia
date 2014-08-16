@@ -50,6 +50,8 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.DECRYPT_MODE, client.getRSAPrivateKey());
 			decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
+			System.out.println(_raw);
+			System.out.println(decrypted);
 		}
 		catch(Exception e)
 		{
