@@ -64,6 +64,8 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		ncotp |= decrypted[0x7d] << 8;
 		ncotp |= decrypted[0x7e] << 16;
 		ncotp |= decrypted[0x7f] << 24;
+		
+		System.out.println("user:"+user+" pass:"+password);
 
 		int currentTime = (int) (System.currentTimeMillis() / 1000L);
 
