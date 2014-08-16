@@ -736,14 +736,15 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		super(objectId, template);
 
-		boolean good = false;
-		for(String ip : Clients.getIps())
-		{
-			if(Config.EXTERNAL_HOSTNAME.equalsIgnoreCase(ip))
-				good = true;
-		}
-		if(!good)
-			return;
+//		remove ip check
+//		boolean good = false;
+//		for(String ip : Clients.getIps())
+//		{
+//			if(Config.EXTERNAL_HOSTNAME.equalsIgnoreCase(ip))
+//				good = true;
+//		}
+//		if(!good)
+//			return;
 
 		_baseTemplate = template;
 		_login = accountName;

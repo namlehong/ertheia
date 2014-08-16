@@ -1851,14 +1851,15 @@ public class Config
 			_log.error("", e);
 		}
 		
-		boolean good = false;
-		for(String ip : Clients.getIps())
-		{
-			if(Config.EXTERNAL_HOSTNAME.equalsIgnoreCase(ip))
-				good = true;
-		}
-		if(!good)
-			System.exit(1);
+//		Disable ip check
+//		boolean good = false;
+//		for(String ip : Clients.getIps())
+//		{
+//			if(Config.EXTERNAL_HOSTNAME.equalsIgnoreCase(ip))
+//				good = true;
+//		}
+//		if(!good)
+//			System.exit(1);
 
 		ALLOW_DISCARDITEM = serverSettings.getProperty("AllowDiscardItem", true);
 		ALLOW_MAIL = serverSettings.getProperty("AllowMail", true);
