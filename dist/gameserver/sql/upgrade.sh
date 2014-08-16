@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -f mysql_settings.sh ]; then
-        . mysql_settings.sh
+        source  ./mysql_settings.sh
 else
         echo "Can't find mysql_settings.sh file!"
         exit
