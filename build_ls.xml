@@ -76,7 +76,7 @@
 
 	</target>
 
-	<target name="compile-authserver" depends="init">
+	<target name="compile-authserver" depends="commons-jar">
 
 		<delete dir="${build.classes}" />
 		<mkdir dir="${build.classes}" />
@@ -110,6 +110,7 @@
 	
 	
 	<target name="dist" depends="authserver-jar">
+		<copy file="${build}/commons.jar" todir="${dist}/authserver/lib"/>
 		<copy file="${build}/authserver.jar" todir="${dist}/authserver/lib"/>
 		<!--
 		<zip destfile="${build}/L2-Scripts(Ertheia)_dist.zip" basedir="${build.dist}" />
