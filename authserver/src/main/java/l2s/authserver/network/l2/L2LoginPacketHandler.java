@@ -20,6 +20,9 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 
 		ReceivablePacket<L2LoginClient> packet = null;
 		LoginClientState state = client.getState();
+		
+		System.out.println("current state:"+state);
+		System.out.println("opcode:"+opcode);
 
 		switch(state)
 		{

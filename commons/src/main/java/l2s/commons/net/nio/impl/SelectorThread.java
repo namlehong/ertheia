@@ -396,6 +396,8 @@ public class SelectorThread<T extends MMOClient> extends Thread
 
 		client.decrypt(buf, dataSize);
 		buf.position(pos);
+		
+		System.out.println("buf: "+buf);
 
 		if(buf.hasRemaining())
 		{
