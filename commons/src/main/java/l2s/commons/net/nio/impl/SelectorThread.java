@@ -389,6 +389,8 @@ public class SelectorThread<T extends MMOClient> extends Thread
 	protected boolean parseClientPacket(IPacketHandler<T> handler, ByteBuffer buf, int dataSize, MMOConnection<T> con)
 	{
 		T client = con.getClient();
+		
+		System.out.println("buf: "+buf);
 
 		int pos = buf.position();
 
