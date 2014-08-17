@@ -31,7 +31,7 @@ public class ServerInfo extends Functions implements IVoicedCommandHandler
 		if(command.equals("rev") || command.equals("ver"))
 		{
 			activeChar.sendMessage("Project Revision: " + GameServer.PROJECT_REVISION);
-			activeChar.sendMessage("Build Revision: " + GameServer.getInstance().getVersion().getRevisionNumber());
+			activeChar.sendMessage("Build Revision: beta.0.1");
 			activeChar.sendMessage("Update: " + GameServer.UPDATE_NAME);
 			activeChar.sendMessage("Build date: " + GameServer.getInstance().getVersion().getBuildDate());
 		}

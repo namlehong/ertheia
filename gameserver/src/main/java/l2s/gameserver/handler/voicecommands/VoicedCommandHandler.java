@@ -33,21 +33,21 @@ public class VoicedCommandHandler extends AbstractHolder
 
 	private VoicedCommandHandler()
 	{
-		registerVoicedCommandHandler(new Help());
+//		registerVoicedCommandHandler(new Help());
 		registerVoicedCommandHandler(new Hellbound());
-		registerVoicedCommandHandler(new Cfg());
-		registerVoicedCommandHandler(new Offline());
+//		registerVoicedCommandHandler(new Cfg());
+//		registerVoicedCommandHandler(new Offline());
 		registerVoicedCommandHandler(new Repair());
 		registerVoicedCommandHandler(new ServerInfo());
-		registerVoicedCommandHandler(new Wedding());
+//		registerVoicedCommandHandler(new Wedding());
 		registerVoicedCommandHandler(new WhoAmI());
 		/* CCP Guard START
 		registerVoicedCommandHandler(new LockHWID());
 		** CCP Guard END*/
 		registerVoicedCommandHandler(new Debug());
 		registerVoicedCommandHandler(new Online());
-		registerVoicedCommandHandler(new Password());
-		registerVoicedCommandHandler(new Security());
+//		registerVoicedCommandHandler(new Password());
+//		registerVoicedCommandHandler(new Security());
 	}
 
 	public void registerVoicedCommandHandler(IVoicedCommandHandler handler)

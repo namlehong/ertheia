@@ -96,8 +96,8 @@ public class GameServer
 {
 	public static boolean DEVELOP = false;
 
-	public static final String PROJECT_REVISION = "L2s [12448]";
-	public static final String UPDATE_NAME = "Epic Tale of Aden: Ertheia";
+	public static final String PROJECT_REVISION = "L2ErtheiaAsia";
+	public static final String UPDATE_NAME = "Ertheia";
 
 	public static final int AUTH_SERVER_PROTOCOL = 2;
 	private static final Logger _log = LoggerFactory.getLogger(GameServer.class);
