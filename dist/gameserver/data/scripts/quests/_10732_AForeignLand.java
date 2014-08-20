@@ -91,4 +91,19 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 		return player.getLevel() <= 20;
 	}
 
+
+	@Override
+	public void onLoad()
+	{
+	}
+
+	@Override
+	public void onReload()
+	{
+	}
+
+	@Override
+	public void onShutdown()
+	{
+	}
 }
