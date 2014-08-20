@@ -9,7 +9,8 @@ import l2s.gameserver.Config;
 public enum Language
 {
 	ENGLISH(1, "en"),
-	RUSSIAN(8, "ru");
+	RUSSIAN(8, "ru"),
+	VIETNAMESE(9, "vi");
 
 	public static final Language[] VALUES = values();
 
