@@ -73,6 +73,7 @@ public class HtmCache
 				for(int i = 0; i < _cache.length; i++)
 				{
 					Cache c = _cache[i];
+					if(c == null) return;
 					_log.info(String.format("HtmCache: parsing %d documents; lang: %s.", c.getSize(), Language.VALUES[i]));
 				}
 				break;
@@ -120,7 +121,18 @@ public class HtmCache
 
 		String path = f.getAbsolutePath().substring(rootPath.length()).replace("\\", "/");
 
-		_cache[lang.ordinal()].put(new Element(path.toLowerCase(), HtmlUtils.bbParse(content)));
+		try
+		{
+			String s = HtmlUtils.bbParse(content);
+			Element ele = new Element(path.toLowerCase(), s);
+			
+			if(_cache[lang.ordinal()] == null) return;
+			_cache[lang.ordinal()].put(ele);
+		}
+		catch(Error e)
+		{
+			_log.info("error " + e.toString());
+		}
 	}
 
 	public String getNotNull(String fileName, Player player)
@@ -232,6 +244,8 @@ public class HtmCache
 
 	private String get(Language lang, String f)
 	{
+		if(_cache[lang.ordinal()] == null ) return null;
+		
 		Element element = _cache[lang.ordinal()].get(f);
 
 		if(element == null)
@@ -242,7 +256,11 @@ public class HtmCache
 
 	public void clear()
 	{
+		
 		for(int i = 0; i < _cache.length; i++)
+		{
+			if(_cache[i] == null) return;
 			_cache[i].removeAll();
+		}
 	}
 }
