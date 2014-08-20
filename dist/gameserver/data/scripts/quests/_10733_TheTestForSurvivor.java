@@ -30,14 +30,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		//String htmltext = event;
-		if(event.equalsIgnoreCase("33932-1.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			st.giveItems(GERETH_RECOM, 1);
-		}
-		else if(event.equalsIgnoreCase("34005-3.htm"))
+		if(event.equalsIgnoreCase("34005-3.htm"))
 		{
 			st.setCond(2);
 		}
@@ -64,7 +57,13 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 			if(cond == 0)
 			{
 				if(checkStartCondition(st.getPlayer()))
+				{
 					htmltext = "33932-1.htm";
+					st.setCond(1);
+					st.setState(STARTED);
+					st.playSound(SOUND_ACCEPT);
+					st.giveItems(GERETH_RECOM, 1);
+				}
 				else
 					htmltext = "noquest";
 			}
