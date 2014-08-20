@@ -1,0 +1,85 @@
+<html><head>
+<!--AUTHOR: Bonux-->
+<title>Special Auction</title>
+	<body>
+		<table border=0 cellspacing=0 cellpadding=0 height=285>
+			<tr>
+				<td>
+					<table border=0>
+						<tr><td fixWIDTH=100>Time before</td></tr>
+						<tr>
+							<td>
+								<table border=0 fixWIDTH=270 height=25 align=center bgcolor=000000>
+									<tr>
+										<td fixWIDTH=80 align=center><?HH?> h.</td>
+										<td fixWIDTH=10 align=center>:</td>
+										<td fixWIDTH=80 align=center><?MM?> m.</td>
+										<td fixWIDTH=10 align=center>:</td>
+										<td fixWIDTH=80 align=center><?SS?> s.</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<table border=0>
+						<tr><td fixWIDTH=100>Start bid</td></tr>
+						<tr>
+							<td>
+								<table border=0 fixWIDTH=270 height=25 align=center bgcolor=000000>
+									<tr><td fixWIDTH=270 align=center><?BID_COUNT?> <?BID_ITEM_NAME?></td></tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<table border=0>
+						<tr><td fixWIDTH=170>Item</td></tr>
+						<tr>
+							<td>
+								<table border=0 fixWIDTH=270 align=center bgcolor=000000>
+									<tr>
+										<td fixWIDTH=270 height=150>
+											<table border=0 fixWIDTH=270>
+												<tr>
+													<td fixWIDTH=35 height=150><img src="<?AUCTION_ITEM_ICON?>" width=32 height=32></td>
+													<td fixWIDTH=230 height=150><?AUCTION_ITEM_NAME?> - <?AUCTION_ITEM_COUNT?>pcs.</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table border=0>
+			<tr><td></td></tr>
+			<tr>
+				<td>
+					<table border=0 fixWIDTH=270 height=25 align=center bgcolor=000000>
+						<tr>
+							<td fixWIDTH=140><?BID_ITEM_NAME?></td>
+							<td fixWIDTH=130>
+								<table border=0 fixWIDTH=130 height=19 bgcolor=333333>
+									<tr><td align=right fixWIDTH=130><?HAVE_BID_ITEM_COUNT?></td></tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<table border=0 fixWIDTH=270 align=center>
+			<tr>
+				<td align=center fixWIDTH=40></td>
+				<td align=center fixWIDTH=95><button value="Close" action="bypass -h" width=80 height=30 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+				<td align=center fixWIDTH=95><button value="Refresh" action="bypass -h npc_%objectId%_auction show" width=80 height=30 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+				<td align=center fixWIDTH=40></td>
+			</tr>
+		</table>
+	</body>
+</html>
