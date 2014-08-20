@@ -43,7 +43,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		}
 		else if(event.equalsIgnoreCase("33942-2.htm"))
 		{
-			st.takeItems(GERETH_RECOM, 1)
+			st.takeItems(GERETH_RECOM, 1);
 			st.giveItems(ADENA_ID, 5000);
 			st.addExpAndSp(295, 2);
 			st.setState(COMPLETED);
