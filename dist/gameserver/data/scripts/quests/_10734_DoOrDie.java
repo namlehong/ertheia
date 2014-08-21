@@ -87,6 +87,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33950-5.htm"))
 		{
 			buffPlayer(st.getPlayer());
+			st.setCond(5);
 		}
 		
 		return htmltext;
@@ -163,6 +164,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 				htmltext = "33950-1.htm";
 				st.getPlayer().sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_002_Guide_01.htm"));	
 				//st.showTutorialHTML(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_002_Guide_01.htm");
+				
 			}
 			else if(cond == 5)
 			{
@@ -176,23 +178,23 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 
 	private void buffPlayer(Player player)
 	{
-		SkillTable.getInstance().getInfo(4322, 1).getEffects(player, player, false, false);
-		SkillTable.getInstance().getInfo(4323, 1).getEffects(player, player, false, false);
-		SkillTable.getInstance().getInfo(5637, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15642, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15643, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15644, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15645, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15646, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15647, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15651, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15652, 1).getEffects(player, player, false, false);
+		SkillTable.getInstance().getInfo(15653, 1).getEffects(player, player, false, false);
 		if(player.isMageClass())
 		{
-			SkillTable.getInstance().getInfo(4324, 1).getEffects(player, player, false, false);
-			SkillTable.getInstance().getInfo(4327, 1).getEffects(player, player, false, false);
-			SkillTable.getInstance().getInfo(4325, 1).getEffects(player, player, false, false);
-			SkillTable.getInstance().getInfo(4326, 1).getEffects(player, player, false, false);
+			SkillTable.getInstance().getInfo(15649, 1).getEffects(player, player, false, false);
 			
 		}
 		else
 		{
-			SkillTable.getInstance().getInfo(4328, 1).getEffects(player, player, false, false);
-			SkillTable.getInstance().getInfo(4329, 1).getEffects(player, player, false, false);
-			SkillTable.getInstance().getInfo(4330, 1).getEffects(player, player, false, false);
-			SkillTable.getInstance().getInfo(4331, 1).getEffects(player, player, false, false);
+			SkillTable.getInstance().getInfo(15650, 1).getEffects(player, player, false, false);
 		}
 		
 	}
