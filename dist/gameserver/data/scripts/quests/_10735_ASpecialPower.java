@@ -62,13 +62,12 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33942-2.htm"))
 		{
 			st.setState(STARTED);
-			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
 		
 		if(event.equalsIgnoreCase("enter_camp"))
 		{
-			st.setCond(2);
+			st.setCond(1);
 			enterInstance(st, 400);	
 		}
 		
@@ -122,10 +121,11 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		}
 		else if(npcId == AYANTHE2)
 		{
-			if(cond == 2)
+			if(cond == 1)
 			{
 				htmltext = "33944-1.htm";
 				//spawn floato
+				st.setCond(2);
 				//kill to get to cond 3
 				st.playSound(SOUND_MIDDLE);
 				st.getPlayer().getReflection().addSpawnWithoutRespawn(FLOATO, new Location(-75160, 240328, -3628, 0), 0);
