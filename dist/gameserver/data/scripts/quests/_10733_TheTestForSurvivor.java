@@ -24,7 +24,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(GERETH);
-		addTalkId(GERETH, DIA, AYANTHE, KATALIN);
+		addTalkId(GERETH, DIA, KATALIN);
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
 
@@ -43,7 +43,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		{
 			st.setCond(2);
 		}
-		else if(event.equalsIgnoreCase("33942-2.htm") || event.equalsIgnoreCase("33943-2.htm"))
+		else if(event.equalsIgnoreCase("33943-2.htm"))
 		{
 			st.takeItems(GERETH_RECOM, 1);
 			st.giveItems(ADENA_ID, 5000);
@@ -79,20 +79,11 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		{
 			htmltext = "34005-1.htm";
 		}
-		else if(npcId == AYANTHE && st.getCond() == 2)
-		{
-			if(st.getPlayer().getClassId() == ClassId.ERTHEIA_MAGE) //mage
-				htmltext = "33942-1.htm";
-			else
-				htmltext = "noquest";
-				
-		}
+		
 		else if(npcId == KATALIN && st.getCond() == 2)
 		{
-			if(st.getPlayer().getClassId() == ClassId.ERTHEIA_FIGHTER) //fighter
-				htmltext = "33943-1.htm";
-			else
-				htmltext = "noquest";
+			htmltext = "33943-1.htm";
+			
 		}
 		return htmltext;
 	}
