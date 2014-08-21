@@ -86,6 +86,16 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 			else if(cond == 1)
 				htmltext = "33942-4.htm";
 		}
+		if(npcId == KATALIN)
+		{
+			if(cond == 0)
+			{
+				if(checkStartCondition(st.getPlayer()))
+					htmltext = "33943-1.htm";
+			}
+			else if(cond == 1)
+				htmltext = "33943-4.htm";
+		}
 		else if(npcId == GRANKON && st.getCond() == 1)
 		{
 			if(st.getPlayer().isMageClass())
