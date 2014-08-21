@@ -108,7 +108,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 			{
 				if(cond == 0)
 				{
-					if(if(checkStartCondition(st.getPlayer())))
+					if(checkStartCondition(st.getPlayer()))
 						htmltext = "33943-1.htm";
 					else 
 						htmltext = "noquest";
@@ -141,7 +141,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 			{
 				if(cond == 0)
 				{
-					if(if(checkStartCondition(st.getPlayer())))
+					if(checkStartCondition(st.getPlayer()))
 						htmltext = "33942-1.htm";
 					else 
 						htmltext = "noquest";
