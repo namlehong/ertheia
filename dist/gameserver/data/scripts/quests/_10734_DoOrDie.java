@@ -13,7 +13,9 @@ import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
 
-//By Evil_dnk dev.fairytale-world.ru
+/**
+ * @author Hien Son
+ */
 
 public class _10734_DoOrDie extends Quest implements ScriptFile
 {

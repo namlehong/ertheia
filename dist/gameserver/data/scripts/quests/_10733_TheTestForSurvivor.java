@@ -8,7 +8,7 @@ import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.scripts.ScriptFile;
 
 /**
- * @author Bonux
+ * @author Hien Son
  */
 public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 {

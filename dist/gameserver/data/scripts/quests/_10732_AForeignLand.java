@@ -11,7 +11,7 @@ import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import l2s.gameserver.scripts.ScriptFile;
 
 /**
- * @author Эванесса & Bonux
+ * @author Hien Son
  */
 public class _10732_AForeignLand extends Quest implements ScriptFile
 {

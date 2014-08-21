@@ -17,7 +17,9 @@ import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
 import l2s.gameserver.utils.ReflectionUtils;
 
-//By Hien Son
+/**
+ * @author Hien Son
+ */
 public class _10735_ASpecialPower extends Quest implements ScriptFile
 {
 
