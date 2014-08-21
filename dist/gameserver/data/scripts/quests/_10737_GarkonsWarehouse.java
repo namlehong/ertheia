@@ -80,8 +80,10 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 		{
 			if(cond == 0)
 			{
-				if(checkStartCondition(st.getPlayer()))
+				if(checkStartCondition(st.getPlayer()) && player.isMageClass())
 					htmltext = "33942-1.htm";
+				else
+					htmltext = "noquest";
 			}
 			else if(cond == 1)
 				htmltext = "33942-4.htm";
@@ -90,8 +92,10 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 		{
 			if(cond == 0)
 			{
-				if(checkStartCondition(st.getPlayer()))
+				if(checkStartCondition(st.getPlayer()) && !player.isMageClass())
 					htmltext = "33943-1.htm";
+				else
+					htmltext = "noquest";
 			}
 			else if(cond == 1)
 				htmltext = "33943-4.htm";
