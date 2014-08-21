@@ -25,6 +25,9 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(GERETH);
 		addTalkId(GERETH, DIA, KATALIN);
+		
+		addLevelCheck(1, 20);
+		addQuestCompletedCheck(_10732_AForeignLand.class);
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
 
