@@ -25,7 +25,7 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 	private static final int AYANTHE2 = 33944;
 	
 	private final static int FLOATO = 27526;
-	private final static int RATEL = 23113;
+	private final static int RATEL = 27527;
 	
 	private final static int SPIRITSHOT = 5790;
 	
@@ -93,13 +93,14 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("leave_camp"))
 		{
-			st.setCond(8);
 			player.getReflection().collapse();
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("spirit_timer"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ScreenMessageAlign.TOP_CENTER));
+			return null;
 		}
 		
 		return htmltext;
@@ -115,16 +116,14 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 
 		if(npcId == AYANTHE1)
 		{
-			if(cond == 0 || cond == 1)
+			if(checkStartCondition(st.getPlayer()))
 			{
-				if(checkStartCondition(st.getPlayer()))
-				{
-					htmltext = "33942-1.htm";
-				}
-				else
-					htmltext = "noquest";
+				htmltext = "33942-1.htm";
 			}
-			else if(cond == 8)
+			else
+				htmltext = "noquest";
+			
+			if(cond == 7)
 			{
 				htmltext = "33942-3.htm";
 			}
