@@ -17,16 +17,30 @@ import l2s.gameserver.utils.NpcUtils;
 
 public class _10734_DoOrDie extends Quest implements ScriptFile
 {
+	private static final int AYANTHE = 33942;
 	private static final int KATALIN = 33943;
 	private static final int ADV_GUIDE = 33950;
 	private static final int DUMMY_TRAINING = 19546;
 
+	/*
+	 stage 
+	0 start
+	0 go to Katalin/Ayanthe 1st
+	1 hit dummy
+	2 go to Ayanthe 2nd
+	3 go to katalin 2nd
+	4 ask for buff
+	5 hit dummy
+	6 got to Ayanthe 3rd
+	7 go to Katalin 3rd
+	 */
 
 	public _10734_DoOrDie()
 	{
 		super(false);
+		addStartNpc(AYANTHE);
 		addStartNpc(KATALIN);
-		addTalkId(KATALIN, ADV_GUIDE);
+		addTalkId(AYANTHE, KATALIN, ADV_GUIDE);
 		addKillId(DUMMY_TRAINING);
 
 		addLevelCheck(4, 20);
@@ -46,6 +60,14 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 			htmltext = "33943-3.htm";
+		}
+		
+		if(event.equalsIgnoreCase("33942-3.htm"))
+		{
+			st.setState(STARTED);
+			st.setCond(1);
+			st.playSound(SOUND_ACCEPT);
+			htmltext = "33942-3.htm";
 		}
 		
 		if(event.equalsIgnoreCase("33950-3.htm"))
@@ -75,30 +97,64 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	{
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
+		Player player = st.getPlayer();
 		String htmltext = "noquest";
 
 		if(npcId == KATALIN)
 		{
-			if(st.isCompleted())
-				htmltext = "33943-5.htm";
-			else if(cond == 0)
-				htmltext = "33943-1.htm";
-			else if(cond == 2)
+			if(!player.isMageClass())
 			{
-				st.setCond(3);
-				htmltext = "33943-4.htm";
+				if(cond == 0)
+					htmltext = "33943-1.htm";
+				else if(cond == 3)
+				{
+					st.setCond(4);
+					htmltext = "33943-4.htm";
+				}
+				else if(cond == 4)
+					htmltext = "33943-4.htm";
+				else if(cond == 7)
+				{
+					st.giveItems(ADENA_ID, 7000);
+					st.addExpAndSp(805, 2);
+					st.setState(COMPLETED);
+					st.exitCurrentQuest(false);
+					st.playSound(SOUND_FINISH);
+					htmltext = "33943-5.htm";
+				}
+				else if(st.isCompleted())
+					htmltext = "33943-5.htm";
 			}
-			else if(cond == 3)
-				htmltext = "33943-4.htm";
-			else if(cond == 5)
+			else
+				htmltxt = "noquest";
+		}
+		else if(npcId == AYANTHE)
+		{
+			if(player.isMageClass())
 			{
-				st.giveItems(ADENA_ID, 7000);
-				st.addExpAndSp(805, 2);
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-				htmltext = "33943-5.htm";
+				if(cond == 0)
+					htmltext = "33942-1.htm";
+				else if(cond == 1)
+				{
+					st.setCond(4);
+					htmltext = "33942-4.htm";
+				}
+				else if(cond == 4)
+					htmltext = "33942-4.htm";
+				else if(cond == 6)
+				{
+					st.giveItems(ADENA_ID, 7000);
+					st.addExpAndSp(805, 2);
+					st.setState(COMPLETED);
+					st.exitCurrentQuest(false);
+					st.playSound(SOUND_FINISH);
+					htmltext = "33942-5.htm";
+				}
+				else if(st.isCompleted())
+					htmltext = "33942-5.htm";
 			}
+			else
+				htmltxt = "noquest";
 		}
 		else if(npcId == ADV_GUIDE)
 		{
@@ -108,7 +164,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 				st.getPlayer().sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_002_Guide_01.htm"));	
 				//st.showTutorialHTML(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_002_Guide_01.htm");
 			}
-			else if(cond == 4 || cond == 5)
+			else if(cond == 3 || cond == 4)
 			{
 				buffPlayer(st.getPlayer());
 				htmltext = "33950-5.htm";
@@ -151,12 +207,18 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 		if(st.getCond() == 1)
 		{
 			st.playSound(SOUND_MIDDLE);
-			st.setCond(2);
+			if(st.getPlayer().isMageClass())
+				st.setCond(2);
+			else 
+				st.setCond(3);
 		}
-		if(st.getCond() == 4)
+		if(st.getCond() == 5)
 		{
-			st.setCond(5);
 			st.playSound(SOUND_MIDDLE);
+			if(st.getPlayer().isMageClass())
+				st.setCond(6);
+			else 
+				st.setCond(7);
 		}
 		return null;
 	}
