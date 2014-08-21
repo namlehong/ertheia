@@ -158,13 +158,13 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 		}
 		else if(npcId == ADV_GUIDE)
 		{
-			if(cond == 3)
+			if(cond == 4)
 			{
 				htmltext = "33950-1.htm";
 				st.getPlayer().sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_002_Guide_01.htm"));	
 				//st.showTutorialHTML(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_002_Guide_01.htm");
 			}
-			else if(cond == 3 || cond == 4)
+			else if(cond == 5)
 			{
 				buffPlayer(st.getPlayer());
 				htmltext = "33950-5.htm";
