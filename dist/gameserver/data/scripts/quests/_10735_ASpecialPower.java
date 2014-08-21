@@ -28,6 +28,12 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 	private final static int RATEL = 23113;
 	
 	private final static int SPIRITSHOT = 5790;
+	
+	public static final String FLOATO_LIST1 = "FLOATO_LIST1";
+	
+	public static final String FLOATO_LIST2 = "FLOATO_LIST2";
+	
+	public static final String RATEL_LIST = "RATEL_LIST";
 
 	@Override
 	public void onLoad()
@@ -46,7 +52,10 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(AYANTHE1);
 		addTalkId(AYANTHE2);
-		addKillId(FLOATO, RATEL);
+		
+		addKillNpcWithLog(2, FLOATO_LIST1, 2, FLOATO);
+		addKillNpcWithLog(4, FLOATO_LIST2, 2, FLOATO);
+		addKillNpcWithLog(6, RATEL_LIST, 2, RATEL);
 
 		addLevelCheck(4, 20);
 		addQuestCompletedCheck(_10733_TheTestForSurvivor.class);
@@ -173,9 +182,11 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		int killedFloato = st.getInt("killedFloato");
 		int killedRatel = st.getInt("killedRatel");
 		
+		updateKill(npc, st);
+		
 		if(npcId == FLOATO && (st.getCond() == 2 || st.getCond() == 4))
 		{
-			if(killedFloato >= 2)
+			if(killedFloato == 2)
 			{
 				st.setCond(st.getCond() + 1);
 				st.unset("killedFloato");
@@ -187,7 +198,7 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		
 		if(npcId == RATEL && st.getCond() == 6)
 		{
-			if(killedRatel >= 2)
+			if(killedRatel == 2)
 			{
 				st.setCond(st.getCond() + 1);
 				st.unset("killedRatel");
