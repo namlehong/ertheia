@@ -82,15 +82,6 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if(event.equalsIgnoreCase("33944-4.htm"))
-		{
-			if(st.getInt("bonusXP") != 1)
-			{
-				st.addExpAndSp(1716, 0);
-				st.set("bonusXP", 1);
-			}
-		}
-		
 		if(event.equalsIgnoreCase("33944-5.htm"))
 		{
 			st.setCond(6);
@@ -179,6 +170,13 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 			else if(cond == 5)
 			{
 				htmltext = "33944-4.htm";
+
+				if(st.getInt("bonusXP") != 1)
+				{
+					st.addExpAndSp(1716, 0);
+					st.set("bonusXP", 1);
+				}
+				
 			}
 			else if(cond == 7)
 			{
