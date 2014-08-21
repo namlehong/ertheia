@@ -134,7 +134,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 			{
 				if(cond == 0)
 					htmltext = "33942-1.htm";
-				else if(cond == 1)
+				else if(cond == 2)
 				{
 					st.setCond(4);
 					htmltext = "33942-4.htm";
