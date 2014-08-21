@@ -32,7 +32,7 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
-		if(event.equalsIgnoreCase("33931_3.htm"))
+		if(event.equalsIgnoreCase("33931-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
@@ -40,7 +40,7 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 			st.showTutorialClientHTML("QT_001_Radar_01");
 			st.getPlayer().sendPacket(UsmVideo.HEROES.packet(st.getPlayer()));
 		}
-		else if(event.equalsIgnoreCase("33932_2.htm"))
+		else if(event.equalsIgnoreCase("33932-2.htm"))
 		{
 			st.giveItems(ADENA_ID, 3000);
 			st.addExpAndSp(75, 2);
@@ -62,14 +62,14 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 			if(cond == 0)
 			{
 				if(checkStartCondition(st.getPlayer()))
-					htmltext = "33931_1.htm";
+					htmltext = "33931-1.htm";
 			}
 			else if(cond == 1)
-				htmltext = "33931_4.htm";
+				htmltext = "33931-4.htm";
 		}
 		else if(npcId == GERETH && st.getCond() == 1)
 		{
-			htmltext = "33932_1.htm";
+			htmltext = "33932-1.htm";
 		}
 		return htmltext;
 	}
