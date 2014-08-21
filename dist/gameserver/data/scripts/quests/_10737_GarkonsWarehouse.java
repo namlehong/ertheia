@@ -111,7 +111,14 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 	{
 		QuestState qs1 = player.getQuestState(_10735_ASpecialPower.class);
 		QuestState qs2 = player.getQuestState(_10736_ASpecialPower.class);
-		return (player.getLevel() >= 5 && player.getLevel() <= 20 && ((qs1 != null && qs1.getState() == COMPLETED ) || (qs2 != null &&  qs2.getState() == COMPLETED)));
+		boolean result = false;
+		
+		if(player.isMageClass())
+			result = (qs1 != null && qs1.getState() == COMPLETED);
+		else 
+			result = (qs2 != null &&  qs2.getState() == COMPLETED);
+		
+		return (player.getLevel() >= 5 && player.getLevel() <= 20 && result);
 	}
 
 	@Override
