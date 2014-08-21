@@ -82,6 +82,15 @@ public class _10736_ASpecialPower extends Quest implements ScriptFile
 			return null;
 		}
 		
+		if(event.equalsIgnoreCase("33945-4.htm"))
+		{
+			if(st.get("bonusXP") != 1)
+			{
+				st.addExpAndSp(1716, 0);
+				st.set("bonusXP", 1);
+			}
+		}
+		
 		if(event.equalsIgnoreCase("33945-5.htm"))
 		{
 			st.setCond(6);
@@ -138,6 +147,7 @@ public class _10736_ASpecialPower extends Quest implements ScriptFile
 				st.setState(COMPLETED);
 				st.exitCurrentQuest(false);
 				st.playSound(SOUND_FINISH);
+				st.unset("bonusXP");
 				
 				htmltext = "33943-3.htm";
 			}
@@ -163,7 +173,7 @@ public class _10736_ASpecialPower extends Quest implements ScriptFile
 				player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_003_bullet_01.htm"));
 				player.sendPacket(new ExShowScreenMessage(NpcString.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 				st.startQuestTimer("spirit_timer", 4000);
-				st.giveItems(5790, 150);
+				st.giveItems(SOULSHOT, 150);
 				
 			}
 			else if(cond == 5)
