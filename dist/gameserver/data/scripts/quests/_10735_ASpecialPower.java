@@ -100,7 +100,13 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("spirit_timer"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ScreenMessageAlign.TOP_CENTER));
-			return null;
+			st.setCond(4);
+			htmltext = "33944-3.htm";
+			//spawn floato
+			//kill to get to cond 5
+			st.getPlayer().getReflection().addSpawnWithoutRespawn(FLOATO, new Location(-75160, 240328, -3628, 0), 0);
+			st.getPlayer().getReflection().addSpawnWithoutRespawn(FLOATO, new Location(-74744, 240440, -3630, 0), 0);
+			
 		}
 		
 		return htmltext;
@@ -150,7 +156,6 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 			}
 			else if(cond == 3)
 			{
-				st.setCond(4);
 				htmltext = "33944-2.htm";
 				//give ss
 				st.playSound(SOUND_MIDDLE);
@@ -158,15 +163,6 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 				player.sendPacket(new ExShowScreenMessage(NpcString.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 				st.startQuestTimer("spirit_timer", 4000);
 				st.giveItems(5790, 150);
-				
-			}
-			else if(cond == 4)
-			{
-				htmltext = "33944-3.htm";
-				//spawn floato
-				//kill to get to cond 5
-				st.getPlayer().getReflection().addSpawnWithoutRespawn(FLOATO, new Location(-75160, 240328, -3628, 0), 0);
-				st.getPlayer().getReflection().addSpawnWithoutRespawn(FLOATO, new Location(-74744, 240440, -3630, 0), 0);
 				
 			}
 			else if(cond == 5)
