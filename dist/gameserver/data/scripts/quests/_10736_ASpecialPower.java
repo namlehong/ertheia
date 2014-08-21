@@ -207,7 +207,7 @@ public class _10736_ASpecialPower extends Quest implements ScriptFile
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		QuestState qs = player.getQuestState(_10733_TheTestForSurvivor.class);
+		QuestState qs = player.getQuestState(_10734_DoOrDie.class);
 		return (player.getLevel() >= 4 && player.getLevel() <= 20 && qs != null && qs.getState() == COMPLETED && !player.isMageClass());
 	}
 }
