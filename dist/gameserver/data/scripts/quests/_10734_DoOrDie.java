@@ -58,7 +58,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 			}
 			else
 			{
-				htmltext = "33950-4.htm"
+				htmltext = "33950-4.htm";
 			}
 		}
 		
@@ -120,7 +120,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 		return htmltext;
 	}
 
-	private function buffPlayer(Player player)
+	private void buffPlayer(Player player)
 	{
 		SkillTable.getInstance().getInfo(4322, 1).getEffects(player, player, false, false);
 		SkillTable.getInstance().getInfo(4323, 1).getEffects(player, player, false, false);
