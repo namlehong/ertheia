@@ -54,14 +54,14 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 		}
 		else if(event.equalsIgnoreCase("33947-4.htm"))
 		{
-			st.giveItems(APPRENTICE_BOX, 1);
+			st.takeItems(APPRENTICE_BOX, 1);
 			
 			st.giveItems(ADENA_ID, 11000);
 			
 			if(st.getPlayer().isMageClass())
-				st.takeItems(APPRENTICE_STAFF, 1);
+				st.giveItems(APPRENTICE_STAFF, 1);
 			else
-				st.takeItems(APPRENTICE_CESTUS, 1);
+				st.giveItems(APPRENTICE_CESTUS, 1);
 			
 			st.addExpAndSp(2625,0);
 			
