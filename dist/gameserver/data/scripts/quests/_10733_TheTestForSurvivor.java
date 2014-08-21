@@ -23,8 +23,8 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	public _10733_TheTestForSurvivor()
 	{
 		super(false);
-		addFirstTalk(GERETH);
-		addTalkId(DIA, KATALIN);
+		addStartNpc(GERETH);
+		addTalkId(GERETH, DIA, KATALIN);
 		
 		addLevelCheck(1, 20);
 		addQuestCompletedCheck(_10732_AForeignLand.class);

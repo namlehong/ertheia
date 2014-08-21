@@ -25,8 +25,8 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	public _10734_DoOrDie()
 	{
 		super(false);
-		addFirstTalkId(KATALIN);
-		addTalkId(ADV_GUIDE);
+		addStartNpc(KATALIN);
+		addTalkId(KATALIN, ADV_GUIDE);
 		addKillId(DUMMY_TRAINING);
 
 		addLevelCheck(4, 20);
@@ -145,9 +145,9 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
-		
+		System.out.println("npcId " + npcId);
 		if(npcId != DUMMY_TRAINING) return null;
-		
+		System.out.println("npc is dummy training st.getCond() " + st.getCond());
 		if(st.getCond() == 1)
 		{
 			st.playSound(SOUND_MIDDLE);
