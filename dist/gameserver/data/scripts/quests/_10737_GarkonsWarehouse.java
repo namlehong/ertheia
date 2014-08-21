@@ -43,12 +43,14 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
+			st.giveItems(APPRENTICE_BOX, 1);
 		}
 		if(event.equalsIgnoreCase("33943-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
+			st.giveItems(APPRENTICE_BOX, 1);
 		}
 		else if(event.equalsIgnoreCase("33947-4.htm"))
 		{
