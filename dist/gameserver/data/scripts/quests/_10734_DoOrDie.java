@@ -218,9 +218,9 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 		{
 			st.playSound(SOUND_MIDDLE);
 			if(st.getPlayer().isMageClass())
-				st.setCond(6);
-			else 
 				st.setCond(7);
+			else 
+				st.setCond(8);
 		}
 		return null;
 	}
