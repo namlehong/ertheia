@@ -105,7 +105,7 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 
 		if(npcId == AYANTHE1)
 		{
-			if(cond == 0)
+			if(cond == 0 || cond == 1)
 			{
 				if(checkStartCondition(st.getPlayer()))
 				{
