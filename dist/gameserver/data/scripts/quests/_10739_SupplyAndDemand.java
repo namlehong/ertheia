@@ -51,7 +51,7 @@ public class _10739_SupplyAndDemand  extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
-		if(event.equalsIgnoreCase("33935-2.htm"))
+		if(event.equalsIgnoreCase("33935-3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
@@ -126,7 +126,12 @@ public class _10739_SupplyAndDemand  extends Quest implements ScriptFile
 			st.takeItems(GROCERY_BOX, 1);
 			st.takeItems(JEWEL_BOX, 1);
 			
+			
 			st.giveItems(ADENA_ID, 1400);
+			st.giveItems(APPRENTICE_EARING, 1);
+			st.giveItems(KNOWLEDGE_NECKLACE, 1);
+			st.giveItems(LEATHER_PANTS, 1);
+			st.giveItems(LEATHER_SHIRT, 1);
 			
 			st.addExpAndSp(8136,1);
 			
