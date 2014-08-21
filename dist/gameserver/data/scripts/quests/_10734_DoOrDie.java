@@ -54,7 +54,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
-		System.out.println("quest event " + event.toString());
+		//System.out.println("quest event " + event.toString());
 		if(event.equalsIgnoreCase("33943-3.htm"))
 		{
 			st.setState(STARTED);
@@ -204,9 +204,9 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
-		System.out.println("npcId " + npcId);
+		//System.out.println("npcId " + npcId);
 		if(npcId != DUMMY_TRAINING) return null;
-		System.out.println("npc is dummy training st.getCond() " + st.getCond());
+		//System.out.println("npc is dummy training st.getCond() " + st.getCond());
 		if(st.getCond() == 1)
 		{
 			st.playSound(SOUND_MIDDLE);
