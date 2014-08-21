@@ -15,6 +15,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	private static final int GERETH = 33932;
 	private static final int DIA = 34005;
 	private static final int AYANTHE = 33942;
+	private static final int KATALIN = 33943;
 	
 	private static final int GERETH_RECOM = 39519;
 
@@ -22,7 +23,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(GERETH);
-		addTalkId(GERETH, DIA, AYANTHE);
+		addTalkId(GERETH, DIA, AYANTHE, KATALIN);
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
 
@@ -30,11 +31,18 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		//String htmltext = event;
-		if(event.equalsIgnoreCase("34005-3.htm"))
+		if(event.equalsIgnoreCase("33932-2.htm"))
+		{
+			st.setCond(1);
+			st.setState(STARTED);
+			st.playSound(SOUND_ACCEPT);
+			st.giveItems(GERETH_RECOM, 1);
+		}
+		else if(event.equalsIgnoreCase("34005-3.htm"))
 		{
 			st.setCond(2);
 		}
-		else if(event.equalsIgnoreCase("33942-2.htm"))
+		else if(event.equalsIgnoreCase("33942-2.htm") || event.equalsIgnoreCase("33943-2.htm"))
 		{
 			st.takeItems(GERETH_RECOM, 1);
 			st.giveItems(ADENA_ID, 5000);
@@ -59,10 +67,6 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 				if(checkStartCondition(st.getPlayer()))
 				{
 					htmltext = "33932-1.htm";
-					st.setCond(1);
-					st.setState(STARTED);
-					st.playSound(SOUND_ACCEPT);
-					st.giveItems(GERETH_RECOM, 1);
 				}
 				else
 					htmltext = "noquest";
@@ -76,7 +80,14 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		}
 		else if(npcId == AYANTHE && st.getCond() == 2)
 		{
-			htmltext = "33942-1.htm";
+			if(st.getPlayer().getClassId() == 183) //mage
+				htmltext = "33942-1.htm";
+				
+		}
+		else if(npcId == KATALIN && st.getCond() == 2)
+		{
+			if(st.getPlayer().getClassId() == 182) //fighter
+				htmltext = "33943-1.htm";
 		}
 		return htmltext;
 	}
