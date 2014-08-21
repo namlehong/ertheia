@@ -26,13 +26,17 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 {
 
 	private static final int SIVANTHE = 33951;
+	private static final int REMEMBRANCE_TOWER = 33989;
 	
 	private final static int KEEN_FLOATO = 23449;
 	private final static int RATEL = 23450;
 	private final static int ROBUS_RATEL = 23451;
 	
 	private final static int UNNAMED_RELIC  = 39526;
-
+	
+	private final static int HEALING_POTION  = 727;
+	private final static int KNOWLEDGE_RING  = 875;
+	
 	private static final int minLevel = 6;
 	private static final int maxLevel = 20;
 	
@@ -52,6 +56,7 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(SIVANTHE);
+		addTalkId(REMEMBRANCE_TOWER);
 		
 		addKillId(KEEN_FLOATO, RATEL, ROBUS_RATEL);
 
@@ -72,6 +77,12 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 		}
 		
+		if(event.equalsIgnoreCase("33989-2.htm"))
+		{
+			st.setCond(3);
+			st.playSound(SOUND_MIDDLE);
+		}
+				
 		return htmltext;
 	}
 
@@ -95,17 +106,26 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 				htmltext = "33951-4.htm";
 			}
 			
-			if(cond == 2)
+			if(cond == 3)
 			{
 				st.takeItems(UNNAMED_RELIC, 20);
 				
-				st.giveItems(ADENA_ID, 900);
-				st.addExpAndSp(3154, 0);
+				st.giveItems(ADENA_ID, 1600);
+				st.giveItems(HEALING_POTION, 100);
+				st.giveItems(KNOWLEDGE_RING, 2);
+				st.addExpAndSp(16851, 0);
 				st.setState(COMPLETED);
 				st.exitCurrentQuest(false);
 				st.playSound(SOUND_FINISH);
 				
 				htmltext = "33951-5.htm";
+			}
+		}
+		else if(npcId == REMEMBRANCE_TOWER)
+		{
+			if(cond == 2)
+			{
+				htmltext = "33989-1.htm";
 			}
 		}
 		

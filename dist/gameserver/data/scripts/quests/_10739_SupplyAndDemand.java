@@ -128,7 +128,7 @@ public class _10739_SupplyAndDemand  extends Quest implements ScriptFile
 			
 			
 			st.giveItems(ADENA_ID, 1400);
-			st.giveItems(APPRENTICE_EARING, 1);
+			st.giveItems(APPRENTICE_EARING, 2);
 			st.giveItems(KNOWLEDGE_NECKLACE, 1);
 			st.giveItems(LEATHER_PANTS, 1);
 			st.giveItems(LEATHER_SHIRT, 1);
