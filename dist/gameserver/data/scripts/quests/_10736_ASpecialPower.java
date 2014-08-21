@@ -84,7 +84,7 @@ public class _10736_ASpecialPower extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33945-4.htm"))
 		{
-			if(st.get("bonusXP") != 1)
+			if(st.getInt("bonusXP") != 1)
 			{
 				st.addExpAndSp(1716, 0);
 				st.set("bonusXP", 1);
