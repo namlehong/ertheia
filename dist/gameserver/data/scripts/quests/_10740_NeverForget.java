@@ -34,7 +34,7 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 	
 	private final static int UNNAMED_RELIC  = 39526;
 	
-	private final static int HEALING_POTION  = 727;
+	private final static int HEALING_POTION  = 1060;
 	private final static int KNOWLEDGE_RING  = 875;
 	
 	private static final int minLevel = 6;
@@ -80,6 +80,7 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33989-2.htm"))
 		{
 			st.setCond(3);
+			st.takeItems(UNNAMED_RELIC, 20);
 			st.playSound(SOUND_MIDDLE);
 		}
 				
@@ -108,8 +109,6 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 			
 			if(cond == 3)
 			{
-				st.takeItems(UNNAMED_RELIC, 20);
-				
 				st.giveItems(ADENA_ID, 1600);
 				st.giveItems(HEALING_POTION, 100);
 				st.giveItems(KNOWLEDGE_RING, 2);
