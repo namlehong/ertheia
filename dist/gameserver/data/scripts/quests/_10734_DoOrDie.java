@@ -45,6 +45,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 
 		addLevelCheck(4, 20);
 		addQuestCompletedCheck(_10733_TheTestForSurvivor.class);
+		
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
 
@@ -166,7 +167,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 				//st.showTutorialHTML(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_002_Guide_01.htm");
 				
 			}
-			else if(cond == 5)
+			else if(cond == 6)
 			{
 				buffPlayer(st.getPlayer());
 				htmltext = "33950-5.htm";

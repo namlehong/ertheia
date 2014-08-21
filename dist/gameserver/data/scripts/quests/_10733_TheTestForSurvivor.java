@@ -24,7 +24,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(GERETH);
-		addTalkId(GERETH, DIA, KATALIN);
+		addTalkId(GERETH, DIA, KATALIN, AYANTHE);
 		
 		addLevelCheck(1, 20);
 		addQuestCompletedCheck(_10732_AForeignLand.class);
@@ -35,6 +35,8 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		//String htmltext = event;
+		Player player = st.getPlayer();
+		
 		if(event.equalsIgnoreCase("33932-2.htm"))
 		{
 			st.setCond(1);
@@ -44,9 +46,12 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		}
 		else if(event.equalsIgnoreCase("34005-3.htm"))
 		{
-			st.setCond(2);
+			if(player.isMageClass())
+				st.setCond(3);
+			else 
+				st.setCond(3);
 		}
-		else if(event.equalsIgnoreCase("33943-2.htm"))
+		else if(event.equalsIgnoreCase("33943-2.htm") || event.equalsIgnoreCase("33942-2.htm"))
 		{
 			st.takeItems(GERETH_RECOM, 1);
 			st.giveItems(ADENA_ID, 5000);
@@ -64,6 +69,8 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		Player player = st.getPlayer();
+		
 		if(npcId == GERETH)
 		{
 			if(cond == 0)
@@ -82,10 +89,14 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		{
 			htmltext = "34005-1.htm";
 		}
-		
-		else if(npcId == KATALIN && st.getCond() == 2)
+		else if(npcId == KATALIN && st.getCond() == 2 && !player.isMageClass())
 		{
 			htmltext = "33943-1.htm";
+			
+		}
+		else if(npcId == AYANTHE && st.getCond() == 3 && !player.isMageClass())
+		{
+			htmltext = "33942-1.htm";
 			
 		}
 		return htmltext;
