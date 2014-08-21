@@ -25,7 +25,6 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	public _10734_DoOrDie()
 	{
 		super(false);
-		addStartNpc(KATALIN);
 		addFirstTalkId(KATALIN);
 		addTalkId(ADV_GUIDE);
 		addKillId(DUMMY_TRAINING);
