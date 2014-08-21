@@ -118,7 +118,7 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		if(st.getCond() == 1 && relic_count < 20)
+		if(st.getCond() == 1)
 		{
 			if(npc.getNpcId() == KEEN_FLOATO || npc.getNpcId() == RATEL || npc.getNpcId() == ROBUS_RATEL)
 			{
