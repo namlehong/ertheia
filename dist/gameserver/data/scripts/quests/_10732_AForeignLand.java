@@ -32,7 +32,7 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
 		String htmltext = event;
-		if(event.equalsIgnoreCase("33931_2.htm"))
+		if(event.equalsIgnoreCase("33931_3.htm"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
@@ -65,7 +65,7 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 					htmltext = "33931_1.htm";
 			}
 			else if(cond == 1)
-				htmltext = "33931_3.htm";
+				htmltext = "33931_4.htm";
 		}
 		else if(npcId == GERETH && st.getCond() == 1)
 		{
