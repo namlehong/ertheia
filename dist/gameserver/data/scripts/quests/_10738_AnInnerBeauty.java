@@ -17,7 +17,7 @@ public class _10738_AnInnerBeauty  extends Quest implements ScriptFile
 {
 	//NPC's
 	private static final int GRAKON = 33947;
-	private static final int EVNA = 33947;
+	private static final int EVNA = 33935;
 	private static final int GRAKON_NOTE = 39521;
 	
 	public _10738_AnInnerBeauty ()
@@ -78,8 +78,7 @@ public class _10738_AnInnerBeauty  extends Quest implements ScriptFile
 		}
 		else if(npcId == EVNA && st.getCond() == 1)
 		{
-			htmltext = "33947-1.htm";
-			
+			htmltext = "33935-1.htm";
 		}
 		return htmltext;
 	}
