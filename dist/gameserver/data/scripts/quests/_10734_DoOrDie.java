@@ -39,7 +39,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		Player player = st.getPlayer();
-
+		System.out.println("quest event " + event.toString());
 		if(event.equalsIgnoreCase("33943-3.htm"))
 		{
 			st.setState(STARTED);
