@@ -87,7 +87,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33950-5.htm"))
 		{
 			buffPlayer(st.getPlayer());
-			st.setCond(5);
+			st.setCond(6);
 		}
 		
 		return htmltext;
@@ -114,7 +114,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 				}
 				else if(cond == 4)
 					htmltext = "33943-4.htm";
-				else if(cond == 7)
+				else if(cond == 8)
 				{
 					st.giveItems(ADENA_ID, 7000);
 					st.addExpAndSp(805, 2);
@@ -142,7 +142,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 				}
 				else if(cond == 4)
 					htmltext = "33942-4.htm";
-				else if(cond == 6)
+				else if(cond == 7)
 				{
 					st.giveItems(ADENA_ID, 7000);
 					st.addExpAndSp(805, 2);
@@ -189,12 +189,12 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 		SkillTable.getInstance().getInfo(15653, 1).getEffects(player, player, false, false);
 		if(player.isMageClass())
 		{
-			SkillTable.getInstance().getInfo(15649, 1).getEffects(player, player, false, false);
+			SkillTable.getInstance().getInfo(15650, 1).getEffects(player, player, false, false);
 			
 		}
 		else
 		{
-			SkillTable.getInstance().getInfo(15650, 1).getEffects(player, player, false, false);
+			SkillTable.getInstance().getInfo(15649, 1).getEffects(player, player, false, false);
 		}
 		
 	}
