@@ -26,7 +26,8 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(KATALIN);
-		addTalkId(KATALIN, ADV_GUIDE);
+		addFirstTalkId(KATALIN);
+		addTalkId(ADV_GUIDE);
 		addKillId(DUMMY_TRAINING);
 
 		addLevelCheck(4, 20);
@@ -83,8 +84,6 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 				htmltext = "33943-5.htm";
 			else if(cond == 0)
 				htmltext = "33943-1.htm";
-			else if(cond == 1)
-				htmltext = "33943-3.htm";
 			else if(cond == 2)
 			{
 				st.setCond(3);
@@ -147,12 +146,15 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
-		if(st.getCond() == 1 && npcId == DUMMY_TRAINING)
+		
+		if(npcId != DUMMY_TRAINING) return null;
+		
+		if(st.getCond() == 1)
 		{
 			st.playSound(SOUND_MIDDLE);
 			st.setCond(2);
 		}
-		else if(st.getCond() == 4 && npcId == DUMMY_TRAINING)
+		if(st.getCond() == 4)
 		{
 			st.setCond(5);
 			st.playSound(SOUND_MIDDLE);
