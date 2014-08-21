@@ -109,8 +109,8 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		QuestState qs1 = player.getQuestState(_10735_ASpecialPower);
-		QuestState qs2 = player.getQuestState(_10736_ASpecialPower);
+		QuestState qs1 = player.getQuestState(_10735_ASpecialPower.class);
+		QuestState qs2 = player.getQuestState(_10736_ASpecialPower.class);
 		return (player.getLevel() >= 5 && player.getLevel() <= 20 && (qs1 != null || qs2 != null) && (qs1.getState() == COMPLETED || qs2.getState() == COMPLETED));
 	}
 
