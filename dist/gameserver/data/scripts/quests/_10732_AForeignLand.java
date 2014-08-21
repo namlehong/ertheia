@@ -24,7 +24,7 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(NAVARI);
 		addFirstTalkId(NAVARI);
-		addTalkId(GERETH);
+		addTalkId(NAVARI, GERETH);
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
 
