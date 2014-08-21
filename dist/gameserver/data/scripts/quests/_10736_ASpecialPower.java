@@ -71,7 +71,7 @@ public class _10736_ASpecialPower extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33943-2.htm"))
 		{
 			st.setState(STARTED);
-			st.setCond(0);
+			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
 		
