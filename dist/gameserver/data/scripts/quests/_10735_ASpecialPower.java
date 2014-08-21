@@ -78,6 +78,7 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 		{
 			st.setCond(1);
 			enterInstance(st, 400);	
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("33944-5.htm"))
@@ -179,33 +180,12 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 	public String onKill(NpcInstance npc, QuestState st)
 	{
 		int npcId = npc.getNpcId();
-		int killedFloato = st.getInt("killedFloato");
-		int killedRatel = st.getInt("killedRatel");
+		int cond = st.getCond();
 		
-		updateKill(npc, st);
-		
-		if(npcId == FLOATO && (st.getCond() == 2 || st.getCond() == 4))
+		if(updateKill(npc, st))
 		{
-			if(killedFloato == 2)
-			{
-				st.setCond(st.getCond() + 1);
-				st.unset("killedFloato");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else
-				st.set("killedFloato", ++killedFloato);
-		}
-		
-		if(npcId == RATEL && st.getCond() == 6)
-		{
-			if(killedRatel == 2)
-			{
-				st.setCond(st.getCond() + 1);
-				st.unset("killedRatel");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else
-				st.set("killedRatel", ++killedRatel);
+			st.playSound(SOUND_MIDDLE);
+			st.setCond(cond+1);
 		}
 		
 		return null;
