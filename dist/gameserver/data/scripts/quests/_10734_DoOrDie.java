@@ -126,7 +126,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 					htmltext = "33943-5.htm";
 			}
 			else
-				htmltxt = "noquest";
+				htmltext = "noquest";
 		}
 		else if(npcId == AYANTHE)
 		{
@@ -154,7 +154,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 					htmltext = "33942-5.htm";
 			}
 			else
-				htmltxt = "noquest";
+				htmltext = "noquest";
 		}
 		else if(npcId == ADV_GUIDE)
 		{
