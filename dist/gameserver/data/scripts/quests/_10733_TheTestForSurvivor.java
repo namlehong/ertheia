@@ -1,6 +1,7 @@
 package quests;
 
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
@@ -80,14 +81,18 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 		}
 		else if(npcId == AYANTHE && st.getCond() == 2)
 		{
-			if(st.getPlayer().getClassId() == 183) //mage
+			if(st.getPlayer().getClassId() == ClassId.ERTHEIA_MAGE) //mage
 				htmltext = "33942-1.htm";
+			else
+				htmltext = "noquest";
 				
 		}
 		else if(npcId == KATALIN && st.getCond() == 2)
 		{
-			if(st.getPlayer().getClassId() == 182) //fighter
+			if(st.getPlayer().getClassId() == ClassId.ERTHEIA_FIGHTER) //fighter
 				htmltext = "33943-1.htm";
+			else
+				htmltext = "noquest";
 		}
 		return htmltext;
 	}
