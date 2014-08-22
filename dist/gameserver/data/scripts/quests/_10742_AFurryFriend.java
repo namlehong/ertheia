@@ -86,14 +86,18 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 				foxInstance = st.addSpawn(RICKY, 2*60000); //despawn after 2 mins
 				
 				st.startQuestTimer("fox_move", 2000);
-				htmltext = "Dắt Ricky về lại với Leira! Nhanh lên nhé.";
+				player.sendPacket(new ExShowScreenMessage("Dắt Ricky về lại với Leira! Nhanh lên nhé.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+				
 			}
 			else
 			{
-				htmltext = "Có lẽ Ricky đã chui vào hang khác.";
+				player.sendPacket(new ExShowScreenMessage("Có lẽ Ricky đã chui vào hang khác.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+				
 			}
 			caveCheckCount++;
 			st.set("cave_check", caveCheckCount);
+			
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("fox_move"))
@@ -102,6 +106,7 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 			
 			foxInstance.setRunning();
 			foxInstance.setTitle("Test Title");
+			
 			foxInstance.moveToLocation(player.getLoc(), 20, true);
 			
 			if(foxInstance.getLoc().distance(new Location(-78080, 237343, -3536)) > 100)
