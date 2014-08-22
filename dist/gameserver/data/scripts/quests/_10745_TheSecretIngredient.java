@@ -28,15 +28,12 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 	private static final int KARLA = 33933;
 	
 	private final static int KERAPHON = 23459;
-	private final static int KEEN_HONEYBEE = 23460;
-	private final static int KEEN_GROWLER = 23461;
 	
 	private final static int DOLKIN_REPORT = 39534;
+	private final static int SECRET_INGREDIENT = 39533;
 	private final static int FAERON_BOX1 = 40262;
 	private final static int FAERON_BOX2 = 40263;
 	
-	public static final String KILL_LIST = "KILL_LIST";
-
 	private static final int minLevel = 10;
 	private static final int maxLevel = 20;
 	
@@ -58,7 +55,7 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		addStartNpc(DOLKIN1);
 		addTalkId(DOLKIN2, KARLA);
 		
-		addKillNpcWithLog(1, KILL_LIST, 3, KERAPHON);
+		addKillId(KERAPHON);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -103,7 +100,7 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("enter_instance"))
 		{
 			st.setCond(1);
-			enterInstance(st, 402);	
+			enterInstance(st, 402);
 			return null;
 		}
 		
@@ -154,10 +151,10 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		if(updateKill(npc, st))
+		if(npc.getNpcId() == KERAPHON)
 		{
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(cond+1);
+			st.giveItems(SECRET_INGREDIENT, 1);
+			st.setCond(2);
 		}
 		
 		return null;
