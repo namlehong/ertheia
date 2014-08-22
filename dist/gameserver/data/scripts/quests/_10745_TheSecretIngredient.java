@@ -31,8 +31,8 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 	
 	private final static int DOLKIN_REPORT = 39534;
 	private final static int SECRET_INGREDIENT = 39533;
-	private final static int FAERON_BOX1 = 40262;
-	private final static int FAERON_BOX2 = 40263;
+	private final static int FAERON_BOX1 = 40263;
+	private final static int FAERON_BOX2 = 40262;
 	
 	private static final int minLevel = 10;
 	private static final int maxLevel = 20;
@@ -77,12 +77,15 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33954-4.htm"))
 		{
 			st.setCond(3);
+			st.takeItems(SECRET_INGREDIENT, 1);
 			st.giveItems(DOLKIN_REPORT, 1);
 			st.playSound(SOUND_MIDDLE);
 		}
 		
 		if(event.equalsIgnoreCase("33933-2.htm"))
 		{
+			st.takeItems(DOLKIN_REPORT, 1);
+			
 			st.giveItems(ADENA_ID, 48000);
 			
 			if(player.isMageClass())
@@ -106,6 +109,7 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("leave_instance"))
 		{
+			st.setCond(2);
 			player.getReflection().collapse();
 			return null;
 		}
@@ -154,7 +158,8 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		if(npc.getNpcId() == KERAPHON)
 		{
 			st.giveItems(SECRET_INGREDIENT, 1);
-			st.setCond(2);
+			st.getPlayer().sendPacket(new ExShowScreenMessage("Nói chuyện với Dolkin để ra khỏi tổ Keraphon.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			
 		}
 		
 		return null;
