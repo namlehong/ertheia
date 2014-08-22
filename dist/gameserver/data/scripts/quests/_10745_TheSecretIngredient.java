@@ -32,6 +32,8 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 	private final static int KEEN_GROWLER = 23461;
 	
 	private final static int DOLKIN_REPORT = 39534;
+	private final static int FAERON_BOX1 = 40262;
+	private final static int FAERON_BOX2 = 40263;
 	
 	public static final String KILL_LIST = "KILL_LIST";
 
@@ -84,9 +86,14 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33933-2.htm"))
 		{
-			st.giveItems(ADENA_ID, 900);
-			st.giveItems(SPIRITSHOT, 500);
-			st.addExpAndSp(3154, 0);
+			st.giveItems(ADENA_ID, 48000);
+			
+			if(player.isMageClass())
+				st.giveItems(FAERON_BOX1, 1);
+			else
+				st.giveItems(FAERON_BOX2, 1);
+			
+			st.addExpAndSp(241076, 5);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
