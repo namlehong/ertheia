@@ -85,8 +85,6 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 				
 				foxInstance = st.addSpawn(RICKY, 2*60000); //despawn after 2 mins
 				
-				foxInstance.setTitle(player.getName());
-				
 				st.startQuestTimer("fox_move", 2000);
 				htmltext = "Dắt Ricky về lại với Leira! Nhanh lên nhé.";
 			}
@@ -103,6 +101,7 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 			if(foxInstance == null) return null;
 			
 			foxInstance.setRunning();
+			foxInstance.setTitle(player.getName());
 			foxInstance.moveToLocation(player.getLoc(), 20, true);
 			
 			if(foxInstance.getLoc().distance(new Location(-78080, 237343, -3536)) > 100)
