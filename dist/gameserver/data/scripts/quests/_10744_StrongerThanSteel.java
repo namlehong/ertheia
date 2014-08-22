@@ -76,6 +76,12 @@ public class _10744_StrongerThanSteel extends Quest implements ScriptFile
 			st.playSound(SOUND_ACCEPT);
 		}
 		
+		if(event.equalsIgnoreCase("33954-3.htm"))
+		{
+			st.setCond(2);
+			
+		}
+		
 		return htmltext;
 	}
 
