@@ -62,7 +62,7 @@ public class _10746_SeeTheWorld extends Quest implements ScriptFile
 		else if(event.equalsIgnoreCase("33948-2.htm"))
 		{
 			//tele to gludin village
-			st.getPlayer().teleToLocation(new Location(-80728, 149848, -3069));
+			st.getPlayer().teleToLocation(-80728, 149848, -3069);
 			st.setCond(2);
 		}
 		
@@ -93,7 +93,7 @@ public class _10746_SeeTheWorld extends Quest implements ScriptFile
 		{
 			htmltext = "33948-1.htm";
 			
-			if(player.isMageClass())
+			if(st.getPlayer().isMageClass())
 				st.giveItems(EMISSARY_BOX_WIZARD, 1);
 			else
 				st.giveItems(EMISSARY_BOX_FIGHTER, 1);
