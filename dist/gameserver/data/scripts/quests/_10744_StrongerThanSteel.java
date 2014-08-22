@@ -23,23 +23,20 @@ import l2s.gameserver.utils.ReflectionUtils;
  * @author Hien Son
  * 
  */
-public class _10743_StrangeFungus extends Quest implements ScriptFile
+public class _10744_StrongerThanSteel extends Quest implements ScriptFile
 {
 
-	private static final int LEIRA = 33952;
 	private static final int MILONE = 33953;
+	private static final int DOLKIN = 33954;
 	
-	private final static int GROWLER = 23455;
-	private final static int ROBUST_GROWLER = 23486;
-	private final static int EVOLVE_GROWLER = 23456;
+	private final static int TREANT = 23457;
+	private final static int LEAFIE = 23458;
 	
-	private final static int MUSHROOM_SPORE  = 39530;
-	private final static int LEATHER_SHOES  = 37;
+	private final static int LEAFIE_LEAF  = 39531;
+	private final static int TREANT_LEAF  = 39532;
 	
-	private static final int minLevel = 13;
+	private static final int minLevel = 10;
 	private static final int maxLevel = 20;
-	
-	public static final String GROWLER_LIST = "GROWLER_LIST";
 	
 	@Override
 	public void onLoad()
@@ -53,15 +50,13 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _10743_StrangeFungus()
+	public _10744_StrongerThanSteel()
 	{
 		super(false);
-		addStartNpc(LEIRA);
-		addTalkId(MILONE);
+		addStartNpc(MILONE);
+		addTalkId(DOLKIN);
 		
-		addKillId(GROWLER, ROBUST_GROWLER, EVOLVE_GROWLER);
-		
-		addKillNpcWithLog(1, GROWLER_LIST, 0, GROWLER, ROBUST_GROWLER);
+		addKillId(TREANT, LEAFIE);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -74,26 +69,11 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 		String htmltext = event;
 		Player player = st.getPlayer();
 
-		if(event.equalsIgnoreCase("33952-3.htm"))
+		if(event.equalsIgnoreCase("33953-3.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if(event.equalsIgnoreCase("33953-3.htm"))
-		{
-			st.takeAllItems(MUSHROOM_SPORE);
-			
-			st.giveItems(ADENA_ID, 62000);
-			st.giveItems(LEATHER_SHOES, 1);
-			st.addExpAndSp(62876, 2);
-			
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-			player.sendPacket(new ExShowScreenMessage("Bạn nhận được Leather Shoes, kiểm tra thùng đồ nhé", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-			
 		}
 		
 		return htmltext;
@@ -106,26 +86,48 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		
-		if(npcId == LEIRA)
+		if(npcId == MILONE)
 		{
 			if(checkStartCondition(st.getPlayer()))
 			{
-				htmltext = "33952-1.htm";
+				if(cond == 0)
+				{
+					htmltext = "33953-1.htm";
+				}
+				else if(cond == 1)
+				{
+					htmltext = "33953-4.htm";
+				}
 			}
 			else
 				htmltext = "noquest";
-			if(cond == 1)
-			{
-				htmltext = "33952-3.htm";
-			}
+			
 			
 		}
-		else if(npcId == MILONE)
+		else if(npcId == DOLKIN)
 		{
-			if(cond == 2)
+			if(cond == 1)
 			{
-				htmltext = "33953-1.htm";
+				htmltext = "33954-1.htm";
 			}
+			else if(cond == 2)
+			{
+				htmltext = "33954-5.htm";
+			}
+			else if(cond == 3)
+			{
+				st.takeAllItems(LEAFIE_LEAF);
+				st.takeAllItems(TREANT_LEAF);
+				
+				st.giveItems(ADENA_ID, 34000);
+				st.addExpAndSp(112001, 5);
+				
+				st.setState(COMPLETED);
+				st.exitCurrentQuest(false);
+				st.playSound(SOUND_FINISH);
+				htmltext = "33954-4.htm";
+			}
+				
 		}
 		
 		return htmltext;
@@ -137,28 +139,24 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		if(st.getCond() == 1)
+		if(st.getCond() == 2)
 		{
-			if(npc.getNpcId() == GROWLER || npc.getNpcId() == ROBUST_GROWLER)
-			{
-				updateKill(npc, st);
-				
-				if(Math.random()<0.33)
-				{
-					st.addSpawn(EVOLVE_GROWLER, npc.getX(), npc.getY(), npc.getZ(), 0, 0, 120000);
-				}
-			}
-			
-			if(npc.getNpcId() == EVOLVE_GROWLER)
+			if(npc.getNpcId() == TREANT)
 			{
 				st.playSound(SOUND_MIDDLE);
-				st.giveItems(MUSHROOM_SPORE, 1);
+				st.giveItems(TREANT_LEAF, 1);
+			}
+			
+			if(npc.getNpcId() == LEAFIE)
+			{
+				st.playSound(SOUND_MIDDLE);
+				st.giveItems(LEAFIE_LEAF, 1);
 			}
 		}
 		
-		if(getItemCountById(st.getPlayer(), MUSHROOM_SPORE) >= 10)
+		if(getItemCountById(st.getPlayer(), LEAFIE_LEAF) >= 15 && getItemCountById(st.getPlayer(), TREANT_LEAF) >= 20 )
 		{
-			st.setCond(2);
+			st.setCond(3);
 		}
 		
 		return null;
