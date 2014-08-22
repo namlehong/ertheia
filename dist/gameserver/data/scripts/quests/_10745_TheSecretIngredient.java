@@ -31,8 +31,8 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 	
 	private final static int DOLKIN_REPORT = 39534;
 	private final static int SECRET_INGREDIENT = 39533;
-	private final static int FAERON_BOX1 = 40263;
-	private final static int FAERON_BOX2 = 40262;
+	private final static int FAERON_BOX_WIZARD = 40263;
+	private final static int FAERON_BOX_FIGHTER = 40262;
 	
 	private static final int minLevel = 10;
 	private static final int maxLevel = 20;
@@ -89,14 +89,15 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 			st.giveItems(ADENA_ID, 48000);
 			
 			if(player.isMageClass())
-				st.giveItems(FAERON_BOX1, 1);
+				st.giveItems(FAERON_BOX_WIZARD, 1);
 			else
-				st.giveItems(FAERON_BOX2, 1);
+				st.giveItems(FAERON_BOX_FIGHTER, 1);
 			
 			st.addExpAndSp(241076, 5);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
+			st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn vừa nhận được trang bị mới, kiểm tra thùng đồ để sử dụng.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 			
 		}
 		
