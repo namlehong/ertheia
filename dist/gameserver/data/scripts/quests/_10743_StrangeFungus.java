@@ -23,18 +23,21 @@ import l2s.gameserver.utils.ReflectionUtils;
  * @author Hien Son
  * 
  */
-public class _10742_AFurryFriend extends Quest implements ScriptFile
+public class _10743_StrangeFungus extends Quest implements ScriptFile
 {
 
 	private static final int LEIRA = 33952;
-	private final static int KIKU_CAVE = 33995;
+	private static final int MILONE = 33953;
 	
-	private final static int RICKY = 19552;
+	private final static int GROWLER = 23455;
+	private final static int ROBUST_GROWLER = 23486;
+	private final static int EVOLVE_GROWLER = 23456;
 	
-	private static final int minLevel = 10;
+	private final static int MUSHROOM_SPORE  = 39530;
+	private final static int LEATHER_SHOES  = 37;
+	
+	private static final int minLevel = 13;
 	private static final int maxLevel = 20;
-	
-	public static NpcInstance foxInstance = null;
 	
 	@Override
 	public void onLoad()
@@ -48,15 +51,18 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _10742_AFurryFriend()
+	public _10743_StrangeFungus()
 	{
 		super(false);
 		addStartNpc(LEIRA);
-		addTalkId(KIKU_CAVE);
+		addTalkId(MILONE);
 		
+		addKillId(GROWLER, ROBUST_GROWLER, EVOLVE_GROWLER);
+
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
+	
 
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
@@ -64,60 +70,24 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 		String htmltext = event;
 		Player player = st.getPlayer();
 
-		if(event.equalsIgnoreCase("33952-4.htm"))
+		if(event.equalsIgnoreCase("33952-3.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
-			st.set("spawn_cave", (int)Math.round(Math.random()*3));
-			st.set("cave_check", 0);
-			
 		}
 		
-		if(event.equalsIgnoreCase("check_fox"))
+		if(event.equalsIgnoreCase("33953-3.htm"))
 		{
-			int caveCheckCount = st.getInt("cave_check");
-			int spawnCave = st.getInt("spawn_cave");
+			st.takeAllItems(MUSHROOM_SPORE);
 			
-			if(caveCheckCount == spawnCave && st.getInt("fox_spawn") != 1)
-			{
-				st.set("fox_spawn", 1);
-				
-				foxInstance = st.addSpawn(RICKY, 2*60000); //despawn after 2 mins
-				
-				st.startQuestTimer("fox_move", 2000);
-				player.sendPacket(new ExShowScreenMessage("Dắt Ricky về lại với Leira! Nhanh lên nhé.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-				
-			}
-			else
-			{
-				player.sendPacket(new ExShowScreenMessage("Có lẽ Ricky đã chui vào hang khác.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-				
-			}
-			caveCheckCount++;
-			st.set("cave_check", caveCheckCount);
+			st.giveItems(ADENA_ID, 62000);
+			st.giveItems(LEATHER_SHOES, 1);
+			st.addExpAndSp(62876, 2);
 			
-			return null;
-		}
-		
-		if(event.equalsIgnoreCase("fox_move"))
-		{
-			if(foxInstance == null) return null;
-			
-			foxInstance.setRunning();
-			
-			foxInstance.moveToLocation(player.getLoc(), 20, true);
-			
-			if(foxInstance.getLoc().distance(new Location(-78080, 237343, -3536)) > 100)
-			{
-				st.startQuestTimer("fox_move", 2000);
-			}
-			else
-			{
-				st.setCond(2);
-				foxInstance.deleteMe();
-			}
-			return null;
+			st.setState(COMPLETED);
+			st.exitCurrentQuest(false);
+			st.playSound(SOUND_FINISH);
 		}
 		
 		return htmltext;
@@ -140,30 +110,67 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 				htmltext = "noquest";
 			if(cond == 1)
 			{
-				htmltext = "33952-5.htm";
-			}
-			else if(cond == 2)
-			{
-				st.giveItems(ADENA_ID, 2000);
-				st.addExpAndSp(22973, 2);
-				
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-				
-				htmltext = "33952-6.htm";
+				htmltext = "33952-3.htm";
 			}
 			
 		}
-		else if(npcId == KIKU_CAVE)
+		else if(npcId == MILONE)
 		{
-			if(cond == 1)
+			if(cond == 2)
 			{
-				htmltext = "33995.htm";
+				htmltext = "33953-1.htm";
 			}
 		}
 		
 		return htmltext;
+	}
+
+	@Override
+	public String onKill(NpcInstance npc, QuestState st)
+	{
+		int npcId = npc.getNpcId();
+		int cond = st.getCond();
+		
+		if(st.getCond() == 1)
+		{
+			if(npc.getNpcId() == GROWLER || npc.getNpcId() == ROBUST_GROWLER)
+			{
+				if(Math.random()<0.33)
+				{
+					st.addSpawn(EVOLVE_GROWLER, npc.getX(), npc.getY(), npc.getZ(), 0, 0, 120000);
+				}
+			}
+			
+			if(npc.getNpcId() == EVOLVE_GROWLER)
+			{
+				st.playSound(SOUND_MIDDLE);
+				st.giveItems(MUSHROOM_SPORE, 1);
+			}
+		}
+		
+		if(getItemCountById(st.getPlayer(), MUSHROOM_SPORE) >= 10)
+		{
+			st.setCond(2);
+		}
+		
+		return null;
+	}
+	
+	private long getItemCountById(Player player, int itemId)
+	{
+		long itemCount = 0;
+		
+		PcInventory inventory = player.getInventory();
+		
+		if(inventory!= null)
+		{
+			ItemInstance itemInstance = inventory.getItemByItemId(itemId);
+
+			if(itemInstance!= null)
+				itemCount = itemInstance.getCount();
+		}
+		
+		return itemCount;
 	}
 	
 	@Override
