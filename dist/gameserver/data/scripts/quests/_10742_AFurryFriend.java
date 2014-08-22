@@ -85,7 +85,7 @@ public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("fox_move"))
 		{
-			if(foxInstance == null) return;
+			if(foxInstance == null) return null;
 			
 			foxInstance.moveToLocation(player.getLoc(), 20, true);
 			
@@ -144,53 +144,6 @@ public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
 		}
 		
 		return htmltext;
-	}
-
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getNpcId();
-		int cond = st.getCond();
-		
-		if(st.getCond() == 1)
-		{
-			if(npc.getNpcId() == HONEYBEE || npc.getNpcId() == ROBUST_HONEYBEE)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.takeItems(EMPTY_JAR, 1);
-				st.giveItems(SWEET_HONEY, 1);
-			}
-			
-			if(npc.getNpcId() == KIKU)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.giveItems(NUTRITIOUS_MEAT, 1);
-			}
-		}
-		
-		if(getItemCountById(st.getPlayer(), SWEET_HONEY) >= 10 && getItemCountById(st.getPlayer(), NUTRITIOUS_MEAT) >= 10 )
-		{
-			st.setCond(2);
-		}
-		
-		return null;
-	}
-	
-	private long getItemCountById(Player player, int itemId)
-	{
-		long itemCount = 0;
-		
-		PcInventory inventory = player.getInventory();
-		
-		if(inventory!= null)
-		{
-			ItemInstance itemInstance = inventory.getItemByItemId(itemId);
-
-			if(itemInstance!= null)
-				itemCount = itemInstance.getCount();
-		}
-		
-		return itemCount;
 	}
 	
 	@Override

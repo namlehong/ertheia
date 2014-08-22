@@ -21,6 +21,7 @@ import l2s.gameserver.utils.ReflectionUtils;
 
 /**
  * @author Hien Son
+ * 
  */
 public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
 {
