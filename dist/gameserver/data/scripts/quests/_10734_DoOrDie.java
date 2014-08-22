@@ -13,7 +13,9 @@ import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
 
-//By Evil_dnk dev.fairytale-world.ru
+/**
+ * @author Hien Son
+ */
 
 public class _10734_DoOrDie extends Quest implements ScriptFile
 {
@@ -107,7 +109,12 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 			if(!player.isMageClass())
 			{
 				if(cond == 0)
-					htmltext = "33943-1.htm";
+				{
+					if(checkStartCondition(st.getPlayer()))
+						htmltext = "33943-1.htm";
+					else 
+						htmltext = "noquest";
+				}
 				else if(cond == 3)
 				{
 					st.setCond(4);
@@ -135,7 +142,12 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 			if(player.isMageClass())
 			{
 				if(cond == 0)
-					htmltext = "33942-1.htm";
+				{
+					if(checkStartCondition(st.getPlayer()))
+						htmltext = "33942-1.htm";
+					else 
+						htmltext = "noquest";
+				}
 				else if(cond == 2)
 				{
 					st.setCond(4);
@@ -224,6 +236,13 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 				st.setCond(8);
 		}
 		return null;
+	}
+	
+	@Override
+	public boolean checkStartCondition(Player player)
+	{
+		QuestState qs = player.getQuestState(_10733_TheTestForSurvivor.class);
+		return player.getLevel() <= 20 && qs != null && qs.getState() == COMPLETED;
 	}
 
 	@Override
