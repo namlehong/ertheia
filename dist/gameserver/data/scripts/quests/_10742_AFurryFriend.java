@@ -23,7 +23,7 @@ import l2s.gameserver.utils.ReflectionUtils;
  * @author Hien Son
  * 
  */
-public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
+public class _10742_AFurryFriend extends Quest implements ScriptFile
 {
 
 	private static final int LEIRA = 33952;
@@ -48,7 +48,7 @@ public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _10741_ADraughtForTheCold()
+	public _10742_AFurryFriend()
 	{
 		super(false);
 		addStartNpc(LEIRA);
