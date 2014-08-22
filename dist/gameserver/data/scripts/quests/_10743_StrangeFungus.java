@@ -39,6 +39,8 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 	private static final int minLevel = 13;
 	private static final int maxLevel = 20;
 	
+	public static final String GROWLER_LIST = "GROWLER_LIST";
+	
 	@Override
 	public void onLoad()
 	{}
@@ -58,6 +60,8 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 		addTalkId(MILONE);
 		
 		addKillId(GROWLER, ROBUST_GROWLER, EVOLVE_GROWLER);
+		
+		addKillNpcWithLog(1, GROWLER_LIST, 0, GROWLER, ROBUST_GROWLER);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -135,6 +139,8 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 		{
 			if(npc.getNpcId() == GROWLER || npc.getNpcId() == ROBUST_GROWLER)
 			{
+				updateKill(npc, st);
+				
 				if(Math.random()<0.33)
 				{
 					st.addSpawn(EVOLVE_GROWLER, npc.getX(), npc.getY(), npc.getZ(), 0, 0, 120000);

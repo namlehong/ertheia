@@ -31,7 +31,7 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 	
 	private final static int RICKY = 19552;
 	
-	private static final int minLevel = 10;
+	private static final int minLevel = 11;
 	private static final int maxLevel = 20;
 	
 	public static NpcInstance foxInstance = null;
