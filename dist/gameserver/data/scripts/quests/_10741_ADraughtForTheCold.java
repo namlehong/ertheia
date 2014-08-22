@@ -62,6 +62,7 @@ public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
+	
 
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
