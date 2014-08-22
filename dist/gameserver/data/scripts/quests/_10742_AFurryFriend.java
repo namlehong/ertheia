@@ -137,7 +137,7 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 		}
 		else if(npcId == KIKU_CAVE)
 		{
-			if(cond == 2)
+			if(cond == 1)
 			{
 				htmltext = "33995.htm";
 			}
