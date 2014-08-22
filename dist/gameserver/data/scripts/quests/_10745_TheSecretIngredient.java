@@ -100,14 +100,14 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 			
 		}
 		
-		if(event.equalsIgnoreCase("enter_camp"))
+		if(event.equalsIgnoreCase("enter_instance"))
 		{
 			st.setCond(1);
 			enterInstance(st, 402);	
 			return null;
 		}
 		
-		if(event.equalsIgnoreCase("leave_camp"))
+		if(event.equalsIgnoreCase("leave_instance"))
 		{
 			player.getReflection().collapse();
 			return null;
