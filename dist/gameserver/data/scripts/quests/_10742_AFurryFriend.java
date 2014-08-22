@@ -73,13 +73,19 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("check_fox"))
 		{
-			if((Math.random() < 0.3) && st.getInt("fox_spawn") != 1)
+			double chance = Math.random() ;
+			if((chance < 0.3) && st.getInt("fox_spawn") != 1)
 			{
 				st.set("fox_spawn", 1);
 				
 				foxInstance = st.addSpawn(RICKY, 2*60000); //despawn after 2 mins
 				
 				st.startQuestTimer("fox_move", 2000);
+				htmltext = "Dắt Ricky về lại với Leira! Nhanh lên nhé.";
+			}
+			else
+			{
+				htmltext = "Có lẽ Ricky đã chui vào hang khác. chance = " + chance + " fox_spawn " + st.getInt("fox_spawn");
 			}
 		}
 		
