@@ -69,30 +69,40 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
+			st.set("spawn_cave", (int)Math.round(Math.random()*3));
+			st.set("cave_check", 0);
+			
 		}
 		
 		if(event.equalsIgnoreCase("check_fox"))
 		{
-			double chance = Math.random() ;
-			if((chance < 0.3) && st.getInt("fox_spawn") != 1)
+			int caveCheckCount = st.getInt("cave_check");
+			int spawnCave = st.getInt("spawn_cave");
+			
+			if(caveCheckCount == spawnCave && st.getInt("fox_spawn") != 1)
 			{
 				st.set("fox_spawn", 1);
 				
 				foxInstance = st.addSpawn(RICKY, 2*60000); //despawn after 2 mins
+				
+				foxInstance.setTitle(player.getName());
 				
 				st.startQuestTimer("fox_move", 2000);
 				htmltext = "Dắt Ricky về lại với Leira! Nhanh lên nhé.";
 			}
 			else
 			{
-				htmltext = "Có lẽ Ricky đã chui vào hang khác. chance = " + chance + " fox_spawn " + st.getInt("fox_spawn");
+				htmltext = "Có lẽ Ricky đã chui vào hang khác.";
 			}
+			caveCheckCount++;
+			st.set("cave_check", caveCheckCount);
 		}
 		
 		if(event.equalsIgnoreCase("fox_move"))
 		{
 			if(foxInstance == null) return null;
 			
+			foxInstance.setRunning();
 			foxInstance.moveToLocation(player.getLoc(), 20, true);
 			
 			if(foxInstance.getLoc().distance(new Location(-78080, 237343, -3536)) > 100)
@@ -102,8 +112,9 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 			else
 			{
 				st.setCond(2);
+				foxInstance.deleteMe();
 			}
-			
+			return null;
 		}
 		
 		return htmltext;
