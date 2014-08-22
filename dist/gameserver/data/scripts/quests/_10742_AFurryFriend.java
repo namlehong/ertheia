@@ -101,7 +101,7 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 			if(foxInstance == null) return null;
 			
 			foxInstance.setRunning();
-			foxInstance.setTitle(player.getName());
+			foxInstance.setTitle("Test Title");
 			foxInstance.moveToLocation(player.getLoc(), 20, true);
 			
 			if(foxInstance.getLoc().distance(new Location(-78080, 237343, -3536)) > 100)
