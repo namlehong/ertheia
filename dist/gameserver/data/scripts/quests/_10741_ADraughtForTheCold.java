@@ -69,7 +69,7 @@ public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
 		String htmltext = event;
 		Player player = st.getPlayer();
 
-		if(event.equalsIgnoreCase("33951-3.htm"))
+		if(event.equalsIgnoreCase("33951-2.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
