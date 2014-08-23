@@ -265,6 +265,15 @@ public class Recall extends Skill
 					case 24: // Vernon Village
 						pcTarget.teleToLocation(-80403, 247853, -3496, 0);
 						return;
+					case 25: // Gludin Church
+						pcTarget.teleToLocation(-79592, 150824, -3066, 0);
+						return;
+					case 26: // Windy Hill
+						pcTarget.teleToLocation(-93649, 89763, -3208, 0);
+						return;
+					case 27: // Orc Barrack
+						pcTarget.teleToLocation(-85672, 106664, -3577, 0);
+						return;
 				}
 				if(_castle) // To castle
 				{
