@@ -825,6 +825,7 @@ public final class QuestState
 		if(player == null)
 			return;
 		String text = HtmCache.getInstance().getNotNull("quests/" + q.getName() + "/" + html, player);
+		
 		player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.NORMAL_WINDOW, text));
 	}
 
