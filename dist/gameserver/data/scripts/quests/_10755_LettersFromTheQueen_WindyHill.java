@@ -1,6 +1,7 @@
 package quests;
 
 import l2s.gameserver.instancemanager.QuestManager;
+import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
 import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
 import l2s.gameserver.model.Creature;
@@ -70,7 +71,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		{
 			if(checkStartCondition(player))
 			{
-				alertLetterReceived();
+				alertLetterReceived(st);
 			}
 		}
 		
@@ -99,7 +100,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	{
 		if(checkStartCondition(player))
 		{
-			alertLetterReceived();
+			alertLetterReceived(player.getQuestState("_10755_LettersFromTheQueen_WindyHill"));
 		}
 	}
 
@@ -114,7 +115,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 				if(player.getVarBoolean("@received_navari_letter_1st"))
 					return;
 
-				alertLetterReceived();
+				alertLetterReceived(player.getQuestState("_10755_LettersFromTheQueen_WindyHill"));
 			}
 
 		}
