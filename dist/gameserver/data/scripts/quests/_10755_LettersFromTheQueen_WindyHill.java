@@ -122,18 +122,16 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public void onLevelChange(Player player, int oldLvl, int newLvl)
 	{
-		System.out.println("level change");
-		if(player.isBaseClassActive())
+		System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
+		if(oldLvl < 20 && newLvl >= 20 && checkStartCondition(player))
 		{
-			if(oldLvl < 20 && newLvl >= 20 && checkStartCondition(player))
-			{
-				if(player.getVarBoolean("@received_navari_letter_1st"))
-					return;
+			System.out.println("received_navari_letter_1st " + player.getVarBoolean("@received_navari_letter_1st"));
+			if(player.getVarBoolean("@received_navari_letter_1st"))
+				return;
 
-				Quest q = QuestManager.getQuest(10755);
-				player.processQuestEvent(q.getName(), "start_quest", null);
-				
-			}
+			Quest q = QuestManager.getQuest(10755);
+			player.processQuestEvent(q.getName(), "start_quest", null);
+			
 		}
 	}
 	
@@ -156,6 +154,10 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
+		System.out.println("cond 1 " + (player.getLevel() >= minLevel));
+		System.out.println("cond 2 " + (player.getLevel() <= maxLevel));
+		System.out.println("cond 3 " + (player.getRace() == Race.ERTHEIA));
+		System.out.println("cond 4 " + (player.getQuestState("_10755_LettersFromTheQueen_WindyHill") == null));
 		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10755_LettersFromTheQueen_WindyHill") == null);
 	}
 
