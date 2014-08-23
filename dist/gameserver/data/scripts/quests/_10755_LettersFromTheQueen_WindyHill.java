@@ -71,12 +71,20 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		{
 			if(checkStartCondition(player))
 			{
-				alertLetterReceived(st);
+				Quest q = QuestManager.getQuest(10755);
+				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 		}
 		
+		if(event.equalsIgnoreCase("start_quest"))
+		{
+			st.setCond(1);
+			st.setState(STARTED);
+			alertLetterReceived(st);
+		}
+		
 		// Question mark clicked
-		else if(event.startsWith("QM"))
+		if(event.startsWith("QM"))
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
 			System.out.println("Mark id " + MarkId);
@@ -100,7 +108,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	{
 		if(checkStartCondition(player))
 		{
-			alertLetterReceived(player.getQuestState("_10755_LettersFromTheQueen_WindyHill"));
+			Quest q = QuestManager.getQuest(10755);
+			player.processQuestEvent(q.getName(), "start_quest", null);
 		}
 	}
 
@@ -115,7 +124,9 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 				if(player.getVarBoolean("@received_navari_letter_1st"))
 					return;
 
-				alertLetterReceived(player.getQuestState("_10755_LettersFromTheQueen_WindyHill"));
+				Quest q = QuestManager.getQuest(10755);
+				player.processQuestEvent(q.getName(), "start_quest", null);
+				
 			}
 
 		}
@@ -123,14 +134,14 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	
 	private void alertLetterReceived(QuestState st)
 	{
+		if(st == null) return;
+		
 		st.getPlayer().sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
 		st.showQuestionMark(10755);
 		
 		st.playSound(SOUND_TUTORIAL);
 		
-		st.setCond(1);
-		st.setState(STARTED);
 		st.giveItems(SOE_GLUDIN, 1);
 		
 		st.getPlayer().setVar("@received_navari_letter_1st", true);
