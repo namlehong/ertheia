@@ -28,20 +28,17 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 		Quest q10755 = QuestManager.getQuest(10755);
 		Quest q10760 = QuestManager.getQuest(10760);
 		
-		Quest tempQuest = null;
 		
 		if(q255 != null)
-			tempQuest = q255;
+			player.processQuestEvent(q255.getName(), "QM" + _number, null);
 		if(q10750 != null)
-			tempQuest = q10750;
+			player.processQuestEvent(q10751.getName(), "QM" + _number, null);
 		if(q10751 != null)
-			tempQuest = q10751;
+			player.processQuestEvent(q10751.getName(), "QM" + _number, null);
 		if(q10755 != null)
-			tempQuest = q10755;
+			player.processQuestEvent(q10755.getName(), "QM" + _number, null);
 		if(q10760 != null)
-			tempQuest = q10760;
+			player.processQuestEvent(q10760.getName(), "QM" + _number, null);
 		
-		if(tempQuest != null)
-			player.processQuestEvent(tempQuest.getName(), "QM" + _number, null);
 	}
 }
