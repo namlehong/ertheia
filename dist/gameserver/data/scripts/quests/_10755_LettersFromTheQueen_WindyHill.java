@@ -67,7 +67,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 
 		String html = "";
 
-		//System.out.println("quest event " + event.toString());
+		System.out.println("quest event " + event.toString());
 		
 		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
