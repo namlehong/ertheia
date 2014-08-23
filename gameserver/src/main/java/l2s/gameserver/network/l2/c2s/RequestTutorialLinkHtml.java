@@ -25,12 +25,26 @@ public class RequestTutorialLinkHtml extends L2GameClientPacket
 			return;
 
 		Quest q255 = QuestManager.getQuest(255);
+		Quest q10750 = QuestManager.getQuest(10750);
+		Quest q10751 = QuestManager.getQuest(10751);
 		Quest q10755 = QuestManager.getQuest(10755);
+		Quest q10760 = QuestManager.getQuest(10760);
+		
+		Quest tempQuest = null;
 		
 		if(q255 != null)
-			player.processQuestEvent(q255.getName(), _bypass, null);
-		
+			tempQuest = q255;
+		if(q10750 != null)
+			tempQuest = q10750;
+		if(q10751 != null)
+			tempQuest = q10751;
 		if(q10755 != null)
-			player.processQuestEvent(q10755.getName(), _bypass, null);
+			tempQuest = q10755;
+		if(q10760 != null)
+			tempQuest = q10760;
+		
+		if(tempQuest != null)
+			player.processQuestEvent(tempQuest.getName(), _bypass, null);
+		
 	}
 }
