@@ -78,11 +78,17 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			}
 		}
 		
-		if(event.equalsIgnoreCase("start_quest"))
+		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_15s"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			alertLetterReceived(st);
+		}
+		
+		if(event.equalsIgnoreCase("start_quest_delay"))
+		{
+			st.startQuestTimer("start_quest_15s", 15000);
+			//only start quest after 15s to avoid crash on enterworld
 		}
 		
 		// Question mark clicked
@@ -108,15 +114,15 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public void onPlayerEnter(Player player)
 	{
-		/*
+		
 		System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
 			System.out.println("Player enter and fit quest condition");
 			Quest q = QuestManager.getQuest(10755);
-			player.processQuestEvent(q.getName(), "start_quest", null);
+			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
-		*/
+		
 	}
 
 	@Override
