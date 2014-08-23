@@ -108,6 +108,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public void onPlayerEnter(Player player)
 	{
+		/*
 		System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
@@ -115,6 +116,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			Quest q = QuestManager.getQuest(10755);
 			player.processQuestEvent(q.getName(), "start_quest", null);
 		}
+		*/
 	}
 
 	@Override
@@ -154,7 +156,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA || player.getQuestState("_10755_LettersFromTheQueen_WindyHill") == null);
+		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10755_LettersFromTheQueen_WindyHill") == null);
 	}
 
 }
