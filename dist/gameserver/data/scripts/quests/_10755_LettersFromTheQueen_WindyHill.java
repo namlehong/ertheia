@@ -14,6 +14,7 @@ import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.network.l2.s2c.ExCallToChangeClass;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
+import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
 
 /**
@@ -30,7 +31,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	private static final int minLevel = 20;
 	private static final int maxLevel = 99;
 	
-	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari\n Nhấn vào dấu hỏi dưới góc màn hình để đọc thư";
+	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
 
 	@Override
 	public void onLoad()
@@ -66,7 +67,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 
 		String html = "";
 
-		System.out.println("quest event " + event.toString());
+		//System.out.println("quest event " + event.toString());
 		
 		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
@@ -78,28 +79,43 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			}
 		}
 		
-		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_15s"))
+		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_7s"))
 		{
 			st.setCond(1);
 			st.setState(STARTED);
 			alertLetterReceived(st);
+			html = "queen_letter.htm";
 		}
 		
 		if(event.equalsIgnoreCase("start_quest_delay"))
 		{
-			st.startQuestTimer("start_quest_15s", 15000);
-			//only start quest after 15s to avoid crash on enterworld
+			st.startQuestTimer("start_quest_7s", 7000);
+			//only start quest after 7s to avoid crash on enterworld
+		}
+		
+		if(event.equalsIgnoreCase("to_gludin"))
+		{
+			if(st.getCond() == 1)
+			{
+				st.takeItems(SOE_GLUDIN, 1);
+				player.teleToLocation(-79592, 150824, -3066);
+			}
+		}
+		
+		if(event.equalsIgnoreCase("close_window"))
+		{
+			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 		}
 		
 		// Question mark clicked
 		if(event.startsWith("QM"))
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
-			System.out.println("Mark id " + MarkId);
+			//System.out.println("Mark id " + MarkId);
 			if(MarkId == 107551)
 			{
 				if(player.getRace() == Race.ERTHEIA)
-					html = "30037-2.htm";
+					html = "queen_letter.htm";
 				else
 					return null;
 			}
@@ -119,7 +135,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
-			System.out.println("Player enter and fit quest condition");
+			//System.out.println("Player enter and fit quest condition");
 			Quest q = QuestManager.getQuest(10755);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
@@ -129,10 +145,10 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public void onLevelChange(Player player, int oldLvl, int newLvl)
 	{
-		System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
+		//System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
 		if(oldLvl < 20 && newLvl >= 20 && checkStartCondition(player))
 		{
-			System.out.println("received_navari_letter_1st " + player.getVarBoolean("@received_navari_letter_1st"));
+			//System.out.println("received_navari_letter_1st " + player.getVarBoolean("@received_navari_letter_1st"));
 			if(player.getVarBoolean("@received_navari_letter_1st"))
 				return;
 
@@ -161,10 +177,6 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		System.out.println("cond 1 " + (player.getLevel() >= minLevel));
-		System.out.println("cond 2 " + (player.getLevel() <= maxLevel));
-		System.out.println("cond 3 " + (player.getRace() == Race.ERTHEIA));
-		System.out.println("cond 4 " + (player.getQuestState("_10755_LettersFromTheQueen_WindyHill") == null));
 		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10755_LettersFromTheQueen_WindyHill") == null);
 	}
 
