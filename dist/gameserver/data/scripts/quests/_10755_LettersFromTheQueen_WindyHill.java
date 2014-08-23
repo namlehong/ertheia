@@ -25,8 +25,11 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 {
 
 	private static final int LEVIAN = 30037;
+	private static final int PIO = 33963;
 	
 	private static final int SOE_GLUDIN = 39491;
+	private static final int SOE_WINDY = 39492;
+	private static final int STEEL_DOOR_COIN = 37045;
 	
 	private static final int minLevel = 20;
 	private static final int maxLevel = 99;
@@ -53,6 +56,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		super(false);
 
 		CharListenerList.addGlobal(this);
+		
+		addTalkId(LEVIAN, PIO);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -99,6 +104,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			{
 				st.takeItems(SOE_GLUDIN, 1);
 				player.teleToLocation(-79592, 150824, -3066);
+				player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 			}
 		}
 		
@@ -121,6 +127,25 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			}
 		}
 
+		if(event.equalsIgnoreCase("30037-2.htm"))
+		{
+			st.giveItems(SOE_WINDY, 1);
+			st.setCond(2);
+			
+			return "30037-2.htm";
+		}
+		
+		if(event.equalsIgnoreCase("33963-3.htm"))
+		{
+			st.giveItems(STEEL_DOOR_COIN, 5);
+			st.addExpAndSp(120960, 29);
+			st.setState(COMPLETED);
+			st.exitCurrentQuest(false);
+			st.playSound(SOUND_FINISH);
+			
+			return "33963-3.htm";
+		}
+		
 		if(html.isEmpty())
 			return null;
 		st.showQuestHTML(st.getQuest(), html);
@@ -128,6 +153,30 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		return null;
 	}
 
+
+	@Override
+	public String onTalk(NpcInstance npc, QuestState st)
+	{
+		String htmltext = "noquest";
+		int npcId = npc.getNpcId();
+		int cond = st.getCond();
+		if(npcId == LEVIAN)
+		{
+			if(cond == 1)
+			{
+				htmltext = "30037-1.htm";
+			}
+			else if(cond == 1)
+				htmltext = "30037-2.htm";
+		}
+		else if(npcId == PIO && st.getCond() == 2)
+		{
+			htmltext = "33963-1.htm";
+		}
+		
+		return htmltext;
+	}
+	
 	@Override
 	public void onPlayerEnter(Player player)
 	{
