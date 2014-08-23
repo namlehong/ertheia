@@ -99,7 +99,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			if(MarkId == 107551)
 			{
 				if(player.getRace() == Race.ERTHEIA)
-					html = "Queen letter";
+					html = "30037-2.htm";
 				else
 					return null;
 			}
@@ -107,7 +107,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 
 		if(html.isEmpty())
 			return null;
-		st.showTutorialHTML(html);
+		st.showQuestHTML(st.getQuest(), html);
+		
 		return null;
 	}
 

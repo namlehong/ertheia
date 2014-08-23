@@ -818,6 +818,15 @@ public final class QuestState
 		String text = HtmCache.getInstance().getNotNull("quests/_255_Tutorial/" + html, player);
 		player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.NORMAL_WINDOW, text));
 	}
+	
+	public void showQuestHTML(Quest q, String html)
+	{
+		Player player = getPlayer();
+		if(player == null)
+			return;
+		String text = HtmCache.getInstance().getNotNull("quests/" + q.getName() + "/" + html, player);
+		player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.NORMAL_WINDOW, text));
+	}
 
 	public void showTutorialClientHTML(String fileName)
 	{
