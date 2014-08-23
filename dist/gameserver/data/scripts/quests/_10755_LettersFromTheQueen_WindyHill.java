@@ -93,7 +93,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			//only start quest after 7s to avoid crash on enterworld
 		}
 		
-		if(event.equalsIgnoreCase("to_gludin"))
+		if(event.equalsIgnoreCase("Quest _10755_LettersFromTheQueen_WindyHill to_gludin"))
 		{
 			if(st.getCond() == 1)
 			{
@@ -102,7 +102,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			}
 		}
 		
-		if(event.equalsIgnoreCase("close_window"))
+		if(event.equalsIgnoreCase("Quest _10755_LettersFromTheQueen_WindyHill close_window"))
 		{
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 		}
