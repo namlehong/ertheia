@@ -66,6 +66,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 
 		String html = "";
 
+		System.out.println("quest event " + event.toString());
+		
 		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
 		{
@@ -88,7 +90,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
 			System.out.println("Mark id " + MarkId);
-			if(MarkId == 10755)
+			if(MarkId == 1)
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					html = "tutorial_01a.htm";
@@ -106,8 +108,10 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public void onPlayerEnter(Player player)
 	{
+		System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
+			System.out.println("Player enter and fit quest condition");
 			Quest q = QuestManager.getQuest(10755);
 			player.processQuestEvent(q.getName(), "start_quest", null);
 		}
@@ -116,7 +120,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public void onLevelChange(Player player, int oldLvl, int newLvl)
 	{
-		
+		System.out.println("level change");
 		if(player.isBaseClassActive())
 		{
 			if(oldLvl < 20 && newLvl >= 20 && checkStartCondition(player))
@@ -128,7 +132,6 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 				player.processQuestEvent(q.getName(), "start_quest", null);
 				
 			}
-
 		}
 	}
 	
@@ -138,7 +141,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		
 		st.getPlayer().sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
-		st.showQuestionMark(10755);
+		st.showQuestionMark(1);
 		
 		st.playSound(SOUND_TUTORIAL);
 		
