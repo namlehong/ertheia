@@ -24,8 +24,13 @@ public class RequestTutorialLinkHtml extends L2GameClientPacket
 		if(player == null)
 			return;
 
-		Quest q = QuestManager.getQuest(255);
-		if(q != null)
-			player.processQuestEvent(q.getName(), _bypass, null);
+		Quest q255 = QuestManager.getQuest(255);
+		Quest q10755 = QuestManager.getQuest(10755);
+		
+		if(q255 != null)
+			player.processQuestEvent(q255.getName(), _bypass, null);
+		
+		if(q10755 != null)
+			player.processQuestEvent(q10755.getName(), _bypass, null);
 	}
 }
