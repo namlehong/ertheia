@@ -70,7 +70,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		if(player == null)
 			return null;
 
-		String html = "";
+		String htmltext = event;
 
 		System.out.println("quest event " + event.toString());
 		
@@ -82,6 +82,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 				Quest q = QuestManager.getQuest(10755);
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
+			
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_7s"))
@@ -89,13 +91,16 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			st.setCond(1);
 			st.setState(STARTED);
 			alertLetterReceived(st);
-			html = "queen_letter.htm";
+			st.showQuestHTML(st.getQuest(), "queen_letter.htm");
+			
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("start_quest_delay"))
 		{
 			st.startQuestTimer("start_quest_7s", 7000);
 			//only start quest after 7s to avoid crash on enterworld
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("Quest _10755_LettersFromTheQueen_WindyHill to_gludin"))
@@ -106,11 +111,13 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 				player.teleToLocation(-79592, 150824, -3066);
 				player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 			}
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("Quest _10755_LettersFromTheQueen_WindyHill close_window"))
 		{
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
+			return null;
 		}
 		
 		// Question mark clicked
@@ -121,9 +128,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			if(MarkId == 107551)
 			{
 				if(player.getRace() == Race.ERTHEIA)
-					html = "queen_letter.htm";
-				else
-					return null;
+					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
+				return null;
 			}
 		}
 
@@ -132,7 +138,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			st.giveItems(SOE_WINDY, 1);
 			st.setCond(2);
 			
-			return "30037-2.htm";
+			htmltext = "30037-2.htm";
 		}
 		
 		if(event.equalsIgnoreCase("33963-3.htm"))
@@ -143,14 +149,10 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			
-			return "33963-3.htm";
+			htmltext = "33963-3.htm";
 		}
 		
-		if(html.isEmpty())
-			return null;
-		st.showQuestHTML(st.getQuest(), html);
-		
-		return null;
+		return htmltext;
 	}
 
 
