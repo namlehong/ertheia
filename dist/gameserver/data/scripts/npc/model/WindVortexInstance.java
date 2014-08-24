@@ -13,6 +13,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest.DeSpawnScheduleTimerTask;
+import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 
 
 public class WindVortexInstance extends MonsterInstance
@@ -20,6 +21,8 @@ public class WindVortexInstance extends MonsterInstance
 	private static final long serialVersionUID = 1L;
 
 	private static final int GIANT_WINDIMA = 23419;
+	
+	private static final String ALERT_STRONG_MONSTER = "Quái vật mạnh xuất hiện!";
 	
 	public WindVortexInstance(int objectId, NpcTemplate template)
 	{
@@ -30,6 +33,9 @@ public class WindVortexInstance extends MonsterInstance
 	protected void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
+		
+		if(killer.isPlayer())
+			killer.sendPacket(new ExShowScreenMessage(ALERT_STRONG_MONSTER, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
 		addSpawn(GIANT_WINDIMA, getLoc(), 0);
 	}
