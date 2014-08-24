@@ -35,7 +35,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	private static final int maxLevel = 99;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
-
+	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 30.\nVà Nữ Hoàng Navari sẽ gửi bức thư tiếp theo";
+	
 	@Override
 	public void onLoad()
 	{
@@ -148,6 +149,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
+			st.getPlayer().sendPacket(new ExShowScreenMessage(NEXT_LETTER_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 			
 			htmltext = "33963-3.htm";
 		}
