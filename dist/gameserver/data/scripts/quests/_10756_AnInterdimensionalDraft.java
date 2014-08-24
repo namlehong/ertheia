@@ -23,7 +23,7 @@ import l2s.gameserver.utils.ReflectionUtils;
  * @author Hien Son
  * 
  */
-public class _10744_StrongerThanSteel extends Quest implements ScriptFile
+public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 {
 
 	private static final int PIO = 33963;
@@ -56,7 +56,7 @@ public class _10744_StrongerThanSteel extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _10744_StrongerThanSteel()
+	public _10756_AnInterdimensionalDraft()
 	{
 		super(false);
 		addStartNpc(PIO);
