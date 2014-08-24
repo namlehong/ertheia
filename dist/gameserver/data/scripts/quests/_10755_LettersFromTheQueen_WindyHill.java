@@ -73,7 +73,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 
 		String htmltext = event;
 
-		System.out.println("quest event " + event.toString());
+		//System.out.println("quest event " + event.toString());
 		
 		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
@@ -185,7 +185,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	public void onPlayerEnter(Player player)
 	{
 		
-		System.out.println("Player enter");
+		//System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
 			//System.out.println("Player enter and fit quest condition");
