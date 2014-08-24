@@ -170,7 +170,7 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 			{
 				htmltext = "30037-1.htm";
 			}
-			else if(cond == 1)
+			else if(cond == 2)
 				htmltext = "30037-3.htm";
 		}
 		else if(npcId == PIOTUR && st.getCond() == 2)
