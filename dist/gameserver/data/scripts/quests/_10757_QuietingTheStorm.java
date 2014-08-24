@@ -28,6 +28,7 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 
 	private static final int PIO = 33963;
 	
+	private final static int WIND_VORTEX = 23417;
 	private final static int GIANT_WINDIMA = 23419;
 	private final static int IMMENSE_WINDIMA = 23420;
 
@@ -36,6 +37,7 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 	private static final int minLevel = 24;
 	private static final int maxLevel = 99;
 	
+	private static final String VORTEX_KILL_LIST = "vortex_kill_list";
 	private static final String WINDIMA_KILL_LIST = "windima_kill_list";
 	
 	@Override
@@ -55,7 +57,9 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(PIO);
 		
-		addKillNpcWithLog(1, WINDIMA_KILL_LIST, 30, GIANT_WINDIMA, IMMENSE_WINDIMA);
+		addKillNpcWithLog(1, VORTEX_KILL_LIST, 5, WIND_VORTEX);
+
+		addKillNpcWithLog(1, WINDIMA_KILL_LIST, 1, GIANT_WINDIMA, IMMENSE_WINDIMA);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
