@@ -127,7 +127,10 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
+		int npcId = npc.getNpcId();
 		int cond = st.getCond();
+		
+		if(npcId == SOBBING_WIND) notifyKill(npc, st);
 		
 		if(updateKill(npc, st))
 		{
