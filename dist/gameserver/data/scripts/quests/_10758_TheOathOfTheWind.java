@@ -28,7 +28,7 @@ public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 
 	private static final int PIO = 33963;
 	
-	private final static int WINDIMA_CLONE = 23422;
+	private final static int WINDIMA_CLONE = 27522;
 
 	private static final int STEEL_DOOR_COIN = 37045;
 	
@@ -76,7 +76,11 @@ public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 		{
 			NpcInstance windima = st.addSpawn(WINDIMA_CLONE, -93592, 89912, -3236, 53988, 0, 120000);
 			
-			windima.doAttack(st.getPlayer());
+			windima.setAggressionTarget(st.getPlayer());
+			windima.moveToLocation(st.getPlayer().getLoc(), 50, true);
+			//windima.doAttack(st.getPlayer());
+			
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("33963-5.htm"))
