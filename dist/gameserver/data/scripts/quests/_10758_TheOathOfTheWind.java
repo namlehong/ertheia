@@ -76,6 +76,7 @@ public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 		{
 			NpcInstance windima = st.addSpawn(WINDIMA_CLONE, -93592, 89912, -3236, 53988, 0, 120000);
 			
+			windima.setRunning();
 			windima.setAggressionTarget(st.getPlayer());
 			windima.moveToLocation(st.getPlayer().getLoc(), 50, true);
 			//windima.doAttack(st.getPlayer());
@@ -110,6 +111,10 @@ public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 				if(cond == 0)
 				{
 					htmltext = "33963-1.htm";
+				}
+				else if(cond == 1)
+				{
+					htmltext = "33963-3.htm";
 				}
 				else if(cond == 2)
 				{
