@@ -31,7 +31,7 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 	private static final int SOE_ORC_BARRACKS = 39487;
 	private static final int STEEL_DOOR_COIN = 37045;
 	
-	private static final int minLevel = 20;
+	private static final int minLevel = 30;
 	private static final int maxLevel = 99;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
