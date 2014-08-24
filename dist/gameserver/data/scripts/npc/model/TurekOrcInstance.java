@@ -37,12 +37,14 @@ public class TurekOrcInstance extends MonsterInstance
 		if(killer.isPlayer())
 			killer.sendPacket(new ExShowScreenMessage(ALERT_STRONG_MONSTER, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
-		addSpawn(CHERTUBA_MIRAGE, getLoc(), 0);
+		addSpawn(CHERTUBA_MIRAGE, getLoc(), 0, 60000); //despawn after 1 minutes
 	}
 	
-	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset)
+	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)
 	{
 		NpcInstance result = Functions.spawn(randomOffset > 50 ? Location.findPointToStay(loc, 0, randomOffset, ReflectionManager.DEFAULT.getGeoIndex()) : loc, npcId);
+		if(despawnDelay > 0 && result != null)
+			ThreadPoolManager.getInstance().schedule(new DeSpawnScheduleTimerTask(result), despawnDelay);
 		return result;
 	}
 }
