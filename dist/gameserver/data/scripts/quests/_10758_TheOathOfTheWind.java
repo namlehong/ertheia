@@ -23,22 +23,17 @@ import l2s.gameserver.utils.ReflectionUtils;
  * @author Hien Son
  * 
  */
-public class _10757_QuietingTheStorm extends Quest implements ScriptFile
+public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 {
 
 	private static final int PIO = 33963;
 	
-	private final static int WIND_VORTEX = 23417;
-	private final static int GIANT_WINDIMA = 23419;
-	private final static int IMMENSE_WINDIMA = 23420;
+	private final static int WINDIMA_CLONE = 23422;
 
 	private static final int STEEL_DOOR_COIN = 37045;
 	
-	private static final int minLevel = 24;
+	private static final int minLevel = 28;
 	private static final int maxLevel = 99;
-	
-	private static final String VORTEX_KILL_LIST = "vortex_kill_list";
-	private static final String WINDIMA_KILL_LIST = "windima_kill_list";
 	
 	@Override
 	public void onLoad()
@@ -52,15 +47,13 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _10757_QuietingTheStorm()
+	public _10758_TheOathOfTheWind()
 	{
 		super(false);
 		addStartNpc(PIO);
 		
+		addKillId(WINDIMA_CLONE);
 		
-		addKillNpcWithLog(1, WINDIMA_KILL_LIST, 1, GIANT_WINDIMA, IMMENSE_WINDIMA);
-		addKillNpcWithLog(1, VORTEX_KILL_LIST, 5, WIND_VORTEX);
-
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
 	}
@@ -72,17 +65,24 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 		String htmltext = event;
 		Player player = st.getPlayer();
 
-		if(event.equalsIgnoreCase("33963-5.htm"))
+		if(event.equalsIgnoreCase("33963-2.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
 			st.playSound(SOUND_ACCEPT);
 		}
 		
-		if(event.equalsIgnoreCase("33963-7.htm"))
+		if(event.equalsIgnoreCase("spawn_windima"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 7);
-			st.addExpAndSp(632051, 151);
+			NpcInstance windima = st.addSpawn(WINDIMA_CLONE, -93592, 89912, -3236, 53988, 0, 120000);
+			
+			windima.doAttack(st.getPlayer());
+		}
+		
+		if(event.equalsIgnoreCase("33963-5.htm"))
+		{
+			st.giveItems(STEEL_DOOR_COIN, 3);
+			st.addExpAndSp(561645, 134);
 			
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
@@ -107,13 +107,9 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 				{
 					htmltext = "33963-1.htm";
 				}
-				else if(cond == 1)
-				{
-					htmltext = "33963-5.htm";
-				}
 				else if(cond == 2)
 				{
-					htmltext = "33963-6.htm";
+					htmltext = "33963-4.htm";
 				}
 			}
 			else
@@ -128,14 +124,9 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		/*TODO
-		 * Sniff packet after kill in this quest, make another packet for notify the counter in client
-		 * the current packet ExQuestNpcLogList doesn't work
-		 */
-		if(updateKill(npc, st))
+		if(npcId == WINDIMA_CLONE)
 		{
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(cond+1);
+			st.setCond(2);
 		}
 		
 		return null;
