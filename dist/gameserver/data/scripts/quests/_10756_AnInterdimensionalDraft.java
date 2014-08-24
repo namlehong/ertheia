@@ -130,6 +130,10 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
+		/*TODO
+		 * Sniff packet after kill in this quest, make another packet for notify the counter in client
+		 * the current packet ExQuestNpcLogList doesn't work
+		 */
 		if(updateKill(npc, st))
 		{
 			st.playSound(SOUND_MIDDLE);

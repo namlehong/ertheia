@@ -21,6 +21,7 @@ public class WindVortexInstance extends MonsterInstance
 	private static final long serialVersionUID = 1L;
 
 	private static final int GIANT_WINDIMA = 23419;
+	private static final int IMMENSE_WINDIMA = 23420;
 	
 	private static final String ALERT_STRONG_MONSTER = "Quái vật mạnh xuất hiện!";
 	
@@ -36,8 +37,10 @@ public class WindVortexInstance extends MonsterInstance
 		
 		if(killer.isPlayer())
 			killer.sendPacket(new ExShowScreenMessage(ALERT_STRONG_MONSTER, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-		
-		addSpawn(GIANT_WINDIMA, getLoc(), 0, 60000); //despawn after 1 minutes
+		if(Math.random()<0.7)
+			addSpawn(GIANT_WINDIMA, getLoc(), 0, 60000); //despawn after 1 minutes
+		else
+			addSpawn(IMMENSE_WINDIMA, getLoc(), 0, 60000); //despawn after 1 minutes
 	}
 	
 
