@@ -127,6 +127,8 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState st)
 	{
+		int cond = st.getCond();
+		
 		if(updateKill(npc, st))
 		{
 			st.playSound(SOUND_MIDDLE);
