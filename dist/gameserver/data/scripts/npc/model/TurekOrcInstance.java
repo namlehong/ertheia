@@ -15,13 +15,13 @@ import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest.DeSpawnScheduleTimerTask;
 
 
-public class WindVortexInstance extends MonsterInstance
+public class TurekOrcInstance extends MonsterInstance
 {
 	private static final long serialVersionUID = 1L;
 
-	private static final int GIANT_WINDIMA = 23419;
+	private static final int CHERTUBA_MIRAGE = 23421;
 	
-	public WindVortexInstance(int objectId, NpcTemplate template)
+	public TurekOrcInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
@@ -31,7 +31,7 @@ public class WindVortexInstance extends MonsterInstance
 	{
 		super.onDeath(killer);
 		
-		addSpawn(GIANT_WINDIMA, getLoc(), 0);
+		addSpawn(CHERTUBA_MIRAGE, getLoc(), 0);
 	}
 	
 	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset)
