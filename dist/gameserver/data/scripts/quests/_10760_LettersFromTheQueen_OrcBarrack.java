@@ -189,7 +189,7 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 		if(checkStartCondition(player))
 		{
 			//System.out.println("Player enter and fit quest condition");
-			Quest q = QuestManager.getQuest(10755);
+			Quest q = QuestManager.getQuest(10760);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
 		
