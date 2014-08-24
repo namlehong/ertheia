@@ -130,8 +130,6 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		if(npcId == SOBBING_WIND) notifyKill(npc, st);
-		
 		if(updateKill(npc, st))
 		{
 			st.playSound(SOUND_MIDDLE);
