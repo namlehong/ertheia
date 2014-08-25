@@ -28,6 +28,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 
 	private static final int NAVARI = 33931;
 	private static final int KATALIN = 33943;
+	private static final int AYANTHE = 33942;
 	private static final int RAYMOND = 30289;
 	private static final int TELESHA_CORPSE = 33981;
 	private static final int MYSTERIOUS_WIZARD = 33980;
