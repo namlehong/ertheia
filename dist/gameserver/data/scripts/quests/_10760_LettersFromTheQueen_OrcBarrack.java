@@ -193,6 +193,8 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 	@Override
 	public void onPlayerEnter(Player player)
 	{
+		if(player.getVarBoolean("@received_navari_letter_2nd"))
+			return;
 		
 		//System.out.println("Player enter");
 		if(checkStartCondition(player))

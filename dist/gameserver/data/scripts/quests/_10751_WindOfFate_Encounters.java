@@ -295,6 +295,8 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	@Override
 	public void onPlayerEnter(Player player)
 	{
+		if(player.getVarBoolean("@received_navari_letter_3rd"))
+			return;
 		
 		//System.out.println("Player enter");
 		if(checkStartCondition(player))

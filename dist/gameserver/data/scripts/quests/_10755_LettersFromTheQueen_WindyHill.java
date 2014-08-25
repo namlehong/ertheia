@@ -193,6 +193,8 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	@Override
 	public void onPlayerEnter(Player player)
 	{
+		if(player.getVarBoolean("@received_navari_letter_1st"))
+			return;
 		
 		//System.out.println("Player enter");
 		if(checkStartCondition(player))
