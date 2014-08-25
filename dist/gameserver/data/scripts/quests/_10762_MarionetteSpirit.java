@@ -76,6 +76,7 @@ public class _10762_MarionetteSpirit extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33966-5.htm"))
 		{
+			st.takeItems(MAGIC_CHAIN_KEY_1, 1);
 			st.giveItems(STEEL_DOOR_COIN, 20);
 			st.addExpAndSp(354546, 85);
 			

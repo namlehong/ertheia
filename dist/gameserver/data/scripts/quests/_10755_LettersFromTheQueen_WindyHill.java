@@ -108,9 +108,16 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		{
 			if(st.getCond() == 1)
 			{
-				st.takeItems(SOE_GLUDIN, 1);
-				player.teleToLocation(-79592, 150824, -3066);
-				player.sendPacket(TutorialCloseHtmlPacket.STATIC);
+				if(getItemCountById(player, SOE_GLUDIN) > 0)
+				{
+					st.takeItems(SOE_GLUDIN, 1);
+					player.teleToLocation(-79592, 150824, -3066);
+					player.sendPacket(TutorialCloseHtmlPacket.STATIC);
+				}
+				else
+				{
+					player.sendMessage("Không tìm thấy Scroll of Escape: Gludin Village");
+				}
 			}
 			return null;
 		}
