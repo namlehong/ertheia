@@ -68,13 +68,14 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	
 	/*
 	 cond 1: accept quest, teleport to Faeron, talk to Navari
-	 cond 2: talk to Katalin
-	 cond 3: talk to Raymond
-	 cond 4: kill skeleton
-	 cond 4: spawn Telesha corpse, check corpse
-	 cond 5: tak to Mysterious Wizard, get Wind Relic
-	 cond 6: talk to Raymond
-	 cond 7: talk to Katalin, change class
+	 cond 2: find Katalin
+	 cond 3: find Ayanthe
+	 cond 4: from Katalin to Raymond
+	 cond 5: from Ayanthe to Raymond
+	 cond 6: kill skeleton to find Telesha's corpse
+	 cond 7: find Raymond
+	 cond 8: find Katalin
+	 cond 9: find Ayanthe
 	 */
 	
 	public _10751_WindOfFate_Encounters()
@@ -163,18 +164,26 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		
 		if(event.equalsIgnoreCase("33931-2.htm"))
 		{
-			st.setCond(2);
+			if(player.isMageClass())
+				st.setCond(3);
+			else
+				st.setCond(2);
 		}
 		
 		if(event.equalsIgnoreCase("33943-2.htm"))
 		{
-			st.setCond(3);
+			st.setCond(4);
+		}
+		
+		if(event.equalsIgnoreCase("33942-2.htm"))
+		{
+			st.setCond(5);
 		}
 		
 		if(event.equalsIgnoreCase("30289-3.htm"))
 		{
 			st.giveItems(WIND_SPIRIT_RELIC, 1);
-			st.setCond(4);
+			st.setCond(6);
 		}
 		
 		if(event.equalsIgnoreCase("check_body"))
@@ -190,7 +199,6 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				
 			}
 			
-			st.setCond(6);
 		}
 		
 		if(event.equalsIgnoreCase("33980-2.htm"))
@@ -201,12 +209,15 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			st.setCond(7);
 		}
 		
-		if(event.equalsIgnoreCase("33980-2.htm"))
+		if(event.equalsIgnoreCase("30289-6.htm"))
 		{
-			st.setCond(8);
+			if(player.isMageClass())
+				st.setCond(9);
+			else
+				st.setCond(8);
 		}
 		
-		if(event.equalsIgnoreCase("33943-10.htm"))
+		if(event.equalsIgnoreCase("33943-10.htm") || event.equalsIgnoreCase("33942-10.htm"))
 		{
 			st.takeItems(WIND_SPIRIT_RELIC, 2);
 			
@@ -235,6 +246,8 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				htmltext = "33931-1.htm";
 			}
 			else if(cond == 2)
+				htmltext = "33931-2.htm";
+			else if(cond == 2)
 				htmltext = "33931-3.htm";
 		}
 		else if(npcId == KATALIN)
@@ -245,16 +258,27 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			}
 			else if(cond == 8)
 			{
-				htmltext = "33943-1.htm";
+				htmltext = "33943-3.htm";
+			}
+		}
+		else if(npcId == AYANTHE)
+		{
+			if(cond == 3)
+			{
+				htmltext = "33942-1.htm";
+			}
+			else if(cond == 9)
+			{
+				htmltext = "33942-3.htm";
 			}
 		}
 		else if(npcId == RAYMOND)
 		{
-			if(cond == 3)
+			if(cond == 4 || cond == 5)
 			{
 				htmltext = "30289-1.htm";
 			}
-			else if(cond == 6)
+			else if(cond == 7)
 			{
 				htmltext = "30289-4.htm";
 			}
@@ -307,7 +331,6 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		if(updateKill(npc, st))
 		{
 			st.playSound(SOUND_MIDDLE);
-			st.setCond(cond+1);
 			
 			//spawn Telesha's corpse and despawn after 3 minutes
 			telesha_corpse_instance = st.addSpawn(TELESHA_CORPSE, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 180000);
@@ -332,23 +355,6 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		st.getPlayer().setVar("@received_navari_letter_3rd", true);
 	}
 	
-	private long getItemCountById(Player player, int itemId)
-	{
-		long itemCount = 0;
-		
-		PcInventory inventory = player.getInventory();
-		
-		if(inventory!= null)
-		{
-			ItemInstance itemInstance = inventory.getItemByItemId(itemId);
-
-			if(itemInstance!= null)
-				itemCount = itemInstance.getCount();
-		}
-		
-		return itemCount;
-	}
-
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
