@@ -288,7 +288,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			st.setCond(cond+1);
 			
 			//spawn Telesha's corpse and despawn after 3 minutes
-			telesha_corpse_instance = st.addSpawn(TELESHA_CORPSE, npc.getLoc().getX(), player.npc().getY(), npc.getLoc().getZ(), 180000);
+			telesha_corpse_instance = st.addSpawn(TELESHA_CORPSE, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 180000);
 			
 			player.sendPacket(new ExShowScreenMessage(CHECK_TELESHA_CORPSE, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 			
@@ -306,8 +306,6 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		st.showQuestionMark(10751);
 		
 		st.playSound(SOUND_TUTORIAL);
-		
-		st.giveItems(SOE_GLUDIN, 1);
 		
 		st.getPlayer().setVar("@received_navari_letter_3rd", true);
 	}
