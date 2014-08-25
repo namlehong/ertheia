@@ -280,7 +280,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	{
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
-		int player = st.getPlayer();
+		Player player = st.getPlayer();
 		
 		if(updateKill(npc, st))
 		{
