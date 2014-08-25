@@ -279,12 +279,12 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			{
 				htmltext = "30289-1.htm";
 			}
-			else if(cond == 7)
+			else if(cond == 8)
 			{
 				htmltext = "30289-4.htm";
 			}
 		}
-		else if(npcId == MYSTERIOUS_WIZARD && st.getCond() == 5)
+		else if(npcId == MYSTERIOUS_WIZARD && st.getCond() == 6)
 		{
 			htmltext = "33980-1.htm";
 		}
@@ -331,6 +331,10 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
+		/*TODO
+		 * Sniff packet after kill in this quest, make another packet for notify the counter in client
+		 * the current packet ExQuestNpcLogList doesn't work
+		 */
 		if(updateKill(npc, st))
 		{
 			st.playSound(SOUND_MIDDLE);
