@@ -87,7 +87,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		
 		addTalkId(NAVARI, KATALIN, RAYMOND, TELESHA_CORPSE, MYSTERIOUS_WIZARD);
 		
-		addKillNpcWithLog(4, SKELETON_KILL_LIST, 5, SKELETON_WARRIOR, SKELETON_ARCHER);
+		addKillNpcWithLog(6, SKELETON_KILL_LIST, 5, SKELETON_WARRIOR, SKELETON_ARCHER);
 		
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
