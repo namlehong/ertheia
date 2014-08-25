@@ -279,7 +279,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			{
 				htmltext = "30289-1.htm";
 			}
-			else if(cond == 8)
+			else if(cond == 7)
 			{
 				htmltext = "30289-4.htm";
 			}
