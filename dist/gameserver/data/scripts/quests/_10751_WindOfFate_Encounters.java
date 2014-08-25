@@ -28,7 +28,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 
 	private static final int NAVARI = 33931;
 	private static final int KATALIN = 33943;
-	private static final int RAYMOND = 33943;
+	private static final int RAYMOND = 30289;
 	private static final int TELESHA_CORPSE = 33981;
 	private static final int MYSTERIOUS_WIZARD = 33980;
 
@@ -163,18 +163,18 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		
 		if(event.equalsIgnoreCase("33931-2.htm"))
 		{
-			st.setCond(1);
+			st.setCond(2);
 		}
 		
 		if(event.equalsIgnoreCase("33943-2.htm"))
 		{
-			st.setCond(2);
+			st.setCond(3);
 		}
 		
 		if(event.equalsIgnoreCase("30289-3.htm"))
 		{
 			st.giveItems(WIND_SPIRIT_RELIC, 1);
-			st.setCond(3);
+			st.setCond(4);
 		}
 		
 		if(event.equalsIgnoreCase("check_body"))
@@ -190,7 +190,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				
 			}
 			
-			st.setCond(5);
+			st.setCond(6);
 		}
 		
 		if(event.equalsIgnoreCase("33980-2.htm"))
@@ -198,12 +198,12 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			st.giveItems(WIND_SPIRIT_RELIC, 1);
 			player.sendPacket(new ExShowScreenMessage(RETURN_GLUDIO, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 			
-			st.setCond(6);
+			st.setCond(7);
 		}
 		
 		if(event.equalsIgnoreCase("33980-2.htm"))
 		{
-			st.setCond(7);
+			st.setCond(8);
 		}
 		
 		if(event.equalsIgnoreCase("33943-10.htm"))
@@ -237,9 +237,31 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			else if(cond == 2)
 				htmltext = "33931-3.htm";
 		}
-		else if(npcId == KATALIN && st.getCond() == 2)
+		else if(npcId == KATALIN)
 		{
-			htmltext = "33943-1.htm";
+			if(cond == 2)
+			{
+				htmltext = "33943-1.htm";
+			}
+			else if(cond == 8)
+			{
+				htmltext = "33943-1.htm";
+			}
+		}
+		else if(npcId == RAYMOND)
+		{
+			if(cond == 3)
+			{
+				htmltext = "30289-1.htm";
+			}
+			else if(cond == 6)
+			{
+				htmltext = "30289-4.htm";
+			}
+		}
+		else if(npcId == MYSTERIOUS_WIZARD && st.getCond() == 5)
+		{
+			htmltext = "33980-1.htm";
 		}
 		
 		return htmltext;
