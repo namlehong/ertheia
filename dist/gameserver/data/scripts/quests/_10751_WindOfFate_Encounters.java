@@ -263,13 +263,13 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	public void onLevelChange(Player player, int oldLvl, int newLvl)
 	{
 		//System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
-		if(oldLvl < 20 && newLvl >= 20 && checkStartCondition(player))
+		if(oldLvl < minLevel && newLvl >= minLevel && checkStartCondition(player))
 		{
 			//System.out.println("received_navari_letter_3rd " + player.getVarBoolean("@received_navari_letter_3rd"));
 			if(player.getVarBoolean("@received_navari_letter_3rd"))
 				return;
 
-			Quest q = QuestManager.getQuest(10755);
+			Quest q = QuestManager.getQuest(10751);
 			player.processQuestEvent(q.getName(), "start_quest", null);
 			
 		}
