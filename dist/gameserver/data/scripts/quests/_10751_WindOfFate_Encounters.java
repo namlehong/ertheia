@@ -202,7 +202,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			
 		}
 		
-		if(event.equalsIgnoreCase("33980-2.htm"))
+		if(event.equalsIgnoreCase("33980-1.htm"))
 		{
 			st.giveItems(WIND_SPIRIT_RELIC, 1);
 			player.sendPacket(new ExShowScreenMessage(RETURN_GLUDIO, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
@@ -284,11 +284,6 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				htmltext = "30289-4.htm";
 			}
 		}
-		else if(npcId == MYSTERIOUS_WIZARD && st.getCond() == 6)
-		{
-			htmltext = "33980-1.htm";
-		}
-		
 		return htmltext;
 	}
 	
