@@ -2,6 +2,8 @@ package quests;
 
 import l2s.gameserver.instancemanager.QuestManager;
 import l2s.gameserver.model.instances.NpcInstance;
+import l2s.gameserver.model.items.ItemInstance;
+import l2s.gameserver.model.items.PcInventory;
 import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
 import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
 import l2s.gameserver.model.Creature;
@@ -233,6 +235,24 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		st.getPlayer().setVar("@received_navari_letter_1st", true);
 	}
 	
+
+	private long getItemCountById(Player player, int itemId)
+	{
+		long itemCount = 0;
+		
+		PcInventory inventory = player.getInventory();
+		
+		if(inventory!= null)
+		{
+			ItemInstance itemInstance = inventory.getItemByItemId(itemId);
+
+			if(itemInstance!= null)
+				itemCount = itemInstance.getCount();
+		}
+		
+		return itemCount;
+	}
+
 
 	@Override
 	public boolean checkStartCondition(Player player)
