@@ -8,6 +8,7 @@ import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.templates.npc.NpcTemplate;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.model.World;
+import l2s.gameserver.GameTimeController;
 import l2s.gameserver.ThreadPoolManager;
 
 import java.util.concurrent.ScheduledFuture;
@@ -21,6 +22,7 @@ public class TurekOrcInstance extends MonsterInstance
 	private static final long serialVersionUID = 1L;
 
 	private static final int CHERTUBA_MIRAGE = 23421;
+	private static final int CHERTUBA_ILLUSION = 23422;
 	
 	private static final String ALERT_STRONG_MONSTER = "Quái vật mạnh xuất hiện!";
 	
@@ -36,8 +38,10 @@ public class TurekOrcInstance extends MonsterInstance
 		
 		if(killer.isPlayer())
 			killer.sendPacket(new ExShowScreenMessage(ALERT_STRONG_MONSTER, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-		
-		addSpawn(CHERTUBA_MIRAGE, getLoc(), 0, 60000); //despawn after 1 minutes
+		if(GameTimeController.getInstance().isNowNight())
+			addSpawn(CHERTUBA_MIRAGE, getLoc(), 0, 60000); //despawn after 1 minutes
+		else
+			addSpawn(CHERTUBA_ILLUSION, getLoc(), 0, 60000); //despawn after 1 minutes
 	}
 	
 	public NpcInstance addSpawn(int npcId, Location loc, int randomOffset, int despawnDelay)

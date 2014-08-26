@@ -8,6 +8,7 @@ import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.templates.npc.NpcTemplate;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.model.World;
+import l2s.gameserver.GameTimeController;
 import l2s.gameserver.ThreadPoolManager;
 
 import java.util.concurrent.ScheduledFuture;
@@ -37,7 +38,7 @@ public class WindVortexInstance extends MonsterInstance
 		
 		if(killer.isPlayer())
 			killer.sendPacket(new ExShowScreenMessage(ALERT_STRONG_MONSTER, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-		if(Math.random()<0.7)
+		if(GameTimeController.getInstance().isNowNight())
 			addSpawn(GIANT_WINDIMA, getLoc(), 0, 60000); //despawn after 1 minutes
 		else
 			addSpawn(IMMENSE_WINDIMA, getLoc(), 0, 60000); //despawn after 1 minutes
