@@ -29,6 +29,7 @@ public class _10763_TerryfyingChetuba extends Quest implements ScriptFile
 	private static final int VORBOS = 33966;
 	
 	private final static int CHERTUBA_MIRAGE = 23421;
+	private final static int CHERTUBA_ILLUSION = 23422;
 
 	private static final int MAGIC_CHAIN_KEY_2 = 39489;
 	private static final int STEEL_DOOR_COIN = 37045;
@@ -54,7 +55,7 @@ public class _10763_TerryfyingChetuba extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(VORBOS);
 		
-		addKillId(CHERTUBA_MIRAGE);
+		addKillId(CHERTUBA_MIRAGE, CHERTUBA_ILLUSION);
 		
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -124,7 +125,7 @@ public class _10763_TerryfyingChetuba extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		if(npcId == CHERTUBA_MIRAGE && getItemCountById(st.getPlayer(), MAGIC_CHAIN_KEY_2) == 0 && Math.random()<0.4)
+		if((npcId == CHERTUBA_MIRAGE || npcId == CHERTUBA_ILLUSION) && getItemCountById(st.getPlayer(), MAGIC_CHAIN_KEY_2) == 0 && Math.random()<0.4)
 		{
 			st.giveItems(MAGIC_CHAIN_KEY_2, 1);
 			st.setCond(2);
