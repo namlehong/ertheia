@@ -145,7 +145,7 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 		
 		if(getItemCountById(st.getPlayer(), UNWORLDLY_WIND) >= 30)
 		{
-			st.setCond(cond+1);
+			st.setCond(2);
 		}
 		
 		return null;
