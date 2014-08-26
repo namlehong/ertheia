@@ -155,7 +155,7 @@ public class _10761_AnOrcInLove extends Quest implements ScriptFile
 			npcId == TUREK_ORC_ELDER)
 		{
 			int count = st.getInt(TUREK_KILL_LIST);
-			st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn giết được " + count + " Turek Orc", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true));
+			st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn giết được " + count + " Turek Orc", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
 			
 		}
 		
