@@ -32,7 +32,7 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 	private final static int CAPTURED_WIND_SPIRIT = 33965;
 
 	private static final int MAGIC_CHAIN_KEY_BUNDLE = 39490;
-	private static final int LOOSEN_CHAIN = 39490;
+	private static final int LOOSEN_CHAIN = 39518;
 	private static final int STEEL_DOOR_COIN = 37045;
 	
 	private static final int minLevel = 38;
@@ -89,7 +89,7 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("free_tree") || event.equalsIgnoreCase("free_sylph"))
 		{
-			npc.decayMe();
+			npc.deleteMe();
 			st.giveItems(LOOSEN_CHAIN, 1);
 			
 			if(getItemCountById(player, LOOSEN_CHAIN) >= 10)
