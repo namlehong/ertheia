@@ -14,6 +14,7 @@ import l2s.gameserver.model.base.ClassLevel;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
+import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExCallToChangeClass;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
@@ -38,6 +39,9 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 
 	private static final int SKELETON_WARRIOR = 27528;
 	private static final int SKELETON_ARCHER = 27529;
+	
+	private static final int MARAUDER_CLASS_ID = 184;
+	private static final int SAYHA_MAGE_ID = 185;
 	
 	private static final int minLevel = 38;
 	private static final int maxLevel = 99;
@@ -113,7 +117,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
-			return null;
+			htmltext = null;
 		}
 		
 		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_7s"))
@@ -123,14 +127,14 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			alertLetterReceived(st);
 			st.showQuestHTML(st.getQuest(), "queen_letter.htm");
 			
-			return null;
+			htmltext = null;
 		}
 		
 		if(event.equalsIgnoreCase("start_quest_delay"))
 		{
 			st.startQuestTimer("start_quest_7s", 7000);
 			//only start quest after 7s to avoid crash on enterworld
-			return null;
+			htmltext = null;
 		}
 		
 		if(event.equalsIgnoreCase("Quest _10751_WindOfFate_Encounters to_faeron"))
@@ -141,13 +145,13 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 				
 			}
-			return null;
+			htmltext = null;
 		}
 		
 		if(event.equalsIgnoreCase("Quest _10751_WindOfFate_Encounters close_window"))
 		{
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
-			return null;
+			htmltext = null;
 		}
 		
 		// Question mark clicked
@@ -159,7 +163,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
-				return null;
+				htmltext = null;
 			}
 		}
 		
@@ -187,6 +191,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			st.setCond(6);
 		}
 		
+		
 		if(event.equalsIgnoreCase("check_body"))
 		{
 			if(telesha_corpse_instance != null)
@@ -213,13 +218,26 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		if(event.equalsIgnoreCase("30289-6.htm"))
 		{
 			if(player.isMageClass())
+			{
+				htmltext = "30289-7.htm";
 				st.setCond(9);
+			}
 			else
+			{
+				htmltext = "30289-6.htm";
 				st.setCond(8);
+			}
 		}
 		
 		if(event.equalsIgnoreCase("33943-10.htm") || event.equalsIgnoreCase("33942-10.htm"))
 		{
+			int newClassId;
+			
+			if(player.isMageClass())
+				newClassId = SAYHA_MAGE_ID;
+			else
+				newClassId = MARAUDER_CLASS_ID;
+			
 			st.takeItems(WIND_SPIRIT_RELIC, 2);
 			
 			st.giveItems(NAVARI_BOX_MARAUDER, 1);
@@ -228,6 +246,9 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			
+			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
+			player.setClassId(newClassId, false);
+			player.broadcastCharInfo();
 		}
 		
 		return htmltext;
