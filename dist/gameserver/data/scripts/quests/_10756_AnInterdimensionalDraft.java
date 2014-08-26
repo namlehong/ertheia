@@ -38,6 +38,7 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 	private final static int SINGING_WIND = 21026;
 
 	private static final int STEEL_DOOR_COIN = 37045;
+	private static final int UNWORLDLY_WIND = 39493;
 	
 	private static final int minLevel = 20;
 	private static final int maxLevel = 99;
@@ -61,7 +62,7 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(PIO);
 		
-		addKillNpcWithLog(1, WIND_KILL_LIST, 30, WINDIMA, WINDIMA_FERI, WINDIMA_RESH, WHISPERING_WIND, SOBBING_WIND, BABBLING_WIND, GIGGLING_WIND, SINGING_WIND);
+		addKillId(WINDIMA, WINDIMA_FERI, WINDIMA_RESH, WHISPERING_WIND, SOBBING_WIND, BABBLING_WIND, GIGGLING_WIND, SINGING_WIND);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -130,17 +131,42 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		/*TODO
-		 * Sniff packet after kill in this quest, make another packet for notify the counter in client
-		 * the current packet ExQuestNpcLogList doesn't work
-		 */
-		if(updateKill(npc, st))
+		if( npcId == WINDIMA || 
+			npcId == WINDIMA_FERI || 
+			npcId == WINDIMA_RESH || 
+			npcId == WHISPERING_WIND || 
+			npcId == SOBBING_WIND || 
+			npcId == BABBLING_WIND || 
+			npcId == GIGGLING_WIND ||
+			npcId == SINGING_WIND)
 		{
-			st.playSound(SOUND_MIDDLE);
+			st.giveItems(UNWORLDLY_WIND, 1);
+		}
+		
+		if(getItemCountById(st.getPlayer(), UNWORLDLY_WIND) >= 30)
+		{
 			st.setCond(cond+1);
 		}
 		
 		return null;
+	}
+	
+
+	private long getItemCountById(Player player, int itemId)
+	{
+		long itemCount = 0;
+		
+		PcInventory inventory = player.getInventory();
+		
+		if(inventory!= null)
+		{
+			ItemInstance itemInstance = inventory.getItemByItemId(itemId);
+
+			if(itemInstance!= null)
+				itemCount = itemInstance.getCount();
+		}
+		
+		return itemCount;
 	}
 	
 	@Override
