@@ -124,7 +124,7 @@ public class _10763_TerryfyingChetuba extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		if(npcId == CHERTUBA_MIRAGE && getItemCountById(st.getPlayer(), MAGIC_CHAIN_KEY_2) == 0)
+		if(npcId == CHERTUBA_MIRAGE && getItemCountById(st.getPlayer(), MAGIC_CHAIN_KEY_2) == 0 && Math.random()<0.4)
 		{
 			st.giveItems(MAGIC_CHAIN_KEY_2, 1);
 			st.setCond(2);
