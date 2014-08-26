@@ -143,6 +143,22 @@ public class _10761_AnOrcInLove extends Quest implements ScriptFile
 		 * Sniff packet after kill in this quest, make another packet for notify the counter in client
 		 * the current packet ExQuestNpcLogList doesn't work
 		 */
+		
+		if(	npcId == TUREK_WAR_HOUND || 
+			npcId == TUREK_ORC_PREFECT || 
+			npcId == TUREK_ORC_ARCHER ||
+			npcId == TUREK_ORC_SKIRMISHER || 
+			npcId == TUREK_ORC_SUPPLIER || 
+			npcId == TUREK_ORC_FOOTMAN || 
+			npcId == TUREK_ORC_SENTINEL || 
+			npcId == TUREK_ORC_PRIEST || 
+			npcId == TUREK_ORC_ELDER)
+		{
+			int count = st.getInt(TUREK_KILL_LIST);
+			st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn giết được " + count + " Turek Orc", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true));
+			
+		}
+		
 		if(updateKill(npc, st))
 		{
 			st.playSound(SOUND_MIDDLE);
