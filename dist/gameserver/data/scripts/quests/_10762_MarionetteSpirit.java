@@ -124,7 +124,7 @@ public class _10762_MarionetteSpirit extends Quest implements ScriptFile
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
 		
-		if(npcId == MARIONETTE_SPIRIT && getItemCountById(st.getPlayer(), MAGIC_CHAIN_KEY_1) == 0)
+		if(npcId == MARIONETTE_SPIRIT && getItemCountById(st.getPlayer(), MAGIC_CHAIN_KEY_1) == 0 && Math.random() < 0.4)
 		{
 			st.giveItems(MAGIC_CHAIN_KEY_1, 1);
 			st.setCond(2);
