@@ -23,7 +23,7 @@ import l2s.gameserver.utils.ReflectionUtils;
  * @author Hien Son
  * 
  */
-public class _10763_TerryfyingChetuba extends Quest implements ScriptFile
+public class _10763_TerryfyingChertuba extends Quest implements ScriptFile
 {
 
 	private static final int VORBOS = 33966;
@@ -50,7 +50,7 @@ public class _10763_TerryfyingChetuba extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _10763_TerryfyingChetuba()
+	public _10763_TerryfyingChertuba()
 	{
 		super(false);
 		addStartNpc(VORBOS);
