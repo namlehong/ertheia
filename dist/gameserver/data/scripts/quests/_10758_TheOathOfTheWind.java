@@ -144,6 +144,12 @@ public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA);
+		QuestState qs = player.getQuestState(_10757_QuietingTheStorm.class);
+		
+		return (player.getLevel() >= minLevel && 
+				player.getLevel() <= maxLevel && 
+				player.getRace() == Race.ERTHEIA && 
+				qs != null && 
+				qs.getState() == COMPLETED);
 	}
 }
