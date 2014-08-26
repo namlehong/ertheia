@@ -153,6 +153,11 @@ public class _10763_TerryfyingChetuba extends Quest implements ScriptFile
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA);
+		QuestState qs = player.getQuestState(_10762_MarionetteSpirit.class);
+		
+		return (player.getLevel() >= minLevel && 
+				player.getLevel() <= maxLevel && 
+				qs != null && 
+				qs.getState() == COMPLETED);
 	}
 }

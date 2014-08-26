@@ -171,6 +171,6 @@ public class _10761_AnOrcInLove extends Quest implements ScriptFile
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA);
+		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel);
 	}
 }
