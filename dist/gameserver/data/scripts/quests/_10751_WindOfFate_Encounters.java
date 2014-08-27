@@ -311,8 +311,8 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	@Override
 	public void onPlayerEnter(Player player)
 	{
-		if(player.getVarBoolean("@received_navari_letter_3rd"))
-			return;
+		//if(player.getVarBoolean("@received_navari_letter_3rd"))
+			//return;
 		
 		//System.out.println("Player enter");
 		if(checkStartCondition(player))
@@ -331,8 +331,8 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		if(oldLvl < minLevel && newLvl >= minLevel && checkStartCondition(player))
 		{
 			//System.out.println("received_navari_letter_3rd " + player.getVarBoolean("@received_navari_letter_3rd"));
-			if(player.getVarBoolean("@received_navari_letter_3rd"))
-				return;
+			//if(player.getVarBoolean("@received_navari_letter_3rd"))
+				//return;
 
 			Quest q = QuestManager.getQuest(10751);
 			player.processQuestEvent(q.getName(), "start_quest", null);
