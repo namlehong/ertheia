@@ -90,7 +90,7 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("free_tree") || event.equalsIgnoreCase("free_sylph"))
 		{
-			DecayTaskManager.getInstance().addDecayTask(this, 300);
+			DecayTaskManager.getInstance().addDecayTask(npc, 300);
 			
 			st.giveItems(LOOSEN_CHAIN, 1);
 			
