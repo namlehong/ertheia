@@ -10,6 +10,7 @@ import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.scripts.ScriptFile;
+import l2s.gameserver.taskmanager.DecayTaskManager;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
@@ -89,7 +90,8 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("free_tree") || event.equalsIgnoreCase("free_sylph"))
 		{
-			npc.deleteMe();
+			DecayTaskManager.getInstance().addDecayTask(this, 300);
+			
 			st.giveItems(LOOSEN_CHAIN, 1);
 			
 			if(getItemCountById(player, LOOSEN_CHAIN) >= 10)
