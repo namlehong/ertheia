@@ -89,7 +89,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 
 		CharListenerList.addGlobal(this);
 		
-		addTalkId(NAVARI, KATALIN, RAYMOND, TELESHA_CORPSE, MYSTERIOUS_WIZARD);
+		addTalkId(NAVARI, KATALIN, AYANTHE, RAYMOND, TELESHA_CORPSE, MYSTERIOUS_WIZARD);
 		
 		addKillNpcWithLog(6, SKELETON_KILL_LIST, 5, SKELETON_WARRIOR, SKELETON_ARCHER);
 		
@@ -117,7 +117,8 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
-			htmltext = null;
+			htmltext = "";
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_7s"))
@@ -127,14 +128,16 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			alertLetterReceived(st);
 			st.showQuestHTML(st.getQuest(), "queen_letter.htm");
 			
-			htmltext = null;
+			htmltext = "";
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("start_quest_delay"))
 		{
 			st.startQuestTimer("start_quest_7s", 7000);
 			//only start quest after 7s to avoid crash on enterworld
-			htmltext = null;
+			htmltext = "";
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("Quest _10751_WindOfFate_Encounters to_faeron"))
@@ -145,13 +148,15 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 				
 			}
-			htmltext = null;
+			htmltext = "";
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("Quest _10751_WindOfFate_Encounters close_window"))
 		{
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
-			htmltext = null;
+			htmltext = "";
+			return null;
 		}
 		
 		// Question mark clicked
@@ -163,7 +168,8 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
-				htmltext = null;
+				htmltext = "";
+				return null;
 			}
 		}
 		
