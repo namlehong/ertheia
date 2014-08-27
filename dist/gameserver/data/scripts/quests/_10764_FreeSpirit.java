@@ -89,12 +89,22 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("free_tree") || event.equalsIgnoreCase("free_sylph"))
 		{
-			npc.doDecay();
+			npc.toggleVisible();
+			
+			st.startQuestTimer("toggle_spirit_visibility", 45000, npc);
 			
 			st.giveItems(LOOSEN_CHAIN, 1);
 			
 			if(getItemCountById(player, LOOSEN_CHAIN) >= 10)
 				st.setCond(2);
+			
+			return null;
+		}
+		
+		if(event.equalsIgnoreCase("toggle_spirit_visibility"))
+		{
+			npc.toggleVisible();
+			return null;
 		}
 		
 		return htmltext;
