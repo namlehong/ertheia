@@ -73,7 +73,6 @@ public class _10761_AnOrcInLove extends Quest implements ScriptFile
 													TUREK_ORC_ELDER);
 
 		addLevelCheck(minLevel, maxLevel);
-		addRaceCheck(false, false, false, false, false, false, true);
 	}
 	
 

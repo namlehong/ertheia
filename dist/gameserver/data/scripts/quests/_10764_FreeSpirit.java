@@ -1,10 +1,9 @@
 package quests;
 
-import l2s.authserver.ThreadPoolManager;
+import l2s.gameserver.ThreadPoolManager;
 import l2s.commons.threading.RunnableImpl;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.Race;
-import l2s.gameserver.model.entity.Reflection;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.items.PcInventory;
@@ -14,12 +13,7 @@ import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.scripts.ScriptFile;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
-import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
-import l2s.gameserver.network.l2.components.ChatType;
-import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.utils.Location;
-import l2s.gameserver.utils.NpcUtils;
-import l2s.gameserver.utils.ReflectionUtils;
 
 /**
  * @author Hien Son
@@ -59,7 +53,6 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		addStartNpc(VORBOS);
 		
 		addLevelCheck(minLevel, maxLevel);
-		addRaceCheck(false, false, false, false, false, false, true);
 	}
 	
 
@@ -93,7 +86,7 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		{
 			npc.toggleVisible();
 			
-			ThreadPoolManager.getInstance().schedule(VisibilityScheduleTimerTask, 30000)
+			ThreadPoolManager.getInstance().schedule(VisibilityScheduleTimerTask, 30000);
 			
 			st.giveItems(LOOSEN_CHAIN, 1);
 			

@@ -57,7 +57,6 @@ public class _10762_MarionetteSpirit extends Quest implements ScriptFile
 		addKillId(MARIONETTE_SPIRIT);
 		
 		addLevelCheck(minLevel, maxLevel);
-		addRaceCheck(false, false, false, false, false, false, true);
 	}
 	
 

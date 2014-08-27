@@ -58,7 +58,6 @@ public class _10763_TerryfyingChertuba extends Quest implements ScriptFile
 		addKillId(CHERTUBA_MIRAGE, CHERTUBA_ILLUSION);
 		
 		addLevelCheck(minLevel, maxLevel);
-		addRaceCheck(false, false, false, false, false, false, true);
 	}
 	
 
