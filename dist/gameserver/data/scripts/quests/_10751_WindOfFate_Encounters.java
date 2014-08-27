@@ -357,6 +357,14 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		 * Sniff packet after kill in this quest, make another packet for notify the counter in client
 		 * the current packet ExQuestNpcLogList doesn't work
 		 */
+		
+		if(	npcId == SKELETON_WARRIOR || 
+				npcId == SKELETON_ARCHER)
+			{
+				int count = st.getInt(SKELETON_KILL_LIST);
+				st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn tiêu diệt được " + count + " Skeleton", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
+				
+			}
 		if(updateKill(npc, st))
 		{
 			st.playSound(SOUND_MIDDLE);
