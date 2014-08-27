@@ -1,5 +1,7 @@
 package quests;
 
+import l2s.authserver.ThreadPoolManager;
+import l2s.commons.threading.RunnableImpl;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.entity.Reflection;
@@ -91,7 +93,7 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		{
 			npc.toggleVisible();
 			
-			st.startQuestTimer("toggle_spirit_visibility", 45000, npc);
+			ThreadPoolManager.getInstance().schedule(VisibilityScheduleTimerTask, 30000)
 			
 			st.giveItems(LOOSEN_CHAIN, 1);
 			
@@ -101,11 +103,6 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if(event.equalsIgnoreCase("toggle_spirit_visibility"))
-		{
-			npc.toggleVisible();
-			return null;
-		}
 		
 		return htmltext;
 	}
@@ -166,5 +163,22 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 				player.getLevel() <= maxLevel && 
 				qs != null && 
 				qs.getState() == COMPLETED);
+	}
+	
+	public class VisibilityScheduleTimerTask extends RunnableImpl
+	{
+		NpcInstance _npc = null;
+
+		public VisibilityScheduleTimerTask(NpcInstance npc)
+		{
+			_npc = npc;
+		}
+
+		@Override
+		public void runImpl() throws Exception
+		{
+			if(_npc != null)
+				_npc.toggleVisible();
+		}
 	}
 }
