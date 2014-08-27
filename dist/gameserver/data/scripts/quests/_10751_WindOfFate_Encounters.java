@@ -358,10 +358,10 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		 * the current packet ExQuestNpcLogList doesn't work
 		 */
 		
-		if(	npcId == SKELETON_WARRIOR || 
-				npcId == SKELETON_ARCHER)
+		if(	npcId == SKELETON_WARRIOR || npcId == SKELETON_ARCHER)
 			{
 				int count = st.getInt(SKELETON_KILL_LIST);
+				count++;
 				st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn tiêu diệt được " + count + " Skeleton", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
 				
 			}
