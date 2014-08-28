@@ -148,7 +148,7 @@ public class _10323_GoingIntoARealWar extends Quest implements ScriptFile
 				htmltext = "0-c.htm";
 			QuestState qs = st.getPlayer().getQuestState(_10322_SearchingForTheMysteriousPower.class);
 			if(qs == null || !qs.isCompleted())
-				return "You should complete another quest to start this!";
+               return "noqu.htm";
 			if(st.getPlayer().getLevel() > 20)
 				return "Your Level is too high for this quest!";
 			else if(cond == 0)
