@@ -5,7 +5,7 @@ import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.templates.npc.NpcTemplate;
-import quests._10323_GoingIntoARealWar;
+import quests._10323_TrainLikeItsReal;
 
 /**
  * @author Bonux
@@ -27,7 +27,7 @@ public final class HoldenInstance extends NpcInstance
 
 		if(command.equalsIgnoreCase("enter_to_underground"))
 		{
-			QuestState qs = player.getQuestState(_10323_GoingIntoARealWar.class);
+			QuestState qs = player.getQuestState(_10323_TrainLikeItsReal.class);
 			if(qs == null || qs.getCond() != 1)
 			{
 				showChatWindow(player, "default/" + getNpcId() + "-no.htm");

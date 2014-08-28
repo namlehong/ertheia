@@ -19,7 +19,7 @@ public class _10324_FindingMagisterGallint extends Quest implements ScriptFile
 		addStartNpc(SHENON);
 		addTalkId(GALLINT);
 		addLevelCheck(1,20);
-		addQuestCompletedCheck(_10323_GoingIntoARealWar.class);
+		addQuestCompletedCheck(_10323_TrainLikeItsReal.class);
 		addRaceCheck(true, true, true, true, true, true, false);
 	}
 
