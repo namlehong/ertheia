@@ -26,7 +26,6 @@ public class _10324_FindingMagisterGallint extends Quest implements ScriptFile
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		String htmltext = event;
 		if(event.equalsIgnoreCase("0-3.htm"))
 		{
 			st.set("cond", "1");
@@ -42,7 +41,7 @@ public class _10324_FindingMagisterGallint extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
-		return htmltext;
+		return event;
 	}
 
 	@Override

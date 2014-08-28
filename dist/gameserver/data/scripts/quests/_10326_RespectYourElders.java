@@ -24,8 +24,6 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		String htmltext = event;
-		//Player player = st.getPlayer();
 		if(event.equalsIgnoreCase("3.htm"))
 		{
 			st.set("cond", "1", true);
@@ -39,7 +37,7 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
-		return htmltext;
+		return event;
 	}
 
 	@Override

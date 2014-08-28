@@ -2,7 +2,6 @@ package quests;
 
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.Race;
-import l2s.gameserver.model.entity.Reflection;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
@@ -11,11 +10,9 @@ import l2s.gameserver.scripts.ScriptFile;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
-import l2s.gameserver.network.l2.components.ChatType;
 import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
-import l2s.gameserver.utils.ReflectionUtils;
 
 //By Evil_dnk dev.fairytale-world.ru
 public class _10323_GoingIntoARealWar extends Quest implements ScriptFile

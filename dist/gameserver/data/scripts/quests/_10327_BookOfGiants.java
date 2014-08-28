@@ -10,7 +10,6 @@ import l2s.gameserver.model.entity.Reflection;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
-import l2s.gameserver.network.l2.components.ChatType;
 import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
@@ -75,9 +74,9 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 				Tairen.setRunning();
 				Tairen.getAggroList().addDamageHate(npc, 0, 10000);
 				Tairen.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
-				if(npc != null & npc == Assassin1)
+				if(npc == Assassin1)
 					Assassin1.deleteMe();
-				if(npc != null & npc == Assassin2)
+				if(npc == Assassin2)
 					Assassin2.deleteMe();
 				++killedassasin;
 				if(killedassasin >= 2)
