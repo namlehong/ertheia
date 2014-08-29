@@ -70,7 +70,7 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 		if(npc.getNpcId() == assassin)
 		{
 			if(Tairen != null)
-		{
+		    {
 				Tairen.setRunning();
 				Tairen.getAggroList().addDamageHate(npc, 0, 10000);
 				Tairen.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
