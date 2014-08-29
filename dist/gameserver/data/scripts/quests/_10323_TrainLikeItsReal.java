@@ -102,7 +102,17 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 if(player != null)
                 {
                     player.sendPacket(new ExShowScreenMessage(NpcString.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-                    st.startQuestTimer("soul_timer", 5000);
+                    st.startQuestTimer("soul_timer", 4500);
+                    st.giveItems(5789, 500);
+                }
+            }
+            else if (event.equalsIgnoreCase("7.htm"))
+            {
+                st.playSound(SOUND_MIDDLE);
+                if(player != null)
+                {
+                    player.sendPacket(new ExShowScreenMessage(NpcString.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
+                    st.startQuestTimer("spirit_timer", 4500);
                     st.giveItems(5789, 500);
                 }
             }
