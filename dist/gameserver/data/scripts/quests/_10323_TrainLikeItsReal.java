@@ -103,7 +103,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                     player.sendPacket(new ExShowScreenMessage(NpcString.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
                     st.giveItems(5789, 500);
                     player.sendPacket(new ExShowScreenMessage(NpcString.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-                    st.setCond(5);
+                    st.setCond(4);
                 }
             }
             else if (event.equalsIgnoreCase("8.htm"))
@@ -114,7 +114,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                     player.sendPacket(new ExShowScreenMessage(NpcString.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
                     st.giveItems(5789, 500);
                     player.sendPacket(new ExShowScreenMessage(NpcString.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-                    st.setCond(4);
+                    st.setCond(5);
                 }
             }
             else if (event.equalsIgnoreCase("14.htm"))
