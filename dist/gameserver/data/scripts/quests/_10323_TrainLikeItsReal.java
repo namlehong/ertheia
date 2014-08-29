@@ -161,7 +161,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 {
                     return "3.htm";
                 }
-                else if (cond == 10)
+                else if (cond == 11)
                 {
                     htmlText = "14.htm";
                 }
@@ -191,12 +191,12 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 else if (cond == 4 || cond == 5)
                 {
                     htmlText = "11.htm";
-                    st.setCond(st.getCond() + 1);
+                    st.setCond(st.getCond() + 2);
                 }
-                else if (cond == 8)
+                else if (cond == 8 || cond == 9)
                 {
                     htmlText = "12.htm";
-                    st.setCond(9);
+                    st.setCond(10);
                 }
             }
         }
@@ -210,9 +210,16 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
 		int killed = st.getInt("killed");
 		if(npcId == TRAINING_GOLEM && (st.getCond() == 2 || st.getCond() == 6 || st.getCond() == 7))
 		{
-			if(killed >= 4)
+			if(killed > 3)
 			{
-				st.setCond(st.getCond() + 1);
+                if(st.getCond() == 2)
+                {
+                    st.setCond(st.getCond() + 1);
+                }
+                else
+                {
+                    st.setCond(st.getCond() + 2);
+                }
 				st.unset("killed");
 				st.playSound(SOUND_MIDDLE);
 			}
