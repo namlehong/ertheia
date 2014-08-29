@@ -108,11 +108,6 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                     st.setCond(4);
                 }
             }
-            else if(event.equalsIgnoreCase("12.htm"))
-            {
-                st.playSound(SOUND_MIDDLE);
-                st.setCond(10);
-            }
             else if (event.equalsIgnoreCase("14.htm"))
             {
                 if(player != null)
@@ -161,7 +156,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 {
                     return "3.htm";
                 }
-                else if (cond == 11)
+                else if (cond == 10 || cond == 11)
                 {
                     htmlText = "14.htm";
                 }
@@ -196,7 +191,8 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 else if (cond == 8 || cond == 9)
                 {
                     htmlText = "12.htm";
-                    st.setCond(10);
+                    st.playSound(SOUND_MIDDLE);
+                    st.setCond(st.getCond() + 2);
                 }
             }
         }
