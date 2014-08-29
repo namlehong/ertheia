@@ -156,7 +156,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 {
                     return "3.htm";
                 }
-                else if (cond == 10 || cond == 11)
+                else if (cond == 9)
                 {
                     htmlText = "14.htm";
                 }
@@ -188,11 +188,11 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                     htmlText = "11.htm";
                     st.setCond(st.getCond() + 2);
                 }
-                else if (cond == 8 || cond == 9)
+                else if (cond == 8)
                 {
                     htmlText = "12.htm";
                     st.playSound(SOUND_MIDDLE);
-                    st.setCond(st.getCond() + 2);
+                    st.setCond(9);
                 }
             }
         }
@@ -214,14 +214,14 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 }
                 else
                 {
-                    st.setCond(st.getCond() + 2);
+                    st.setCond(8);
                 }
 				st.unset("killed");
 				st.playSound(SOUND_MIDDLE);
 			}
 			else
             {
-                st.set("killed", ++killed);
+                st.set("killed", killed + 1);
             }
 		}
 		return null;
