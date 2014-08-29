@@ -13,7 +13,6 @@ import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
 
-//Train Like It's Real
 public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
 {
 	private NpcInstance npcInstance = null;
