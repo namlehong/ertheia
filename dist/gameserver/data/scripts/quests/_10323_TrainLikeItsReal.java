@@ -95,7 +95,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                     st.giveItems(5790, 500);
                 }
             }
-            else if (event.equalsIgnoreCase("9.htm"))
+            else if (event.equalsIgnoreCase("10.htm"))
             {
                 st.playSound(SOUND_MIDDLE);
                 if(player != null)
@@ -105,7 +105,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                     st.giveItems(5789, 500);
                 }
             }
-            else if (event.equalsIgnoreCase("7.htm"))
+            else if (event.equalsIgnoreCase("8.htm"))
             {
                 st.playSound(SOUND_MIDDLE);
                 if(player != null)
