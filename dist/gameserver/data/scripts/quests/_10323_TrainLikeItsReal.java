@@ -84,15 +84,16 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 st.setCond(2);
                 st.playSound(SOUND_MIDDLE);
             }
-            else if (event.equalsIgnoreCase("7.htm"))
+            else if (event.equalsIgnoreCase("8.htm"))
             {
                 st.playSound(SOUND_MIDDLE);
                 if(player != null)
                 {
-                    player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_003_bullet_01.htm"));
+                    player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_003_bullet_02.htm"));
                     player.sendPacket(new ExShowScreenMessage(NpcString.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-                    st.startQuestTimer("spirit_timer", 5000);
                     st.giveItems(5790, 500);
+                    player.sendPacket(new ExShowScreenMessage(NpcString.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
+                    st.setCond(5);
                 }
             }
             else if (event.equalsIgnoreCase("10.htm"))
@@ -100,22 +101,17 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 st.playSound(SOUND_MIDDLE);
                 if(player != null)
                 {
+                    player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_003_bullet_01.htm"));
                     player.sendPacket(new ExShowScreenMessage(NpcString.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
                     st.giveItems(5789, 500);
                     player.sendPacket(new ExShowScreenMessage(NpcString.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
                     st.setCond(4);
                 }
             }
-            else if (event.equalsIgnoreCase("8.htm"))
+            else if(event.equalsIgnoreCase("12.htm"))
             {
                 st.playSound(SOUND_MIDDLE);
-                if(player != null)
-                {
-                    player.sendPacket(new ExShowScreenMessage(NpcString.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-                    st.giveItems(5789, 500);
-                    player.sendPacket(new ExShowScreenMessage(NpcString.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-                    st.setCond(5);
-                }
+                st.setCond(10);
             }
             else if (event.equalsIgnoreCase("14.htm"))
             {
@@ -165,7 +161,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 {
                     return "3.htm";
                 }
-                else if (cond == 7)
+                else if (cond == 10)
                 {
                     htmlText = "14.htm";
                 }
@@ -195,12 +191,12 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                 else if (cond == 4 || cond == 5)
                 {
                     htmlText = "11.htm";
-                    st.setCond(6);
+                    st.setCond(st.getCond() + 1);
                 }
-                else if (cond == 7)
+                else if (cond == 8)
                 {
                     htmlText = "12.htm";
-                    st.setCond(8);
+                    st.setCond(9);
                 }
             }
         }
@@ -212,7 +208,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
 	{
 		int npcId = npc.getNpcId();
 		int killed = st.getInt("killed");
-		if(npcId == TRAINING_GOLEM && (st.getCond() == 2 || st.getCond() == 6))
+		if(npcId == TRAINING_GOLEM && (st.getCond() == 2 || st.getCond() == 6 || st.getCond() == 7))
 		{
 			if(killed >= 4)
 			{
