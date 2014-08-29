@@ -108,7 +108,7 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
                     st.setCond(4);
                 }
             }
-            else if (event.equalsIgnoreCase("14.htm"))
+            else if (event.equalsIgnoreCase("15.htm"))
             {
                 if(player != null)
                 {
