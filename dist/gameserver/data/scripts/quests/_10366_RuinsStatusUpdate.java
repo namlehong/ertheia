@@ -41,9 +41,8 @@ public class _10366_RuinsStatusUpdate extends Quest implements ScriptFile {
 		addTalkId(moka);
 		addTalkId(valpor);
 		addTalkId(sebion);
-
 		addLevelCheck(16, 25);
-		//addQuestCompletedCheck(_10365_SeekerEscort.class);
+		addQuestCompletedCheck(_10365_SeekerEscort.class);
 	}
 
 	@Override
