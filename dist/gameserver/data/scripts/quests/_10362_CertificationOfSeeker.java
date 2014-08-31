@@ -36,7 +36,7 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile {
 		addKillNpcWithLog(1, stalker_item, 10, stalker);
 		addKillNpcWithLog(1, husk_item, 5, husk);
 
-		addLevelCheck(1, 20);
+		addLevelCheck(10, 20);
 		addQuestCompletedCheck(_10361_RolesOfSeeker.class);
 		addRaceCheck(true, true, true, true, true, true, false);
 
