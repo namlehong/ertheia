@@ -34,8 +34,8 @@ public class _10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 		}
 		else if(event.equalsIgnoreCase("32974_02.htm"))
 		{
-			st.giveItems(ADENA_ID, 5000);
-			st.addExpAndSp(40, 500);
+			st.giveItems(ADENA_ID, 50);
+			st.addExpAndSp(40,5);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

@@ -52,9 +52,9 @@ public class _10336_DividedSakumKanilov extends Quest implements ScriptFile
 		else if(cond == 3 && event.equalsIgnoreCase("quest_done"))
 		{
 			htmltext = "guildsman_q10336_3.htm";
-			qs.giveItems(ADENA_ID, 100000);
+			qs.giveItems(ADENA_ID, 1000);
 			qs.giveItems(SCROLL_ENCHANT_WEAPON_D, 3);
-			qs.getPlayer().addExpAndSp(350000, 150000);
+			qs.getPlayer().addExpAndSp(500000, 120);
 			qs.exitCurrentQuest(false);
 			qs.playSound(SOUND_FINISH);
 		}

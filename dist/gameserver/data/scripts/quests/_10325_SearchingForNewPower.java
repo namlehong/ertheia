@@ -126,8 +126,8 @@ public class _10325_SearchingForNewPower extends Quest implements ScriptFile
 			if(cond >= 8)
 			{
 				htmltext = "gallint_q10325_4.htm";
-				st.giveItems(ADENA_ID, 12000);
-				st.getPlayer().addExpAndSp(3254, 2400);
+				st.giveItems(ADENA_ID, 120);
+				st.getPlayer().addExpAndSp(4654, 5);
 				st.playSound(SOUND_FINISH);
 				if(st.getPlayer().isMageClass())
 					st.giveItems(SPIRITSHOT, 1000);

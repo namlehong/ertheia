@@ -40,10 +40,10 @@ public class _10330_ToTheYeSagiraRuins extends Quest implements ScriptFile
 		else if(event.equalsIgnoreCase("6.htm"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
-			st.giveItems(57, 62000);
+			st.giveItems(57, 620);
 			st.giveItems(29, 1);
 			st.giveItems(22, 1);
-			st.addExpAndSp(23000, 25000);
+			st.addExpAndSp(23000, 5);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

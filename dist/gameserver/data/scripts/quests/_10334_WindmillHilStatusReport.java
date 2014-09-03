@@ -52,8 +52,8 @@ public class _10334_WindmillHilStatusReport extends Quest implements ScriptFile 
 		if(event.equalsIgnoreCase("qet_rev")) {
 			htmltext = "1-3.htm";
 			player.sendPacket(new ExShowScreenMessage(NpcString.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
-			st.getPlayer().addExpAndSp(150000, 60000);
-			st.giveItems(57, 85000);
+			st.getPlayer().addExpAndSp(200000, 48);
+			st.giveItems(57, 850);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			if(player.isMageClass()) {

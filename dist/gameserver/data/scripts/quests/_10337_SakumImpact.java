@@ -61,8 +61,8 @@ public class _10337_SakumImpact extends Quest implements ScriptFile
 		else if(cond == 3 && event.equalsIgnoreCase("quest_done"))
 		{
 			htmltext = "lef_q10337_2.htm";
-			qs.giveItems(ADENA_ID, 103000);
-			qs.getPlayer().addExpAndSp(470000, 160000);
+			qs.giveItems(ADENA_ID, 1030);
+			qs.getPlayer().addExpAndSp(650000, 156);
 			qs.exitCurrentQuest(false);
 			qs.playSound(SOUND_FINISH);
 		}

@@ -39,8 +39,8 @@ public class _10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 		}
 		else if(event.equalsIgnoreCase("32975_02.htm"))
 		{
-			st.giveItems(ADENA_ID, 3000);
-			st.addExpAndSp(30, 100);
+			st.giveItems(ADENA_ID, 30);
+			st.addExpAndSp(30, 5);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

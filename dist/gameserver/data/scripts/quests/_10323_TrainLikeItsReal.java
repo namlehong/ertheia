@@ -112,9 +112,9 @@ public class _10323_TrainLikeItsReal extends Quest implements ScriptFile
             {
                 if(player != null)
                 {
-                    player.addExpAndSp(300, 1500);
+                    player.addExpAndSp(1700, 5);
                 }
-                st.giveItems(57, 9000);
+                st.giveItems(57, 90);
                 st.setState(COMPLETED);
                 st.exitCurrentQuest(false);
                 st.playSound(SOUND_FINISH);

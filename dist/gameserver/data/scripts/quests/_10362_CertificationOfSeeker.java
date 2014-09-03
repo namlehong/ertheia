@@ -56,8 +56,8 @@ public class _10362_CertificationOfSeeker extends Quest implements ScriptFile {
 
 		if(event.equalsIgnoreCase("qet_rev")) {
 			htmltext = "1-3.htm";
-			st.getPlayer().addExpAndSp(50000, 7000);
-			st.giveItems(57, 43000);
+			st.getPlayer().addExpAndSp(50000, 12);
+			st.giveItems(57, 430);
 			st.giveItems(1060, 50);
 			st.giveItems(49, 1);
 			st.exitCurrentQuest(false);

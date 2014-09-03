@@ -160,8 +160,8 @@ public class _10322_SearchingForTheMysteriousPower extends Quest implements Scri
 				htmltext = "1-5.htm";
 				Functions.npcSayToPlayer(npc, st.getPlayer(), NpcString.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY);
 				st.getPlayer().addExpAndSp(300, 800);
-				st.giveItems(57, 7000);
-				st.giveItems(17, 500);
+				st.giveItems(57, 69);
+				st.giveItems(300, 5);
 				st.giveItems(7816, 1);
 				st.giveItems(7817, 1);
 				st.giveItems(7818, 1);

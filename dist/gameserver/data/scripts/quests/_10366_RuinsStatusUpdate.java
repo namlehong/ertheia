@@ -50,8 +50,8 @@ public class _10366_RuinsStatusUpdate extends Quest implements ScriptFile {
 		String htmltext = event;
 
 		if(event.equalsIgnoreCase("qet_rev")) {
-			st.getPlayer().addExpAndSp(150000, 30000);
-			st.giveItems(57, 75000);
+			st.getPlayer().addExpAndSp(150000, 36);
+			st.giveItems(57, 750);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			{
