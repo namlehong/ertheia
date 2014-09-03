@@ -56,8 +56,8 @@ public class _10365_SeekerEscort extends Quest implements ScriptFile
 		}
 		else if(event.equalsIgnoreCase("sebion_q10365_2.htm"))
 		{
-			st.getPlayer().addExpAndSp(120000, 20000);
-			st.giveItems(57, 65000);
+			st.getPlayer().addExpAndSp(120000, 28);
+			st.giveItems(57, 650);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 		}

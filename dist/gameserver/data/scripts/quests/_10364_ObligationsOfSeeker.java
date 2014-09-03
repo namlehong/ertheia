@@ -64,8 +64,8 @@ public class _10364_ObligationsOfSeeker extends Quest implements ScriptFile {
 		{
 			st.takeAllItems(papper);
 			htmltext = "2-4.htm";
-			st.getPlayer().addExpAndSp(95000, 10000);
-			st.giveItems(57, 55000);
+			st.getPlayer().addExpAndSp(95000, 22);
+			st.giveItems(57, 550);
 			st.giveItems(1060, 50);
 			st.giveItems(37, 1);
 			st.exitCurrentQuest(false);

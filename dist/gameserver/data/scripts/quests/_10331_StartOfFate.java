@@ -352,7 +352,7 @@ public class _10331_StartOfFate extends Quest implements ScriptFile
 			st.showTutorialClientHTML("QT_009_enchant_01");
 			st.giveItems(ADENA_ID, 80000);
 			st.giveItems(PROOF_OF_COURAGE, 40);
-			st.addExpAndSp(200000, 40000);
+			st.addExpAndSp(200000, 48);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FANFARE2);

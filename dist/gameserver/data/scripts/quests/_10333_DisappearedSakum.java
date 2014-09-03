@@ -56,8 +56,8 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 		else if(cond == 3 && event.equalsIgnoreCase("quest_done"))
 		{
 			htmltext = "schunain_q10333_3.htm";
-			qs.getPlayer().addExpAndSp(130000, 50000);
-			qs.giveItems(ADENA_ID, 80000);
+			qs.getPlayer().addExpAndSp(180000, 43);
+			qs.giveItems(ADENA_ID, 800);
 			qs.exitCurrentQuest(false);
 			qs.playSound(SOUND_FINISH);
 		}

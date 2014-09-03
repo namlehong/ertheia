@@ -204,7 +204,7 @@ public class _10360_CertificationOfFate extends Quest implements ScriptFile
 			player.broadcastCharInfo();
 
 			//player.broadcastCharInfo();
-			st.getPlayer().addExpAndSp(2700000, 250000);
+			st.getPlayer().addExpAndSp(2700000, 648);
 			st.giveItems(17822, 40);
 			st.giveItems(32777, 1);
 			st.giveItems(ADENA_ID, 110000);

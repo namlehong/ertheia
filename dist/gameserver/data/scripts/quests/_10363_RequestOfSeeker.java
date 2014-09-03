@@ -151,8 +151,8 @@ public class _10363_RequestOfSeeker extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("qet_rev"))
 		{
 			htmltext = "1-3.htm";
-			st.getPlayer().addExpAndSp(70200, 8100);
-			st.giveItems(57, 48000);
+			st.getPlayer().addExpAndSp(70200, 16);
+			st.giveItems(57, 480);
 			st.giveItems(1060, 100);
 			st.giveItems(43, 1);
 			st.exitCurrentQuest(false);

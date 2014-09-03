@@ -63,8 +63,8 @@ public class _10335_RequestToFindSakum extends Quest implements ScriptFile
 		else if(cond == 3 && event.equalsIgnoreCase("quest_done"))
 		{
 			htmltext = "zenath_q10335_3.htm";
-			qs.getPlayer().addExpAndSp(250000, 100000);
-			qs.giveItems(ADENA_ID, 90000);
+			qs.getPlayer().addExpAndSp(350000, 84);
+			qs.giveItems(ADENA_ID, 900);
 			qs.exitCurrentQuest(false);
 			qs.playSound(SOUND_FINISH);
 		}

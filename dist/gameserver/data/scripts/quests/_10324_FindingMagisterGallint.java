@@ -36,8 +36,8 @@ public class _10324_FindingMagisterGallint extends Quest implements ScriptFile
 		{
 			st.getPlayer().sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2Text\\QT_004_skill_01.htm"));
 			
-			st.giveItems(57, 11000);
-			st.addExpAndSp(1700, 2000);
+			st.giveItems(57, 110);
+			st.addExpAndSp(3100, 5);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
