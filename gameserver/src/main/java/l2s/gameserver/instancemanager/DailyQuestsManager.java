@@ -21,11 +21,11 @@ public class DailyQuestsManager
 		//60-64 1 quest per day
 		{
 			case 1:
-				_disabledQuests.add(467);
+				//_disabledQuests.add(467); //removed on Ertheia
 				_disabledQuests.add(470);
 				break;
 			case 2:
-				_disabledQuests.add(467);
+				//_disabledQuests.add(467);
 				_disabledQuests.add(474);
 				break;
 			case 3:
@@ -43,17 +43,17 @@ public class DailyQuestsManager
 			case 2:
 				_disabledQuests.add(485);
 				break;
-			case 3:
-				_disabledQuests.add(486);
-				break;
+			//case 3:
+				//_disabledQuests.add(486); //removed on Ertheia
+				//break;
 		}
 
 		switch(Rnd.get(1, 3))
 		//75-79 2 quest per day
 		{
-			case 1:
-				_disabledQuests.add(487);
-				break;
+			//case 1:
+				//_disabledQuests.add(487); //removed on Ertheia
+				//break;
 			case 2:
 				_disabledQuests.add(488);
 				break;

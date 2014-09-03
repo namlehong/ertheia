@@ -8,7 +8,7 @@ import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.scripts.ScriptFile;
 
 /**
- * @author Bonux
+ * @author Hien Son
  */
 public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 {
@@ -49,7 +49,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 			if(player.isMageClass())
 				st.setCond(3);
 			else 
-				st.setCond(3);
+				st.setCond(2);
 		}
 		else if(event.equalsIgnoreCase("33943-2.htm") || event.equalsIgnoreCase("33942-2.htm"))
 		{
@@ -94,7 +94,7 @@ public class _10733_TheTestForSurvivor extends Quest implements ScriptFile
 			htmltext = "33943-1.htm";
 			
 		}
-		else if(npcId == AYANTHE && st.getCond() == 3 && !player.isMageClass())
+		else if(npcId == AYANTHE && st.getCond() == 3 && player.isMageClass())
 		{
 			htmltext = "33942-1.htm";
 			

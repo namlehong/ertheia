@@ -31,7 +31,9 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 	public final Map<Integer, String> QMCc = new HashMap<Integer, String>();
 
 	private static TutorialShowListener _tutorialShowListener;
-
+	
+	private static final String QUEEN_CALL = "Nữ Hoàng Navari đang gọi bạn";
+	
 	@Override
 	public void onLoad()
 	{
@@ -162,7 +164,10 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 							if(tempNpc.getNpcId() == 33931)
 							{
 								player.setVar("@queen_called", true);
-								player.sendPacket(new ExShowScreenMessage(NpcString.QUEEN_SERENITY_IS_CAUSING_YOU, 30000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+								//player.sendPacket(new ExShowScreenMessage(NpcString.QUEEN_SERENITY_IS_CAUSING_YOU, 30000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+								
+								player.sendPacket(new ExShowScreenMessage(QUEEN_CALL, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+								
 							}
 						}
 					}
