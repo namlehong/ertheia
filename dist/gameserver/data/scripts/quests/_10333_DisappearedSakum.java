@@ -29,7 +29,6 @@ public class _10333_DisappearedSakum extends Quest implements ScriptFile
 	public _10333_DisappearedSakum()
 	{
 		super(false);
-
 		addStartNpc(BATHIS);
 		addTalkId(VENT, SCHUNAIN);
 		addKillId(LANGK_LIZARDMAN, VUKU_ORC_FIGHTER, POISONOUS_SPIDER, VENOMOUS_SPIDER, ARACHNID_PREDATOR);

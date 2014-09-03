@@ -113,17 +113,22 @@ public class _10322_SearchingForTheMysteriousPower extends Quest implements Scri
 		int cond = st.getCond();
 		int npcId = npc.getNpcId();
 		String htmltext = "noquest";
-
+        Player player = st.getPlayer();
 		if(npcId == shenon)
 		{
-			if(st.isCompleted())
-				htmltext = "0-c.htm";
-			else if(cond == 0)
-				htmltext = "start.htm";
-			else if(cond >= 1)
-				htmltext = "0-4.htm";
-			else
-				htmltext = "noqu.htm";
+            if(checkStartCondition(player))
+            {
+                if (st.isCompleted())
+                    htmltext = "0-c.htm";
+                else if (cond == 0)
+                    htmltext = "start.htm";
+                else if (cond >= 1)
+                    htmltext = "0-4.htm";
+            }
+            else
+            {
+                htmltext = "noqu.htm";
+            }
 		}
 		else if(npcId == evan)
 		{

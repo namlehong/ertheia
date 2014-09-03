@@ -29,7 +29,7 @@ public class _10332_ToughRoad extends Quest implements ScriptFile {
 		addTalkId(batis);
 
 		addLevelCheck(20, 40);
-//		addQuestCompletedCheck(_10331_StartofFate.class);
+		addQuestCompletedCheck(_10331_StartOfFate.class);
 	}
 
 	@Override
