@@ -26,7 +26,6 @@ public class _10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		//String htmltext = event;
 		if(event.equalsIgnoreCase("32975_03.htm"))
 		{
 			st.setCond(1);

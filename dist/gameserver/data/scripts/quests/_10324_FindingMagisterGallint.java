@@ -19,14 +19,13 @@ public class _10324_FindingMagisterGallint extends Quest implements ScriptFile
 		addStartNpc(SHENON);
 		addTalkId(GALLINT);
 		addLevelCheck(1,20);
-		addQuestCompletedCheck(_10323_GoingIntoARealWar.class);
+		addQuestCompletedCheck(_10323_TrainLikeItsReal.class);
 		addRaceCheck(true, true, true, true, true, true, false);
 	}
 
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		String htmltext = event;
 		if(event.equalsIgnoreCase("0-3.htm"))
 		{
 			st.set("cond", "1");
@@ -42,7 +41,7 @@ public class _10324_FindingMagisterGallint extends Quest implements ScriptFile
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}
-		return htmltext;
+		return event;
 	}
 
 	@Override

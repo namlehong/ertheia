@@ -30,7 +30,6 @@ public class _10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 	@Override
 	public String onEvent(String event, QuestState st, NpcInstance npc)
 	{
-		String htmltext = event;
 		if(event.equalsIgnoreCase("32972_03.htm"))
 		{
 			st.setCond(1);
