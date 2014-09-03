@@ -41,8 +41,6 @@ public class _10358_DividedSakumPoslof extends Quest implements ScriptFile {
 		addKillId(poslov);
 		addKillNpcWithLog(1, vilan_item, 23, vilan);
 		addKillNpcWithLog(1, zombi_item, 20, zombi);
-
-
 		addLevelCheck(32, 40);
 		addQuestCompletedCheck(_10337_SakumImpact.class);
 	}
