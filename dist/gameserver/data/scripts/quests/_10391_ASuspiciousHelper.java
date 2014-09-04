@@ -13,6 +13,7 @@ public class _10391_ASuspiciousHelper extends Quest implements ScriptFile
 	private static final int IASON_HEINE = 33859;
 	private static final int FAKE_ID = 36707;
 	private static final int MATERIALS = 36708;
+    private static final int EAC = 22011;
 	private static final int STEEL_DOOR_GUILD_COIN = 37045;
 	
 	public _10391_ASuspiciousHelper()
@@ -61,7 +62,8 @@ public class _10391_ASuspiciousHelper extends Quest implements ScriptFile
 		else if(event.equalsIgnoreCase("quest_finish"))	
 		{
 			st.giveItems(STEEL_DOOR_GUILD_COIN, 1);
-			st.addExpAndSp(388290, 3882);
+            st.giveItems(EAC,1);
+			st.addExpAndSp(388290, 93);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 			return "iason_heine_q10391_04.htm";
