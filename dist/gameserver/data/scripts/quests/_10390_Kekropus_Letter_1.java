@@ -153,51 +153,53 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     if(cond == 1)
                     {
                         String letter = qs.get("letter");
-                        if(letter == null)
+                        if (player.getRace() == Race.HUMAN)
                         {
-                            if (player.getRace() == Race.HUMAN)
-                            {
-                                htmlText = "1-human.htm";
-                                qs.giveItems(LETTER,1);
-                                qs.setCond(2);
-                                qs.set("letter","true");
-                            }
-                            else if (player.getRace() == Race.ELF)
-                            {
-                                htmlText = "1-elf.htm";
-                                qs.giveItems(LETTER,1);
-                                qs.setCond(2);
-                                qs.set("letter","true");
-                            }
-                            else if (player.getRace() == Race.DARKELF)
-                            {
-                                htmlText = "1-dark-elf.htm";
-                                qs.giveItems(LETTER,1);
-                                qs.setCond(2);
-                                qs.set("letter","true");
-                            }
-                            else if (player.getRace() == Race.DWARF)
-                            {
-                                htmlText = "1-dwarf.htm";
-                                qs.giveItems(LETTER,1);
-                                qs.setCond(2);
-                                qs.set("letter","true");
-                            }
-                            else if (player.getRace() == Race.KAMAEL)
-                            {
-                                htmlText = "1-kamael.htm";
-                                qs.giveItems(LETTER,1);
-                                qs.set("letter","true");
-                            }
+                            htmlText = "1-human.htm";
+                            qs.giveItems(LETTER,1);
+                            qs.setCond(2);
+                            qs.set("letter","true");
+                        }
+                        else if (player.getRace() == Race.ELF)
+                        {
+                            htmlText = "1-elf.htm";
+                            qs.giveItems(LETTER,1);
+                            qs.setCond(2);
+                            qs.set("letter","true");
+                        }
+                        else if (player.getRace() == Race.DARKELF)
+                        {
+                            htmlText = "1-dark-elf.htm";
+                            qs.giveItems(LETTER,1);
+                            qs.setCond(2);
+                            qs.set("letter","true");
+                        }
+                        else if (player.getRace() == Race.DWARF)
+                        {
+                            htmlText = "1-dwarf.htm";
+                            qs.giveItems(LETTER,1);
+                            qs.setCond(2);
+                            qs.set("letter","true");
+                        }
+                        else if (player.getRace() == Race.KAMAEL)
+                        {
+                            htmlText = "1-kamael.htm";
+                            qs.giveItems(LETTER,1);
+                            qs.set("letter","true");
+                        }
+
+                    }
+                    else if(cond == 2)
+                    {
+                        String letter = qs.get("letter");
+                        if (letter == null)
+                        {
+                            htmlText = "4.htm";
                         }
                         else
                         {
                             htmlText = "2.htm";
                         }
-                    }
-                    else if(cond == 2)
-                    {
-                        htmlText = "4.htm";
                     }
                 }
             }
