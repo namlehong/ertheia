@@ -29,6 +29,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
     private static final int SOE_GLUDIO = 7123;
     private static final int SOE_ALLIGATOR_ISLAND = 37025;
+    private static final int SOE_HEINE = 37112;
 
     private static final int MIN_LEVEL = 40;
     private static final int MAX_LEVEL = 45;
@@ -43,6 +44,8 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
         this.addRaceCheck(true, true, true, true, true, true, false);
         CharListenerList.addGlobal(this);
         this.addTalkId(BATHIS);
+        this.addTalkId(GOSTA);
+        this.addTalkId(ELI);
     }
 
     private void receivedLetter(final QuestState qs)
@@ -131,6 +134,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 {
                     qs.setCond(3);
                     qs.playSound(SOUND_MIDDLE);
+                    qs.giveItems(SOE_HEINE,1);
                 }
                 else if(event.equalsIgnoreCase("8.htm"))
                 {
