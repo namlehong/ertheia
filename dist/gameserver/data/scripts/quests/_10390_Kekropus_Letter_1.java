@@ -132,6 +132,21 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     qs.setCond(3);
                     qs.playSound(SOUND_MIDDLE);
                 }
+                else if(event.equalsIgnoreCase("8.htm"))
+                {
+                    qs.giveItems(SOE_ALLIGATOR_ISLAND,1);
+                    qs.setCond(4);
+                    qs.playSound(SOUND_MIDDLE);
+                }
+                else if(event.equalsIgnoreCase("11.htm"))
+                {
+                    qs.setState(COMPLETED);
+                    qs.exitCurrentQuest(false);
+                    qs.playSound(SOUND_FINISH);
+                    player.addExpAndSp(370440,88);
+                    qs.giveItems(EWC,3);
+                    qs.giveItems(STEEL_DOOR_GUILD_COIN,21);
+                }
             }
         }
         return event;
@@ -152,7 +167,6 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 {
                     if(cond == 1)
                     {
-                        String letter = qs.get("letter");
                         if (player.getRace() == Race.HUMAN)
                         {
                             htmlText = "1-human.htm";
@@ -187,7 +201,6 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                             qs.giveItems(LETTER,1);
                             qs.set("letter","true");
                         }
-
                     }
                     else if(cond == 2)
                     {
@@ -200,6 +213,24 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                         {
                             htmlText = "2.htm";
                         }
+                    }
+                }
+                else if (npcId == GOSTA)
+                {
+                    if(cond == 3)
+                    {
+                        return "6.htm";
+                    }
+                    else if (cond == 4)
+                    {
+                        return "9.htm";
+                    }
+                }
+                else if (npcId == ELI)
+                {
+                    if(cond == 4)
+                    {
+                        return "10.htm";
                     }
                 }
             }
