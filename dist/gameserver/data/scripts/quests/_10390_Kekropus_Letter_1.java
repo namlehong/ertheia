@@ -87,7 +87,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 }
                 else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 to_gludio"))
                 {
-                    player.teleToLocation(-79592, 150824, -3066);
+                    player.teleToLocation(-13896, 123720, -3151);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     return null;
                 }
