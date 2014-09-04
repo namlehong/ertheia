@@ -27,9 +27,9 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     private static final int LETTER = 36706;
     private static final int EWC = 951;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
-    private static final int SOE_GLUDIO = 7123;
+    private static final int SOE_GLUDIO = 20378;
     private static final int SOE_ALLIGATOR_ISLAND = 37025;
-    private static final int SOE_HEINE = 37112;
+    private static final int SOE_HEINE = 37127;
 
     private static final int MIN_LEVEL = 40;
     private static final int MAX_LEVEL = 45;
