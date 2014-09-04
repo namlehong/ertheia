@@ -153,7 +153,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     if(cond == 1)
                     {
                         String letter = qs.get("letter");
-                        if(letter != null)
+                        if(letter == null)
                         {
                             if (player.getRace() == Race.HUMAN)
                             {
@@ -181,7 +181,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                                 qs.giveItems(LETTER,1);
                             }
                         }
-                        else if( letter.equalsIgnoreCase("true"))
+                        else
                         {
                             htmlText = "2.htm";
                         }
