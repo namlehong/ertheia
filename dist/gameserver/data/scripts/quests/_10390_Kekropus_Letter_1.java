@@ -77,7 +77,10 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                             if(player.getRace() != Race.ERTHEIA)
                             {
                                 qs.showQuestHTML(qs.getQuest(),"0-question-mark.htm");
-                                return null;
+                                qs.setState(STARTED);
+                                qs.setCond(1);
+                                qs.playSound(SOUND_ACCEPT);
+                                return "noquest";
                             }
                         }
                     }
@@ -110,9 +113,6 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 }
                 else if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_timeout"))
                 {
-                    qs.setState(STARTED);
-                    qs.setCond(1);
-                    qs.playSound(SOUND_ACCEPT);
                     this.receivedLetter(qs);
                     return null;
                 }
@@ -223,5 +223,11 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
             Quest quest = QuestManager.getQuest(_10390_Kekropus_Letter_1.class);
             player.processQuestEvent(quest.getName(),"start_quest_delay",null);
         }
+    }
+
+    @Override
+    public boolean checkStartCondition(final Player player)
+    {
+        return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA && player.getQuestState("_10390_Kekropus_Letter_1") == null);
     }
 }
