@@ -120,12 +120,13 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 else if(event.equalsIgnoreCase("read_letter"))
                 {
                     qs.showQuestHTML(qs.getQuest(),"3.htm");
-                    qs.setCond(3);
+                    qs.setCond(2);
                     qs.playSound(SOUND_MIDDLE);
+                    return null;
                 }
                 else if(event.equalsIgnoreCase("5.htm"))
                 {
-                    qs.setCond(4);
+                    qs.setCond(3);
                     qs.playSound(SOUND_MIDDLE);
                 }
             }
@@ -151,34 +152,25 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                         if(player.getRace() == Race.HUMAN)
                         {
                             htmlText = "1-human.htm";
-                            qs.setCond(2);
                         }
                         else if(player.getRace() == Race.ELF)
                         {
                             htmlText = "1-elf.htm";
-                            qs.setCond(2);
                         }
                         else if(player.getRace() == Race.DARKELF)
                         {
                             htmlText = "1-dark-elf.htm";
-                            qs.setCond(2);
                         }
                         else if(player.getRace() == Race.DWARF)
                         {
                             htmlText = "1-dwarf.htm";
-                            qs.setCond(2);
                         }
                         else if(player.getRace() == Race.KAMAEL)
                         {
                             htmlText = "1-kamael.htm";
-                            qs.setCond(2);
                         }
                     }
                     else if(cond == 2)
-                    {
-                        htmlText = "2.htm";
-                    }
-                    else if(cond == 3)
                     {
                         htmlText = "4.htm";
                     }
