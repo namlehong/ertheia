@@ -31,7 +31,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     private static final int MIN_LEVEL = 40;
     private static final int MAX_LEVEL = 45;
     private static final int QUEST_START_DELAY = 10000;
-    private static final String LETTER_ALERT_STRING = "Kekropus có tin nhắn cho bạn. Click vào biểu tượng Question-Mark để xem.";
+    private static final String LETTER_ALERT_STRING = "Kekropus có tin nhắn cho bạn.\nClick vào biểu tượng Question-Mark để xem.";
     private static final String NEXT_LETTER_ALERT_STRING = "";
 
     public _10390_Kekropus_Letter_1()
@@ -90,13 +90,13 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     {
                     }
                 }
-                else if(event.equalsIgnoreCase("to_gludio"))
+                else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 to_gludio"))
                 {
                     player.teleToLocation(-79592, 150824, -3066);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     return null;
                 }
-                else if(event.equalsIgnoreCase("close_window"))
+                else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 close_window"))
                 {
                     // 7123	Scroll of Escape: Town of Gludio
                     qs.giveItems(7123,1);
@@ -118,7 +118,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 }
             }
         }
-        return super.onEvent(event, qs, npc);
+        return event;
     }
 
     @Override
