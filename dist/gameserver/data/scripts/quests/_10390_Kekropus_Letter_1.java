@@ -76,11 +76,11 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                         {
                             if(player.getRace() != Race.ERTHEIA)
                             {
-                                qs.showQuestHTML(qs.getQuest(),"0-question-mark.htm");
+                                qs.showQuestHTML(qs.getQuest(),"0-message.htm");
                                 qs.setState(STARTED);
                                 qs.setCond(1);
                                 qs.playSound(SOUND_ACCEPT);
-                                return "noquest";
+                                return null;
                             }
                         }
                     }
