@@ -32,8 +32,8 @@ public class _10326_RespectYourElders extends Quest implements ScriptFile
 		}
 		else if(event.equalsIgnoreCase("5.htm"))
 		{
-			st.giveItems(57, 14000);
-			st.addExpAndSp(5300, 2800);
+			st.giveItems(57, 140);
+			st.addExpAndSp(6700, 5);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

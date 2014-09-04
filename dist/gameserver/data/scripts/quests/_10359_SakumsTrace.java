@@ -72,8 +72,8 @@ public class _10359_SakumsTrace extends Quest implements ScriptFile {
 			htmltext = "0-3.htm";
 		}
 		if(event.equalsIgnoreCase("qet_rev")) {
-			st.getPlayer().addExpAndSp(670000, 220000);
-			st.giveItems(57, 108000);
+			st.getPlayer().addExpAndSp(900000, 216);
+			st.giveItems(57, 1080);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			if(st.getPlayer().getRace() == Race.HUMAN) {

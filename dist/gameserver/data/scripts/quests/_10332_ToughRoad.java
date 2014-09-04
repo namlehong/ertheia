@@ -44,8 +44,8 @@ public class _10332_ToughRoad extends Quest implements ScriptFile {
 		}
 		if(event.equalsIgnoreCase("qet_rev")) {
 			htmltext = "1-3.htm";
-			st.getPlayer().addExpAndSp(90000, 30000);
-			st.giveItems(57, 70000);
+			st.getPlayer().addExpAndSp(90000, 21);
+			st.giveItems(57, 700);
 			st.takeAllItems(17582);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

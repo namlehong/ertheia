@@ -33,8 +33,8 @@ public class _10361_RolesOfSeeker extends Quest implements ScriptFile {
             st.setCond(1);
         } else if(st.getCond() == 1 && event.equalsIgnoreCase("quest_done")) {
             htmltext = "chesha_q10361_3.htm";
-            st.getPlayer().addExpAndSp(35000, 6500);
-            st.giveItems(ADENA_ID, 34000);
+            st.getPlayer().addExpAndSp(35000, 5);
+            st.giveItems(ADENA_ID, 340);
             st.exitCurrentQuest(false);
             st.playSound(SOUND_FINISH);
         }

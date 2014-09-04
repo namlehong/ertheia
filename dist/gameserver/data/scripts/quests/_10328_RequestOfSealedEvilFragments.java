@@ -36,7 +36,7 @@ public class _10328_RequestOfSealedEvilFragments extends Quest implements Script
 		else if(event.equalsIgnoreCase("7.htm"))
 		{
 			st.giveItems(57, 20000);
-			st.addExpAndSp(13000, 4000);
+			st.addExpAndSp(13000, 5);
 			st.playSound(SOUND_FINISH);
 			st.exitCurrentQuest(false);
 		}

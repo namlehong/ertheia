@@ -150,8 +150,8 @@ public class _10327_BookOfGiants extends Quest implements ScriptFile
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 			htmltext = "0-5.htm";
-			st.getPlayer().addExpAndSp(7800, 3500);
-			st.giveItems(57, 16000);
+			st.getPlayer().addExpAndSp(7000, 5);
+			st.giveItems(57, 160);
 			st.giveItems(112, 2);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);

@@ -74,7 +74,7 @@ public class _10329_BackupSeekers extends Quest implements ScriptFile
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 			htmltext = "1-2.htm";
-			st.getPlayer().addExpAndSp(16900, 5000);
+			st.getPlayer().addExpAndSp(16900, 5);
 			st.giveItems(57, 25000);
 			st.giveItems(875, 2);
 			st.giveItems(906, 1);
