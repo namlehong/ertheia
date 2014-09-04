@@ -59,7 +59,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
             if(player != null)
             {
                 player.sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-                player.setVar("@received_kekropus_letter_1", true);
+//                player.setVar("@received_kekropus_letter_1", true);
             }
         }
     }
@@ -194,7 +194,8 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 }
                 else if(npcId == BATHIS)
                 {
-
+                    htmlText = "1-kamael.htm";
+                    qs.setCond(cond + 1);
                 }
             }
         }
