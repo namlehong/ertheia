@@ -159,26 +159,35 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                             {
                                 htmlText = "1-human.htm";
                                 qs.giveItems(LETTER,1);
+                                qs.setCond(2);
+                                qs.set("letter","true");
                             }
                             else if (player.getRace() == Race.ELF)
                             {
                                 htmlText = "1-elf.htm";
                                 qs.giveItems(LETTER,1);
+                                qs.setCond(2);
+                                qs.set("letter","true");
                             }
                             else if (player.getRace() == Race.DARKELF)
                             {
                                 htmlText = "1-dark-elf.htm";
                                 qs.giveItems(LETTER,1);
+                                qs.setCond(2);
+                                qs.set("letter","true");
                             }
                             else if (player.getRace() == Race.DWARF)
                             {
                                 htmlText = "1-dwarf.htm";
                                 qs.giveItems(LETTER,1);
+                                qs.setCond(2);
+                                qs.set("letter","true");
                             }
                             else if (player.getRace() == Race.KAMAEL)
                             {
                                 htmlText = "1-kamael.htm";
                                 qs.giveItems(LETTER,1);
+                                qs.set("letter","true");
                             }
                         }
                         else
@@ -237,6 +246,6 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     @Override
     public boolean checkStartCondition(final Player player)
     {
-        return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA);
+        return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA && player.getQuestState("_10390_Kekropus_Letter_1") == null);
     }
 }
