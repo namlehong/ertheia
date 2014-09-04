@@ -12,7 +12,18 @@ import l2s.gameserver.scripts.ScriptFile;
  */
 public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFile
 {
+    private static final int MIN_LEVEL = 40;
+    private static final int MAX_LEVEL = 46;
     private static final int ENRON = 33860;
+    private static final int ALLIGATOR = 20135;
+    private static final int CROKIAN_LAD = 20804;
+    private static final int DAILAON_LAD = 20805;
+    private static final int CROKIAN_LAD_WARRIOR = 20806;
+    private static final int FARHITE_LAD = 20807;
+    private static final int NOS_LAD = 20808;
+    private static final int ALLIGATOR_LEATHER = 4337;
+    private static final int BLUE_ALLIGATOR_LEATHER = 4338;
+    private static final int BEJEWELED_ALLIGATOR_LEATHER = 4339;
     private static final int EAC = 22011;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
 
@@ -20,6 +31,8 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
     {
         super(false);
         this.addStartNpc(ENRON);
+        this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+        this.addKillId(ALLIGATOR, CROKIAN_LAD, DAILAON_LAD, CROKIAN_LAD_WARRIOR, FARHITE_LAD, NOS_LAD);
     }
 
     @Override

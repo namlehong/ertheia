@@ -12,10 +12,13 @@ import l2s.gameserver.scripts.ScriptFile;
  */
 public class _10392_FailureAndItsConsequences extends Quest implements ScriptFile
 {
+    private static final int MIN_LEVEL = 40;
+    private static final int MAX_LEVEL = 46;
     private static final int IASON_HEINE = 33859;
     private static final int SWAMP_TRIBE = 20991;
     private static final int SWAMP_ALLIGATOR = 20992;
     private static final int SWAMP_WARRIOR = 20993;
+    private static final int SUSPICIOUS_FRAGMENT = 17586;
     private static final int EAC = 22011;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
 
@@ -23,7 +26,8 @@ public class _10392_FailureAndItsConsequences extends Quest implements ScriptFil
     {
         super(false);
         this.addStartNpc(IASON_HEINE);
-        this.addKillId(SWAMP_TRIBE,SWAMP_ALLIGATOR,SWAMP_WARRIOR);
+        this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+        this.addKillId(SWAMP_TRIBE, SWAMP_ALLIGATOR, SWAMP_WARRIOR);
     }
 
     @Override
