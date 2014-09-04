@@ -19,20 +19,28 @@ import l2s.gameserver.scripts.ScriptFile;
  */
 public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
 {
-    private static final int QUEST_ID = 10390;
+    // Quest's Conditions
+    private static final int MIN_LEVEL = 40;
+    private static final int MAX_LEVEL = 45;
+    // Quest's NPCs
     private static final int BATHIS = 30332;
     private static final int GOSTA = 30916;
     private static final int ELI = 33858;
-
+    // Quest's Items
     private static final int LETTER = 36706;
-    private static final int EWC = 951;
-    private static final int STEEL_DOOR_GUILD_COIN = 37045;
     private static final int SOE_GLUDIO = 20378;
     private static final int SOE_ALLIGATOR_ISLAND = 37025;
     private static final int SOE_HEINE = 37127;
+    // Quest's Reward
+    private static final int EXP = 370440;
+    private static final int SP = 88;
+    private static final int EWC = 951;
+    private static final int EWC_COUNT = 3;
+    private static final int STEEL_DOOR_GUILD_COIN = 37045;
+    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 21;
 
-    private static final int MIN_LEVEL = 40;
-    private static final int MAX_LEVEL = 45;
+
+    private static final int QUEST_ID = 10390;
     private static final int QUEST_START_DELAY = 10000;
     private static final String LETTER_ALERT_STRING = "Kekropus có tin nhắn cho bạn.\nClick vào biểu tượng Question-Mark để xem.";
     private static final String NEXT_LETTER_ALERT_STRING = "";
@@ -84,7 +92,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                                 qs.setState(STARTED);
                                 qs.setCond(1);
                                 qs.playSound(SOUND_ACCEPT);
-                                //player.setVar("@received_kekropus_letter_1", true);
+                                player.setVar("@received_kekropus_letter_1", true);
                                 return null;
                             }
                         }
@@ -147,9 +155,9 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     qs.setState(COMPLETED);
                     qs.exitCurrentQuest(false);
                     qs.playSound(SOUND_FINISH);
-                    player.addExpAndSp(370440,88);
-                    qs.giveItems(EWC,3);
-                    qs.giveItems(STEEL_DOOR_GUILD_COIN,21);
+                    player.addExpAndSp(EXP,SP);
+                    qs.giveItems(EWC,EWC_COUNT);
+                    qs.giveItems(STEEL_DOOR_GUILD_COIN,STEEL_DOOR_GUILD_COIN_COUNT);
                 }
             }
         }
