@@ -229,6 +229,6 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     @Override
     public boolean checkStartCondition(final Player player)
     {
-        return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA && player.getQuestState("_10390_Kekropus_Letter_1") == null);
+        return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA);
     }
 }
