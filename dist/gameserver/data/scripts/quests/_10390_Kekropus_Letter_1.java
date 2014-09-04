@@ -81,7 +81,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                                 qs.setCond(1);
                                 qs.playSound(SOUND_ACCEPT);
                                 //player.setVar("@received_kekropus_letter_1", true);
-                                return "0-message.htm";
+                                return null;
                             }
                         }
                     }
@@ -120,7 +120,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 else if(event.equalsIgnoreCase("read_letter"))
                 {
                     qs.showQuestHTML(qs.getQuest(),"3.htm");
-                    qs.setState(3);
+                    qs.setCond(3);
                     qs.playSound(SOUND_MIDDLE);
                 }
                 else if(event.equalsIgnoreCase("5.htm"))
