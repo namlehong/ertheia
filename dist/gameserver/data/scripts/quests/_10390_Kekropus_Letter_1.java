@@ -67,7 +67,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     @Override
     public String onEvent(final String event, final QuestState qs, final NpcInstance npc)
     {
-        if(event != null && qs != null && npc != null)
+        if(event != null && qs != null)
         {
             Player player = qs.getPlayer();
             if (player != null)
