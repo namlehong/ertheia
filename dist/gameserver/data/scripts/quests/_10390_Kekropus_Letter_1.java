@@ -24,6 +24,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     private static final int GOSTA = 30916;
     private static final int ELI = 33858;
 
+    private static final int LETTER = 36706;
     private static final int EWC = 951;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
     private static final int SOE_GLUDIO = 7123;
@@ -120,6 +121,8 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 else if(event.equalsIgnoreCase("read_letter"))
                 {
                     qs.showQuestHTML(qs.getQuest(),"3.htm");
+                    qs.takeAllItems(LETTER);
+                    qs.unset("letter");
                     qs.setCond(2);
                     qs.playSound(SOUND_MIDDLE);
                     return null;
@@ -149,25 +152,38 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 {
                     if(cond == 1)
                     {
-                        if(player.getRace() == Race.HUMAN)
+                        String letter = qs.get("letter");
+                        if(letter != null)
                         {
-                            htmlText = "1-human.htm";
+                            if (player.getRace() == Race.HUMAN)
+                            {
+                                htmlText = "1-human.htm";
+                                qs.giveItems(LETTER,1);
+                            }
+                            else if (player.getRace() == Race.ELF)
+                            {
+                                htmlText = "1-elf.htm";
+                                qs.giveItems(LETTER,1);
+                            }
+                            else if (player.getRace() == Race.DARKELF)
+                            {
+                                htmlText = "1-dark-elf.htm";
+                                qs.giveItems(LETTER,1);
+                            }
+                            else if (player.getRace() == Race.DWARF)
+                            {
+                                htmlText = "1-dwarf.htm";
+                                qs.giveItems(LETTER,1);
+                            }
+                            else if (player.getRace() == Race.KAMAEL)
+                            {
+                                htmlText = "1-kamael.htm";
+                                qs.giveItems(LETTER,1);
+                            }
                         }
-                        else if(player.getRace() == Race.ELF)
+                        else if( letter.equalsIgnoreCase("true"))
                         {
-                            htmlText = "1-elf.htm";
-                        }
-                        else if(player.getRace() == Race.DARKELF)
-                        {
-                            htmlText = "1-dark-elf.htm";
-                        }
-                        else if(player.getRace() == Race.DWARF)
-                        {
-                            htmlText = "1-dwarf.htm";
-                        }
-                        else if(player.getRace() == Race.KAMAEL)
-                        {
-                            htmlText = "1-kamael.htm";
+                            htmlText = "2.htm";
                         }
                     }
                     else if(cond == 2)
