@@ -20,14 +20,15 @@ import l2s.gameserver.scripts.ScriptFile;
 public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
 {
     private static final int QUEST_ID = 10390;
-    private static final int RAINS = 30288;  // Human Warrior
-    private static final int TOBIAS = 30297;  // Dark Elf
-    private static final int DRIKUS = 30505;  // Orc
-    private static final int MENDIO = 30504;  // Dwarf
-    private static final int GERSHWIN = 32196;  // Kamael
-    private static final int ELLENIA = 30155;  // Elf Mage
     private static final int BATHIS = 30332;
-    private static final int STEEL_DOOR_COIN = 37045;
+    private static final int GOSTA = 30916;
+    private static final int ELI = 33858;
+
+    private static final int EWC = 951;
+    private static final int STEEL_DOOR_GUILD_COIN = 37045;
+    private static final int SOE_GLUDIO = 7123;
+    private static final int SOE_ALLIGATOR_ISLAND = 37025;
+
     private static final int MIN_LEVEL = 40;
     private static final int MAX_LEVEL = 45;
     private static final int QUEST_START_DELAY = 10000;
@@ -40,12 +41,6 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
         this.addRaceCheck(true, true, true, true, true, true, false);
         CharListenerList.addGlobal(this);
-        this.addTalkId(RAINS);
-        this.addTalkId(TOBIAS);
-        this.addTalkId(DRIKUS);
-        this.addTalkId(MENDIO);
-        this.addTalkId(GERSHWIN);
-        this.addTalkId(ELLENIA);
         this.addTalkId(BATHIS);
     }
 
@@ -99,7 +94,12 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 close_window"))
                 {
                     // 7123	Scroll of Escape: Town of Gludio
-                    qs.giveItems(7123,1);
+                    qs.giveItems(SOE_GLUDIO,1);
+                    player.sendPacket(TutorialCloseHtmlPacket.STATIC);
+                    return null;
+                }
+                else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 close_letter"))
+                {
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     return null;
                 }
@@ -114,6 +114,19 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     qs.setCond(1);
                     qs.playSound(SOUND_ACCEPT);
                     this.receivedLetter(qs);
+                    return null;
+                }
+                else if(event.equalsIgnoreCase("read_letter"))
+                {
+                    qs.showQuestHTML(qs.getQuest(),"3.htm");
+                    qs.setState(3);
+                    qs.playSound(SOUND_MIDDLE);
+                    return null;
+                }
+                else if(event.equalsIgnoreCase("5.htm"))
+                {
+                    qs.setCond(4);
+                    qs.playSound(SOUND_MIDDLE);
                     return null;
                 }
             }
@@ -132,70 +145,44 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
             Player player = qs.getPlayer();
             if(player != null)
             {
-                if (player.getRace() == Race.HUMAN && npcId == RAINS)
+                if(npcId == BATHIS)
                 {
                     if(cond == 1)
                     {
-                        htmlText = "1-human.htm";
-                        qs.setCond(2);
+                        if(player.getRace() == Race.HUMAN)
+                        {
+                            htmlText = "1-human.htm";
+                            qs.setCond(2);
+                        }
+                        else if(player.getRace() == Race.ELF)
+                        {
+                            htmlText = "1-elf.htm";
+                            qs.setCond(2);
+                        }
+                        else if(player.getRace() == Race.DARKELF)
+                        {
+                            htmlText = "1-dark-elf.htm";
+                            qs.setCond(2);
+                        }
+                        else if(player.getRace() == Race.DWARF)
+                        {
+                            htmlText = "1-dwarf.htm";
+                            qs.setCond(2);
+                        }
+                        else if(player.getRace() == Race.KAMAEL)
+                        {
+                            htmlText = "1-kamael.htm";
+                            qs.setCond(2);
+                        }
                     }
                     else if(cond == 2)
                     {
-
+                        htmlText = "2.htm";
                     }
-                }
-                else if(player.getRace() == Race.ELF && npcId == ELLENIA)
-                {
-                    if(cond == 1)
+                    else if(cond == 3)
                     {
-                        htmlText = "1-elf.htm";
-                        qs.setCond(2);
+                        htmlText = "4.htm";
                     }
-                    else if(cond == 2)
-                    {
-
-                    }
-                }
-                else if(player.getRace() == Race.DARKELF && npcId == TOBIAS)
-                {
-                    if(cond == 1)
-                    {
-                        htmlText = "1-dark-elf.htm";
-                        qs.setCond(2);
-                    }
-                    else if(cond == 2)
-                    {
-
-                    }
-                }
-                else if(player.getRace() == Race.DWARF && npcId == MENDIO)
-                {
-                    if(cond == 1)
-                    {
-                        htmlText = "1-dwarf.htm";
-                        qs.setCond(2);
-                    }
-                    else if(cond == 2)
-                    {
-
-                    }
-                }
-                else if(player.getRace() == Race.KAMAEL && npcId == GERSHWIN)
-                {
-                    if(cond == 1)
-                    {
-                        htmlText = "1-kamael.htm";
-                        qs.setState(2);
-                    }
-                    else if(cond == 2)
-                    {
-
-                    }
-                }
-                else if(npcId == BATHIS)
-                {
-                    htmlText = "1-kamael.htm";
-                    qs.setCond(cond + 1);
                 }
             }
         }
