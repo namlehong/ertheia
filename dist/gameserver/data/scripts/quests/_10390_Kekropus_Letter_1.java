@@ -89,24 +89,24 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 {
                     player.teleToLocation(-13896, 123720, -3151);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
-                    //return null;
+                    return null;
                 }
                 else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 close_window"))
                 {
                     // 7123	Scroll of Escape: Town of Gludio
                     qs.giveItems(SOE_GLUDIO,1);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
-                    //return null;
+                    return null;
                 }
                 else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 close_letter"))
                 {
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
-                    //return null;
+                    return null;
                 }
                 else if(event.equalsIgnoreCase("start_quest_delay"))
                 {
                     qs.startQuestTimer("start_quest_timeout", QUEST_START_DELAY);
-                    //return null;
+                    return null;
                 }
                 else if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_timeout"))
                 {
@@ -121,13 +121,11 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     qs.showQuestHTML(qs.getQuest(),"3.htm");
                     qs.setState(3);
                     qs.playSound(SOUND_MIDDLE);
-                    //return "3.htm";
                 }
                 else if(event.equalsIgnoreCase("5.htm"))
                 {
                     qs.setCond(4);
                     qs.playSound(SOUND_MIDDLE);
-                    //return null;
                 }
             }
         }
