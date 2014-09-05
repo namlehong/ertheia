@@ -159,9 +159,9 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
                     qs.playSound(SOUND_ITEMGET);
                 }
 
-                if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) == BEJEWELED_ALLIGATOR_LEATHER_COUNT
-                        && qs.getQuestItemsCount(BLUE_ALLIGATOR_LEATHER) == BLUE_ALLIGATOR_LEATHER_COUNT
-                        && qs.getQuestItemsCount(ALLIGATOR_LEATHER) == ALLIGATOR_LEATHER_COUNT)
+                if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) >= BEJEWELED_ALLIGATOR_LEATHER_COUNT
+                        && qs.getQuestItemsCount(BLUE_ALLIGATOR_LEATHER) >= BLUE_ALLIGATOR_LEATHER_COUNT
+                        && qs.getQuestItemsCount(ALLIGATOR_LEATHER) >= ALLIGATOR_LEATHER_COUNT)
                 {
                     qs.setCond(2);
                 }
