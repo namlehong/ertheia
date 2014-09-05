@@ -25,7 +25,7 @@ public class _10392_FailureAndItsConsequences extends Quest implements ScriptFil
     // Quest's Items
     private static final int SUSPICIOUS_FRAGMENT = 17586;
     private static final int SUSPICIOUS_FRAGMENT_COUNT = 30;
-    private static final double SUSPICIOUS_FRAGMENT_CHANCE = 0.5;
+    private static final int SUSPICIOUS_FRAGMENT_CHANCE = 50;
     // Quest's Reward
     private static final int EXP = 2329740;
     private static final int SP = 559;
