@@ -143,13 +143,7 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
             int cond = qs.getCond();
             if(cond == 1)
             {
-                if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) == BEJEWELED_ALLIGATOR_LEATHER_COUNT
-                        && qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) == BLUE_ALLIGATOR_LEATHER_COUNT
-                        && qs.getQuestItemsCount(ALLIGATOR_LEATHER) == ALLIGATOR_LEATHER_COUNT)
-                {
-                    qs.setCond(2);
-                }
-                else if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) < BLUE_ALLIGATOR_LEATHER_COUNT && Rnd.chance(BEJEWELED_ALLIGATOR_LEATHER_CHANCE))
+                if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) < BEJEWELED_ALLIGATOR_LEATHER_COUNT && Rnd.chance(BEJEWELED_ALLIGATOR_LEATHER_CHANCE))
                 {
                     qs.giveItems(BEJEWELED_ALLIGATOR_LEATHER,1);
                     qs.playSound(SOUND_ITEMGET);
@@ -163,6 +157,13 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
                 {
                     qs.giveItems(ALLIGATOR_LEATHER,1);
                     qs.playSound(SOUND_ITEMGET);
+                }
+
+                if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) == BEJEWELED_ALLIGATOR_LEATHER_COUNT
+                        && qs.getQuestItemsCount(BLUE_ALLIGATOR_LEATHER) == BLUE_ALLIGATOR_LEATHER_COUNT
+                        && qs.getQuestItemsCount(ALLIGATOR_LEATHER) == ALLIGATOR_LEATHER_COUNT)
+                {
+                    qs.setCond(2);
                 }
             }
         }

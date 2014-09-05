@@ -154,14 +154,14 @@ public class _10392_FailureAndItsConsequences extends Quest implements ScriptFil
             int cond =  qs.getCond();
             if(cond == 1)
             {
-                if(qs.getQuestItemsCount(SUSPICIOUS_FRAGMENT) == SUSPICIOUS_FRAGMENT_COUNT)
-                {
-                    qs.setCond(2);
-                }
-                else if(qs.getQuestItemsCount(SUSPICIOUS_FRAGMENT) < SUSPICIOUS_FRAGMENT_COUNT && Rnd.chance(SUSPICIOUS_FRAGMENT_CHANCE))
+                if(qs.getQuestItemsCount(SUSPICIOUS_FRAGMENT) < SUSPICIOUS_FRAGMENT_COUNT && Rnd.chance(SUSPICIOUS_FRAGMENT_CHANCE))
                 {
                     qs.giveItems(SUSPICIOUS_FRAGMENT,1);
                     qs.playSound(SOUND_ITEMGET);
+                }
+                if(qs.getQuestItemsCount(SUSPICIOUS_FRAGMENT) == SUSPICIOUS_FRAGMENT_COUNT)
+                {
+                    qs.setCond(2);
                 }
             }
         }
