@@ -1,5 +1,6 @@
 package quests;
 
+import l2s.commons.util.Rnd;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
@@ -26,8 +27,14 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
     private static final int NOS_LAD = 20808;
     // Quest's Items
     private static final int ALLIGATOR_LEATHER = 4337;
+    private static final int ALLIGATOR_LEATHER_COUNT = 30;
+    private static final int ALLIGATOR_LEATHER_CHANCE = 60;
     private static final int BLUE_ALLIGATOR_LEATHER = 4338;
+    private static final int BLUE_ALLIGATOR_LEATHER_COUNT = 20;
+    private static final int BLUE_ALLIGATOR_LEATHER_CHANCE = 40;
     private static final int BEJEWELED_ALLIGATOR_LEATHER = 4339;
+    private static final int BEJEWELED_ALLIGATOR_LEATHER_COUNT = 10;
+    private static final int BEJEWELED_ALLIGATOR_LEATHER_CHANCE = 20;
     // Quest's Reward
     private static final int EXP = 2795688;
     private static final int SP = 670;
@@ -131,6 +138,34 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
     @Override
     public String onKill(final NpcInstance npc, final QuestState qs)
     {
+        if(npc != null && qs != null)
+        {
+            int cond = qs.getCond();
+            if(cond == 1)
+            {
+                if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) == BEJEWELED_ALLIGATOR_LEATHER_COUNT
+                        && qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) == BLUE_ALLIGATOR_LEATHER_COUNT
+                        && qs.getQuestItemsCount(ALLIGATOR_LEATHER) == ALLIGATOR_LEATHER_COUNT)
+                {
+                    qs.setCond(2);
+                }
+                else if(qs.getQuestItemsCount(BEJEWELED_ALLIGATOR_LEATHER) < BLUE_ALLIGATOR_LEATHER_COUNT && Rnd.chance(BEJEWELED_ALLIGATOR_LEATHER_CHANCE))
+                {
+                    qs.giveItems(BEJEWELED_ALLIGATOR_LEATHER,1);
+                    qs.playSound(SOUND_ITEMGET);
+                }
+                else if(qs.getQuestItemsCount(BLUE_ALLIGATOR_LEATHER) < BLUE_ALLIGATOR_LEATHER_COUNT && Rnd.chance(BLUE_ALLIGATOR_LEATHER_CHANCE))
+                {
+                    qs.giveItems(BLUE_ALLIGATOR_LEATHER,1);
+                    qs.playSound(SOUND_ITEMGET);
+                }
+                else if(qs.getQuestItemsCount(ALLIGATOR_LEATHER) < ALLIGATOR_LEATHER_COUNT && Rnd.chance(ALLIGATOR_LEATHER_CHANCE))
+                {
+                    qs.giveItems(ALLIGATOR_LEATHER,1);
+                    qs.playSound(SOUND_ITEMGET);
+                }
+            }
+        }
         return null;
     }
 }
