@@ -24,12 +24,12 @@ public class _10394_Mutual_Benefit extends Quest implements ScriptFile
     private static final int ELDER_TARLK_BASILISK = 20574;
     private static final int ELDER_TARLK_BASILISK_COUNT = 20;
     // Quest's Rewards
-    private static final int EXP = 483840;
-    private static final int SP = 116;
+    private static final int EXP = 3151312;
+    private static final int SP = 756;
     private static final int EAC = 22011;
-    private static final int EAC_COUNT = 4;
+    private static final int EAC_COUNT = 6;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
-    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 15;
+    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 26;
 
     public _10394_Mutual_Benefit()
     {

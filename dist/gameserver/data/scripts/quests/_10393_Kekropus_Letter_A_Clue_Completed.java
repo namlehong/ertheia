@@ -45,8 +45,9 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
         this.addLevelCheck(MIN_LEVEL,MAX_LEVEL);
         this.addRaceCheck(true,true,true,true,true,true,false);
         CharListenerList.addGlobal(this);
-        this.addStartNpc(FLUTTER);
+        this.addTalkId(FLUTTER);
         this.addTalkId(KELIOS);
+        this.addQuestItem(SOE_OREN, SOE_OUTLAW_FOREST);
     }
 
     private void receivedLetter(final QuestState qs)

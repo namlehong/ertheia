@@ -30,7 +30,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     private static final int LETTER = 36706;
     private static final int SOE_GLUDIO = 20378;
     private static final int SOE_ALLIGATOR_ISLAND = 37025;
-    private static final int SOE_HEINE = 37127;
+    private static final int SOE_HEINE = 37112;
     // Quest's Reward
     private static final int EXP = 370440;
     private static final int SP = 88;
@@ -54,7 +54,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
         this.addTalkId(BATHIS);
         this.addTalkId(GOSTA);
         this.addTalkId(ELI);
-        this.addQuestItem(LETTER);
+        this.addQuestItem(LETTER, SOE_HEINE, SOE_ALLIGATOR_ISLAND);
     }
 
     private void receivedLetter(final QuestState qs)
