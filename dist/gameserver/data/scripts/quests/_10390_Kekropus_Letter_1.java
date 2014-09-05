@@ -43,7 +43,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     private static final int QUEST_ID = 10390;
     private static final int QUEST_START_DELAY = 10000;
     private static final String LETTER_ALERT_STRING = "Kekropus có tin nhắn cho bạn.\nClick vào biểu tượng Question-Mark để xem.";
-    private static final String NEXT_LETTER_ALERT_STRING = "";
+    private static final String NEXT_LETTER_ALERT_STRING = "Hãy tập luyện để trở nên mạnh mẽ hơn cho đến khi bạn nhận được lá thư kế tiếp ở level 46";
 
     public _10390_Kekropus_Letter_1()
     {
@@ -60,13 +60,12 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     {
         if(qs != null)
         {
-            qs.showQuestionMark(QUEST_ID);
+            qs.showQuestionMark(_questId);
             qs.playSound(SOUND_TUTORIAL);
             Player player = qs.getPlayer();
             if(player != null)
             {
                 player.sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-//                player.setVar("@received_kekropus_letter_1", true);
             }
         }
     }
@@ -84,7 +83,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     try
                     {
                         int id = Integer.valueOf(event.substring(2));
-                        if(id == QUEST_ID)
+                        if(id == _questId)
                         {
                             if(player.getRace() != Race.ERTHEIA)
                             {
@@ -158,6 +157,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                     player.addExpAndSp(EXP,SP);
                     qs.giveItems(EWC,EWC_COUNT);
                     qs.giveItems(STEEL_DOOR_GUILD_COIN,STEEL_DOOR_GUILD_COIN_COUNT);
+                    player.sendPacket(new ExShowScreenMessage(NEXT_LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
                 }
             }
         }

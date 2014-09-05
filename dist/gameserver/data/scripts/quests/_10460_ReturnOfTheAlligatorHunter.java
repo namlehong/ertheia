@@ -93,6 +93,7 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
                 qs.setState(COMPLETED);
                 qs.exitCurrentQuest(false);
                 qs.playSound(SOUND_FINISH);
+                htmlText = "6.htm";
             }
         }
         return htmlText;

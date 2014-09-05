@@ -29,6 +29,7 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 		Quest q10755 = QuestManager.getQuest(10755);
 		Quest q10760 = QuestManager.getQuest(10760);
         Quest q10390 = QuestManager.getQuest(10390);
+        Quest q10393 = QuestManager.getQuest(10393);
 
 		if(q255 != null)
 			player.processQuestEvent(q255.getName(), _bypass, null);
@@ -43,6 +44,10 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
         if(q10390 != null)
         {
             player.processQuestEvent(q10390.getName(), _bypass, null);
+        }
+        if (q10393 != null)
+        {
+            player.processQuestEvent(q10393.getName(), _bypass, null);
         }
 	}
 }

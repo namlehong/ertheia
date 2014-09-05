@@ -89,6 +89,7 @@ public class _10392_FailureAndItsConsequences extends Quest implements ScriptFil
                 qs.setState(COMPLETED);
                 qs.exitCurrentQuest(false);
                 qs.playSound(SOUND_FINISH);
+                htmlText = "11.htm";
             }
         }
         return htmlText;
