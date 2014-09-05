@@ -45,7 +45,7 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
         this.addLevelCheck(MIN_LEVEL,MAX_LEVEL);
         this.addRaceCheck(true,true,true,true,true,true,false);
         CharListenerList.addGlobal(this);
-
+        this.addStartNpc(FLUTTER);
         this.addTalkId(KELIOS);
     }
 
@@ -201,7 +201,7 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
     {
         if(player != null && checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10390_Kekropus_Letter_1.class);
+            Quest quest = QuestManager.getQuest(_10393_Kekropus_Letter_A_Clue_Completed.class);
             player.processQuestEvent(quest.getName(),"start_quest",null);
         }
     }
@@ -211,7 +211,7 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
     {
         if (player != null && this.checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10390_Kekropus_Letter_1.class);
+            Quest quest = QuestManager.getQuest(_10393_Kekropus_Letter_A_Clue_Completed.class);
             player.processQuestEvent(quest.getName(),"start_quest_delay",null);
         }
     }
