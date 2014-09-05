@@ -28,13 +28,13 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
     // Quest's Items
     private static final int ALLIGATOR_LEATHER = 4337;
     private static final int ALLIGATOR_LEATHER_COUNT = 30;
-    private static final int ALLIGATOR_LEATHER_CHANCE = 60;
+    private static final double ALLIGATOR_LEATHER_CHANCE = 0.8;
     private static final int BLUE_ALLIGATOR_LEATHER = 4338;
     private static final int BLUE_ALLIGATOR_LEATHER_COUNT = 20;
-    private static final int BLUE_ALLIGATOR_LEATHER_CHANCE = 40;
+    private static final double BLUE_ALLIGATOR_LEATHER_CHANCE = 0.5;
     private static final int BEJEWELED_ALLIGATOR_LEATHER = 4339;
     private static final int BEJEWELED_ALLIGATOR_LEATHER_COUNT = 10;
-    private static final int BEJEWELED_ALLIGATOR_LEATHER_CHANCE = 20;
+    private static final double BEJEWELED_ALLIGATOR_LEATHER_CHANCE = 0.25;
     // Quest's Reward
     private static final int EXP = 2795688;
     private static final int SP = 670;
