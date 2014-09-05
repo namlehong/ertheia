@@ -41,6 +41,7 @@ public class _10392_FailureAndItsConsequences extends Quest implements ScriptFil
         this.addTalkId(ELI);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
         this.addKillId(SWAMP_TRIBE, SWAMP_ALLIGATOR, SWAMP_WARRIOR);
+        this.addQuestItem(SUSPICIOUS_FRAGMENT);
     }
 
     @Override

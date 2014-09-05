@@ -54,6 +54,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
         this.addTalkId(BATHIS);
         this.addTalkId(GOSTA);
         this.addTalkId(ELI);
+        this.addQuestItem(LETTER);
     }
 
     private void receivedLetter(final QuestState qs)
