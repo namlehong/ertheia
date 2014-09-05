@@ -50,7 +50,7 @@ public class _10394_Mutual_Benefit extends Quest implements ScriptFile
                 qs.setState(STARTED);
                 qs.setCond(1);
                 qs.playSound(SOUND_ACCEPT);
-                htmlText = "3.htm";
+                htmlText = "03.htm";
             }
             else if(event.equalsIgnoreCase("get_reward"))
             {
@@ -60,7 +60,7 @@ public class _10394_Mutual_Benefit extends Quest implements ScriptFile
                 qs.setState(COMPLETED);
                 qs.exitCurrentQuest(false);
                 qs.playSound(SOUND_FINISH);
-                htmlText = "5.htm";
+                htmlText = "05.htm";
             }
         }
         return htmlText;
