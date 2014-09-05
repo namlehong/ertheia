@@ -126,7 +126,11 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
                         }
                         else if (cond == 1)
                         {
-                                htmlText = "4.htm";
+                            htmlText = "4.htm";
+                        }
+                        else if(cond == 2)
+                        {
+                            htmlText = "5.htm";
                         }
                     }
                 }

@@ -135,7 +135,7 @@ public class _10392_FailureAndItsConsequences extends Quest implements ScriptFil
                     }
                     else if(npcId == ELI)
                     {
-                        if(cond == 7)
+                        if(cond == 3)
                         {
                             htmlText = "8.htm";
                         }
