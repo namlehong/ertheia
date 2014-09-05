@@ -26,7 +26,7 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
     private static final int KELIOS = 33862;
     // Quest's Items
     private static final int SOE_OUTLAW_FOREST = 37026;
-    private static final int SOE_OREN = 37133;
+    private static final int SOE_OREN = 37113;
     // Quest's Rewards
     private static final int EXP = 483840;
     private static final int SP = 116;
@@ -99,9 +99,9 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
                     {
                     }
                 }
-                else if(event.equalsIgnoreCase("Quest _10393_Kekropus_Letter_A_Clue_Completed to_hunter"))
+                else if(event.equalsIgnoreCase("Quest _10393_Kekropus_Letter_A_Clue_Completed to_oren"))
                 {
-                    player.teleToLocation(-13896, 123720, -3151);
+                    player.teleToLocation(83666, 55537, -1516);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     htmlText = null;
                 }
