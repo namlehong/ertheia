@@ -30,7 +30,7 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
     // Quest's Reward
     private static final int EXP = 635250;
     private static final int SP = 152;
-    private static final int EWB = 22008;
+    private static final int EWB = 947;
     private static final int EWB_COUNT = 2;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
     private static final int STEEL_DOOR_GUILD_COIN_COUNT = 20;
@@ -68,17 +68,21 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
     @Override
     public boolean checkStartCondition(final Player player)
     {
+        boolean result = true;
         if(player.getLevel() < MIN_LEVEL || player.getLevel() > MAX_LEVEL)
         {
-            return false;
+            result = false;
         }
         if(player.getRace() == Race.ERTHEIA)
         {
-            return false;
+            result = false;
         }
-        QuestState state = player.getQuestState(quests._10397_Kekropus_Letter_A_Suspicious_Badge.class.getSimpleName());
-        return !(state != null && state.getCond() > 0);
-        //return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA && player.getQuestState(_10397_Kekropus_Letter_A_Suspicious_Badge.class.getSimpleName()) == null);
+        QuestState state = player.getQuestState(this.getClass().getSimpleName());
+        if((state != null && state.getCond() > 0))
+        {
+            result = false;
+        }
+        return result;
     }
 
     @Override

@@ -67,7 +67,21 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
     @Override
     public boolean checkStartCondition(final Player player)
     {
-        return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA && player.getQuestState(_10393_Kekropus_Letter_A_Clue_Completed.class.getSimpleName()) == null);
+        boolean result = true;
+        if(player.getLevel() < MIN_LEVEL || player.getLevel() > MAX_LEVEL)
+        {
+            result = false;
+        }
+        if(player.getRace() == Race.ERTHEIA)
+        {
+            result = false;
+        }
+        QuestState state = player.getQuestState(this.getClass().getSimpleName());
+        if((state != null && state.getCond() > 0))
+        {
+            result = false;
+        }
+        return result;
     }
 
     @Override
@@ -92,13 +106,17 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
                                 qs.setState(STARTED);
                                 qs.setCond(1);
                                 qs.playSound(SOUND_ACCEPT);
-                                htmlText = null;
                             }
                         }
                     }
                     catch (Throwable t)
                     {
                     }
+                    htmlText = null;
+                }
+                else if(event.startsWith("TE"))
+                {
+                    htmlText = null;
                 }
                 else if(event.equalsIgnoreCase("Quest _10393_Kekropus_Letter_A_Clue_Completed to_oren"))
                 {
