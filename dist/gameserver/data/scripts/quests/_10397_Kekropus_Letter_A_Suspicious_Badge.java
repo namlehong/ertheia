@@ -67,7 +67,17 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
     @Override
     public boolean checkStartCondition(final Player player)
     {
-        return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA && player.getQuestState(_10397_Kekropus_Letter_A_Suspicious_Badge.class.getSimpleName()) == null);
+        if(player.getLevel() < MIN_LEVEL || player.getLevel() > MAX_LEVEL)
+        {
+            return false;
+        }
+        if(player.getRace() == Race.ERTHEIA)
+        {
+            return false;
+        }
+        QuestState state = player.getQuestState(quests._10397_Kekropus_Letter_A_Suspicious_Badge.class.getSimpleName());
+        return !(state != null && state.getCond() > 0);
+        //return (player.getLevel() >= MIN_LEVEL && player.getLevel() <= MAX_LEVEL && player.getRace() != Race.ERTHEIA && player.getQuestState(_10397_Kekropus_Letter_A_Suspicious_Badge.class.getSimpleName()) == null);
     }
 
     @Override
