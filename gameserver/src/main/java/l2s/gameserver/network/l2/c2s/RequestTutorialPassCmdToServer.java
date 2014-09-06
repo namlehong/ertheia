@@ -52,7 +52,7 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
         }
         if(q10397 != null)
         {
-            player.processQuestEvent(q10397.getName(), "CM" + _bypass, null);
+            player.processQuestEvent(q10397.getName(), _bypass, null);
         }
 	}
 }

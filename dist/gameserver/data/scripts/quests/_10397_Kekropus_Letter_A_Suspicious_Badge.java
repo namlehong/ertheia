@@ -151,6 +151,10 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
                     htmlText = "05.htm";
                     player.sendPacket(new ExShowScreenMessage(NEXT_LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
                 }
+                else
+                {
+                    htmlText = null;
+                }
             }
         }
         return htmlText;
