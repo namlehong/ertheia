@@ -30,9 +30,9 @@ public class RequestTutorialClientEvent extends L2GameClientPacket
 		Quest q10751 = QuestManager.getQuest(10751);
 		Quest q10755 = QuestManager.getQuest(10755);
 		Quest q10760 = QuestManager.getQuest(10760);
-        Quest q10390 = QuestManager.getQuest(10390);
-        Quest q10393 = QuestManager.getQuest(10393);
-        Quest q10397 = QuestManager.getQuest(10397);
+//        Quest q10390 = QuestManager.getQuest(10390);
+//        Quest q10393 = QuestManager.getQuest(10393);
+//        Quest q10397 = QuestManager.getQuest(10397);
 
 		if(q255 != null)
 			player.processQuestEvent(q255.getName(), "CE" + _event, null);
@@ -44,14 +44,14 @@ public class RequestTutorialClientEvent extends L2GameClientPacket
 			player.processQuestEvent(q10755.getName(), "CE" + _event, null);
 		if(q10760 != null)
 			player.processQuestEvent(q10760.getName(), "CE" + _event, null);
-        if(q10390 != null)
-        {
-            player.processQuestEvent(q10390.getName(), "CE" + _event, null);
-        }
-        if(q10393 != null)
-        {
-            player.processQuestEvent(q10393.getName(), "CE" + _event, null);
-        }
+//        if(q10390 != null)
+//        {
+//            player.processQuestEvent(q10390.getName(), "CE" + _event, null);
+//        }
+//        if(q10393 != null)
+//        {
+//            player.processQuestEvent(q10393.getName(), "CE" + _event, null);
+//        }
 //        if(q10397 != null)
 //        {
 //            player.processQuestEvent(q10397.getName(), "CE" + _event, null);
