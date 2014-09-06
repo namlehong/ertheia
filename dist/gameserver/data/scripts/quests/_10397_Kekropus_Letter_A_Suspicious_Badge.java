@@ -57,6 +57,7 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
             Player player = qs.getPlayer();
             qs.showQuestionMark(_questId);
             qs.playSound(SOUND_TUTORIAL);
+            qs.giveItems(SOE_OREN,1);
             if (player != null)
             {
                 player.sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
@@ -118,7 +119,6 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
                 }
                 else if(event.equalsIgnoreCase("Quest _10397_Kekropus_Letter_A_Suspicious_Badge close_window"))
                 {
-                    qs.giveItems(SOE_OREN,1);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     htmlText = null;
                 }
@@ -150,10 +150,6 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
                     qs.giveItems(STEEL_DOOR_GUILD_COIN,STEEL_DOOR_GUILD_COIN_COUNT);
                     htmlText = "05.htm";
                     player.sendPacket(new ExShowScreenMessage(NEXT_LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-                }
-                else
-                {
-                    htmlText = null;
                 }
             }
         }
