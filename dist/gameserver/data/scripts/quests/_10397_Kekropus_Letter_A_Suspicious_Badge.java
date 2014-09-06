@@ -103,13 +103,17 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
                                 qs.setState(STARTED);
                                 qs.setCond(1);
                                 qs.playSound(SOUND_ACCEPT);
-                                htmlText = null;
                             }
                         }
                     }
                     catch (Throwable t)
                     {
                     }
+                    htmlText = null;
+                }
+                else if(event.startsWith("TE"))
+                {
+                    htmlText = null;
                 }
                 else if(event.equalsIgnoreCase("Quest _10397_Kekropus_Letter_A_Suspicious_Badge to_oren"))
                 {

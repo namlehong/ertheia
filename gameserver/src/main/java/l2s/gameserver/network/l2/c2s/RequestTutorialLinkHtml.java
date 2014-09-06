@@ -51,9 +51,9 @@ public class RequestTutorialLinkHtml extends L2GameClientPacket
         {
             player.processQuestEvent(q10393.getName(), _bypass, null);
         }
-        if(q10397 != null)
-        {
-            player.processQuestEvent(q10397.getName(), _bypass, null);
-        }
+//        if(q10397 != null)
+//        {
+//            player.processQuestEvent(q10397.getName(), _bypass, null);
+//        }
 	}
 }

@@ -52,9 +52,9 @@ public class RequestTutorialClientEvent extends L2GameClientPacket
         {
             player.processQuestEvent(q10393.getName(), "CE" + _event, null);
         }
-        if(q10397 != null)
-        {
-            player.processQuestEvent(q10397.getName(), "CE" + _event, null);
-        }
+//        if(q10397 != null)
+//        {
+//            player.processQuestEvent(q10397.getName(), "CE" + _event, null);
+//        }
 	}
 }
