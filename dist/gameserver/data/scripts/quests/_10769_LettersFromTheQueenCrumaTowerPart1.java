@@ -26,7 +26,7 @@ import l2s.gameserver.scripts.ScriptFile;
 public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
 {
 
-	private static final int LEVIAN = 30037;
+	private static final int SYLVAIN = 30070;
 	private static final int LORAIN = 30673;
 	
 	private static final int SOE_DION = 39593;
@@ -62,7 +62,7 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 
 		CharListenerList.addGlobal(this);
 		
-		addTalkId(LEVIAN, LORAIN);
+		addTalkId(SYLVAIN, LORAIN);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -147,12 +147,12 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 			}
 		}
 
-		if(event.equalsIgnoreCase("30037-3.htm"))
+		if(event.equalsIgnoreCase("30070-3.htm"))
 		{
 			st.giveItems(SOE_CRUMA, 1);
 			st.setCond(2);
 			
-			htmltext = "30037-3.htm";
+			htmltext = "30070-3.htm";
 		}
 		
 		if(event.equalsIgnoreCase("30673-3.htm"))
@@ -179,14 +179,14 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
-		if(npcId == LEVIAN)
+		if(npcId == SYLVAIN)
 		{
 			if(cond == 1)
 			{
-				htmltext = "30037-1.htm";
+				htmltext = "30070-1.htm";
 			}
 			else if(cond == 2)
-				htmltext = "30037-3.htm";
+				htmltext = "30070-3.htm";
 		}
 		else if(npcId == LORAIN && st.getCond() == 2)
 		{
