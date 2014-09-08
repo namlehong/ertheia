@@ -274,6 +274,12 @@ public class Recall extends Skill
 					case 27: // Orc Barrack
 						pcTarget.teleToLocation(-85672, 106664, -3577, 0);
 						return;
+					case 28: // Town of Dion - front of Sylvain
+						pcTarget.teleToLocation(16376, 142296, -2718, 0);
+						return;
+					case 29: // Cruma Tower - front of Lorain
+						pcTarget.teleToLocation(16520, 113384, -3605, 40959);
+						return;
 				}
 				if(_castle) // To castle
 				{

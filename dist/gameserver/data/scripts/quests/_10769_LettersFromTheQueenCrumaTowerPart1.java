@@ -29,8 +29,8 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 	private static final int LEVIAN = 30037;
 	private static final int LORAIN = 30673;
 	
-	private static final int SOE_GLUDIN = 39491;
-	private static final int SOE_CRUMA = 17726;
+	private static final int SOE_DION = 39593;
+	private static final int SOE_CRUMA = 39594;
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EWC = 951;
 	private static final int SCROLL_EAC = 952;
@@ -110,13 +110,13 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		
 		if(event.equalsIgnoreCase("Quest _10769_LettersFromTheQueenCrumaTowerPart1 to_dion"))
 		{
-			System.out.println("in Quest _10769_LettersFromTheQueenCrumaTowerPart1 to_dion");
+			//System.out.println("in Quest _10769_LettersFromTheQueenCrumaTowerPart1 to_dion");
 			if(st.getCond() == 1)
 			{
-				if(getItemCountById(player, SOE_GLUDIN) > 0)
+				if(getItemCountById(player, SOE_DION) > 0)
 				{
-					st.takeItems(SOE_GLUDIN, 1);
-					player.teleToLocation(-79592, 150824, -3066);
+					st.takeItems(SOE_DION, 1);
+					player.teleToLocation(16376, 142296, -2718);
 					player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 				}
 				else
@@ -126,10 +126,10 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 			}
 			return null;
 		}
-		System.out.println("out " + event);
+		//System.out.println("out " + event);
 		if(event.equalsIgnoreCase("Quest _10769_LettersFromTheQueenCrumaTowerPart1 close_window"))
 		{
-			System.out.println("in Quest _10769_LettersFromTheQueenCrumaTowerPart1 close_window");
+			//System.out.println("in Quest _10769_LettersFromTheQueenCrumaTowerPart1 close_window");
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 			return null;
 		}
@@ -238,7 +238,7 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		
 		st.playSound(SOUND_TUTORIAL);
 		
-		st.giveItems(SOE_GLUDIN, 1);
+		st.giveItems(SOE_DION, 1);
 		
 		st.getPlayer().setVar("@received_navari_letter_4th", true);
 	}
