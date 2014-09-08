@@ -59,7 +59,7 @@ public class _10770_InSearchOfTheGrail extends Quest implements ScriptFile
 	public _10770_InSearchOfTheGrail()
 	{
 		super(false);
-		addStartNpc(LORAIN);
+		addStartNpc(LORAIN, JANSSEN);
 		
 		addKillId(PORTA, EXCURO, RICENSEO, KRATO, SHINDEBARN);
 
@@ -121,8 +121,7 @@ public class _10770_InSearchOfTheGrail extends Quest implements ScriptFile
 					htmltext = "30673-6.htm";
 				}
 			}
-			else
-				htmltext = "noquest";
+			
 		}
 		else if(npcId == JANSSEN)
 		{
