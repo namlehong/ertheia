@@ -4,6 +4,7 @@ import l2s.gameserver.instancemanager.QuestManager;
 import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
 import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
@@ -41,6 +42,12 @@ public class _10401_KekropusLetterDecodingTheBadge extends Quest implements Scri
     public _10401_KekropusLetterDecodingTheBadge()
     {
         super(false);
+        this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+        this.addRaceCheck(true,true,true,true,true,true,false);
+        CharListenerList.addGlobal(this);
+        this.addTalkId(PATERSON);
+        this.addTalkId(EBLUNE);
+        this.addQuestItem(SOE_ADEN,SOE_FORSAKEN_PLAIN);
     }
 
     private void receivedLetter(final QuestState qs)
@@ -114,7 +121,7 @@ public class _10401_KekropusLetterDecodingTheBadge extends Quest implements Scri
                 }
                 else if(event.equalsIgnoreCase("Quest _10401_KekropusLetterDecodingTheBadge to_aden"))
                 {
-                    player.teleToLocation(80920, 56392, -1585);
+                    player.teleToLocation(147554, 24648, -2017);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     htmlText = null;
                 }
