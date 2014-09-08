@@ -93,6 +93,7 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		
 		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_7s"))
 		{
+			System.out.println("start_quest");
 			st.setCond(1);
 			st.setState(STARTED);
 			alertLetterReceived(st);
@@ -103,6 +104,7 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		
 		if(event.equalsIgnoreCase("start_quest_delay"))
 		{
+			System.out.println("start_quest_7s");
 			st.startQuestTimer("start_quest_7s", 7000);
 			//only start quest after 7s to avoid crash on enterworld
 			return null;
@@ -200,10 +202,10 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		if(player.getVarBoolean("@received_navari_letter_4th"))
 			return;
 		
-		//System.out.println("Player enter");
+		System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
-			//System.out.println("Player enter and fit quest condition");
+			System.out.println("Player enter and fit quest condition");
 			Quest q = QuestManager.getQuest(10769);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
