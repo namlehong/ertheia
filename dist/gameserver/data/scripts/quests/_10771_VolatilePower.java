@@ -1,6 +1,5 @@
 package quests;
 
-import _10764_FreeSpirit.VisibilityScheduleTimerTask;
 import l2s.commons.threading.RunnableImpl;
 import l2s.gameserver.ThreadPoolManager;
 import l2s.gameserver.model.Player;
