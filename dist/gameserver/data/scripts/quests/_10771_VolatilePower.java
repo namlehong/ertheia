@@ -107,7 +107,7 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 				st.giveItems(NORMAL_FRAGMENT_DUST, 1);
 				
 				if(getItemCountById(player, NORMAL_FRAGMENT_DUST) >= 20)
-					st.setCond(2);
+					st.setCond(3);
 				
 				//spawn Fragment Eaters and attack player and despawn after 3 minutes
 				NpcInstance eater1 = st.addSpawn(FRAGMENT_EATER, npc.getLoc().getX() - 40, npc.getLoc().getY() - 40, npc.getLoc().getZ(), 180000);
@@ -151,7 +151,7 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 				{
 					htmltext = "30484-5.htm";
 				}
-				else if(cond == 2)
+				else if(cond == 3)
 				{
 					htmltext = "30484-6.htm";
 				}
