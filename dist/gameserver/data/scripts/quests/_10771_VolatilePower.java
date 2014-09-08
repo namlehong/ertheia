@@ -101,7 +101,7 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 			{
 				npc.toggleVisible();
 				
-				ThreadPoolManager.getInstance().schedule(new VisibilityScheduleTimerTask(npc), 30000);
+				ThreadPoolManager.getInstance().schedule(new VisibilityScheduleTimerTask(npc), 180000);
 				
 				st.takeItems(SHINING_MYSTERIOUS_FRAGMENT, 1);
 				st.giveItems(NORMAL_FRAGMENT_DUST, 1);
@@ -110,9 +110,13 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 					st.setCond(2);
 				
 				//spawn Fragment Eaters and attack player and despawn after 3 minutes
-				MonsterInstance eater1 = (MonsterInstance)st.addSpawn(FRAGMENT_EATER, npc.getLoc().getX() - 40, npc.getLoc().getY() - 40, npc.getLoc().getZ(), 180000);
-				MonsterInstance eater2 = (MonsterInstance)st.addSpawn(FRAGMENT_EATER, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 180000);
-				MonsterInstance eater3 = (MonsterInstance)st.addSpawn(FRAGMENT_EATER, npc.getLoc().getX() + 40, npc.getLoc().getY() + 40, npc.getLoc().getZ(), 180000);
+				NpcInstance eater1 = st.addSpawn(FRAGMENT_EATER, npc.getLoc().getX() - 40, npc.getLoc().getY() - 40, npc.getLoc().getZ(), 180000);
+				NpcInstance eater2 = st.addSpawn(FRAGMENT_EATER, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 180000);
+				NpcInstance eater3 = st.addSpawn(FRAGMENT_EATER, npc.getLoc().getX() + 40, npc.getLoc().getY() + 40, npc.getLoc().getZ(), 180000);
+				
+				eater1.getAggroList().addDamageHate(player, 10000, 10000);
+				eater2.getAggroList().addDamageHate(player, 10000, 10000);
+				eater3.getAggroList().addDamageHate(player, 10000, 10000);
 				
 				eater1.setAggressionTarget(player);
 				eater2.setAggressionTarget(player);
