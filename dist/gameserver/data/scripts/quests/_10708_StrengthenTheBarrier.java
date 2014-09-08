@@ -48,10 +48,12 @@ public class _10708_StrengthenTheBarrier extends Quest implements ScriptFile
                 qs.setState(STARTED);
                 qs.setCond(1);
                 qs.playSound(SOUND_ACCEPT);
+                qs.giveItems(BARRIER_ENFORCER_KEY,1);
                 htmlText = "02.htm";
             }
             else if(event.equalsIgnoreCase("use_key"))
             {
+                qs.takeAllItems(BARRIER_ENFORCER_KEY);
                 qs.setCond(2);
                 qs.playSound(SOUND_MIDDLE);
                 htmlText = "04.htm";
