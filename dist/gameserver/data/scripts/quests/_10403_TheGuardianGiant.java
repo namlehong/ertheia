@@ -1,5 +1,6 @@
 package quests;
 
+import l2s.commons.util.Rnd;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
@@ -10,36 +11,37 @@ import l2s.gameserver.scripts.ScriptFile;
  * Created by Archer on 9/8/2014.
  * Project ertheia
  */
-public class _10402_NowhereToTurn extends Quest implements ScriptFile
+public class _10403_TheGuardianGiant extends Quest implements ScriptFile
 {
     private static final int MIN_LEVEL = 58;
     private static final int MAX_LEVEL = 61;
     // Quest's NPCs
-    private static final int EBLUNE = 33865;
-    // Quest's Monsters
-    private static final int MARSH_STALKER = 20679;
-    private static final int MARSH_DRAKE = 20680;
-    private static final int FALLEN_ORC = 21017;
-    private static final int ANCIENT_GARGOYLE = 21018;
-    private static final int FALLEN_ORC_ARCHER = 21019;
-    private static final int FALLEN_ORC_SHAMAN = 21020;
-    private static final int SHARP_TALON_TIGER = 21021;
-    private static final int FALLEN_ORC_CAPTAIN = 21022;
-    private static final int MONSTER_KILL_COUNT = 40;
+    private static final int NOVAIN = 33866;
+    // Quest's Monster
+    private static final int KRANROT = 20650;
+    private static final int PALIOTE = 20648;
+    private static final int YINTZU = 20647;
+    private static final int HAMRUT = 20649;
+    private static final int GUARDIAN_GIANT_AKUM = 27504;
+    // Quest's Items
+    private static final int GUARDIAN_GIANT_NUCLEUS_FRAGMENT = 36713;
+    private static final int GUARDIAN_GIANT_NUCLEUS_FRAGMENT_COUNT = 50;
+    private static final int GUARDIAN_GIANT_NUCLEUS_FRAGMENT_CHANCE = 75;
     // Quest's Reward
-    private static final int EXP = 5482574;
-    private static final int SP = 1315;
+    private static final int EXP = 6579090;
+    private static final int SP = 1578;
     private static final int EAB = 948;
     private static final int EAB_COUNT = 5;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
-    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 34;
+    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 40;
 
-    public _10402_NowhereToTurn()
+    public _10403_TheGuardianGiant()
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
-        this.addStartNpc(EBLUNE);
-        this.addKillId(MARSH_STALKER, MARSH_DRAKE, FALLEN_ORC, ANCIENT_GARGOYLE, FALLEN_ORC_ARCHER, FALLEN_ORC_SHAMAN, SHARP_TALON_TIGER, FALLEN_ORC_CAPTAIN);
+        this.addStartNpc(NOVAIN);
+        this.addQuestItem(GUARDIAN_GIANT_NUCLEUS_FRAGMENT);
+        this.addKillId(KRANROT, PALIOTE, YINTZU, HAMRUT, GUARDIAN_GIANT_AKUM);
     }
 
     @Override
@@ -58,6 +60,7 @@ public class _10402_NowhereToTurn extends Quest implements ScriptFile
             else if(event.equalsIgnoreCase("get_reward"))
             {
                 qs.addExpAndSp(EXP,SP);
+                qs.takeAllItems(GUARDIAN_GIANT_NUCLEUS_FRAGMENT);
                 qs.giveItems(EAB,EAB_COUNT);
                 qs.giveItems(STEEL_DOOR_GUILD_COIN,STEEL_DOOR_GUILD_COIN_COUNT);
                 qs.setState(COMPLETED);
@@ -86,7 +89,7 @@ public class _10402_NowhereToTurn extends Quest implements ScriptFile
                 }
                 else
                 {
-                    if(npcId == EBLUNE)
+                    if(npcId == NOVAIN)
                     {
                         if(cond == 0)
                         {
@@ -111,14 +114,12 @@ public class _10402_NowhereToTurn extends Quest implements ScriptFile
             int cond = qs.getCond();
             if(cond == 1)
             {
-                int counter = qs.getInt("counter");
-                if(counter < MONSTER_KILL_COUNT)
+                if(qs.getQuestItemsCount(GUARDIAN_GIANT_NUCLEUS_FRAGMENT) < GUARDIAN_GIANT_NUCLEUS_FRAGMENT_COUNT && Rnd.chance(GUARDIAN_GIANT_NUCLEUS_FRAGMENT_CHANCE))
                 {
-                    counter++;
-                    qs.set("counter", counter);
+                    qs.giveItems(GUARDIAN_GIANT_NUCLEUS_FRAGMENT,1);
                     qs.playSound(SOUND_ITEMGET);
                 }
-                if(counter >= MONSTER_KILL_COUNT)
+                if(qs.getQuestItemsCount(GUARDIAN_GIANT_NUCLEUS_FRAGMENT) >= GUARDIAN_GIANT_NUCLEUS_FRAGMENT_COUNT)
                 {
                     qs.setCond(2);
                     qs.playSound(SOUND_MIDDLE);

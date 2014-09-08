@@ -10,36 +10,34 @@ import l2s.gameserver.scripts.ScriptFile;
  * Created by Archer on 9/8/2014.
  * Project ertheia
  */
-public class _10402_NowhereToTurn extends Quest implements ScriptFile
+public class _10709_StolenSeed extends Quest implements ScriptFile
 {
     private static final int MIN_LEVEL = 58;
     private static final int MAX_LEVEL = 61;
     // Quest's NPCs
-    private static final int EBLUNE = 33865;
-    // Quest's Monsters
-    private static final int MARSH_STALKER = 20679;
-    private static final int MARSH_DRAKE = 20680;
-    private static final int FALLEN_ORC = 21017;
-    private static final int ANCIENT_GARGOYLE = 21018;
-    private static final int FALLEN_ORC_ARCHER = 21019;
-    private static final int FALLEN_ORC_SHAMAN = 21020;
-    private static final int SHARP_TALON_TIGER = 21021;
-    private static final int FALLEN_ORC_CAPTAIN = 21022;
-    private static final int MONSTER_KILL_COUNT = 40;
+    private static final int NOVAIN = 33866;
+    private static final int MAGIC_CIRCLE_CONTROL_DEVICE = 33961;
+    // Quest's Monster
+    private static final int CURSED_GIANT_AKUM = 27520;
+    // Quest's Items
+    private static final int AKUM_MEMORY_FRAGMENT = 39510;
+    private static final int NORMAL_FRAGMENT = 39511;
     // Quest's Reward
-    private static final int EXP = 5482574;
-    private static final int SP = 1315;
+    private static final int EXP = 731010;
+    private static final int SP = 175;
     private static final int EAB = 948;
     private static final int EAB_COUNT = 5;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
-    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 34;
+    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 30;
 
-    public _10402_NowhereToTurn()
+    public _10709_StolenSeed()
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
-        this.addStartNpc(EBLUNE);
-        this.addKillId(MARSH_STALKER, MARSH_DRAKE, FALLEN_ORC, ANCIENT_GARGOYLE, FALLEN_ORC_ARCHER, FALLEN_ORC_SHAMAN, SHARP_TALON_TIGER, FALLEN_ORC_CAPTAIN);
+        this.addStartNpc(NOVAIN);
+        this.addTalkId(MAGIC_CIRCLE_CONTROL_DEVICE);
+        this.addQuestItem(AKUM_MEMORY_FRAGMENT, NORMAL_FRAGMENT);
+        this.addKillId(CURSED_GIANT_AKUM);
     }
 
     @Override
@@ -55,15 +53,23 @@ public class _10402_NowhereToTurn extends Quest implements ScriptFile
                 qs.playSound(SOUND_ACCEPT);
                 htmlText = "03.htm";
             }
+            else if(event.equalsIgnoreCase("try_fragment"))
+            {
+                qs.setCond(2);
+                qs.playSound(SOUND_MIDDLE);
+                htmlText = null;
+                qs.addSpawn(CURSED_GIANT_AKUM);
+            }
             else if(event.equalsIgnoreCase("get_reward"))
             {
                 qs.addExpAndSp(EXP,SP);
+                qs.takeAllItems(AKUM_MEMORY_FRAGMENT,NORMAL_FRAGMENT);
                 qs.giveItems(EAB,EAB_COUNT);
                 qs.giveItems(STEEL_DOOR_GUILD_COIN,STEEL_DOOR_GUILD_COIN_COUNT);
                 qs.setState(COMPLETED);
                 qs.exitCurrentQuest(false);
                 qs.playSound(SOUND_FINISH);
-                htmlText = "05.htm";
+                htmlText = "06.htm";
             }
         }
         return htmlText;
@@ -86,16 +92,20 @@ public class _10402_NowhereToTurn extends Quest implements ScriptFile
                 }
                 else
                 {
-                    if(npcId == EBLUNE)
+                    if(npcId == NOVAIN)
                     {
                         if(cond == 0)
                         {
                             htmlText = "00.htm";
                         }
-                        else if(cond == 2)
+                        else if(cond == 3)
                         {
-                            htmlText = "04.htm";
+                            htmlText = "05.htm";
                         }
+                    }
+                    else if(npcId == MAGIC_CIRCLE_CONTROL_DEVICE)
+                    {
+                        htmlText = "04.htm";
                     }
                 }
             }
@@ -109,20 +119,11 @@ public class _10402_NowhereToTurn extends Quest implements ScriptFile
         if(npc != null && qs != null)
         {
             int cond = qs.getCond();
-            if(cond == 1)
+            if(cond == 2)
             {
-                int counter = qs.getInt("counter");
-                if(counter < MONSTER_KILL_COUNT)
-                {
-                    counter++;
-                    qs.set("counter", counter);
-                    qs.playSound(SOUND_ITEMGET);
-                }
-                if(counter >= MONSTER_KILL_COUNT)
-                {
-                    qs.setCond(2);
-                    qs.playSound(SOUND_MIDDLE);
-                }
+                qs.giveItems(NORMAL_FRAGMENT,1);
+                qs.playSound(SOUND_MIDDLE);
+                qs.setCond(3);
             }
         }
         return null;
