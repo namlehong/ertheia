@@ -278,7 +278,7 @@ public class Recall extends Skill
 						pcTarget.teleToLocation(16376, 142296, -2718, 0);
 						return;
 					case 29: // Cruma Tower - front of Lorain
-						pcTarget.teleToLocation(16520, 113384, -3605, 40959);
+						pcTarget.teleToLocation(16520, 113384, -3605, 0);
 						return;
 				}
 				if(_castle) // To castle
