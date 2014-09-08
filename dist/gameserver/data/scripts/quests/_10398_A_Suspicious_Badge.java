@@ -123,6 +123,7 @@ public class _10398_A_Suspicious_Badge extends Quest implements ScriptFile
                 if(qs.getQuestItemsCount(UNIDENTIFIED_SUSPICIOUS_BADGE) < UNIDENTIFIED_SUSPICIOUS_BADGE_COUNT && Rnd.chance(UNIDENTIFIED_SUSPICIOUS_BADGE_CHANGE))
                 {
                     qs.giveItems(UNIDENTIFIED_SUSPICIOUS_BADGE,1);
+                    qs.playSound(SOUND_ITEMGET);
                 }
                 if(qs.getQuestItemsCount(UNIDENTIFIED_SUSPICIOUS_BADGE) >= UNIDENTIFIED_SUSPICIOUS_BADGE_COUNT)
                 {
