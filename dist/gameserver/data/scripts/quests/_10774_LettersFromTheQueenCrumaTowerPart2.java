@@ -168,7 +168,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			htmltext = "30487-3.htm";
 		}
 		
-		if(html.isEmpty())
+		if(htmltext.isEmpty())
 			return null;
 		else
 			return htmltext;
