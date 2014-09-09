@@ -88,7 +88,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
-			return null;
+			htmltext = "";
 		}
 		
 		if(event.equalsIgnoreCase("start_quest") || event.equalsIgnoreCase("start_quest_7s"))
@@ -98,14 +98,14 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			alertLetterReceived(st);
 			st.showQuestHTML(st.getQuest(), "queen_letter.htm");
 			
-			return null;
+			htmltext = "";
 		}
 		
 		if(event.equalsIgnoreCase("start_quest_delay"))
 		{
 			st.startQuestTimer("start_quest_7s", 7000);
 			//only start quest after 7s to avoid crash on enterworld
-			return null;
+			htmltext = "";
 		}
 		
 		if(event.equalsIgnoreCase("Quest _10774_LettersFromTheQueenCrumaTowerPart2 to_dion"))
@@ -124,14 +124,14 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 					player.sendMessage("Không tìm thấy Scroll of Escape: Town of Dion");
 				}
 			}
-			return null;
+			htmltext = "";
 		}
 		//System.out.println("out " + event);
 		if(event.equalsIgnoreCase("Quest _10774_LettersFromTheQueenCrumaTowerPart2 close_window"))
 		{
 			//System.out.println("in Quest _10774_LettersFromTheQueenCrumaTowerPart2 close_window");
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
-			return null;
+			htmltext = "";
 		}
 		
 		// Question mark clicked
@@ -143,7 +143,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
-				return null;
+				htmltext = "";
 			}
 		}
 
@@ -168,7 +168,10 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			htmltext = "30487-3.htm";
 		}
 		
-		return htmltext;
+		if(html.isEmpty())
+			return null;
+		else
+			return htmltext;
 	}
 
 
