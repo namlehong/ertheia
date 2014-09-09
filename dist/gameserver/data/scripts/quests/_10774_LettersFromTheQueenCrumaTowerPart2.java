@@ -201,10 +201,10 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		if(player.getVarBoolean("@received_navari_letter_5th"))
 			return;
 		
-		//System.out.println("Player enter");
+		System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
-			//System.out.println("Player enter and fit quest condition");
+			System.out.println("Player enter and fit quest condition");
 			Quest q = QuestManager.getQuest(10774);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
@@ -214,10 +214,10 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 	@Override
 	public void onLevelChange(Player player, int oldLvl, int newLvl)
 	{
-		System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
+		//System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
 		if(oldLvl < minLevel && newLvl >= minLevel && checkStartCondition(player))
 		{
-			System.out.println("received_navari_letter_5th " + player.getVarBoolean("@received_navari_letter_5th"));
+			//System.out.println("received_navari_letter_5th " + player.getVarBoolean("@received_navari_letter_5th"));
 			if(player.getVarBoolean("@received_navari_letter_5th"))
 				return;
 
