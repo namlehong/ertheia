@@ -41,6 +41,7 @@ public class _10398_A_Suspicious_Badge extends Quest implements ScriptFile
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addStartNpc(ANDY);
         this.addTalkId(BACON);
         this.addQuestItem(UNIDENTIFIED_SUSPICIOUS_BADGE);

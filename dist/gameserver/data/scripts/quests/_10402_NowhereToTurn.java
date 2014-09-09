@@ -38,8 +38,10 @@ public class _10402_NowhereToTurn extends Quest implements ScriptFile
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+
         this.addStartNpc(EBLUNE);
-        this.addKillId(MARSH_STALKER, MARSH_DRAKE, FALLEN_ORC, ANCIENT_GARGOYLE, FALLEN_ORC_ARCHER, FALLEN_ORC_SHAMAN, SHARP_TALON_TIGER, FALLEN_ORC_CAPTAIN);
+        this.addKillId(MARSH_STALKER, MARSH_DRAKE, FALLEN_ORC, ANCIENT_GARGOYLE, FALLEN_ORC_ARCHER, FALLEN_ORC_SHAMAN,
+                SHARP_TALON_TIGER, FALLEN_ORC_CAPTAIN);
     }
 
     @Override

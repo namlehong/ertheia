@@ -34,6 +34,7 @@ public class _10709_StolenSeed extends Quest implements ScriptFile
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addStartNpc(NOVAIN);
         this.addTalkId(MAGIC_CIRCLE_CONTROL_DEVICE);
         this.addQuestItem(AKUM_MEMORY_FRAGMENT, NORMAL_FRAGMENT);

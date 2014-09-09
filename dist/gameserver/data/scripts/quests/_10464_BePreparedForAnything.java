@@ -30,6 +30,7 @@ public class _10464_BePreparedForAnything extends Quest implements ScriptFile
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addStartNpc(PATERSON);
         this.addTalkId(OLF_KANORE);
         this.addQuestItem(PRACTICE_LEATHER_BELT, PRACTICE_MAGIC_PIN_C, FLUTTER_MAGIC_PIN_LEATHER_BELT);

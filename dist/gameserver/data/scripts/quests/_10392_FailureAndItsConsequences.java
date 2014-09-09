@@ -37,6 +37,7 @@ public class _10392_FailureAndItsConsequences extends Quest implements ScriptFil
     public _10392_FailureAndItsConsequences()
     {
         super(false);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addStartNpc(IASON_HEINE);
         this.addTalkId(ELI);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);

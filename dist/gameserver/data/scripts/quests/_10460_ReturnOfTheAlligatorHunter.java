@@ -47,6 +47,7 @@ public class _10460_ReturnOfTheAlligatorHunter extends Quest implements ScriptFi
     {
         super(false);
         this.addStartNpc(ENRON);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
         this.addKillId(ALLIGATOR, CROKIAN_LAD, DAILAON_LAD, CROKIAN_LAD_WARRIOR, FARHITE_LAD, NOS_LAD);
         this.addQuestItem(ALLIGATOR_LEATHER, BEJEWELED_ALLIGATOR_LEATHER, BEJEWELED_ALLIGATOR_LEATHER);

@@ -39,6 +39,7 @@ public class _10403_TheGuardianGiant extends Quest implements ScriptFile
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addStartNpc(NOVAIN);
         this.addQuestItem(GUARDIAN_GIANT_NUCLEUS_FRAGMENT);
         this.addKillId(KRANROT, PALIOTE, YINTZU, HAMRUT, GUARDIAN_GIANT_AKUM);

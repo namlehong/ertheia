@@ -31,6 +31,7 @@ public class _10708_StrengthenTheBarrier extends Quest implements ScriptFile
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL,MAX_LEVEL);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addStartNpc(BACON);
         this.addTalkId(BARRIER_ENFORCER);
         this.addQuestItem(BARRIER_ENFORCER_KEY);

@@ -36,6 +36,7 @@ public class _10399_TheAlphabetOfTheGiants extends Quest implements ScriptFile
     {
         super(false);
         this.addLevelCheck(MIN_LEVEL,MAX_LEVEL);
+        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addStartNpc(BACON);
         this.addKillId(CORPSE_LOOTER_STAKATO,LESSER_LAIKEL);
         this.addQuestItem(GIANT_ALPHABET);

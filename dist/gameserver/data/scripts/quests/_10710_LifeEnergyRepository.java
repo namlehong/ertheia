@@ -7,37 +7,38 @@ import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.scripts.ScriptFile;
 
 /**
- * Created by Archer on 9/5/2014.
+ * Created by Archer on 9/9/2014.
  * Project ertheia
  */
-public class _10394_Mutual_Benefit extends Quest implements ScriptFile
+public class _10710_LifeEnergyRepository extends Quest implements ScriptFile
 {
-    private static final int MIN_LEVEL = 46;
-    private static final int MAX_LEVEL = 52;
+    private static final int MIN_LEVEL = 61;
+    private static final int MAX_LEVEL = 65;
     // Quest's NPCs
-    private static final int KELIOS = 33862;
+    private static final int SHUVANN = 33867;
+    private static final int LIFE_ENERGY_REPOSITORY = 33962;
     // Quest's Monster
-    private static final int HUNTER_GARGOYLE = 20241;
-    private static final int HUNTER_GARGOYLE_COUNT = 15;
-    private static final int TARLK_BASILISK = 20573;
-    private static final int TARLK_BASILISK_COUNT = 20;
-    private static final int ELDER_TARLK_BASILISK = 20574;
-    private static final int ELDER_TARLK_BASILISK_COUNT = 20;
-    // Quest's Rewards
-    private static final int EXP = 3151312;
-    private static final int SP = 756;
-    private static final int EAC = 22011;
-    private static final int EAC_COUNT = 6;
+    private static final int EMBRYO = 27521;
+    // Quest's Items
+    private static final int SHINE_STONE_FRAGMENT = 39512;
+    // Quest's Reward
+    private static final int EXP = 3125586;
+    private static final int SP = 750;
+    private static final int EAA = 730;
+    private static final int EAA_COUNT = 2;
     private static final int STEEL_DOOR_GUILD_COIN = 37045;
-    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 26;
+    private static final int STEEL_DOOR_GUILD_COIN_COUNT = 19;
 
-    public _10394_Mutual_Benefit()
+    public _10710_LifeEnergyRepository()
     {
         super(false);
-        this.addStartNpc(KELIOS);
-        this.addRaceCheck(true, true, true, true, true, true, false);
         this.addLevelCheck(MIN_LEVEL, MAX_LEVEL);
-        this.addKillId(HUNTER_GARGOYLE, TARLK_BASILISK, ELDER_TARLK_BASILISK);
+        this.addRaceCheck(true, true, true, true, true, true, false);
+        this.addQuestCompletedCheck(_10406_BeforeDarknessBearFruit.class);
+        this.addStartNpc(SHUVANN);
+        this.addTalkId(LIFE_ENERGY_REPOSITORY);
+        this.addQuestItem(SHINE_STONE_FRAGMENT);
+        this.addKillId(EMBRYO);
     }
 
     @Override
@@ -55,8 +56,8 @@ public class _10394_Mutual_Benefit extends Quest implements ScriptFile
             }
             else if(event.equalsIgnoreCase("get_reward"))
             {
-                qs.addExpAndSp(EXP,SP);
-                qs.giveItems(EAC,EAC_COUNT);
+                qs.addExpAndSp(EXP, SP);
+                qs.giveItems(EAA,EAA_COUNT);
                 qs.giveItems(STEEL_DOOR_GUILD_COIN,STEEL_DOOR_GUILD_COIN_COUNT);
                 qs.setState(COMPLETED);
                 qs.exitCurrentQuest(false);
@@ -76,7 +77,7 @@ public class _10394_Mutual_Benefit extends Quest implements ScriptFile
             int npcId = npc.getNpcId();
             int cond = qs.getCond();
             Player player = qs.getPlayer();
-            if(player != null)
+            if (player != null)
             {
                 if(qs.isCompleted())
                 {
@@ -84,13 +85,20 @@ public class _10394_Mutual_Benefit extends Quest implements ScriptFile
                 }
                 else
                 {
-                    if(npcId == KELIOS)
+                    if(npcId == SHUVANN)
                     {
                         if(cond == 0)
                         {
                             htmlText = "00.htm";
                         }
                         else if(cond == 2)
+                        {
+                            htmlText = "04.htm";
+                        }
+                    }
+                    else if(npcId == LIFE_ENERGY_REPOSITORY)
+                    {
+                        if(cond == 1)
                         {
                             htmlText = "04.htm";
                         }
@@ -106,36 +114,10 @@ public class _10394_Mutual_Benefit extends Quest implements ScriptFile
     {
         if(npc != null && qs != null)
         {
-            int npcId = npc.getNpcId();
             int cond = qs.getCond();
             if(cond == 1)
             {
-                int gargoyle = qs.getInt("hunter_gargoyle");
-                int tarlk = qs.getInt("tarlk_basilisk");
-                int elder = qs.getInt("elder_tarlk_basilisk");
-                if (npcId == HUNTER_GARGOYLE && gargoyle < HUNTER_GARGOYLE_COUNT)
-                {
-                    gargoyle++;
-                    qs.set("hunter_gargoyle", gargoyle);
-                }
-                else if (npcId == TARLK_BASILISK && tarlk < TARLK_BASILISK_COUNT)
-                {
-                    tarlk++;
-                    qs.set("tarlk_basilisk", tarlk);
-                }
-                else if(npcId == ELDER_TARLK_BASILISK && elder < ELDER_TARLK_BASILISK_COUNT)
-                {
-                    elder++;
-                    qs.set("elder_tarlk_basilisk", elder);
-                }
-                if(gargoyle >= HUNTER_GARGOYLE_COUNT && tarlk >= TARLK_BASILISK_COUNT && elder >= ELDER_TARLK_BASILISK_COUNT)
-                {
-                    qs.setCond(2);
-                    qs.unset("hunter_gargoyle");
-                    qs.unset("tarlk_basilisk");
-                    qs.unset("elder_tarlk_basilisk");
-                    qs.playSound(SOUND_MIDDLE);
-                }
+
             }
         }
         return null;
