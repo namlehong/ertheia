@@ -280,6 +280,15 @@ public class Recall extends Skill
 					case 29: // Cruma Tower - front of Lorain
 						pcTarget.teleToLocation(16520, 113384, -3605, 0);
 						return;
+					case 30: // Cruma Tower - front of Rombel
+						pcTarget.teleToLocation(17776, 114851, -11704, 0);
+						return;
+					case 31: // Town of Oren - front of Hollint
+						pcTarget.teleToLocation(83633, 53064, -1456, 0);
+						return;
+					case 32: // Sea of Spore - front of Andy
+						pcTarget.teleToLocation(64328, 26803, -3768, 0);
+						return;
 				}
 				if(_castle) // To castle
 				{
