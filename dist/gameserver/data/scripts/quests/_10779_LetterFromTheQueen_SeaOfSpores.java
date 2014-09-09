@@ -107,7 +107,7 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 			htmltext = "";
 		}
 		
-		if(event.equalsIgnoreCase("Quest _10779_LetterFromTheQueen_SeaOfSpores to_dion"))
+		if(event.equalsIgnoreCase("Quest _10779_LetterFromTheQueen_SeaOfSpores to_oren"))
 		{
 			//System.out.println("in Quest _10779_LetterFromTheQueen_SeaOfSpores to_dion");
 			if(st.getCond() == 1)

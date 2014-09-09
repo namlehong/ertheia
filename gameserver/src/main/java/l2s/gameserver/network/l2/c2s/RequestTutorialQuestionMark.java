@@ -33,24 +33,24 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 		Quest q10785 = QuestManager.getQuest(10785);
 		
 		
-		if(q255 != null)
-			player.processQuestEvent(q255.getName(), "QM" + _number, null);
-		if(q10750 != null)
+		if(q10750 != null && _number == 10750)
 			player.processQuestEvent(q10751.getName(), "QM" + _number, null);
-		if(q10751 != null)
+		else if(q10751 != null && _number == 10751)
 			player.processQuestEvent(q10751.getName(), "QM" + _number, null);
-		if(q10755 != null)
+		else if(q10755 != null && _number == 10755)
 			player.processQuestEvent(q10755.getName(), "QM" + _number, null);
-		if(q10760 != null)
+		else if(q10760 != null && _number == 10760)
 			player.processQuestEvent(q10760.getName(), "QM" + _number, null);
-		if(q10769 != null)
+		else if(q10769 != null && _number == 10769)
 			player.processQuestEvent(q10769.getName(), "QM" + _number, null);
-		if(q10774 != null)
+		else if(q10774 != null && _number == 10774)
 			player.processQuestEvent(q10774.getName(), "QM" + _number, null);
-		if(q10779 != null)
+		else if(q10779 != null && _number == 10779)
 			player.processQuestEvent(q10779.getName(), "QM" + _number, null);
-		if(q10785 != null)
+		else if(q10785 != null && _number == 10785)
 			player.processQuestEvent(q10785.getName(), "QM" + _number, null);
+		else if(q255 != null)
+			player.processQuestEvent(q255.getName(), "QM" + _number, null);
 		
 	}
 }

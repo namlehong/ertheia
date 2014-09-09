@@ -135,7 +135,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
 			//System.out.println("Mark id " + MarkId);
-			if(MarkId == 107551)
+			if(MarkId == 10755)
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
@@ -228,7 +228,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		
 		st.getPlayer().sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
-		st.showQuestionMark(107551);
+		st.showQuestionMark(10755);
 		
 		st.playSound(SOUND_TUTORIAL);
 		
