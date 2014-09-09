@@ -36,6 +36,17 @@ public class Guard extends Fighter
 			if(!target.isPK() || (actor.getParameter("evilGuard", false) && target.getPvpFlag() > 0))
 				return false;
 		}
+		
+		// TODO ask who change original code
+		
+		if (target.isNpc())
+		{
+			if (((NpcInstance) target).isInFaction(actor))
+			{
+				return false;
+			}
+		}
+		
 		if(target.isMonster())
 		{
 			if(!((MonsterInstance) target).isAggressive())

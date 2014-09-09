@@ -73,7 +73,6 @@ public class HtmCache
 				for(int i = 0; i < _cache.length; i++)
 				{
 					Cache c = _cache[i];
-					if(c == null) return;
 					_log.info(String.format("HtmCache: parsing %d documents; lang: %s.", c.getSize(), Language.VALUES[i]));
 				}
 				break;
@@ -121,18 +120,7 @@ public class HtmCache
 
 		String path = f.getAbsolutePath().substring(rootPath.length()).replace("\\", "/");
 
-		try
-		{
-			String s = HtmlUtils.bbParse(content);
-			Element ele = new Element(path.toLowerCase(), s);
-			
-			if(_cache[lang.ordinal()] == null) return;
-			_cache[lang.ordinal()].put(ele);
-		}
-		catch(Error e)
-		{
-			_log.info("error " + e.toString());
-		}
+		_cache[lang.ordinal()].put(new Element(path.toLowerCase(), HtmlUtils.bbParse(content)));
 	}
 
 	public String getNotNull(String fileName, Player player)
@@ -175,29 +163,41 @@ public class HtmCache
 			switch(Config.HTM_CACHE_MODE)
 			{
 				case ENABLED:
-					if(lang == Language.ENGLISH)
-						cache = get(Language.RUSSIAN, fileLower);
-					else if(lang == Language.RUSSIAN)
-						cache = get(Language.ENGLISH, fileLower);
+					for(Language otherLang: Language.VALUES)
+					{
+						if(otherLang.equals(lang))
+							continue;
+						
+						if(cache != null)
+							continue;
+						
+						cache = get(otherLang, fileLower);
+					}
 					break;
 				case LAZY:
 					cache = loadLazy(lang, file);
-					if(cache == null)
+					for(Language otherLang: Language.VALUES)
 					{
-						if(lang == Language.ENGLISH)
-							cache = loadLazy(Language.RUSSIAN, file);
-						else if(lang == Language.RUSSIAN)
-							cache = loadLazy(Language.ENGLISH, file);
+						if(otherLang.equals(lang))
+							continue;
+						
+						if(cache != null)
+							continue;
+						
+						cache = loadLazy(otherLang, file);
 					}
 					break;
 				case DISABLED:
 					cache = loadDisabled(lang, file);
-					if(cache == null)
+					for(Language otherLang: Language.VALUES)
 					{
-						if(lang == Language.ENGLISH)
-							cache = loadDisabled(Language.RUSSIAN, file);
-						else if(lang == Language.RUSSIAN)
-							cache = loadDisabled(Language.ENGLISH, file);
+						if(otherLang.equals(lang))
+							continue;
+						
+						if(cache != null)
+							continue;
+						
+						cache = loadDisabled(otherLang, file);
 					}
 					break;
 			}
@@ -244,23 +244,25 @@ public class HtmCache
 
 	private String get(Language lang, String f)
 	{
-		if(_cache[lang.ordinal()] == null ) return null;
-		
 		Element element = _cache[lang.ordinal()].get(f);
-
-		if(element == null)
-			element = _cache[Language.ENGLISH.ordinal()].get(f);
+		
+		for(Language otherLang: Language.VALUES)
+		{
+			if(otherLang.equals(lang))
+				continue;
+			
+			if(element != null)
+				continue;
+			
+			element = _cache[otherLang.ordinal()].get(f);
+		}
 
 		return element == null ? null : (String) element.getObjectValue();
 	}
 
 	public void clear()
 	{
-		
 		for(int i = 0; i < _cache.length; i++)
-		{
-			if(_cache[i] == null) return;
 			_cache[i].removeAll();
-		}
 	}
 }

@@ -292,7 +292,9 @@ public class Formulas
 		if(target.isLethalImmune())
 			return 0.;
 
-		final double deathRcpt = 0.01 * target.calcStat(Stats.DEATH_VULNERABILITY, attacker, skill);
+//		final double deathRcpt = 0.01 * target.calcStat(Stats.DEATH_VULNERABILITY, attacker, skill);
+		// TODO : fix that shit to legitimate value
+		final double deathRcpt = target.isMonster() ? 0 : 0.01 * target.calcStat(Stats.DEATH_VULNERABILITY, attacker, skill);		
 		final double lethal1Chance = skill.getLethal1(attacker) * deathRcpt;
 		final double lethal2Chance = skill.getLethal2(attacker) * deathRcpt;
 
@@ -1327,7 +1329,7 @@ public class Formulas
 		double witMod = 1.;
 		if (skill.isMagic() && Config.ENABLE_WIT_SKILL_LANDING_MOD)
 		{
-			witMod = (double) BaseStats.WIT.calcBonus(caster) / 4.;
+			witMod = BaseStats.WIT.calcBonus(caster) / 4.;
 			int ssMod = 0;
 
 			if(skill.isSSPossible())

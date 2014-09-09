@@ -103,7 +103,7 @@ public class CIPacket extends L2GameServerPacket
 
 		_name = player.getVisibleName(_receiver);
 
-		if(player.isConnected())
+		if(player.isConnected() || player.isFakePlayer())
 		{
 			_title = player.getVisibleTitle(_receiver);
 			_title_color = player.getTitleColor();

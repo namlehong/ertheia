@@ -1465,7 +1465,7 @@ public class NpcInstance extends Creature
 
 	private boolean teleportPlayer(Player player, TeleportLocation loc, long itemCount)
 	{
-		if(teleportPlayer(player, loc, loc.getItemId(), loc.getPrice(), loc.getCastleId(), -1))
+		if(teleportPlayer(player, loc, loc.getItemId(), itemCount, loc.getCastleId(), -1))
 		{
 			player.removeQuestTeleportMark(loc.getName());
 			return true;

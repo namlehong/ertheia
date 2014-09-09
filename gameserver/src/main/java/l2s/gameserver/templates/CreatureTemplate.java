@@ -6,51 +6,51 @@ public class CreatureTemplate
 {
 	private final static int[] EMPTY_ATTRIBUTES = new int[6];
 
-	private final int _baseINT;
-	private final int _baseSTR;
-	private final int _baseCON;
-	private final int _baseMEN;
-	private final int _baseDEX;
-	private final int _baseWIT;
+	private int _baseINT;
+	private int _baseSTR;
+	private int _baseCON;
+	private int _baseMEN;
+	private int _baseDEX;
+	private int _baseWIT;
 
-	private final int _baseAtkRange;
-	private final int _baseRandDam;
+	private int _baseAtkRange;
+	private int _baseRandDam;
 
-	private final double _baseHpMax;
-	private final double _baseCpMax;
-	private final double _baseMpMax;
+	private double _baseHpMax;
+	private double _baseCpMax;
+	private double _baseMpMax;
 
 	/** HP Regen base */
-	private final double _baseHpReg;
+	private double _baseHpReg;
 
 	/** MP Regen base */
-	private final double _baseMpReg;
+	private double _baseMpReg;
 
 	/** CP Regen base */
-	private final double _baseCpReg;
+	private double _baseCpReg;
 
-	private final double _basePAtk;
-	private final double _baseMAtk;
-	private final double _basePDef;
-	private final double _baseMDef;
-	private final double _basePAtkSpd;
-	private final double _baseMAtkSpd;
-	private final double _baseShldDef;
-	private final double _baseShldRate;
-	private final double _basePCritRate;
-	private final double _baseMCritRate;
-	private final double _baseRunSpd;
-	private final double _baseWalkSpd;
-	private final double _baseWaterRunSpd;
-	private final double _baseWaterWalkSpd;
-	private final double _baseFlyRunSpd;
-	private final double _baseFlyWalkSpd;
+	private double _basePAtk;
+	private double _baseMAtk;
+	private double _basePDef;
+	private double _baseMDef;
+	private double _basePAtkSpd;
+	private double _baseMAtkSpd;
+	private double _baseShldDef;
+	private double _baseShldRate;
+	private double _basePCritRate;
+	private double _baseMCritRate;
+	private double _baseRunSpd;
+	private double _baseWalkSpd;
+	private double _baseWaterRunSpd;
+	private double _baseWaterWalkSpd;
+	private double _baseFlyRunSpd;
+	private double _baseFlyWalkSpd;
 
-	private final int[] _baseAttributeAttack;
-	private final int[] _baseAttributeDefence;
+	private int[] _baseAttributeAttack;
+	private int[] _baseAttributeDefence;
 
-	private final double _collisionRadius;
-	private final double _collisionHeight;
+	private double _collisionRadius;
+	private double _collisionHeight;
 
 	private final WeaponType _baseAttackType;
 
@@ -276,5 +276,48 @@ public class CreatureTemplate
 	public static StatsSet getEmptyStatsSet()
 	{
 		return new StatsSet();
+	}
+	
+	/**
+	 * New Method
+	 */
+
+	public void update(StatsSet set)
+	{
+		_baseINT = set.getInteger("baseINT", _baseINT);
+		_baseSTR = set.getInteger("baseSTR", _baseSTR);
+		_baseCON = set.getInteger("baseCON", _baseCON);
+		_baseMEN = set.getInteger("baseMEN", _baseMEN);
+		_baseDEX = set.getInteger("baseDEX", _baseDEX);
+		_baseWIT = set.getInteger("baseWIT", _baseWIT);
+		_baseHpMax = set.getDouble("baseHpMax", _baseHpMax);
+		_baseCpMax = set.getDouble("baseCpMax", _baseCpMax);
+		_baseMpMax = set.getDouble("baseMpMax", _baseMpMax);
+		_baseHpReg = set.getDouble("baseHpReg", _baseHpReg);
+		_baseCpReg = set.getDouble("baseCpReg", _baseCpReg);
+		_baseMpReg = set.getDouble("baseMpReg", _baseMpReg);
+		_basePAtk = set.getDouble("basePAtk", _basePAtk);
+		_baseMAtk = set.getDouble("baseMAtk", _baseMAtk);
+		_basePDef = set.getDouble("basePDef", _basePDef);
+		_baseMDef = set.getDouble("baseMDef", _baseMDef);
+		_basePAtkSpd = set.getDouble("basePAtkSpd", _basePAtkSpd);
+		_baseMAtkSpd = set.getDouble("baseMAtkSpd", _baseMAtkSpd);
+		_baseShldDef = set.getDouble("baseShldDef", _baseShldDef);
+		_baseAtkRange = set.getInteger("baseAtkRange", _baseAtkRange);
+		_baseRandDam = set.getInteger("baseRandDam", _baseRandDam);
+		_baseShldRate = set.getDouble("baseShldRate", _baseShldRate);
+		_basePCritRate = set.getDouble("basePCritRate", _basePCritRate);
+		_baseMCritRate = set.getDouble("baseMCritRate", _baseMCritRate);
+//		_baseRunSpd = set.getDouble("baseRunSpd", _baseRunSpd);
+//		_baseWalkSpd = set.getDouble("baseWalkSpd", _baseWalkSpd);
+//		_baseWaterRunSpd = set.getDouble("baseWaterRunSpd", _baseWaterRunSpd);
+//		_baseWaterWalkSpd = set.getDouble("baseWaterWalkSpd", _baseWaterWalkSpd);
+//		_baseFlyRunSpd = set.getDouble("baseFlyRunSpd", _baseFlyRunSpd);
+//		_baseFlyWalkSpd = set.getDouble("baseFlyWalkSpd", _baseFlyWalkSpd);
+		_baseAttributeAttack = set.getIntegerArray("baseAttributeAttack", _baseAttributeAttack);
+		_baseAttributeDefence = set.getIntegerArray("baseAttributeDefence", _baseAttributeDefence);
+		_collisionRadius = set.getDouble("collision_radius", _collisionRadius);
+		_collisionHeight = set.getDouble("collision_height", _collisionHeight);
+//		_baseAttackType = WeaponType.valueOf(set.getString("baseAttackType", _baseAttackType.toString()).toUpperCase());
 	}
 }

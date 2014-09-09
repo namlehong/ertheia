@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.ArrayUtils;
+
 import l2s.gameserver.ai.CharacterAI;
 import l2s.gameserver.idfactory.IdFactory;
 import l2s.gameserver.model.Skill;
@@ -26,6 +27,7 @@ import l2s.gameserver.templates.CreatureTemplate;
 import l2s.gameserver.templates.StatsSet;
 import l2s.gameserver.templates.TeleportLocation;
 import l2s.gameserver.templates.skill.EffectTemplate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,13 +55,13 @@ public class NpcTemplate extends CreatureTemplate
 	public final String name;
 	public final String title;
 	// не используется - public final String sex;
-	public final int level;
-	public final long rewardExp;
-	public final long rewardSp;
-	public final int rewardRp;
-	public final int aggroRange;
-	public final int rhand;
-	public final int lhand;
+	public int level;
+	public long rewardExp;
+	public long rewardSp;
+	public int rewardRp;
+	public int aggroRange;
+	public int rhand;
+	public int lhand;
 	public final double rateHp;
 
 	private Faction faction = Faction.NONE;
@@ -593,5 +595,17 @@ public class NpcTemplate extends CreatureTemplate
 	public int getBaseReuseDelay()
 	{
 		return _baseReuseDelay;
+	}
+
+	@Override
+	public void update(StatsSet set)
+	{
+		super.update(set);
+		level = set.getInteger("level", level);
+		rewardExp = set.getLong("rewardExp", rewardExp);
+		rewardSp = set.getLong("rewardSp", rewardSp);
+		rhand = set.getInteger("rhand", rhand);
+		lhand = set.getInteger("lhand", lhand);
+		aggroRange = set.getInteger("aggroRange", aggroRange);
 	}
 }

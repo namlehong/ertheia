@@ -5,7 +5,6 @@ import static l2s.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_PEACE_FLAG
 import static l2s.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_PVP_FLAG;
 import static l2s.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_SIEGE_FLAG;
 import static l2s.gameserver.network.l2.s2c.ExSetCompassZoneCode.ZONE_SSQ_FLAG;
-
 import gnu.trove.iterator.TIntIntIterator;
 import gnu.trove.iterator.TIntLongIterator;
 import gnu.trove.iterator.TIntObjectIterator;
@@ -47,6 +46,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
+
 import l2s.commons.collections.LazyArrayList;
 import l2s.commons.dao.JdbcEntityState;
 import l2s.commons.dbutils.DbUtils;
@@ -90,6 +90,7 @@ import l2s.gameserver.data.xml.holder.SkillAcquireHolder;
 import l2s.gameserver.data.xml.holder.TransformTemplateHolder;
 import l2s.gameserver.database.DatabaseFactory;
 import l2s.gameserver.database.mysql;
+import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.handler.bbs.CommunityBoardManager;
 import l2s.gameserver.handler.bbs.ICommunityBoardHandler;
 import l2s.gameserver.handler.items.IItemHandler;
@@ -362,6 +363,7 @@ import l2s.gameserver.utils.SiegeUtils;
 import l2s.gameserver.utils.SqlBatch;
 import l2s.gameserver.utils.Strings;
 import l2s.gameserver.utils.TeleportUtils;
+
 import org.napile.primitive.Containers;
 import org.napile.primitive.maps.IntObjectMap;
 import org.slf4j.Logger;
@@ -2478,7 +2480,8 @@ public final class Player extends Playable implements PlayerGroup
 		int addedSkillsCount = 0;
 		for(SkillLearn sl : SkillAcquireHolder.getInstance().getAvailableMaxLvlSkills(this, AcquireType.NORMAL))
 		{
-			if(sl.isAutoGet() && (learnAllSkills || sl.isFreeAutoGet()))
+//			if(sl.isAutoGet() && (learnAllSkills || sl.isFreeAutoGet()))
+			if((sl.isAutoGet() && (learnAllSkills || sl.isFreeAutoGet())) || isFakePlayer())
 			{
 				Skill skill = SkillTable.getInstance().getInfo(sl.getId(), sl.getLevel());
 				if(skill == null)
@@ -4264,7 +4267,9 @@ public final class Player extends Playable implements PlayerGroup
 
 			//TODO: [Bonux] Пересмотреть.
 			int mentorId = getMenteeList().getMentor();
-			if(mentorId != 0)
+			// KIET: Send Sign of tutor if and only if mentee in base class
+//			if(mentorId != 0) <-- old code
+			if(mentorId != 0 && this.getActiveClassId() == this.getBaseClassId())
 			{
 				Player mentorPlayer = World.getPlayer(mentorId);
 				String mentorName = getMenteeList().get(mentorId).getName();
@@ -4292,8 +4297,12 @@ public final class Player extends Playable implements PlayerGroup
 					if(mentorPlayer != null)
 					{
 						mentorPlayer.sendPacket(new SystemMessagePacket(SystemMsg.THE_MENTEE_S1_HAS_REACHED_LEVEL_86).addName(this));
+						// Kiet remove old code
 						mentorPlayer.getMenteeList().remove(_name, true, false);
 						Mentoring.applyMentoringCond(this, false);
+						// KIET
+//                      Mentoring.applyMentoringCond(mentorPlayer,false);
+//                        Mentoring.removeMentoring(mentorPlayer,this,false);
 						if(Mentoring.getGraduatedMenteesCount(mentorId) == -1) //first time
 							Mentoring.setNewMenteesCount(mentorId, 1);	
 						else if(Mentoring.getGraduatedMenteesCount(mentorId) == 2) //this time setting the penalty
@@ -10087,6 +10096,8 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			getMenteeList().notify(true);
 			Mentoring.applyMentoringCond(this, true);
+			// Kiet
+			Mentoring.addMentoringSkills(this);
 		}
 	}
 
@@ -10096,6 +10107,8 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			getMenteeList().notify(false);
 			Mentoring.applyMentoringCond(this, false);
+			// Kiet
+			Mentoring.addMentoringSkills(this);
 		}
 	}
 
@@ -10735,6 +10748,8 @@ public final class Player extends Playable implements PlayerGroup
 		setActiveSubClass(classId, true, false);
 		Skill skill = SkillTable.getInstance().getInfo(Skill.SKILL_CONFUSION, 1);
 		skill.getEffects(this, this, false, false);
+		// KIET: test apply mentoring condition on change class
+        Mentoring.applyMentoringCond(this,true);
 		sendPacket(new SystemMessage(SystemMessage.THE_TRANSFER_OF_SUB_CLASS_HAS_BEEN_COMPLETED).addClassName(oldClassId).addClassName(classId));
 	}
 
@@ -11834,5 +11849,86 @@ public final class Player extends Playable implements PlayerGroup
 	public boolean haveQuestTeleportMark(int teleportId)
 	{
 		return _questTeleportMark.contains(teleportId);
+	}
+	
+	/*
+	 * New method
+	 */
+	
+	protected boolean _fakePlayer = false;
+
+	public void setFakePlayer() {
+		_fakePlayer = true;
+	}
+	
+	public void unSetFakePlayer(){
+		_fakePlayer = false;
+	}
+	
+	public boolean isFakePlayer(){
+		return _fakePlayer;
+	}
+	
+	public void teleToLocation(int x, int y, int z, Reflection r)
+	{
+		if(!isTeleporting.compareAndSet(false, true))
+			return;
+
+		if(isFakeDeath())
+			breakFakeDeath();
+
+		abortCast(true, false);
+		if(!isLockedTarget())
+			setTarget(null);
+		stopMove();
+
+		if(!isBoat() && !isFlying() && !World.isWater(new Location(x, y, z), r))
+			z = GeoEngine.getHeight(x, y, z, r.getGeoIndex());
+
+		//TODO [G1ta0] убрать DimensionalRiftManager.teleToLocation
+		if(isPlayer() && DimensionalRiftManager.getInstance().checkIfInRiftZone(getLoc(), true))
+		{
+			if(isInParty() && getParty().isInDimensionalRift())
+			{
+				Location newCoords = DimensionalRiftManager.getInstance().getRoom(0, 0).getTeleportCoords();
+				x = newCoords.x;
+				y = newCoords.y;
+				z = newCoords.z;
+				getParty().getDimensionalRift().usedTeleport(this);
+			}
+		}
+
+		//TODO: [Bonux] Check ExTeleportToLocationActivate!
+		if(isPlayer() && !isFakePlayer())
+		{
+
+			sendPacket(new TeleportToLocationPacket(this, x, y, z));
+
+			getListeners().onTeleport(x, y, z, r);
+
+			decayMe();
+
+			setXYZ(x, y, z);
+
+			setReflection(r);
+
+			// Нужно при телепорте с более высокой точки на более низкую, иначе наносится вред от "падения"
+			setLastClientPosition(null);
+			setLastServerPosition(null);
+
+			sendPacket(new ExTeleportToLocationActivate(this, x, y, z));
+		}
+		else
+		{
+			broadcastPacket(new TeleportToLocationPacket(this, x, y, z));
+
+			setXYZ(x, y, z);
+
+			setReflection(r);
+
+			sendPacket(new ExTeleportToLocationActivate(this, x, y, z));
+
+			onTeleported();
+		}
 	}
 }

@@ -102,7 +102,10 @@ public abstract class ExBuySellListPacket extends L2GameServerPacket
 				if(Config.ALT_SELL_ITEM_ONE_ADENA)
 					writeQ(1);
 				else	
-					writeQ(item.getReferencePrice() / 2);
+				{
+					long price = item.getReferencePrice() > 2000000 ? 100000 : item.getReferencePrice()/20;
+					writeQ(price / 2);
+				}
 			}
 			writeH(_refundList.size());
 			for(TradeItem item : _refundList)

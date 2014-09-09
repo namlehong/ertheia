@@ -202,7 +202,8 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 						if(!list.validate())
 							warn("Problems with rewardlist for npc: " + npcId + "; type: " + type);
 
-					template.putRewardList(type, list);
+//					Disable default drop list
+//					template.putRewardList(type, list);
 				}
 				else if(nodeName.equalsIgnoreCase("skills"))
 				{
