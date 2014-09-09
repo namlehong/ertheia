@@ -18,7 +18,7 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 {
 	//NPC's
 	private static final int JANSSEN = 30484;
-	private static final int MAGIC_OWL = 30484;
+	private static final int MAGIC_OWL = 33991;
 
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EAC = 952;
@@ -59,7 +59,7 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 			
-			st.addSpawn(MAGIC_OWL, npc.getLoc().getX() + 40, npc.getLoc().getY() + 40, npc.getLoc().getZ(), 180000);
+			st.addSpawn(MAGIC_OWL, 17672, 114888, -11738, 180000);
 		}
 		
 		if(event.equalsIgnoreCase("33991-2.htm"))
