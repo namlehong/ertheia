@@ -91,7 +91,6 @@ public enum BaseStats
 			if(player.isTransformed() && player.getTransform().getBaseStatBonus(value, this) != 0)
 				return player.getTransform().getBaseStatBonus(value, this);
 		}
-		System.out.println(String.format("Actor:%s Stat:%s Value:%d Bonus:%.2f", actor, this, value, baseValue));
 		return baseValue;
 	}
 

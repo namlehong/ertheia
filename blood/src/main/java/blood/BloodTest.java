@@ -15,7 +15,9 @@ public class BloodTest
 	
 	public static void main(String[] args)
 	{
-		
+//		System.exit(0);
+		System.out.println("haha");
+//		BaseStatsBonusParser.getInstance().load();
 	}
 	
 }
