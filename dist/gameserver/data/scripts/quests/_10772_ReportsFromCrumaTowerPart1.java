@@ -23,8 +23,8 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EAC = 952;
 	
-	private static final int minLevel = 40;
-	private static final int maxLevel = 46;
+	private static final int minLevel = 45;
+	private static final int maxLevel = 99;
 	
 	@Override
 	public void onLoad()

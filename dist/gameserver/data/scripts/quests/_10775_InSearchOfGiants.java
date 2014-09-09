@@ -44,7 +44,7 @@ public class _10775_InSearchOfGiants extends Quest implements ScriptFile
 	private static final int SCROLL_EWC = 951;
 	private static final int SCROLL_EAC = 952;
 	
-	private static final int minLevel = 30;
+	private static final int minLevel = 46;
 	private static final int maxLevel = 99;
 	
 	
@@ -63,7 +63,8 @@ public class _10775_InSearchOfGiants extends Quest implements ScriptFile
 	public _10775_InSearchOfGiants()
 	{
 		super(false);
-		addStartNpc(ROMBEL, BElKADHI);
+		addStartNpc(ROMBEL);
+		addTalkId(BElKADHI);
 		
 		addKillId(DARK_LORD, DARK_KNIGHT, SOLDIER_DARKNESS, OSSIUD, PERUM, LIANGMA, ACHELANDO, STYRINDO, ASHENDE);
 
@@ -89,7 +90,6 @@ public class _10775_InSearchOfGiants extends Quest implements ScriptFile
 		{
 			st.takeAllItems(ENERGY_OF_REGENERATION);
 			st.giveItems(STEEL_DOOR_COIN, 46);
-			st.giveItems(SCROLL_EWC, 2);
 			st.giveItems(SCROLL_EAC, 9);
 			st.addExpAndSp(4443600, 1066);
 			
