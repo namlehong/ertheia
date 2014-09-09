@@ -264,10 +264,7 @@ public class HtmCache
 	{
 		for(int i = 0; i < _cache.length; i++)
 		{
-			if(_cache[i] == null)
-				_log.info("non cached lang:"+i);
-			else
-				_cache[i].removeAll();
+			_cache[i].removeAll();
 		}
 	}
 }

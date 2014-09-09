@@ -26,31 +26,39 @@ public class FPCCreator
 	{
 		String name = FakeNameDAO.getInstance().getName();
 		
-		ClassId newClass = NamePatternHolder.getStartClass(name);
+		ClassId newClassId = NamePatternHolder.getStartClass(name);
 		
-		if(newClass == null)
+		if(newClassId == null)
 		{
 			_log.info("new char bad name:"+name);
 			return;
 		}
 		
 		try{
-			_log.info("Create NewChar:"+name+" Class: " + newClass);
-			createNewChar(newClass.getId(), name, "_fake_account");
+			createNewChar(newClassId, name, "_fake_account");
 		}catch(Exception e){
 			_log.error("create char name:"+name, e);
 		}
 	}
     
-	public static void createNewChar(int _classId, String _name, String _account)
+	public static void createNewChar(ClassId _classId, String _name, String _account)
 	{
 		Sex sex = NamePatternHolder.getSexByName(_name);
 		
-		if(_classId == 123)
+		switch (_classId) {
+		case KAMAEL_M_SOLDIER:
 			sex = Sex.MALE;
-		
-		if(_classId == 124)
+			break;
+			
+		case KAMAEL_F_SOLDIER:
+		case ERTHEIA_FIGHTER:
+		case ERTHEIA_MAGE:
 			sex = Sex.FEMALE;
+			break;
+
+		default:
+			break;
+		}
 		
 		int _sex = sex != null ? sex.ordinal() : Rnd.get(0,1);
 		
@@ -58,7 +66,7 @@ public class FPCCreator
 		int _hairColor = Rnd.get(0,2);
 		int _face = Rnd.get(0,2);
 		
-		Player newChar = Player.create(_classId, _sex, _account, _name, _hairStyle, _hairColor, _face);
+		Player newChar = Player.create(_classId.getId(), _sex, _account, _name, _hairStyle, _hairColor, _face);
 		
 		if(newChar == null)
 			return;
@@ -67,7 +75,7 @@ public class FPCCreator
 		
 		FakePlayerDAO.addFPC(newChar.getObjectId());
 		
-		_log.info("Create NewChar:"+_name+" in Account: "+_account+" Class: " + _classId + " Sex: " + _sex);
+		_log.info("Create NewChar:"+_name+" Class: " + _classId + " Sex: " + _sex);
 		
 		int _obj_id = newChar.getObjectId();
 		
