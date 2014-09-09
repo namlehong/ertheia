@@ -35,21 +35,21 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 		
 		if(q255 != null)
 			player.processQuestEvent(q255.getName(), _bypass, null);
-		if(q10750 != null)
+		if(q10750 != null && _bypass.split("_")[1] == "10750")
 			player.processQuestEvent(q10750.getName(), _bypass, null);
-		if(q10751 != null)
+		if(q10751 != null && _bypass.split("_")[1] == "10751")
 			player.processQuestEvent(q10751.getName(), _bypass, null);
-		if(q10755 != null)
+		if(q10755 != null && _bypass.split("_")[1] == "10755")
 			player.processQuestEvent(q10755.getName(), _bypass, null);
-		if(q10760 != null)
+		if(q10760 != null && _bypass.split("_")[1] == "10760")
 			player.processQuestEvent(q10760.getName(), _bypass, null);
-		if(q10769 != null)
+		if(q10769 != null && _bypass.split("_")[1] == "10769")
 			player.processQuestEvent(q10769.getName(), _bypass, null);
-		if(q10774 != null)
+		if(q10774 != null && _bypass.split("_")[1] == "10774")
 			player.processQuestEvent(q10774.getName(), _bypass, null);
-		if(q10779 != null)
+		if(q10779 != null && _bypass.split("_")[1] == "10779")
 			player.processQuestEvent(q10779.getName(), _bypass, null);
-		if(q10785 != null)
+		if(q10785 != null && _bypass.split("_")[1] == "10785")
 			player.processQuestEvent(q10785.getName(), _bypass, null);
 	}
 }
