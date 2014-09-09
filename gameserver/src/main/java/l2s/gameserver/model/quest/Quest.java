@@ -745,7 +745,7 @@ public class Quest
 		}
 		if(res != null)
 		{
-			System.out.println("notifyEvent res " + res.toString());
+			//System.out.println("notifyEvent res " + res.toString());
 			showResult(npc, qs.getPlayer(), res);
 		}
 		

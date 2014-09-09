@@ -33,7 +33,7 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 		Quest q10779 = QuestManager.getQuest(10779);
 		Quest q10785 = QuestManager.getQuest(10785);
 		
-		System.out.println("RequestTutorialPassCmdToServer _bypass " + _bypass.split("_")[1]);
+		//System.out.println("RequestTutorialPassCmdToServer _bypass " + _bypass.split("_")[1]);
 		
 		if(q255 != null)
 			player.processQuestEvent(q255.getName(), _bypass, null);
