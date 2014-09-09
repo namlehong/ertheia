@@ -60,6 +60,7 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 			st.playSound(SOUND_ACCEPT);
 			
 			st.addSpawn(MAGIC_OWL, 17672, 114888, -11738, 180000);
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("dismiss_owl"))
@@ -67,6 +68,7 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 			st.setCond(2);
 			
 			npc.deleteMe();
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("30484-8.htm"))
