@@ -82,7 +82,7 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 		{
 			if(checkStartCondition(player))
 			{
-				Quest q = QuestManager.getQuest(10755);
+				Quest q = QuestManager.getQuest(10760);
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
@@ -216,7 +216,7 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 			if(player.getVarBoolean("@received_navari_letter_2nd"))
 				return;
 
-			Quest q = QuestManager.getQuest(10755);
+			Quest q = QuestManager.getQuest(10760);
 			player.processQuestEvent(q.getName(), "start_quest", null);
 			
 		}

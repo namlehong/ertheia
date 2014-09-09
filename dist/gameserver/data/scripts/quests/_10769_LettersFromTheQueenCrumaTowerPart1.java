@@ -84,7 +84,7 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		{
 			if(checkStartCondition(player))
 			{
-				Quest q = QuestManager.getQuest(10755);
+				Quest q = QuestManager.getQuest(10769);
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
@@ -222,7 +222,7 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 			if(player.getVarBoolean("@received_navari_letter_4th"))
 				return;
 
-			Quest q = QuestManager.getQuest(10755);
+			Quest q = QuestManager.getQuest(10769);
 			player.processQuestEvent(q.getName(), "start_quest", null);
 			
 		}
