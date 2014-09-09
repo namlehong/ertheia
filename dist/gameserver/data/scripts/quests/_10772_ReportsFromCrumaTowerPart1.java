@@ -65,6 +65,8 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 		if(event.equalsIgnoreCase("33991-2.htm"))
 		{
 			st.setCond(2);
+			
+			npc.deleteMe();
 		}
 		
 		if(event.equalsIgnoreCase("30484-8.htm"))
