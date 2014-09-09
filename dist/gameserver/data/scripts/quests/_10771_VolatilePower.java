@@ -59,8 +59,9 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 	public _10771_VolatilePower()
 	{
 		super(false);
-		addStartNpc(JANSSEN, HIDDEN_CRUSHER);
-		
+		addStartNpc(JANSSEN);
+
+		addTalkId(HIDDEN_CRUSHER);
 		//addKillId(FRAGMENT_EATER);
 
 		addLevelCheck(minLevel, maxLevel);
