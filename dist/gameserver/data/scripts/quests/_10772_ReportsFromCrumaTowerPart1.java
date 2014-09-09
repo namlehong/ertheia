@@ -95,6 +95,10 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 				if(checkStartCondition(st.getPlayer()))
 					htmltext = "30484-1.htm";
 			}
+			else if(cond == 1)
+			{
+				htmltext = "30484-5.htm";
+			}
 		}
 		else if(npcId == MAGIC_OWL && st.getCond() == 1)
 		{
