@@ -139,7 +139,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
 			//System.out.println("Mark id " + MarkId);
-			if(MarkId == 10769)
+			if(MarkId == 10774)
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
@@ -205,7 +205,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		if(checkStartCondition(player))
 		{
 			//System.out.println("Player enter and fit quest condition");
-			Quest q = QuestManager.getQuest(10769);
+			Quest q = QuestManager.getQuest(10774);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
 		
@@ -233,7 +233,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		
 		st.getPlayer().sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
-		st.showQuestionMark(10769);
+		st.showQuestionMark(10774);
 		
 		st.playSound(SOUND_TUTORIAL);
 		
