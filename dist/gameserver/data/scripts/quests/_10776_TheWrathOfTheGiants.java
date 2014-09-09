@@ -86,10 +86,9 @@ public class _10776_TheWrathOfTheGiants extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("30485-6.htm"))
 		{
-			st.takeAllItems(NORMAL_FRAGMENT_DUST);
 			st.giveItems(STEEL_DOOR_COIN, 20);
-			st.giveItems(SCROLL_EAC, 5);
-			st.addExpAndSp(2708350, 650);
+			st.giveItems(SCROLL_EAC, 4);
+			st.addExpAndSp(4838400, 1161);
 			
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
@@ -100,7 +99,7 @@ public class _10776_TheWrathOfTheGiants extends Quest implements ScriptFile
 		{
 			if(st.getCond() == 1)
 			{
-				st.takeAllItems(itemId)
+				st.takeAllItems(REGENERATION_DEVICE_CORE);
 				st.setCond(2);
 				//spawn Giant Narsides and attack player and despawn after 3 minutes
 				giant_narsides = st.addSpawn(GIANT_NARSIDES, 16376, 113336, -9094, 180000);
