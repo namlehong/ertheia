@@ -1,10 +1,12 @@
 package quests;
 
+import l2s.gameserver.ai.CtrlEvent;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.scripts.ScriptFile;
+import l2s.gameserver.utils.Location;
 
 /**
  * Created by Archer on 9/9/2014.
@@ -19,6 +21,7 @@ public class _10710_LifeEnergyRepository extends Quest implements ScriptFile
     private static final int LIFE_ENERGY_REPOSITORY = 33962;
     // Quest's Monster
     private static final int EMBRYO = 27521;
+    private static final int EMBRYO_COUNT = 2;
     // Quest's Items
     private static final int SHINE_STONE_FRAGMENT = 39512;
     // Quest's Reward
@@ -53,6 +56,23 @@ public class _10710_LifeEnergyRepository extends Quest implements ScriptFile
                 qs.setCond(1);
                 qs.playSound(SOUND_ACCEPT);
                 htmlText = "03.htm";
+            }
+            else if(event.equalsIgnoreCase("destroy_crystal"))
+            {
+                qs.setCond(2);
+                qs.giveItems(SHINE_STONE_FRAGMENT,1);
+                qs.playSound(SOUND_MIDDLE);
+                Player player = qs.getPlayer();
+                if(player != null)
+                {
+                    for(int i = 0; i < EMBRYO_COUNT; i++)
+                    {
+                        Location loc = Location.findAroundPosition(player.getLoc(),100, player.getGeoIndex());
+                        NpcInstance mob = qs.addSpawn(EMBRYO, loc.getX(),loc.getY(), loc.getZ());
+                        mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 100000);
+                    }
+                }
+                htmlText = null;
             }
             else if(event.equalsIgnoreCase("get_reward"))
             {
@@ -93,7 +113,7 @@ public class _10710_LifeEnergyRepository extends Quest implements ScriptFile
                         }
                         else if(cond == 2)
                         {
-                            htmlText = "04.htm";
+                            htmlText = "05.htm";
                         }
                     }
                     else if(npcId == LIFE_ENERGY_REPOSITORY)
@@ -112,14 +132,6 @@ public class _10710_LifeEnergyRepository extends Quest implements ScriptFile
     @Override
     public String onKill(final NpcInstance npc, final QuestState qs)
     {
-        if(npc != null && qs != null)
-        {
-            int cond = qs.getCond();
-            if(cond == 1)
-            {
-
-            }
-        }
         return null;
     }
 
