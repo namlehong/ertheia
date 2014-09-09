@@ -62,7 +62,7 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 			st.addSpawn(MAGIC_OWL, 17672, 114888, -11738, 180000);
 		}
 		
-		if(event.equalsIgnoreCase("33991-2.htm"))
+		if(event.equalsIgnoreCase("dismiss_owl"))
 		{
 			st.setCond(2);
 			
@@ -98,6 +98,10 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 			else if(cond == 1)
 			{
 				htmltext = "30484-5.htm";
+			}
+			else if(cond == 2)
+			{
+				htmltext = "30484-7.htm";
 			}
 		}
 		else if(npcId == MAGIC_OWL && st.getCond() == 1)
