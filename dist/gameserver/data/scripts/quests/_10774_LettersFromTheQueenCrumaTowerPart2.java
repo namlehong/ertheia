@@ -35,8 +35,8 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 	private static final int SCROLL_EWC = 951;
 	private static final int SCROLL_EAC = 952;
 	
-	private static final int minLevel = 40;
-	private static final int maxLevel = 45;
+	private static final int minLevel = 46;
+	private static final int maxLevel = 52;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
 	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 52.\nNữ Hoàng Navari sẽ gửi bức thư tiếp theo";
