@@ -58,6 +58,8 @@ public class _10772_ReportsFromCrumaTowerPart1 extends Quest implements ScriptFi
 			st.setCond(1);
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
+			
+			st.addSpawn(MAGIC_OWL, npc.getLoc().getX() + 40, npc.getLoc().getY() + 40, npc.getLoc().getZ(), 180000);
 		}
 		
 		if(event.equalsIgnoreCase("33991-2.htm"))
