@@ -263,6 +263,11 @@ public class HtmCache
 	public void clear()
 	{
 		for(int i = 0; i < _cache.length; i++)
-			_cache[i].removeAll();
+		{
+			if(_cache[i] == null)
+				_log.info("non cached lang:"+i);
+			else
+				_cache[i].removeAll();
+		}
 	}
 }
