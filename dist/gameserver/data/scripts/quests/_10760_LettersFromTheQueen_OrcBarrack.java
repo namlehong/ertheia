@@ -34,7 +34,7 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 	private static final int STEEL_DOOR_COIN = 37045;
 	
 	private static final int minLevel = 30;
-	private static final int maxLevel = 99;
+	private static final int maxLevel = 40;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
 	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 38.\nVà Nữ Hoàng Navari sẽ gửi bức thư tiếp theo";

@@ -34,7 +34,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	private static final int STEEL_DOOR_COIN = 37045;
 	
 	private static final int minLevel = 20;
-	private static final int maxLevel = 99;
+	private static final int maxLevel = 30;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
 	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 30.\nVà Nữ Hoàng Navari sẽ gửi bức thư tiếp theo";
