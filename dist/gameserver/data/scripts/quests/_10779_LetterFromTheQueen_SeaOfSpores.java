@@ -23,23 +23,22 @@ import l2s.gameserver.scripts.ScriptFile;
  * @author Hien Son
  */
 
-public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
+public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
 {
 
-	private static final int SYLVAIN = 30070;
-	private static final int ROMBEL = 30487;
+	private static final int HOLLINT = 30191;
+	private static final int ANDY = 33845;
 	
-	private static final int SOE_DION = 39595;
-	private static final int SOE_CRUMA = 39596;
+	private static final int SOE_OREN = 39574;
+	private static final int SOE_SEA_OF_SPORES = 39575;
 	private static final int STEEL_DOOR_COIN = 37045;
-	private static final int SCROLL_EWC = 951;
-	private static final int SCROLL_EAC = 952;
+	private static final int SCROLL_EWB = 947;
 	
-	private static final int minLevel = 46;
-	private static final int maxLevel = 50;
+	private static final int minLevel = 52;
+	private static final int maxLevel = 57;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
-	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 52.\nNữ Hoàng Navari sẽ gửi bức thư tiếp theo";
+	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 58.\nNữ Hoàng Navari sẽ gửi bức thư tiếp theo";
 	
 	@Override
 	public void onLoad()
@@ -56,13 +55,13 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 	{
 	}
 	
-	public _10774_LettersFromTheQueenCrumaTowerPart2()
+	public _10779_LetterFromTheQueen_SeaOfSpores()
 	{
 		super(false);
 
 		CharListenerList.addGlobal(this);
 		
-		addTalkId(SYLVAIN, ROMBEL);
+		addTalkId(HOLLINT, ANDY);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -77,14 +76,14 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 
 		String htmltext = event;
 
-		//System.out.println("quest event " + event.toString());
+		System.out.println("quest event " + event.toString());
 		
 		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
 		{
 			if(checkStartCondition(player))
 			{
-				Quest q = QuestManager.getQuest(10774);
+				Quest q = QuestManager.getQuest(10779);
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
@@ -108,14 +107,14 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			htmltext = "";
 		}
 		
-		if(event.equalsIgnoreCase("Quest _10774_LettersFromTheQueenCrumaTowerPart2 to_dion"))
+		if(event.equalsIgnoreCase("Quest _10779_LetterFromTheQueen_SeaOfSpores to_dion"))
 		{
-			//System.out.println("in Quest _10774_LettersFromTheQueenCrumaTowerPart2 to_dion");
+			//System.out.println("in Quest _10779_LetterFromTheQueen_SeaOfSpores to_dion");
 			if(st.getCond() == 1)
 			{
-				if(getItemCountById(player, SOE_DION) > 0)
+				if(getItemCountById(player, SOE_OREN) > 0)
 				{
-					st.takeItems(SOE_DION, 1);
+					st.takeItems(SOE_OREN, 1);
 					player.teleToLocation(16376, 142296, -2718);
 					player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 				}
@@ -127,9 +126,9 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			htmltext = "";
 		}
 		//System.out.println("out " + event);
-		if(event.equalsIgnoreCase("Quest _10774_LettersFromTheQueenCrumaTowerPart2 close_window"))
+		if(event.equalsIgnoreCase("Quest _10779_LetterFromTheQueen_SeaOfSpores close_window"))
 		{
-			//System.out.println("in Quest _10774_LettersFromTheQueenCrumaTowerPart2 close_window");
+			//System.out.println("in Quest _10779_LetterFromTheQueen_SeaOfSpores close_window");
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 			htmltext = "";
 		}
@@ -139,7 +138,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
 			//System.out.println("Mark id " + MarkId);
-			if(MarkId == 10774)
+			if(MarkId == 10779)
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
@@ -147,27 +146,26 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			}
 		}
 
-		if(event.equalsIgnoreCase("30070-3.htm"))
+		if(event.equalsIgnoreCase("30191-3.htm"))
 		{
-			st.giveItems(SOE_CRUMA, 1);
+			st.giveItems(SOE_SEA_OF_SPORES, 1);
 			st.setCond(2);
 			
-			htmltext = "30070-3.htm";
+			htmltext = "30191-3.htm";
 		}
 		
-		if(event.equalsIgnoreCase("30487-3.htm"))
+		if(event.equalsIgnoreCase("33845-2.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 46);
-			st.giveItems(SCROLL_EAC, 9);
-			st.addExpAndSp(4443600, 1066);
+			st.giveItems(STEEL_DOOR_COIN, 37);
+			st.giveItems(SCROLL_EWB, 3);
+			st.addExpAndSp(635250, 152);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			st.getPlayer().sendPacket(new ExShowScreenMessage(NEXT_LETTER_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 			
-			htmltext = "30487-3.htm";
+			htmltext = "33845-2.htm";
 		}
-		//System.out.println("quest htmltext " + htmltext.toString());
 		
 		if(htmltext.isEmpty())
 			return null;
@@ -182,18 +180,18 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
-		if(npcId == SYLVAIN)
+		if(npcId == HOLLINT)
 		{
 			if(cond == 1)
 			{
-				htmltext = "30070-1.htm";
+				htmltext = "30191-1.htm";
 			}
 			else if(cond == 2)
-				htmltext = "30070-3.htm";
+				htmltext = "30191-3.htm";
 		}
-		else if(npcId == ROMBEL && st.getCond() == 2)
+		else if(npcId == ANDY && st.getCond() == 2)
 		{
-			htmltext = "30487-1.htm";
+			htmltext = "33845-1.htm";
 		}
 		
 		return htmltext;
@@ -202,14 +200,14 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 	@Override
 	public void onPlayerEnter(Player player)
 	{
-		if(player.getVarBoolean("@received_navari_letter_5th"))
+		if(player.getVarBoolean("@received_navari_letter_6th"))
 			return;
 		
-		System.out.println("Player enter");
+		//System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
-			System.out.println("Player enter and fit quest condition");
-			Quest q = QuestManager.getQuest(10774);
+			//System.out.println("Player enter and fit quest condition");
+			Quest q = QuestManager.getQuest(10779);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
 		
@@ -221,11 +219,11 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		//System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
 		if(oldLvl < minLevel && newLvl >= minLevel && checkStartCondition(player))
 		{
-			//System.out.println("received_navari_letter_5th " + player.getVarBoolean("@received_navari_letter_5th"));
-			if(player.getVarBoolean("@received_navari_letter_5th"))
+			//System.out.println("received_navari_letter_6th " + player.getVarBoolean("@received_navari_letter_6th"));
+			if(player.getVarBoolean("@received_navari_letter_6th"))
 				return;
 
-			Quest q = QuestManager.getQuest(10774);
+			Quest q = QuestManager.getQuest(10779);
 			player.processQuestEvent(q.getName(), "start_quest", null);
 			
 		}
@@ -237,13 +235,13 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		
 		st.getPlayer().sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
-		st.showQuestionMark(10774);
+		st.showQuestionMark(10779);
 		
 		st.playSound(SOUND_TUTORIAL);
 		
-		st.giveItems(SOE_DION, 1);
+		st.giveItems(SOE_OREN, 1);
 		
-		st.getPlayer().setVar("@received_navari_letter_5th", true);
+		st.getPlayer().setVar("@received_navari_letter_6th", true);
 	}
 	
 	private long getItemCountById(Player player, int itemId)
@@ -266,7 +264,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10774_LettersFromTheQueenCrumaTowerPart2") == null);
+		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10779_LetterFromTheQueen_SeaOfSpores") == null);
 	}
 
 }
