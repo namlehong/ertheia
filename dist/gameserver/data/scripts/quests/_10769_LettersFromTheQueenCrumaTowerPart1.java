@@ -216,7 +216,7 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 	public void onLevelChange(Player player, int oldLvl, int newLvl)
 	{
 		//System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
-		if(oldLvl < 40 && newLvl >= 40 && checkStartCondition(player))
+		if(oldLvl < minLevel && newLvl >= minLevel && checkStartCondition(player))
 		{
 			//System.out.println("received_navari_letter_4th " + player.getVarBoolean("@received_navari_letter_4th"));
 			if(player.getVarBoolean("@received_navari_letter_4th"))
