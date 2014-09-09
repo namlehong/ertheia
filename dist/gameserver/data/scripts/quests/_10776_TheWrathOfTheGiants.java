@@ -110,7 +110,7 @@ public class _10776_TheWrathOfTheGiants extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("start_fight"))
 		{
-			if(st.getCond() == 1)
+			if(st.getCond() == 2)
 			{
 				st.setCond(3);
 				
@@ -158,7 +158,7 @@ public class _10776_TheWrathOfTheGiants extends Quest implements ScriptFile
 		
 		if(npcId == DESTROYED_DEVICE)
 		{
-			if(cond == 1)
+			if(cond == 1 || cond == 2)
 			{
 				htmltext = "32366-1.htm";
 			}
