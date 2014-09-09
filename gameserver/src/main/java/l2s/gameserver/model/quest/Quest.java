@@ -743,7 +743,7 @@ public class Quest
 			showError(qs.getPlayer(), e);
 			return;
 		}
-		showResult(npc, qs.getPlayer(), res);
+		//showResult(npc, qs.getPlayer(), res);
 	}
 
 	public void notifyKill(NpcInstance npc, QuestState qs)
