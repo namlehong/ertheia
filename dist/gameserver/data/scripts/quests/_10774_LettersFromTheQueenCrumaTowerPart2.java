@@ -77,7 +77,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 
 		String htmltext = event;
 
-		//System.out.println("quest event " + event.toString());
+		System.out.println("quest event " + event.toString());
 		
 		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
@@ -167,6 +167,7 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 			
 			htmltext = "30487-3.htm";
 		}
+		System.out.println("quest htmltext " + htmltext.toString());
 		
 		if(htmltext.isEmpty())
 			return null;
