@@ -143,7 +143,7 @@ public class _255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterLis
 				st.showQuestionMark(36);
 				st.playSound(SOUND_TUTORIAL);
 			}
-			else if(level <= 85 && player.isBaseClassActive() && player.getMenteeList().getMentor() == 0)
+			else if(level <= 85 && player.isBaseClassActive() && player.getMenteeList().getMentor() == 0 && player.getRace() != Race.ERTHEIA)
 			{
 				st.showQuestionMark(37);
 				st.playSound(SOUND_TUTORIAL);

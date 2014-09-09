@@ -74,12 +74,12 @@ public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("spawn_windima"))
 		{
-			NpcInstance windima = st.addSpawn(WINDIMA_CLONE, -93592, 89912, -3236, 53988, 0, 120000);
+			NpcInstance windima = st.addSpawn(WINDIMA_CLONE, -93592, 89912, -3236, 53988, 0, 180000);
 			
 			windima.setRunning();
-			windima.setAggressionTarget(st.getPlayer());
-			windima.moveToLocation(st.getPlayer().getLoc(), 50, true);
-			//windima.doAttack(st.getPlayer());
+			windima.setAggressionTarget(player);
+			windima.getAggroList().addDamageHate(player, 10000, 10000);
+			windima.getAI().Attack(player, false, false);
 			
 			return null;
 		}
