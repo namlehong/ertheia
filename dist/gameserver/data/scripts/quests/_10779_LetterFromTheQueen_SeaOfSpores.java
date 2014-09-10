@@ -115,7 +115,7 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 				if(getItemCountById(player, SOE_OREN) > 0)
 				{
 					st.takeItems(SOE_OREN, 1);
-					player.teleToLocation(16376, 142296, -2718);
+					player.teleToLocation(83633, 53064, -1456);
 					player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 				}
 				else
