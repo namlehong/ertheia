@@ -17,7 +17,7 @@ import l2s.gameserver.scripts.ScriptFile;
  * Created by Archer on 9/9/2014.
  * Project ertheia
  */
-public class _10408_KekropusLetterTheSwampOfScreams extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
+    public class _10408_KekropusLetterTheSwampOfScreams extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
 {
     private static final int MIN_LEVEL = 65;
     private static final int MAX_LEVEL = 69;
