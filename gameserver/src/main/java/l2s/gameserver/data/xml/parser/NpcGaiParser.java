@@ -140,6 +140,8 @@ public final class NpcGaiParser extends AbstractDirParser<NpcHolder>
 
 //			NpcTemplate template = new NpcTemplate(set);
 			NpcTemplate template = NpcHolder.getInstance().getTemplateNoWarn(npcId);
+			if(template == null)
+				continue;
 			if(template.isInstanceOf(Servitor.class))
 			{
 				for(Skill skill: template.getSkills().valueCollection())
