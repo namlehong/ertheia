@@ -23,22 +23,22 @@ import l2s.gameserver.scripts.ScriptFile;
  * @author Hien Son
  */
 
-public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
+public class _10782_LetterFromTheQueen_ForsakenPlain extends Quest implements ScriptFile, OnPlayerEnterListener, OnLevelChangeListener
 {
 
-	private static final int HOLLINT = 30191;
-	private static final int ANDY = 33845;
+	private static final int ORVEN = 30857;
+	private static final int NOVAIN = 33866;
 	
-	private static final int SOE_OREN = 39574;
-	private static final int SOE_SEA_OF_SPORES = 39575;
+	private static final int SOE_ADEN = 39576;
+	private static final int SOE_FORSAKEN_PLAINS = 39577;
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EWB = 947;
 	
-	private static final int minLevel = 52;
-	private static final int maxLevel = 57;
+	private static final int minLevel = 58;
+	private static final int maxLevel = 60;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
-	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 58.\nNữ Hoàng Navari sẽ gửi bức thư tiếp theo";
+	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 61.\nNữ Hoàng Navari sẽ gửi bức thư tiếp theo";
 	
 	@Override
 	public void onLoad()
@@ -55,13 +55,13 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 	{
 	}
 	
-	public _10779_LetterFromTheQueen_SeaOfSpores()
+	public _10782_LetterFromTheQueen_ForsakenPlain()
 	{
 		super(false);
 
 		CharListenerList.addGlobal(this);
 		
-		addTalkId(HOLLINT, ANDY);
+		addTalkId(ORVEN, NOVAIN);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -76,14 +76,14 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 
 		String htmltext = event;
 
-		System.out.println("quest event " + event.toString());
+		//System.out.println("quest event " + event.toString());
 		
 		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
 		{
 			if(checkStartCondition(player))
 			{
-				Quest q = QuestManager.getQuest(10779);
+				Quest q = QuestManager.getQuest(10782);
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
@@ -107,28 +107,28 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 			htmltext = "";
 		}
 		
-		if(event.equalsIgnoreCase("Quest _10779_LetterFromTheQueen_SeaOfSpores to_oren"))
+		if(event.equalsIgnoreCase("Quest _10782_LetterFromTheQueen_ForsakenPlain to_oren"))
 		{
-			//System.out.println("in Quest _10779_LetterFromTheQueen_SeaOfSpores to_dion");
+			//System.out.println("in Quest _10782_LetterFromTheQueen_ForsakenPlain to_dion");
 			if(st.getCond() == 1)
 			{
-				if(getItemCountById(player, SOE_OREN) > 0)
+				if(getItemCountById(player, SOE_ADEN) > 0)
 				{
-					st.takeItems(SOE_OREN, 1);
-					player.teleToLocation(83633, 53064, -1456);
+					st.takeItems(SOE_ADEN, 1);
+					player.teleToLocation(147446, 22761, -1984);
 					player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 				}
 				else
 				{
-					player.sendMessage("Không tìm thấy Scroll of Escape: Town of Oren");
+					player.sendMessage("Không tìm thấy Scroll of Escape: Town of Aden");
 				}
 			}
 			htmltext = "";
 		}
 		//System.out.println("out " + event);
-		if(event.equalsIgnoreCase("Quest _10779_LetterFromTheQueen_SeaOfSpores close_window"))
+		if(event.equalsIgnoreCase("Quest _10782_LetterFromTheQueen_ForsakenPlain close_window"))
 		{
-			//System.out.println("in Quest _10779_LetterFromTheQueen_SeaOfSpores close_window");
+			//System.out.println("in Quest _10782_LetterFromTheQueen_ForsakenPlain close_window");
 			player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 			htmltext = "";
 		}
@@ -138,7 +138,7 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
 			//System.out.println("Mark id " + MarkId);
-			if(MarkId == 10779)
+			if(MarkId == 10782)
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
@@ -146,25 +146,25 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 			}
 		}
 
-		if(event.equalsIgnoreCase("30191-3.htm"))
+		if(event.equalsIgnoreCase("30857-3.htm"))
 		{
-			st.giveItems(SOE_SEA_OF_SPORES, 1);
+			st.giveItems(SOE_FORSAKEN_PLAINS, 1);
 			st.setCond(2);
 			
-			htmltext = "30191-3.htm";
+			htmltext = "30857-3.htm";
 		}
 		
-		if(event.equalsIgnoreCase("33845-2.htm"))
+		if(event.equalsIgnoreCase("33866-2.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 37);
-			st.giveItems(SCROLL_EWB, 3);
-			st.addExpAndSp(635250, 152);
+			st.giveItems(STEEL_DOOR_COIN, 60);
+			st.giveItems(SCROLL_EWB, 10);
+			st.addExpAndSp(731010, 175);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			st.getPlayer().sendPacket(new ExShowScreenMessage(NEXT_LETTER_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 			
-			htmltext = "33845-2.htm";
+			htmltext = "33866-2.htm";
 		}
 		
 		if(htmltext.isEmpty())
@@ -180,18 +180,18 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 		String htmltext = "noquest";
 		int npcId = npc.getNpcId();
 		int cond = st.getCond();
-		if(npcId == HOLLINT)
+		if(npcId == ORVEN)
 		{
 			if(cond == 1)
 			{
-				htmltext = "30191-1.htm";
+				htmltext = "30857-1.htm";
 			}
 			else if(cond == 2)
-				htmltext = "30191-3.htm";
+				htmltext = "30857-3.htm";
 		}
-		else if(npcId == ANDY && st.getCond() == 2)
+		else if(npcId == NOVAIN && st.getCond() == 2)
 		{
-			htmltext = "33845-1.htm";
+			htmltext = "33866-1.htm";
 		}
 		
 		return htmltext;
@@ -200,14 +200,14 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 	@Override
 	public void onPlayerEnter(Player player)
 	{
-		if(player.getVarBoolean("@received_navari_letter_6th"))
+		if(player.getVarBoolean("@received_navari_letter_7th"))
 			return;
 		
 		//System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
 			//System.out.println("Player enter and fit quest condition");
-			Quest q = QuestManager.getQuest(10779);
+			Quest q = QuestManager.getQuest(10782);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
 		
@@ -219,11 +219,11 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 		//System.out.println("level change oldLvl " + oldLvl + " newLvl " + newLvl + "checkStartCondition " + checkStartCondition(player));
 		if(oldLvl < minLevel && newLvl >= minLevel && checkStartCondition(player))
 		{
-			//System.out.println("received_navari_letter_6th " + player.getVarBoolean("@received_navari_letter_6th"));
-			if(player.getVarBoolean("@received_navari_letter_6th"))
+			//System.out.println("received_navari_letter_7th " + player.getVarBoolean("@received_navari_letter_7th"));
+			if(player.getVarBoolean("@received_navari_letter_7th"))
 				return;
 
-			Quest q = QuestManager.getQuest(10779);
+			Quest q = QuestManager.getQuest(10782);
 			player.processQuestEvent(q.getName(), "start_quest", null);
 			
 		}
@@ -235,13 +235,13 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 		
 		st.getPlayer().sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
-		st.showQuestionMark(10779);
+		st.showQuestionMark(10782);
 		
 		st.playSound(SOUND_TUTORIAL);
 		
-		st.giveItems(SOE_OREN, 1);
+		st.giveItems(SOE_ADEN, 1);
 		
-		st.getPlayer().setVar("@received_navari_letter_6th", true);
+		st.getPlayer().setVar("@received_navari_letter_7th", true);
 	}
 	
 	private long getItemCountById(Player player, int itemId)
@@ -264,7 +264,7 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10779_LetterFromTheQueen_SeaOfSpores") == null);
+		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10782_LetterFromTheQueen_ForsakenPlain") == null);
 	}
 
 }
