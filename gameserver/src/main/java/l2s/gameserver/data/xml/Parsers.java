@@ -14,6 +14,7 @@ import l2s.gameserver.data.xml.parser.CrystallizationDataParser;
 import l2s.gameserver.data.xml.parser.CubicParser;
 import l2s.gameserver.data.xml.parser.DomainParser;
 import l2s.gameserver.data.xml.parser.DoorParser;
+import l2s.gameserver.data.xml.parser.DropListDataParser;
 import l2s.gameserver.data.xml.parser.EnchantItemParser;
 import l2s.gameserver.data.xml.parser.EnchantSkillGroupParser;
 import l2s.gameserver.data.xml.parser.EventParser;
@@ -29,6 +30,7 @@ import l2s.gameserver.data.xml.parser.KarmaIncreaseDataParser;
 import l2s.gameserver.data.xml.parser.LevelBonusParser;
 import l2s.gameserver.data.xml.parser.LevelUpRewardParser;
 import l2s.gameserver.data.xml.parser.MultiSellParser;
+import l2s.gameserver.data.xml.parser.NpcGaiParser;
 import l2s.gameserver.data.xml.parser.NpcParser;
 import l2s.gameserver.data.xml.parser.OptionDataParser;
 import l2s.gameserver.data.xml.parser.PetDataParser;
@@ -80,6 +82,8 @@ public abstract class Parsers
 		ClassDataParser.getInstance().load();
 		TransformTemplateParser.getInstance().load();
 		NpcParser.getInstance().load();
+		NpcGaiParser.getInstance().load(); // GAI
+		DropListDataParser.getInstance().load(); // l2on
 		PetDataParser.getInstance().load();
 
 		DomainParser.getInstance().load();

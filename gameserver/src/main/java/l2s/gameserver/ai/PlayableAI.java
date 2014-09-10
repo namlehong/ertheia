@@ -261,7 +261,7 @@ public class PlayableAI extends CharacterAI
 	}
 
 	@Override
-	protected final void onEvtThink()
+	protected void onEvtThink()
 	{
 		Playable actor = getActor();
 		CtrlIntention intention = getIntention();

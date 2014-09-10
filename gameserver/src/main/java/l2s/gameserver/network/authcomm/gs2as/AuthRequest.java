@@ -1,7 +1,6 @@
 package l2s.gameserver.network.authcomm.gs2as;
 
 import jonelo.jacksum.algorithm.Union;
-
 import l2s.gameserver.Config;
 import l2s.gameserver.GameServer;
 import l2s.gameserver.network.authcomm.SendablePacket;

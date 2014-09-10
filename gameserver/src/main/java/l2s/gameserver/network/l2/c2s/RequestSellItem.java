@@ -104,8 +104,10 @@ public class RequestSellItem extends L2GameClientPacket
 				ItemInstance item = activeChar.getInventory().getItemByObjectId(objectId);
 				if(item == null || item.getCount() < count || !item.canBeSold(activeChar))
 					continue;
+				
+				long unit_price = item.getReferencePrice() > 2000000 ? 100000 : item.getReferencePrice()/20;
 
-				long price = Config.ALT_SELL_ITEM_ONE_ADENA ? 1 : SafeMath.mulAndCheck(item.getReferencePrice(), count) / 2;
+				long price = Config.ALT_SELL_ITEM_ONE_ADENA ? 1 : SafeMath.mulAndCheck(unit_price, count) / 2;
 
 				ItemInstance refund = activeChar.getInventory().removeItemByObjectId(objectId, count);
 

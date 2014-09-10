@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (npc)*>
+<!ELEMENT npc (droplist|spoillist)*>
+<!ATTLIST npc
+	id CDATA #REQUIRED>
+<!ELEMENT droplist (category)*>
+<!ELEMENT category (item)*>
+<!ATTLIST category
+	chance CDATA #IMPLIED
+	id CDATA #IMPLIED>
+<!ELEMENT spoillist (item)*>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item
+	chance CDATA #REQUIRED
+	id CDATA #REQUIRED
+	max CDATA #REQUIRED
+	min CDATA #REQUIRED>

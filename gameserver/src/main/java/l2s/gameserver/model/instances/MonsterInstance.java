@@ -992,4 +992,52 @@ public class MonsterInstance extends NpcInstance
 	{
 		return _isUnsowing;
 	}
+	
+	/**
+	 * New method
+	 */
+	
+	/**
+	 * Method takeSweep.
+	 * @return List<RewardItem>
+	 */
+	public List<RewardItem> takePlunder(Player activeChar)
+	{
+		//System.out.println("takePlunder");
+		sweepLock.lock();
+		try
+		{
+			//System.out.println("test level");
+			final int diff = activeChar.getLevel() - getLevel();
+			
+			if(diff > 9 || diff < -11)
+			{
+				//System.out.println("level is not appropriated " + diff);
+				return null;
+			}
+			
+			for (Map.Entry<RewardType, RewardList> entry : getTemplate().getRewards().entrySet())
+			{
+				RewardType type = entry.getKey();
+				RewardList list = entry.getValue();
+				//System.out.println("Reward type " + type);
+				if ((type == RewardType.SWEEP))
+				{
+					//System.out.println("Found sweep");
+					double mod = calcStat(Stats.REWARD_MULTIPLIER, 1., activeChar, null);
+					mod *= Experience.penaltyModifier(diff, 9);
+					List<RewardItem> rewardItems = list.roll(activeChar, mod, this instanceof RaidBossInstance);
+					//System.out.println("rewardItems " + rewardItems.size());
+					
+					return rewardItems;
+				}
+			}
+			return null;
+			
+		}
+		finally
+		{
+			sweepLock.unlock();
+		}
+	}
 }
