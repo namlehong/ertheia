@@ -31,6 +31,7 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 		Quest q10769 = QuestManager.getQuest(10769);
 		Quest q10774 = QuestManager.getQuest(10774);
 		Quest q10779 = QuestManager.getQuest(10779);
+		Quest q10782 = QuestManager.getQuest(10782);
 		Quest q10785 = QuestManager.getQuest(10785);
 		
 		//System.out.println("RequestTutorialPassCmdToServer _bypass " + _bypass.split("_")[1]);
@@ -42,18 +43,28 @@ public class RequestTutorialPassCmdToServer extends L2GameClientPacket
 		
 		if(q10750 != null && _bypass.split("_")[1].equalsIgnoreCase("10750"))
 			player.processQuestEvent(q10750.getName(), _bypass, null);
+		
 		if(q10751 != null && _bypass.split("_")[1].equalsIgnoreCase("10751"))
 			player.processQuestEvent(q10751.getName(), _bypass, null);
+		
 		if(q10755 != null && _bypass.split("_")[1].equalsIgnoreCase("10755"))
 			player.processQuestEvent(q10755.getName(), _bypass, null);
+		
 		if(q10760 != null && _bypass.split("_")[1].equalsIgnoreCase("10760"))
 			player.processQuestEvent(q10760.getName(), _bypass, null);
+		
 		if(q10769 != null && _bypass.split("_")[1].equalsIgnoreCase("10769"))
 			player.processQuestEvent(q10769.getName(), _bypass, null);
+		
 		if(q10774 != null && _bypass.split("_")[1].equalsIgnoreCase("10774"))
 			player.processQuestEvent(q10774.getName(), _bypass, null);
+		
 		if(q10779 != null && _bypass.split("_")[1].equalsIgnoreCase("10779"))
 			player.processQuestEvent(q10779.getName(), _bypass, null);
+		
+		if(q10782 != null && _bypass.split("_")[1].equalsIgnoreCase("10782"))
+			player.processQuestEvent(q10782.getName(), _bypass, null);
+		
 		if(q10785 != null && _bypass.split("_")[1].equalsIgnoreCase("10785"))
 			player.processQuestEvent(q10785.getName(), _bypass, null);
 	}
