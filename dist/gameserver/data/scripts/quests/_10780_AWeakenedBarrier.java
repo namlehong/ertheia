@@ -39,8 +39,8 @@ public class _10780_AWeakenedBarrier extends Quest implements ScriptFile
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EWB = 947;
 	
-	private static final int minLevel = 30;
-	private static final int maxLevel = 99;
+	private static final int minLevel = 52;
+	private static final int maxLevel = 58;
 	
 	private static final String SPORES_KILL_LIST = "SPORES_KILL_LIST";
 	

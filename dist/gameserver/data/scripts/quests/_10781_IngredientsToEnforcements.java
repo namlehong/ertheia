@@ -35,8 +35,8 @@ public class _10781_IngredientsToEnforcements extends Quest implements ScriptFil
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EWB = 947;
 	
-	private static final int minLevel = 30;
-	private static final int maxLevel = 99;
+	private static final int minLevel = 52;
+	private static final int maxLevel = 58;
 	
 	
 	@Override
@@ -162,6 +162,11 @@ public class _10781_IngredientsToEnforcements extends Quest implements ScriptFil
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel);
+		QuestState qs = player.getQuestState(_10780_AWeakenedBarrier.class);
+		
+		return (player.getLevel() >= minLevel && 
+				player.getLevel() <= maxLevel && 
+				qs != null && 
+				qs.getState() == COMPLETED);
 	}
 }
