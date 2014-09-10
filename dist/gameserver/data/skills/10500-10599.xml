@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="10500" levels="1" name="Оглушающая Атака Воина">
+	<skill id="10500" levels="1" name="Heavy Hit">
 		<set name="reuseDelay" value="10000"/>
 		<set name="coolTime" value="500"/>
 		<set name="magicLevel" value="85"/>
@@ -14,10 +14,11 @@
 		<set name="saveVs" value="CON"/>
 		<set name="fly_type" value="CHARGE"/>
 		<set name="fly_radius" value="600"/>
+		<set name="fly_to_back" value="true"/>
 		<set name="fly_position_degree" value="180"/>
 		<set name="fly_speed" value="450"/>
 	</skill>
-	<skill id="10501" levels="1" name="Великое Владение Кинжалом">
+	<skill id="10501" levels="1" name="Superior Dagger Mastery">
 		<table name="#pAtk">344</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -46,7 +47,7 @@
 			<set order="0x100" stat="activateSkillMasterySTR" value="1"/>
 		</for>
 	</skill>
-	<skill id="10502" levels="1" name="Великое Владение Парными Кинжалами">
+	<skill id="10502" levels="1" name="Superior Dual Dagger Mastery">
 		<table name="#pAtk">344</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -68,11 +69,11 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10503" levels="1" name="Великое Владение Легкой Броней">
+	<skill id="10503" levels="1" name="Superior Light Armor Mastery">
 		<table name="#pDef">89</table>
 		<table name="#pEvasRate">15</table>
 		<table name="#magicLevel">85</table>
-		<table name="#p_skill_crit_rate_dex_dependence">0</table>
+		<table name="#p_skill_crit_rate_dex_dependence">1</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10503"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -105,7 +106,7 @@
 			<add order="0x10" stat="p_skill_crit_rate_dex_dependence" value="#p_skill_crit_rate_dex_dependence"/>
 		</for>
 	</skill>
-	<skill id="10504" levels="1" name="Великое Движение">
+	<skill id="10504" levels="1" name="Superior Movement">
 		<table name="#restingRegHp">7</table>
 		<table name="#restingRegMp">3.7</table>
 		<table name="#runningRegHp">6.3</table>
@@ -149,7 +150,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10505" levels="1" name="Великое Владение Критическим Ударом">
+	<skill id="10505" levels="1" name="Superior Critical Mastery">
 		<table name="#pCritDamageStatic">539</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -169,7 +170,7 @@
 			<!--<mul order="0x30" stat="skillMastery" value="11"/> until better days :) -->
 		</for>
 	</skill>
-	<skill id="10506" levels="1" name="Великое Владение Духом">
+	<skill id="10506" levels="1" name="Superior Spirit Mastery">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10506"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -185,10 +186,9 @@
 			<add order="0x40" stat="mentalResist" value="30"/>
 		</for>
 	</skill>
-	<skill id="10507" levels="1" name="Час Смерти">
+	<skill id="10507" levels="1" name="Death Clock">
 		<set name="magicLevel" value="99"/>
 		<set name="icon" value="icon.skill10507"/>
-		 
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -196,11 +196,11 @@
 			<add order="0x40" stat="pAtk" value="200"/>
 		</for>
 	</skill>
-	<skill id="10508" levels="8" name="Кровавый Шаг">
+	<skill id="10508" levels="8" name="Blood Stab">
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#power">24546 25395 27095 28793 30493 32193 33892 35593</table>
-		<table name="#dot"> 201 236 274 295 317 363 388 401 </table>
+		<table name="#dot">201 236 274 295 317 363 388 401</table>
 		<table name="#mpConsume2">59 60 62 64 66 68 71 73</table>
 		<table name="#baseCritLethal"> 8 9 10 11 12 13 14 15 </table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -239,51 +239,58 @@
 		</triggers>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">70 67 64 61 58 55 52 49 46 43</table>
+			<table name="#power">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#powerPvP">28042 28690 29337 29985 30633 31280 31928 32575 33223 33871</table>
+			<table name="#powerPvP">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="3" name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#power">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#power">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="5" name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#power">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="6" name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#power">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="7" name="Holy Attack">
+			<table name="#element">Holy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#power">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="8" name="Unholy Attack">
+			<table name="#element">unholy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#power">37291 38181 38991 39842 40690 41510 42390 43240 44089 44940</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">4900 4800 4700 4600 4500 4400 4300 4200 4100 4000</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="3" name="Fire Attack">
-			<table name="#element">fire</table>
-			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
-			<table name="#magicLevel">99</table>
-		</enchant>
-		<enchant type="4" name="Water Attack">
-			<table name="#element">water</table>
-			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
-			<table name="#magicLevel">99</table>
-		</enchant>
-		<enchant type="5" name="Wind Attack">
-			<table name="#element">wind</table>
-			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
-			<table name="#magicLevel">99</table>
-		</enchant>
-		<enchant type="6" name="Earth Attack">
-			<table name="#element">earth</table>
-			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
-			<table name="#magicLevel">99</table>
-		</enchant>
-		<enchant type="7" name="Holy Attack">
-			<table name="#element">Holy</table>
-			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
-			<table name="#magicLevel">99</table>
-		</enchant>
-		<enchant type="8" name="Unholy Attack">
-			<table name="#element">unholy</table>
-			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
-			<table name="#magicLevel">99</table>
-		</enchant>
 		<for>
 			<effect count="5" name="Bleed" time="3" value="#dot"/>
 		</for>
 	</skill>
-	<skill id="10509" levels="8" name="Разбивание Сердца">
+	<skill id="10509" levels="8" name="Heart Breaker">
 		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -318,6 +325,7 @@
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">78 75 72 68 65 62 59 55 52 49</table>
+			<table name="#power">29479 30151 30823 31494 32166 32838 33509 34181 34853 35525</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
@@ -326,6 +334,7 @@
 		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">4900 4800 4700 4600 4500 4350 4200 3900 3500 3000</table>
+			<table name="#power">29479 30151 30823 31494 32166 32838 33509 34181 34853 35525</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
