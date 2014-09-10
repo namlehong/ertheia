@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="10700" levels="4" name="Массовый Обман">
-		<set name="icon" value="icon.skill10700"/>
-		<table name="#power">11903 13957 15601 17244</table>
-		<table name="#nextAction">none</table>
-		<table name="#magicLevel">99</table>
+	<skill id="10700" levels="4" name="Mug">
+		<table name="#activateRate">20 30 40 50</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">18 21 24 27</table>
-		<set name="reuseDelay" value="3000"/>
+		<table name="#power">11903 13957 15601 17244</table>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="criticalRate" value="15"/>
+		<set name="effectPoint" value="337"/>
 		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10700"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="SPECIAL"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="skillRadius" value="40"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="skillType" value="SPOIL"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="isPermament" value="true"/>
-		<set name="levelModifier" value="1"/>
-		<set name="effectPoint" value="1500"/>
 		<set name="power" value="#power"/>
-		<set name="nextAction" value="#nextAction"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillRadius" value="150"/>
+		<set name="skillType" value="PLUNDER"/>
+		<set name="target" value="TARGET_AREA"/>
 		<cond msgId="113">
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 	</skill>
-	<skill id="10701" levels="4" name="Великая Выносливость">
+	<skill id="10701" levels="4" name="Superior Vitality">
 		<set name="icon" value="icon.skill0211"/>
 		<table name="#hpcpatt">1.05 1.07 1.1 1.15</table>
-		<table name="#magicLevel">99</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
@@ -38,63 +39,64 @@
 			<mul order="0x30" stat="pAtk" value="#hpcpatt"/>
 		</for>
 	</skill>
-	<skill id="10702" levels="4" name="Обман">
-		<set name="icon" value="icon.skill10548"/>
-		<table name="#power">13580 15946 18311 20204</table>
-		<table name="#nextAction">none</table>
+	<skill id="10702" levels="4" name="Plunder">
+		<table name="#activateRate">40 45 50 55</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">12 14 16 18</table>
-		<set name="reuseDelay" value="3000"/>
-		<set name="hitTime" value="1000"/>
+		<table name="#power">13580 15946 18311 20204</table>
+		<set name="activateRate" value="#activateRate"/>
 		<set name="castRange" value="40"/>
+		<set name="criticalRate" value="15"/>
+		<set name="effectPoint" value="337"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10548"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="SPECIAL"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="SPOIL"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="isPermament" value="true"/>
-		<set name="levelModifier" value="1"/>
-		<set name="effectPoint" value="1500"/>
 		<set name="power" value="#power"/>
-		<set name="nextAction" value="#nextAction"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PLUNDER"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 	</skill>
-	<skill id="10747" levels="1" name="Уникальное Умение Разбойника - Пассивное">
-		<set name="magicLevel" value="85"/>
+	<skill id="10747" levels="1" name="Rogue - Individual Passive">
 		<set name="icon" value="icon.skill0217"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="skillRadius" value="1000"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="isTrigger" value="true"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect time="3">
 				<mul order="0x30" stat="pDef" value="0.9"/>
 			</effect>
 		</for>
 	</skill>
-	<skill id="10748" levels="1" name="Уникальное Умение Разбойника">
-		<set name="reuseDelay" value="5000"/>
+	<skill id="10748" levels="1" name="Rogue - Individual">
+		<table name="#mpConsume2">60</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="behind" value="true"/>
+		<set name="castRange" value="50"/>
 		<set name="coolTime" value="400"/>
 		<set name="hitTime" value="1200"/>
-		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="1"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="stun"/>
+		<set name="icon" value="icon.skill1543"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill1543"/>
-		<table name="#mpConsume2">60</table>
-		<set name="castRange" value="50"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="8875"/>
-		<set name="behind" value="true"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
+		<set name="power" value="8875"/>
+		<set name="reuseDelay" value="5000"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="1.5"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -107,7 +109,7 @@
 			</trigger>
 		</triggers>
 	</skill>
-	<skill id="10749" levels="1" name="Обездвиживающая Атака Разбойника">
+	<skill id="10749" levels="1" name="Heavy Hit">
 		<set name="reuseDelay" value="7000"/>
 		<set name="coolTime" value="296"/>
 		<set name="hitTime" value="1600"/>
@@ -120,7 +122,7 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10750" levels="1" name="Оглушающая Атака Разбойника">
+	<skill id="10750" levels="1" name="Heavy Hit">
 		<set name="reuseDelay" value="7000"/>
 		<set name="coolTime" value="296"/>
 		<set name="hitTime" value="1600"/>
