@@ -109,8 +109,8 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10251" levels="1" name="Великое Владение Оружием">
-		<table name="#pAtk">376</table>
+	<skill id="10251" levels="1" name="Superior Weapon Mastery">
+		<table name="#pAtk">1252</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10251"/>
@@ -122,7 +122,7 @@
 			<trigger id="10284" level="1" type="CRIT" chance="50"/>
 		</triggers>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">400 425 449 474 499 523 548 572 597 622</table>
+			<table name="#pAtk">1502 1613 1724 1835 1946 2057 2168 2279 2390 2501</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -141,8 +141,8 @@
 			<add order="0x40" stat="poleTargetCount" value="5"/>
 		</for>
 	</skill>
-	<skill id="10252" levels="1" name="Великое Владение Парным Оружием">
-		<table name="#pAtk">376</table>
+	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
+		<table name="#pAtk">1252</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10251"/>
@@ -151,7 +151,7 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="293;144"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">400 425 449 474 499 523 548 572 597 622</table>
+			<table name="#pAtk">1502 1613 1724 1835 1946 2057 2168 2279 2390 2501</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -165,7 +165,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10253" levels="1" name="Великое Владение Тяжелой Броней">
+	<skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
 		<table name="#pDef">104</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -188,7 +188,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10254" levels="1" name="Великое Владение Легкой Броней">
+	<skill id="10254" levels="1" name="Superior Light Armor Mastery">
 		<table name="#pDef">89</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -221,9 +221,12 @@
 			<mul order="0x30" stat="critChanceRcpt" value="0.95">
 				<using armor="Light"/>
 			</mul>
+			<mul order="0x30" stat="pAtkSpd" value="1.15">
+				<using armor="Light"/>
+			</mul>
 		</for>
 	</skill>
-	<skill id="10255" levels="1" name="Великое Владение Силой">
+	<skill id="10255" levels="1" name="Superior Momentum Mastery">
 		<table name="#chance1">40</table>
 		<table name="#chance2">20</table>
 		<table name="#magicLevel">85</table>
@@ -242,13 +245,14 @@
 				<trigger id="6813" level="1" type="CRIT" chance="#chance1"/>
 		</triggers>
 	</skill>
-	<skill id="10256" levels="1" name="Великое Владение HP">
+	<skill id="10256" levels="1" name="Superior HP Mastery">
 		<table name="#maxHp">606</table>
 		<table name="#maxCp">296</table>
 		<table name="#regHp">7.3</table>
 		<table name="#regHpResting">7</table>
 		<table name="#regMp">3.7</table>
-		<table name="#pAtk">172</table>
+		<table name="#pAtk">629</table>
+		<table name="#enchantedskillpAtk">0</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10256"/>
@@ -262,7 +266,8 @@
 			<table name="#regHp">7.8 8.2 8.7 9.2 9.7 10.1 10.6 11.1 11.5 12</table>
 			<table name="#regHpResting">7.5 7.9 8.4 8.8 9.3 9.8 10.2 10.7 11.1 11.6</table>
 			<table name="#regMp">3.9 4.2 4.4 4.6 4.9 5.1 5.3 5.5 5.8 6.0</table>
-			<table name="#pAtk">183 194 205 217 228 239 251 262 273 285</table>
+			<table name="#pAtk">754 809 864 919 974 1029 1084 1139 1194 1249</table>
+			<!--table name="#enchantedskillpAtk">183 194 205 217 228 239 251 262 273 285</table-->
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -277,11 +282,14 @@
 			</add>
 			<add order="0x40" stat="regMp" value="#regMp"/>
 			<add order="0x40" stat="pAtk" value="#pAtk">
+				<player percentHP="60"/>
+			</add>
+			<add order="0x40" stat="pAtk" value="#enchantedskillpAtk">
 				<player percentHP="30"/>
 			</add>
 		</for>
 	</skill>
-	<skill id="10257" levels="1" name="Великое Владение Духом">
+	<skill id="10257" levels="1" name="Superior Spirit Mastery">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10257"/>
 		<set name="target" value="TARGET_SELF"/>
