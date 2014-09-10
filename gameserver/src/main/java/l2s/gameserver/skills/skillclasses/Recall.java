@@ -289,6 +289,33 @@ public class Recall extends Skill
 					case 32: // Sea of Spore - front of Andy
 						pcTarget.teleToLocation(64328, 26803, -3768, 0);
 						return;
+					case 33: // Town of Aden - front of Orven
+						pcTarget.teleToLocation(147446, 22761, -1984, 0);
+						return;
+					case 34: // Forsaken Plains - front of Novain
+						pcTarget.teleToLocation(174470, 40112, -4144, 0);
+						return;
+					case 35: // Scroll of Escape: Fields of Massacre
+						pcTarget.teleToLocation(183543, -14974, -2768, 0);
+						return;
+					case 36: // Scroll of Escape: Town of Rune
+						pcTarget.teleToLocation(174470, 40112, -4144, 0);
+						return;
+					case 37: // Scroll of Escape: Swamp of Screams
+						pcTarget.teleToLocation(174470, 40112, -4144, 0);
+						return;
+					case 38: // Scroll of Escape: Town of Goddard
+						pcTarget.teleToLocation(174470, 40112, -4144, 0);
+						return;
+					case 39: // Scroll of Escape: Wall of Argos
+						pcTarget.teleToLocation(174470, 40112, -4144, 0);
+						return;
+					case 40: // croll of Escape: Town of Giran
+						pcTarget.teleToLocation(174470, 40112, -4144, 0);
+						return;
+					case 41: // Scroll of Escape: Dragon Valley
+						pcTarget.teleToLocation(174470, 40112, -4144, 0);
+						return;
 				}
 				if(_castle) // To castle
 				{
