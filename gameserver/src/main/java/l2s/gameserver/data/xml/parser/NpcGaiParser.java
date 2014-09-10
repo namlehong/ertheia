@@ -11,8 +11,10 @@ import java.util.List;
 import l2s.commons.data.xml.AbstractDirParser;
 import l2s.gameserver.Config;
 import l2s.gameserver.data.xml.holder.NpcHolder;
+import l2s.gameserver.model.Servitor;
 import l2s.gameserver.model.Skill;
 import l2s.gameserver.model.base.Element;
+import l2s.gameserver.model.instances.PetInstance;
 import l2s.gameserver.model.reward.RewardData;
 import l2s.gameserver.model.reward.RewardGroup;
 import l2s.gameserver.model.reward.RewardList;
@@ -138,6 +140,10 @@ public final class NpcGaiParser extends AbstractDirParser<NpcHolder>
 
 //			NpcTemplate template = new NpcTemplate(set);
 			NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+			if(template.isInstanceOf(Servitor.class))
+			{
+				System.out.println(npcId+",");
+			}
 			template.update(set); // MY CUSTOM
 
 			for(Iterator<org.dom4j.Element> secondIterator = npcElement.elementIterator(); secondIterator.hasNext();)
