@@ -62,7 +62,7 @@ public class _10780_AWeakenedBarrier extends Quest implements ScriptFile
 		addStartNpc(ANDY);
 		addTalkId(BACON);
 		
-		addKillNpcWithLog(1, SPORES_KILL_LIST, 30, 	GIANT_FUNGUS, 
+		addKillNpcWithLog(1, SPORES_KILL_LIST, 20, 	GIANT_FUNGUS, 
 													ROTTING_TREE, 
 													CORRODED_SKELETON, 
 													ROTTEN_CORPSE, 
@@ -151,7 +151,7 @@ public class _10780_AWeakenedBarrier extends Quest implements ScriptFile
 			npcId == CORPSE_SPIDER || 
 			npcId == EXPLOSIVE_SPIDER)
 		{
-			int count = st.getInt(SPORES_KILL_LIST);
+			int count = st.getInt(SPORES_KILL_LIST)+1;
 			st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn giết được " + count + " quái vật yêu cầu", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
 			
 		}
