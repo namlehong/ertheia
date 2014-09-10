@@ -50,6 +50,17 @@ public final class NpcHolder extends AbstractHolder
 		}
 		return _allTemplates[id];
 	}
+	
+	public NpcTemplate getTemplateNoWarn(int id)
+	{
+		NpcTemplate npc = ArrayUtils.valid(_allTemplates, id);
+		if(npc == null)
+		{
+//			warn("Not defined npc id : " + id + ", or out of range!", new Exception());
+			return null;
+		}
+		return _allTemplates[id];
+	}
 
 	public NpcTemplate getTemplateByName(String name)
 	{

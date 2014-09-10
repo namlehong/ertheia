@@ -139,10 +139,14 @@ public final class NpcGaiParser extends AbstractDirParser<NpcHolder>
 			}
 
 //			NpcTemplate template = new NpcTemplate(set);
-			NpcTemplate template = NpcHolder.getInstance().getTemplate(npcId);
+			NpcTemplate template = NpcHolder.getInstance().getTemplateNoWarn(npcId);
 			if(template.isInstanceOf(Servitor.class))
 			{
-				System.out.println(npcId+",");
+				for(Skill skill: template.getSkills().valueCollection())
+				{
+					if(skill.getId() == 4415 && skill.getLevel() == 9)
+						System.out.println(String.format("'%d': %d,", npcId, skill.getLevel()));
+				}
 			}
 			template.update(set); // MY CUSTOM
 
