@@ -1769,16 +1769,17 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="69" levels="25" name="Sacrifice">
+	<skill id="69" levels="34" name="Sacrifice">
 		<!--
 			Enchant #1: +Power
 			Enchant #2: -HP consumption
 		-->
 		<table name="#dispel_ps_max_abnormal_lvl">0</table>
 		<table name="#dispel_bl_max_abnormal_lvl">0</table>
-		<table name="#hpConsume">988 1015 1042 1070 1097 1123 1150 1177 1203 1229 1255 1280 1305 1329 1353 1377 1400 1422 1444 1465 1486 1506 1525 1543 1560</table>
-		<table name="#power">741 762 782 802 823 843 863 883 902 922 941 960 979 997 1015 1033 1050 1067 1083 1099 1115 1129 1144 1157 1170</table>
-		<table name="#magicLevel">50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+		<table name="#hpConsume">300 345 390 435 480 525 570 615 660 705 750 795 840 885 930 975 1020 1065 1110 1155 1200 1245 1290 1335 1380 1425 1470 1515 1560 1605 1650 1695 1740 1785</table>
+		<table name="#power">350 412 474 536 598 660 722 784 846 908 970 1032 1094 1156 1218 1280 1342 1404 1466 1528 1590 1652 1714 1776 1838 1962 2024 2086 2148 2210 2272 2334 2396 2458</table>
+		<table name="#skillType">SACRIFICE</table>
+		<table name="#magicLevel">50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 76 77 79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="2000"/>
 		<set name="hitTime" value="1500"/>
@@ -1791,25 +1792,29 @@
 		<set name="hpConsume" value="#hpConsume"/>
 		<set name="useSS" value="true"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="HEAL"/>
+		<set name="skillType" value="#skillType"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<enchant type="1" levels="30" group="2" name="Power">
+			<table name="hpConsume">1560</table>
 			<table name="#power">1231 1292 1353 1415 1476 1537 1598 1659 1720 1781 1842 1903 1964 2025 2086 2147 2208 2269 2231 2392 2453 2514 2575 2636 2697 2758 2819 2880 2941 3002</table>
-			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#skillType">HEAL</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Cost">
 			<table name="#hpConsume">1534 1508 1482 1456 1430 1404 1378 1352 1326 1300 1274 1248 1222 1196 1170 1144 1118 1092 1066 1040 1014 988 962 936 910 884 858 832 806 780</table>
-			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#power">1170</table>
+			<table name="#skillType">HEAL</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Cure Poison">
 			<table name="#dispel_ps_max_abnormal_lvl">8</table>
 			<table name="#hpConsume">1544 1528 1513 1497 1482 1466 1450 1435 1419 1404 1388 1372 1357 1341 1326 1310 1294 1279 1263 1248 1232 1216 1201 1185 1170 1154 1138 1123 1107 1092</table>
-			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Heal Bleeding">
 			<table name="#dispel_bl_max_abnormal_lvl">8</table>
 			<table name="#hpConsume">1544 1528 1513 1497 1482 1466 1450 1435 1419 1404 1388 1372 1357 1341 1326 1310 1294 1279 1263 1248 1232 1216 1201 1185 1170 1154 1138 1123 1107 1092</table>
-			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
 			<effect name="i_dispel_by_slot" time="0">
