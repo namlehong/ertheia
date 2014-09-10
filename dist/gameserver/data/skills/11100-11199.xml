@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="11100" levels="1" name="Буйство Стихии - DC">
+	<skill id="11100" levels="1" name="Elemental Destruction: Double Casting">
 		<set name="icon" value="icon.skill11017"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11101" levels="1" name="Огонь - Буйство Стихии">
+	<skill id="11101" levels="1" name="Elemental Destruction: Fire">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -16,7 +16,7 @@
 			<effect name="Debuff"/>
 		</for>
 	</skill>
-	<skill id="11102" levels="1" name="Вода - Буйство Стихии">
+	<skill id="11102" levels="1" name="Elemental Destruction: Water">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -26,7 +26,7 @@
 			<effect name="Debuff"/>
 		</for>
 	</skill>
-	<skill id="11103" levels="1" name="Ветер - Буйство Стихии">
+	<skill id="11103" levels="1" name="Elemental Destruction: Wind">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -36,7 +36,7 @@
 			<effect name="Debuff"/>
 		</for>
 	</skill>
-	<skill id="11104" levels="1" name="Земля - Буйство Стихии">
+	<skill id="11104" levels="1" name="Elemental Destruction: Earth">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -46,7 +46,7 @@
 			<effect name="Debuff"/>
 		</for>
 	</skill>
-	<skill id="11105" levels="1" name="4 Стихии - Буйство Стихии">
+	<skill id="11105" levels="1" name="Elemental Destruction: 4 Attributes">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -56,7 +56,7 @@
 			<effect name="Debuff"/>
 		</for>
 	</skill>
-	<skill id="11106" levels="4" name="Взрыв Стихий">
+	<skill id="11106" levels="4" name="Elemental Mass Burst">
 		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
@@ -81,7 +81,7 @@
 		<set name="earth_skill_id" value="11110"/>
 		<set name="multi_elemental_skill_id" value="11111"/>
 	</skill>
-	<skill id="11107" levels="4" name="Взрыв Стихий (Огонь)">
+	<skill id="11107" levels="4" name="Elemental Mass Burst: Fire">
 		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
@@ -107,7 +107,7 @@
 			<target hasBuffId="11101"/>
 		</cond>
 	</skill>
-	<skill id="11108" levels="4" name="Взрыв Стихий (Вода)">
+	<skill id="11108" levels="4" name="Elemental Mass Burst: Water">
 		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
@@ -133,7 +133,7 @@
 			<target hasBuffId="11102"/>
 		</cond>
 	</skill>
-	<skill id="11109" levels="4" name="Взрыв Стихий (Ветер)">
+	<skill id="11109" levels="4" name="Elemental Mass Burst: Wind">
 		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
@@ -159,7 +159,7 @@
 			<target hasBuffId="11103"/>
 		</cond>
 	</skill>
-	<skill id="11110" levels="4" name="Взрыв Стихий (Земля)">
+	<skill id="11110" levels="4" name="Elemental Mass Burst: Earth">
 		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
@@ -185,7 +185,7 @@
 			<target hasBuffId="11104"/>
 		</cond>
 	</skill>
-	<skill id="11111" levels="4" name="Взрыв Стихий (4 Стихии)">
+	<skill id="11111" levels="4" name="Elemental Mass Burst: 4 Attributes">
 		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
@@ -211,7 +211,56 @@
 			<target hasBuffId="11105"/>
 		</cond>
 	</skill>
-	<skill id="11112" levels="4" name="Взрыв Стихий">
+	<skill id="11112" levels="4" name="Elemental Speed Burst">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">517 562 591 622</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ELEMENTAL_DES"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11113" levels="4" name="Elemental Speed Burst: Fire">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11114" levels="4" name="Elemental Speed Burst: Water">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11115" levels="4" name="Elemental Speed Burst: Wind">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11116" levels="4" name="Elemental Speed Burst: Earth">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11117" levels="4" name="Elemental Speed Burst: 4 Attributes">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11118" levels="4" name="Elemental Power Burst">
 		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
@@ -226,90 +275,41 @@
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="target" value="TARGET_ELEMENTAL_DES"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11113" levels="4" name="Взрыв Стихий (Огонь)">
+	<skill id="11119" levels="4" name="Elemental Power Burst: Fire">
 		<set name="icon" value="icon.skill11865"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11114" levels="4" name="Взрыв Стихий (Вода)">
+	<skill id="11120" levels="4" name="Elemental Power Burst: Water">
 		<set name="icon" value="icon.skill11865"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11115" levels="4" name="Взрыв Стихий (Ветер)">
+	<skill id="11121" levels="4" name="lemental Power Burst: Wind">
 		<set name="icon" value="icon.skill11865"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11116" levels="4" name="Взрыв Стихий (Земля)">
+	<skill id="11122" levels="4" name="Elemental Power Burst: Earth">
 		<set name="icon" value="icon.skill11865"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11117" levels="4" name="Взрыв Стихий (4 Стихии)">
+	<skill id="11123" levels="4" name="Elemental Power Burst: 4 Attributes">
 		<set name="icon" value="icon.skill11865"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11118" levels="4" name="Взрыв Стихий">
-		<set name="icon" value="icon.skill11865"/>
-		<table name="#mpConsume2">137 154 166 179</table>
-		<table name="#power">470 511 537 565</table>
-		<table name="#magicLevel">99</table>
-		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="7000"/>
-		<set name="hitTime" value="6008"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill0049"/>
-		<set name="power" value="#power"/>
-		<set name="castRange" value="1100"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="MDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-	</skill>
-	<skill id="11119" levels="4" name="Взрыв Стихий (Огонь)">
-		<set name="icon" value="icon.skill11865"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-	</skill>
-	<skill id="11120" levels="4" name="Взрыв Стихий (Вода)">
-		<set name="icon" value="icon.skill11865"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-	</skill>
-	<skill id="11121" levels="4" name="Взрыв Стихий (Ветер)">
-		<set name="icon" value="icon.skill11865"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-	</skill>
-	<skill id="11122" levels="4" name="Взрыв Стихий (Земля)">
-		<set name="icon" value="icon.skill11865"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-	</skill>
-	<skill id="11123" levels="4" name="Взрыв Стихий (4 Стихии)">
-		<set name="icon" value="icon.skill11865"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-	</skill>
-	<skill id="11124" levels="4" name="Великий Маг">
+	<skill id="11124" levels="4" name="Superior Wizardry">
 		<set name="icon" value="icon.skill0945"/>
 		<table name="#attr1">1.05 1.06 1.07 1.1</table>
 		<table name="#attr2">1.05 1.06 1.07 1.1</table>
@@ -325,7 +325,7 @@
 			<mul order="0x30" stat="regMp" value="#attr3"/>
 		</for>
 	</skill>
-	<skill id="11125" levels="4" name="Великий Маг">
+	<skill id="11125" levels="4" name="Superior Wizardry">
 		<set name="icon" value="icon.skill0945"/>
 		<table name="#mAtk">1.1 1.12 1.15 1.2</table>
 		<table name="#magicLevel">99</table>
@@ -337,55 +337,55 @@
 			<mul order="0x30" stat="mAtk" value="#mAtk"/>
 		</for>
 	</skill>
-	<skill id="11126" levels="3" name="파이어 디스트럭션">
+	<skill id="11126" levels="3" name="Fire Destruction">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11127" levels="3" name="다크 디스트럭션">
+	<skill id="11127" levels="3" name="Dark Destruction">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11128" levels="3" name="워터 디스트럭션">
+	<skill id="11128" levels="3" name="Water Destruction">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11129" levels="3" name="윈드 디스트럭션">
+	<skill id="11129" levels="3" name="Wind Destruction">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11130" levels="3" name="소울 디스트럭션">
+	<skill id="11130" levels="3" name="Soul Destruction">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11131" levels="3" name="라이프 스트로우">
+	<skill id="11131" levels="3" name="Life Straw">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11132" levels="3" name="라이트닝 실드">
+	<skill id="11132" levels="3" name="Lightning Shield">
 		<set name="icon" value="icon.skill1515"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11133" levels="3" name="라이트닝 실드 - 마비">
+	<skill id="11133" levels="3" name="Lightning Shield: Paralyze">
 		<set name="icon" value="icon.skill1515"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11142" levels="3" name="Болевой Шок">
+	<skill id="11142" levels="3" name="Damaged Area">
 		<table name="#abnormal_time">3 3 5</table>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="1"/>
@@ -406,7 +406,7 @@
 		<set name="saveVs" value="CON"/>
 		<set name="target" value="TARGET_AURA"/>
 	</skill>
-	<skill id="11143" levels="3" name="Болевой Шок">
+	<skill id="11143" levels="3" name="Damaged Area">
 		<table name="#abnormal_time">3 3 5</table>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="1"/>
@@ -427,7 +427,7 @@
 		<set name="saveVs" value="CON"/>
 		<set name="target" value="TARGET_AURA"/>
 	</skill>
-	<skill id="11150" levels="1" name="Проклятие Черного Мрака">
+	<skill id="11150" levels="1" name="Dark Curse">
 		<set name="icon" value="icon.skill11867"/>
 		<set name="ride_state" value="NONE"/>
 		<set name="abnormal_time" value="10"/>
@@ -454,7 +454,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11151" levels="4" name="Великий Маг">
+	<skill id="11151" levels="4" name="Superior Wizardry">
 		<set name="icon" value="icon.skill0945"/>
 		<table name="#attr1">1.05 1.06 1.07 1.1</table>
 		<table name="#attr2">1.05 1.06 1.07 1.1</table>
@@ -476,7 +476,7 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11174" levels="1" name="Прореха в Пространстве">
+	<skill id="11174" levels="1" name="Shadow Snare Zone">
 		<set name="abnormal_time" value="1"/>
 		<set name="abnormal_level" value="5"/>
 		<set name="abnormal_type" value="stun"/>
@@ -493,7 +493,7 @@
 			<effect name="ThrowHorizontal"/>
 		</for>
 	</skill>
-	<skill id="11175" levels="1" name="Прореха в Пространстве">
+	<skill id="11175" levels="1" name="Shadow Snare Zone">
 		<set name="abnormal_time" value="1"/>
 		<set name="abnormal_level" value="5"/>
 		<set name="abnormal_type" value="stun"/>
@@ -510,7 +510,7 @@
 			<effect name="ThrowHorizontal"/>
 		</for>
 	</skill>
-	<skill id="11176" levels="4" name="Великий Маг">
+	<skill id="11176" levels="4" name="Superior Wizardry">
 		<set name="icon" value="icon.skill0945"/>
 		<table name="#reuse">0.95 0.94 0.93 0.9</table>
 		<table name="#magicLevel">99</table>
@@ -535,7 +535,7 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11179" levels="1" name="Состояние Удержания">
+	<skill id="11179" levels="1" name="Yoke Status">
 		<set name="abnormal_effect" value="AIRBIND"/>
 		<set name="abnormal_time" value="9"/>
 		<set name="abnormal_level" value="1"/>
@@ -554,7 +554,7 @@
 			<effect count="9" name="DamOverTime" value="100" time="1"/>
 		</for>
 	</skill>
-	<skill id="11180" levels="1" name="Состояние Удержания">
+	<skill id="11180" levels="1" name="Yoke Status">
 		<set name="abnormal_effect" value="AIRBIND"/>
 		<set name="abnormal_time" value="9"/>
 		<set name="abnormal_level" value="1"/>
@@ -573,7 +573,7 @@
 			<effect count="9" name="DamOverTime" value="100" time="1"/>
 		</for>
 	</skill>
-	<skill id="11181" levels="1" name="Состояние Удержания">
+	<skill id="11181" levels="1" name="Yoke Status">
 		<set name="abnormal_effect" value="AIRBIND"/>
 		<set name="abnormal_time" value="9"/>
 		<set name="abnormal_level" value="1"/>
@@ -592,7 +592,7 @@
 			<effect count="9" name="DamOverTime" value="100" time="1"/>
 		</for>
 	</skill>
-	<skill id="11182" levels="1" name="Состояние Удержания">
+	<skill id="11182" levels="1" name="Yoke Status">
 		<set name="abnormal_effect" value="AIRBIND"/>
 		<set name="abnormal_time" value="9"/>
 		<set name="abnormal_level" value="1"/>
@@ -611,7 +611,7 @@
 			<effect count="9" name="DamOverTime" value="100" time="1"/>
 		</for>
 	</skill>
-	<skill id="11183" levels="1" name="Великая Перезарядка">
+	<skill id="11183" levels="1" name="Superior Quick Recovery">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill11004"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -624,7 +624,7 @@
 			<mul order="0x30" stat="pReuse" value="0.75"/>
 		</for>
 	</skill>
-	<skill id="11184" levels="1" name="Великий Колдовской Рык">
+	<skill id="11184" levels="1" name="Superior Arcane Lore">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10044"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -640,7 +640,7 @@
 			<mul order="0x30" stat="mDef" value="1.05"/>
 		</for>
 	</skill>
-	<skill id="11185" levels="1" name="Великое Увеличение Маны">
+	<skill id="11185" levels="1" name="Superior MP Boost">
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0213"/>
@@ -657,7 +657,7 @@
 			<add order="0x40" stat="maxMp" value="#maxMp"/>
 		</for>
 	</skill>
-	<skill id="11186" levels="1" name="Великое Быстрое Восстановление MP">
+	<skill id="11186" levels="1" name="Superior Fast MP Recovery">
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0229"/>
@@ -675,7 +675,7 @@
 			<add order="0x40" stat="regMp" value="#regMp"/>
 		</for>
 	</skill>
-	<skill id="11187" levels="1" name="Великий Свет Разума">
+	<skill id="11187" levels="1" name="Superior Clear Mind">
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11187"/>
@@ -712,31 +712,31 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11190" levels="1" name="Буйство Стихии - Огонь">
+	<skill id="11190" levels="1" name="Elemental Destruction: Fire">
 		<set name="icon" value="icon.skill11017"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11191" levels="1" name="Буйство Стихии - Вода">
+	<skill id="11191" levels="1" name="Elemental Destruction: Water">
 		<set name="icon" value="icon.skill11017"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11192" levels="1" name="Буйство Стихии - Ветер">
+	<skill id="11192" levels="1" name="Elemental Destruction: Wind">
 		<set name="icon" value="icon.skill11017"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11193" levels="1" name="Буйство Стихии - Земля">
+	<skill id="11193" levels="1" name="Elemental Destruction: Earth">
 		<set name="icon" value="icon.skill11017"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11194" levels="1" name="Буйство Стихии - DC">
+	<skill id="11194" levels="1" name="Elemental Destruction: Double Casting">
 		<set name="icon" value="icon.skill11017"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
@@ -754,7 +754,7 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="11199" levels="1" name="Буйство Стихии - Огонь">
+	<skill id="11199" levels="1" name="Elemental Destruction: Fire">
 		<set name="icon" value="icon.skill11017"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
