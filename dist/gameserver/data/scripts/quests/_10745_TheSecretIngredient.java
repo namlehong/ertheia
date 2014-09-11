@@ -104,7 +104,7 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("enter_instance"))
 		{
 			st.setCond(1);
-			enterInstance(st, 402);
+			enterInstance(st, 253);
 			return null;
 		}
 		

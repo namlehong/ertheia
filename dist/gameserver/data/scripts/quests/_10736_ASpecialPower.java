@@ -80,7 +80,7 @@ public class _10736_ASpecialPower extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("enter_camp"))
 		{
 			st.setCond(1);
-			enterInstance(st, 401);	
+			enterInstance(st, 252);	
 			return null;
 		}
 		
