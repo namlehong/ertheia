@@ -578,31 +578,28 @@
 	</skill>
 	<skill id="1416" levels="1" name="Pa'agrio's Fist">
 		<!-- эффект точно, остальное с потолка -->
-		<table name="#mpConsume2">227</table>
-		<table name="#mpConsume1">57</table>
-		<table name="#power">800</table>
-		<table name="#magicLevel">79</table>
+		<table name="#mpConsume">105 112 119 127 139 153 166</table>
+		<table name="#maxCp">1.02 1.03 1.04 1.05 1.06 1.07 1.1</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7</table>
+		<table name="#magicLevel">79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="300000"/>
+		<set name="reuseDelay" value="10000"/>
 		<set name="hitTime" value="2500"/>
-		<set name="abnormal_time" value="300"/>
-		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="cp_up"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="itemConsumeId" value="3031"/>
-		<set name="itemConsumeCount" value="20"/>
 		<set name="affectLimit" value="50;100"/>
 		<set name="icon" value="icon.skill1416"/>
-		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="effectPoint" value="800"/>
 		<set name="target" value="TARGET_CLAN"/>
 		<set name="skillRadius" value="900"/>
 		<set name="skillType" value="COMBATPOINTHEAL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="5" name="Power">
 			<table name="#power">810 820 830 840 850 860 870 880 890 900 910 920 930 940 950</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -612,9 +609,10 @@
 			<table name="#mpConsume2">219 212 204 196 189 181 174 166 159 151 143 136 128 121 113</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
-			<effect time="300">
-				<add order="0x40" stat="maxCp" value="#power"/>
+			<effect time="30">
+				<mul order="0x30" stat="maxCp" value="#maxCp"/>
 			</effect>
 			<effect name="CombatPointHealOverTime" time="0" value="100"/>
 		</for>
