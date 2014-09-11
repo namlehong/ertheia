@@ -132,7 +132,7 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
-		if(player == null) return;
+		if(player == null) return null;
 		
 		if(	npcId == KRANROT || 
 			npcId == YINTZU || 
