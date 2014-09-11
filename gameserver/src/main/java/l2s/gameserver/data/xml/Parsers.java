@@ -24,6 +24,7 @@ import l2s.gameserver.data.xml.parser.FishDataParser;
 import l2s.gameserver.data.xml.parser.HennaParser;
 import l2s.gameserver.data.xml.parser.HitCondBonusParser;
 import l2s.gameserver.data.xml.parser.InstantZoneParser;
+import l2s.gameserver.data.xml.parser.ItemBloodParser;
 import l2s.gameserver.data.xml.parser.ItemParser;
 import l2s.gameserver.data.xml.parser.JumpTracksParser;
 import l2s.gameserver.data.xml.parser.KarmaIncreaseDataParser;
@@ -70,6 +71,7 @@ public abstract class Parsers
 		OptionDataParser.getInstance().load();
 		VariationDataParser.getInstance().load();
 		ItemParser.getInstance().load();
+		ItemBloodParser.getInstance().load();
 		RecipeParser.getInstance().load();
 		CrystallizationDataParser.getInstance().load();
 		//
