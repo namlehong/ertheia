@@ -55,8 +55,6 @@ public class Sansililion extends Reflection
 		@Override
 		public void runImpl()
 		{
-			if(this == null)
-				return;
 			updateTimer();
 		}
 	}
@@ -66,9 +64,6 @@ public class Sansililion extends Reflection
 		@Override
 		public void runImpl()
 		{
-			if(this == null)
-				return;
-
 			if(_status == 1)
 			{
 				_status = 2;

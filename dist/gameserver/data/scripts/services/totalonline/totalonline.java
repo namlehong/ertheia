@@ -1,4 +1,4 @@
-package services;
+package services.totalonline;
 
 import l2s.gameserver.Config;
 import l2s.gameserver.scripts.Functions;

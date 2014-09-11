@@ -199,6 +199,7 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 	}
 
 	// returns leaders quest cond, if he is offline will read out of database :)
+	@SuppressWarnings("resource")
 	public int getLeaderVar(QuestState st, String var)
 	{
 		final boolean cond = "cond".equalsIgnoreCase(var);
@@ -246,8 +247,10 @@ public class _503_PursuitClanAmbition extends Quest implements ScriptFile
 					for(int i = 1; i < 32; i++)
 					{
 						val = (val >> 1);
-						if(val == 0)
+						if(val == 0){
 							return i;
+						}
+							
 					}
 				}
 			}

@@ -312,7 +312,7 @@ public class CommunityQuests implements ScriptFile, ICommunityBoardHandler
 		else if(bypass.startsWith("_bbsgeneratepalist"))
 		{
 			html = HtmCache.getInstance().getNotNull("scripts/handler/bbs/pages/buy_pa.htm", player);
-			CopyOnWriteArrayList list = PremiumAccountRatesHolder.getAllAquisions();
+			CopyOnWriteArrayList<PremiumInfo> list = PremiumAccountRatesHolder.getAllAquisions();
 			
 			if(list == null || list.isEmpty())
 			{

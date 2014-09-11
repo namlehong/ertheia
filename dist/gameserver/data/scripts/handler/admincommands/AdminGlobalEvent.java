@@ -35,6 +35,7 @@ public class AdminGlobalEvent extends ScriptAdminCommand
 		return false;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
