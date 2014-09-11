@@ -275,6 +275,11 @@ public class SummonInstance extends Servitor
 			dialog = dialog.replaceFirst("%INT%", String.valueOf(getINT()));
 			dialog = dialog.replaceFirst("%WIT%", String.valueOf(getWIT()));
 			dialog = dialog.replaceFirst("%MEN%", String.valueOf(getMEN()));
+			
+			dialog = dialog.replaceFirst("%basepDef%", String.valueOf(getBaseStats().getPDef()));
+			dialog = dialog.replaceFirst("%basemDef%", String.valueOf(getBaseStats().getMDef()));
+			dialog = dialog.replaceFirst("%basepAtk%", String.valueOf(getBaseStats().getPAtk()));
+			dialog = dialog.replaceFirst("%basemAtk%", String.valueOf(getBaseStats().getMAtk()));
 
 			dialog = dialog.replace("<?object_id?>", String.valueOf(getObjectId()));
 

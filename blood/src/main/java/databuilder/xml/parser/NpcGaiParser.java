@@ -195,6 +195,7 @@ public final class NpcGaiParser extends AbstractDirParser<NpcGaiHolder>
 					pspd_modifier *= ef4415_patk_spd[skill.getLevel()-1];
 					break;
 				case 11315: // summon def
+					getHolder().info("NPC "+npcId+" has summon def");
 					mdef_modifier *= 1.5;
 					break;
 
