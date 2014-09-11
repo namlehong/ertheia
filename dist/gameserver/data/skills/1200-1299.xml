@@ -2188,25 +2188,28 @@
 	</skill>
 	<skill id="1262" levels="5" name="Transfer Pain">
 		<!--
-			Last edit:	04.03.2009
+			Last edit:	11.09.2014
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#Trans-per">10 20 30 40 50</table>
-		<table name="#mpConsume1">7 9 11 11 13</table>
-		<table name="#magicLevel">40 48 56 58 70</table>
+		<table name="#transDamPer">10 20 30 40 50 52 54 56 58 60</table>
+		<table name="#mpConsume">7 9 11 12 13 14 15 16 17 18</table>
+		<table name="#magicLevel">40 48 56 58 70 80 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill1262"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="CONT"/>
 		<set name="operateType" value="OP_TOGGLE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Power">
 			<table name="#Trans-per">51 52 53 54 55 56 57 58 59 60 60.5 61 61.5 62 62.5 63 63.5 64 64.5 65 65.5 66 66.5 67 67.5 68 68.5 69 69.5 70</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect count="-1" name="AbsorbDamageToSummon" time="3" value="0.2">
-				<add order="0x40" stat="transferPetDam" value="#Trans-per"/>
+				<add order="0x40" stat="transferPetDam" value="#transDamPer"/>
 			</effect>
 		</for>
 	</skill>
