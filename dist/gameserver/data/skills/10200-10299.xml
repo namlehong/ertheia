@@ -109,8 +109,8 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10251" levels="1" name="Великое Владение Оружием">
-		<table name="#pAtk">376</table>
+	<skill id="10251" levels="1" name="Superior Weapon Mastery">
+		<table name="#pAtk">1252</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10251"/>
@@ -122,7 +122,7 @@
 			<trigger id="10284" level="1" type="CRIT" chance="50"/>
 		</triggers>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">400 425 449 474 499 523 548 572 597 622</table>
+			<table name="#pAtk">1502 1613 1724 1835 1946 2057 2168 2279 2390 2501</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -141,8 +141,8 @@
 			<add order="0x40" stat="poleTargetCount" value="5"/>
 		</for>
 	</skill>
-	<skill id="10252" levels="1" name="Великое Владение Парным Оружием">
-		<table name="#pAtk">376</table>
+	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
+		<table name="#pAtk">1252</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10251"/>
@@ -151,7 +151,7 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="293;144"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">400 425 449 474 499 523 548 572 597 622</table>
+			<table name="#pAtk">1502 1613 1724 1835 1946 2057 2168 2279 2390 2501</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -165,7 +165,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10253" levels="1" name="Великое Владение Тяжелой Броней">
+	<skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
 		<table name="#pDef">104</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -188,7 +188,7 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10254" levels="1" name="Великое Владение Легкой Броней">
+	<skill id="10254" levels="1" name="Superior Light Armor Mastery">
 		<table name="#pDef">89</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -221,9 +221,12 @@
 			<mul order="0x30" stat="critChanceRcpt" value="0.95">
 				<using armor="Light"/>
 			</mul>
+			<mul order="0x30" stat="pAtkSpd" value="1.15">
+				<using armor="Light"/>
+			</mul>
 		</for>
 	</skill>
-	<skill id="10255" levels="1" name="Великое Владение Силой">
+	<skill id="10255" levels="1" name="Superior Momentum Mastery">
 		<table name="#chance1">40</table>
 		<table name="#chance2">20</table>
 		<table name="#magicLevel">85</table>
@@ -242,13 +245,14 @@
 				<trigger id="6813" level="1" type="CRIT" chance="#chance1"/>
 		</triggers>
 	</skill>
-	<skill id="10256" levels="1" name="Великое Владение HP">
+	<skill id="10256" levels="1" name="Superior HP Mastery">
 		<table name="#maxHp">606</table>
 		<table name="#maxCp">296</table>
 		<table name="#regHp">7.3</table>
 		<table name="#regHpResting">7</table>
 		<table name="#regMp">3.7</table>
-		<table name="#pAtk">172</table>
+		<table name="#pAtk">629</table>
+		<table name="#enchantedskillpAtk">0</table>
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10256"/>
@@ -262,7 +266,8 @@
 			<table name="#regHp">7.8 8.2 8.7 9.2 9.7 10.1 10.6 11.1 11.5 12</table>
 			<table name="#regHpResting">7.5 7.9 8.4 8.8 9.3 9.8 10.2 10.7 11.1 11.6</table>
 			<table name="#regMp">3.9 4.2 4.4 4.6 4.9 5.1 5.3 5.5 5.8 6.0</table>
-			<table name="#pAtk">183 194 205 217 228 239 251 262 273 285</table>
+			<table name="#pAtk">754 809 864 919 974 1029 1084 1139 1194 1249</table>
+			<!--table name="#enchantedskillpAtk">183 194 205 217 228 239 251 262 273 285</table-->
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -277,11 +282,14 @@
 			</add>
 			<add order="0x40" stat="regMp" value="#regMp"/>
 			<add order="0x40" stat="pAtk" value="#pAtk">
+				<player percentHP="60"/>
+			</add>
+			<add order="0x40" stat="pAtk" value="#enchantedskillpAtk">
 				<player percentHP="30"/>
 			</add>
 		</for>
 	</skill>
-	<skill id="10257" levels="1" name="Великое Владение Духом">
+	<skill id="10257" levels="1" name="Superior Spirit Mastery">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10257"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -297,72 +305,79 @@
 			<add order="0x40" stat="poisonResist" value="30"/>
 		</for>
 	</skill>
-	<skill id="10258" levels="8" name="Разрушение Брони">
-		<table name="#Power">11159 11936 12714 13941 14269 15046 15824 16601</table>
-		<table name="#mpConsume2">50 52 53 54 57 59 60 62</table>
-		<table name="#pDef"> 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.7</table>
-		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
-		<table name="#reuseDelay">2000</table>
-		<table name="#powerPvP">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="1090"/>
-		<set name="abnormal_time" value="20"/>
-		<set name="abnormal_level" value="4"/>
-		<set name="abnormal_type" value="pd_down"/>
-		<set name="activateRate" value="40"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10258"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="activateRate" value="30"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<table name="#elementPower">0</table>
+	<skill id="10258" levels="8" name="Armor Destruction">
 		<table name="#element">none</table>
-		<set name="nextAction" value="attack"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="power" value="#Power"/>
-		<set name="skillType" value="CHARGE"/>
-		<set name="isOffensive" value="true"/>
-		<set name="charges" value="10"/>
-		<set name="SSBoost" value="2.0"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="overHit" value="true"/>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#mpConsume2">50 52 53 54 57 59 60 62</table>
+		<table name="#pDef">0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.7</table>
+		<table name="#Power">11159 11936 12714 13941 14269 15046 15824 16601</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">2000</table>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="activateRate" value="30"/>
+		<set name="activateRate" value="30"/>
 		<set name="analog_skills" value="116;501;362;281;920;1;284;190"/>
 		<set name="chainSkillId" value="14585"/>
+		<set name="charges" value="10"/>
+		<set name="coolTime" value="200"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1090"/>
+		<set name="icon" value="icon.skill10258"/>
+		<set name="isOffensive" value="true"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#Power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="CHARGE"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2"> 59 57 54 52 49 47 44 42 39 37 </table>
+			<table name="#mpConsume2">59 57 54 52 49 47 44 42 39 37</table>
+			<table name="#Power">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#powerPvP">16990 17379 17767 18156 18545 18934 19322 19711 20100 20489</table>
+			<table name="#powerPvP">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
+			<table name="#Power">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
+			<table name="#Power">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
+			<table name="#Power">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#Power">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">holy</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#Power">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
 			<table name="#elementPower">20 23 26 30 33 36 40 43 46 50</table>
+			<table name="#Power">16990 17379 17767 18156 18545 18934 19332 19711 20110 20489</table>
 		</enchant>
 		<for>
 			<effect name="Debuff" hasCombo="true">
@@ -370,8 +385,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10260" levels="8" name="Мегаудар">
-				<!--Anais Тут нужно разобраться TODO: При использовании максимум 5 уровней Силовой Энергии урон увеличивается на 30%, когда же Силовая Энергия не используется - уменьшается на 20% -->
+	<skill id="10260" levels="8" name="Mega Strike">
 		<table name="#power">15303 15831 16889 17947 19005 20063 21121 22179</table>
 		<table name="#mpConsume2">65 66 69 71 73 76 78 80</table>
 		<table name="#powerPvP">0</table>
@@ -450,43 +464,45 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
-	<skill id="10262" levels="6" name="Мощный Бомбардир">
+	<skill id="10262" levels="6" name="Power Bomber">
+		<table name="#activateRate">50</table>
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 88 91 94 97 99</table>
+		<table name="#mpConsume2">84 89 93 98 102 105</table>
 		<table name="#power">20483 22595 24708 26821 28934 30343</table>
 		<table name="#powerPvP">0</table>
-		<table name="#mpConsume2">84 89 93 98 102 105</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<table name="#magicLevel">85 88 91 94 97 99</table>
 		<table name="#reuseDelay">30000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1690"/>
 		<set name="abnormal_effect" value="KNOCKDOWN"/>
-		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="knockdown"/>
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="498;315;261;81"/>
+		<set name="chainIndex" value="0"/>
+		<set name="chainSkillId" value="10258"/>
+		<set name="cond_charges" value="3"/>
+		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="10"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1690"/>
 		<set name="icon" value="icon.skill10262"/>
+		<set name="ignoreShield" value="true"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="power" value="#power"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="overHit" value="true"/>
 		<set name="onCrit" value="true"/>
-		<set name="criticalRate" value="10"/>
-		<set name="SSBoost" value="2.0"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="trait" value="KNOCKDOWN"/>
-		<set name="saveVs" value="CON"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="cond_charges" value="5"/>
-		<set name="ignoreShield" value="true"/>
-		<set name="chainSkillId" value="10258"/>
-		<set name="chainIndex" value="0"/>
-		<set name="analog_skills" value="498;315;261;81"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="KNOCKDOWN"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -534,7 +550,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10263" levels="8" name="Источник Урагана">
+	<skill id="10263" levels="8" name="Hurricane Blaster">
 		<table name="#power">551 566 598 630 662 693 725 757</table>
 		<table name="#pDef"> 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.7</table>
 		<table name="#mpConsume2">58 59 61 63 65 67 69 71</table>
@@ -563,6 +579,9 @@
 		<set name="criticalRate" value="15"/>
 		<set name="charges" value="10"/>
 		<set name="analog_skills" value="939;345;346"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pd_down"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -618,7 +637,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10265" levels="8" name="Взрыв Энергии">
+	<skill id="10265" levels="8" name="Eruption">
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#powerPvP">0</table>
 		<table name="#elementPower">0</table>
@@ -714,38 +733,38 @@
 			<effect name="RandomHate" time="0" chance="80"/>
 		</for>
 	</skill>
-	<skill id="10266" levels="8" name="Удар Гиганта">
-		<table name="#mpConsume2">76 79 81 84 87 90 92 95</table>
+	<skill id="10266" levels="8" name="Giant Punch">
+		<table name="#ench4Hex">1</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#mpConsume2">76 79 81 84 87 90 92 95</table>
+		<table name="#power">0</table>
 		<table name="#reuseDelay">120000</table>
 		<table name="#Type">DEBUFF</table>
-		<table name="#power">0</table>
-		<table name="#ench4Hex">1</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1000"/>
 		<set name="abnormal_effect" value="KNOCKDOWN"/>
-		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="knockdown"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10266"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="65"/>
-		<set name="nextAction" value="attack"/>
-		<set name="power" value="#power"/>
-		<set name="skillType" value="#Type"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="knockdown"/>f
+		<set name="activateRate" value="50"/>
+		<set name="analog_skills" value="48;452;497;260;477;95"/>
+		<set name="coolTime" value="300"/>
 		<set name="elements" value="3"/> <!-- Earth -->
 		<set name="elementsPower" value="30"/>
-		<set name="trait" value="KNOCKDOWN"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10266"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="SSBoost" value="2.0"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="CON"/>
 		<set name="skillRadius" value="300"/>
 		<set name="skillType" value="#Type"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="48;452;497;260;477;95"/>
+		<set name="skillType" value="#Type"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="KNOCKDOWN"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">91 87 83 79 76 72 68 64 60 57</table>
 		</enchant>
@@ -769,7 +788,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10267" levels="6" name="Бросок Урагана">
+	<skill id="10267" levels="6" name="Hurricane Rush">
 		<table name="#mpConsume2">38 39 41 43 44 47</table>
 		<table name="#chance"> 61 62 63 64 65 66 67 68 69 70 </table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
@@ -790,7 +809,7 @@
 		<set name="activateRate" value="#chance"/>
 		<set name="fly_type" value="CHARGE"/>
 		<set name="fly_radius" value="55"/>
-		<set name="saveVs" value="MEN"/>
+		<set name="saveVs" value="CON"/>
 		<set name="levelModifier" value="2"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
@@ -809,7 +828,7 @@
 			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>
 		</enchant>
 		<enchant type="2" name="Chance">
-			<table name="#chance">53 56 59 62 65 68 71 74 77 80</table>
+			<table name="#chance">71 72 73 74 75 76 77 78 79 80</table>
 		</enchant>
 		<enchant type="3" name="Power">
 			<table name="#power">3800 3900 4000 4100 4200 4300 4400 4500 4600 4700</table>
@@ -824,9 +843,9 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10268" levels="6" name="Громовые Раскаты">
+	<skill id="10268" levels="6" name="Rolling Thunder">
 		<table name="#mpConsume2">40 42 43 45 46 47</table>
-		<table name="#power">225 226 227 228 229 230</table>
+		<table name="#power">225 226 227 228 229 242</table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 </table>
 		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<set name="abnormal_effect" value="HURRICANE_SELF"/>
@@ -850,8 +869,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10269" levels="7" name="Атака в Прыжке">
-		<!-- TODO: Использует до 5 уровней Силовой Энергии. Урон, наносимый врагу, увеличивается вместе с количеством израсходованной энергии -->
+	<skill id="10269" levels="7" name="Jump Attack">
 		<table name="#pwr">10508 11190 11872 12554 13236 13918 14600</table>
 		<table name="#mpConsume2">111 114 118 122 126 130 134</table>
 		<table name="#magicLevel">87 89 91 93 95 97 99</table>
@@ -895,7 +913,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10270" levels="1" name="Последняя Энергия">
+	<skill id="10270" levels="1" name="Second Wind">
 		<table name="#time">120</table>
 		<set name="reuseDelay" value="120000"/>
 		<set name="coolTime" value="300"/>
@@ -923,7 +941,7 @@
 			<effect name="HealCPPercent" value="15"/>
 		</for>
 	</skill>
-	<skill id="10271" levels="2" name="Мощная Провокация">
+	<skill id="10271" levels="2" name="Power Provoke">
 		<table name="#inc">1.2 1.2</table>
 		<table name="#dec">0.76 0.76</table>
 		<table name="#mpConsume2">76 83</table>
@@ -986,15 +1004,15 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10273" levels="4" name="Обезоруживание">
-		<table name="#def">0.9 0.85 0.8 0.75</table>
+	<skill id="10273" levels="4" name="Lightning Disarm">
+		<table name="#atk">0.9 0.85 0.8 0.75</table>
 		<table name="#mpConsume2">92</table>
 		<table name="#skillRadius">200</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#reuseDelay">120000</table>
 		<table name="#abnormal_time">5</table>
-		<table name="#Resist2">0</table>
-		<table name="#Resist">0</table>
+		<table name="#mentalResist">0</table>
+		<table name="#stunResist">0</table>
 		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1200"/>
@@ -1028,17 +1046,17 @@
 			<table name="#skillRadius">210 220 230 240 250 260 270 280 290 300</table>
 		</enchant>
 		<enchant type="4" name="Mental Resist">
-			<table name="#Resist">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#mentalResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="5" name="Stun Resist">
-			<table name="#Resist2">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<for>
 			<effect name="Disarm">
-				<mul order="0x30" stat="pDef" value="#def"/>
-				<mul order="0x30" stat="mDef" value="#def"/>
-				<add order="0x40" stat="mentalResist" value="#Resist"/>
-				<add order="0x40" stat="stunResist" value="#Resist2"/>
+				<mul order="0x30" stat="pAtk" value="#atk"/>
+				<mul order="0x30" stat="mAtk" value="#atk"/>
+				<sub order="0x40" stat="mentalResist" value="#mentalResist"/>
+				<sub order="0x40" stat="stunResist" value="#stunResist"/>
 			</effect>
 		</for>
 	</skill>
@@ -1113,7 +1131,7 @@
 			<!--<effect name="Salvation"/> pay fucking attention to skill description, after the target is dead the caster with this skill will get 20% of his hp restored -->
 		</for>
 	</skill>
-	<skill id="10275" levels="1" name="Удар Вечности">
+	<skill id="10275" levels="1" name="Infinity Strike">
 		<table name="#mpConsume2">1178</table>
 		<table name="#power">53213</table>
 		<table name="#powerPvP">0</table>
@@ -1140,12 +1158,13 @@
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">1166 1154 1135 1120 1052 1021 977 955 920 900</table>
-		</enchant>
-		<enchant type="2" name="Duel">
 			<table name="#power">54436 55659 56882 58105 59328 60551 61774 62997 64220 65443</table>
 		</enchant>
+		<enchant type="2" name="Duel">
+			<table name="#powerPvP">54436 55659 56882 58105 59328 60551 61774 62997 64220 65443</table>
+		</enchant>
 	</skill>
-	<skill id="10276" levels="1" name="Сила Природы">
+	<skill id="10276" levels="1" name="Force of Nature">
 		<table name="#hpHealPower">0</table>
 		<table name="#hpHealCount">0</table>
 		<table name="#cpHealPower">0</table>
@@ -1176,7 +1195,7 @@
 			<effect name="HealCPPercent" time="0" count="#cpHealCount" value="#cpHealPower"/>
 		</for>
 	</skill>
-	<skill id="10277" levels="4" name="Последний Крик">
+	<skill id="10277" levels="4" name="Final Cry">
 		<table name="#pAtk">1.1 1.11 1.13 1.16</table>
 		<table name="#mpConsume"> 38 41 45 47 </table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -1204,7 +1223,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10278" levels="8" name="Ослабление Гнева">
+	<skill id="10278" levels="8" name="Reduce Anger">
 		<table name="#mpConsume2">76 77 80 83 86 88 91 94</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#reuseDelay">30000</table>
@@ -1232,7 +1251,7 @@
 			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 21000</table>
 		</enchant>
 	</skill>
-	<skill id="10279" levels="1" name="Барьер Великана">
+	<skill id="10279" levels="1" name="Giant Barrier">
 		<table name="#mpConsume2">42</table>
 		<table name="#magicLevel">91</table>
 		<table name="#abnormal_time">10</table>
@@ -1275,7 +1294,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10280" levels="1" name="Заряд Энергии">
+	<skill id="10280" levels="1" name="Momentum Charge">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10283"/>
 		<set name="hpConsume" value="58"/>
@@ -1292,7 +1311,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10281" levels="2" name="Ударная Волна">
+	<skill id="10281" levels="2" name="Sonic Star">
 		<table name="#mpConsume2">1103 1558</table>
 		<table name="#power">21958 23344</table>
 		<table name="#powerPvP">0</table>
@@ -1330,7 +1349,7 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
-	<skill id="10283" levels="1" name="Добавление Энергии">
+	<skill id="10283" levels="1" name="Increase Momentum">
 		<!-- Походу вот этот скилл помоему связан со скилом 10281 -->
 		<set name="reuseDelay" value="4000"/>
 		<set name="magicLevel" value="97"/>
@@ -1342,7 +1361,7 @@
 		<for>
 		</for>
 	</skill>
-	<skill id="10284" levels="3" name="Сила Энергии">
+	<skill id="10284" levels="3" name="Lightning Force">
 		 <!--  По сути верно но нада проверять! -->
 		<table name="#pAtk">1.10 1.12 1.15</table>
 		<table name="#pAtk2">1.10 1.15 1.20</table>
@@ -1376,7 +1395,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10285" levels="1" name="Поглощение HP">
+	<skill id="10285" levels="1" name="HP Drain">
 		<table name="#power">313</table>
 		<table name="#heal">20</table>
 		<set name="reuseDelay" value="10000"/>
@@ -1391,7 +1410,7 @@
 			<effect name="HealPercent" time="0" value="#heal"/>
 		</for>
 	</skill>
-	<skill id="10286" levels="1" name="Великое Сопротивление">
+	<skill id="10286" levels="1" name="Superior Resistance">
 		<table name="#mDef">199</table>
 		<table name="#vuln">20</table>
 		<table name="#magicLevel">85</table>
@@ -1415,7 +1434,7 @@
 			<add order="0x40" stat="defenceEarth" value="#vuln"/>
 		</for>
 	</skill>
-	<skill id="10287" levels="6" name="Громовые Раскаты">
+	<skill id="10287" levels="6" name="Rolling Thunder">
 		<table name="#power">225 228 232 235 238 242</table>
 		<table name="#activateRate">35 36 37 38 39 40</table>
 		<table name="#mpConsume2">22</table>
@@ -1441,7 +1460,7 @@
 			<effect count="3" name="DamOverTime" time="1" value="#power"/>
 		</for>
 	</skill>
-	<skill id="10288" levels="8" name="Ураганный Шторм">
+	<skill id="10288" levels="8" name="Hurricane Storm">
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#powerPvP">0</table>
 		<table name="#mpConsume2">161 163 169 175 180 186 192 198</table>
@@ -1475,6 +1494,7 @@
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">190 182 174 166 158 150 142 134 126 118</table>
+			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
@@ -1484,31 +1504,37 @@
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Unholy Attack">
 			<table name="#element">unholy</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#power">17546 17945 18344 18744 19143 19542 19941 20341 20740 21139</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
@@ -1520,7 +1546,7 @@
 			</using>
 		</for>
 	</skill>
-	<skill id="10289" levels="4" name="Копье Доблести">
+	<skill id="10289" levels="4" name="Boost">
 		<table name="#pvpPhysDmg">1.05 1.1 1.15 1.2</table>
 		<table name="#physDamage">1.3 1.35 1.4 1.45</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -1563,7 +1589,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10290" levels="8" name="Меч Урагана">
+	<skill id="10290" levels="8" name="Hurricane Slasher">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<set name="reuseDelay" value="7000"/>
 		<set name="hitTime" value="1799"/>
@@ -1573,8 +1599,7 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10291" levels="1" name="Рев Медведя">
-		 
+	<skill id="10291" levels="1" name="Feral Bear Cry">
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="2000"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
@@ -1604,7 +1629,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10292" levels="1" name="Вопль Огра">
+	<skill id="10292" levels="1" name="Feral Ogre Cry">
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="2000"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
@@ -1639,7 +1664,7 @@
 			<effect name="HealPercent" time="0" value="10"/>
 		</for>
 	</skill>
-	<skill id="10293" levels="1" name="Рычание Пумы">
+	<skill id="10293" levels="1" name="Feral Puma Cry">
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="2000"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
@@ -1671,8 +1696,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10294" levels="1" name="Визг Кролика">
-		 
+	<skill id="10294" levels="1" name="Feral Rabbit Cry">	 
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="2000"/>
 		<table name="#abnormal_time">300</table>
@@ -1704,7 +1728,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10295" levels="1" name="Клич Ястреба">
+	<skill id="10295" levels="1" name="Hawk Cry">
 		<table name="#abnormal_time">300</table>
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="2000"/>
@@ -1734,7 +1758,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10296" levels="1" name="Дух Охотника">
+	<skill id="10296" levels="1" name="Spirit of the Hunter">
 		 <table name="#power">1.45</table>
 		 <table name="#time">1800</table>
 		<set name="reuseDelay" value="30000"/>
@@ -1750,7 +1774,7 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="analog_skills" value="359;87;104"/>
 		<enchant type="1" levels="10" group="7" name="Time">
-			<table name="#time">1210 1220 1230 1240 1250 1260 1270 1280 1290 1300</table>
+			<table name="#time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
 		</enchant>
 		<for>
 			<effect>
@@ -1764,7 +1788,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10297" levels="1" name="Дух Убийцы">
+	<skill id="10297" levels="1" name="Spirit of the Slayer">
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="2000"/>
 		<table name="#time">1800</table>
@@ -1796,7 +1820,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10298" levels="1" name="Возрождение Силы">
+	<skill id="10298" levels="1" name="Power Revival">
 		<set name="reuseDelay" value="600000"/>
 		<set name="hitTime" value="1500"/>
 		<set name="magicLevel" value="85"/>
@@ -1809,7 +1833,7 @@
 		<set name="target" value="TARGET_SELF"/>
 		<set name="analog_skills" value="181;833"/>
 	</skill>
-	<skill id="10299" levels="1" name="Копье Шока">
+	<skill id="10299" levels="1" name="Stun Spear">
 		<table name="#mpConsume2">40</table>
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_time" value="3"/>

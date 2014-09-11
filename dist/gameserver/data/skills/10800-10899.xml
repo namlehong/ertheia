@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
-	<skill id="10800" levels="1" name="Великое Стихийное Сопротивление">
+	<skill id="10800" levels="1" name="Superior Elemental Resistance">
 		<table name="#magicLevel">85</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10044"/>
@@ -21,10 +21,11 @@
 		</for>
 		<set name="analog_skills" value="481"/>
 	</skill>
-	<skill id="10801" levels="5" name="Нацеливание">
+	<skill id="10801" levels="5" name="Bullseye">
 		<table name="#magicLevel">85 88 91 94 97</table>
 		<table name="#rootResist">0</table>
 		<table name="#stunResist">0</table>
+		<table name="#knockDownResist">0</table>
 		<set name="reuseDelay" value="10000"/>
 		<set name="hitTime" value="500"/>
 		<set name="abnormal_effect" value="REAL_TARGET"/>
@@ -49,27 +50,31 @@
 		<enchant type="1" levels="10" group="7" name="Шанс">
 			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90</table>
 		</enchant>
-		<enchant type="2" name="Уязвимость к удержанию">
+		<enchant type="2" name="Root Resist">
 			<table name="#rootResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="3" name="Уязвимость к оглушению">
+		<enchant type="3" name="Stun Resist">
 			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="4" name="Уязвимость к опрокидыванию"/>	<!--TODO-->
+		<enchant type="4" name="Knockdown Resist">
+			<table name="#knockDownResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
 		<for>
 			<effect name="Debuff">
 				<add order="0x40" stat="bowWpnVuln" value="#Tab-bowRcpt"/>
 				<add order="0x40" stat="crossbowWpnVuln" value="#Tab-bowRcpt"/>
 				<mul order="0x30" stat="mDef" value="#mDef"/>
-				<add order="0x40" stat="rootResist" value="#rootResist"/>
-				<add order="0x40" stat="stunResist" value="#stunResist"/>
+				<sub order="0x40" stat="rootResist" value="#rootResist"/>
+				<sub order="0x40" stat="stunResist" value="#stunResist"/>
+				<sub order="0x40" stat="knockDownResist" value="#knockDownResist"/>
 			</effect>
 		</for>
 	</skill>
-	<skill id="10802" levels="1" name="Сосредоточенное Нацеливание">
+	<skill id="10802" levels="1" name="Mass Bullseye">
 		<table name="#activateRate">70</table>
 		<table name="#stunResist">0</table>
 		<table name="#rootResist">0</table>
+		<table name="#knockDownResist">0</table>
 		<set name="reuseDelay" value="180000"/>
 		<set name="hitTime" value="3000"/>
 		<set name="abnormal_effect" value="REAL_TARGET"/>
@@ -87,17 +92,19 @@
 		<set name="activateRate" value="70"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="castRange" value="#castRange"/>
-		<enchant type="1" levels="10" group="7" name="Стоимость">
+		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">89 85 81 78 74 70 66 63 59 55</table>
 		</enchant>
-		<enchant type="2" name="Шанс">
+		<enchant type="2" name="Chance">
 			<table name="#activateRate">71 72 73 74 75 76 77 78 79 80</table>
 		</enchant>
-		<enchant type="3" name="Уязвимость к оглушению">
+		<enchant type="3" name="Stun Resist">
 			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="4" name="Уязвимость к опрокидыванию"/>
-		<enchant type="5" name="Уязвимость к удержанию">
+		<enchant type="4" name="Knockdown Resist">
+			<table name="#knockDownResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="5" name="Hold Resist">
 			<table name="#rootResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<for>
@@ -107,13 +114,14 @@
 				<mul order="0x30" stat="mDef" value="0.75"/>
 				<sub order="0x40" stat="stunResist" value="#stunResist"/>
 				<sub order="0x40" stat="rootResist" value="#rootResist"/>
+				<sub order="0x40" stat="knockDownResist" value="#knockDownResist"/>
 				<triggers>
 					<trigger id="10804" level="1" type="ON_EXIT_EFFECT"/>
 				</triggers>
 			</effect>
 		</for>
 	</skill>
-	<skill id="10803" levels="1" name="Предсказанная Гибель">
+	<skill id="10803" levels="1" name="Time Bomb">
 		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0099"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -122,7 +130,7 @@
 		<set name="isOffensive" value="false"/>
 		<set name="power" value="30000"/>
 	</skill>
-	<skill id="10804" levels="1" name="Нацеливание">
+	<skill id="10804" levels="1" name="Bullseye">
 		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0099"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -131,7 +139,7 @@
 		<set name="isOffensive" value="false"/>
 		<set name="power" value="30000"/>
 	</skill>
-	<skill id="10805" levels="4" name="Молниеносность">
+	<skill id="10805" levels="4" name="Quick Charge">
 		<table name="#magicLevel">89 92 95 98</table>
 		<set name="reuseDelay" value="30000"/>
 		<set name="coolTime" value="400"/>
@@ -157,7 +165,7 @@
 			<table name="#flyRadius">815 830 845 860 875 890 905 920 935 950</table>
 		</enchant>
 	</skill>
-	<skill id="10806" levels="1" name="Ледяная Ловушка">
+	<skill id="10806" levels="1" name="Frost Trap">
 		<table name="#activateRate">80</table>
 		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="3"/>
@@ -183,7 +191,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10807" levels="1" name="Гравитационная Ловушка">
+	<skill id="10807" levels="1" name="Gravity Trap">
 		<set name="abnormal_effect" value="ROOT"/>
 		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="1"/>
@@ -203,7 +211,7 @@
 			<effect name="Root"/>
 		</for>
 	</skill>
-	<skill id="10808" levels="1" name="Военная Хитрость">
+	<skill id="10808" levels="1" name="Decoy Provocation">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="1"/>
@@ -214,7 +222,7 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10809" levels="1" name="Выживание">
+	<skill id="10809" levels="1" name="Survival Movement">
 		<table name="#mpConsume2">54</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="reuseDelay" value="30000"/>
@@ -232,7 +240,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10810" levels="4" name="Позиция Снайпера">
+	<skill id="10810" levels="4" name="Sniping">
 		<table name="#abnormal_level">1 2 3 4</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mod">1.05 1.06 1.07 1.10</table>
@@ -259,7 +267,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10811" levels="4" name="Великое Владение Ястребом">
+	<skill id="10811" levels="4" name="Superior Hawk Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -273,19 +281,19 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="10812" levels="3" name="스닉 샷">
+	<skill id="10812" levels="3" name="Sneak Shot">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10813" levels="3" name="스닉 샷 - 스턴">
+	<skill id="10813" levels="3" name="Sneak Shot: Stun">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10856" levels="4" name="Позиция для Беглого Огня">
+	<skill id="10856" levels="4" name="Rapid Fire Position">
 		<table name="#abnormal_level">1 2 3 4</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
@@ -316,7 +324,7 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10857" levels="4" name="Великое Владение Серебром">
+	<skill id="10857" levels="4" name="Superior Speed Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#runSpd">10 12 15 20</table>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -328,7 +336,7 @@
 			<add order="0x40" stat="runSpd" value="#runSpd"/>
 		</for>
 	</skill>
-	<skill id="10858" levels="3" name="백덤블링 샷">
+	<skill id="10858" levels="3" name="Retreating Shot">
 		<set name="icon" value="icon.skill0000"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>

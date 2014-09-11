@@ -149,6 +149,10 @@ public class Call extends Skill
 		if(target == null || !target.isPlayer() || target.getPlayer().isTerritoryFlagEquipped() || target.isFlying() || target.isInObserverMode() || !target.getPlayer().getPlayerAccess().UseTeleport)
 			return SystemMsg.INVALID_TARGET;
 
+		if(target.isInRange(new Location(-114598,-249431,-2984), 5000))
+		{
+			return SystemMsg.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING;
+		}
 		if(target.isInOlympiadMode())
 			return SystemMsg.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD;
 
