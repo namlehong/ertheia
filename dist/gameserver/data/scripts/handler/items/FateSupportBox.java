@@ -194,58 +194,70 @@ public class FateSupportBox extends SimpleItemHandler{
 		
 		ClassId classId = player.getClassId();
 		
-		switch (classId.getType2()) {
-		case KNIGHT:
-			for(int item_id: armor_sets[level_index][0])
+		switch (player.getRace()) {
+		case ERTHEIA:
+			for(int item_id: armor_sets[level_index][classId.isMage() ? 1 : 2])
 				ItemFunctions.addItem(player, item_id, 1, true);
-			ItemFunctions.addItem(player, weapon_sets[level_index][13], 1, true);
-			ItemFunctions.addItem(player, weapon_sets[level_index][1], 1, true);
+			ItemFunctions.addItem(player, weapon_sets[level_index][classId.isMage() ? 3 : 11], 1, true);
 			break;
 			
-		case WARRIOR:
-			for(int item_id: armor_sets[level_index][classId.isOfRace(Race.ERTHEIA) ? 2 : 0])
-				ItemFunctions.addItem(player, item_id, 1, true);
-			
-			if(classId.equalsOrChildOf(ClassId.BERSERKER))
-				ItemFunctions.addItem(player, weapon_sets[level_index][7], 1, true);
-			else if(classId.equalsOrChildOf(ClassId.WARLORD))
-				ItemFunctions.addItem(player, weapon_sets[level_index][4], 1, true);
-			else if(classId.equalsOrChildOf(ClassId.GLADIATOR))
-				ItemFunctions.addItem(player, weapon_sets[level_index][2], 1, true);
-			else if(classId.equalsOrChildOf(ClassId.DESTROYER))
-				ItemFunctions.addItem(player, weapon_sets[level_index][10], 1, true);
-			else if(classId.equalsOrChildOf(ClassId.WARSMITH)){
-				ItemFunctions.addItem(player, weapon_sets[level_index][1], 1, true);
+		default:
+		
+			switch (classId.getType2()) {
+			case KNIGHT:
+				for(int item_id: armor_sets[level_index][0])
+					ItemFunctions.addItem(player, item_id, 1, true);
 				ItemFunctions.addItem(player, weapon_sets[level_index][13], 1, true);
-			}else{
-				ItemFunctions.addItem(player, weapon_sets[level_index][11], 1, true);
+				ItemFunctions.addItem(player, weapon_sets[level_index][1], 1, true);
+				break;
+				
+			case WARRIOR:
+				for(int item_id: armor_sets[level_index][0])
+					ItemFunctions.addItem(player, item_id, 1, true);
+				
+				if(classId.equalsOrChildOf(ClassId.BERSERKER))
+					ItemFunctions.addItem(player, weapon_sets[level_index][7], 1, true);
+				else if(classId.equalsOrChildOf(ClassId.WARLORD))
+					ItemFunctions.addItem(player, weapon_sets[level_index][4], 1, true);
+				else if(classId.equalsOrChildOf(ClassId.GLADIATOR))
+					ItemFunctions.addItem(player, weapon_sets[level_index][2], 1, true);
+				else if(classId.equalsOrChildOf(ClassId.DESTROYER))
+					ItemFunctions.addItem(player, weapon_sets[level_index][10], 1, true);
+				else if(classId.equalsOrChildOf(ClassId.WARSMITH)){
+					ItemFunctions.addItem(player, weapon_sets[level_index][1], 1, true);
+					ItemFunctions.addItem(player, weapon_sets[level_index][13], 1, true);
+				}else{
+					ItemFunctions.addItem(player, weapon_sets[level_index][11], 1, true);
+				}
+				
+				break;
+				
+			case ROGUE:
+				for(int item_id: armor_sets[level_index][2])
+					ItemFunctions.addItem(player, item_id, 1, true);
+				ItemFunctions.addItem(player, weapon_sets[level_index][5], 1, true);
+				break;
+				
+			case ARCHER:
+				for(int item_id: armor_sets[level_index][2])
+					ItemFunctions.addItem(player, item_id, 1, true);
+				ItemFunctions.addItem(player, weapon_sets[level_index][classId.isOfRace(Race.KAMAEL) ? 9 : 6], 1, true);
+				break;
+				
+			case ENCHANTER:
+				for(int item_id: armor_sets[level_index][classId.isMage() ? 1 : 0])
+					ItemFunctions.addItem(player, item_id, 1, true);
+				
+				ItemFunctions.addItem(player, weapon_sets[level_index][classId.isMage() ? 3 : 2], 1, true);
+				break;
+	
+			default:
+				for(int item_id: armor_sets[level_index][1])
+					ItemFunctions.addItem(player, item_id, 1, true);
+				ItemFunctions.addItem(player, weapon_sets[level_index][classId.isOfRace(Race.KAMAEL) ? 8 : 3], 1, true);
+				break;
 			}
 			
-			break;
-			
-		case ROGUE:
-			for(int item_id: armor_sets[level_index][2])
-				ItemFunctions.addItem(player, item_id, 1, true);
-			ItemFunctions.addItem(player, weapon_sets[level_index][5], 1, true);
-			break;
-			
-		case ARCHER:
-			for(int item_id: armor_sets[level_index][2])
-				ItemFunctions.addItem(player, item_id, 1, true);
-			ItemFunctions.addItem(player, weapon_sets[level_index][classId.isOfRace(Race.KAMAEL) ? 9 : 6], 1, true);
-			break;
-			
-		case ENCHANTER:
-			for(int item_id: armor_sets[level_index][classId.isMage() ? 1 : 0])
-				ItemFunctions.addItem(player, item_id, 1, true);
-			
-			ItemFunctions.addItem(player, weapon_sets[level_index][classId.isMage() ? 3 : 2], 1, true);
-			break;
-
-		default:
-			for(int item_id: armor_sets[level_index][1])
-				ItemFunctions.addItem(player, item_id, 1, true);
-			ItemFunctions.addItem(player, weapon_sets[level_index][classId.isOfRace(Race.ERTHEIA) ? 12 : classId.isOfRace(Race.KAMAEL) ? 8 : 3], 1, true);
 			break;
 		}
 		
