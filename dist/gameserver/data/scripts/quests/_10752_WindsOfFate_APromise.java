@@ -62,7 +62,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 	private static final String MOVE_TO_NEXT_PLACE = "Hãy tới nơi mà Von Hellmann đã kể";
 	private static final String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
 
-	private static final String VAMPIRIC_SOLDIER_KILL_LIST = "vampiric_soldier_kill_list";
+	private static final String VAMPIRIC_SOLDIER_KILL_LIST = "vamp_kill_list";
 	
 	NpcInstance giselle_instance = null;
 	NpcInstance kain_instance = null;
