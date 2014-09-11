@@ -2978,10 +2978,27 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="10097" levels="3" name="Riot Shield">
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#mpConsume2">59 62 63 64 65 69 71</table>
+		<table name="#Power">17927 18411 18895</table>
+		<table name="#reuseDelay">60000</table>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10097"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#Power"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillRadius" value="150"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AURA"/>
+		<cond msgId="113">
+			<using kind="Shield"/>
+		</cond>
+		<for>
+			<effect name="Aggression"/>
+		</for>
 	</skill>
 	<skill id="10098" levels="4" name="Paladin's Frenzy">
 		<set name="icon" value="icon.skill10098"/>
