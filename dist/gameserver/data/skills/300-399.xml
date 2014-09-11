@@ -2435,25 +2435,24 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="367" levels="1" name="Dance of Medusa">
-		<table name="#activateRate">40</table>
-		<table name="#magicLevel">77</table>
-		<table name="#abnormal_time">10</table>
+	<skill id="367" levels="8" name="Dance of Medusa">
+		<table name="#activateRate">20 25 30 40 45 50</table>
+		<table name="#mpConsume">43 50 75 90 126 139 153 166</table>
+		<table name="#magicLevel">77 79 81 83 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="15000"/>
-		<set name="hitTime" value="2000"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="hitTime" value="2200"/>
 		<set name="abnormal_effect" value="FLESH_STONE"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="turn_stone"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="levelModifier" value="1"/>
 		<set name="affectLimit" value="10;10"/>
 		<set name="icon" value="icon.skill0367"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="53"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="#activateRate"/>
-		<set name="effectPoint" value="666"/>
 		<set name="elements" value="earth"/>
 		<set name="elementsPower" value="20"/>
 		<set name="target" value="TARGET_AURA"/>
@@ -2461,9 +2460,7 @@
 		<set name="skillType" value="PARALYZE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="saveVs" value="MEN"/>
-		<cond msgId="113">
-			<using kind="Dual Sword"/>
-		</cond>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="5" name="Chance">
 			<table name="#activateRate">42 45 48 50 53 56 58 61 64 66 69 72 74 77 80</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2473,6 +2470,7 @@
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#abnormal_time">11 12 13 14 15 16 17 18 19 20 21 22 23 24 25</table>
 		</enchant>
+		-->
 		<for>
 			<effect name="Invulnerable"/>
 			<effect name="Petrification">
