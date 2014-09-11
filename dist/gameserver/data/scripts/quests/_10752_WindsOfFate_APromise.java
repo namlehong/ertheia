@@ -217,7 +217,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		{
 			st.setCond(6);
 			//spawn Von Hellmann's ghost and despawn after 3 minutes
-			von_hellmann_ghost_instance = st.addSpawn(GHOST_VON_HELLMANN, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 180000);
+			von_hellmann_ghost_instance = st.addSpawn(GHOST_VON_HELLMANN, npc.getLoc().getX() + 100, npc.getLoc().getY() + 100, npc.getLoc().getZ(), 180000);
 			
 			player.sendPacket(new ExShowScreenMessage(TALK_TO_GHOST, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		}
