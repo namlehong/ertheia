@@ -1384,12 +1384,11 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
 	</skill>
-	<skill id="48" levels="37" name="Thunder Storm">
-		<table name="#effectPoint">92 94 97 99 102 104 107 109 112 114 117 119 121 124 126 129 131 133 136 138 140 142 144 146 148 150 152 154 156 157 159 160 162 163 164 166 167</table>
+	<skill id="48" levels="46" name="Thunder Storm">
 		<table name="#activateRate">50</table>
-		<table name="#mpConsume2">52 53 55 55 57 59 60 62 64 66 67 69 71 72 73 75 77 78 80 82 84 85 87 88 90 91 93 94 96 97 99 100 102 103 105 106 107</table>
-		<table name="#power">421 447 475 504 534 566 598 632 668 705 743 782 823 864 908 952 998 1045 1093 1142 1192 1243 1296 1349 1403 1457 1513 1569 1625 1682 1739 1796 1854 1911 1969 2026 2082</table>
-		<table name="#magicLevel">38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+		<table name="#mpConsume">52 53 55 55 57 59 60 62 64 66 67 69 71 72 73 75 77 78 80 82 84 85 87 88 90 91 93 94 96 97 99 100 102 103 106 108 110 112 114 116 118 120 122 124 129 133</table>
+		<table name="#power">421 447 475 504 534 566 598 632 668 705 743 782 823 864 908 952 998 1045 1093 1142 1192 1243 1296 1349 1403 1457 1513 1569 1625 1682 1739 1796 1854 1911 1969 2026 2082 2140 2200 2260 2320 2380 26003 30494 35883 37680</table>
+		<table name="#magicLevel">40 40 40 43 43 43 46 46 46 49 49 49 52 52 52 55 55 55 58 58 58 60 60 62 62 64 64 66 66 68 68 70 70 72 72 74 74 75 77 79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="5000"/>
 		<set name="coolTime" value="720"/>
@@ -1399,13 +1398,11 @@
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_type" value="stun"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="levelModifier" value="1"/>
 		<set name="affectLimit" value="6;12"/>
 		<set name="icon" value="icon.skill0048"/>
 		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="target" value="TARGET_AURA"/>
 		<set name="skillRadius" value="200"/>
@@ -1419,6 +1416,7 @@
 		<cond msgId="113">
 			<using kind="Pole"/>
 		</cond>
+		<!--Remove enchant
 		<enchant type="1" levels="30" group="2" name="Chance">
 			<table name="#activateRate">51 51 51 52 52 52 53 53 53 54 54 54 55 55 55 56 56 56 57 57 57 58 58 58 59 59 59 60 60 60</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -1428,6 +1426,7 @@
 			<table name="#mpConsume2">105 103 101 99 98 96 94 92 91 89 87 85 84 82 80 78 76 75 73 71 69 68 66 64 62 61 59 57 55 54</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect name="Stun"/>
 		</for>
@@ -2401,35 +2400,32 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="94" levels="2" name="Rage">
+	<skill id="94" levels="7" name="Rage">
 		<!--
-			Last modify:	12.12.2007
+			Last modify:	11.09.2014
 			Description:
 			Increases user's P. Atk. by 20% for 1 minute 30 seconds. When a sword, blunt weapon or spear is used, P. Atk. is increased an additional 29%. When a two-handed sword or blunt weapon is used, Accuracy is increased additionally by 4 and P. Atk. is increased an additional 6%. Decreases evasion by 3 and P. Def. by 20%
+			Modified by Cith
 		-->
-		<table name="#effectPoint">235 523</table>
-		<table name="#pAccCombat">2 4</table>
-		<table name="#swordblunt">1.45 1.54</table>
-		<table name="#twohands">1.53 1.64</table>
-		<table name="#other">1.15 1.20</table>
-		<table name="#mpConsume2">11 25</table>
-		<table name="#order">1 2</table>
-		<table name="#magicLevel">24 55</table>
-		<table name="#abnormal_level">1 2</table>
+		<table name="#other">1.1</table>
+		<table name="#twohands">1.1 1.12 1.13 1.14 1.15 1.2 1.25</table>
+		<table name="#mpConsume">11 25 30 32 34 36 38</table>
+		<table name="#magicLevel">24 55 64 76 85 90 95</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="75000"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="1500"/>
-		<set name="abnormal_time" value="90"/>
+		<set name="abnormal_time" value="600"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="pa_up_special"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0094"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume2" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Power">
 			<table name="#swordblunt">1.542 1.544 1.546 1.548 1.550 1.552 1.554 1.556 1.558 1.560 1.562 1.564 1.566 1.568 1.570 1.572 1.574 1.576 1.578 1.570 1.572 1.574 1.576 1.578 1.580 1.582 1.584 1.586 1.598 1.600</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2438,21 +2434,14 @@
 			<table name="#twohands">1.642 1.644 1.646 1.648 1.650 1.652 1.654 1.656 1.658 1.660 1.662 1.664 1.666 1.668 1.670 1.672 1.674 1.676 1.678 1.680 1.682 1.684 1.686 1.688 1.690 1.692 1.694 1.696 1.698 1.700</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect>
-				<mul order="0x30" stat="pDef" value="0.8"/>
-				<sub order="0x40" stat="pEvasRate" value="3"/>
-				<add order="0x40" stat="pAccCombat" value="#pAccCombat">
-					<using kind="Big Sword,Big Blunt"/>
-				</add>
-				<mul order="0x30" stat="pAtk" value="#swordblunt">
-					<using kind="Sword,Blunt,Pole"/>
+				<mul order="0x30" stat="pAtk" value="#other">
+					<using kind="Sword, Blunt, Dual Fist, Dual Blunt, Dual Sword"/>
 				</mul>
 				<mul order="0x30" stat="pAtk" value="#twohands">
-					<using kind="Big Sword,Big Blunt"/>
-				</mul>
-				<mul order="0x30" stat="pAtk" value="#other">
-					<using kind="Dual Fist,Dual Sword,Fist,Etc,Bow,Dagger"/>
+					<using kind="Big Sword, Big Blunt, Pole"/>
 				</mul>
 			</effect>
 		</for>
