@@ -113,6 +113,11 @@ public final class EtcItemTemplate extends ItemTemplate
 		_handler = getItemType().getHandler();
 		_exType = set.getEnum("ex_type", ExItemType.class, getItemType().getExType());
 	}
+	
+	public void update(StatsSet set)
+	{
+		_handlerName = set.getString("handler", _handlerName);
+	}
 
 	@Override
 	public void init()
