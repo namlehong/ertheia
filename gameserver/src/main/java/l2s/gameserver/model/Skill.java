@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import l2s.gameserver.skills.skillclasses.*;
 import org.apache.commons.lang3.math.NumberUtils;
 import l2s.commons.collections.LazyArrayList;
 import l2s.commons.geometry.Polygon;
@@ -45,76 +46,6 @@ import l2s.gameserver.skills.AbnormalEffect;
 import l2s.gameserver.skills.AbnormalType;
 import l2s.gameserver.skills.EffectType;
 import l2s.gameserver.skills.effects.EffectDebuffImmunity;
-import l2s.gameserver.skills.skillclasses.AIeffects;
-import l2s.gameserver.skills.skillclasses.Aggression;
-import l2s.gameserver.skills.skillclasses.Balance;
-import l2s.gameserver.skills.skillclasses.BeastFeed;
-import l2s.gameserver.skills.skillclasses.BuffCharger;
-import l2s.gameserver.skills.skillclasses.CPDam;
-import l2s.gameserver.skills.skillclasses.Call;
-import l2s.gameserver.skills.skillclasses.ChainHeal;
-import l2s.gameserver.skills.skillclasses.ChangeClass;
-import l2s.gameserver.skills.skillclasses.Charge;
-import l2s.gameserver.skills.skillclasses.ChargeSoul;
-import l2s.gameserver.skills.skillclasses.ClanGate;
-import l2s.gameserver.skills.skillclasses.CombatPointHeal;
-import l2s.gameserver.skills.skillclasses.Continuous;
-import l2s.gameserver.skills.skillclasses.Craft;
-import l2s.gameserver.skills.skillclasses.DeathPenalty;
-import l2s.gameserver.skills.skillclasses.DebuffRenewal;
-import l2s.gameserver.skills.skillclasses.Decoy;
-import l2s.gameserver.skills.skillclasses.Default;
-import l2s.gameserver.skills.skillclasses.DefuseTrap;
-import l2s.gameserver.skills.skillclasses.DeleteHate;
-import l2s.gameserver.skills.skillclasses.DestroySummon;
-import l2s.gameserver.skills.skillclasses.DetectTrap;
-import l2s.gameserver.skills.skillclasses.Disablers;
-import l2s.gameserver.skills.skillclasses.Drain;
-import l2s.gameserver.skills.skillclasses.DrainSoul;
-import l2s.gameserver.skills.skillclasses.EffectsFromSkills;
-import l2s.gameserver.skills.skillclasses.EnergyReplenish;
-import l2s.gameserver.skills.skillclasses.EXPHeal;
-import l2s.gameserver.skills.skillclasses.ExtractStone;
-import l2s.gameserver.skills.skillclasses.FishingSkill;
-import l2s.gameserver.skills.skillclasses.Harvesting;
-import l2s.gameserver.skills.skillclasses.Heal;
-import l2s.gameserver.skills.skillclasses.HealHpCp;
-import l2s.gameserver.skills.skillclasses.HealHpCpPercent;
-import l2s.gameserver.skills.skillclasses.HealPercent;
-import l2s.gameserver.skills.skillclasses.KamaelWeaponExchange;
-import l2s.gameserver.skills.skillclasses.LethalShot;
-import l2s.gameserver.skills.skillclasses.MDam;
-import l2s.gameserver.skills.skillclasses.ManaDam;
-import l2s.gameserver.skills.skillclasses.ManaHeal;
-import l2s.gameserver.skills.skillclasses.ManaHealPercent;
-import l2s.gameserver.skills.skillclasses.PDam;
-import l2s.gameserver.skills.skillclasses.PcBangPointsAdd;
-import l2s.gameserver.skills.skillclasses.PetFeed;
-import l2s.gameserver.skills.skillclasses.PetSummon;
-import l2s.gameserver.skills.skillclasses.Recall;
-import l2s.gameserver.skills.skillclasses.ReelingPumping;
-import l2s.gameserver.skills.skillclasses.Refill;
-import l2s.gameserver.skills.skillclasses.Replace;
-import l2s.gameserver.skills.skillclasses.Restoration;
-import l2s.gameserver.skills.skillclasses.Resurrect;
-import l2s.gameserver.skills.skillclasses.Ride;
-import l2s.gameserver.skills.skillclasses.SPHeal;
-import l2s.gameserver.skills.skillclasses.ShiftAggression;
-import l2s.gameserver.skills.skillclasses.ChainCall;
-import l2s.gameserver.skills.skillclasses.Sowing;
-import l2s.gameserver.skills.skillclasses.Spoil;
-import l2s.gameserver.skills.skillclasses.StealBuff;
-import l2s.gameserver.skills.skillclasses.Summon;
-import l2s.gameserver.skills.skillclasses.SummonSiegeFlag;
-import l2s.gameserver.skills.skillclasses.Sweep;
-import l2s.gameserver.skills.skillclasses.TakeCastle;
-import l2s.gameserver.skills.skillclasses.TakeFortress;
-import l2s.gameserver.skills.skillclasses.TameControl;
-import l2s.gameserver.skills.skillclasses.TeleportNpc;
-import l2s.gameserver.skills.skillclasses.Toggle;
-import l2s.gameserver.skills.skillclasses.TrapActivation;
-import l2s.gameserver.skills.skillclasses.Unlock;
-import l2s.gameserver.skills.skillclasses.VitalityHeal;
 import l2s.gameserver.stats.Env;
 import l2s.gameserver.stats.Formulas;
 import l2s.gameserver.stats.StatTemplate;
@@ -205,6 +136,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		TARGET_CHEST,
 		TARGET_FEEDABLE_BEAST,
 		TARGET_CLAN,
+		TARGET_CLAN_ONE,
 		TARGET_CLAN_ONLY,
 		TARGET_CORPSE,
 		TARGET_CORPSE_PLAYER,
@@ -236,7 +168,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		TARGET_SELF,
 		TARGET_SIEGE,
 		TARGET_UNLOCKABLE,
-		TARGET_GROUND
+		TARGET_GROUND,
+		TARGET_ELEMENTAL_DES
 	}
 
 	public static enum SkillType
@@ -321,6 +254,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		SPHEAL(SPHeal.class),
 		SPIRITSHOT,
 		SPOIL(Spoil.class),
+		PLUNDER(Plunder.class),
+        SACRIFICE(Sacrifice.class),
 		STEAL_BUFF(StealBuff.class),
 		STUN(Disablers.class),
 		SUMMON(Summon.class),
@@ -443,6 +378,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				case SOULSHOT:
 				case SPIRITSHOT:
 				case SPOIL:
+				case PLUNDER:
 				case STUN:
 				case SWEEP:
 				case HARVESTING:
@@ -527,6 +463,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	public static final int SKILL_TRUE_EARTH = 11010; // Истинная Земля
 	public static final int SKILL_CRAFTING_MASTERY = 11010; // Истинная Земля
 
+	protected boolean _isAltUse;
 	protected boolean _isBehind;
 	protected boolean _isCancelable;
 	protected boolean _isCorpse;
@@ -539,6 +476,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	protected boolean _isForceUse;
 	protected boolean _isNewbie;
 	protected boolean _isPreservedOnDeath;
+	protected boolean _isHeroic;
 	protected boolean _isSaveable;
 	protected boolean _isSkillTimePermanent;
 	protected boolean _isReuseDelayPermanent;
@@ -594,6 +532,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 
 	private FlyType _flyType;
 	private boolean _flyDependsOnHeading;
+	private boolean _flyToBack;
 	private int _flyRadius;
 	private int _flyPositionDegree;
 	private int _flySpeed;
@@ -711,6 +650,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		_isNewbie = set.getBool("isNewbie", false);
 		_isSelfDispellable = set.getBool("isSelfDispellable", true);
 		_isPreservedOnDeath = set.getBool("isPreservedOnDeath", false);
+		_isHeroic = set.getBool("isHeroic", false);
+		_isAltUse = set.getBool("altUse", false);
 		_mpConsume1 = set.getInteger("mpConsume1", 0);
 		_mpConsume2 = set.getInteger("mpConsume2", 0);
 		_energyConsume = set.getInteger("energyConsume", 0);
@@ -874,6 +815,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 
 		_flyType = FlyType.valueOf(set.getString("fly_type", "NONE").toUpperCase());
 		_flyDependsOnHeading = set.getBool("fly_depends_on_heading", false);
+		_flyToBack = set.getBool("fly_to_back", false);		
 		_flySpeed = set.getInteger("fly_speed", 0);
 		_flyDelay = set.getInteger("fly_delay", 0);
 		_flyAnimationSpeed = set.getInteger("fly_animation_speed", 0);
@@ -923,6 +865,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				case CPDAM:
 				case LETHAL_SHOT:
 				case SPOIL:
+				case PLUNDER:
 				case SOWING:
 				case STUN:
 				case DRAIN_SOUL:
@@ -1364,6 +1307,15 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				return activeChar;
 			case TARGET_HOLY:
 				return target != null && activeChar.isPlayer() && target.isArtefact() ? target : null;
+			case TARGET_ELEMENTAL_DES:
+				target = (target != null && (
+							target.getEffectList().containsEffects(11101) ||
+							target.getEffectList().containsEffects(11102) ||
+							target.getEffectList().containsEffects(11103) ||
+							target.getEffectList().containsEffects(11104) ||
+							target.getEffectList().containsEffects(11105))
+						) ? target : null;
+				return target;
 			case TARGET_FLAGPOLE:
 				return activeChar;
 			case TARGET_UNLOCKABLE:
@@ -1412,6 +1364,22 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				return target != null && target != activeChar && target.isDead() == _isCorpse && target.isPlayer() && target.getPlayer().getMenteeList().getMentor() == activeChar.getObjectId() ? target : null;
 			case TARGET_ONE:
 				return target != null && target.isDead() == _isCorpse && !(target == activeChar && isOffensive()) && (!_isUndeadOnly || target.isUndead()) ? target : null;
+			case TARGET_CLAN_ONE:
+//				return target != null && target.isDead() == _isCorpse && !(target == activeChar && isOffensive()) && (!_isUndeadOnly || target.isUndead()) && activeChar.getPlayer().isInSameClan(target.getPlayer()) ? target : null;
+				if(target == null)
+					return null;
+				Player cplayer = activeChar.getPlayer();
+				Player cptarget = target.getPlayer();
+				// self or self pet.
+				if(cptarget != null && cptarget == activeChar)
+					return target;
+				// olympiad party member or olympiad party member pet.
+				if(cplayer != null && cplayer.isInOlympiadMode() && cptarget != null && cplayer.getOlympiadSide() == cptarget.getOlympiadSide() && cplayer.getOlympiadGame() == cptarget.getOlympiadGame() && target.isDead() == _isCorpse && !(target == activeChar && isOffensive()) && (!_isUndeadOnly || target.isUndead()))
+					return target;
+				// party member or party member pet.
+				if(cptarget != null && cplayer != null && cplayer.getClan() != null && cplayer.isInSameClan(cptarget) && target.isDead() == _isCorpse && !(target == activeChar && isOffensive()) && (!_isUndeadOnly || target.isUndead()))
+					return target;
+				return null;
 			case TARGET_PARTY_ONE:
 				if(target == null)
 					return null;
@@ -2241,6 +2209,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return _flyType;
 	}
 
+	public boolean isFlyToBack()
+	{
+		return _flyToBack;
+	}
+
 	public boolean isFlyDependsOnHeading()
 	{
 		return _flyDependsOnHeading;
@@ -2623,6 +2596,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		return _isPreservedOnDeath;
 	}
 
+	public final boolean isHeroic()
+	{
+		return _isHeroic;
+	}
+
 	public void setOperateType(SkillOpType type)
 	{
 		_operateType = type;
@@ -2930,6 +2908,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_NONE:
 			case TARGET_MENTEE:
 			case TARGET_ONE:
+			case TARGET_CLAN_ONE:
 			case TARGET_PARTY_ONE:
 			case TARGET_ONE_SERVITOR:
 			case TARGET_ONE_SUMMON:
@@ -2944,6 +2923,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_CHEST:
 			case TARGET_FEEDABLE_BEAST:
 			case TARGET_SIEGE:
+			case TARGET_ELEMENTAL_DES:
 				return true;
 			default:
 				return false;

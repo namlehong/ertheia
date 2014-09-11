@@ -6,6 +6,7 @@ import l2s.gameserver.model.Creature;
 import l2s.gameserver.model.Skill;
 import l2s.gameserver.model.SkillChain;
 import l2s.gameserver.templates.StatsSet;
+import l2s.gameserver.utils.Location;
 
 /**
  *
@@ -24,6 +25,11 @@ public class ChainCall extends Skill
 		if(!activeChar.isPlayer())
 			return false;
 
+		if(target.isInRange(new Location(-114598,-249431,-2984), 5000))
+		{
+			return false;
+		}
+		
 		if(!activeChar.getPlayer().getSkillChainDetails().containsKey(getChainIndex()))
 			return false;
 
