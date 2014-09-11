@@ -268,6 +268,17 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			st.takeItems(KAIN_PROPHERCY_MACHINE_FRAGMENT, 1);
 		}
 		
+		if(event.startsWith("soul_"))
+		{
+			if(event.equalsIgnoreCase("soul_red"))
+				st.set("soulcrystal", 9570);
+			else if(event.equalsIgnoreCase("soul_blue"))
+				st.set("soulcrystal", 9571);
+			else if(event.equalsIgnoreCase("soul_green"))
+				st.set("soulcrystal", 9572);
+
+		}
+		
 		if(event.equalsIgnoreCase("33943-10.htm") || event.equalsIgnoreCase("33942-10.htm"))
 		{
 			int newClassId;
@@ -281,6 +292,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			
 			st.giveItems(STEEL_DOOR_COIN, 87);
 			st.giveItems(ADENA_ID, 5000000);
+			st.giveItems(st.getInt("soulcrystal"), 1);
 			st.addExpAndSp(2050000, 0);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
