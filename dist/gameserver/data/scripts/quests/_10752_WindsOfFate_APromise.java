@@ -147,7 +147,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		
 		if(event.equalsIgnoreCase("Quest _10752_WindsOfFate_APromise to_faeron"))
 		{
-			if(st.getCond() == 1)
+			if(st.getCond() == 0)
 			{
 				player.teleToLocation(-80565, 251763, -3080);
 				player.sendPacket(TutorialCloseHtmlPacket.STATIC);
@@ -533,7 +533,13 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10752_WindsOfFate_APromise") == null);
+		QuestState st = player.getQuestState("_10752_WindsOfFate_APromise");
+		
+		return (player.getLevel() >= minLevel && 
+				player.getLevel() <= maxLevel && 
+				player.getRace() == Race.ERTHEIA && 
+				(st == null ||
+				(st != null && st.getCond() == 0)));
 	}
 
 }
