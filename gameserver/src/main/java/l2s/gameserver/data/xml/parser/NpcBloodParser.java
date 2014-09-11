@@ -4,21 +4,14 @@ import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 import l2s.commons.data.xml.AbstractDirParser;
 import l2s.gameserver.Config;
 import l2s.gameserver.data.xml.holder.NpcHolder;
-import l2s.gameserver.model.Servitor;
 import l2s.gameserver.model.Skill;
 import l2s.gameserver.model.base.Element;
-import l2s.gameserver.model.instances.PetInstance;
 import l2s.gameserver.model.reward.RewardData;
-import l2s.gameserver.model.reward.RewardGroup;
-import l2s.gameserver.model.reward.RewardList;
-import l2s.gameserver.model.reward.RewardType;
 import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.templates.StatsSet;
@@ -37,16 +30,16 @@ import l2s.gameserver.utils.Location;
  * @author VISTALL
  * @date  16:16/14.12.2010
  */
-public final class NpcGaiParser extends AbstractDirParser<NpcHolder>
+public final class NpcBloodParser extends AbstractDirParser<NpcHolder>
 {
-	private static final NpcGaiParser _instance = new NpcGaiParser();
+	private static final NpcBloodParser _instance = new NpcBloodParser();
 
-	public static NpcGaiParser getInstance()
+	public static NpcBloodParser getInstance()
 	{
 		return _instance;
 	}
 
-	private NpcGaiParser()
+	private NpcBloodParser()
 	{
 		super(NpcHolder.getInstance());
 	}
@@ -54,7 +47,7 @@ public final class NpcGaiParser extends AbstractDirParser<NpcHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/gai_npc/");
+		return new File(Config.DATAPACK_ROOT, "data/blood_npc/");
 	}
 
 	@Override
@@ -138,19 +131,7 @@ public final class NpcGaiParser extends AbstractDirParser<NpcHolder>
 				}
 			}
 
-//			NpcTemplate template = new NpcTemplate(set);
 			NpcTemplate template = NpcHolder.getInstance().getTemplateNoWarn(npcId);
-			if(template == null)
-				continue;
-			if(template.isInstanceOf(Servitor.class))
-			{
-				for(Skill skill: template.getSkills().valueCollection())
-				{
-					if(skill.getId() == 4415 && skill.getLevel() == 9)
-						System.out.println(String.format("'%d': %d,", npcId, skill.getLevel()));
-				}
-			}
-			template.update(set); // MY CUSTOM
 
 			for(Iterator<org.dom4j.Element> secondIterator = npcElement.elementIterator(); secondIterator.hasNext();)
 			{
@@ -171,52 +152,53 @@ public final class NpcGaiParser extends AbstractDirParser<NpcHolder>
 				}
 				else if(nodeName.equalsIgnoreCase("rewardlist"))
 				{
-					RewardType type = RewardType.valueOf(secondElement.attributeValue("type"));
-					boolean autoLoot = secondElement.attributeValue("auto_loot") != null && Boolean.parseBoolean(secondElement.attributeValue("auto_loot"));
-					RewardList list = new RewardList(type, autoLoot);
+//					RewardType type = RewardType.valueOf(secondElement.attributeValue("type"));
+//					boolean autoLoot = secondElement.attributeValue("auto_loot") != null && Boolean.parseBoolean(secondElement.attributeValue("auto_loot"));
+//					RewardList list = new RewardList(type, autoLoot);
+//
+//					for(Iterator<org.dom4j.Element> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
+//					{
+//						final org.dom4j.Element nextElement = nextIterator.next();
+//						final String nextName = nextElement.getName();
+//						if(nextName.equalsIgnoreCase("group"))
+//						{
+//							double enterChance = nextElement.attributeValue("chance") == null ? RewardList.MAX_CHANCE : Double.parseDouble(nextElement.attributeValue("chance")) * 10000;
+//
+//							RewardGroup group = (type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED) ? null : new RewardGroup(enterChance);
+//							for(Iterator<org.dom4j.Element> rewardIterator = nextElement.elementIterator(); rewardIterator.hasNext();)
+//							{
+//								org.dom4j.Element rewardElement = rewardIterator.next();
+//								RewardData data = parseReward(rewardElement);
+//								if(type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED)
+//									warn("Can't load rewardlist from group: " + npcId + "; type: " + type);
+//								else
+//									group.addData(data);
+//							}
+//
+//							if(group != null)
+//								list.add(group);
+//						}
+//						else if(nextName.equalsIgnoreCase("reward"))
+//						{
+//							if(type != RewardType.SWEEP && type != RewardType.NOT_RATED_NOT_GROUPED)
+//							{
+//								warn("Reward can't be without group(and not grouped): " + npcId + "; type: " + type);
+//								continue;
+//							}
+//
+//							RewardData data = parseReward(nextElement);
+//							RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
+//							g.addData(data);
+//							list.add(g);
+//						}
+//					}
+//
+//					if(type == RewardType.RATED_GROUPED || type == RewardType.NOT_RATED_GROUPED)
+//						if(!list.validate())
+//							warn("Problems with rewardlist for npc: " + npcId + "; type: " + type);
 
-					for(Iterator<org.dom4j.Element> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
-					{
-						final org.dom4j.Element nextElement = nextIterator.next();
-						final String nextName = nextElement.getName();
-						if(nextName.equalsIgnoreCase("group"))
-						{
-							double enterChance = nextElement.attributeValue("chance") == null ? RewardList.MAX_CHANCE : Double.parseDouble(nextElement.attributeValue("chance")) * 10000;
-
-							RewardGroup group = (type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED) ? null : new RewardGroup(enterChance);
-							for(Iterator<org.dom4j.Element> rewardIterator = nextElement.elementIterator(); rewardIterator.hasNext();)
-							{
-								org.dom4j.Element rewardElement = rewardIterator.next();
-								RewardData data = parseReward(rewardElement);
-								if(type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED)
-									warn("Can't load rewardlist from group: " + npcId + "; type: " + type);
-								else
-									group.addData(data);
-							}
-
-							if(group != null)
-								list.add(group);
-						}
-						else if(nextName.equalsIgnoreCase("reward"))
-						{
-							if(type != RewardType.SWEEP && type != RewardType.NOT_RATED_NOT_GROUPED)
-							{
-								warn("Reward can't be without group(and not grouped): " + npcId + "; type: " + type);
-								continue;
-							}
-
-							RewardData data = parseReward(nextElement);
-							RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
-							g.addData(data);
-							list.add(g);
-						}
-					}
-
-					if(type == RewardType.RATED_GROUPED || type == RewardType.NOT_RATED_GROUPED)
-						if(!list.validate())
-							warn("Problems with rewardlist for npc: " + npcId + "; type: " + type);
-
-					//template.putRewardList(type, list);
+//					Disable default drop list
+//					template.putRewardList(type, list);
 				}
 				else if(nodeName.equalsIgnoreCase("skills"))
 				{

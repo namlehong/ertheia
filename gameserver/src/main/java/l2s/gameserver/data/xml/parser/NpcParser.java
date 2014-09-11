@@ -157,50 +157,50 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 				}
 				else if(nodeName.equalsIgnoreCase("rewardlist"))
 				{
-					RewardType type = RewardType.valueOf(secondElement.attributeValue("type"));
-					boolean autoLoot = secondElement.attributeValue("auto_loot") != null && Boolean.parseBoolean(secondElement.attributeValue("auto_loot"));
-					RewardList list = new RewardList(type, autoLoot);
-
-					for(Iterator<org.dom4j.Element> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
-					{
-						final org.dom4j.Element nextElement = nextIterator.next();
-						final String nextName = nextElement.getName();
-						if(nextName.equalsIgnoreCase("group"))
-						{
-							double enterChance = nextElement.attributeValue("chance") == null ? RewardList.MAX_CHANCE : Double.parseDouble(nextElement.attributeValue("chance")) * 10000;
-
-							RewardGroup group = (type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED) ? null : new RewardGroup(enterChance);
-							for(Iterator<org.dom4j.Element> rewardIterator = nextElement.elementIterator(); rewardIterator.hasNext();)
-							{
-								org.dom4j.Element rewardElement = rewardIterator.next();
-								RewardData data = parseReward(rewardElement);
-								if(type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED)
-									warn("Can't load rewardlist from group: " + npcId + "; type: " + type);
-								else
-									group.addData(data);
-							}
-
-							if(group != null)
-								list.add(group);
-						}
-						else if(nextName.equalsIgnoreCase("reward"))
-						{
-							if(type != RewardType.SWEEP && type != RewardType.NOT_RATED_NOT_GROUPED)
-							{
-								warn("Reward can't be without group(and not grouped): " + npcId + "; type: " + type);
-								continue;
-							}
-
-							RewardData data = parseReward(nextElement);
-							RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
-							g.addData(data);
-							list.add(g);
-						}
-					}
-
-					if(type == RewardType.RATED_GROUPED || type == RewardType.NOT_RATED_GROUPED)
-						if(!list.validate())
-							warn("Problems with rewardlist for npc: " + npcId + "; type: " + type);
+//					RewardType type = RewardType.valueOf(secondElement.attributeValue("type"));
+//					boolean autoLoot = secondElement.attributeValue("auto_loot") != null && Boolean.parseBoolean(secondElement.attributeValue("auto_loot"));
+//					RewardList list = new RewardList(type, autoLoot);
+//
+//					for(Iterator<org.dom4j.Element> nextIterator = secondElement.elementIterator(); nextIterator.hasNext();)
+//					{
+//						final org.dom4j.Element nextElement = nextIterator.next();
+//						final String nextName = nextElement.getName();
+//						if(nextName.equalsIgnoreCase("group"))
+//						{
+//							double enterChance = nextElement.attributeValue("chance") == null ? RewardList.MAX_CHANCE : Double.parseDouble(nextElement.attributeValue("chance")) * 10000;
+//
+//							RewardGroup group = (type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED) ? null : new RewardGroup(enterChance);
+//							for(Iterator<org.dom4j.Element> rewardIterator = nextElement.elementIterator(); rewardIterator.hasNext();)
+//							{
+//								org.dom4j.Element rewardElement = rewardIterator.next();
+//								RewardData data = parseReward(rewardElement);
+//								if(type == RewardType.SWEEP || type == RewardType.NOT_RATED_NOT_GROUPED)
+//									warn("Can't load rewardlist from group: " + npcId + "; type: " + type);
+//								else
+//									group.addData(data);
+//							}
+//
+//							if(group != null)
+//								list.add(group);
+//						}
+//						else if(nextName.equalsIgnoreCase("reward"))
+//						{
+//							if(type != RewardType.SWEEP && type != RewardType.NOT_RATED_NOT_GROUPED)
+//							{
+//								warn("Reward can't be without group(and not grouped): " + npcId + "; type: " + type);
+//								continue;
+//							}
+//
+//							RewardData data = parseReward(nextElement);
+//							RewardGroup g = new RewardGroup(RewardList.MAX_CHANCE);
+//							g.addData(data);
+//							list.add(g);
+//						}
+//					}
+//
+//					if(type == RewardType.RATED_GROUPED || type == RewardType.NOT_RATED_GROUPED)
+//						if(!list.validate())
+//							warn("Problems with rewardlist for npc: " + npcId + "; type: " + type);
 
 //					Disable default drop list
 //					template.putRewardList(type, list);
