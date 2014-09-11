@@ -213,7 +213,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			st.setCond(5);
 		}
 		
-		if(event.equalsIgnoreCase("31323-3.htm"))
+		if(event.equalsIgnoreCase("31523-3.htm"))
 		{
 			st.setCond(6);
 			//spawn Von Hellmann's ghost and despawn after 3 minutes
@@ -222,7 +222,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			player.sendPacket(new ExShowScreenMessage(TALK_TO_GHOST, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		}
 		
-		if(event.equalsIgnoreCase("31324-3.htm"))
+		if(event.equalsIgnoreCase("31524-3.htm"))
 		{
 			st.setCond(7);
 		}
