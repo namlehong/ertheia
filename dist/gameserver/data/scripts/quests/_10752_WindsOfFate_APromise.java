@@ -197,13 +197,6 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			st.giveItems(PROPHERCY_MACHINE_FRAGMENT, 1);
 		}
 		
-		if(event.equalsIgnoreCase("33933-4.htm"))
-		{
-			st.setCond(2);
-			st.takeItems(NAVARI_MARK, 1);
-			st.takeItems(PROPHERCY_MACHINE_FRAGMENT, 1);
-			st.takeItems(KAIN_PROPHERCY_MACHINE_FRAGMENT, 1);
-		}
 		
 		if(event.equalsIgnoreCase("31321-3.htm"))
 		{
@@ -215,7 +208,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			st.setCond(4);
 		}
 		
-		if(event.equalsIgnoreCase("31322-5.htm"))
+		if(event.equalsIgnoreCase("31522-5.htm"))
 		{
 			st.setCond(5);
 		}
@@ -254,7 +247,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			return null;
 		}
 		
-		if(event.equalsIgnoreCase("33933-6.htm"))
+		if(event.equalsIgnoreCase("33933-7.htm"))
 		{
 			if(player.isMageClass())
 			{
@@ -266,6 +259,10 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 				htmltext = "33933-9.htm";
 				st.setCond(11);
 			}
+			
+			st.takeItems(NAVARI_MARK, 1);
+			st.takeItems(PROPHERCY_MACHINE_FRAGMENT, 1);
+			st.takeItems(KAIN_PROPHERCY_MACHINE_FRAGMENT, 1);
 		}
 		
 		if(event.equalsIgnoreCase("33943-10.htm") || event.equalsIgnoreCase("33942-10.htm"))
@@ -540,7 +537,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 				player.getRace() == Race.ERTHEIA && 
 				(st == null || (st != null && st.getCond() == 0)));
 		
-		System.out.println("checkStartCondition Q10752 " + result);
+		//System.out.println("checkStartCondition Q10752 " + result);
 		return result;
 	}
 
