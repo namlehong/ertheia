@@ -412,10 +412,22 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="10324" levels="3" name="Momentum Master">
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#pSkillPower">1.1 1.15 1.20</table>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10324"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
+				<using skill="10260"/>
+				<using skill="10262"/>
+				<using skill="10269"/>
+				<using skill="10318"/>
+				<using skill="261"/>
+			</mul>
+		</for>
 	</skill>
 	<skill id="10325" levels="3" name="Dreadful Roar">
 		<set name="icon" value="icon.skill10325"/>
