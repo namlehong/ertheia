@@ -29,10 +29,12 @@ public class MenteeList
 
 	public void restore()
 	{
-		if(Mentoring.canBecomeMentor(_owner))
+		boolean canBecomeMentor = Mentoring.canBecomeMentor(_owner);
+		boolean canBecomeMentee = Mentoring.canBecomeMentee(_owner);
+		if(canBecomeMentor)
 			_menteeList = MentoringDAO.getInstance().selectMentorList(_owner);
 		
-		if(Mentoring.canBecomeMentee(_owner))
+		if(canBecomeMentee)
 			_menteeList = MentoringDAO.getInstance().selectMenteeList(_owner);
 	}
 
