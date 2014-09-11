@@ -132,6 +132,11 @@ public final class NpcBloodParser extends AbstractDirParser<NpcHolder>
 			}
 
 			NpcTemplate template = NpcHolder.getInstance().getTemplateNoWarn(npcId);
+			
+			if(template == null)
+				continue;
+			
+			template.update(set); // MY CUSTOM
 
 			for(Iterator<org.dom4j.Element> secondIterator = npcElement.elementIterator(); secondIterator.hasNext();)
 			{
