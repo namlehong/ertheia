@@ -1199,26 +1199,19 @@
 			<effect name="Stun"/>
 		</for>
 	</skill>
-	<skill id="261" levels="22" name="Triple Sonic Slash">
-		<table name="#effectPoint">598 609 620 631 641 651 661 671 680 690 699 708 716 724 732 739 746 753 759 765 771 776</table>
-		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<table name="#mpConsume2">103 105 108 110 113 115 118 120 121 123 125 128 130 132 134 136 139 141 143 145 146 148</table>
-		<table name="#power">1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262</table>
-		<table name="#magicLevel">53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+	<skill id="261" levels="31" name="Triple Sonic Slash">
+		<table name="#mpConsume">67 68 70 72 73 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 105 111 119</table>
+		<table name="#power">1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262 4299 4415 4645 4875 5106 22531 26017 29503 33377</table>
+		<table name="#magicLevel">55 55 55 58 58 58 60 60 62 62 63 64 66 66 68 68 60 70 72 72 74 74 75 77 79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="5000"/>
+		<set name="reuseDelay" value="10000"/>
 		<set name="coolTime" value="133"/>
 		<set name="hitTime" value="1667"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0261"/>
 		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="powerPvP" value="#powerPvP"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="overHit" value="true"/>
@@ -1226,15 +1219,12 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="criticalRate" value="10"/>
 		<set name="shieldignore" value="true"/>
-		<set name="chargeBoost" value="true"/>
-		<set name="num_charges" value="4"/>
-		<set name="charge_skill_id" value="8"/>
-		<!-- Sonic Focus is the charger -->
 		<set name="nextAction" value="attack"/>
-		<set name="useSS" value="false"/>
+		<set name="SSBoost" value="2.0"/>
 		<cond msgId="113">
-			<using kind="Dual Sword"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Dual Blunt, Pole"/>
 		</cond>
+		<!--No enchant available
 		<enchant type="1" levels="30" group="2" name="Power">
 			<table name="#power">4299 4338 4376 4415 4453 4491 4530 4568 4607 4645 4683 4722 4760 4799 4837 4875 4914 4952 4991 5029 5067 5106 5144 5183 5221 5259 5298 5336 5375 5413</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -1267,6 +1257,7 @@
 			<table name="#powerPvP">4336 4410 4485 4559 4634 4708 4783 4857 4932 5006 5081 5155 5230 5304 5379 5453 5527 5602 5676 5751 5825 5900 5974 6047 6123 6198 6272 6347 6421 6496</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 	</skill>
 	<skill id="262" levels="37" name="Holy Blessing">
 		<table name="#dispel_ps_max_abnormal_lvl">0</table>
