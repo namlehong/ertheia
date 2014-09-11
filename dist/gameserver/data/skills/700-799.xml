@@ -2658,41 +2658,44 @@
 			<using kind="Crossbow"/>
 		</cond>
 	</skill>
-	<skill id="791" levels="1" name="Lightning Shock">
+	<skill id="791" levels="5" name="Lightning Shock">
 		<!--
-			Last modify:	25.04.2009
+			Last modify:	11.09.2014
+			Modified by Cith (Ertheia)
 			Description: Instantly paralyze nearby enemies by shooting an electric current.
 		-->
+		<table name="#power">149 158 169 179 188</table>
+		<table name="#hpRecRateDown">0.9 0.8 0.7 0.6 0.5</table>
+		<table name="#mpConsume">67 72 77 83 89</table>
+		<table name="#abnormal_level">1 2 3 4 5</table>
+		<table name="#magicLevel">81 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="5000"/>
 		<set name="coolTime" value="720"/>
 		<set name="hitTime" value="1080"/>
 		<set name="abnormal_effect" value="PARALYZE"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="paralyze"/>
-		<set name="magicLevel" value="81"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="levelModifier" value="1"/>
 		<set name="affectLimit" value="6;12"/>
 		<set name="icon" value="icon.skill0791"/>
-		<set name="power" value="69"/>
+		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="52"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="50"/>
 		<set name="target" value="TARGET_AURA"/>
 		<set name="skillRadius" value="150"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="soulBoost" value="true"/>
+		<set name="overHit" value="true"/>
 		<set name="trait" value="PARALYZE"/>
 		<set name="delayedEffect" value="6092"/>
 		<set name="saveVs" value="MEN"/>
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="pAtkSpd" value="0.5"/>
-				<mul order="0x30" stat="runSpd" value="0.5"/>
-				<mul order="0x30" stat="mAtkSpd" value="0.5"/>
+				<mul order="0x30" stat="hpEff" value="#hpRecRateDown"/>
 			</effect>
 		</for>
 	</skill>
