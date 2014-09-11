@@ -535,6 +535,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		boolean result = (player.getLevel() >= minLevel && 
 				player.getLevel() <= maxLevel && 
 				player.getRace() == Race.ERTHEIA && 
+				(player.getClassId() == ClassId.MARAUDER || player.getClassId() == ClassId.SAIHA_MAGE)
 				(st == null || (st != null && st.getCond() == 0)));
 		
 		//System.out.println("checkStartCondition Q10752 " + result);
