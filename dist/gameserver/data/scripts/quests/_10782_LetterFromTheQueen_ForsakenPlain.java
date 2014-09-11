@@ -32,7 +32,7 @@ public class _10782_LetterFromTheQueen_ForsakenPlain extends Quest implements Sc
 	private static final int SOE_ADEN = 39576;
 	private static final int SOE_FORSAKEN_PLAINS = 39577;
 	private static final int STEEL_DOOR_COIN = 37045;
-	private static final int SCROLL_EWB = 947;
+	private static final int SCROLL_EAB = 948;
 	
 	private static final int minLevel = 58;
 	private static final int maxLevel = 60;
@@ -157,7 +157,7 @@ public class _10782_LetterFromTheQueen_ForsakenPlain extends Quest implements Sc
 		if(event.equalsIgnoreCase("33866-2.htm"))
 		{
 			st.giveItems(STEEL_DOOR_COIN, 60);
-			st.giveItems(SCROLL_EWB, 10);
+			st.giveItems(SCROLL_EAB, 10);
 			st.addExpAndSp(731010, 175);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
