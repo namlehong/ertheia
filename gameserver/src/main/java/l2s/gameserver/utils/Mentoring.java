@@ -1,12 +1,15 @@
 package l2s.gameserver.utils;
 
+import java.util.Arrays;
+import java.util.List;
+
 import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.hash.TIntIntHashMap;
-
 import l2s.gameserver.database.mysql;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.Skill;
 import l2s.gameserver.model.World;
+import l2s.gameserver.model.actor.instances.creature.Effect;
 import l2s.gameserver.model.actor.instances.player.Mentee;
 import l2s.gameserver.model.base.ClassLevel;
 import l2s.gameserver.model.items.ItemInstance;
@@ -151,8 +154,20 @@ public class Mentoring
 				{
 					if(!menteePlayer.getMenteeList().someOneOnline(false))
 					{
+						// TODO : change effect to 5mins
+						System.out.println("Start remove mentee buff on:"+menteePlayer);
+						for(Effect effect: menteePlayer.getEffectList().getEffects())
+						{
+							if(Arrays.asList(EFFECTS_FOR_DEBUFF).contains(effect.getSkill().getId()))
+							{
+								System.out.println("Skill:"+effect.getSkill()+" timeLeft:"+effect.getTimeLeft());
+							}
+						}
+						
 						for(int buff : EFFECTS_FOR_DEBUFF)
+						{
 							menteePlayer.getEffectList().stopEffects(buff);
+						}
 					}
 				}
 			}

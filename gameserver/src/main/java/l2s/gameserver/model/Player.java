@@ -4267,9 +4267,8 @@ public final class Player extends Playable implements PlayerGroup
 
 			//TODO: [Bonux] Пересмотреть.
 			int mentorId = getMenteeList().getMentor();
-			// KIET: Send Sign of tutor if and only if mentee in base class
-//			if(mentorId != 0) <-- old code
-			if(mentorId != 0 && this.getActiveClassId() == this.getBaseClassId())
+			// FIXME: subclasses do not have mentor
+			if(mentorId != 0 && isBaseClassActive())
 			{
 				Player mentorPlayer = World.getPlayer(mentorId);
 				String mentorName = getMenteeList().get(mentorId).getName();
@@ -4297,12 +4296,8 @@ public final class Player extends Playable implements PlayerGroup
 					if(mentorPlayer != null)
 					{
 						mentorPlayer.sendPacket(new SystemMessagePacket(SystemMsg.THE_MENTEE_S1_HAS_REACHED_LEVEL_86).addName(this));
-						// Kiet remove old code
 						mentorPlayer.getMenteeList().remove(_name, true, false);
 						Mentoring.applyMentoringCond(this, false);
-						// KIET
-//                      Mentoring.applyMentoringCond(mentorPlayer,false);
-//                        Mentoring.removeMentoring(mentorPlayer,this,false);
 						if(Mentoring.getGraduatedMenteesCount(mentorId) == -1) //first time
 							Mentoring.setNewMenteesCount(mentorId, 1);	
 						else if(Mentoring.getGraduatedMenteesCount(mentorId) == 2) //this time setting the penalty
@@ -10096,8 +10091,6 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			getMenteeList().notify(true);
 			Mentoring.applyMentoringCond(this, true);
-			// Kiet
-			Mentoring.addMentoringSkills(this);
 		}
 	}
 
@@ -10107,8 +10100,6 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			getMenteeList().notify(false);
 			Mentoring.applyMentoringCond(this, false);
-			// Kiet
-			Mentoring.addMentoringSkills(this);
 		}
 	}
 
