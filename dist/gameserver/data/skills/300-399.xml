@@ -1427,28 +1427,85 @@
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
 	</skill>
-	<skill id="345" levels="1" name="Sonic Rage">
+	<skill id="345" levels="12" name="Sonic Rage">
+		<table name="#magicLevel">78 79 81 83 85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume">50 55 56 57 58 59 61 63 65 67 69 71</table>
+		<table name="#pDef">0.9 0.89 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.72 0.7</table>
+		<table name="#power">195 205 215 225 551 565 598 630 662 693 725 757</table>
+		<table name="#powerPvP">0</table>
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="hitTime" value="1500"/>
-		<set name="magicLevel" value="78"/>
+		<set name="hitTime" value="1200"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0345"/>
-		<set name="power" value="10"/>
+		<set name="power" value="#power"/>
 		<set name="castRange" value="600"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="hpConsume" value="50"/>
-		<set name="mpConsume2" value="5"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="effectPoint" value="340"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="overHit" value="true"/>
 		<set name="skillType" value="CHARGE"/>
-		<set name="criticalRate" value="10"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="charges" value="10"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="element" value="#element"/>
+		<set name="elementPower" value="#elementPower"/>
 		<set name="isOffensive" value="true"/>
 		<set name="nextAction" value="attack"/>
 		<cond msgId="113">
-			<using kind="Dual Sword"/>
+			<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#mpConsume">68 65 62 59 56 53 51 48 45 42</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="Duel">
+			<table name="#powerPvP">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="3" name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="5" name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="6" name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="7" name="Holy Attack">
+			<table name="#element">Holy</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="8" name="Dark Attack">
+			<table name="#element">unholy</table>
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pDef" value="#pDef"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
 		<set name="ride_state" value="NONE"/>
