@@ -515,6 +515,10 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 	{
 		if(st == null) return;
 		
+		Player player = st.getPlayer();
+		
+		if(player == null) return;
+		
 		if(player.isMageClass())
 			st.getPlayer().sendPacket(new ExShowScreenMessage(AYANTHE_LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		else
