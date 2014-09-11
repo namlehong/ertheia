@@ -2456,36 +2456,35 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1462" levels="1" name="Seal of Blockade">
+	<skill id="1462" levels="7" name="Seal of Blockade">
 		<!--
-			Description: Inflicts non-attribute damage on the enemy using 80 Power added to user's M. Atk. and blocks ordinary attacks for 10 seconds.
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#activateRate">80</table>
-		<table name="#mpConsume2">87</table>
-		<table name="#mpConsume1">22</table>
-		<table name="#magicLevel">79</table>
+		<table name="#activateRate">40 45 50 60 65 70 80</table>
+		<table name="#mpConsume">100 130 170 252 278 306 332</table>
+		<table name="#hitTime">4000 3700 3400 3100 2800 2500 2200</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7</table>
+		<table name="#magicLevel">79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="75000"/>
-		<set name="hitTime" value="4000"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="hitTime" value="#hitTime"/>
 		<set name="abnormal_time" value="10"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="normal_attack_block"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="levelModifier" value="2"/>
 		<set name="affectLimit" value="10;10"/>
 		<set name="icon" value="icon.skill1462"/>
-		<set name="power" value="80"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="skillRadius" value="225"/>
-		<set name="skillType" value="MDAM"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="trait" value="PHYSICAL_BLOCKADE"/>
 		<set name="saveVs" value="MEN"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="6" name="Chance">
 			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2495,6 +2494,7 @@
 			<table name="#mpConsume2">84 81 78 75 72 69 66 63 61 58 55 52 49 46 43</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect name="MuteAttack"/>
 		</for>
