@@ -26,19 +26,21 @@ public class Aggression extends Skill
 		int effect = _effectPoint;
 
 		if(isSSPossible() && (activeChar.getChargedSoulShot() || activeChar.getChargedSpiritShot() > 0))
-			effect *= 2;
-
+        {
+            effect *= 2;
+        }
 		for(Creature target : targets)
 			if(target != null)
 			{
 				if(!target.isAutoAttackable(activeChar))
-					continue;
-
+                {
+                    continue;
+                }
 				if(target.isNpc())
 				{
 					if(_unaggring)
 					{
-						if(target.isNpc() && activeChar.isPlayable())
+						if(activeChar.isPlayable())
 							((NpcInstance) target).getAggroList().addDamageHate(activeChar, 0, -effect);
 					}
 					else
@@ -49,13 +51,18 @@ public class Aggression extends Skill
 					}
 				}
 				else if(target.isPlayable() && !target.isDebuffImmune())
-					target.setTarget(activeChar);
+                {
+                    target.setTarget(activeChar);
+                    // Force attack
+                    target.getAI().Attack(activeChar,true,false);
+                }
 				getEffects(activeChar, target, false);
 			}
 
 		if(isSSPossible())
-			activeChar.unChargeShots(isMagic());
-
+        {
+            activeChar.unChargeShots(isMagic());
+        }
 		super.useSkill(activeChar, targets);
 	}
 }
