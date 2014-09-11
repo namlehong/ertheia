@@ -107,7 +107,7 @@ public class _10782_LetterFromTheQueen_ForsakenPlain extends Quest implements Sc
 			htmltext = "";
 		}
 		
-		if(event.equalsIgnoreCase("Quest _10782_LetterFromTheQueen_ForsakenPlain to_oren"))
+		if(event.equalsIgnoreCase("Quest _10782_LetterFromTheQueen_ForsakenPlain to_aden"))
 		{
 			//System.out.println("in Quest _10782_LetterFromTheQueen_ForsakenPlain to_dion");
 			if(st.getCond() == 1)
