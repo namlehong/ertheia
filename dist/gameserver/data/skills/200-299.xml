@@ -290,9 +290,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="222" levels="1" name="Fury Fists">
+	<skill id="222" levels="4" name="Fury Fists">
+		<table name="#pAtkSpd">1.25 1.3 1.35 1.4</table>
+		<table name="#FistpAtkSpdBonus">1.25 1.35 1.40 1.45</table>
+		<table name="#magicLevel">43 65 76 85</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="magicLevel" value="43"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0222"/>
 		<set name="mpConsume1" value="8"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -300,7 +303,10 @@
 		<set name="operateType" value="OP_TOGGLE"/>
 		<for>
 			<effect count="-1" name="DamOverTime" time="1" value="16">
-				<mul order="0x30" stat="pAtkSpd" value="1.25"/>
+				<mul order="0x30" stat="pAtkSpd" value="#pAtkSpd"/>
+				<mul order="0x30" stat="pAtkSpd" value="#FistpAtkSpdBonus">
+					<using kind="Dual Fist"/>
+				</mul>
 			</effect>
 		</for>
 	</skill>
