@@ -113,7 +113,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		{
 			if(checkStartCondition(player))
 			{
-				Quest q = QuestManager.getQuest(10755);
+				Quest q = QuestManager.getQuest(10751);
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
