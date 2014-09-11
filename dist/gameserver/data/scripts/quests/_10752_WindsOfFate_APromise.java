@@ -19,6 +19,7 @@ import l2s.gameserver.network.l2.s2c.ExCallToChangeClass;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
+import l2s.gameserver.utils.Location;
 
 /**
  * @author Hien Son
@@ -231,6 +232,8 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		{
 			st.setCond(8);
 			enterInstance(st, 254);
+
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("33979-11.htm"))
@@ -465,7 +468,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			st.playSound(SOUND_MIDDLE);
 			
 			//spawn Giselle Von Hellmann and despawn after 5 minutes
-			giselle_instance = st.addSpawn(VON_HELLMANN, 57960, -28376, 544, 300000);
+			giselle_instance = player.getReflection().addSpawnWithoutRespawn(VON_HELLMANN, new Location(57960, -28376, 544, 0), 0);
 			giselle_instance.getAggroList().addDamageHate(player, 50000, 50000);
 			giselle_instance.setAggressionTarget(player);
 			giselle_instance.getAI().Attack(player, false, false);
@@ -481,7 +484,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			
 			//spawn Kain Van Halter right at the position of Giselle Von Hellmann. Despawn him after 5 mins
 			//Need to add 1 more cutscene video here, when Kain came to save Giselle. Haven't sniffed the packet to see which one triggers the video yet - leave it for later
-			kain_instance = st.addSpawn(KAIN_VAN_HALTER, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 300000);
+			kain_instance = player.getReflection().addSpawnWithoutRespawn(KAIN_VAN_HALTER, new Location(npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 0), 0);
 		}
 		
 		return null;
