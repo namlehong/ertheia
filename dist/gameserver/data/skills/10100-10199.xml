@@ -130,9 +130,37 @@
 		</for>
 	</skill>
 	<skill id="10103" levels="4" name="Mass Freezing Strike">
+		<table name="#activateRate">60</table>
+		<table name="#count">6 6 6 0</table>
+		<table name="#magicLevel">96 97 98 99</table>
+		<table name="#mpConsume2">185 191 197 197</table>
+		<table name="#power">18151 18641 19131 19131</table>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="400"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10103"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="#count"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="runSpd" value="100"/>
+			</effect>
+		</for>
 	</skill>
 </list>
