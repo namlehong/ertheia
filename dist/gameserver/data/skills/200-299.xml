@@ -2262,14 +2262,14 @@
 			<add order="0x40" stat="mpEff" value="#ManaHeal-eff"/>
 		</for>
 	</skill>
-	<skill id="286" levels="3" name="Provoke">
+	<skill id="286" levels="12" name="Provoke">
 		<!--
 			Provokes enemies within a wide range and decreases resistance to spear weapons by 10 for 10-20 seconds.
 			-->
-		<table name="#effectPoint">136 175 189</table>
-		<table name="#skillRadius">500 700 900</table>
-		<table name="#mpConsume2">57 75 83</table>
-		<table name="#magicLevel">43 55 60</table>
+		<table name="#poleWpnVuln">10 11 12 13 14 15 16 17 18 19 20 25</table>
+		<table name="#skillRadius">500 700 900 900 900 900 900 900 900 900 900 900</table>
+		<table name="#mpConsume">54 55 56 57 58 59 60 61 62 69 75 80</table>
+		<table name="#magicLevel">43 55 60 75 77 79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="4000"/>
 		<set name="hitTime" value="1500"/>
@@ -2280,15 +2280,14 @@
 		<set name="affectLimit" value="9;10"/>
 		<set name="icon" value="icon.skill0286"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_AURA"/>
 		<set name="skillRadius" value="#skillRadius"/>
 		<set name="skillType" value="AGGRESSION"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<add order="0x40" stat="poleWpnVuln" value="10"/>
+				<add order="0x40" stat="poleWpnVuln" value="#poleWpnVuln"/>
 			</effect>
 		</for>
 	</skill>
