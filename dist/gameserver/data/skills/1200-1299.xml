@@ -1438,39 +1438,39 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1244" levels="4" name="Freezing Flame">
-		<table name="#dmg">102 125 144 157</table>
-		<table name="#effectPoint">379 495 597 646</table>
-		<table name="#mpConsume2">42 56 71 80</table>
-		<table name="#mpConsume1">11 14 18 20</table>
-		<table name="#power">5 6 7 8</table>
-		<table name="#magicLevel">40 52 64 72</table>
-		<table name="#abnormal_level">5 6 7 8</table>
+	<skill id="1244" levels="10" name="Freezing Flame">
+		<table name="#dmg">112 137 158 172 198 330 358 377 394 412</table>
+		<table name="#dmgPvP">132 162 187 204 234 390 423 445 466 487</table>
+		<table name="#effectPoint">379 495 597 646 703 800 900 1000</table>
+		<table name="#mpConsume">55 58 61 64 67 70 73 79 86 91</table>
+		<table name="#hitTime">3000 2800 2600 2400 2205 2000 1800 1602 1400 1205</table>
+		<table name="#magicLevel">40 52 64 72 76 80 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9 10</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="2000"/>
-		<set name="hitTime" value="4000"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="#hitTime"/>
 		<set name="abnormal_effect" value="DOT_BLEEDING"/>
-		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="dot_attr"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="levelModifier" value="1"/>
 		<set name="icon" value="icon.skill1244"/>
-		<set name="power" value="#power"/>
 		<set name="castRange" value="900"/>
 		<set name="hitCancelTime" value="500"/>
 		<set name="mpConsume1" value="#mpConsume1"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="effectPoint" value="#effectPoint"/>
-		<set name="activateRate" value="70"/>
+		<set name="activateRate" value="100"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="elements" value="fire"/>
 		<set name="skillType" value="DOT"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="saveVs" value="MEN"/>
 		<for>
-			<effect count="15" time="1" name="DamOverTime" value="#dmg"/>
+			<effect count="10" time="1" name="DamOverTime" value="#dmg"/>
+			<effect count="10" time="1" name="DamOverTime" value="#dmgPvP">
+				<target type="PLAYABLE"/>
+			</effect>
 		</for>
 	</skill>
 	<skill id="1245" levels="14" name="Steal Essence">
