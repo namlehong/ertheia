@@ -75,10 +75,7 @@ forcerestart)
 
 update)
 	echo "update main folder"
-	svn up $DAEMON_PATH
-	echo "update datapack"
-	svn up $DATA_PATH
-#	echo "svn up $DAEMON_PATH"
+	git pull
 ;;
 
 watch)
