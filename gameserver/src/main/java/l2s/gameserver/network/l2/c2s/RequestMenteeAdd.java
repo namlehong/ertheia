@@ -12,6 +12,7 @@ import l2s.gameserver.model.instances.FakePlayerInstance;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExMentorAdd;
 import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
+import l2s.gameserver.utils.Mentoring;
 
 /**
  * @author Cain
@@ -48,7 +49,8 @@ public class RequestMenteeAdd extends L2GameClientPacket
 		}
 
 		// Только после перерождения можно стать наставником
-		if(!activeChar.isAwaked())
+//		if(!activeChar.isAwaked())
+		if(Mentoring.canBecomeMentor(activeChar))
 		{
 			activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR));
 			return;
@@ -82,7 +84,7 @@ public class RequestMenteeAdd extends L2GameClientPacket
 			if(fakePlayer != null)
 			{
 				// Выше 85 лвла
-				if(fakePlayer.getLevel() > 85)
+				if(fakePlayer.getLevel() >= Mentoring.MENTEE_GRADUATE_LEVEL)
 				{
 					activeChar.sendPacket(new SystemMessagePacket(SystemMsg.S1_IS_ABOVE_LEVEL_86_AND_CANNOT_BECOME_A_MENTEE).addName(fakePlayer));
 					return;
@@ -119,7 +121,7 @@ public class RequestMenteeAdd extends L2GameClientPacket
 		}
 
 		// Выше 85 лвла
-		if(newMentee.getLevel() > 85)
+		if(newMentee.getLevel() >= Mentoring.MENTEE_GRADUATE_LEVEL)
 		{
 			activeChar.sendPacket(new SystemMessagePacket(SystemMsg.S1_IS_ABOVE_LEVEL_86_AND_CANNOT_BECOME_A_MENTEE).addName(newMentee));
 			return;

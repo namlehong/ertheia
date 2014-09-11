@@ -11,6 +11,7 @@ import l2s.gameserver.model.Skill;
 import l2s.gameserver.model.World;
 import l2s.gameserver.model.actor.instances.creature.Effect;
 import l2s.gameserver.model.actor.instances.player.Mentee;
+import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.ClassLevel;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.mail.Mail;
@@ -75,6 +76,11 @@ public class Mentoring
 		SIGN_OF_TUTOR.put(84, 829);
 		SIGN_OF_TUTOR.put(85, 863);
 	};
+	
+	public static final int MENTEE_GRADUATE_LEVEL = 76;
+	public static final int MENTOR_REQUIRE_LEVEL = 85;
+	public static final int MAX_MENTOR_SLOT = 1;
+	public static final int MAX_MENTEE_SLOT = 3;
 
 	private static final int[] EFFECTS_FOR_MENTEE = { 9233, 9227, 9228, 9229, 9230, 9231, 9232, 17082, 17083, 17084 };
 	private static final int SKILL_FOR_MENTEE = 9379;
@@ -158,13 +164,7 @@ public class Mentoring
 						System.out.println("Start remove mentee buff on:"+menteePlayer);
 						for(Effect effect: menteePlayer.getEffectList().getEffects())
 						{
-							for(int skill_id: EFFECTS_FOR_DEBUFF)
-							{
-								if(effect.getSkill().getId() == skill_id)
-								{
-									System.out.println("Skill:"+effect.getSkill()+" timeLeft:"+effect.getTimeLeft());
-								}
-							}
+							System.out.println("Skill:"+effect.getSkill()+" timeLeft:"+effect.getTimeLeft());
 						}
 						
 						for(int buff : EFFECTS_FOR_DEBUFF)
@@ -282,5 +282,33 @@ public class Mentoring
 		receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
 		receiver.sendPacket(new ExUnReadMailCount(receiver));
 		receiver.sendPacket(SystemMsg.THE_MAIL_HAS_ARRIVED);
+	}
+	
+	
+	
+	public static boolean canBecomeMentor(int level, int class_id)
+	{
+		if(level < 85)
+			return false;
+		
+		return ClassId.VALUES[class_id].isLast();
+	}
+	
+	public static boolean canBecomeMentee(int level, int class_id)
+	{
+		if(level >= MENTEE_GRADUATE_LEVEL)
+			return false;
+		
+		return !ClassId.VALUES[class_id].isLast();
+	}
+	
+	public static boolean canBecomeMentor(Player player)
+	{
+		return canBecomeMentor(player.getBaseSubClass().getLevel(), player.getBaseSubClass().getClassId());
+	}
+	
+	public static boolean canBecomeMentee(Player player)
+	{
+		return canBecomeMentee(player.getBaseSubClass().getLevel(), player.getBaseSubClass().getClassId());
 	}
 }

@@ -29,7 +29,11 @@ public class MenteeList
 
 	public void restore()
 	{
-		_menteeList = MentoringDAO.getInstance().selectMenteeList(_owner);
+		if(Mentoring.canBecomeMentor(_owner))
+			_menteeList = MentoringDAO.getInstance().selectMentorList(_owner);
+		
+		if(Mentoring.canBecomeMentee(_owner))
+			_menteeList = MentoringDAO.getInstance().selectMenteeList(_owner);
 	}
 
 	public Mentee get(int objectId)
@@ -97,12 +101,17 @@ public class MenteeList
 
 	public void addMentee(Player menteePlayer)
 	{
+		// it should reject here, but for safety
+		if(!Mentoring.canBecomeMentor(_owner))
+			return;
 		_menteeList.put(menteePlayer.getObjectId(), new Mentee(menteePlayer));
 		MentoringDAO.getInstance().insert(_owner, menteePlayer);
 	}
 
 	public void addMentor(Player mentorPlayer)
 	{
+		if(!Mentoring.canBecomeMentee(_owner))
+			return;
 		_menteeList.put(mentorPlayer.getObjectId(), new Mentee(mentorPlayer, true));
 		Mentoring.addMentoringSkills(mentorPlayer);
 	}

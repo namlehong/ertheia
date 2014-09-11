@@ -10,6 +10,8 @@ import l2s.commons.dbutils.DbUtils;
 import l2s.gameserver.database.DatabaseFactory;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.actor.instances.player.Mentee;
+import l2s.gameserver.utils.Mentoring;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +34,44 @@ public class MentoringDAO
 	{
 		return _instance;
 	}
+	
+	public TIntObjectHashMap<Mentee> selectMentorList(Player listOwner)
+	{
+		TIntObjectHashMap<Mentee> map = new TIntObjectHashMap<Mentee>();
+		Connection con = null;
+		PreparedStatement statement = null;
+		ResultSet rset = null;
+		try
+		{
+			con = DatabaseFactory.getInstance().getConnection();
+			statement = con.prepareStatement(mentorList);
+			statement.setInt(1, listOwner.getObjectId());
+			rset = statement.executeQuery();
+			int mentee_count = 0;
+			while(rset.next())
+			{
+				int objectId = rset.getInt("charid");
+				String name = rset.getString("c.char_name");
+				int classId = rset.getInt("s.class_id");
+				int level = rset.getInt("s.level");
+				if(mentee_count < Mentoring.MAX_MENTEE_SLOT && Mentoring.canBecomeMentee(level, classId)){
+					map.put(objectId, new Mentee(objectId, name, classId, level, false));
+					mentee_count++;
+				}else{
+					delete(listOwner.getObjectId(), objectId);
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			_log.error("MentoringDAO.load(L2Player): " + e, e);
+		}
+		finally
+		{
+			DbUtils.closeQuietly(con, statement, rset);
+		}
+		return map;
+	}
 
 	public TIntObjectHashMap<Mentee> selectMenteeList(Player listOwner)
 	{
@@ -42,18 +82,24 @@ public class MentoringDAO
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
-			int clid = listOwner.getClassId().getId();
-			statement = con.prepareStatement(clid > 138 ? mentorList : menteeList);
+			statement = con.prepareStatement(menteeList);
 			statement.setInt(1, listOwner.getObjectId());
 			rset = statement.executeQuery();
+			int mentor_count = 0;
 			while(rset.next())
 			{
 				int objectId = rset.getInt("charid");
 				String name = rset.getString("c.char_name");
 				int classId = rset.getInt("s.class_id");
 				int level = rset.getInt("s.level");
-
-				map.put(objectId, new Mentee(objectId, name, classId, level, classId > 138));
+				
+				if(mentor_count < Mentoring.MAX_MENTOR_SLOT && Mentoring.canBecomeMentor(level, classId)){
+					map.put(objectId, new Mentee(objectId, name, classId, level, true));
+					mentor_count++;
+				}else{
+					delete(objectId, listOwner.getObjectId());
+				}
+					
 			}
 		}
 		catch(Exception e)
