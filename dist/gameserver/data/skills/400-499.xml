@@ -2612,19 +2612,18 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="483" levels="2" name="Sword Shield">
+	<skill id="483" levels="8" name="Sword Shield">
 		<!--
-			Enchant #1: +P. Def
-			Enchant #2: -Penalty
-			Description: Greatly increases own P. Def instantly. Greatly decreases own speed while duration of effect lasts. Consumes 2 soul.
+			Description: Greatly increases own P. Def instantly. Greatly decreases own speed while duration of effect lasts.
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#pDef">1600 3200</table>
-		<table name="#runSpd">0.6</table>
-		<table name="#mpConsume2">16 24</table>
-		<table name="#magicLevel">36 52</table>
-		<table name="#abnormal_level">1 2</table>
+		<table name="#pDef">2000 4000 4750 5250 6250 6250 6250 7500</table>
+		<table name="#runSpd">0.6 0.6 0.6 0.6 0.7 0.8 0.9 1</table>
+		<table name="#mpConsume">16 18 20 22 24 26 28 30</table>
+		<table name="#magicLevel">36 52 64 74 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="900000"/>
+		<set name="reuseDelay" value="300000"/>
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
@@ -2632,10 +2631,11 @@
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0483"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Power">
 			<table name="#pDef">3240 3280 3320 3360 3400 3440 3480 3520 3560 3600 3640 3680 3720 3760 3800 3840 3880 3920 3960 4000 4040 4080 4120 4160 4200 4240 4280 4320 4360 4400</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2644,6 +2644,7 @@
 			<table name="#runSpd">0.61 0.62 0.63 0.64 0.65 0.66 0.67 0.68 0.69 0.70 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.80 0.81 0.82 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.90</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect>
 				<add order="0x40" stat="pDef" value="#pDef"/>
