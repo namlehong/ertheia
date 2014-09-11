@@ -276,7 +276,16 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 				st.set("soulcrystal", 9571);
 			else if(event.equalsIgnoreCase("soul_green"))
 				st.set("soulcrystal", 9572);
-
+			
+			if(player.isMageClass())
+			{
+				htmltext = "33942-7.htm";
+			}
+			else
+			{
+				htmltext = "33943-7.htm";
+			}
+			
 		}
 		
 		if(event.equalsIgnoreCase("33943-10.htm") || event.equalsIgnoreCase("33942-10.htm"))
