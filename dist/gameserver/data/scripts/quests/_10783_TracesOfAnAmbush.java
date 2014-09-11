@@ -141,7 +141,7 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 			npcId == FALLEN_ORC_SHAMAN || 
 			npcId == SHARP_TALON_TIGER )
 		{
-			if(Math.random() < 0.6)
+			if(Math.random() < 0.6 && cond == 1)
 			{
 				//spawn Embryo Predator and attack player and despawn after 3 minutes
 				NpcInstance embryo_predator = st.addSpawn(EMBRYO_PREDATOR, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 180000);
