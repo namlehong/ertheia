@@ -3,6 +3,7 @@ package databuilder;
 import java.io.File;
 import java.io.IOException;
 
+import databuilder.utils.XmlPretty;
 import databuilder.xml.parser.NpcGaiParser;
 import l2s.gameserver.Config;
 import l2s.gameserver.data.xml.parser.BaseStatsBonusParser;
@@ -31,6 +32,7 @@ public class MainBuilder
 	
 	public static void main(String[] args)
 	{
+//		System.currentTimeMillis();
 		try {
 			Config.DATAPACK_ROOT = new File("/Users/mylove1412/Workspace/ertheia/dist/gameserver/").getCanonicalFile();
 		} catch (IOException e) {
@@ -39,6 +41,7 @@ public class MainBuilder
 		}
 		
 		buildNpc();
+//		System.out.println(XmlPretty.prettyFormat("<test></test>", "npc.dtd"));
 		
 	}
 	

@@ -12,11 +12,11 @@ import javax.xml.transform.stream.StreamSource;
 
 public class XmlPretty {
 
-	public static String prettyFormat(String input) {
-	    return XmlPretty.prettyFormat(input, 4);
+	public static String prettyFormat(String input, String dtd_format) {
+	    return XmlPretty.prettyFormat(input, dtd_format, 4);
 	}
 
-	public static String prettyFormat(String input, int indent) {
+	public static String prettyFormat(String input, String dtd_format, int indent) {
 	    try
 	    {
 	        Source xmlInput = new StreamSource(new StringReader(input));
@@ -27,6 +27,7 @@ public class XmlPretty {
 	        transformerFactory.setAttribute("indent-number", indent);
 	         
 	        Transformer transformer = transformerFactory.newTransformer();
+	        transformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, dtd_format);
 	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 	        transformer.transform(xmlInput, xmlOutput);
 	        return xmlOutput.getWriter().toString();

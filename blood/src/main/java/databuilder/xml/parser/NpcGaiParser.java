@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import databuilder.xml.holder.NpcGaiHolder;
 import l2s.commons.data.xml.AbstractDirParser;
 import l2s.gameserver.Config;
 import l2s.gameserver.data.xml.holder.BaseStatsBonusHolder;
@@ -21,7 +20,8 @@ import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.templates.StatsSet;
 import l2s.gameserver.templates.npc.Faction;
 import l2s.gameserver.templates.npc.NpcTemplate;
-import blood.BloodTest;
+import databuilder.utils.XmlPretty;
+import databuilder.xml.holder.NpcGaiHolder;
 
 /**
  * @author VISTALL
@@ -318,7 +318,7 @@ public final class NpcGaiParser extends AbstractDirParser<NpcGaiHolder>
 		builder.append(xmlInput);
 	}
 	
-	public static void writeToFile()
+	public void writeToFile()
 	{
 		for(Map.Entry<String, StringBuilder> entry: _stringBuilderHolder.entrySet())
 		{
@@ -328,8 +328,8 @@ public final class NpcGaiParser extends AbstractDirParser<NpcGaiHolder>
 		}
 	}
 	
-	public static void writeToFile(String fileName, String xmlInput){
-		String xmlOut = BloodTest.prettyFormat(xmlInput);
+	public void writeToFile(String fileName, String xmlInput){
+		String xmlOut = XmlPretty.prettyFormat(xmlInput, getDTDFileName());
 		
 		try {
 			File file = new File("/Users/mylove1412/Workspace/ertheia/dist/gameserver/data/blood_npc/"+fileName);
