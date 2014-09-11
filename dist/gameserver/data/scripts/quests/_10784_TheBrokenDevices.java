@@ -169,7 +169,7 @@ public class _10784_TheBrokenDevices extends Quest implements ScriptFile
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		QuestState qs = player.getQuestState(_10784_TheBrokenDevices.class);
+		QuestState qs = player.getQuestState(_10783_TracesOfAnAmbush.class);
 		
 		return (player.getLevel() >= minLevel && 
 				player.getLevel() <= maxLevel && 
