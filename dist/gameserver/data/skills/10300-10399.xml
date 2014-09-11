@@ -430,10 +430,32 @@
 		</for>
 	</skill>
 	<skill id="10325" levels="3" name="Dreadful Roar">
+		<table name="#effectPoint">633 644 653</table>
+		<table name="#mpConsume2">149 151 154</table>
+		<table name="#magicLevel">97 98 99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
 		<set name="icon" value="icon.skill10325"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="isCancel" value="true"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="100"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reflectable" value="false"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_buff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="min_count" value="1"/>
+				<def name="max_count" value="5"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10326" levels="3" name="Bloody Fury">
 		<set name="icon" value="icon.skill10326"/>
