@@ -98,10 +98,36 @@
 		</for>
 	</skill>
 	<skill id="10102" levels="3" name="Shadow Slash">
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#mpConsume2">185 191 197</table>
+		<table name="#power">33505 34353 35201</table>
+		<table name="#reuseDelay">60000</table>
+		<set name="activateRate" value="85"/>
+		<set name="castRange" value="400"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
 		<set name="icon" value="icon.skill10102"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="6"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillRadius" value="150"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+		<cond msgId="113">
+			<using kind="Shield"/>
+		</cond>
+		<for>
+			<effect name="KnockDown" chance="85" time="3">
+				<def name="fly_radius" value="150"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10103" levels="4" name="Mass Freezing Strike">
 		<set name="icon" value="icon.skill10103"/>
