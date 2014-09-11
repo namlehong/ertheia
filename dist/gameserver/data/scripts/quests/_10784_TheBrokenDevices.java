@@ -23,7 +23,7 @@ import l2s.gameserver.utils.ReflectionUtils;
  * @author Hien Son
  * 
  */
-public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
+public class _10784_TheBrokenDevices extends Quest implements ScriptFile
 {
 
 	private static final int NOVAIN = 33866;
@@ -32,12 +32,8 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 	private final static int YINTZU = 20647;
 	private final static int HAMRUT = 20649;
 	private final static int PALLIOTE = 20648;
-	private final static int FALLEN_ORC_SHAMAN = 21258;
-	private final static int SHARP_TALON_TIGER = 21021;
-	private final static int FALLEN_ORC_CAPTAIN = 21022;
-	private final static int EMBRYO_PREDATOR = 27539;
 
-	private static final int MISSIVE_SCRAP = 39722;
+	private static final int BROKEN_MAGIC_DEVICE_FRAGMENT = 39723;
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EAB = 948;
 	
@@ -57,12 +53,12 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 	public void onShutdown()
 	{}
 
-	public _10783_TracesOfAnAmbush()
+	public _10784_TheBrokenDevices()
 	{
 		super(false);
 		addStartNpc(NOVAIN);
 		
-		addKillId(KRANROT, YINTZU, HAMRUT, PALLIOTE, PALLIOTE, SHARP_TALON_TIGER, FALLEN_ORC_CAPTAIN, EMBRYO_PREDATOR);
+		addKillId(KRANROT, YINTZU, HAMRUT, PALLIOTE, PALLIOTE);
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
@@ -84,10 +80,10 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33866-6.htm"))
 		{
-			st.takeAllItems(MISSIVE_SCRAP);
-			st.giveItems(STEEL_DOOR_COIN, 34);
+			st.takeAllItems(BROKEN_MAGIC_DEVICE_FRAGMENT);
+			st.giveItems(STEEL_DOOR_COIN, 40);
 			st.giveItems(SCROLL_EAB, 5);
-			st.addExpAndSp(5482574, 1315);
+			st.addExpAndSp(6579090, 1578);
 			
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
@@ -137,26 +133,15 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 		if(	npcId == KRANROT || 
 			npcId == YINTZU || 
 			npcId == HAMRUT || 
-			npcId == PALLIOTE || 
-			npcId == FALLEN_ORC_SHAMAN || 
-			npcId == SHARP_TALON_TIGER )
+			npcId == PALLIOTE )
 		{
 			if(Math.random() < 0.6 && cond == 1)
 			{
-				//spawn Embryo Predator and attack player and despawn after 3 minutes
-				NpcInstance embryo_predator = st.addSpawn(EMBRYO_PREDATOR, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 180000);
-				embryo_predator.getAggroList().addDamageHate(player, 10000, 10000);
-				embryo_predator.setAggressionTarget(player);
-				embryo_predator.getAI().Attack(player, false, false);
+				st.giveItems(BROKEN_MAGIC_DEVICE_FRAGMENT, 1);
 			}
 		}
 		
-		if(	npcId == EMBRYO_PREDATOR)
-		{
-			st.giveItems(MISSIVE_SCRAP, 1);
-		}
-		
-		if(getItemCountById(st.getPlayer(), MISSIVE_SCRAP) >= 10)
+		if(getItemCountById(player, BROKEN_MAGIC_DEVICE_FRAGMENT) >= 20)
 		{
 			st.setCond(2);
 		}
@@ -184,9 +169,11 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
+		QuestState qs = player.getQuestState(_10784_TheBrokenDevices.class);
 		
 		return (player.getLevel() >= minLevel && 
-				player.getLevel() <= maxLevel &&
-				player.getRace() == Race.ERTHEIA);
+				player.getLevel() <= maxLevel && 
+				qs != null && 
+				qs.getState() == COMPLETED);
 	}
 }
