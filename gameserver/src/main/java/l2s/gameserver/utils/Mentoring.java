@@ -161,15 +161,16 @@ public class Mentoring
 					if(!menteePlayer.getMenteeList().someOneOnline(false))
 					{
 						// TODO : change effect to 5mins
-						System.out.println("Start remove mentee buff on:"+menteePlayer);
 						for(Effect effect: menteePlayer.getEffectList().getEffects())
 						{
-							System.out.println("Skill:"+effect.getSkill()+" timeLeft:"+effect.getTimeLeft());
-						}
-						
-						for(int buff : EFFECTS_FOR_DEBUFF)
-						{
-							menteePlayer.getEffectList().stopEffects(buff);
+							for(int buff: EFFECTS_FOR_DEBUFF)
+							{
+								if(effect.getSkill().getId() == buff)
+								{
+									effect.breakUnlimit();
+								}
+							}
+							
 						}
 					}
 				}

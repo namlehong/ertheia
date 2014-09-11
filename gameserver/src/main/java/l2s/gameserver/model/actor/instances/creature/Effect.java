@@ -68,6 +68,8 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	private long _period;
 	private long _startTimeMillis;
 	private long _duration;
+	
+	private boolean _ignoreUnlimit = false;
 
 	private Effect _next = null;
 	private boolean _active = false;
@@ -94,10 +96,25 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 
 		_state = new AtomicInteger(STARTING);
 	}
+	
+	public void breakUnlimit(long nextPeriod)
+	{
+		_ignoreUnlimit = true;
+		_startTimeMillis = System.currentTimeMillis();
+		_count = 1;
+		_period = nextPeriod;
+		_duration = _period * _count;
+		restart();
+	}
+	
+	public void breakUnlimit()
+	{
+		breakUnlimit(60*5*1000L);
+	}
 
 	public long getPeriod()
 	{
-		if(_template.isUnlimPeriod())
+		if(_template.isUnlimPeriod()  && !_ignoreUnlimit)
 			return Integer.MAX_VALUE;
 		return _period;
 	}
@@ -110,7 +127,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 
 	public int getCount()
 	{
-		if(_template.isUnlimPeriod())
+		if(_template.isUnlimPeriod() && !_ignoreUnlimit)
 			return 1;
 		return _count;
 	}
@@ -126,7 +143,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	 */
 	public long getStartTime()
 	{
-		if(_startTimeMillis == 0L || _template.isUnlimPeriod())
+		if(_startTimeMillis == 0L || (_template.isUnlimPeriod() && !_ignoreUnlimit))
 			return System.currentTimeMillis();
 		return _startTimeMillis;
 	}
@@ -134,7 +151,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/** Возвращает общее время действия эффекта в миллисекундах. */
 	public long getTime()
 	{
-		if(_template.isUnlimPeriod())
+		if(_template.isUnlimPeriod() && !_ignoreUnlimit)
 			return 0;
 		return System.currentTimeMillis() - getStartTime();
 	}
@@ -142,7 +159,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/** Возвращает длительность эффекта в миллисекундах. */
 	public long getDuration()
 	{
-		if(_template.isUnlimPeriod())
+		if(_template.isUnlimPeriod() && !_ignoreUnlimit)
 			return Integer.MAX_VALUE;
 		return _duration;
 	}
@@ -150,7 +167,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/** Возвращает оставшееся время в секундах. */
 	public int getTimeLeft()
 	{
-		if(_template.isUnlimPeriod())
+		if(_template.isUnlimPeriod() && !_ignoreUnlimit)
 			return Integer.MAX_VALUE;
 		return (int) ((getDuration() - getTime()) / 1000L);
 	}
@@ -158,7 +175,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 	/** Возвращает true, если осталось время для действия эффекта */
 	public boolean isTimeLeft()
 	{
-		if(_template.isUnlimPeriod())
+		if(_template.isUnlimPeriod() && !_ignoreUnlimit)
 			return true;
 		return getDuration() - getTime() > 0L;
 	}
@@ -351,7 +368,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 
 	private void startEffectTask()
 	{
-		if(_effectTask == null && !_template.isUnlimPeriod())
+		if(_effectTask == null && !(_template.isUnlimPeriod() && !_ignoreUnlimit))
 		{
 			_startTimeMillis = System.currentTimeMillis();
 			_effectTask = EffectTaskManager.getInstance().scheduleAtFixedRate(this, _period, _period);
