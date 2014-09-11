@@ -399,7 +399,16 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10751_WindOfFate_Encounters") == null);
+QuestState st = player.getQuestState("_10751_WindOfFate_Encounters");
+		
+		boolean result = (player.getLevel() >= minLevel && 
+				player.getLevel() <= maxLevel && 
+				player.getRace() == Race.ERTHEIA && 
+				(player.getClassId() == ClassId.ERTHEIA_FIGHTER || player.getClassId() == ClassId.ERTHEIA_MAGE ) && 
+				(st == null || (st != null && st.getCond() == 0)));
+		
+		//System.out.println("checkStartCondition Q10752 " + result);
+		return result;
 	}
 
 }
