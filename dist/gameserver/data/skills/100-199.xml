@@ -988,32 +988,32 @@
 			<add order="0x40" stat="pCritRate" value="#pCritRate"/>
 		</for>
 	</skill>
-	<skill id="139" levels="3" name="Guts">
-		<table name="#effectPoint">341 408 495</table>
-		<table name="#Tab-pDef">2 2.5 3</table>
-		<table name="#mpConsume2">16 19 24</table>
-		<table name="#magicLevel">36 43 52</table>
+	<skill id="139" levels="9" name="Guts">
+		<table name="#Tab-pDef">2 2.1 2.2 2.3 2.4 2.5 2.6 2.8 3</table>
+		<table name="#debuffResist">1.5 1.55 1.6 1.65 1.7 1.75 1.8 1.85 1.9</table>
+		<table name="#mpConsume">16 19 24 26 28 30 35 40 45</table>
+		<table name="#magicLevel">36 43 52 64 74 85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="600000"/>
+		<set name="reuseDelay" value="300000"/>
 		<set name="hitTime" value="1500"/>
-		<set name="abnormal_time" value="90"/>
+		<set name="abnormal_time" value="60"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="pinch"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0139"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<cond msgId="113">
-			<player percentHP="30"/>
+			<player percentHP="60"/>
 		</cond>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pDef" value="#Tab-pDef"/>
+				<add order="0x40" stat="debuffResist" value="#debuffResist"/>
 			</effect>
 		</for>
 	</skill>
