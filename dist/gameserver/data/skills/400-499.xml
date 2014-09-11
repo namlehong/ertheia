@@ -2680,34 +2680,38 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="485" levels="7" name="Disarm">
+	<skill id="485" levels="16" name="Disarm">
 		<!--
-			Last modify:	15.01.2009
+			Last modify:	11.09.2014
 			Description:
 			Disarms a target. Weapons cannot be re-equipped while the effect lasts.
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#activateRate">70</table>
-		<table name="#mpConsume2">25 30 35 40 46 51 55</table>
-		<table name="#magicLevel">36 43 49 55 62 68 74</table>
-		<table name="#abnormal_time">5</table>
+		<table name="#activateRate">10 12 14 16 18 20 22 26 28 30 32 35 50 60 65 70</table>
+		<table name="#mpConsume">25 25 25 35 35 35 35 45 45 45 45 45 55 55 55 55</table>
+		<table name="#magicLevel">36 43 49 55 62 68 74 75 77 79 81 83 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="8000"/>
-		<set name="hitTime" value="1500"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="1000"/>
 		<set name="abnormal_effect" value="DOT_BLEEDING"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="disarm"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="levelModifier" value="1"/>
 		<set name="icon" value="icon.skill0485"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="trait" value="DISARM"/>
 		<set name="saveVs" value="STR"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Sword, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
+		</cond>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Chance">
 			<table name="#activateRate">70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2716,9 +2720,9 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#abnormal_time">5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20</table>
 		</enchant>
+		-->
 		<for>
 			<effect name="Disarm">
-				<mul order="0x90" stat="pAtk" value="0.6"/>
 			</effect>
 		</for>
 	</skill>
