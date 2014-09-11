@@ -95,7 +95,7 @@ public class Mentoring
 
 		if(login) // Чар вошел уже находится в игре.
 		{
-			if(dependPlayer.isAwaked()) // Чар - наставник.
+			if(Mentoring.canBecomeMentor(dependPlayer)) // Чар - наставник.
 			{
 				addMentoringSkills(dependPlayer);
 
@@ -113,29 +113,24 @@ public class Mentoring
 					{
 						for(int effect : EFFECTS_FOR_MENTEE)
 						{
-							if(!menteePlayer.getEffectList().containsEffects(effect))
-							{
-								Skill skill = SkillTable.getInstance().getInfo(effect, 1);
-								if(skill != null)
-									skill.getEffects(menteePlayer, menteePlayer, false, false);
-							}
+							Skill skill = SkillTable.getInstance().getInfo(effect, 1);
+							if(skill != null)
+								skill.getEffects(menteePlayer, menteePlayer, false, false);
 						}
 					}
 				}
 			}
-			else
+			
+			if(Mentoring.canBecomeMentee(dependPlayer))
 			// Чар - ученик.
 			{
 				addMentoringSkills(dependPlayer);
 
 				for(int effect : EFFECTS_FOR_MENTEE)
 				{
-					if(!dependPlayer.getEffectList().containsEffects(effect)) // Баф себе.
-					{
-						Skill skill = SkillTable.getInstance().getInfo(effect, 1);
-						if(skill != null)
-							skill.getEffects(dependPlayer, dependPlayer, false, false);
-					}
+					Skill skill = SkillTable.getInstance().getInfo(effect, 1);
+					if(skill != null)
+						skill.getEffects(dependPlayer, dependPlayer, false, false);
 				}
 
 				Player mentorPlayer = World.getPlayer(dependPlayer.getMenteeList().getMentor()); // Баф наставнику.
