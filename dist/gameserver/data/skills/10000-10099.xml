@@ -2979,7 +2979,7 @@
 	</skill>
 	<skill id="10097" levels="3" name="Riot Shield">
 		<table name="#magicLevel">97 98 99</table>
-		<table name="#mpConsume2">59 62 63 64 65 69 71</table>
+		<table name="#mpConsume2">185 191 197</table>
 		<table name="#Power">17927 18411 18895</table>
 		<table name="#reuseDelay">60000</table>
 		<set name="coolTime" value="500"/>
@@ -3001,10 +3001,51 @@
 		</for>
 	</skill>
 	<skill id="10098" levels="4" name="Paladin's Frenzy">
+		<table name="#acuracy">4 6 8 10</table>
+		<table name="#debuffResist">1.1 1.2 1.3</table>
+		<table name="#def">1.5 1.7 2.0 2.2</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">20 21 23 24</table>
+		<table name="#reuseDelay">600000</table>
+		<table name="#speed">10 20 25 30</table>
+		<table name="#atkSpeed">1.1 1.2 1.25 1.30</table>
+		<table name="#criDamage">1.3 1.4 1.5 1.6</table>
+		<table name="#criRate">30 40 50 60</table>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="effectPoint" value="523"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="icon" value="icon.skill10098"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mDef" value="#def"/>
+				<mul order="0x30" stat="pDef" value="#def"/>
+				<mul order="0x30" stat="debuffResist" value="#debuffResist"/>
+				<add order="0x40" stat="runSpd" value="#speed"/>
+					<using kind="Sword, Blunt"/>
+				</mul>
+				<add order="0x40" stat="pAccCombat" value="#acuracy">
+					<using kind="Sword, Blunt"/>
+				</add>
+				<mul order="0x30" stat="pAtkSpd" value="#atkSpeed">
+					<using kind="Blunt, Big Blunt"/>
+				</mul>
+				<add order="0x40" stat="basePCritRate" value="#criRate">
+					<using kind="Sword, Big Sword"/>
+				</add>
+				<mul order="0x30" stat="pCritDamage" value="#criDamage">
+					<using kind="Blunt, Big Blunt"/>
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10099" levels="4" name="Avenger's Frenzy">
 		<set name="icon" value="icon.skill10099"/>
