@@ -1168,10 +1168,12 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="430" levels="1" name="Master of Combat">
-		<table name="#pAtk1">80</table>
-		<table name="#pAtk2">80</table>
-		<table name="#magicLevel">78</table>
+	<skill id="430" levels="8" name="Master of Combat">
+		<table name="#pAtk1">0</table>
+		<table name="#pAtk2">0</table>
+		<table name="#maxCp">1.02 1.04 1.06 1.08 1.10 1.12 1.14 1.16</table>
+		<table name="#maxCp">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08</table>
+		<table name="#magicLevel">78 80 82 84 85 90 95 99</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0430"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -1179,11 +1181,13 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<enchant type="1" levels="15" group="5" name="Power">
 			<table name="#pAtk1">81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
-			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#pAtk2">80</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Power">
+			<table name="#pAtk1">80</table>
 			<table name="#pAtk2">81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
-			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
 			<add order="0x40" stat="pAtk" value="#pAtk1">
@@ -1192,7 +1196,8 @@
 			<add order="0x40" stat="pAtk" value="#pAtk2">
 				<using kind="Dual Sword, Fist, Dual Fist"/>
 			</add>
-			<mul order="0x30" stat="maxCp" value="1.05"/>
+			<mul order="0x30" stat="maxCp" value="#maxCp"/>
+			<mul order="0x30" stat="maxHp" value="#maxHp"/>
 		</for>
 	</skill>
 	<skill id="431" levels="1" name="Archery">
