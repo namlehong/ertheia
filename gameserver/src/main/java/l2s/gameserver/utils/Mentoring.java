@@ -158,9 +158,12 @@ public class Mentoring
 						System.out.println("Start remove mentee buff on:"+menteePlayer);
 						for(Effect effect: menteePlayer.getEffectList().getEffects())
 						{
-							if(Arrays.asList(EFFECTS_FOR_DEBUFF).contains(effect.getSkill().getId()))
+							for(int skill_id: EFFECTS_FOR_DEBUFF)
 							{
-								System.out.println("Skill:"+effect.getSkill()+" timeLeft:"+effect.getTimeLeft());
+								if(effect.getSkill().getId() == skill_id)
+								{
+									System.out.println("Skill:"+effect.getSkill()+" timeLeft:"+effect.getTimeLeft());
+								}
 							}
 						}
 						

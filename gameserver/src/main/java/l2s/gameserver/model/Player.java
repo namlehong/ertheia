@@ -4286,7 +4286,7 @@ public final class Player extends Playable implements PlayerGroup
 				}
 
 				// если ученик по наставничеству достиг 86 лвла
-				if(getLevel() == 86 && isBaseClassActive())
+				if(getLevel() >= 76 && isBaseClassActive())
 				{
 					sendPacket(new SystemMessagePacket(SystemMsg.YOU_REACHED_LEVEL_86_RELATIONSHIP_WITH_S1_CAME_TO_AN_END).addString(mentorName));
 					Mentoring.removeEffFromGraduatedMentee(this);
