@@ -300,6 +300,10 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				htmltext = "33942-3.htm";
 			}
 		}
+		else if(npcId == MYSTERIOUS_WIZARD)
+		{
+			htmltext = "33980-1.htm";
+		}
 		else if(npcId == RAYMOND)
 		{
 			if(cond == 4 || cond == 5)
