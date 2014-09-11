@@ -149,7 +149,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		{
 			if(st.getCond() == 0)
 			{
-				player.teleToLocation(-80565, 251763, -3080);
+				player.teleToLocation(-82056, 249800, -3392);
 				player.sendPacket(TutorialCloseHtmlPacket.STATIC);
 				
 			}
@@ -535,11 +535,13 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 	{
 		QuestState st = player.getQuestState("_10752_WindsOfFate_APromise");
 		
-		return (player.getLevel() >= minLevel && 
+		boolean result = (player.getLevel() >= minLevel && 
 				player.getLevel() <= maxLevel && 
 				player.getRace() == Race.ERTHEIA && 
-				(st == null ||
-				(st != null && st.getCond() == 0)));
+				(st == null || (st != null && st.getCond() == 0)));
+		
+		System.out.println("checkStartCondition Q10752 " + result);
+		return result;
 	}
 
 }
