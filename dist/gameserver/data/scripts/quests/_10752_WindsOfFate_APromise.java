@@ -240,7 +240,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		{
 			st.giveItems(KAIN_PROPHERCY_MACHINE_FRAGMENT, 1);
 			player.sendPacket(new ExShowScreenMessage(TALK_TO_WIZARD, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-			
+			mysterious_wizard_instance = player.getReflection().addSpawnWithoutRespawn(MYSTERIOUS_WIZARD2, new Location(npc.getLoc().getX() + 200, npc.getLoc().getY() + 200, npc.getLoc().getZ(), 0), 0);
 		}
 		
 		if(event.equalsIgnoreCase("leave_instance"))
@@ -497,7 +497,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
-		if(npcId == VON_HELLMANN && giselle_instance != null && kain_instance == null)
+		if(npcId == VON_HELLMANN && giselle_instance != null && kain_instance == null && npc.getCurrentHpPercents() < 50)
 		{
 			giselle_instance.deleteMe();
 			
@@ -505,7 +505,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			
 			//spawn Kain Van Halter right at the position of Giselle Von Hellmann. Despawn him after 5 mins
 			//Need to add 1 more cutscene video here, when Kain came to save Giselle. Haven't sniffed the packet to see which one triggers the video yet - leave it for later
-			kain_instance = st.addSpawn(KAIN_VAN_HALTER, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 300000);
+			kain_instance = player.getReflection().addSpawnWithoutRespawn(KAIN_VAN_HALTER, new Location(npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 0), 0);
 		}
 		
 		return null;
