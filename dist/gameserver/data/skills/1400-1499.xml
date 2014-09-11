@@ -2234,33 +2234,32 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1457" levels="1" name="Empowering Echo">
+	<skill id="1457" levels="2" name="Empowering Echo">
 		<!--
-			Last modify:	01.12.2008
-			Need correct:	reuseDelay
+			Last modify:	11.09.2014
+			Modified by Cith (Ertheia)
 			Description:
 			For 20 minutes, increases user's magic MP consumption by 35% and M. Atk. by 25%.
 		-->
-		<table name="#abnormal_time">1200</table>
-		<table name="#mpConsume2">116</table>
-		<table name="#mpConsume1">29</table>
-		<table name="#magicLevel">79</table>
-		<table name="#abnormal_time">1200</table>
+		<table name="#mpConsume">72 145</table>
+		<table name="#magicLevel">79 85</table>
+		<table name="#abnormal_time">1200 1800</table>
+		<table name="#abnormal_level">1 2</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="15000"/>
 		<set name="hitTime" value="4000"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="ma_up_special"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="icon" value="icon.skill1457"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="5" name="Time">
 			<table name="#abnormal_time">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2271,6 +2270,7 @@
 			<table name="#mpConsume2">112 108 104 100 96 92 88 85 81 77 73 69 65 61 58</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect>
 				<mul order="0x30" stat="mAtk" value="1.25"/>
