@@ -95,7 +95,9 @@ public final class ItemBloodParser extends StatParser<ItemHolder>
 			
 			ItemTemplate template = getHolder().getTemplate(Integer.parseInt(itemElement.attributeValue("id")));
 
-			if(template == null)
+			if(template != null)
+				template.update(set);
+			else
 				try
 				{
 					if(itemElement.getName().equalsIgnoreCase("weapon"))
