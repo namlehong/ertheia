@@ -193,8 +193,8 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		if(event.equalsIgnoreCase("33933-4.htm"))
 		{
 			st.setCond(2);
-			st.giveItem(NAVARI_MARK, 1);
-			st.giveItem(PROPHERCY_MACHINE_FRAGMENT, 1);
+			st.giveItems(NAVARI_MARK, 1);
+			st.giveItems(PROPHERCY_MACHINE_FRAGMENT, 1);
 		}
 		
 		if(event.equalsIgnoreCase("33933-4.htm"))
@@ -279,8 +279,8 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			
 			st.takeItems(KAIN_PROPHERCY_MACHINE_FRAGMENT, 1);
 			
-			st.giveItem(STEEL_DOOR_COIN, 87);
-			st.giveItem(ADENA_ID, 5000000);
+			st.giveItems(STEEL_DOOR_COIN, 87);
+			st.giveItems(ADENA_ID, 5000000);
 			st.addExpAndSp(2050000, 0);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
