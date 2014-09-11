@@ -71,10 +71,11 @@ public class RequestJoinAlly extends L2GameClientPacket
 			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
 			return;
 		}
-
-		Player target = (Player) obj;
-		if(target == null)
+		
+		if(!obj.isPlayer())
 			return;
+
+		Player target = obj.getPlayer();
 
 		if(target.getAlliance() != null || activeChar.getAlliance().isMember(target.getClan().getClanId()))
 		{

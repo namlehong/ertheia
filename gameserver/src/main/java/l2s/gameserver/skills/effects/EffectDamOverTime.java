@@ -51,6 +51,8 @@ public class EffectDamOverTime extends Effect
 					}
 					damage = bleed[modIndex] * getPeriod() / 1000;
 					break;
+			default:
+				break;
 			}
 		}
 

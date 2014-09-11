@@ -20,6 +20,7 @@ import l2s.gameserver.model.actor.instances.player.CharacterVariable;
 import l2s.gameserver.network.l2.components.ChatType;
 import l2s.gameserver.network.l2.s2c.NpcHtmlMessagePacket;
 import l2s.gameserver.utils.Files;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -310,6 +311,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 		return pName;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

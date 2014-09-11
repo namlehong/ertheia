@@ -1,6 +1,7 @@
 package l2s.gameserver.handler.admincommands.impl;
 
 import org.apache.commons.lang3.math.NumberUtils;
+
 import l2s.gameserver.dao.SpawnsDAO;
 import l2s.gameserver.handler.admincommands.IAdminCommandHandler;
 import l2s.gameserver.model.GameObject;
@@ -48,6 +49,7 @@ public class AdminDelete implements IAdminCommandHandler
 		return true;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

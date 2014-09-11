@@ -68,6 +68,7 @@ public class AdminCamera implements IAdminCommandHandler
 		return true;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

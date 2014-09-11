@@ -51,6 +51,7 @@ public class AdminEvents implements IAdminCommandHandler
 		return true;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

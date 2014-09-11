@@ -8,6 +8,7 @@ import java.util.Locale;
 import java.util.StringTokenizer;
 
 import org.apache.commons.lang3.math.NumberUtils;
+
 import l2s.gameserver.Config;
 import l2s.gameserver.dao.CustomHeroDAO;
 import l2s.gameserver.database.mysql;
@@ -591,6 +592,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		return true;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

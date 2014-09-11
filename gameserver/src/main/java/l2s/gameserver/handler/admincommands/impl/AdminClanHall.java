@@ -147,6 +147,7 @@ public class AdminClanHall implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

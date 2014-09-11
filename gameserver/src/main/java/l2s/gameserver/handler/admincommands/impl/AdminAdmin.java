@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import org.apache.commons.lang3.math.NumberUtils;
+
 import l2s.gameserver.Config;
 import l2s.gameserver.handler.admincommands.IAdminCommandHandler;
 import l2s.gameserver.instancemanager.SoDManager;
@@ -415,6 +416,8 @@ public class AdminAdmin implements IAdminCommandHandler
 						target = activeChar;
 					activeChar.sendMessage("Target heading: " + target.getHeading());
 					break;
+			default:
+				break;
 			}
 			return true;
 		}
@@ -447,6 +450,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		return false;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{
