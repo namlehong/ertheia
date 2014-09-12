@@ -236,7 +236,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		 */
 		
 		//Ayanthe or Katalin
-		if(event.equalsIgnoreCase("33942-5.htm") || event.equalsIgnoreCase("33943-5.htm"))
+		if(event.equalsIgnoreCase("33942-4.htm") || event.equalsIgnoreCase("33943-4.htm"))
 		{
 			st.setState(STARTED);
 			st.setCond(1);
