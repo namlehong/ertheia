@@ -71,6 +71,7 @@ public enum AbnormalType
 	buff_special_move,
 	buff_special_multi,
 	buff_unicorn_seraphim,
+    buff_ditty,
 	cancel_prob_down,
 	casting_time_down,
 	casting_time_up,
