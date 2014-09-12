@@ -615,10 +615,32 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="11615" levels="1" name="Battle Ditty">
+		<table name="#abnormal_time">1800</table>
+		<table name="#magicLevel">85</table>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11615"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="181"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY_ONE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pvpPhysDmgBonus" value="1.1"/>
+				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="1.1"/>
+				<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="1.1"/>
+				<mul order="0x30" stat="regMp" value="1.1"/>
+				<!-- TODO: Attribute Attack + 10-->
+			</effect>
+		</for>
 	</skill>
 	<skill id="11616" levels="1" name="Protective Ditty">
 		<set name="icon" value="icon.skill11616"/>
