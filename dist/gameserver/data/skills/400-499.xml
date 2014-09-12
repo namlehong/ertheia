@@ -225,15 +225,15 @@
 			<effect name="Root"/>
 		</for>
 	</skill>
-	<skill id="404" levels="5" name="Mass Shackling">
+	<skill id="404" levels="14" name="Mass Shackling">
 		<!--
 			Enchant #1: +Effectiveness
 			Enchant #2: +Success
 		-->
-		<table name="#effectPoint">3821 3897 3975 4055 4136</table>
+		<table name="#effectPoint">3821 3897 3975 4055 4136 4169 4202 4236 4270 4304 4339 4373 4408 4444</table>
 		<table name="#activaRate">50</table>
-		<table name="#mpConsume2">40 43 46 49 51</table>
-		<table name="#magicLevel">58 62 66 70 74</table>
+		<table name="#mpConsume2">40 43 46 49 51 52 53 54 55 57 59 61 63 65</table>
+		<table name="#magicLevel">58 62 66 70 74 75 77 79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="8000"/>
 		<set name="hitTime" value="3000"/>
@@ -256,12 +256,12 @@
 		<set name="trait" value="HOLD"/>
 		<set name="saveVs" value="MEN"/>
 		<enchant type="1" levels="30" group="1" name="Power">
-			<table name="#effectPoint">4169 4202 4236 4270 4304 4339 4373 4408 4444 4479 4515 4551 4587 4624 4661 4698 4736 4774 4812 4851 4889 4928 4968 5008 5048 5088 5129 5170 5211 5253</table>
-			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#effectPoint">4479 4515 4551 4587 4624 4661 4698 4736 4774 4812 4851 4889 4928 4968 5008 5048 5088 5129 5170 5211 5253 5300 5400 5500 5600 5700 5800 5900 6000 6100</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Chance">
 			<table name="#activaRate">51 51 52 52 53 54 54 55 55 56 57 57 58 58 59 60 60 61 61 62 63 63 64 64 65 66 66 67 67 68</table>
-			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
 			<effect name="Root"/>
@@ -550,33 +550,31 @@
 			</self_effect>
 		</for>
 	</skill>
-	<skill id="410" levels="3" name="Mortal Strike">
+	<skill id="410" levels="8" name="Mortal Strike">
 		<!--
-			Enchant #1: +Chance
-			Enchant #2: +Time
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#blowRate">1.1 1.15 1.2</table>
-		<table name="#abnormal_time">120</table>
-		<table name="#mpConsume2">27 31 34</table>
-		<table name="#magicLevel">58 66 74</table>
-		<table name="#abnormal_level">1 2 3</table>
-		<table name="#abnormal_time">120</table>
+		<table name="#blowRate">1.1 1.15 1.2 1.22 1.24 1.26 1.28 1.3</table>
+		<table name="#mpConsume">27 31 34 37 40 43 46 49</table>
+		<table name="#magicLevel">58 66 74 80 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="150000"/>
 		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_time" value="120"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="might_mortal"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0410"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<cond msgId="113">
 			<using kind="Dagger,Dual Dagger"/>
 		</cond>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="2" name="Chance">
 			<table name="#blowRate">1.2 1.2 1.21 1.21 1.21 1.22 1.22 1.22 1.23 1.23 1.23 1.24 1.24 1.24 1.25 1.25 1.25 1.26 1.26 1.26 1.27 1.27 1.27 1.28 1.28 1.28 1.29 1.29 1.29 1.3</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -587,6 +585,7 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#abnormal_time">124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240</table>
 		</enchant>
+		-->
 		<for>
 			<effect>
 				<mul order="0x30" stat="blowRate" value="#blowRate"/>
@@ -1168,10 +1167,12 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="430" levels="1" name="Master of Combat">
-		<table name="#pAtk1">80</table>
-		<table name="#pAtk2">80</table>
-		<table name="#magicLevel">78</table>
+	<skill id="430" levels="8" name="Master of Combat">
+		<table name="#pAtk1">0</table>
+		<table name="#pAtk2">0</table>
+		<table name="#maxCp">1.02 1.04 1.06 1.08 1.10 1.12 1.14 1.16</table>
+		<table name="#maxCp">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08</table>
+		<table name="#magicLevel">78 80 82 84 85 90 95 99</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0430"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -1179,11 +1180,13 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<enchant type="1" levels="15" group="5" name="Power">
 			<table name="#pAtk1">81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
-			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#pAtk2">80</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Power">
+			<table name="#pAtk1">80</table>
 			<table name="#pAtk2">81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
-			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
+			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
 			<add order="0x40" stat="pAtk" value="#pAtk1">
@@ -1192,7 +1195,8 @@
 			<add order="0x40" stat="pAtk" value="#pAtk2">
 				<using kind="Dual Sword, Fist, Dual Fist"/>
 			</add>
-			<mul order="0x30" stat="maxCp" value="1.05"/>
+			<mul order="0x30" stat="maxCp" value="#maxCp"/>
+			<mul order="0x30" stat="maxHp" value="#maxHp"/>
 		</for>
 	</skill>
 	<skill id="431" levels="1" name="Archery">
@@ -1353,27 +1357,29 @@
 			<mul order="0x30" stat="mpConsum" value="#mpConsum"/>
 		</for>
 	</skill>
-	<skill id="437" levels="1" name="Song of Silence">
+	<skill id="437" levels="7" name="Song of Silence">
 		<!--
+			Modified by Cith (Ertheia)
 		  Description:
-		  Weaves a mystical song that blocks all the enemy's physical and magical skills for 2 minutes.
+		  Weaves a mystical song that blocks all the enemy's physical and magical skills for 10 seconds.
 		-->
-		<table name="#activateRate">60</table>
-		<table name="#magicLevel">79</table>
-		<table name="#abnormal_time">120</table>
+		<table name="#activateRate">25 30 35 40 50 55 60 70</table>
+		<table name="#mpConsume">50 75 90 126 139 153 166</table>
+		<table name="#magicLevel">79 81 83 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="150000"/>
+		<set name="reuseDelay" value="120000"/>
 		<set name="hitTime" value="2500"/>
 		<set name="abnormal_effect" value="SILENCE"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="silence_all"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="levelModifier" value="1"/>
 		<set name="affectLimit" value="10;10"/>
 		<set name="icon" value="icon.skill0437"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="54"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="skillRadius" value="150"/>
 		<set name="target" value="TARGET_AURA"/>
 		<set name="skillType" value="MUTE"/>
@@ -1381,6 +1387,7 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="trait" value="DERANGEMENT"/>
 		<set name="saveVs" value="MEN"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="5" name="Chance">
 			<table name="#activateRate">62 64 66 68 70 72 74 76 78 80 82 84 86 88 90</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -1389,6 +1396,7 @@
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#abnormal_time">128 136 144 152 160 168 176 184 192 200 208 216 224 232 240</table>
 		</enchant>
+		-->
 		<for>
 			<effect name="MuteAll"/>
 		</for>
@@ -1398,12 +1406,13 @@
 			Description: Grants you the ability to revive yourself from death with full health, retaining all buffs/debuffs except for Noblesse Blessing and Lucky Charm. Consumes 1 Blood of the Phoenix.
 		-->
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="3600000"/>
+		<table name="reuseDelay">4500000 4200000 3900000 3600000</table>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="hitTime" value="4000"/>
 		<set name="abnormal_time" value="1800"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_type" value="resurrection_special"/>
-		<set name="magicLevel" value="79"/>
+		<set name="magicLevel" value="79 85 90 95 99"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="itemConsumeId" value="8873"/>
 		<set name="itemConsumeCount" value="1"/>
@@ -2606,19 +2615,18 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="483" levels="2" name="Sword Shield">
+	<skill id="483" levels="8" name="Sword Shield">
 		<!--
-			Enchant #1: +P. Def
-			Enchant #2: -Penalty
-			Description: Greatly increases own P. Def instantly. Greatly decreases own speed while duration of effect lasts. Consumes 2 soul.
+			Description: Greatly increases own P. Def instantly. Greatly decreases own speed while duration of effect lasts.
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#pDef">1600 3200</table>
-		<table name="#runSpd">0.6</table>
-		<table name="#mpConsume2">16 24</table>
-		<table name="#magicLevel">36 52</table>
-		<table name="#abnormal_level">1 2</table>
+		<table name="#pDef">2000 4000 4750 5250 6250 6250 6250 7500</table>
+		<table name="#runSpd">0.6 0.6 0.6 0.6 0.7 0.8 0.9 1</table>
+		<table name="#mpConsume">16 18 20 22 24 26 28 30</table>
+		<table name="#magicLevel">36 52 64 74 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="900000"/>
+		<set name="reuseDelay" value="300000"/>
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
@@ -2626,10 +2634,11 @@
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0483"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Power">
 			<table name="#pDef">3240 3280 3320 3360 3400 3440 3480 3520 3560 3600 3640 3680 3720 3760 3800 3840 3880 3920 3960 4000 4040 4080 4120 4160 4200 4240 4280 4320 4360 4400</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2638,6 +2647,7 @@
 			<table name="#runSpd">0.61 0.62 0.63 0.64 0.65 0.66 0.67 0.68 0.69 0.70 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.80 0.81 0.82 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.90</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect>
 				<add order="0x40" stat="pDef" value="#pDef"/>
@@ -2673,34 +2683,38 @@
 			</and>
 		</cond>
 	</skill>
-	<skill id="485" levels="7" name="Disarm">
+	<skill id="485" levels="16" name="Disarm">
 		<!--
-			Last modify:	15.01.2009
+			Last modify:	11.09.2014
 			Description:
 			Disarms a target. Weapons cannot be re-equipped while the effect lasts.
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#activateRate">70</table>
-		<table name="#mpConsume2">25 30 35 40 46 51 55</table>
-		<table name="#magicLevel">36 43 49 55 62 68 74</table>
-		<table name="#abnormal_time">5</table>
+		<table name="#activateRate">10 12 14 16 18 20 22 26 28 30 32 35 50 60 65 70</table>
+		<table name="#mpConsume">25 25 25 35 35 35 35 45 45 45 45 45 55 55 55 55</table>
+		<table name="#magicLevel">36 43 49 55 62 68 74 75 77 79 81 83 85 90 95 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="8000"/>
-		<set name="hitTime" value="1500"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="1000"/>
 		<set name="abnormal_effect" value="DOT_BLEEDING"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="disarm"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="levelModifier" value="1"/>
 		<set name="icon" value="icon.skill0485"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="trait" value="DISARM"/>
 		<set name="saveVs" value="STR"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Sword, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
+		</cond>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Chance">
 			<table name="#activateRate">70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2709,9 +2723,9 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 			<table name="#abnormal_time">5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20</table>
 		</enchant>
+		-->
 		<for>
 			<effect name="Disarm">
-				<mul order="0x90" stat="pAtk" value="0.6"/>
 			</effect>
 		</for>
 	</skill>

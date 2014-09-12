@@ -1240,35 +1240,37 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="531" levels="1" name="Critical Wound">
+	<skill id="531" levels="5" name="Critical Wound">
 		<!--
-			Need correct:	time, activateRate
-			Last modify:	13.03.2008
+			Last modify:	11.09.2014
 			Description:
 			Increases the critical damage a target receives. A dagger needs to be equipped to use this skill. Effect 1.
+			Modified by Cith (Ertheia)
 		-->
+		<table name="#critDamAmplified">1.3 1.32 1.33 1.34 1.35</table>
+		<table name="#mpConsume">43 46 49 52 55</table>
+		<table name="#abnormal_level">1 2 3 4 5</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="8000"/>
 		<set name="hitTime" value="1500"/>
-		<set name="abnormal_time" value="30"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="t_crt_rate_up"/>
-		<set name="magicLevel" value="79"/>
-		<set name="levelModifier" value="2"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0531"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="43"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="80"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="saveVs" value="CON"/>
 		<cond msgId="113">
-			<using kind="Dagger,Dual Dagger"/>
+			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 		<for>
 			<effect>
-				<mul order="0x30" stat="critDamRcpt" value="1.3"/>
+				<mul order="0x30" stat="critDamRcpt" value="#critDamAmplified"/>
 			</effect>
 		</for>
 	</skill>
