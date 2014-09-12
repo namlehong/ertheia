@@ -1133,14 +1133,42 @@
 		</for>
 	</skill>
 	<skill id="11862" levels="1" name="Limited Melee Weapon Resistance">
+		<table name="#abnormal_level">5</table>
+		<table name="#abnormal_time">1800</table>
+		<table name="#effectPoint">500</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">82</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="castRange" value="900"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11862"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="swordWpnVuln" value="5"/>
+				<sub order="0x40" stat="dualWpnVuln" value="5"/>
+				<sub order="0x40" stat="bluntWpnVuln" value="5"/>
+				<sub order="0x40" stat="dualWpnVuln" value="5"/>
+				<sub order="0x40" stat="daggerWpnVuln" value="5"/>
+				<sub order="0x40" stat="poleWpnVuln" value="5"/>
+				<sub order="0x40" stat="fistWpnVuln" value="5"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11863" levels="1" name="Limited Ranged Weapon Resistance">
 		<table name="#abnormal_level">5</table>
-		<table name="#abnormal_time">1200</table>
 		<table name="#abnormal_time">1800</table>
 		<table name="#effectPoint">500</table>
 		<table name="#magicLevel">85</table>
