@@ -1139,9 +1139,34 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="11863" levels="1" name="Limited Ranged Weapon Resistance">
+		<table name="#abnormal_level">5</table>
+		<table name="#abnormal_time">1200</table>
+		<table name="#abnormal_time">1800</table>
+		<table name="#effectPoint">500</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">82</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="pd_up_bow"/>
+		<set name="castRange" value="900"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11863"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="bowWpnVuln" value="5"/>
+				<sub order="0x40" stat="crossbowWpnVuln" value="5"/>
+			</effect>
+		</for>
 	</skill>
 </list>
