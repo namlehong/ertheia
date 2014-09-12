@@ -13,6 +13,7 @@ import l2s.gameserver.model.Player;
 import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.Race;
+import l2s.gameserver.model.entity.Reflection;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.network.l2.components.SystemMsg;
@@ -37,14 +38,14 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int LICH_KING_ICARUS = 30835;
 	private static final int ATHREA = 30758;
 	private static final int ATHREA_BOX = 33997;
-	private static final int FERIN_NPC = 34000;
+	private static final int FERIN_NPC = 34001;
 	private static final int KAIN_VAN_HALTER_NPC = 33979;
 	private static final int MYSTERIOUS_WIZARD = 33980;
 	private static final int GRAIL = 33996;
 	private static final int NAVARI = 33931;
 	
 	private static final int KAIN_VAN_HALTER_FIGHTER = 33999;
-	private static final int FERIN_HEALER = 34001;
+	private static final int FERIN_HEALER = 34000;
 	
 	private static final int ERTHEIA_PROPHECY_MACHINE1 = 39539;
 	private static final int ERTHEIA_PROPHECY_MACHINE2 = 39540;
@@ -83,8 +84,8 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
 	private static final String CHOICE_NOT_REVERSABLE = "Hãy chọn kỹ, lựa chọn này không thể thay đổi";
 	
-	NpcInstance giselle_instance = null;
-	NpcInstance kain_npc_instance = null;
+	NpcInstance ferin_healer_instance = null;
+	NpcInstance kain_fighter_instance = null;
 	NpcInstance mysterious_wizard_instance = null;
 	List<NpcInstance> athrea_boxes = new ArrayList<NpcInstance>();
 	
@@ -409,6 +410,49 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			st.setCond(16);
 			enterInstance(st, 255);
 
+			return null;
+		}
+		
+		if(event.equalsIgnoreCase("start_fighting"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			
+			prophecies_chamber.getDoor(17230101).openMe();
+			
+			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, new Location(-88408, 186824, -10476), 0);
+			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88552, 186840, -10476), 0);
+			
+			st.startQuestTimer("npc_follow_timer", 10000);
+			st.set("follow", 1);
+			npc.deleteMe();
+			
+			return null;
+		}
+		
+		if(event.equalsIgnoreCase("npc_follow_timer"))
+		{
+			if(st.getInt("follow") == 1)
+			{
+				st.startQuestTimer("npc_follow_timer", 10000);
+				
+				if(kain_fighter_instance!= null)
+				{
+					if(kain_fighter_instance.getLoc().distance(player.getLoc()) > 400)
+					{
+						kain_fighter_instance.moveToLocation(player.getLoc(), 100, true);
+					}
+				}
+				
+				if(ferin_healer_instance!= null)
+				{
+					if(ferin_healer_instance.getLoc().distance(player.getLoc()) > 400)
+					{
+						ferin_healer_instance.moveToLocation(player.getLoc(), 100, true);
+					}
+				}
+				
+			}
+			
 			return null;
 		}
 		
