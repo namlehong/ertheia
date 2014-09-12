@@ -4,6 +4,7 @@ import java.util.List;
 
 import l2s.commons.util.Rnd;
 import l2s.gameserver.ai.CtrlEvent;
+import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.components.NpcString;
@@ -63,9 +64,9 @@ public class NpcWarriorAI extends Fighter
 
 		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
 		{
-			
-			actor.getAggroList().addDamageHate(target, 2, 2);
-			actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, target, 1);
+			actor.getAggroList().addDamageHate(target, 10000, 10000);
+			actor.setAggressionTarget(target);
+			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 			return true;
 		}
 
@@ -85,7 +86,11 @@ public class NpcWarriorAI extends Fighter
 		
 		if(target.isPlayable()) 
 			return false;
-		
+		if(target.getNpcId() == 34000)
+		{
+			System.out.println("target.getFaction() " + target.getFaction());
+			System.out.println("getActor.getFaction() " + getActor().getFaction());
+		}
 		if(target.getFaction() == getActor().getFaction())
 			return false;
 			
