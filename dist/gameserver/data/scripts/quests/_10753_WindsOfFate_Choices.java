@@ -335,7 +335,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 					int sec_left = remaining_time%60;
 					String time_report = min_left + ":" + sec_left;
 					
-					player.sendPacket(new ExShowScreenMessage(time_report, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false));
+					player.sendPacket(new ExShowScreenMessage(time_report, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 				}
 				else
 				{
@@ -347,11 +347,12 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			else
 			{
 				//time is up
-				player.sendPacket(new ExShowScreenMessage("Hết giờ!", 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false));
+				player.sendPacket(new ExShowScreenMessage("Hết giờ!", 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 				st.unset("box_duration");
 				st.takeAllItems(ATHREA_BELONGINGS);
 			}
-				
+			
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("30758-7.htm"))
@@ -377,6 +378,8 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 				st.playSound(SOUND_ITEMGET);
 			}
 			st.set("box_checked", checked_box_count);
+			
+			return null;
 		}
 		
 		if(event.equalsIgnoreCase("enter_instance"))
@@ -531,7 +534,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			}
 			else if(cond == 9)
 			{
-				htmltext = "30758-4.htm";
+				htmltext = "30758-3.htm";
 			}
 			else if(cond == 10)
 			{
