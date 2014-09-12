@@ -240,7 +240,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		{
 			st.giveItems(KAIN_PROPHERCY_MACHINE_FRAGMENT, 1);
 			player.sendPacket(new ExShowScreenMessage(TALK_TO_WIZARD, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-			mysterious_wizard_instance = player.getReflection().addSpawnWithoutRespawn(MYSTERIOUS_WIZARD2, new Location(npc.getLoc().getX() + 200, npc.getLoc().getY() + 200, npc.getLoc().getZ(), 0), 0);
+			mysterious_wizard_instance = player.getReflection().addSpawnWithoutRespawn(MYSTERIOUS_WIZARD2, new Location(npc.getLoc().getX() - 200, npc.getLoc().getY() - 200, npc.getLoc().getZ(), 0), 0);
 		}
 		
 		if(event.equalsIgnoreCase("ending_scene"))
