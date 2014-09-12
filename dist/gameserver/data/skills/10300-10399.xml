@@ -420,13 +420,15 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<for>
-			<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
-				<using skill="10260"/>
-				<using skill="10262"/>
-				<using skill="10269"/>
-				<using skill="10318"/>
-				<using skill="261"/>
-			</mul>
+			<effect>
+				<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
+					<using skill="10260"/>
+					<using skill="10262"/>
+					<using skill="10269"/>
+					<using skill="10318"/>
+					<using skill="261"/>
+				</mul>
+			<effect>
 		</for>
 	</skill>
 	<skill id="10325" levels="3" name="Dreadful Roar">
@@ -492,10 +494,20 @@
 		</for>
 	</skill>
 	<skill id="10329" levels="1" name="Superior Blunt Weapon Mastery">
+		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10329"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<cond msgId="113">
+			<using kind="Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.21"/>
+				<mul order="0x40" stat="basePCritRate" value="60"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10330" levels="4" name="Power Hammer Crush">
 		<set name="icon" value="icon.skill10330"/>
