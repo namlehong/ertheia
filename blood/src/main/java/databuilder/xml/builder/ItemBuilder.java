@@ -48,7 +48,7 @@ public class ItemBuilder {
 		
 		Element _element = null;
 		
-		private final List<Condition> _conditions = new ArrayList<Condition>();
+		private final HashMap<String, HashMap<String, String>> _conditions = new HashMap<String, HashMap<String, String>>();
 		
 		public L2ItemInfo(ResultSet rset){
 			try{
@@ -107,20 +107,6 @@ public class ItemBuilder {
 			_itemHolder.put(_id, this);
 			}catch (SQLException e){
 				System.out.println(e);
-			}
-		}
-		
-		public void addCondition(Element condElement, Condition cond){
-			if(cond instanceof ConditionLogicAnd){
-				for(Condition subcond: ((ConditionLogicAnd)cond)._conditions){
-					addCondition(condElement, subcond);
-				}
-			}
-			if(cond instanceof ConditionPlayerMinLevel){
-				condElement.addElement("player").addAttribute("minLevel", Integer.toString(((ConditionPlayerMinLevel) cond)._level));
-			}
-			if(cond instanceof ConditionPlayerMaxLevel){
-				condElement.addElement("player").addAttribute("max_level", Integer.toString(((ConditionPlayerMaxLevel) cond)._level));
 			}
 		}
 		
@@ -219,8 +205,10 @@ public class ItemBuilder {
 			// condition
 			if(_conditions.size() > 0){
 				Element condElement = _element.addElement("cond");
-				for(Condition condition: _conditions){
-					addCondition(condElement, condition);
+				for(Map.Entry<String, HashMap<String, String>> cond: _conditions.entrySet()){
+					Element subCondElement = condElement.addElement(cond.getKey());
+					for(Map.Entry<String, String> condType: cond.getValue().entrySet())
+						subCondElement.addAttribute(condType.getKey(), condType.getValue());
 				}
 			}
 			
@@ -367,14 +355,12 @@ public class ItemBuilder {
 				Condition cond = null;
 				Matcher matcher = Pattern.compile("can be used by characters[^0-9]*(\\d+)[^0-9\\.]*(\\d*)").matcher(_description.toLowerCase());
 				if(matcher.find()){
-					cond = joinAnd(cond, new ConditionPlayerMinLevel(Integer.parseInt(matcher.group(1))));
+					if(_conditions.get("player") == null)
+						_conditions.put("player", new HashMap<String, String>());
+					_conditions.get("player").put("minLevel", matcher.group(1));
 					if(matcher.group(2) != null && !matcher.group(2).isEmpty())
-						cond = joinAnd(cond, new ConditionPlayerMaxLevel(Integer.parseInt(matcher.group(2))));
+						_conditions.get("player").put("max_level", matcher.group(2));
 				}
-				
-				if(cond != null)
-					_conditions.add(cond);
-				
 			}
 		}
 		
