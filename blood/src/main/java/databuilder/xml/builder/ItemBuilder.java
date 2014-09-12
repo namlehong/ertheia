@@ -443,7 +443,7 @@ public class ItemBuilder {
 	
 	public void store(){
 		for(Map.Entry<String, Element> entry: _rootHolder.entrySet())
-			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), "item.dtd", "data/blood_items/");
+			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), "item.dtd", "data/items/");
 	}
 	
 	public void build()

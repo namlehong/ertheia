@@ -46,7 +46,7 @@ public final class ItemParser extends StatParser<ItemHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/items/");
+		return new File(Config.DATAPACK_ROOT, "data/l2s_items/");
 	}
 
 	@Override
