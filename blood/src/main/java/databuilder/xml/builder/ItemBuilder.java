@@ -120,7 +120,7 @@ public class ItemBuilder {
 				condElement.addElement("player").addAttribute("minLevel", Integer.toString(((ConditionPlayerMinLevel) cond)._level));
 			}
 			if(cond instanceof ConditionPlayerMaxLevel){
-				condElement.addElement("player").addAttribute("maxLevel", Integer.toString(((ConditionPlayerMaxLevel) cond)._level));
+				condElement.addElement("player").addAttribute("max_level", Integer.toString(((ConditionPlayerMaxLevel) cond)._level));
 			}
 		}
 		
@@ -354,7 +354,7 @@ public class ItemBuilder {
 		}
 		
 		public boolean isEtcitem(){
-			return _item_type.equalsIgnoreCase("armor");
+			return _item_type.equalsIgnoreCase("etcitem");
 		}
 		
 		public String toString(){
