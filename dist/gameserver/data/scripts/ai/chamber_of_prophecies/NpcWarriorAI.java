@@ -63,6 +63,8 @@ public class NpcWarriorAI extends Fighter
 
 		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
 		{
+			
+			actor.getAggroList().addDamageHate(target, 2, 2);
 			actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, target, 1);
 			return true;
 		}
