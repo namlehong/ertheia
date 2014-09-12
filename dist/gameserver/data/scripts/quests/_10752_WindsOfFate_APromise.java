@@ -250,7 +250,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			player.startScenePlayer(111);
 			
 			//destroy instance after 5s
-			st.startQuestTimer("leave_instance", 5000);
+			st.startQuestTimer("leave_instance", 30000);
 		}
 		
 		if(event.equalsIgnoreCase("leave_instance"))
