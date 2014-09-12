@@ -374,6 +374,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		{
 			int checked_box_count = st.getInt("box_checked");
 			checked_box_count++;
+			st.set("box_checked", checked_box_count);
 			int belonging_count = (int) getItemCountById(player, ATHREA_BELONGINGS);
 			
 			String[] belonging_location = st.get("belonging_location").split(",");
@@ -400,13 +401,12 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 
 				htmltext = "33997-2.htm";
 			}
-			st.set("box_checked", checked_box_count);
-			
+				
 		}
 		
 		if(event.equalsIgnoreCase("enter_instance"))
 		{
-			st.setCond(8);
+			st.setCond(16);
 			enterInstance(st, 255);
 
 			return null;
@@ -414,7 +414,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		
 		if(event.equalsIgnoreCase("leave_instance"))
 		{
-			st.setCond(9);
+			st.setCond(17);
 			player.getReflection().collapse();
 			return null;
 		}
@@ -572,6 +572,10 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			if(cond == 14 || cond == 15)
 			{
 				htmltext = "33932-1.htm";
+			}
+			if(cond == 16)
+			{
+				htmltext = "33932-6.htm";
 			}
 			else if(cond == 17)
 			{
