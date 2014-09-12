@@ -18,6 +18,7 @@ import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExCallToChangeClass;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.MagicSkillUse;
+import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
 
@@ -255,7 +256,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			
 			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
 			player.setClassId(newClassId, false);
-			player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 1000, 0));
+			player.broadcastPacket(new SocialActionPacket(player.getObjectId(), 23));
 			player.broadcastCharInfo();
 		}
 		

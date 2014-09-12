@@ -17,6 +17,7 @@ import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExCallToChangeClass;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
+import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
 import l2s.gameserver.utils.Location;
@@ -317,6 +318,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
 			
+			player.broadcastPacket(new SocialActionPacket(player.getObjectId(), 23));
 			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
 			player.setClassId(newClassId, false);
 			player.broadcastCharInfo();
