@@ -578,31 +578,28 @@
 	</skill>
 	<skill id="1416" levels="1" name="Pa'agrio's Fist">
 		<!-- эффект точно, остальное с потолка -->
-		<table name="#mpConsume2">227</table>
-		<table name="#mpConsume1">57</table>
-		<table name="#power">800</table>
-		<table name="#magicLevel">79</table>
+		<table name="#mpConsume">105 112 119 127 139 153 166</table>
+		<table name="#maxCp">1.02 1.03 1.04 1.05 1.06 1.07 1.1</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7</table>
+		<table name="#magicLevel">79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="300000"/>
+		<set name="reuseDelay" value="10000"/>
 		<set name="hitTime" value="2500"/>
-		<set name="abnormal_time" value="300"/>
-		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="cp_up"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="itemConsumeId" value="3031"/>
-		<set name="itemConsumeCount" value="20"/>
 		<set name="affectLimit" value="50;100"/>
 		<set name="icon" value="icon.skill1416"/>
-		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="effectPoint" value="800"/>
 		<set name="target" value="TARGET_CLAN"/>
 		<set name="skillRadius" value="900"/>
 		<set name="skillType" value="COMBATPOINTHEAL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="5" name="Power">
 			<table name="#power">810 820 830 840 850 860 870 880 890 900 910 920 930 940 950</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -612,9 +609,10 @@
 			<table name="#mpConsume2">219 212 204 196 189 181 174 166 159 151 143 136 128 121 113</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
-			<effect time="300">
-				<add order="0x40" stat="maxCp" value="#power"/>
+			<effect time="30">
+				<mul order="0x30" stat="maxCp" value="#maxCp"/>
 			</effect>
 			<effect name="CombatPointHealOverTime" time="0" value="100"/>
 		</for>
@@ -2234,33 +2232,32 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1457" levels="1" name="Empowering Echo">
+	<skill id="1457" levels="2" name="Empowering Echo">
 		<!--
-			Last modify:	01.12.2008
-			Need correct:	reuseDelay
+			Last modify:	11.09.2014
+			Modified by Cith (Ertheia)
 			Description:
 			For 20 minutes, increases user's magic MP consumption by 35% and M. Atk. by 25%.
 		-->
-		<table name="#abnormal_time">1200</table>
-		<table name="#mpConsume2">116</table>
-		<table name="#mpConsume1">29</table>
-		<table name="#magicLevel">79</table>
-		<table name="#abnormal_time">1200</table>
+		<table name="#mpConsume">72 145</table>
+		<table name="#magicLevel">79 85</table>
+		<table name="#abnormal_time">1200 1800</table>
+		<table name="#abnormal_level">1 2</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="15000"/>
 		<set name="hitTime" value="4000"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="ma_up_special"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="icon" value="icon.skill1457"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="5" name="Time">
 			<table name="#abnormal_time">1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2271,6 +2268,7 @@
 			<table name="#mpConsume2">112 108 104 100 96 92 88 85 81 77 73 69 65 61 58</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect>
 				<mul order="0x30" stat="mAtk" value="1.25"/>
@@ -2458,36 +2456,35 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="1462" levels="1" name="Seal of Blockade">
+	<skill id="1462" levels="7" name="Seal of Blockade">
 		<!--
-			Description: Inflicts non-attribute damage on the enemy using 80 Power added to user's M. Atk. and blocks ordinary attacks for 10 seconds.
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#activateRate">80</table>
-		<table name="#mpConsume2">87</table>
-		<table name="#mpConsume1">22</table>
-		<table name="#magicLevel">79</table>
+		<table name="#activateRate">40 45 50 60 65 70 80</table>
+		<table name="#mpConsume">100 130 170 252 278 306 332</table>
+		<table name="#hitTime">4000 3700 3400 3100 2800 2500 2200</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7</table>
+		<table name="#magicLevel">79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="75000"/>
-		<set name="hitTime" value="4000"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="hitTime" value="#hitTime"/>
 		<set name="abnormal_time" value="10"/>
-		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="normal_attack_block"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="levelModifier" value="2"/>
 		<set name="affectLimit" value="10;10"/>
 		<set name="icon" value="icon.skill1462"/>
-		<set name="power" value="80"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="skillRadius" value="225"/>
-		<set name="skillType" value="MDAM"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="trait" value="PHYSICAL_BLOCKADE"/>
 		<set name="saveVs" value="MEN"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="15" group="6" name="Chance">
 			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90 91 92 93 94 95</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2497,6 +2494,7 @@
 			<table name="#mpConsume2">84 81 78 75 72 69 66 63 61 58 55 52 49 46 43</table>
 			<table name="#magicLevel">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect name="MuteAttack"/>
 		</for>

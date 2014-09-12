@@ -988,32 +988,32 @@
 			<add order="0x40" stat="pCritRate" value="#pCritRate"/>
 		</for>
 	</skill>
-	<skill id="139" levels="3" name="Guts">
-		<table name="#effectPoint">341 408 495</table>
-		<table name="#Tab-pDef">2 2.5 3</table>
-		<table name="#mpConsume2">16 19 24</table>
-		<table name="#magicLevel">36 43 52</table>
+	<skill id="139" levels="9" name="Guts">
+		<table name="#Tab-pDef">2 2.1 2.2 2.3 2.4 2.5 2.6 2.8 3</table>
+		<table name="#debuffResist">1.5 1.55 1.6 1.65 1.7 1.75 1.8 1.85 1.9</table>
+		<table name="#mpConsume">16 19 24 26 28 30 35 40 45</table>
+		<table name="#magicLevel">36 43 52 64 74 85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="600000"/>
+		<set name="reuseDelay" value="300000"/>
 		<set name="hitTime" value="1500"/>
-		<set name="abnormal_time" value="90"/>
+		<set name="abnormal_time" value="60"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="pinch"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0139"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<cond msgId="113">
-			<player percentHP="30"/>
+			<player percentHP="60"/>
 		</cond>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pDef" value="#Tab-pDef"/>
+				<add order="0x40" stat="debuffResist" value="#debuffResist"/>
 			</effect>
 		</for>
 	</skill>
@@ -1289,20 +1289,27 @@
 			<mul order="0x30" stat="fall" value="#rate"/>
 		</for>
 	</skill>
-	<skill id="176" levels="3" name="Frenzy">
-		<!--
-			176	1	Frenzy	Increases P. Atk. by 10% for 1 minute 30 seconds. Additionally increases P. Atk. by 20% when using a sword/blunt weapon. Increases Accuracy by 2 and P. Atk. by 5% when using a two-handed sword/blunt weapon.  Available when HP is 60% or lower.	none	none
-			176	2	Frenzy	Increases P. Atk. by 12% for 1 minute 30 seconds. Additionally increases P. Atk. by 30% when using a sword/blunt weapon. Increases Accuracy by 4 and P. Atk. by 7% when using a two-handed sword/blunt weapon. Available when HP is 60% or lower.	none	none
-			176	3	Frenzy	Increases P. Atk. by 15% for 1 minute 30 seconds. Additionally increases P. Atk. by 40% when using a sword/blunt weapon. Increases Accuracy by 6 and P. Atk. by 10% when using a two-handed sword/blunt weapon. Available when HP is 60% or lower.	none	none
-		 -->
- 		<table name="#default">1.1 1.12 1.15</table>
-		<table name="#sword-blunt">1.20 1.3 1.4</table>
-		<table name="#two-hands">1.05 1.07 1.1</table>
-		<table name="#pAccCombat">2 4 6</table>
-		<table name="#effectPoint">303 438 523</table>
-		<table name="#mpConsume2">14 21 25</table>
-		<table name="#magicLevel">32 46 55</table>
-		<table name="#abnormal_level">1 2 3</table>
+	<skill id="176" levels="9" name="Frenzy">
+		<!--Modified by Cith-->
+ 		<table name="#pAtkBonus">1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.18 1.2</table>
+ 		<table name="#pAtkSpd">1.1 1.12 1.15 1.17 1.2 1.22 1.25 1.27 1.3</table>
+ 		<table name="#pCritRate">10 11 12 13 14 15 16 18 20</table>
+ 		<table name="#pCritDamage">1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.18 1.2</table>
+ 		<table name="#runSpd">10 11 12 13 14 15 16 18 20</table>
+ 		<!--2h Advantage-->
+		<table name="#2HpAtkBonus">1.2 1.21 1.22 1.23 1.24 1.25 1.26 1.28 1.3</table>
+		<!--HP 60 Percent Bonus-->
+		<table name="#pAtkHP60">1.1 1.11 1.12 1.13 1.14 1.25 1.26 1.28 1.3</table>
+		<table name="#pCritRateHP60">0 0 0 0 0 100 100 100 100</table>
+		<table name="#2HpAtkHP60">1.1 1.11 1.12 1.13 1.14 1.35 1.36 1.38 1.4</table>
+		<!--HP 30 Percent Bonus-->
+		<table name="#pAtkHP30">1.1 1.11 1.12 1.13 1.14 1.45 1.46 1.48 1.5</table>
+		<table name="#pCritRateHP30">0 0 0 0 0 300 300 300 300</table>
+		<table name="#2HpAtkHP30">1.2 1.21 1.22 1.23 1.24 1.55 1.56 1.58 1.6</table>
+		<!--End-->
+		<table name="#mpConsume">14 21 25 31 36 40 43 45 47</table>
+		<table name="#magicLevel">32 46 55 64 74 80 85 90 99</table>
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="300000"/>
 		<set name="hitTime" value="1500"/>
@@ -1312,8 +1319,7 @@
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0176"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -1322,21 +1328,40 @@
 		</cond>
 		<for>
 			<effect>
-				<mul order="0x30" stat="pAtk" value="#default"/>
-				<mul order="0x30" stat="pAtk" value="#sword-blunt">
-					<and>
-						<using kind="Sword, Blunt, Big Sword, Big Blunt"/>
-						<player percentHP="60"/>
-					</and>
+				<mul order="0x30" stat="pAtk" value="#pAtkBonus"/>
+				<mul order="0x30" stat="pAtkSpd" value="#pAtkSpd"/>
+				<add order="0x40" stat="basePCritRate" value="#pCritRate"/>
+				<mul order="0x40" stat="pCritDamage" value="#pCritDamage"/>
+				<add order="0x40" stat="runSpd" value="#runSpd"/>
+				<!--2h Advantage-->
+				<mul order="0x30" stat="pAtk" value="#2HpAtkBonus">
+					<using kind="Big Sword, Big Blunt, Pole"/>
 				</mul>
-				<mul order="0x30" stat="pAtk" value="#two-hands">
-					<and>
-						<using kind="Big Sword, Big Blunt"/>
-					</and>
-				</mul>
-				<add order="0x40" stat="pAccCombat" value="#pAccCombat">
-					<using kind="Big Sword, Big Blunt"/>
+				<add order="0x40" stat="pAccCombat" value="8">
+					<using kind="Big Sword, Big Blunt, Pole"/>
 				</add>
+				<!--HP 60 Percent Bonus-->
+				<mul order="0x30" stat="pAtk" value="#pAtkHP60">
+					<player percentHP="60"/>
+				</mul>
+				<add order="0x40" stat="basePCritRate" value="#pCritRateHP60">
+					<player percentHP="60"/>
+				</add>
+				<mul order="0x30" stat="pAtk" value="#2HpAtkHP60">
+					<player percentHP="60"/>
+					<using kind="Big Sword, Big Blunt, Pole"/>
+				</mul>
+				<!--HP 30 Percent Bonus-->
+				<mul order="0x30" stat="pAtk" value="#pAtkHP30">
+					<player percentHP="30"/>
+				</mul>
+				<add order="0x40" stat="basePCritRate" value="#pCritRateHP30">
+					<player percentHP="30"/>
+				</add>
+				<mul order="0x30" stat="pAtk" value="#2HpAtkHP30">
+					<player percentHP="30"/>
+					<using kind="Big Sword, Big Blunt, Pole"/>
+				</mul>
 			</effect>
 		</for>
 	</skill>
