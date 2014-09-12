@@ -446,7 +446,7 @@
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="activateRate" value="100"/>
 		<set name="effectPoint" value="#effectPoint"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="target" value="TARGET_AREA"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reflectable" value="false"/>
@@ -510,9 +510,41 @@
 		</for>
 	</skill>
 	<skill id="10330" levels="4" name="Power Hammer Crush">
+		<table name="#activateRate">50</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">92 96 101 105</table>
+		<table name="#power">18005 22505 27005 30605</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="20"/>
+		<set name="effectPoint" value="507"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10330"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="SHOCK"/>
+		<cond msgId="113">
+			<using kind="Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect name="Stun">
+				<mul order="0x30" stat="pDef" value="0.7"/>
+			</effect>
+		</for>
 	</skill>
 </list>
