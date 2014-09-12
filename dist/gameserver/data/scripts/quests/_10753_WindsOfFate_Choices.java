@@ -433,13 +433,13 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		{
 			if(st.getInt("follow") == 1)
 			{
-				st.startQuestTimer("npc_follow_timer", 5000);
+				st.startQuestTimer("npc_follow_timer", 2000);
 				
 				if(kain_fighter_instance!= null)
 				{
 					if(kain_fighter_instance.getLoc().distance(player.getLoc()) > 400)
 					{
-						kain_fighter_instance.moveToLocation(player.getLoc().getRandomLoc(100), 100, true);
+						kain_fighter_instance.moveToLocation(Location.coordsRandomize(player.getLoc(), 50, 150), 100, true);
 					}
 				}
 				
@@ -447,7 +447,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 				{
 					if(ferin_healer_instance.getLoc().distance(player.getLoc()) > 400)
 					{
-						ferin_healer_instance.moveToLocation(player.getLoc().getRandomLoc(100), 100, true);
+						ferin_healer_instance.moveToLocation(Location.coordsRandomize(player.getLoc(), 50, 150), 100, true);
 					}
 				}
 				
