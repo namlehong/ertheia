@@ -243,6 +243,16 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			mysterious_wizard_instance = player.getReflection().addSpawnWithoutRespawn(MYSTERIOUS_WIZARD2, new Location(npc.getLoc().getX() + 200, npc.getLoc().getY() + 200, npc.getLoc().getZ(), 0), 0);
 		}
 		
+		if(event.equalsIgnoreCase("ending_scene"))
+		{
+			//Cutscene video, when Giselle goes aggro and summon minions
+			//Kain tells player to leave
+			player.startScenePlayer(111);
+			
+			//destroy instance after 5s
+			st.startQuestTimer("leave_instance", 5000);
+		}
+		
 		if(event.equalsIgnoreCase("leave_instance"))
 		{
 			st.setCond(9);
@@ -499,13 +509,7 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		//need to add this onKill just in case player too powerful, kill Giselle too quick for the onAttack event triggers
 		if(npcId == VON_HELLMANN && giselle_instance != null && kain_instance == null)
 		{
-			giselle_instance.deleteMe();
-			
-			giselle_instance = null;
-			
-			//spawn Kain Van Halter right at the position of Giselle Von Hellmann. Despawn him after 5 mins
-			//Need to add 1 more cutscene video here, when Kain came to save Giselle. Haven't sniffed the packet to see which one triggers the video yet - leave it for later
-			kain_instance = player.getReflection().addSpawnWithoutRespawn(KAIN_VAN_HALTER, new Location(npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 0), 0);
+			spawnKainVanHalter(npc, st);
 		}
 		
 		return null;
@@ -520,16 +524,26 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		
 		if(npcId == VON_HELLMANN && giselle_instance != null && kain_instance == null && npc.getCurrentHpPercents() < 50)
 		{
-			giselle_instance.deleteMe();
-			
-			giselle_instance = null;
-			
-			//spawn Kain Van Halter right at the position of Giselle Von Hellmann. Despawn him after 5 mins
-			//Need to add 1 more cutscene video here, when Kain came to save Giselle. Haven't sniffed the packet to see which one triggers the video yet - leave it for later
-			kain_instance = player.getReflection().addSpawnWithoutRespawn(KAIN_VAN_HALTER, new Location(npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 0), 0);
+			spawnKainVanHalter(npc, st);
 		}
 		
 		return null;
+	}
+	
+	public void spawnKainVanHalter(NpcInstance npc, QuestState st)
+	{
+		Player player = st.getPlayer();
+		
+		//Cutscene video, when Kain came to save Giselle
+		player.startScenePlayer(110);
+		
+		giselle_instance.deleteMe();
+		
+		giselle_instance = null;
+		
+		//spawn Kain Van Halter right at the position of Giselle Von Hellmann. Despawn him after 5 mins
+		kain_instance = player.getReflection().addSpawnWithoutRespawn(KAIN_VAN_HALTER, new Location(npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), 0), 0);
+	
 	}
 	
 	private void alertLetterReceived(QuestState st)

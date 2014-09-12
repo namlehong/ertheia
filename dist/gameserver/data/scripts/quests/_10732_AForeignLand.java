@@ -38,7 +38,7 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 			st.setState(STARTED);
 			st.playSound(SOUND_ACCEPT);
 			st.showTutorialClientHTML("QT_001_Radar_01");
-			st.getPlayer().sendPacket(UsmVideo.HEROES.packet(st.getPlayer()));
+			st.getPlayer().sendPacket(UsmVideo.Q014.packet(st.getPlayer()));
 		}
 		else if(event.equalsIgnoreCase("33932-2.htm"))
 		{
