@@ -31,7 +31,12 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 		Quest q10774 = QuestManager.getQuest(10774);
 		Quest q10779 = QuestManager.getQuest(10779);
 		Quest q10785 = QuestManager.getQuest(10785);
-		
+		Quest q10390 = QuestManager.getQuest(10390);
+        Quest q10393 = QuestManager.getQuest(10393);
+        Quest q10397 = QuestManager.getQuest(10397);
+        Quest q10401 = QuestManager.getQuest(10401);
+        Quest q10404 = QuestManager.getQuest(10404);
+        Quest q10408 = QuestManager.getQuest(10408);
 		
 		if(q255 != null)
 			player.processQuestEvent(q255.getName(), "QM" + _number, null);
@@ -51,6 +56,29 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 			player.processQuestEvent(q10779.getName(), "QM" + _number, null);
 		if(q10785 != null)
 			player.processQuestEvent(q10785.getName(), "QM" + _number, null);
-		
+        if(q10390 != null)
+        {
+            player.processQuestEvent(q10390.getName(), "QM" + _number, null);
+        }
+        if(q10393 != null)
+        {
+            player.processQuestEvent(q10393.getName(), "QM" + _number, null);
+        }
+        if(q10397 != null)
+        {
+            player.processQuestEvent(q10397.getName(), "QM" + _number, null);
+        }
+        if(q10401 != null)
+        {
+            player.processQuestEvent(q10401.getName(), "QM" + _number, null);
+        }
+        if(q10404 != null)
+        {
+            player.processQuestEvent(q10404.getName(), "QM" + _number, null);
+        }
+        if(q10408 != null)
+        {
+            player.processQuestEvent(q10408.getName(), "QM" + _number, null);
+        }
 	}
 }
