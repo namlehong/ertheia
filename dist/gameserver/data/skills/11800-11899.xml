@@ -1045,10 +1045,27 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="11859" levels="3" name="Dark Vampirism">
+		<table name="#absorbPart">0.5 0.5 0.5</table>
+		<table name="#magicLevel">90 95 99</table>
+		<table name="#mpConsume2">92 96 100</table>
+		<table name="#power">198 200 203</table>
+		<set name="absorbPart" value="#absorbPart"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2000"/>
 		<set name="icon" value="icon.skill11859"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="is_self_offensive" value="false"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
 	<skill id="11860" levels="3" name="Healing Flag">
 		<set name="icon" value="icon.skill11755"/>
@@ -1057,21 +1074,144 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="11861" levels="1" name="Elemental Resistance">
+		<table name="#abnormal_time">1800</table>
+		<table name="#abnormalLevel">15</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">92</table>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="armor_element_all"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="514"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11861"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="armor_fire;armor_water;armor_wind;armor_earth;md_up_attr;dance_of_aqua_guard;dance_of_earth_guard;song_of_elemental;song_of_flame_guard;song_of_storm_guard;song_of_wind"/>
+				<add order="0x40" stat="defenceFire" value="30"/>
+				<add order="0x40" stat="defenceWater" value="30"/>
+				<add order="0x40" stat="defenceWind" value="30"/>
+				<add order="0x40" stat="defenceEarth" value="30"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_fire"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_water"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_wind"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_earth"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="md_up_attr"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_aqua_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_earth_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_elemental"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_flame_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_storm_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_wind"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11862" levels="1" name="Limited Melee Weapon Resistance">
+		<table name="#abnormal_level">5</table>
+		<table name="#abnormal_time">1800</table>
+		<table name="#effectPoint">500</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">82</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="castRange" value="900"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11862"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="swordWpnVuln" value="5"/>
+				<sub order="0x40" stat="dualWpnVuln" value="5"/>
+				<sub order="0x40" stat="bluntWpnVuln" value="5"/>
+				<sub order="0x40" stat="dualWpnVuln" value="5"/>
+				<sub order="0x40" stat="daggerWpnVuln" value="5"/>
+				<sub order="0x40" stat="poleWpnVuln" value="5"/>
+				<sub order="0x40" stat="fistWpnVuln" value="5"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11863" levels="1" name="Limited Ranged Weapon Resistance">
+		<table name="#abnormal_level">5</table>
+		<table name="#abnormal_time">1800</table>
+		<table name="#effectPoint">500</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">82</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="pd_up_bow"/>
+		<set name="castRange" value="900"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11863"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="bowWpnVuln" value="5"/>
+				<sub order="0x40" stat="crossbowWpnVuln" value="5"/>
+			</effect>
+		</for>
 	</skill>
 </list>

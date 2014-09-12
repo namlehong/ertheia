@@ -1172,10 +1172,40 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="11365" levels="3" name="Summon Demonic Crucifix">
+		<table name="#activateRate">50 55 60</table>
+		<table name="#itemCount">3 0 0</table>
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#mpConsume2">392 384 392</table>
+		<table name="#power">518 506 518</table>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="600"/>
+		<set name="elements" value="water"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill11365"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="#itemCount"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="runSpd" value="180"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="11366" levels="3" name="Spectral Curse">
 		<set name="icon" value="icon.skill0028"/>

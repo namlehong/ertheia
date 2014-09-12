@@ -1,27 +1,166 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="10100" levels="4" name="Guardian's Frenzy">
+		<table name="#abnormal_time">60</table>
+		<table name="#acuracy">4 6 8 10</table>
+		<table name="#atkSpeed">1.1 1.2 1.25 1.30</table>
+		<table name="#criDamage">1.3 1.4 1.5 1.6</table>
+		<table name="#criRate">30 40 50 60</table>
+		<table name="#def">1.5 1.7 2.0 2.2</table>
+		<table name="#elemental">10 20 35 30</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">20 21 23 24</table>
+		<table name="#reuseDelay">600000</table>
+		<table name="#speed">10 20 25 30</table>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="effectPoint" value="523"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="icon" value="icon.skill10100"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mDef" value="#def"/>
+				<mul order="0x30" stat="pDef" value="#def"/>
+				<add order="0x40" stat="defenceFire" value="#elemental"/>
+				<add order="0x40" stat="defenceWater" value="#elemental"/>
+				<add order="0x40" stat="defenceWind" value="#elemental"/>
+				<add order="0x40" stat="defenceEarth" value="#elemental"/>
+				<add order="0x40" stat="defenceHoly" value="#elemental"/>
+				<add order="0x40" stat="defenceUnholy" value="#elemental"/>
+				<add order="0x40" stat="runSpd" value="#speed"/>
+				<add order="0x40" stat="pAccCombat" value="#acuracy">
+					<using kind="Sword, Blunt"/>
+				</add>
+				<mul order="0x30" stat="pAtkSpd" value="#atkSpeed">
+					<using kind="Sword, Blunt"/>
+				</mul>
+				<add order="0x40" stat="basePCritRate" value="#criRate">
+					<using kind="Sword, Big Sword"/>
+				</add>
+				<mul order="0x30" stat="pCritDamage" value="#criDamage">
+					<using kind="Sword, Blunt"/>
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10101" levels="4" name="Templar's Frenzy">
+		<table name="#abnormal_time">60</table>
+		<table name="#acuracy">4 6 8 10</table>
+		<table name="#def">1.5 1.65 1.8 2.0</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">20 21 23 24</table>
+		<table name="#reuseDelay">600000</table>
+		<table name="#speed">10 20 25 30</table>
+		<table name="#atkSpeed">1.1 1.15 1.2 1.25</table>
+		<table name="#criDamage">1.3 1.4 1.5 1.6</table>
+		<table name="#criRate">30 40 50 60</table>
+		<table name="#pSkillPower">1.05 1.07 1.1 1.15</table>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="effectPoint" value="523"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="icon" value="icon.skill10101"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mDef" value="#def"/>
+				<mul order="0x30" stat="pDef" value="#def"/>
+				<mul order="0x30" stat="pSkillPower" value="#pSkillPower"/>
+				<add order="0x40" stat="runSpd" value="#speed"/>
+				<add order="0x40" stat="pAccCombat" value="#acuracy">
+					<using kind="Sword, Blunt"/>
+				</add>
+				<mul order="0x30" stat="pAtkSpd" value="#atkSpeed">
+					<using kind="Sword, Blunt"/>
+				</mul>
+				<add order="0x40" stat="basePCritRate" value="#criRate">
+					<using kind="Sword, Big Sword"/>
+				</add>
+				<mul order="0x30" stat="pCritDamage" value="#criDamage">
+					<using kind="Sword, Blunt"/>
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10102" levels="3" name="Shadow Slash">
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#mpConsume2">185 191 197</table>
+		<table name="#power">33505 34353 35201</table>
+		<table name="#reuseDelay">60000</table>
+		<set name="activateRate" value="85"/>
+		<set name="castRange" value="400"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
 		<set name="icon" value="icon.skill10102"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="6"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillRadius" value="150"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+		<cond msgId="113">
+			<using kind="Shield"/>
+		</cond>
+		<for>
+			<effect name="KnockDown" chance="85" time="3">
+				<def name="fly_radius" value="150"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10103" levels="4" name="Mass Freezing Strike">
+		<table name="#activateRate">60</table>
+		<table name="#count">6 6 6 0</table>
+		<table name="#magicLevel">96 97 98 99</table>
+		<table name="#mpConsume2">185 191 197 197</table>
+		<table name="#power">18151 18641 19131 19131</table>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="400"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10103"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="itemConsumeCount" value="#count"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="runSpd" value="100"/>
+			</effect>
+		</for>
 	</skill>
 </list>

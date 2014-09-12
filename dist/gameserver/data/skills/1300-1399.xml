@@ -900,38 +900,37 @@
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
 	</skill>
-	<skill id="1334" levels="7" name="Summon Cursed Man">
+	<skill id="1334" levels="13" name="Summon Cursed Man">
 		<!--
-			Enchant #1: +power of the servitor
+			Modified by Cith (Ertheia)
 		-->
-		<table name="#itemConsumeCountInTime">1 1 1 2 2 2 2</table>
-		<table name="#npcIds">14074 14075 14076 14077 14078 14079 14080</table>
-		<table name="#mpConsume2">82 88 95 101 104 106 109</table>
-		<table name="#mpConsume1">21 22 24 26 26 27 28</table>
-		<table name="#itemConsumeCount">1 5 12 1 2 3 4</table>
-		<table name="#magicLevel">56 60 64 68 70 72 74</table>
+		<table name="#itemConsumeId">3031 3031 3031 3031 3031 3031 3031 3031</table>
+		<table name="#itemConsumeCount">1 1 2 2 3 3 4 0</table>
+		<table name="#mpConsume">103 110 119 127 130 133 137 423 435 447 459 471 483</table>
+		<table name="#magicLevel">56 60 64 68 70 72 74 77 80 85 90 95 99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="5000"/>
-		<set name="hitTime" value="15000"/>
+		<set name="hitTime" value="3500"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="itemConsumeId" value="3031"/>
-		<set name="itemConsumeCount" value="#itemConsumeCount"/>
 		<set name="icon" value="icon.skill1334"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume" value="#mpConsume"/>
+		<set name="itemConsumeId" value="#itemConsumeId"/>
 		<set name="target" value="TARGET_SELF"/>
-		<set name="itemConsumeIdInTime" value="3031"/>
-		<set name="itemConsumeCountInTime" value="#itemConsumeCountInTime"/>
+		<set name="itemConsumeCount" value="#itemConsumeCount"/>
 		<set name="skillType" value="SUMMON"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<!--Servitor specific-->
 		<set name="npcId" value="#npcIds"/>
+		<table name="#npcIds">14074 14075 14076 14077 14078 14079 14080</table>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Power">
 			<table name="#npcIds">14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110</table>
 			<table name="#exp">0.14 0.13 0.12 0.11 0.10 0.09 0.08 0.07 0.06 0.05 0.04 0.03 0.02 0.01 0</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 	</skill>
 	<skill id="1335" levels="1" name="Balance Life">
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
