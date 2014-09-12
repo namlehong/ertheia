@@ -338,6 +338,10 @@ public class ItemBuilder {
 				}
 			}
 			
+			
+			if(isEtcitem())
+				return "OTHER";
+			
 			return "NONE";
 		}
 		
