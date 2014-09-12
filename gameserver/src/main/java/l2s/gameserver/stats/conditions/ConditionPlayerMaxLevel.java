@@ -4,7 +4,7 @@ import l2s.gameserver.stats.Env;
 
 public class ConditionPlayerMaxLevel extends Condition
 {
-	private final int _level;
+	public final int _level;
 
 	public ConditionPlayerMaxLevel(int level)
 	{

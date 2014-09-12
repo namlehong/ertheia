@@ -14,10 +14,10 @@ public enum ItemFlags
 	ATTRIBUTABLE(true), // возможность заточить атрибутом
 	SELLABLE(true), // возможность продать
 	TRADEABLE(true), // возможность передать
-	STOREABLE(true), // возможность положить в ВХ
-	APPEARANCEABLE(true), // возможность обработать вещь
-	PRIVATESTOREABLE(true), // возможность продать в личной лавке
-	COMMISSIONABLE(true); // возможность выставить предмет на аукцион
+	STOREABLE(true), // Able to put in the BX
+	APPEARANCEABLE(true), // Chance to handle the thing
+	PRIVATESTOREABLE(true), // Able to sell in the personal store
+	COMMISSIONABLE(true); // Opportunity to exhibit item on auction
 
 	public static final ItemFlags[] VALUES = values();
 

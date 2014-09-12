@@ -4,7 +4,7 @@ import l2s.gameserver.stats.Env;
 
 public class ConditionPlayerMinLevel extends Condition
 {
-	private final int _level;
+	public final int _level;
 
 	public ConditionPlayerMinLevel(int level)
 	{

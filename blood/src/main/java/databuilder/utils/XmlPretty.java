@@ -1,5 +1,9 @@
 package databuilder.utils;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 
@@ -9,6 +13,8 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
+
+import databuilder.MainBuilder;
 
 public class XmlPretty {
 
@@ -55,6 +61,31 @@ public class XmlPretty {
 	            return input;
 	        }
 	    }
+	}
+	
+	public static void writeToFile(String fileName, String xmlInput, String dtdFormat, String folderName){
+		String xmlOut = XmlPretty.prettyFormat(xmlInput, dtdFormat);
+		writeToFile(folderName+fileName+".xml", xmlOut);
+	}
+	
+	public static void writeToFile(String filePath, String content){
+		String fileFullPath = MainBuilder._datapack_path + filePath;
+		content = content.replaceAll("(!</etcitem>)\n*\t* *<!-", "\t<!-");
+//		System.out.println(content);
+		try {
+			File file = new File(fileFullPath);
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+		
+			FileWriter fw = new FileWriter(file.getAbsoluteFile());
+			BufferedWriter buffer = new BufferedWriter(fw);
+			buffer.write(content);
+			buffer.close();
+			System.out.println("Write success on "+filePath);
+		} catch (IOException e) {
+			System.out.print("error on "+fileFullPath+" "+e);
+		}
 	}
 
 }
