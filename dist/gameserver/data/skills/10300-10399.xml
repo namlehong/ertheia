@@ -470,10 +470,26 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="10328" levels="3" name="Soul Berserker">
+		<table name="#pAtk">1.1 1.12 1.15</table>
+		<table name="#pCriDamage">1.1 1.12 1.15</table>
+		<table name="#mpPSkillComsume">1.1 1.1 1.1</table>
+		<table name="#mpConsumeTick">0 0 0</table>
+		<table name="#mpConsume1">0 0 0</table>
+		<table name="#magicLevel">97 98 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10328"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CONT"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<for>
+			<effect count="-1" name="ManaDamOverTime" time="1" value="#mpConsumeTick">
+				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+				<mul order="0x30" stat="pCritDamage" value="#pCriDamage"
+				<mul order="0x30" stat="mpConsumePhysical" value="#mpPSkillComsume"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10329" levels="1" name="Superior Blunt Weapon Mastery">
 		<set name="icon" value="icon.skill10329"/>
