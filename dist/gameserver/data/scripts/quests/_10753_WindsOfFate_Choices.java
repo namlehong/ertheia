@@ -245,6 +245,18 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			st.playSound(SOUND_ITEMGET);
 		}
 		
+		//Katalin
+		if(event.equalsIgnoreCase("33942-9.htm"))
+		{
+			st.setCond(15);
+		}
+		
+		//Ayanthe
+		if(event.equalsIgnoreCase("33943-9.htm"))
+		{
+			st.setCond(14);
+		}
+		
 		//Arkenias
 		if(event.equalsIgnoreCase("30174-3.htm"))
 		{
@@ -372,19 +384,21 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 				st.playSound(SOUND_ITEMGET);
 				
 				if(belonging_count + 1 < 4)
-					htmltext = "33997-2.htm";
+					htmltext = "33997-1.htm";
 				else
 				{
 					st.unset("box_duration");
 					st.unset("box_checked");
+					st.unset("belonging_location");
 					st.setCond(10);
 					htmltext = "33997-3.htm";
+					st.stopQuestTimers();
 				}
 			}
 			else
 			{
 
-				htmltext = "33997-1.htm";
+				htmltext = "33997-2.htm";
 			}
 			st.set("box_checked", checked_box_count);
 			
