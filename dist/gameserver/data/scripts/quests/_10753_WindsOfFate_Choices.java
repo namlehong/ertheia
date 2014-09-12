@@ -634,6 +634,11 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		if(npcId == NEBULITE_GOLEM)
 			st.giveItems(MIRACLE_DRUG_OF_ENCHANTMENT, 1);
 		
+		if(	getItemCountById(player, CRYSTAL_EYE) == 3 && 
+			getItemCountById(player, BROKEN_STONE_OF_PURITY) == 3 && 
+			getItemCountById(player, MIRACLE_DRUG_OF_ENCHANTMENT) == 3)
+			st.setCond(3);
+		
 		return null;
 	}
 	
