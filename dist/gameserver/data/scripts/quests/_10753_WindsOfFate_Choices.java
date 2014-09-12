@@ -625,18 +625,18 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		int cond = st.getCond();
 		Player player = st.getPlayer();
 		
-		if(npcId == NEBULITE_EYE)
+		if(npcId == NEBULITE_EYE && getItemCountById(player, CRYSTAL_EYE) < 3)
 			st.giveItems(CRYSTAL_EYE, 1);
 		
-		if(npcId == NEBULITE_WATCH)
+		if(npcId == NEBULITE_WATCH && getItemCountById(player, BROKEN_STONE_OF_PURITY) < 3)
 			st.giveItems(BROKEN_STONE_OF_PURITY, 1);
 		
-		if(npcId == NEBULITE_GOLEM)
+		if(npcId == NEBULITE_GOLEM && getItemCountById(player, MIRACLE_DRUG_OF_ENCHANTMENT) < 3)
 			st.giveItems(MIRACLE_DRUG_OF_ENCHANTMENT, 1);
 		
-		if(	getItemCountById(player, CRYSTAL_EYE) == 3 && 
-			getItemCountById(player, BROKEN_STONE_OF_PURITY) == 3 && 
-			getItemCountById(player, MIRACLE_DRUG_OF_ENCHANTMENT) == 3)
+		if(	getItemCountById(player, CRYSTAL_EYE) >= 3 && 
+			getItemCountById(player, BROKEN_STONE_OF_PURITY) >= 3 && 
+			getItemCountById(player, MIRACLE_DRUG_OF_ENCHANTMENT) >= 3)
 			st.setCond(3);
 		
 		return null;
