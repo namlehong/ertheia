@@ -25,7 +25,7 @@ public class _10746_SeeTheWorld extends Quest implements ScriptFile
 	private final static int EMISSARY_BOX_FIGHTER = 40264;
 	
 	private static final int minLevel = 17;
-	private static final int maxLevel = 99;
+	private static final int maxLevel = 25;
 	
 	@Override
 	public void onLoad()

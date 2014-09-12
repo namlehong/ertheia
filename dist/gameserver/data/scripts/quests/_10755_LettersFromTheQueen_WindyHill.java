@@ -34,7 +34,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 	private static final int STEEL_DOOR_COIN = 37045;
 	
 	private static final int minLevel = 20;
-	private static final int maxLevel = 99;
+	private static final int maxLevel = 30;
 	
 	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
 	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 30.\nVà Nữ Hoàng Navari sẽ gửi bức thư tiếp theo";
@@ -135,7 +135,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		{
 			int MarkId = Integer.valueOf(event.substring(2));
 			//System.out.println("Mark id " + MarkId);
-			if(MarkId == 107551)
+			if(MarkId == 10755)
 			{
 				if(player.getRace() == Race.ERTHEIA)
 					st.showQuestHTML(st.getQuest(), "queen_letter.htm");
@@ -228,7 +228,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		
 		st.getPlayer().sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 		
-		st.showQuestionMark(107551);
+		st.showQuestionMark(10755);
 		
 		st.playSound(SOUND_TUTORIAL);
 		

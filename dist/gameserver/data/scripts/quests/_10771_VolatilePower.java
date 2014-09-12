@@ -34,13 +34,13 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 	
 	private final static int FRAGMENT_EATER = 27533;
 
-	private static final int SHINING_MYSTERIOUS_FRAGMENT = 39711;
+	private static final int SHINING_MYSTERIOUS_FRAGMENT = 39713;
 	private static final int NORMAL_FRAGMENT_DUST = 39714;
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SCROLL_EWC = 951;
 	private static final int SCROLL_EAC = 952;
 	
-	private static final int minLevel = 40;
+	private static final int minLevel = 44;
 	private static final int maxLevel = 99;
 	
 	
@@ -59,8 +59,9 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 	public _10771_VolatilePower()
 	{
 		super(false);
-		addStartNpc(JANSSEN, HIDDEN_CRUSHER);
-		
+		addStartNpc(JANSSEN);
+
+		addTalkId(HIDDEN_CRUSHER);
 		//addKillId(FRAGMENT_EATER);
 
 		addLevelCheck(minLevel, maxLevel);

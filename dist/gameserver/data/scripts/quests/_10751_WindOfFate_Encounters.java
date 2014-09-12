@@ -17,6 +17,8 @@ import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExCallToChangeClass;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
+import l2s.gameserver.network.l2.s2c.MagicSkillUse;
+import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
 
@@ -113,7 +115,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		{
 			if(checkStartCondition(player))
 			{
-				Quest q = QuestManager.getQuest(10755);
+				Quest q = QuestManager.getQuest(10751);
 				player.processQuestEvent(q.getName(), "start_quest", null);
 			}
 			
@@ -254,6 +256,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			
 			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
 			player.setClassId(newClassId, false);
+			player.broadcastPacket(new SocialActionPacket(player.getObjectId(), 23));
 			player.broadcastCharInfo();
 		}
 		
@@ -299,6 +302,10 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			{
 				htmltext = "33942-3.htm";
 			}
+		}
+		else if(npcId == MYSTERIOUS_WIZARD)
+		{
+			htmltext = "33980-1.htm";
 		}
 		else if(npcId == RAYMOND)
 		{
@@ -395,7 +402,16 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-		return (player.getLevel() >= minLevel && player.getLevel() <= maxLevel && player.getRace() == Race.ERTHEIA && player.getQuestState("_10751_WindOfFate_Encounters") == null);
+QuestState st = player.getQuestState("_10751_WindOfFate_Encounters");
+		
+		boolean result = (player.getLevel() >= minLevel && 
+				player.getLevel() <= maxLevel && 
+				player.getRace() == Race.ERTHEIA && 
+				(player.getClassId() == ClassId.ERTHEIA_FIGHTER || player.getClassId() == ClassId.ERTHEIA_MAGE ) && 
+				(st == null || (st != null && st.getCond() == 0)));
+		
+		//System.out.println("checkStartCondition Q10752 " + result);
+		return result;
 	}
 
 }
