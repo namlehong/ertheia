@@ -6,9 +6,11 @@ import l2s.commons.util.Rnd;
 import l2s.gameserver.ai.CtrlEvent;
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
+import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.scripts.Functions;
+import l2s.gameserver.utils.Location;
 import l2s.gameserver.geodata.GeoEngine;
 
 /**
@@ -42,6 +44,24 @@ public class NpcWarriorAI extends Fighter
 		
 		return startAttack();
 	}
+	
+	@Override
+	protected void thinkAttack()
+	{
+		NpcInstance actor = getActor();
+		if(actor.isDead())
+			return;
+
+		
+		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
+		{
+			if(!createNewTask())
+			{
+				//if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
+					//returnHome();
+			}
+		}
+	}
 
 	private boolean startAttack()
 	{
@@ -66,6 +86,7 @@ public class NpcWarriorAI extends Fighter
 		{
 			actor.getAggroList().addDamageHate(target, 10000, 10000);
 			actor.setAggressionTarget(target);
+			actor.setRunning();
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 			return true;
 		}
@@ -86,11 +107,7 @@ public class NpcWarriorAI extends Fighter
 		
 		if(target.isPlayable()) 
 			return false;
-		if(target.getNpcId() == 34000)
-		{
-			System.out.println("target.getFaction() " + target.getFaction());
-			System.out.println("getActor.getFaction() " + getActor().getFaction());
-		}
+		
 		if(target.getFaction().equals(getActor().getFaction()))
 			return false;
 			
