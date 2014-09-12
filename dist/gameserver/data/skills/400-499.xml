@@ -1399,18 +1399,19 @@
 			<effect name="MuteAll"/>
 		</for>
 	</skill>
-	<skill id="438" levels="1" name="Soul of the Phoenix">
+	<skill id="438" levels="4" name="Soul of the Phoenix">
 		<!--
 			Description: Grants you the ability to revive yourself from death with full health, retaining all buffs/debuffs except for Noblesse Blessing and Lucky Charm. Consumes 1 Blood of the Phoenix.
 		-->
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<table name="#reuseDelay">4500000 4200000 3900000 3600000</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="hitTime" value="4000"/>
 		<set name="abnormal_time" value="1800"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_type" value="resurrection_special"/>
-		<set name="magicLevel" value="79 85 90 95 99"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="itemConsumeId" value="8873"/>
 		<set name="itemConsumeCount" value="1"/>
