@@ -848,4 +848,9 @@ public abstract class ItemTemplate extends StatTemplate
 	{
 		return WeaponFightType.WARRIOR;
 	}
+
+	public void update(StatsSet set) {
+		// TODO Auto-generated method stub
+		
+	}
 }

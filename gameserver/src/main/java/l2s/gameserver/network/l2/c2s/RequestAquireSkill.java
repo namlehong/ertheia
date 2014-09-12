@@ -131,6 +131,8 @@ public class RequestAquireSkill extends L2GameClientPacket
 					NpcInstance.showChaosSkillList(player);
 				}
 				break;
+		default:
+			break;
 		}
 	}
 

@@ -168,6 +168,7 @@ public class AdminCustomAuction implements IAdminCommandHandler
 		return true;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

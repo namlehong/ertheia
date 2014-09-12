@@ -146,6 +146,8 @@ public class AdminEffects implements IAdminCommandHandler
 				else
 					activeChar.unsetVar("gm_invul");
 				break;
+		default:
+			break;
 		}
 
 		if(!activeChar.isGM())
@@ -333,6 +335,8 @@ public class AdminEffects implements IAdminCommandHandler
 				String fileName = fullString.replace(wordList[0] + " ", "");
 				activeChar.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, "..\\L2text\\" + fileName + ".htm"));
 				break;
+		default:
+			break;
 		}
 
 		return true;
@@ -372,6 +376,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

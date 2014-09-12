@@ -412,16 +412,52 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="10324" levels="3" name="Momentum Master">
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#pSkillPower">1.1 1.15 1.20</table>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10324"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
+					<using skill="10260"/>
+					<using skill="10262"/>
+					<using skill="10269"/>
+					<using skill="10318"/>
+					<using skill="261"/>
+				</mul>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10325" levels="3" name="Dreadful Roar">
+		<table name="#effectPoint">633 644 653</table>
+		<table name="#mpConsume2">149 151 154</table>
+		<table name="#magicLevel">97 98 99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
 		<set name="icon" value="icon.skill10325"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="isCancel" value="true"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="100"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reflectable" value="false"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_buff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="min_count" value="1"/>
+				<def name="max_count" value="5"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10326" levels="3" name="Bloody Fury">
 		<set name="icon" value="icon.skill10326"/>
@@ -436,21 +472,79 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="10328" levels="3" name="Soul Berserker">
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#mpConsume1">0 0 0</table>
+		<table name="#mpConsumeTick">0 0 0</table>
+		<table name="#mpPSkillComsume">1.1 1.1 1.1</table>
+		<table name="#pAtk">1.1 1.12 1.15</table>
+		<table name="#pCriDamage">1.1 1.12 1.15</table>
 		<set name="icon" value="icon.skill10328"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect count="-1" name="ManaDamOverTime" time="1" value="#mpConsumeTick">
+				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+				<mul order="0x30" stat="pCritDamage" value="#pCriDamage"/>
+				<mul order="0x30" stat="mpConsumePhysical" value="#mpPSkillComsume"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10329" levels="1" name="Superior Blunt Weapon Mastery">
+		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10329"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<cond msgId="113">
+			<using kind="Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.21"/>
+				<mul order="0x40" stat="basePCritRate" value="60"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10330" levels="4" name="Power Hammer Crush">
+		<table name="#activateRate">50</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">92 96 101 105</table>
+		<table name="#power">18005 22505 27005 30605</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="20"/>
+		<set name="effectPoint" value="507"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10330"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="SHOCK"/>
+		<cond msgId="113">
+			<using kind="Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect name="Stun">
+				<mul order="0x30" stat="pDef" value="0.7"/>
+			</effect>
+		</for>
 	</skill>
 </list>

@@ -13,6 +13,7 @@ import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.templates.item.ItemTemplate;
 import l2s.gameserver.templates.npc.NpcTemplate;
 import l2s.gameserver.utils.ItemFunctions;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -127,6 +128,7 @@ public class AdminClientSupport extends ScriptAdminCommand
 		return true;
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Enum[] getAdminCommandEnum()
 	{

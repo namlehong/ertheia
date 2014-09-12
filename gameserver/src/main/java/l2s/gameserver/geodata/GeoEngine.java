@@ -24,6 +24,7 @@ import l2s.gameserver.geodata.GeoOptimizer.BlockLink;
 import l2s.gameserver.model.GameObject;
 import l2s.gameserver.model.World;
 import l2s.gameserver.utils.Location;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

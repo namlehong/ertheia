@@ -290,9 +290,12 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="222" levels="1" name="Fury Fists">
+	<skill id="222" levels="4" name="Fury Fists">
+		<table name="#pAtkSpd">1.25 1.3 1.35 1.4</table>
+		<table name="#FistpAtkSpdBonus">1.25 1.35 1.40 1.45</table>
+		<table name="#magicLevel">43 65 76 85</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="magicLevel" value="43"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0222"/>
 		<set name="mpConsume1" value="8"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -300,7 +303,10 @@
 		<set name="operateType" value="OP_TOGGLE"/>
 		<for>
 			<effect count="-1" name="DamOverTime" time="1" value="16">
-				<mul order="0x30" stat="pAtkSpd" value="1.25"/>
+				<mul order="0x30" stat="pAtkSpd" value="#pAtkSpd"/>
+				<mul order="0x30" stat="pAtkSpd" value="#FistpAtkSpdBonus">
+					<using kind="Dual Fist"/>
+				</mul>
 			</effect>
 		</for>
 	</skill>
@@ -1199,42 +1205,31 @@
 			<effect name="Stun"/>
 		</for>
 	</skill>
-	<skill id="261" levels="22" name="Triple Sonic Slash">
-		<table name="#effectPoint">598 609 620 631 641 651 661 671 680 690 699 708 716 724 732 739 746 753 759 765 771 776</table>
-		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<table name="#mpConsume2">103 105 108 110 113 115 118 120 121 123 125 128 130 132 134 136 139 141 143 145 146 148</table>
-		<table name="#power">1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262</table>
-		<table name="#magicLevel">53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74</table>
+	<skill id="261" levels="31" name="Triple Sonic Slash">
+		<table name="#mpConsume">67 68 70 72 73 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 105 111 119</table>
+		<table name="#power">1948 2042 2138 2236 2337 2439 2544 2651 2760 2870 2982 3095 3210 3325 3442 3559 3676 3794 3911 4029 4146 4262 4299 4415 4645 4875 5106 22531 26017 29503 33377</table>
+		<table name="#magicLevel">55 55 55 58 58 58 60 60 62 62 63 64 66 66 68 68 60 70 72 72 74 74 75 77 79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="5000"/>
+		<set name="reuseDelay" value="10000"/>
 		<set name="coolTime" value="133"/>
 		<set name="hitTime" value="1667"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0261"/>
 		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="effectPoint" value="#effectPoint"/>
-		<set name="powerPvP" value="#powerPvP"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="overHit" value="true"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="criticalRate" value="10"/>
 		<set name="shieldignore" value="true"/>
-		<set name="chargeBoost" value="true"/>
-		<set name="num_charges" value="4"/>
-		<set name="charge_skill_id" value="8"/>
-		<!-- Sonic Focus is the charger -->
 		<set name="nextAction" value="attack"/>
-		<set name="useSS" value="false"/>
+		<set name="SSBoost" value="2.0"/>
 		<cond msgId="113">
-			<using kind="Dual Sword"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Dual Blunt, Pole"/>
 		</cond>
+		<!--No enchant available
 		<enchant type="1" levels="30" group="2" name="Power">
 			<table name="#power">4299 4338 4376 4415 4453 4491 4530 4568 4607 4645 4683 4722 4760 4799 4837 4875 4914 4952 4991 5029 5067 5106 5144 5183 5221 5259 5298 5336 5375 5413</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -1267,6 +1262,7 @@
 			<table name="#powerPvP">4336 4410 4485 4559 4634 4708 4783 4857 4932 5006 5081 5155 5230 5304 5379 5453 5527 5602 5676 5751 5825 5900 5974 6047 6123 6198 6272 6347 6421 6496</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 	</skill>
 	<skill id="262" levels="37" name="Holy Blessing">
 		<table name="#dispel_ps_max_abnormal_lvl">0</table>
@@ -1965,37 +1961,33 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="279" levels="5" name="Lightning Strike">
-		<table name="#effectPoint">828 877 921 958 987</table>
+	<skill id="279" levels="14" name="Lightning Strike">
 		<table name="#activateRate">40</table>
-		<table name="#mpConsume2">64 69 74 78 82</table>
-		<table name="#mpConsume1">16 18 19 20 21</table>
-		<table name="#power">82 89 96 102 108</table>
-		<table name="#magicLevel">58 62 66 70 74</table>
+		<table name="#mpConsume2">64 69 74 78 82 83 85 87 89 91 93 95 103 110</table>
+		<table name="#power">2927 3444 3990 4553 5114 5131 5334 5662 5991 6318 17140 20255 23370 25862</table>
+		<table name="#magicLevel">58 62 66 70 74 76 77 78 79 80 85 90 95 99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="15000"/>
-		<set name="hitTime" value="3000"/>
-		<set name="abnormal_time" value="15"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_type" value="paralyze"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="MAGIC"/>
 		<set name="levelModifier" value="1"/>
 		<set name="icon" value="icon.skill0279"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="400"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="MDAM"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="nextAction" value="attack"/>
 		<set name="delayedEffect" value="6090"/>
 		<set name="trait" value="PARALYZE"/>
 		<set name="saveVs" value="MEN"/>
+		<!--
 		<enchant type="1" levels="30" group="2" name="Power">
 			<table name="#power">109 109 110 111 111 112 113 113 114 115 115 116 116 117 118 118 119 120 120 121 122 122 123 124 124 125 125 126 127 127</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
@@ -2009,6 +2001,8 @@
 			<table name="#activateRate">31 31 32 32 33 33 34 34 35 35 36 36 37 37 38 38 39 39 40 40 41 41 42 42 43 43 44 44 45</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
+		<!--
 		<for>
 			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" value="0.7"/>
@@ -2016,6 +2010,7 @@
 				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
 			</effect>
 		</for>
+		-->
 	</skill>
 	<skill id="280" levels="37" name="Burning Fist">
 		<table name="#effectPoint">213 219 225 231 237 242 248 254 260 265 271 277 283 288 294 299 305 310 316 321 326 331 336 340 345 350 354 358 362 366 370 373 377 380 383 386 388</table>
@@ -2271,14 +2266,14 @@
 			<add order="0x40" stat="mpEff" value="#ManaHeal-eff"/>
 		</for>
 	</skill>
-	<skill id="286" levels="3" name="Provoke">
+	<skill id="286" levels="12" name="Provoke">
 		<!--
 			Provokes enemies within a wide range and decreases resistance to spear weapons by 10 for 10-20 seconds.
 			-->
-		<table name="#effectPoint">136 175 189</table>
-		<table name="#skillRadius">500 700 900</table>
-		<table name="#mpConsume2">57 75 83</table>
-		<table name="#magicLevel">43 55 60</table>
+		<table name="#poleWpnVuln">10 11 12 13 14 15 16 17 18 19 20 25</table>
+		<table name="#skillRadius">500 700 900 900 900 900 900 900 900 900 900 900</table>
+		<table name="#mpConsume">54 55 56 57 58 59 60 61 62 69 75 80</table>
+		<table name="#magicLevel">43 55 60 75 77 79 81 83 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="reuseDelay" value="4000"/>
 		<set name="hitTime" value="1500"/>
@@ -2289,15 +2284,14 @@
 		<set name="affectLimit" value="9;10"/>
 		<set name="icon" value="icon.skill0286"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume" value="#mpConsume"/>
 		<set name="target" value="TARGET_AURA"/>
 		<set name="skillRadius" value="#skillRadius"/>
 		<set name="skillType" value="AGGRESSION"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<add order="0x40" stat="poleWpnVuln" value="10"/>
+				<add order="0x40" stat="poleWpnVuln" value="#poleWpnVuln"/>
 			</effect>
 		</for>
 	</skill>

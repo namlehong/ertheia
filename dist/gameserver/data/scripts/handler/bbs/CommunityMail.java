@@ -22,6 +22,7 @@ import l2s.gameserver.network.l2.s2c.ExMailArrived;
 import l2s.gameserver.network.l2.s2c.ShowBoardPacket;
 import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.scripts.ScriptFile;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -66,6 +67,7 @@ public class CommunityMail extends Functions implements ScriptFile, ICommunityBo
 		};
 	}
 
+	@SuppressWarnings("resource")
 	@Override
 	public void onBypassCommand(Player player, String bypass)
 	{

@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="1001" levels="10" name="Soul Cry">
-		<table name="#patk-add">4.5 14 33.5 66.5 90.5 141.5 208.5 247 310 375.5</table>
+		<table name="#pAtkBonus">2 3 0</table>
+		<table name="#pAtkPercentBonus">1 1 1.04 1.05 1.05 1.05 1.05 1.05 1.07 1.1 1.14 1.16 1.18 1.2</table>
+		<table name="#pDefPercentBonus">1 1 1 1 1.05 1.05 1.05 1.05 1.07 1.1 1.14 1.16 1.18 1.2</table>
+		<table name="#mAtkPercentBonus">1 1 1 1 1 1.05 1.05 1.05 1.07 1.1 1.14 1.16 1.18 1.2</table>
+		<table name="#mDefPercentBonus">1 1 1 1 1 1 1.05 1.05 1.07 1.1 1.14 1.16 1.18 1.2</table>
+		<table name="#skillPower">1 1 1 1 1 1 1 1.05</table>
 		<table name="#mpConsumeTick">0 0 1 2 2 2 3 3 4 4</table>
-		<table name="#mpConsume1">1 2 3 3 4 5 6 6 7 7</table>
-		<table name="#magicLevel">1 14 25 35 40 48 56 60 66 72</table>
+		<table name="#magicLevel">40 52 64 72 76 80 85 90 95 99</table>
 		<set name="ride_state" value="NONE"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill1001"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume" value="1"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="CONT"/>
 		<set name="operateType" value="OP_TOGGLE"/>
+		<!--REMOVE ENCHANT ROUTE
 		<enchant type="1" levels="30" group="1" name="Power">
 			<table name="#patk-add">418 421 424 427 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505</table>
 			<table name="#magicLevel">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85</table>
 		</enchant>
+		-->
 		<for>
 			<effect count="-1" name="ManaDamOverTime" time="1" value="#mpConsumeTick">
-				<add order="0x40" stat="pAtk" value="#patk-add"/>
+				<add order="0x40" stat="pAtk" value="#pAtkBonus"/>
+				<mul order="0x30" stat="pAtk" value="#pAtkPercentBonus"/>
+				<mul order="0x30" stat="mAtk" value="#mAtkPercentBonus"/>
+				<mul order="0x30" stat="pDef" value="#pDefPercentBonus"/>
+				<mul order="0x30" stat="mDef" value="#mDefPercentBonus"/>
+				<mul order="0x30" stat="pSkillPower" value="#skillPower"/>
 			</effect>
 		</for>
 	</skill>
