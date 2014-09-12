@@ -337,12 +337,6 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 					
 					player.sendPacket(new ExShowScreenMessage(time_report, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 				}
-				else
-				{
-					st.unset("box_duration");
-					st.unset("box_checked");
-					st.setCond(10);
-				}
 			}
 			else
 			{
@@ -376,10 +370,24 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			{
 				st.giveItems(ATHREA_BELONGINGS, 1);
 				st.playSound(SOUND_ITEMGET);
+				
+				if(belonging_count + 1 < 4)
+					htmltext = "33997-2.htm";
+				else
+				{
+					st.unset("box_duration");
+					st.unset("box_checked");
+					st.setCond(10);
+					htmltext = "33997-3.htm";
+				}
+			}
+			else
+			{
+
+				htmltext = "33997-1.htm";
 			}
 			st.set("box_checked", checked_box_count);
 			
-			return null;
 		}
 		
 		if(event.equalsIgnoreCase("enter_instance"))
@@ -665,10 +673,10 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 										new Location(101892, 103322, -3508),
 										new Location(101892, 103385, -3502)};
 		
-		int belonging_index_1 = (int)Math.round(Math.random()*4);
-		int belonging_index_2 = (int)Math.round(Math.random()*4) + 4;
-		int belonging_index_3 = (int)Math.round(Math.random()*4) + 8;
-		int belonging_index_4 = (int)Math.round(Math.random()*4) + 12;
+		int belonging_index_1 = (int)Math.round(Math.random()*3) + 1;
+		int belonging_index_2 = (int)Math.round(Math.random()*3) + 5;
+		int belonging_index_3 = (int)Math.round(Math.random()*3) + 9;
+		int belonging_index_4 = (int)Math.round(Math.random()*3) + 13;
 		
 		String belonging_index = belonging_index_1 + "," + belonging_index_2 + "," + belonging_index_3 + "," + belonging_index_4;
 		
