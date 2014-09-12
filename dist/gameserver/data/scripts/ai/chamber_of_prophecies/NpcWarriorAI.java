@@ -91,7 +91,7 @@ public class NpcWarriorAI extends Fighter
 			System.out.println("target.getFaction() " + target.getFaction());
 			System.out.println("getActor.getFaction() " + getActor().getFaction());
 		}
-		if(target.getFaction() == getActor().getFaction())
+		if(target.getFaction().equals(getActor().getFaction()))
 			return false;
 			
 		return true;
