@@ -4,8 +4,9 @@ import java.util.List;
 
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
-import l2s.gameserver.model.WorldRegion;
+import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
+import l2s.gameserver.utils.Location;
 import l2s.gameserver.geodata.GeoEngine;
 
 /**
@@ -41,33 +42,33 @@ public class NpcWarriorAI extends Fighter
 	}
 	
 	@Override
-	protected void returnHome(boolean clearAggro, boolean teleport)
+	protected void thinkAttack()
 	{
-		
-	}
-	
-	@Override
-	public void runImpl() throws Exception
-	{
-		if(_aiTask == null)
+		NpcInstance actor = getActor();
+		if(actor.isDead())
 			return;
-		
-		if(!isGlobalAI() && System.currentTimeMillis() - _lastActiveCheck > 5000L)
+
+		Location loc = actor.getSpawnedLoc();
+		if(!actor.isInRange(loc, MAX_PURSUE_RANGE) && !(actor instanceof DecoyInstance))
 		{
-			_lastActiveCheck = System.currentTimeMillis();
-			NpcInstance actor = getActor();
-			WorldRegion region = actor == null ? null : actor.getCurrentRegion();
-			if(region == null || !region.isActive())
+			teleportHome();
+			return;
+		}
+
+		System.out.println("Kain thinks attack");
+		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
+		{
+			if(!createNewTask())
 			{
-				stopAITask();
-				return;
+				if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
+					returnHome();
 			}
 		}
-		onEvtThink();
 	}
 
 	private boolean startAttack()
 	{
+		System.out.println("Kain starts attack");
 		NpcInstance actor = getActor();
 		if(target == null)
 		{
@@ -78,8 +79,12 @@ public class NpcWarriorAI extends Fighter
 				{
 					if(checkTarget(npc))
 					{
+						System.out.println("Kain checks target");
 						if(target == null || actor.getDistance3D(npc) < actor.getDistance3D(target))
 							target = npc;
+						
+						if(target != null)
+							System.out.println("target not null");
 					}
 				}
 			}

@@ -488,7 +488,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	{
 		if(npc!= null)
 		{
-			if(npc.getLoc().distance(player.getLoc()) > 400)
+			if(npc.getLoc().distance(player.getLoc()) > 300)
 			{
 				npc.moveToLocation(Location.coordsRandomize(player.getLoc(), 50, 150), 100, true);
 			}
