@@ -132,6 +132,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		TARGET_AREA,
 		TARGET_AREA_AIM_CORPSE,
 		TARGET_AURA,
+		TARGET_AURA_EXCLUDE_PLAYER,
 		TARGET_SERVITOR_AURA,
 		TARGET_CHEST,
 		TARGET_FEEDABLE_BEAST,
@@ -1301,6 +1302,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_SELF:
 				return activeChar;
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_COMMCHANNEL:
 			case TARGET_MULTIFACE_AURA:
 			case TARGET_GROUND:
@@ -1481,6 +1483,16 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				addTargetsToList(targets, activeChar, activeChar, forceUse);
 				break;
 			}
+			case TARGET_AURA_EXCLUDE_PLAYER:
+				List<Creature> targets_exclude_playable = new LazyArrayList<Creature>(1);
+				
+				for(Creature target : targets)
+				{
+					if(!target.isPlayable())
+						targets_exclude_playable.add(target);
+				}
+				addTargetsToList(targets_exclude_playable, activeChar, activeChar, forceUse);
+				break;
 			case TARGET_COMMCHANNEL:
 			{
 				if(activeChar.getPlayer() != null)
@@ -2827,6 +2839,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_AREA:
 			case TARGET_AREA_AIM_CORPSE:
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_SERVITOR_AURA:
 			case TARGET_MULTIFACE:
 			case TARGET_MULTIFACE_AURA:
@@ -2843,6 +2856,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		switch(_targetType)
 		{
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_MULTIFACE_AURA:
 			case TARGET_ALLY:
 			case TARGET_CLAN:
