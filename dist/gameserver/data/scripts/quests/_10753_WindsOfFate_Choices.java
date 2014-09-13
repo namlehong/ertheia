@@ -76,6 +76,8 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int ABBYSAL_SHADOW = 19572;
 	private static final int SECLUDED_SHADOW = 19573;
 	
+	private static final int check_interval = 2000;
+	
 	private static final int minLevel = 85;
 	private static final int maxLevel = 99;
 	
@@ -422,7 +424,9 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, new Location(-88408, 186824, -10476), 0);
 			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88552, 186840, -10476), 0);
 			
-			st.startQuestTimer("npc_follow_timer", 10000);
+			st.startQuestTimer("npc_follow_timer", check_interval);
+			tellNpcFollowPlayer(kain_fighter_instance, player);
+			tellNpcFollowPlayer(ferin_healer_instance, player);
 			st.set("follow", 1);
 			npc.deleteMe();
 			
@@ -433,7 +437,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		{
 			if(st.getInt("follow") == 1)
 			{
-				st.startQuestTimer("npc_follow_timer", 2000);
+				st.startQuestTimer("npc_follow_timer", check_interval);
 				
 				tellNpcFollowPlayer(kain_fighter_instance, player);
 				tellNpcFollowPlayer(ferin_healer_instance, player);
