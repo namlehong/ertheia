@@ -5,13 +5,28 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 
 import l2s.gameserver.Config;
 import l2s.gameserver.data.xml.parser.BaseStatsBonusParser;
 import l2s.gameserver.data.xml.parser.LevelBonusParser;
 import l2s.gameserver.data.xml.parser.NpcParser;
 import l2s.gameserver.tables.SkillTable;
+import l2s.gameserver.templates.item.ArmorTemplate;
+import l2s.gameserver.templates.item.ArmorTemplate.ArmorType;
+import l2s.gameserver.templates.item.ItemGrade;
+import l2s.gameserver.templates.item.ItemTemplate;
+import databuilder.utils.XmlPretty;
 import databuilder.xml.builder.ItemBuilder;
+import databuilder.xml.holder.ItemHolder;
 import databuilder.xml.parser.ItemParser;
 import databuilder.xml.parser.NpcGaiParser;
 
@@ -56,6 +71,20 @@ public class MainBuilder
 		NpcGaiParser.getInstance().load();
 	}
 	
+	public static class CustomComparator implements Comparator<ItemTemplate> {
+	    @Override
+	    public int compare(ItemTemplate o1, ItemTemplate o2) {
+	        if(!o1.getGrade().equals(o2.getGrade()))
+	        	return o1.getGrade().compareTo(o2.getGrade());
+	        
+	        return 0;
+	    }
+	}
+	
+	
+	
+	
+	
 	
 	
 	public static void main(String[] args)
@@ -73,6 +102,7 @@ public class MainBuilder
 //		OptionDataParser.getInstance().load();
 //		VariationDataParser.getInstance().load();
 		ItemParser.getInstance().load();
+//		buildFated();
 		
 		
 		

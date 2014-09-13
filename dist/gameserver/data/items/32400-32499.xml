@@ -2,29 +2,64 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
     <!--
-		32403 - Fantasy Knuckle Duster
-		Bestows one of the following functions, Rsk. Evasion, Rsk. Haste or Haste.
+		32400 - Fantasy Pa'agrio Hammer
+		Bestows one of the following functions: Rsk. Evasion, Magic Poison, or Magic Weakness.
 	-->
-    <weapon id="32403" name="Fantasy Knuckle Duster" add_name="Not in Use">
+    <weapon id="32400" name="Fantasy Pa'agrio Hammer" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
+        <set name="is_magic_weapon" value="true"/>
         <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_knuckle_dust_i00"/>
-        <set name="price" value="110485"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1490"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="rnd_dam" value="5"/>
+        <set name="icon" value="icon.weapon_paagrio_hammer_i00"/>
+        <set name="price" value="165215"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="1010"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="rnd_dam" value="20"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="148"/>
-            <add stat="mAtk" order="0x10" value="68"/>
+            <add stat="pAtk" order="0x10" value="135"/>
+            <add stat="mAtk" order="0x10" value="111"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="60"/>
             <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="48"/>
+    </weapon>
+    <!--
+		32401 - Fantasy Bec de Corbin
+		Bestows one of the following functions: Critical Stun, Long Blow or Light.
+	-->
+    <weapon id="32401" name="Fantasy Bec de Corbin" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_bech_de_corbin_i00"/>
+        <set name="price" value="110485"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="2020"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="rnd_dam" value="10"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <!-- todo остальные скиллы -->
+        <skills>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="122"/>
+            <add stat="mAtk" order="0x10" value="68"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="2"/>
@@ -66,136 +101,20 @@
         <set name="material" value="6"/>
     </weapon>
     <!--
-		32401 - Fantasy Bec de Corbin
-		Bestows one of the following functions: Critical Stun, Long Blow or Light.
+		32403 - Fantasy Knuckle Duster
+		Bestows one of the following functions, Rsk. Evasion, Rsk. Haste or Haste.
 	-->
-    <weapon id="32401" name="Fantasy Bec de Corbin" add_name="Not in Use">
+    <weapon id="32403" name="Fantasy Knuckle Duster" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_bech_de_corbin_i00"/>
+        <set name="icon" value="icon.weapon_knuckle_dust_i00"/>
         <set name="price" value="110485"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="2020"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="1490"/>
         <set name="soulshots" value="2"/>
         <set name="spiritshots" value="2"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <!-- todo остальные скиллы -->
-        <skills>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="122"/>
-            <add stat="mAtk" order="0x10" value="68"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		32400 - Fantasy Pa'agrio Hammer
-		Bestows one of the following functions: Rsk. Evasion, Magic Poison, or Magic Weakness.
-	-->
-    <weapon id="32400" name="Fantasy Pa'agrio Hammer" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_paagrio_hammer_i00"/>
-        <set name="price" value="165215"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="1010"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="rnd_dam" value="20"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="135"/>
-            <add stat="mAtk" order="0x10" value="111"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="48"/>
-    </weapon>
-    <!--
-		32407 - Fantasy Compound Armor
-		Full body armor.
-	-->
-    <armor id="32407" name="Fantasy Compound Armor" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.armor_t61_ul_i00"/>
-        <set name="price" value="61350"/>
-        <set name="type" value="HEAVY"/>
-        <set name="weight" value="10980"/>
-        <equip>
-            <slot id="FULL_ARMOR"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="224"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </armor>
-    <!--
-		32406 - Fantasy StormBringer*StormBringer
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
-	-->
-    <weapon id="32406" name="Fantasy StormBringer*StormBringer" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="183885"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2330"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="175"/>
-            <add stat="mAtk" order="0x10" value="78"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		32405 - Fantasy Sword of Revolution*Sword of Revolution
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
-	-->
-    <weapon id="32405" name="Fantasy Sword of Revolution*Sword of Revolution" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="110485"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2360"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="rnd_dam" value="10"/>
+        <set name="rnd_dam" value="5"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -203,7 +122,8 @@
             <add stat="pAtk" order="0x10" value="148"/>
             <add stat="mAtk" order="0x10" value="68"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="2"/>
@@ -240,24 +160,121 @@
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <armor id="32411" name="Fantasy Demon's Stockings" add_name="Not in Use">
+    <!--
+		32405 - Fantasy Sword of Revolution*Sword of Revolution
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
+	-->
+    <weapon id="32405" name="Fantasy Sword of Revolution*Sword of Revolution" add_name="Not in Use">
         <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.armor_t54_l_i00"/>
-        <set name="price" value="17700"/>
-        <set name="type" value="MAGIC"/>
-        <set name="weight" value="980"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="110485"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2360"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="rnd_dam" value="10"/>
         <equip>
-            <slot id="LEGS"/>
+            <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pDef" order="0x10" value="43"/>
-            <add stat="maxMp" order="0x60" value="177"/>
+            <add stat="pAtk" order="0x10" value="148"/>
+            <add stat="mAtk" order="0x10" value="68"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="17"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		32406 - Fantasy StormBringer*StormBringer
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
+	-->
+    <weapon id="32406" name="Fantasy StormBringer*StormBringer" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="183885"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2330"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="rnd_dam" value="10"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="175"/>
+            <add stat="mAtk" order="0x10" value="78"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		32407 - Fantasy Compound Armor
+		Full body armor.
+	-->
+    <armor id="32407" name="Fantasy Compound Armor" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.armor_t61_ul_i00"/>
+        <set name="price" value="61350"/>
+        <set name="type" value="HEAVY"/>
+        <set name="weight" value="10980"/>
+        <equip>
+            <slot id="FULL_ARMOR"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="224"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </armor>
+    <armor id="32408" name="Fantasy Theca Leather Armor" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.armor_t63_u_i00"/>
+        <set name="price" value="31750"/>
+        <set name="type" value="LIGHT"/>
+        <set name="weight" value="4370"/>
+        <equip>
+            <slot id="CHEST"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="121"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <armor id="32409" name="Fantasy Theca Leather Gaiters" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.armor_t63_l_i00"/>
+        <set name="price" value="19835"/>
+        <set name="type" value="LIGHT"/>
+        <set name="weight" value="1530"/>
+        <equip>
+            <slot id="LEGS"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="66"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
     </armor>
     <armor id="32410" name="Fantasy Demon's Tunic" add_name="Not in Use">
         <set name="commissionable" value="false"/>
@@ -278,51 +295,52 @@
         <set name="rarity" value="1"/>
         <set name="material" value="17"/>
     </armor>
-    <armor id="32409" name="Fantasy Theca Leather Gaiters" add_name="Not in Use">
+    <armor id="32411" name="Fantasy Demon's Stockings" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.armor_t63_l_i00"/>
-        <set name="price" value="19835"/>
-        <set name="type" value="LIGHT"/>
-        <set name="weight" value="1530"/>
+        <set name="icon" value="icon.armor_t54_l_i00"/>
+        <set name="price" value="17700"/>
+        <set name="type" value="MAGIC"/>
+        <set name="weight" value="980"/>
         <equip>
             <slot id="LEGS"/>
         </equip>
         <for>
-            <add stat="pDef" order="0x10" value="66"/>
+            <add stat="pDef" order="0x10" value="43"/>
+            <add stat="maxMp" order="0x60" value="177"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
+        <set name="material" value="17"/>
     </armor>
-    <armor id="32408" name="Fantasy Theca Leather Armor" add_name="Not in Use">
+    <armor id="32412" name="Fantasy Mithril Gauntlets" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.armor_t63_u_i00"/>
-        <set name="price" value="31750"/>
-        <set name="type" value="LIGHT"/>
-        <set name="weight" value="4370"/>
+        <set name="icon" value="icon.armor_t61_g_i00"/>
+        <set name="price" value="9440"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="600"/>
         <equip>
-            <slot id="CHEST"/>
+            <slot id="GLOVES"/>
         </equip>
         <for>
-            <add stat="pDef" order="0x10" value="121"/>
+            <add stat="pDef" order="0x10" value="36"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
+        <set name="material" value="2"/>
     </armor>
-    <armor id="32415" name="Fantasy Theca Leather Boots" add_name="Not in Use">
+    <armor id="32413" name="Fantasy Theca Leather Gloves" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.armor_t63_b_i00"/>
+        <set name="icon" value="icon.armor_t63_g_i00"/>
         <set name="price" value="10580"/>
         <set name="type" value="NONE"/>
-        <set name="weight" value="1210"/>
+        <set name="weight" value="600"/>
         <equip>
-            <slot id="FEET"/>
+            <slot id="GLOVES"/>
         </equip>
         <for>
             <add stat="pDef" order="0x10" value="37"/>
@@ -350,15 +368,15 @@
         <set name="rarity" value="1"/>
         <set name="material" value="19"/>
     </armor>
-    <armor id="32413" name="Fantasy Theca Leather Gloves" add_name="Not in Use">
+    <armor id="32415" name="Fantasy Theca Leather Boots" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.armor_t63_g_i00"/>
+        <set name="icon" value="icon.armor_t63_b_i00"/>
         <set name="price" value="10580"/>
         <set name="type" value="NONE"/>
-        <set name="weight" value="600"/>
+        <set name="weight" value="1210"/>
         <equip>
-            <slot id="GLOVES"/>
+            <slot id="FEET"/>
         </equip>
         <for>
             <add stat="pDef" order="0x10" value="37"/>
@@ -367,377 +385,6 @@
         <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
         <set name="material" value="19"/>
-    </armor>
-    <armor id="32412" name="Fantasy Mithril Gauntlets" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.armor_t61_g_i00"/>
-        <set name="price" value="9440"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="600"/>
-        <equip>
-            <slot id="GLOVES"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="36"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <!--
-		32433 - Fantasy Arthro Nail
-		Bestows one of the following functions: Critical Poison, Rsk. Evasion or Rsk. Haste.
-	-->
-    <weapon id="32433" name="Fantasy Arthro Nail" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_arthro_nail_i00"/>
-        <set name="price" value="334025"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1420"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="213"/>
-            <add stat="mAtk" order="0x10" value="91"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="48"/>
-    </weapon>
-    <!--
-		32432 - Fantasy Great Axe
-		Bestows one of the following functions: Anger, Critical Stun or Light.
-	-->
-    <weapon id="32432" name="Fantasy Great Axe" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_great_axe_i00"/>
-        <set name="price" value="334025"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="1940"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <!-- todo остальные скиллы -->
-        <skills>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="175"/>
-            <add stat="mAtk" order="0x10" value="91"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="50"/>
-    </weapon>
-    <armor id="32435" name="Fantasy Zubei's Breastplate" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t64_u_i00"/>
-        <set name="price" value="79800"/>
-        <set name="type" value="HEAVY"/>
-        <set name="weight" value="7970"/>
-        <equip>
-            <slot id="CHEST"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="157"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <!--
-		32434 - Fantasy Sword of Delusion*Sword of Delusion
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 4.
-	-->
-    <weapon id="32434" name="Fantasy Sword of Delusion*Sword of Delusion" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="334025"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2150"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="213"/>
-            <add stat="mAtk" order="0x10" value="91"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <armor id="32437" name="Fantasy Zubei's Leather Shirt" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t65_u_i00"/>
-        <set name="price" value="59850"/>
-        <set name="type" value="LIGHT"/>
-        <set name="weight" value="4330"/>
-        <equip>
-            <slot id="CHEST"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="117"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <armor id="32436" name="Fantasy Zubei's Gaiters" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t64_l_i00"/>
-        <set name="price" value="49885"/>
-        <set name="type" value="HEAVY"/>
-        <set name="weight" value="3570"/>
-        <equip>
-            <slot id="LEGS"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="98"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <armor id="32439" name="Fantasy Tunic of Zubei" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t56_u_i00"/>
-        <set name="price" value="59850"/>
-        <set name="type" value="MAGIC"/>
-        <set name="weight" value="1960"/>
-        <equip>
-            <slot id="CHEST"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="84"/>
-            <add stat="maxMp" order="0x60" value="345"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <armor id="32438" name="Fantasy Zubei's Leather Gaiters" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t65_l_i00"/>
-        <set name="price" value="37415"/>
-        <set name="type" value="LIGHT"/>
-        <set name="weight" value="1480"/>
-        <equip>
-            <slot id="LEGS"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="73"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <!--
-		32441 - Fantasy Zubei's Gauntlets
-		Part of the heavy Zubei's set.
-	-->
-    <armor id="32441" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t64_g_i00"/>
-        <set name="price" value="19955"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="590"/>
-        <equip>
-            <slot id="GLOVES"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="41"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <armor id="32440" name="Fantasy Stockings of Zubei" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t56_l_i00"/>
-        <set name="price" value="37415"/>
-        <set name="type" value="MAGIC"/>
-        <set name="weight" value="940"/>
-        <equip>
-            <slot id="LEGS"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="49"/>
-            <add stat="maxMp" order="0x60" value="216"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <!--
-		32443 - Fantasy Zubei's Gauntlets
-		Part of the Zubei's robe set.
-	-->
-    <armor id="32443" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t56_g_i00"/>
-        <set name="price" value="19955"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="590"/>
-        <equip>
-            <slot id="GLOVES"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="41"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <!--
-		32442 - Fantasy Zubei's Gauntlets
-		Part of the light Zubei's set.
-	-->
-    <armor id="32442" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t65_g_i00"/>
-        <set name="price" value="19955"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="590"/>
-        <equip>
-            <slot id="GLOVES"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="41"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <!--
-		32445 - Fantasy Zubei's Boots
-		Part of the light Zubei's set.
-	-->
-    <armor id="32445" name="Fantasy Zubei's Boots" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t65_b_i00"/>
-        <set name="price" value="19955"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1180"/>
-        <equip>
-            <slot id="FEET"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="41"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <!--
-		32444 - Fantasy Zubei's Boots
-		Part of the heavy Zubei's set.
-	-->
-    <armor id="32444" name="Fantasy Zubei's Boots" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t64_b_i00"/>
-        <set name="price" value="19955"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1180"/>
-        <equip>
-            <slot id="FEET"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="41"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <armor id="32447" name="Fantasy Zubei's Helmet" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_helmet_i00"/>
-        <set name="price" value="29930"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="590"/>
-        <equip>
-            <slot id="HEAD"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="62"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </armor>
-    <!--
-		32446 - Fantasy Zubei's Boots
-		Part of the Zubei's robe set.
-	-->
-    <armor id="32446" name="Fantasy Zubei's Boots" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.armor_t56_b_i00"/>
-        <set name="price" value="19955"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1180"/>
-        <equip>
-            <slot id="FEET"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="41"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
     </armor>
     <armor id="32416" name="Fantasy Demon's Boots" add_name="Not in Use">
         <set name="commissionable" value="false"/>
@@ -1163,17 +810,51 @@
         <set name="material" value="13"/>
     </weapon>
     <!--
-		32471 - Fantasy Dragon Grinder
-		Bestows one of the following functions: Rsk. Evasion, Guidance, or Health.
+		32432 - Fantasy Great Axe
+		Bestows one of the following functions: Anger, Critical Stun or Light.
 	-->
-    <weapon id="32471" name="Fantasy Dragon Grinder" add_name="Not in Use">
+    <weapon id="32432" name="Fantasy Great Axe" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_dragon_grinder_i00"/>
-        <set name="price" value="1037050"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_great_axe_i00"/>
+        <set name="price" value="334025"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="1940"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <!-- todo остальные скиллы -->
+        <skills>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="175"/>
+            <add stat="mAtk" order="0x10" value="91"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="50"/>
+    </weapon>
+    <!--
+		32433 - Fantasy Arthro Nail
+		Bestows one of the following functions: Critical Poison, Rsk. Evasion or Rsk. Haste.
+	-->
+    <weapon id="32433" name="Fantasy Arthro Nail" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_arthro_nail_i00"/>
+        <set name="price" value="334025"/>
         <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1350"/>
+        <set name="weight" value="1420"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="5"/>
@@ -1181,41 +862,351 @@
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="282"/>
-            <add stat="mAtk" order="0x10" value="114"/>
+            <add stat="pAtk" order="0x10" value="213"/>
+            <add stat="mAtk" order="0x10" value="91"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="60"/>
             <add stat="pAccCombat" order="0x10" value="8"/>
         </for>
         <!--added by blood-->
-        <set name="grade" value="4"/>
+        <set name="grade" value="3"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="47"/>
+        <set name="material" value="48"/>
     </weapon>
     <!--
-		32470 - Fantasy Blood Tornado
-		Bestows one of the following functions: Haste, Focus, or Anger.
+		32434 - Fantasy Sword of Delusion*Sword of Delusion
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 4.
 	-->
-    <weapon id="32470" name="Fantasy Blood Tornado" add_name="Not in Use">
+    <weapon id="32434" name="Fantasy Sword of Delusion*Sword of Delusion" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_blood_tornado_i00"/>
-        <set name="price" value="704900"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1370"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="334025"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2150"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
+        <set name="rnd_dam" value="10"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="259"/>
-            <add stat="mAtk" order="0x10" value="107"/>
+            <add stat="pAtk" order="0x10" value="213"/>
+            <add stat="mAtk" order="0x10" value="91"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <armor id="32435" name="Fantasy Zubei's Breastplate" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t64_u_i00"/>
+        <set name="price" value="79800"/>
+        <set name="type" value="HEAVY"/>
+        <set name="weight" value="7970"/>
+        <equip>
+            <slot id="CHEST"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="157"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <armor id="32436" name="Fantasy Zubei's Gaiters" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t64_l_i00"/>
+        <set name="price" value="49885"/>
+        <set name="type" value="HEAVY"/>
+        <set name="weight" value="3570"/>
+        <equip>
+            <slot id="LEGS"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="98"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <armor id="32437" name="Fantasy Zubei's Leather Shirt" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t65_u_i00"/>
+        <set name="price" value="59850"/>
+        <set name="type" value="LIGHT"/>
+        <set name="weight" value="4330"/>
+        <equip>
+            <slot id="CHEST"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="117"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <armor id="32438" name="Fantasy Zubei's Leather Gaiters" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t65_l_i00"/>
+        <set name="price" value="37415"/>
+        <set name="type" value="LIGHT"/>
+        <set name="weight" value="1480"/>
+        <equip>
+            <slot id="LEGS"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="73"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <armor id="32439" name="Fantasy Tunic of Zubei" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t56_u_i00"/>
+        <set name="price" value="59850"/>
+        <set name="type" value="MAGIC"/>
+        <set name="weight" value="1960"/>
+        <equip>
+            <slot id="CHEST"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="84"/>
+            <add stat="maxMp" order="0x60" value="345"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <armor id="32440" name="Fantasy Stockings of Zubei" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t56_l_i00"/>
+        <set name="price" value="37415"/>
+        <set name="type" value="MAGIC"/>
+        <set name="weight" value="940"/>
+        <equip>
+            <slot id="LEGS"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="49"/>
+            <add stat="maxMp" order="0x60" value="216"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <!--
+		32441 - Fantasy Zubei's Gauntlets
+		Part of the heavy Zubei's set.
+	-->
+    <armor id="32441" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t64_g_i00"/>
+        <set name="price" value="19955"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="590"/>
+        <equip>
+            <slot id="GLOVES"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="41"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <!--
+		32442 - Fantasy Zubei's Gauntlets
+		Part of the light Zubei's set.
+	-->
+    <armor id="32442" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t65_g_i00"/>
+        <set name="price" value="19955"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="590"/>
+        <equip>
+            <slot id="GLOVES"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="41"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <!--
+		32443 - Fantasy Zubei's Gauntlets
+		Part of the Zubei's robe set.
+	-->
+    <armor id="32443" name="Fantasy Zubei's Gauntlets" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t56_g_i00"/>
+        <set name="price" value="19955"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="590"/>
+        <equip>
+            <slot id="GLOVES"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="41"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <!--
+		32444 - Fantasy Zubei's Boots
+		Part of the heavy Zubei's set.
+	-->
+    <armor id="32444" name="Fantasy Zubei's Boots" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t64_b_i00"/>
+        <set name="price" value="19955"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1180"/>
+        <equip>
+            <slot id="FEET"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="41"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <!--
+		32445 - Fantasy Zubei's Boots
+		Part of the light Zubei's set.
+	-->
+    <armor id="32445" name="Fantasy Zubei's Boots" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t65_b_i00"/>
+        <set name="price" value="19955"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1180"/>
+        <equip>
+            <slot id="FEET"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="41"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <!--
+		32446 - Fantasy Zubei's Boots
+		Part of the Zubei's robe set.
+	-->
+    <armor id="32446" name="Fantasy Zubei's Boots" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_t56_b_i00"/>
+        <set name="price" value="19955"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1180"/>
+        <equip>
+            <slot id="FEET"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="41"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <armor id="32447" name="Fantasy Zubei's Helmet" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.armor_helmet_i00"/>
+        <set name="price" value="29930"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="590"/>
+        <equip>
+            <slot id="HEAD"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="62"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </armor>
+    <weapon id="32448" name="Fantasy Zubei's Shield" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.shield_shrnoens_shield_i00"/>
+        <set name="price" value="20950"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1210"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pEvasRate" order="0x10" value="-8"/>
+            <add stat="sDef" order="0x10" value="216"/>
+            <add stat="rShld" order="0x10" value="20"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="2"/>
+    </weapon>
+    <!--
+		32449 - Fantasy Bloody Orchid
+		Bestows one of the following functions: Focus, Back Blow, or Critical Bleed.
+	-->
+    <weapon id="32449" name="Fantasy Bloody Orchid" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_bloody_orchid_i00"/>
+        <set name="price" value="704900"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="960"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="186"/>
+            <add stat="mAtk" order="0x10" value="107"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
@@ -1223,66 +1214,28 @@
         <set name="material" value="48"/>
     </weapon>
     <!--
-		32469 - Fantasy Tallum Glaive
-		Bestows one of the following functions: Guidance, Health, or Wide Blow.
+		32450 - Fantasy Soul Separator
+		Bestows one of the following functions: Guidance, P. Critical Damage, or Rsk. Haste.
 	-->
-    <weapon id="32469" name="Fantasy Tallum Glaive" add_name="Not in Use">
+    <weapon id="32450" name="Fantasy Soul Separator" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_tallum_glaive_i00"/>
+        <set name="icon" value="icon.weapon_soul_separator_i00"/>
         <set name="price" value="1037050"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="1840"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="950"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
+        <set name="rnd_dam" value="5"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
-        <!-- todo остальные скиллы -->
-        <skills>
-            <skill id="3599" level="1"/>
-        </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="232"/>
+            <add stat="pAtk" order="0x10" value="203"/>
             <add stat="mAtk" order="0x10" value="114"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="49"/>
-    </weapon>
-    <!--
-		32468 - Fantasy Halberd
-		Bestows one of the following functions: Haste, Critical Stun or Wide Blow.
-	-->
-    <weapon id="32468" name="Fantasy Halberd" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_halbard_i00"/>
-        <set name="price" value="704900"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="1900"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <!-- todo остальные скиллы -->
-        <skills>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="213"/>
-            <add stat="mAtk" order="0x10" value="107"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
             <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
@@ -1291,61 +1244,29 @@
         <set name="material" value="1"/>
     </weapon>
     <!--
-		32467 - Fantasy Branch of the Mother Tree
-		Bestows one of the following functions: Conversion, Magic Damage, or Acumen.
+		32451 - Fantasy Sword of Miracles
+		Bestows one of the following functions: M. Atk., Magic Silence or Acumen.
 	-->
-    <weapon id="32467" name="Fantasy Branch of the Mother Tree" add_name="Not in Use">
+    <weapon id="32451" name="Fantasy Sword of Miracles" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="is_magic_weapon" value="true"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_worldtrees_branch_i00"/>
+        <set name="icon" value="icon.weapon_sword_of_miracle_i00"/>
         <set name="price" value="1037050"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="900"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="840"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
+        <set name="rnd_dam" value="10"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="226"/>
-            <add stat="mAtk" order="0x10" value="167"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="13"/>
-    </weapon>
-    <!--
-		32466 - Fantasy Dasparion's Staff
-		Bestows one of the follow three functions, Mana Up, Conversion or Acumen.
-	-->
-    <weapon id="32466" name="Fantasy Dasparion's Staff" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_dasparions_staff_i00"/>
-        <set name="price" value="704900"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="920"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="207"/>
-            <add stat="mAtk" order="0x10" value="157"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
+            <add stat="pAtk" order="0x10" value="186"/>
+            <add stat="mAtk" order="0x10" value="152"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
@@ -1353,50 +1274,20 @@
         <set name="material" value="47"/>
     </weapon>
     <!--
-		32465 - Fantasy Elysian
-		Bestows one of the following functions: Health, Anger, or a Critical Drain.
+		32452 - Fantasy Tallum Blade
+		Bestows one of the following functions: Critical Poison, Haste or Anger.
 	-->
-    <weapon id="32465" name="Fantasy Elysian" add_name="Not in Use">
+    <weapon id="32452" name="Fantasy Tallum Blade" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_elysian_i00"/>
-        <set name="price" value="1037050"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1580"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="232"/>
-            <add stat="mAtk" order="0x10" value="114"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="1"/>
-    </weapon>
-    <!--
-		32464 - Fantasy Meteor Shower
-		Bestows one of the following functions: Focus, Critical Bleed, or Rsk. Haste.
-	-->
-    <weapon id="32464" name="Fantasy Meteor Shower" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_meteor_shower_i00"/>
+        <set name="icon" value="icon.weapon_tallum_blade_i00"/>
         <set name="price" value="704900"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1600"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="1330"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
+        <set name="rnd_dam" value="10"/>
         <equip>
             <slot id="RIGHT_HAND"/>
         </equip>
@@ -1404,181 +1295,35 @@
             <add stat="pAtk" order="0x10" value="213"/>
             <add stat="mAtk" order="0x10" value="107"/>
             <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		32479 - Fantasy Majestic Leather Armor
-		Full body armor.
-	-->
-    <armor id="32479" name="Fantasy Majestic Leather Armor" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t84_ul_i00"/>
-        <set name="price" value="330150"/>
-        <set name="type" value="LIGHT"/>
-        <set name="weight" value="5350"/>
-        <equip>
-            <slot id="FULL_ARMOR"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="220"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <armor id="32478" name="Fantasy Dark Crystal Leggings" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t75_l_i00"/>
-        <set name="price" value="83500"/>
-        <set name="type" value="LIGHT"/>
-        <set name="weight" value="1480"/>
-        <equip>
-            <slot id="LEGS"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="95"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <armor id="32477" name="Fantasy Dark Crystal Leather Armor" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t75_u_i00"/>
-        <set name="price" value="133550"/>
-        <set name="type" value="LIGHT"/>
-        <set name="weight" value="4300"/>
-        <equip>
-            <slot id="CHEST"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="152"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <!--
-		32476 - Fantasy Majestic Plate Armor
-		Full body armor.
-	-->
-    <armor id="32476" name="Fantasy Majestic Plate Armor" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t83_ul_i00"/>
-        <set name="price" value="440200"/>
-        <set name="type" value="HEAVY"/>
-        <set name="weight" value="9200"/>
-        <equip>
-            <slot id="FULL_ARMOR"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="293"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <armor id="32475" name="Fantasy Dark Crystal Gaiters" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t74_l_i00"/>
-        <set name="price" value="111300"/>
-        <set name="type" value="HEAVY"/>
-        <set name="weight" value="3320"/>
-        <equip>
-            <slot id="LEGS"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="107"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="23"/>
-    </armor>
-    <armor id="32474" name="Fantasy Dark Crystal Breastplate" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t74_u_i00"/>
-        <set name="price" value="178100"/>
-        <set name="type" value="HEAVY"/>
-        <set name="weight" value="7700"/>
-        <equip>
-            <slot id="CHEST"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="171"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="23"/>
-    </armor>
-    <!--
-		32473 - Fantasy Keshanberk*Damascus
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%. Inflicts additional damage to target during PvP.
-	-->
-    <weapon id="32473" name="Fantasy Keshanberk*Damascus" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="928370"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2080"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="275"/>
-            <add stat="mAtk" order="0x10" value="112"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
+        <set name="material" value="47"/>
     </weapon>
     <!--
-		32472 - Fantasy Keshanberk*Keshanberk
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP.
+		32453 - Fantasy Dark Legion's Edge
+		Bestows one of the following functions: P. Critical Damage, Health, or Rsk. Focus.
 	-->
-    <weapon id="32472" name="Fantasy Keshanberk*Keshanberk" add_name="Not in Use">
+    <weapon id="32453" name="Fantasy Dark Legion's Edge" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="704900"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2080"/>
+        <set name="icon" value="icon.weapon_dark_legions_edge_i00"/>
+        <set name="price" value="1037050"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="1320"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="259"/>
-            <add stat="mAtk" order="0x10" value="107"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAtk" order="0x10" value="232"/>
+            <add stat="mAtk" order="0x10" value="114"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
@@ -1647,56 +1392,27 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		32452 - Fantasy Tallum Blade
-		Bestows one of the following functions: Critical Poison, Haste or Anger.
+		32456 - Fantasy Infernal Master
+		Bestows one of the following functions: Haste, P. Critical Damage, or Focus.
 	-->
-    <weapon id="32452" name="Fantasy Tallum Blade" add_name="Not in Use">
+    <weapon id="32456" name="Fantasy Infernal Master" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_tallum_blade_i00"/>
+        <set name="icon" value="icon.weapon_inferno_master_i00"/>
         <set name="price" value="704900"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="1330"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="1900"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
         <equip>
-            <slot id="RIGHT_HAND"/>
+            <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="213"/>
+            <add stat="pAtk" order="0x10" value="259"/>
             <add stat="mAtk" order="0x10" value="107"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="47"/>
-    </weapon>
-    <!--
-		32453 - Fantasy Dark Legion's Edge
-		Bestows one of the following functions: P. Critical Damage, Health, or Rsk. Focus.
-	-->
-    <weapon id="32453" name="Fantasy Dark Legion's Edge" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_dark_legions_edge_i00"/>
-        <set name="price" value="1037050"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="1320"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="232"/>
-            <add stat="mAtk" order="0x10" value="114"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
@@ -1705,128 +1421,17 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		32450 - Fantasy Soul Separator
-		Bestows one of the following functions: Guidance, P. Critical Damage, or Rsk. Haste.
+		32457 - Fantasy Dragon Slayer
+		Bestows one of the following functions: Health, Critical Bleed or Critical Drain.
 	-->
-    <weapon id="32450" name="Fantasy Soul Separator" add_name="Not in Use">
+    <weapon id="32457" name="Fantasy Dragon Slayer" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_soul_separator_i00"/>
+        <set name="icon" value="icon.weapon_dragon_slayer_i00"/>
         <set name="price" value="1037050"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="950"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="203"/>
-            <add stat="mAtk" order="0x10" value="114"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="1"/>
-    </weapon>
-    <!--
-		32451 - Fantasy Sword of Miracles
-		Bestows one of the following functions: M. Atk., Magic Silence or Acumen.
-	-->
-    <weapon id="32451" name="Fantasy Sword of Miracles" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_sword_of_miracle_i00"/>
-        <set name="price" value="1037050"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="840"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="186"/>
-            <add stat="mAtk" order="0x10" value="152"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="47"/>
-    </weapon>
-    <weapon id="32448" name="Fantasy Zubei's Shield" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.shield_shrnoens_shield_i00"/>
-        <set name="price" value="20950"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1210"/>
-        <equip>
-            <slot id="LEFT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pEvasRate" order="0x10" value="-8"/>
-            <add stat="sDef" order="0x10" value="216"/>
-            <add stat="rShld" order="0x10" value="20"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="2"/>
-    </weapon>
-    <!--
-		32449 - Fantasy Bloody Orchid
-		Bestows one of the following functions: Focus, Back Blow, or Critical Bleed.
-	-->
-    <weapon id="32449" name="Fantasy Bloody Orchid" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_bloody_orchid_i00"/>
-        <set name="price" value="704900"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="960"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="186"/>
-            <add stat="mAtk" order="0x10" value="107"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="48"/>
-    </weapon>
-    <!--
-		32462 - Fantasy Doomchanter
-		Kamael-exclusive Weapon: Carnage Bow Conversion\\nBestows one of the following functions: Light, Critical Bleed, or Mana Up.
-	-->
-    <weapon id="32462" name="Fantasy Doomchanter" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_doom_singer_i00"/>
-        <set name="price" value="704900"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1670"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="1840"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
@@ -1834,11 +1439,40 @@
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="270"/>
+            <add stat="pAtk" order="0x10" value="282"/>
+            <add stat="mAtk" order="0x10" value="114"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="14"/>
+    </weapon>
+    <!--
+		32458 - Fantasy Divine Pain
+		Kamael-exclusive Weapon: Infernal Master conversion\\nBestows one of the following functions: Haste, P. Critical Damage, or Focus.
+	-->
+    <weapon id="32458" name="Fantasy Divine Pain" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_pain_of_godness_i00"/>
+        <set name="price" value="704900"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="1900"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="15"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="231"/>
             <add stat="mAtk" order="0x10" value="107"/>
-            <set stat="basePAtkSpd" order="0x08" value="303"/>
-            <set stat="basePCritRate" order="0x08" value="100"/>
-            <add stat="pAccCombat" order="0x10" value="-1.5"/>
+            <set stat="basePAtkSpd" order="0x08" value="350"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="2"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
@@ -1846,29 +1480,29 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		32463 - Fantasy Reaper
-		Kamael-exclusive Weapon: Soul Bow conversion.\\nBestows one of the following functions: Cheap Shot, Quick Recovery or Critical Poison.
+		32459 - Fantasy Undertaker
+		Kamael-exclusive Weapon: Dragon Slayer Conversion\\nBestows one of the following functions: Health, Critical Bleed or Critical Drain.
 	-->
-    <weapon id="32463" name="Fantasy Reaper" add_name="Not in Use">
+    <weapon id="32459" name="Fantasy Undertaker" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_soul_shooter_i00"/>
+        <set name="icon" value="icon.weapon_death_bringer_i00"/>
         <set name="price" value="1037050"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1660"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="1840"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
+        <set name="rnd_dam" value="15"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="294"/>
+            <add stat="pAtk" order="0x10" value="251"/>
             <add stat="mAtk" order="0x10" value="114"/>
-            <set stat="basePAtkSpd" order="0x08" value="303"/>
-            <set stat="basePCritRate" order="0x08" value="100"/>
-            <add stat="pAccCombat" order="0x10" value="-1.5"/>
+            <set stat="basePAtkSpd" order="0x08" value="350"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="2"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
@@ -1938,29 +1572,29 @@
         <set name="material" value="1"/>
     </weapon>
     <!--
-		32458 - Fantasy Divine Pain
-		Kamael-exclusive Weapon: Infernal Master conversion\\nBestows one of the following functions: Haste, P. Critical Damage, or Focus.
+		32462 - Fantasy Doomchanter
+		Kamael-exclusive Weapon: Carnage Bow Conversion\\nBestows one of the following functions: Light, Critical Bleed, or Mana Up.
 	-->
-    <weapon id="32458" name="Fantasy Divine Pain" add_name="Not in Use">
+    <weapon id="32462" name="Fantasy Doomchanter" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_pain_of_godness_i00"/>
+        <set name="icon" value="icon.weapon_doom_singer_i00"/>
         <set name="price" value="704900"/>
-        <set name="type" value="BIGSWORD"/>
-        <set name="weight" value="1900"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1670"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="15"/>
+        <set name="rnd_dam" value="10"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="231"/>
+            <add stat="pAtk" order="0x10" value="270"/>
             <add stat="mAtk" order="0x10" value="107"/>
-            <set stat="basePAtkSpd" order="0x08" value="350"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="2"/>
+            <set stat="basePAtkSpd" order="0x08" value="303"/>
+            <set stat="basePCritRate" order="0x08" value="100"/>
+            <add stat="pAccCombat" order="0x10" value="-1.5"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
@@ -1968,47 +1602,297 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		32459 - Fantasy Undertaker
-		Kamael-exclusive Weapon: Dragon Slayer Conversion\\nBestows one of the following functions: Health, Critical Bleed or Critical Drain.
+		32463 - Fantasy Reaper
+		Kamael-exclusive Weapon: Soul Bow conversion.\\nBestows one of the following functions: Cheap Shot, Quick Recovery or Critical Poison.
 	-->
-    <weapon id="32459" name="Fantasy Undertaker" add_name="Not in Use">
+    <weapon id="32463" name="Fantasy Reaper" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_death_bringer_i00"/>
+        <set name="icon" value="icon.weapon_soul_shooter_i00"/>
         <set name="price" value="1037050"/>
-        <set name="type" value="BIGSWORD"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1660"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="294"/>
+            <add stat="mAtk" order="0x10" value="114"/>
+            <set stat="basePAtkSpd" order="0x08" value="303"/>
+            <set stat="basePCritRate" order="0x08" value="100"/>
+            <add stat="pAccCombat" order="0x10" value="-1.5"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		32464 - Fantasy Meteor Shower
+		Bestows one of the following functions: Focus, Critical Bleed, or Rsk. Haste.
+	-->
+    <weapon id="32464" name="Fantasy Meteor Shower" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_meteor_shower_i00"/>
+        <set name="price" value="704900"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1600"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="213"/>
+            <add stat="mAtk" order="0x10" value="107"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		32465 - Fantasy Elysian
+		Bestows one of the following functions: Health, Anger, or a Critical Drain.
+	-->
+    <weapon id="32465" name="Fantasy Elysian" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_elysian_i00"/>
+        <set name="price" value="1037050"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1580"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="232"/>
+            <add stat="mAtk" order="0x10" value="114"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="1"/>
+    </weapon>
+    <!--
+		32466 - Fantasy Dasparion's Staff
+		Bestows one of the follow three functions, Mana Up, Conversion or Acumen.
+	-->
+    <weapon id="32466" name="Fantasy Dasparion's Staff" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_dasparions_staff_i00"/>
+        <set name="price" value="704900"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="920"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="207"/>
+            <add stat="mAtk" order="0x10" value="157"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="47"/>
+    </weapon>
+    <!--
+		32467 - Fantasy Branch of the Mother Tree
+		Bestows one of the following functions: Conversion, Magic Damage, or Acumen.
+	-->
+    <weapon id="32467" name="Fantasy Branch of the Mother Tree" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_worldtrees_branch_i00"/>
+        <set name="price" value="1037050"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="900"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="226"/>
+            <add stat="mAtk" order="0x10" value="167"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="13"/>
+    </weapon>
+    <!--
+		32468 - Fantasy Halberd
+		Bestows one of the following functions: Haste, Critical Stun or Wide Blow.
+	-->
+    <weapon id="32468" name="Fantasy Halberd" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_halbard_i00"/>
+        <set name="price" value="704900"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="1900"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <!-- todo остальные скиллы -->
+        <skills>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="213"/>
+            <add stat="mAtk" order="0x10" value="107"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="1"/>
+    </weapon>
+    <!--
+		32469 - Fantasy Tallum Glaive
+		Bestows one of the following functions: Guidance, Health, or Wide Blow.
+	-->
+    <weapon id="32469" name="Fantasy Tallum Glaive" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_tallum_glaive_i00"/>
+        <set name="price" value="1037050"/>
+        <set name="type" value="POLE"/>
         <set name="weight" value="1840"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="15"/>
+        <set name="rnd_dam" value="10"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
+        <!-- todo остальные скиллы -->
+        <skills>
+            <skill id="3599" level="1"/>
+        </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="251"/>
+            <add stat="pAtk" order="0x10" value="232"/>
             <add stat="mAtk" order="0x10" value="114"/>
-            <set stat="basePAtkSpd" order="0x08" value="350"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="2"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
+        <set name="material" value="49"/>
     </weapon>
     <!--
-		32456 - Fantasy Infernal Master
-		Bestows one of the following functions: Haste, P. Critical Damage, or Focus.
+		32470 - Fantasy Blood Tornado
+		Bestows one of the following functions: Haste, Focus, or Anger.
 	-->
-    <weapon id="32456" name="Fantasy Infernal Master" add_name="Not in Use">
+    <weapon id="32470" name="Fantasy Blood Tornado" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_inferno_master_i00"/>
+        <set name="icon" value="icon.weapon_blood_tornado_i00"/>
         <set name="price" value="704900"/>
-        <set name="type" value="BIGSWORD"/>
-        <set name="weight" value="1900"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="1370"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="259"/>
+            <add stat="mAtk" order="0x10" value="107"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="48"/>
+    </weapon>
+    <!--
+		32471 - Fantasy Dragon Grinder
+		Bestows one of the following functions: Rsk. Evasion, Guidance, or Health.
+	-->
+    <weapon id="32471" name="Fantasy Dragon Grinder" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_dragon_grinder_i00"/>
+        <set name="price" value="1037050"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="1350"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="282"/>
+            <add stat="mAtk" order="0x10" value="114"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="47"/>
+    </weapon>
+    <!--
+		32472 - Fantasy Keshanberk*Keshanberk
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Increases damage inflicted during PvP.
+	-->
+    <weapon id="32472" name="Fantasy Keshanberk*Keshanberk" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="704900"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2080"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
@@ -2027,17 +1911,17 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		32457 - Fantasy Dragon Slayer
-		Bestows one of the following functions: Health, Critical Bleed or Critical Drain.
+		32473 - Fantasy Keshanberk*Damascus
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%. Inflicts additional damage to target during PvP.
 	-->
-    <weapon id="32457" name="Fantasy Dragon Slayer" add_name="Not in Use">
+    <weapon id="32473" name="Fantasy Keshanberk*Damascus" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_dragon_slayer_i00"/>
-        <set name="price" value="1037050"/>
-        <set name="type" value="BIGSWORD"/>
-        <set name="weight" value="1840"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="928370"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2080"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
@@ -2045,110 +1929,104 @@
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="282"/>
-            <add stat="mAtk" order="0x10" value="114"/>
+            <add stat="pAtk" order="0x10" value="275"/>
+            <add stat="mAtk" order="0x10" value="112"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="14"/>
+        <set name="material" value="51"/>
     </weapon>
-    <armor id="32497" name="Fantasy Majestic Circlet" add_name="Not in Use">
+    <armor id="32474" name="Fantasy Dark Crystal Breastplate" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_leather_helmet_i00"/>
-        <set name="price" value="101600"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="550"/>
+        <set name="icon" value="icon.armor_t74_u_i00"/>
+        <set name="price" value="178100"/>
+        <set name="type" value="HEAVY"/>
+        <set name="weight" value="7700"/>
         <equip>
-            <slot id="HEAD"/>
+            <slot id="CHEST"/>
         </equip>
         <for>
-            <add stat="pDef" order="0x10" value="73"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <armor id="32496" name="Fantasy Dark Crystal Helmet" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_helmet_i00"/>
-        <set name="price" value="66800"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="570"/>
-        <equip>
-            <slot id="HEAD"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="76"/>
+            <add stat="pDef" order="0x10" value="171"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
         <set name="material" value="23"/>
     </armor>
-    <weapon id="32499" name="Fantasy Shield of Nightmare" add_name="Not in Use">
+    <armor id="32475" name="Fantasy Dark Crystal Gaiters" add_name="Not in Use">
         <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.shield_shield_of_nightmare_i00"/>
-        <set name="price" value="71100"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1180"/>
+        <set name="icon" value="icon.armor_t74_l_i00"/>
+        <set name="price" value="111300"/>
+        <set name="type" value="HEAVY"/>
+        <set name="weight" value="3320"/>
         <equip>
-            <slot id="LEFT_HAND"/>
+            <slot id="LEGS"/>
         </equip>
         <for>
-            <add stat="pEvasRate" order="0x10" value="-8"/>
-            <add stat="sDef" order="0x10" value="256"/>
-            <add stat="rShld" order="0x10" value="20"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </weapon>
-    <weapon id="32498" name="Fantasy Dark Crystal Shield" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_count" value="100"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.shield_dark_crystal_shield_i00"/>
-        <set name="price" value="46750"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1190"/>
-        <equip>
-            <slot id="LEFT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pEvasRate" order="0x10" value="-8"/>
-            <add stat="sDef" order="0x10" value="243"/>
-            <add stat="rShld" order="0x10" value="20"/>
+            <add stat="pDef" order="0x10" value="107"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
         <set name="material" value="23"/>
-    </weapon>
+    </armor>
     <!--
-		32484 - Fantasy Dark Crystal Gloves
-		Part of the heavy dark crystal set.
+		32476 - Fantasy Majestic Plate Armor
+		Full body armor.
 	-->
-    <armor id="32484" name="Fantasy Dark Crystal Gloves" add_name="Not in Use">
+    <armor id="32476" name="Fantasy Majestic Plate Armor" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t74_g_i00"/>
-        <set name="price" value="44500"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="580"/>
+        <set name="icon" value="icon.armor_t83_ul_i00"/>
+        <set name="price" value="440200"/>
+        <set name="type" value="HEAVY"/>
+        <set name="weight" value="9200"/>
         <equip>
-            <slot id="GLOVES"/>
+            <slot id="FULL_ARMOR"/>
         </equip>
         <for>
-            <add stat="pDef" order="0x10" value="46"/>
+            <add stat="pDef" order="0x10" value="293"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <armor id="32477" name="Fantasy Dark Crystal Leather Armor" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t75_u_i00"/>
+        <set name="price" value="133550"/>
+        <set name="type" value="LIGHT"/>
+        <set name="weight" value="4300"/>
+        <equip>
+            <slot id="CHEST"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="152"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <armor id="32478" name="Fantasy Dark Crystal Leggings" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t75_l_i00"/>
+        <set name="price" value="83500"/>
+        <set name="type" value="LIGHT"/>
+        <set name="weight" value="1480"/>
+        <equip>
+            <slot id="LEGS"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="95"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
@@ -2156,65 +2034,21 @@
         <set name="material" value="19"/>
     </armor>
     <!--
-		32485 - Fantasy Dark Crystal Gloves
-		Part of the light dark crystal set.
+		32479 - Fantasy Majestic Leather Armor
+		Full body armor.
 	-->
-    <armor id="32485" name="Fantasy Dark Crystal Gloves" add_name="Not in Use">
+    <armor id="32479" name="Fantasy Majestic Leather Armor" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t75_g_i00"/>
-        <set name="price" value="44500"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="580"/>
+        <set name="icon" value="icon.armor_t84_ul_i00"/>
+        <set name="price" value="330150"/>
+        <set name="type" value="LIGHT"/>
+        <set name="weight" value="5350"/>
         <equip>
-            <slot id="GLOVES"/>
+            <slot id="FULL_ARMOR"/>
         </equip>
         <for>
-            <add stat="pDef" order="0x10" value="46"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <!--
-		32486 - Fantasy Dark Crystal Gloves
-		Part of the dark crystal robe set.
-	-->
-    <armor id="32486" name="Fantasy Dark Crystal Gloves" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t76_g_i00"/>
-        <set name="price" value="44500"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="580"/>
-        <equip>
-            <slot id="GLOVES"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="46"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <!--
-		32487 - Fantasy Majestic Gauntlets
-		Part of the heavy majestic set.
-	-->
-    <armor id="32487" name="Fantasy Majestic Gauntlets" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t83_g_i00"/>
-        <set name="price" value="67750"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="540"/>
-        <equip>
-            <slot id="GLOVES"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="49"/>
+            <add stat="pDef" order="0x10" value="220"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
@@ -2306,18 +2140,18 @@
         <set name="material" value="19"/>
     </armor>
     <!--
-		32492 - Fantasy Dark Crystal Boots
-		Part of the dark crystal robe set.
+		32484 - Fantasy Dark Crystal Gloves
+		Part of the heavy dark crystal set.
 	-->
-    <armor id="32492" name="Fantasy Dark Crystal Boots" add_name="Not in Use">
+    <armor id="32484" name="Fantasy Dark Crystal Gloves" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t76_b_i00"/>
+        <set name="icon" value="icon.armor_t74_g_i00"/>
         <set name="price" value="44500"/>
         <set name="type" value="NONE"/>
-        <set name="weight" value="1110"/>
+        <set name="weight" value="580"/>
         <equip>
-            <slot id="FEET"/>
+            <slot id="GLOVES"/>
         </equip>
         <for>
             <add stat="pDef" order="0x10" value="46"/>
@@ -2325,21 +2159,65 @@
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="23"/>
+        <set name="material" value="19"/>
     </armor>
     <!--
-		32493 - Fantasy Majestic Boots
+		32485 - Fantasy Dark Crystal Gloves
+		Part of the light dark crystal set.
+	-->
+    <armor id="32485" name="Fantasy Dark Crystal Gloves" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t75_g_i00"/>
+        <set name="price" value="44500"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="580"/>
+        <equip>
+            <slot id="GLOVES"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="46"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <!--
+		32486 - Fantasy Dark Crystal Gloves
+		Part of the dark crystal robe set.
+	-->
+    <armor id="32486" name="Fantasy Dark Crystal Gloves" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t76_g_i00"/>
+        <set name="price" value="44500"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="580"/>
+        <equip>
+            <slot id="GLOVES"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="46"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <!--
+		32487 - Fantasy Majestic Gauntlets
 		Part of the heavy majestic set.
 	-->
-    <armor id="32493" name="Fantasy Majestic Boots" add_name="Not in Use">
+    <armor id="32487" name="Fantasy Majestic Gauntlets" add_name="Not in Use">
         <set name="commissionable" value="false"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t83_b_i00"/>
+        <set name="icon" value="icon.armor_t83_g_i00"/>
         <set name="price" value="67750"/>
         <set name="type" value="NONE"/>
-        <set name="weight" value="1110"/>
+        <set name="weight" value="540"/>
         <equip>
-            <slot id="FEET"/>
+            <slot id="GLOVES"/>
         </equip>
         <for>
             <add stat="pDef" order="0x10" value="49"/>
@@ -2347,51 +2225,7 @@
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="48"/>
-    </armor>
-    <!--
-		32494 - Fantasy Majestic Boots
-		Part of the light majestic set.
-	-->
-    <armor id="32494" name="Fantasy Majestic Boots" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t84_b_i00"/>
-        <set name="price" value="67750"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1110"/>
-        <equip>
-            <slot id="FEET"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="49"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="48"/>
-    </armor>
-    <!--
-		32495 - Fantasy Majestic Boots
-		Part of the majestic robe set.
-	-->
-    <armor id="32495" name="Fantasy Majestic Boots" add_name="Not in Use">
-        <set name="commissionable" value="false"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.armor_t85_b_i00"/>
-        <set name="price" value="67750"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="1110"/>
-        <equip>
-            <slot id="FEET"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="49"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="48"/>
+        <set name="material" value="19"/>
     </armor>
     <!--
 		32488 - Fantasy Majestic Gauntlets
@@ -2481,4 +2315,170 @@
         <set name="rarity" value="1"/>
         <set name="material" value="23"/>
     </armor>
+    <!--
+		32492 - Fantasy Dark Crystal Boots
+		Part of the dark crystal robe set.
+	-->
+    <armor id="32492" name="Fantasy Dark Crystal Boots" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t76_b_i00"/>
+        <set name="price" value="44500"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1110"/>
+        <equip>
+            <slot id="FEET"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="46"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="23"/>
+    </armor>
+    <!--
+		32493 - Fantasy Majestic Boots
+		Part of the heavy majestic set.
+	-->
+    <armor id="32493" name="Fantasy Majestic Boots" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t83_b_i00"/>
+        <set name="price" value="67750"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1110"/>
+        <equip>
+            <slot id="FEET"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="49"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="48"/>
+    </armor>
+    <!--
+		32494 - Fantasy Majestic Boots
+		Part of the light majestic set.
+	-->
+    <armor id="32494" name="Fantasy Majestic Boots" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t84_b_i00"/>
+        <set name="price" value="67750"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1110"/>
+        <equip>
+            <slot id="FEET"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="49"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="48"/>
+    </armor>
+    <!--
+		32495 - Fantasy Majestic Boots
+		Part of the majestic robe set.
+	-->
+    <armor id="32495" name="Fantasy Majestic Boots" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_t85_b_i00"/>
+        <set name="price" value="67750"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1110"/>
+        <equip>
+            <slot id="FEET"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="49"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="48"/>
+    </armor>
+    <armor id="32496" name="Fantasy Dark Crystal Helmet" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_helmet_i00"/>
+        <set name="price" value="66800"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="570"/>
+        <equip>
+            <slot id="HEAD"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="76"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="23"/>
+    </armor>
+    <armor id="32497" name="Fantasy Majestic Circlet" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.armor_leather_helmet_i00"/>
+        <set name="price" value="101600"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="550"/>
+        <equip>
+            <slot id="HEAD"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="73"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <weapon id="32498" name="Fantasy Dark Crystal Shield" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.shield_dark_crystal_shield_i00"/>
+        <set name="price" value="46750"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1190"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pEvasRate" order="0x10" value="-8"/>
+            <add stat="sDef" order="0x10" value="243"/>
+            <add stat="rShld" order="0x10" value="20"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="23"/>
+    </weapon>
+    <weapon id="32499" name="Fantasy Shield of Nightmare" add_name="Not in Use">
+        <set name="commissionable" value="false"/>
+        <set name="crystal_count" value="100"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.shield_shield_of_nightmare_i00"/>
+        <set name="price" value="71100"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="1180"/>
+        <equip>
+            <slot id="LEFT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pEvasRate" order="0x10" value="-8"/>
+            <add stat="sDef" order="0x10" value="256"/>
+            <add stat="rShld" order="0x10" value="20"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </weapon>
 </list>

@@ -2,10 +2,636 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
     <!--
-		30219 - Amaranthine Caster
-		<Soul Crystal Enhancement>\\nHas a 20% chance of casting Dryad Root on the target during magic use. M. Atk. + 460. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4.
+		30200 - Amaranthine Avenger
+		<Soul Crystal Enhancement>\\nP. Atk. + 1232 during a Critical Attack. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
 	-->
-    <weapon id="30219" name="Amaranthine Caster" add_name="Magic Hold + Empower">
+    <weapon id="30200" name="Amaranthine Avenger" add_name="Critical Damage + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_qutram_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1740"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13256" level="3"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3572" level="8"/>
+            <!--Special Ability: Crtical Damage-->
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="638"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		30201 - Amaranthine Avenger
+		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
+	-->
+    <weapon id="30201" name="Amaranthine Avenger" add_name="Focus + Haste">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_qutram_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1740"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13256" level="3"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="638"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		30202 - Amaranthine Fighter
+		<Soul Crystal Enhancement>\\nIncreases Critical by 81.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30202" name="Amaranthine Fighter" add_name="Focus + Damage">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_durga_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="1550"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13267" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3567" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="777"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30203 - Amaranthine Fighter
+		<Soul Crystal Enhancement>\\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30203" name="Amaranthine Fighter" add_name="Damage Up + Haste">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_durga_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="1550"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13267" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="777"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30204 - Amaranthine Fighter
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30204" name="Amaranthine Fighter" add_name="Haste + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_durga_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="1550"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13267" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3565" level="7"/>
+            <!--Special Ability: Focus-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="777"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30205 - Amaranthine Stormer
+		<Soul Crystal Enhancement>\\nAbsorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases Accuracy by 7.9. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
+	-->
+    <weapon id="30205" name="Amaranthine Stormer" add_name="HP Drain + Guidance">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_crabel_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="2010"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13263" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3568" level="1"/>
+            <!--Special Ability: HP Drain-->
+            <skill id="3573" level="7"/>
+            <!--Special Ability: Guidance-->
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="638"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="6"/>
+    </weapon>
+    <!--
+		30206 - Amaranthine Stormer
+		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
+	-->
+    <weapon id="30206" name="Amaranthine Stormer" add_name="Guidance + Damage Up">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_crabel_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="2010"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13263" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3573" level="6"/>
+            <!--Special Ability: Guidance-->
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="638"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="6"/>
+    </weapon>
+    <!--
+		30207 - Amaranthine Stormer
+		<Soul Crystal Enhancement>\\nP. Atk. + 415. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
+	-->
+    <weapon id="30207" name="Amaranthine Stormer" add_name="Damage Up + HP Drain">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_crabel_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="2010"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13263" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3568" level="1"/>
+            <!--Special Ability: HP Drain-->
+            <skill id="13062" level="4"/>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="638"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="6"/>
+    </weapon>
+    <!--
+		30208 - Amaranthine Thrower
+		<Soul Crystal Enhancement>\\nP. Atk. + 415. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
+	-->
+    <weapon id="30208" name="Amaranthine Thrower" add_name="Damage Up + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13292" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1257"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30209 - Amaranthine Thrower
+		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Increases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
+	-->
+    <weapon id="30209" name="Amaranthine Thrower" add_name="Focus + Long Blow">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13292" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13061" level="1"/>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1257"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30210 - Amaranthine Thrower
+		<Soul Crystal Enhancement>\\nIncreases the attack range. P. Atk. + 415. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
+	-->
+    <weapon id="30210" name="Amaranthine Thrower" add_name="Long Blow + Damage Up">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13292" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="13061" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1257"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30211 - Amaranthine Shooter
+		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
+	-->
+    <weapon id="30211" name="Amaranthine Shooter" add_name="Focus + Critical Slow">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1580"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13294" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3655" level="1"/>
+            <!--PvP Weapon - Rapid Fire-->
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1132"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30212 - Amaranthine Shooter
+		<Soul Crystal Enhancement>\\nHas a chance of casting Slow on the target during a Critical Attack. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
+	-->
+    <weapon id="30212" name="Amaranthine Shooter" add_name="Critical Slow + Haste">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1580"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13294" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3655" level="1"/>
+            <!--PvP Weapon - Rapid Fire-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1132"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30213 - Amaranthine Shooter
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
+	-->
+    <weapon id="30213" name="Amaranthine Shooter" add_name="Haste + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1580"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13294" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1132"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30214 - Amaranthine Buster
+		<Soul Crystal Enhancement>\\nIncreases Casting Spd. by 15%. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4.
+	-->
+    <weapon id="30214" name="Amaranthine Buster" add_name="Acumen + Magic Hold">
+        <set name="variation_group_id" value="30"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weaon_serapear_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13295" level="3"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <triggers>
+            <trigger id="3577" level="3" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="20"/>
+        </triggers>
+        <skills>
+            <skill id="3047" level="3"/>
+            <!--Special Ability: Acumen-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="511"/>
+            <add stat="mAtk" order="0x10" value="371"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30215 - Amaranthine Buster
+		<Soul Crystal Enhancement>\\nHas a 20% chance of casting Dryad Root on the target during magic use. Increases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4.
+	-->
+    <weapon id="30215" name="Amaranthine Buster" add_name="Magic Hold + Mana Up">
+        <set name="variation_group_id" value="30"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weaon_serapear_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13295" level="3"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <triggers>
+            <trigger id="3577" level="3" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="20"/>
+        </triggers>
+        <skills>
+            <skill id="3014" level="3"/>
+            <!--Special Ability: Mana Up-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="511"/>
+            <add stat="mAtk" order="0x10" value="371"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30216 - Amaranthine Buster
+		<Soul Crystal Enhancement>\\nIncreases Max MP by 30% and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4.
+	-->
+    <weapon id="30216" name="Amaranthine Buster" add_name="Mana Up + Acumen">
+        <set name="variation_group_id" value="30"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weaon_serapear_i01"/>
+        <set name="price" value="646636000"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="6897"/>
+        <enchant4_skill id="13295" level="3"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3014" level="3"/>
+            <!--Special Ability: Mana Up-->
+            <skill id="3047" level="3"/>
+            <!--Special Ability: Acumen-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="511"/>
+            <add stat="mAtk" order="0x10" value="371"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30217 - Amaranthine Caster
+		<Soul Crystal Enhancement>\\nM. Atk. + 460 and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4.
+	-->
+    <weapon id="30217" name="Amaranthine Caster" add_name="Empower + Acumen">
         <set name="variation_group_id" value="30"/>
         <set name="is_magic_weapon" value="true"/>
         <set name="crystal_type" value="R99"/>
@@ -21,12 +647,11 @@
         <equip>
             <slot id="RIGHT_HAND"/>
         </equip>
-        <triggers>
-            <trigger id="3577" level="3" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="20"/>
-        </triggers>
         <skills>
             <skill id="3575" level="8"/>
             <!--Special Ability: Empower-->
+            <skill id="3047" level="3"/>
+            <!--Special Ability: Acumen-->
         </skills>
         <for>
             <add stat="pAtk" order="0x10" value="511"/>
@@ -80,10 +705,10 @@
         <set name="material" value="13"/>
     </weapon>
     <!--
-		30217 - Amaranthine Caster
-		<Soul Crystal Enhancement>\\nM. Atk. + 460 and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4.
+		30219 - Amaranthine Caster
+		<Soul Crystal Enhancement>\\nHas a 20% chance of casting Dryad Root on the target during magic use. M. Atk. + 460. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Damage when enchanted to + 4.
 	-->
-    <weapon id="30217" name="Amaranthine Caster" add_name="Empower + Acumen">
+    <weapon id="30219" name="Amaranthine Caster" add_name="Magic Hold + Empower">
         <set name="variation_group_id" value="30"/>
         <set name="is_magic_weapon" value="true"/>
         <set name="crystal_type" value="R99"/>
@@ -99,11 +724,12 @@
         <equip>
             <slot id="RIGHT_HAND"/>
         </equip>
+        <triggers>
+            <trigger id="3577" level="3" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="20"/>
+        </triggers>
         <skills>
             <skill id="3575" level="8"/>
             <!--Special Ability: Empower-->
-            <skill id="3047" level="3"/>
-            <!--Special Ability: Acumen-->
         </skills>
         <for>
             <add stat="pAtk" order="0x10" value="511"/>
@@ -118,82 +744,10 @@
         <set name="material" value="13"/>
     </weapon>
     <!--
-		30216 - Amaranthine Buster
-		<Soul Crystal Enhancement>\\nIncreases Max MP by 30% and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4.
+		30220 - Amaranthine Retributer
+		<Soul Crystal Enhancement>\\nIncreases MP Recovery Rate and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4.
 	-->
-    <weapon id="30216" name="Amaranthine Buster" add_name="Mana Up + Acumen">
-        <set name="variation_group_id" value="30"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weaon_serapear_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13295" level="3"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3014" level="3"/>
-            <!--Special Ability: Mana Up-->
-            <skill id="3047" level="3"/>
-            <!--Special Ability: Acumen-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="511"/>
-            <add stat="mAtk" order="0x10" value="371"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30223 - Amaranthine Dualsword
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15% and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30223" name="Amaranthine Dualsword" add_name="Haste + Damage Up">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13277" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30222 - Amaranthine Retributer
-		<Soul Crystal Enhancement>\\nM. Atk. + 322. Increases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4.
-	-->
-    <weapon id="30222" name="Amaranthine Retributer" add_name="Empower + MP Regeneration">
+    <weapon id="30220" name="Amaranthine Retributer" add_name="MP Regeneration + Acumen">
         <set name="variation_group_id" value="30"/>
         <set name="is_magic_weapon" value="true"/>
         <set name="crystal_type" value="R99"/>
@@ -210,8 +764,8 @@
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="3575" level="2"/>
-            <!--Special Ability: Empower-->
+            <skill id="3047" level="3"/>
+            <!--Special Ability: Acumen-->
             <skill id="3576" level="4"/>
             <!--Special Ability: MP Regeneration-->
         </skills>
@@ -268,10 +822,10 @@
         <set name="material" value="13"/>
     </weapon>
     <!--
-		30220 - Amaranthine Retributer
-		<Soul Crystal Enhancement>\\nIncreases MP Recovery Rate and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4.
+		30222 - Amaranthine Retributer
+		<Soul Crystal Enhancement>\\nM. Atk. + 322. Increases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4.
 	-->
-    <weapon id="30220" name="Amaranthine Retributer" add_name="MP Regeneration + Acumen">
+    <weapon id="30222" name="Amaranthine Retributer" add_name="Empower + MP Regeneration">
         <set name="variation_group_id" value="30"/>
         <set name="is_magic_weapon" value="true"/>
         <set name="crystal_type" value="R99"/>
@@ -288,8 +842,8 @@
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="3047" level="3"/>
-            <!--Special Ability: Acumen-->
+            <skill id="3575" level="2"/>
+            <!--Special Ability: Empower-->
             <skill id="3576" level="4"/>
             <!--Special Ability: MP Regeneration-->
         </skills>
@@ -307,71 +861,34 @@
         <set name="material" value="13"/>
     </weapon>
     <!--
-		30211 - Amaranthine Shooter
-		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
+		30223 - Amaranthine Dualsword
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15% and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30211" name="Amaranthine Shooter" add_name="Focus + Critical Slow">
+    <weapon id="30223" name="Amaranthine Dualsword" add_name="Haste + Damage Up">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_stilla_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1580"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13294" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3655" level="1"/>
-            <!--PvP Weapon - Rapid Fire-->
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1132"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30210 - Amaranthine Thrower
-		<Soul Crystal Enhancement>\\nIncreases the attack range. P. Atk. + 415. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
-	-->
-    <weapon id="30210" name="Amaranthine Thrower" add_name="Long Blow + Damage Up">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_castron_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="BOW"/>
+        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUAL"/>
         <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13292" level="3"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13277" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
             <skill id="13062" level="4"/>
-            <skill id="13061" level="1"/>
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="1257"/>
+            <add stat="pAtk" order="0x10" value="777"/>
             <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
@@ -379,35 +896,34 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30209 - Amaranthine Thrower
-		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Increases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
+		30224 - Amaranthine Dualsword
+		<Soul Crystal Enhancement>\\nP. Atk. + 457 and Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30209" name="Amaranthine Thrower" add_name="Focus + Long Blow">
+    <weapon id="30224" name="Amaranthine Dualsword" add_name="Damage Up + Health">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_castron_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="BOW"/>
+        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUAL"/>
         <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13292" level="3"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13277" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="13061" level="1"/>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
+            <skill id="3013" level="5"/>
+            <!--Special Ability: Health-->
+            <skill id="13062" level="4"/>
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="1257"/>
+            <add stat="pAtk" order="0x10" value="777"/>
             <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
@@ -415,21 +931,57 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30208 - Amaranthine Thrower
-		<Soul Crystal Enhancement>\\nP. Atk. + 415. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
+		30225 - Amaranthine Dualsword
+		<Soul Crystal Enhancement>\\nIncreases Max HP by 25% and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30208" name="Amaranthine Thrower" add_name="Damage Up + Focus">
+    <weapon id="30225" name="Amaranthine Dualsword" add_name="Health + Haste">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_castron_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="BOW"/>
+        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUAL"/>
         <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13292" level="3"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13277" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3013" level="5"/>
+            <!--Special Ability: Health-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="777"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30226 - Amaranthine Dual Dagger
+		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30226" name="Amaranthine Dual Dagger" add_name="Damage Up + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUALDAGGER"/>
+        <set name="weight" value="2050"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13287" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -439,9 +991,9 @@
             <!--Special Ability: Focus-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="1257"/>
+            <add stat="pAtk" order="0x10" value="638"/>
             <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
             <set stat="basePCritRate" order="0x08" value="120"/>
             <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
@@ -451,174 +1003,23 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30215 - Amaranthine Buster
-		<Soul Crystal Enhancement>\\nHas a 20% chance of casting Dryad Root on the target during magic use. Increases Max MP by 30%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4.
+		30227 - Amaranthine Dual Dagger
+		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30215" name="Amaranthine Buster" add_name="Magic Hold + Mana Up">
+    <weapon id="30227" name="Amaranthine Dual Dagger" add_name="Focus + Guidance">
         <set name="variation_group_id" value="30"/>
-        <set name="is_magic_weapon" value="true"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weaon_serapear_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="1520"/>
+        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUALDAGGER"/>
+        <set name="weight" value="2050"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13295" level="3"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <triggers>
-            <trigger id="3577" level="3" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="20"/>
-        </triggers>
-        <skills>
-            <skill id="3014" level="3"/>
-            <!--Special Ability: Mana Up-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="511"/>
-            <add stat="mAtk" order="0x10" value="371"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30214 - Amaranthine Buster
-		<Soul Crystal Enhancement>\\nIncreases Casting Spd. by 15%. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to + 4.
-	-->
-    <weapon id="30214" name="Amaranthine Buster" add_name="Acumen + Magic Hold">
-        <set name="variation_group_id" value="30"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weaon_serapear_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13295" level="3"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <triggers>
-            <trigger id="3577" level="3" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="20"/>
-        </triggers>
-        <skills>
-            <skill id="3047" level="3"/>
-            <!--Special Ability: Acumen-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="511"/>
-            <add stat="mAtk" order="0x10" value="371"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30213 - Amaranthine Shooter
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
-	-->
-    <weapon id="30213" name="Amaranthine Shooter" add_name="Haste + Focus">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_stilla_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1580"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13294" level="3"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13287" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1132"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30212 - Amaranthine Shooter
-		<Soul Crystal Enhancement>\\nHas a chance of casting Slow on the target during a Critical Attack. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
-	-->
-    <weapon id="30212" name="Amaranthine Shooter" add_name="Critical Slow + Haste">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_stilla_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1580"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13294" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3655" level="1"/>
-            <!--PvP Weapon - Rapid Fire-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1132"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30234 - Blessed Amaranthine Shaper
-		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
-	-->
-    <weapon id="30234" name="Blessed Amaranthine Shaper" add_name="Focus + Guidance">
-        <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_stanpid_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13282" level="3"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
         </equip>
         <skills>
             <skill id="3566" level="9"/>
@@ -627,53 +1028,161 @@
             <!--Special Ability: Guidance-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="575"/>
-            <add stat="mAtk" order="0x10" value="286"/>
+            <add stat="pAtk" order="0x10" value="638"/>
+            <add stat="mAtk" order="0x10" value="278"/>
             <set stat="basePAtkSpd" order="0x08" value="433"/>
             <set stat="basePCritRate" order="0x08" value="120"/>
             <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
+        <set name="rarity" value="1"/>
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30235 - Blessed Amaranthine Cutter
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4.
+		30228 - Amaranthine Dual Dagger
+		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30235" name="Blessed Amaranthine Cutter" add_name="Haste + Focus">
+    <weapon id="30228" name="Amaranthine Dual Dagger" add_name="Guidance + Damage Up ">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_plenitas_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="1520"/>
+        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUALDAGGER"/>
+        <set name="weight" value="2050"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13252" level="3"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13287" level="3"/>
         <equip>
-            <slot id="RIGHT_HAND"/>
+            <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
+            <skill id="13062" level="4"/>
+            <skill id="3573" level="7"/>
+            <!--Special Ability: Guidance-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="658"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAtk" order="0x10" value="638"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
+        <set name="rarity" value="1"/>
         <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30229 - Amaranthine Dual Blunt Weapon
+		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30229" name="Amaranthine Dual Blunt Weapon" add_name="Focus + Guidance">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUALBLUNT"/>
+        <set name="weight" value="1740"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13272" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3566" level="9"/>
+            <!--Special Ability: Focus-->
+            <skill id="3573" level="7"/>
+            <!--Special Ability: Guidance-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="777"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		30230 - Amaranthine Dual Blunt Weapon
+		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30230" name="Amaranthine Dual Blunt Weapon" add_name="Guidance + Damage Up">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUALBLUNT"/>
+        <set name="weight" value="1740"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13272" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3573" level="6"/>
+            <!--Special Ability: Guidance-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="777"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		30231 - Amaranthine Dual Blunt Weapon
+		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30231" name="Amaranthine Dual Blunt Weapon" add_name="Damage Up + Focus ">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
+        <set name="price" value="775963200"/>
+        <set name="type" value="DUALBLUNT"/>
+        <set name="weight" value="1740"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="crystal_count" value="8276"/>
+        <enchant4_skill id="13272" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="777"/>
+            <add stat="mAtk" order="0x10" value="278"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
     </weapon>
     <!--
 		30232 - Blessed Amaranthine Shaper
@@ -752,35 +1261,37 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30238 - Blessed Amaranthine Slasher
-		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4.
+		30234 - Blessed Amaranthine Shaper
+		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
 	-->
-    <weapon id="30238" name="Blessed Amaranthine Slasher" add_name="Focus + Damage">
+    <weapon id="30234" name="Blessed Amaranthine Shaper" add_name="Focus + Guidance">
         <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_bauen_i01"/>
+        <set name="icon" value="icon.weapon_stanpid_i01"/>
         <set name="price" value="808295000"/>
-        <set name="type" value="BIGSWORD"/>
-        <set name="weight" value="1740"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="item_quality" value="BLESSED"/>
+        <set name="rnd_dam" value="5"/>
         <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13261" level="3"/>
+        <enchant4_skill id="13282" level="3"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3566" level="7"/>
+            <skill id="3566" level="9"/>
             <!--Special Ability: Focus-->
+            <skill id="3573" level="7"/>
+            <!--Special Ability: Guidance-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="pAtk" order="0x10" value="575"/>
             <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
@@ -788,34 +1299,35 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30239 - Blessed Amaranthine Slasher
-		<Soul Crystal Enhancement>\\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4.
+		30235 - Blessed Amaranthine Cutter
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to + 4.
 	-->
-    <weapon id="30239" name="Blessed Amaranthine Slasher" add_name="Damage Up + Haste">
+    <weapon id="30235" name="Blessed Amaranthine Cutter" add_name="Haste + Focus">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_bauen_i01"/>
+        <set name="icon" value="icon.weapon_plenitas_i01"/>
         <set name="price" value="808295000"/>
-        <set name="type" value="BIGSWORD"/>
-        <set name="weight" value="1740"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
         <set name="item_quality" value="BLESSED"/>
         <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13261" level="3"/>
+        <enchant4_skill id="13252" level="3"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="13062" level="4"/>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
             <skill id="3564" level="8"/>
             <!--Special Ability: Haste-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="pAtk" order="0x10" value="658"/>
             <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
@@ -898,21 +1410,22 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30226 - Amaranthine Dual Dagger
-		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
+		30238 - Blessed Amaranthine Slasher
+		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30226" name="Amaranthine Dual Dagger" add_name="Damage Up + Focus">
+    <weapon id="30238" name="Blessed Amaranthine Slasher" add_name="Focus + Damage">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUALDAGGER"/>
-        <set name="weight" value="2050"/>
+        <set name="icon" value="icon.weapon_bauen_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="1740"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13287" level="3"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13261" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -922,607 +1435,51 @@
             <!--Special Ability: Focus-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30227 - Amaranthine Dual Dagger
-		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30227" name="Amaranthine Dual Dagger" add_name="Focus + Guidance">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUALDAGGER"/>
-        <set name="weight" value="2050"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13287" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3566" level="9"/>
-            <!--Special Ability: Focus-->
-            <skill id="3573" level="7"/>
-            <!--Special Ability: Guidance-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30224 - Amaranthine Dualsword
-		<Soul Crystal Enhancement>\\nP. Atk. + 457 and Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30224" name="Amaranthine Dualsword" add_name="Damage Up + Health">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13277" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3013" level="5"/>
-            <!--Special Ability: Health-->
-            <skill id="13062" level="4"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
+            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="mAtk" order="0x10" value="286"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
+        <set name="rarity" value="4"/>
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30225 - Amaranthine Dualsword
-		<Soul Crystal Enhancement>\\nIncreases Max HP by 25% and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
+		30239 - Blessed Amaranthine Slasher
+		<Soul Crystal Enhancement>\\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30225" name="Amaranthine Dualsword" add_name="Health + Haste">
+    <weapon id="30239" name="Blessed Amaranthine Slasher" add_name="Damage Up + Haste">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="1520"/>
+        <set name="icon" value="icon.weapon_bauen_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="1740"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13277" level="3"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13261" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="3013" level="5"/>
-            <!--Special Ability: Health-->
+            <skill id="13062" level="4"/>
             <skill id="3564" level="8"/>
             <!--Special Ability: Haste-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
+            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="mAtk" order="0x10" value="286"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30230 - Amaranthine Dual Blunt Weapon
-		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30230" name="Amaranthine Dual Blunt Weapon" add_name="Guidance + Damage Up">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUALBLUNT"/>
-        <set name="weight" value="1740"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13272" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3573" level="6"/>
-            <!--Special Ability: Guidance-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		30231 - Amaranthine Dual Blunt Weapon
-		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30231" name="Amaranthine Dual Blunt Weapon" add_name="Damage Up + Focus ">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUALBLUNT"/>
-        <set name="weight" value="1740"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13272" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		30228 - Amaranthine Dual Dagger
-		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30228" name="Amaranthine Dual Dagger" add_name="Guidance + Damage Up ">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUALDAGGER"/>
-        <set name="weight" value="2050"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13287" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3573" level="7"/>
-            <!--Special Ability: Guidance-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30229 - Amaranthine Dual Blunt Weapon
-		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30229" name="Amaranthine Dual Blunt Weapon" add_name="Focus + Guidance">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
-        <set name="price" value="775963200"/>
-        <set name="type" value="DUALBLUNT"/>
-        <set name="weight" value="1740"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="crystal_count" value="8276"/>
-        <enchant4_skill id="13272" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3566" level="9"/>
-            <!--Special Ability: Focus-->
-            <skill id="3573" level="7"/>
-            <!--Special Ability: Guidance-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		30249 - Blessed Amaranthine Stormer
-		<Soul Crystal Enhancement>\\nP. Atk. + 415. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
-	-->
-    <weapon id="30249" name="Blessed Amaranthine Stormer" add_name="Damage Up + HP Drain">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_crabel_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="2010"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13263" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3568" level="1"/>
-            <!--Special Ability: HP Drain-->
-            <skill id="13062" level="4"/>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="658"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="6"/>
-    </weapon>
-    <!--
-		30248 - Blessed Amaranthine Stormer
-		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
-	-->
-    <weapon id="30248" name="Blessed Amaranthine Stormer" add_name="Guidance + Damage Up">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_crabel_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="2010"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13263" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3573" level="6"/>
-            <!--Special Ability: Guidance-->
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="658"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="6"/>
-    </weapon>
-    <!--
-		30251 - Blessed Amaranthine Thrower
-		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Increases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
-	-->
-    <weapon id="30251" name="Blessed Amaranthine Thrower" add_name="Focus + Long Blow">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_castron_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13292" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13061" level="1"/>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1295"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
         <set name="rarity" value="4"/>
         <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30250 - Blessed Amaranthine Thrower
-		<Soul Crystal Enhancement>\\nP. Atk. + 415. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
-	-->
-    <weapon id="30250" name="Blessed Amaranthine Thrower" add_name="Damage Up + Focus">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_castron_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13292" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1295"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30253 - Blessed Amaranthine Shooter
-		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
-	-->
-    <weapon id="30253" name="Blessed Amaranthine Shooter" add_name="Focus + Critical Slow">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_stilla_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1580"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13294" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3655" level="1"/>
-            <!--PvP Weapon - Rapid Fire-->
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1166"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30252 - Blessed Amaranthine Thrower
-		<Soul Crystal Enhancement>\\nIncreases the attack range and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
-	-->
-    <weapon id="30252" name="Blessed Amaranthine Thrower" add_name="Long Blow + Damage Up">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_castron_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13292" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="13061" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1295"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30255 - Blessed Amaranthine Shooter
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
-	-->
-    <weapon id="30255" name="Blessed Amaranthine Shooter" add_name="Haste + Focus">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_stilla_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1580"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13294" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1166"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30254 - Blessed Amaranthine Shooter
-		<Soul Crystal Enhancement>\\nHas a chance of casting Slow on the target during a Critical Attack. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
-	-->
-    <weapon id="30254" name="Blessed Amaranthine Shooter" add_name="Critical Slow + Haste">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_stilla_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="1580"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13294" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3655" level="1"/>
-            <!--PvP Weapon - Rapid Fire-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="1166"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30241 - Blessed Amaranthine Avenger
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15% and P. Atk. by 1232 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
-	-->
-    <weapon id="30241" name="Blessed Amaranthine Avenger" add_name="Haste + Critical Damage">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_qutram_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1740"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13256" level="3"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3572" level="8"/>
-            <!--Special Ability: Crtical Damage-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="658"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="51"/>
     </weapon>
     <!--
 		30240 - Blessed Amaranthine Slasher
@@ -1562,10 +1519,10 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30243 - Blessed Amaranthine Avenger
-		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
+		30241 - Blessed Amaranthine Avenger
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15% and P. Atk. by 1232 during a Critical Attack. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
 	-->
-    <weapon id="30243" name="Blessed Amaranthine Avenger" add_name="Focus + Haste">
+    <weapon id="30241" name="Blessed Amaranthine Avenger" add_name="Haste + Critical Damage">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
         <set name="icon" value="icon.weapon_qutram_i01"/>
@@ -1582,8 +1539,8 @@
             <slot id="RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
+            <skill id="3572" level="8"/>
+            <!--Special Ability: Crtical Damage-->
             <skill id="3564" level="8"/>
             <!--Special Ability: Haste-->
         </skills>
@@ -1638,6 +1595,81 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
+		30243 - Blessed Amaranthine Avenger
+		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
+	-->
+    <weapon id="30243" name="Blessed Amaranthine Avenger" add_name="Focus + Haste">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_qutram_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1740"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13256" level="3"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		30244 - Blessed Amaranthine Fighter
+		<Soul Crystal Enhancement>\\nIncreases Critical by 81.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30244" name="Blessed Amaranthine Fighter" add_name="Focus + Damage">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_durga_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="1550"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13267" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3567" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
 		30245 - Blessed Amaranthine Fighter
 		<Soul Crystal Enhancement>\\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
 	-->
@@ -1675,10 +1707,10 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30244 - Blessed Amaranthine Fighter
-		<Soul Crystal Enhancement>\\nIncreases Critical by 81.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+		30246 - Blessed Amaranthine Fighter
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30244" name="Blessed Amaranthine Fighter" add_name="Focus + Damage">
+    <weapon id="30246" name="Blessed Amaranthine Fighter" add_name="Haste + Focus">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
         <set name="icon" value="icon.weapon_durga_i01"/>
@@ -1695,9 +1727,10 @@
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3567" level="7"/>
+            <skill id="3565" level="7"/>
             <!--Special Ability: Focus-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
         </skills>
         <for>
             <add stat="pAtk" order="0x10" value="800"/>
@@ -1751,209 +1784,98 @@
         <set name="material" value="6"/>
     </weapon>
     <!--
-		30246 - Blessed Amaranthine Fighter
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+		30248 - Blessed Amaranthine Stormer
+		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
 	-->
-    <weapon id="30246" name="Blessed Amaranthine Fighter" add_name="Haste + Focus">
+    <weapon id="30248" name="Blessed Amaranthine Stormer" add_name="Guidance + Damage Up">
         <set name="variation_group_id" value="30"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_durga_i01"/>
+        <set name="icon" value="icon.weapon_crabel_i01"/>
         <set name="price" value="808295000"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1550"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="2010"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13263" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3573" level="6"/>
+            <!--Special Ability: Guidance-->
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="6"/>
+    </weapon>
+    <!--
+		30249 - Blessed Amaranthine Stormer
+		<Soul Crystal Enhancement>\\nP. Atk. + 415. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
+	-->
+    <weapon id="30249" name="Blessed Amaranthine Stormer" add_name="Damage Up + HP Drain">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_crabel_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="2010"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13263" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3568" level="1"/>
+            <!--Special Ability: HP Drain-->
+            <skill id="13062" level="4"/>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="6"/>
+    </weapon>
+    <!--
+		30250 - Blessed Amaranthine Thrower
+		<Soul Crystal Enhancement>\\nP. Atk. + 415. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
+	-->
+    <weapon id="30250" name="Blessed Amaranthine Thrower" add_name="Damage Up + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
         <set name="rnd_dam" value="5"/>
         <set name="item_quality" value="BLESSED"/>
         <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13267" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3565" level="7"/>
-            <!--Special Ability: Focus-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="800"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30264 - Blessed Amaranthine Retributer
-		<Soul Crystal Enhancement>\\nM. Atk. + 322 and MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4.
-	-->
-    <weapon id="30264" name="Blessed Amaranthine Retributer" add_name="Empower + MP Regeneration">
-        <set name="variation_group_id" value="30"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_shaelon_i01"/>
-        <set name="price" value="808295000"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="1080"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="crystal_count" value="8621"/>
-        <enchant4_skill id="13304" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3575" level="2"/>
-            <!--Special Ability: Empower-->
-            <skill id="3576" level="4"/>
-            <!--Special Ability: MP Regeneration-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="640"/>
-            <add stat="mAtk" order="0x10" value="420"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-            <add stat="mAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="13"/>
-    </weapon>
-    <!--
-		30265 - Blessed Amaranthine Dualsword
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15% and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30265" name="Blessed Amaranthine Dualsword" add_name="Haste + Damage Up">
-        <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
-        <set name="price" value="969954000"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="10346"/>
-        <enchant4_skill id="13277" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="800"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30266 - Blessed Amaranthine Dualsword
-		<Soul Crystal Enhancement>\\nP. Atk. + 457 and Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30266" name="Blessed Amaranthine Dualsword" add_name="Damage Up + Health">
-        <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
-        <set name="price" value="969954000"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="10346"/>
-        <enchant4_skill id="13277" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3013" level="5"/>
-            <!--Special Ability: Health-->
-            <skill id="13062" level="4"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="800"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30267 - Blessed Amaranthine Dualsword
-		<Soul Crystal Enhancement>\\nIncreases Max HP by 25% and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30267" name="Blessed Amaranthine Dualsword" add_name="Health + Haste">
-        <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
-        <set name="price" value="969954000"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="1520"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="10346"/>
-        <enchant4_skill id="13277" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3013" level="5"/>
-            <!--Special Ability: Health-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="800"/>
-            <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="10"/>
-        <set name="rarity" value="4"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		30268 - Blessed Amaranthine Dual Dagger
-		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
-	-->
-    <weapon id="30268" name="Blessed Amaranthine Dual Dagger" add_name="Damage Up + Focus">
-        <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
-        <set name="price" value="969954000"/>
-        <set name="type" value="DUALDAGGER"/>
-        <set name="weight" value="2050"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="10346"/>
-        <enchant4_skill id="13287" level="3"/>
+        <enchant4_skill id="13292" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -1963,9 +1885,9 @@
             <!--Special Ability: Focus-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="pAtk" order="0x10" value="1295"/>
             <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
             <set stat="basePCritRate" order="0x08" value="120"/>
             <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
@@ -1975,35 +1897,34 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30269 - Blessed Amaranthine Dual Dagger
-		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
+		30251 - Blessed Amaranthine Thrower
+		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Increases the attack range. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
 	-->
-    <weapon id="30269" name="Blessed Amaranthine Dual Dagger" add_name="Focus + Guidance">
+    <weapon id="30251" name="Blessed Amaranthine Thrower" add_name="Focus + Long Blow">
         <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
-        <set name="price" value="969954000"/>
-        <set name="type" value="DUALDAGGER"/>
-        <set name="weight" value="2050"/>
+        <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="10346"/>
-        <enchant4_skill id="13287" level="3"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13292" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="3566" level="9"/>
+            <skill id="13061" level="1"/>
+            <skill id="3566" level="7"/>
             <!--Special Ability: Focus-->
-            <skill id="3573" level="7"/>
-            <!--Special Ability: Guidance-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="pAtk" order="0x10" value="1295"/>
             <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
             <set stat="basePCritRate" order="0x08" value="120"/>
             <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
@@ -2013,34 +1934,33 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30270 - Blessed Amaranthine Dual Dagger
-		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
+		30252 - Blessed Amaranthine Thrower
+		<Soul Crystal Enhancement>\\nIncreases the attack range and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Skill Power when enchanted to + 4.
 	-->
-    <weapon id="30270" name="Blessed Amaranthine Dual Dagger" add_name="Guidance + Damage Up ">
+    <weapon id="30252" name="Blessed Amaranthine Thrower" add_name="Long Blow + Damage Up">
         <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
-        <set name="price" value="969954000"/>
-        <set name="type" value="DUALDAGGER"/>
-        <set name="weight" value="2050"/>
+        <set name="icon" value="icon.weapon_castron_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="1520"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="10346"/>
-        <enchant4_skill id="13287" level="3"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13292" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
             <skill id="13062" level="4"/>
-            <skill id="3573" level="7"/>
-            <!--Special Ability: Guidance-->
+            <skill id="13061" level="1"/>
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="pAtk" order="0x10" value="1295"/>
             <add stat="mAtk" order="0x10" value="286"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
             <set stat="basePCritRate" order="0x08" value="120"/>
             <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
@@ -2050,42 +1970,118 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		30271 - Blessed Amaranthine Dual Blunt Weapon
-		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
+		30253 - Blessed Amaranthine Shooter
+		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
 	-->
-    <weapon id="30271" name="Blessed Amaranthine Dual Blunt Weapon" add_name="Focus + Guidance">
+    <weapon id="30253" name="Blessed Amaranthine Shooter" add_name="Focus + Critical Slow">
         <set name="variation_group_id" value="30"/>
-        <set name="item_quality" value="BLESSED"/>
         <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
-        <set name="price" value="969954000"/>
-        <set name="type" value="DUALBLUNT"/>
-        <set name="weight" value="1740"/>
+        <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1580"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="crystal_count" value="10346"/>
-        <enchant4_skill id="13272" level="3"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13294" level="3"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="3566" level="9"/>
+            <skill id="3655" level="1"/>
+            <!--PvP Weapon - Rapid Fire-->
+            <skill id="3566" level="7"/>
             <!--Special Ability: Focus-->
-            <skill id="3573" level="7"/>
-            <!--Special Ability: Guidance-->
         </skills>
         <for>
-            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="pAtk" order="0x10" value="1166"/>
             <add stat="mAtk" order="0x10" value="286"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="10"/>
         <set name="rarity" value="4"/>
-        <set name="material" value="51"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30254 - Blessed Amaranthine Shooter
+		<Soul Crystal Enhancement>\\nHas a chance of casting Slow on the target during a Critical Attack. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
+	-->
+    <weapon id="30254" name="Blessed Amaranthine Shooter" add_name="Critical Slow + Haste">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1580"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13294" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3655" level="1"/>
+            <!--PvP Weapon - Rapid Fire-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1166"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30255 - Blessed Amaranthine Shooter
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to + 4.
+	-->
+    <weapon id="30255" name="Blessed Amaranthine Shooter" add_name="Haste + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_stilla_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="1580"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13294" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="1166"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
     </weapon>
     <!--
 		30256 - Blessed Amaranthine Buster
@@ -2403,301 +2399,271 @@
         <set name="material" value="13"/>
     </weapon>
     <!--
-		30287 - Immortal Robe Armor Pack
-		Can acquire immortal robe armor.
+		30264 - Blessed Amaranthine Retributer
+		<Soul Crystal Enhancement>\\nM. Atk. + 322 and MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to + 4.
 	-->
-    <etcitem id="30287" name="Immortal Robe Armor Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="0"/>
-    </etcitem>
-    <!--
-		30286 - Immortal Light Armor Pack
-		Can acquire immortal light armor.
-	-->
-    <etcitem id="30286" name="Immortal Light Armor Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="0"/>
-    </etcitem>
-    <!--
-		30285 - Immortal Heavy Armor Pack
-		Can acquire immortal heavy armor.
-	-->
-    <etcitem id="30285" name="Immortal Heavy Armor Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="0"/>
-    </etcitem>
-    <!--
-		30284 - Requiem Weapon Pack
-		Can acquire requiem weapons.
-	-->
-    <etcitem id="30284" name="Requiem Weapon Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="0"/>
-    </etcitem>
-    <!--
-		30283 - Orichalcum Bolt Container
-		Can acquire 10,000 Orichalcum Bolts.
-	-->
-    <etcitem id="30283" name="Orichalcum Bolt Container">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30282 - Orichalcum Quiver
-		Can acquire 10,000 Orichalcum Arrows.
-	-->
-    <etcitem id="30282" name="Orichalcum Quiver">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30281 - Blessed Spiritshot Large Pack (R-grade)
-		Can acquire 10,000 blessed spiritshots (R-grade).
-	-->
-    <etcitem id="30281" name="Blessed Spiritshot Large Pack (R-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.br_cash_pack_of_blessed_spiritshot_r_i00"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="weight" value="500"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <capsuled_items>
-            <capsuled_item id="19442" min_count="10000" max_count="10000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30280 - Blessed Spiritshot Pack (R-grade)
-		Can acquire 5,000 blessed spiritshots (R-grade).
-	-->
-    <etcitem id="30280" name="Blessed Spiritshot Pack (R-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.br_cash_pack_of_blessed_spiritshot_r_i00"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="weight" value="500"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <capsuled_items>
-            <capsuled_item id="19442" min_count="5000" max_count="5000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30279 - Spiritshot Large Pack (R-grade)
-		Can acquire 10,000 spiritshots (R-grade).
-	-->
-    <etcitem id="30279" name="Spiritshot Large Pack (R-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="weight" value="500"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <capsuled_items>
-            <capsuled_item id="19441" min_count="10000" max_count="10000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30278 - Spiritshot Pack (R-grade)
-		Can acquire 5,000 spiritshots (R-grade).
-	-->
-    <etcitem id="30278" name="Spiritshot Pack (R-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="weight" value="500"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <capsuled_items>
-            <capsuled_item id="19441" min_count="5000" max_count="5000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30277 - Soulshot Large Pack (R-grade)
-		Can acquire 10,000 soulshots (R-grade).
-	-->
-    <etcitem id="30277" name="Soulshot Large Pack (R-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="weight" value="500"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <capsuled_items>
-            <capsuled_item id="17754" min_count="10000" max_count="10000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30276 - Soulshot Pack (R-grade)
-		Can acquire 5,000 soulshots (R-grade).
-	-->
-    <etcitem id="30276" name="Soulshot Pack (R-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
-        <set name="weight" value="500"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <capsuled_items>
-            <capsuled_item id="17754" min_count="5000" max_count="5000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30275 - Scroll: 1,000,000 SP
-		Scroll that replenishes 1,000,000 SP.
-	-->
-    <etcitem id="30275" name="Scroll: 1,000,000 SP">
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="icon" value="icon.etc_sp_scroll3_i00"/>
-        <set name="weight" value="30"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="tradeable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="reuse_delay" value="3000"/>
+    <weapon id="30264" name="Blessed Amaranthine Retributer" add_name="Empower + MP Regeneration">
+        <set name="variation_group_id" value="30"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_shaelon_i01"/>
+        <set name="price" value="808295000"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="1080"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="crystal_count" value="8621"/>
+        <enchant4_skill id="13304" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
         <skills>
-            <skill id="9197" level="1"/>
-            <!--Свиток 1 млн SP-->
+            <skill id="3575" level="2"/>
+            <!--Special Ability: Empower-->
+            <skill id="3576" level="4"/>
+            <!--Special Ability: MP Regeneration-->
         </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <cond>
-            <player avail_max_sp="10000000"/>
-        </cond>
+        <for>
+            <add stat="pAtk" order="0x10" value="640"/>
+            <add stat="mAtk" order="0x10" value="420"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+            <add stat="mAccCombat" order="0x10" value="8"/>
+        </for>
         <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="13"/>
+    </weapon>
     <!--
-		30274 - Luxury Cocktail
-		Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody Lv. 1, Pipe Organ Melody Lv. 1, Guitar Melody Lv. 1, Harp Melody Lv. 1, and Lute Melody Lv. 1 for 30 min.
+		30265 - Blessed Amaranthine Dualsword
+		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15% and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
 	-->
-    <etcitem id="30274" name="Luxury Cocktail">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.etc_fruit_cocktail_i00"/>
-        <set name="weight" value="5"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
+    <weapon id="30265" name="Blessed Amaranthine Dualsword" add_name="Haste + Damage Up">
+        <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
+        <set name="price" value="969954000"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="10346"/>
+        <enchant4_skill id="13277" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
         <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
     <!--
-		30273 - Blessed Amaranthine Dual Blunt Weapon
-		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
+		30266 - Blessed Amaranthine Dualsword
+		<Soul Crystal Enhancement>\\nP. Atk. + 457 and Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
 	-->
-    <weapon id="30273" name="Blessed Amaranthine Dual Blunt Weapon" add_name="Damage Up + Focus ">
+    <weapon id="30266" name="Blessed Amaranthine Dualsword" add_name="Damage Up + Health">
+        <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
+        <set name="price" value="969954000"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="10346"/>
+        <enchant4_skill id="13277" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3013" level="5"/>
+            <!--Special Ability: Health-->
+            <skill id="13062" level="4"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30267 - Blessed Amaranthine Dualsword
+		<Soul Crystal Enhancement>\\nIncreases Max HP by 25% and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30267" name="Blessed Amaranthine Dualsword" add_name="Health + Haste">
+        <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualsword_i21"/>
+        <set name="price" value="969954000"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="1520"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="10346"/>
+        <enchant4_skill id="13277" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3013" level="5"/>
+            <!--Special Ability: Health-->
+            <skill id="3564" level="8"/>
+            <!--Special Ability: Haste-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30268 - Blessed Amaranthine Dual Dagger
+		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30268" name="Blessed Amaranthine Dual Dagger" add_name="Damage Up + Focus">
+        <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
+        <set name="price" value="969954000"/>
+        <set name="type" value="DUALDAGGER"/>
+        <set name="weight" value="2050"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="10346"/>
+        <enchant4_skill id="13287" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30269 - Blessed Amaranthine Dual Dagger
+		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30269" name="Blessed Amaranthine Dual Dagger" add_name="Focus + Guidance">
+        <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
+        <set name="price" value="969954000"/>
+        <set name="type" value="DUALDAGGER"/>
+        <set name="weight" value="2050"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="10346"/>
+        <enchant4_skill id="13287" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3566" level="9"/>
+            <!--Special Ability: Focus-->
+            <skill id="3573" level="7"/>
+            <!--Special Ability: Guidance-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30270 - Blessed Amaranthine Dual Dagger
+		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30270" name="Blessed Amaranthine Dual Dagger" add_name="Guidance + Damage Up ">
+        <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualdagger_i21"/>
+        <set name="price" value="969954000"/>
+        <set name="type" value="DUALDAGGER"/>
+        <set name="weight" value="2050"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="crystal_count" value="10346"/>
+        <enchant4_skill id="13287" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3573" level="7"/>
+            <!--Special Ability: Guidance-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="658"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		30271 - Blessed Amaranthine Dual Blunt Weapon
+		<Soul Crystal Enhancement>\\nIncreases Critical by 79.2 and Accuracy by 7.9. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
+	-->
+    <weapon id="30271" name="Blessed Amaranthine Dual Blunt Weapon" add_name="Focus + Guidance">
         <set name="variation_group_id" value="30"/>
         <set name="item_quality" value="BLESSED"/>
         <set name="crystal_type" value="R99"/>
@@ -2714,9 +2680,10 @@
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3566" level="7"/>
+            <skill id="3566" level="9"/>
             <!--Special Ability: Focus-->
+            <skill id="3573" level="7"/>
+            <!--Special Ability: Guidance-->
         </skills>
         <for>
             <add stat="pAtk" order="0x10" value="800"/>
@@ -2768,13 +2735,240 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		30298 - Superior Giant's CoDEX - Mastery
-		Superior Giant's Codex. Rare item needed for blessed skill enchantment after Awakening.
+		30273 - Blessed Amaranthine Dual Blunt Weapon
+		<Soul Crystal Enhancement>\\nP. Atk. + 377. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Skill Power and P. Atk. when enchanted to + 4.
 	-->
-    <etcitem id="30298" name="Superior Giant's CoDEX - Mastery">
+    <weapon id="30273" name="Blessed Amaranthine Dual Blunt Weapon" add_name="Damage Up + Focus ">
+        <set name="variation_group_id" value="30"/>
+        <set name="item_quality" value="BLESSED"/>
+        <set name="crystal_type" value="R99"/>
+        <set name="icon" value="icon.weapon_r_dualblunt_i21"/>
+        <set name="price" value="969954000"/>
+        <set name="type" value="DUALBLUNT"/>
+        <set name="weight" value="1740"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="crystal_count" value="10346"/>
+        <enchant4_skill id="13272" level="3"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="13062" level="4"/>
+            <skill id="3566" level="7"/>
+            <!--Special Ability: Focus-->
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="800"/>
+            <add stat="mAtk" order="0x10" value="286"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="10"/>
+        <set name="rarity" value="4"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		30274 - Luxury Cocktail
+		Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody Lv. 1, Pipe Organ Melody Lv. 1, Guitar Melody Lv. 1, Harp Melody Lv. 1, and Lute Melody Lv. 1 for 30 min.
+	-->
+    <etcitem id="30274" name="Luxury Cocktail">
+        <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
-        <set name="icon" value="icon.codex_of_incuse_dexterity"/>
-        <set name="weight" value="10"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.etc_fruit_cocktail_i00"/>
+        <set name="weight" value="5"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		30275 - Scroll: 1,000,000 SP
+		Scroll that replenishes 1,000,000 SP.
+	-->
+    <etcitem id="30275" name="Scroll: 1,000,000 SP">
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="icon" value="icon.etc_sp_scroll3_i00"/>
+        <set name="weight" value="30"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="tradeable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="reuse_delay" value="3000"/>
+        <skills>
+            <skill id="9197" level="1"/>
+            <!--Свиток 1 млн SP-->
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <cond>
+            <player avail_max_sp="10000000"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30276 - Soulshot Pack (R-grade)
+		Can acquire 5,000 soulshots (R-grade).
+	-->
+    <etcitem id="30276" name="Soulshot Pack (R-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
+        <set name="weight" value="500"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <capsuled_items>
+            <capsuled_item id="17754" min_count="5000" max_count="5000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30277 - Soulshot Large Pack (R-grade)
+		Can acquire 10,000 soulshots (R-grade).
+	-->
+    <etcitem id="30277" name="Soulshot Large Pack (R-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="weight" value="500"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <capsuled_items>
+            <capsuled_item id="17754" min_count="10000" max_count="10000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30278 - Spiritshot Pack (R-grade)
+		Can acquire 5,000 spiritshots (R-grade).
+	-->
+    <etcitem id="30278" name="Spiritshot Pack (R-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="weight" value="500"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <capsuled_items>
+            <capsuled_item id="19441" min_count="5000" max_count="5000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30279 - Spiritshot Large Pack (R-grade)
+		Can acquire 10,000 spiritshots (R-grade).
+	-->
+    <etcitem id="30279" name="Spiritshot Large Pack (R-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="weight" value="500"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <capsuled_items>
+            <capsuled_item id="19441" min_count="10000" max_count="10000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30280 - Blessed Spiritshot Pack (R-grade)
+		Can acquire 5,000 blessed spiritshots (R-grade).
+	-->
+    <etcitem id="30280" name="Blessed Spiritshot Pack (R-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.br_cash_pack_of_blessed_spiritshot_r_i00"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="weight" value="500"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <capsuled_items>
+            <capsuled_item id="19442" min_count="5000" max_count="5000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30281 - Blessed Spiritshot Large Pack (R-grade)
+		Can acquire 10,000 blessed spiritshots (R-grade).
+	-->
+    <etcitem id="30281" name="Blessed Spiritshot Large Pack (R-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.br_cash_pack_of_blessed_spiritshot_r_i00"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="weight" value="500"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <capsuled_items>
+            <capsuled_item id="19442" min_count="10000" max_count="10000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30282 - Orichalcum Quiver
+		Can acquire 10,000 Orichalcum Arrows.
+	-->
+    <etcitem id="30282" name="Orichalcum Quiver">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00"/>
         <set name="stackable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
@@ -2783,13 +2977,16 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		30299 - Superior Giant's CoDEX - Discipline
-		Superior Giant's Codex. Rare item needed to change an enchantment path after Awakening.
+		30283 - Orichalcum Bolt Container
+		Can acquire 10,000 Orichalcum Bolts.
 	-->
-    <etcitem id="30299" name="Superior Giant's CoDEX - Discipline">
+    <etcitem id="30283" name="Orichalcum Bolt Container">
+        <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
-        <set name="icon" value="icon.codex_of_incuse_training"/>
-        <set name="weight" value="10"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00"/>
         <set name="stackable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
@@ -2798,80 +2995,10 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		30296 - Ranger's Report
-		The report of a ranger of the Dusk that was found in the Catacomb and the Necropolis.
+		30284 - Requiem Weapon Pack
+		Can acquire requiem weapons.
 	-->
-    <etcitem id="30296" name="Ranger's Report">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="destroyable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.etc_letter_white_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="23"/>
-    </etcitem>
-    <!--
-		30297 - Superior Giant's Codex
-		Superior Giant's Codex. Rare item needed for skill enchantment after Awakening.
-	-->
-    <etcitem id="30297" name="Superior Giant's Codex">
-        <set name="sellable" value="false"/>
-        <set name="icon" value="icon.codex_of_incuse"/>
-        <set name="weight" value="10"/>
-        <set name="stackable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		30294 - Blood of the Guardian of the Altar
-		It is the blood of Embryo's high level disciples Isadora and Maliss who protect Shilen's Altar inside the Seal of Shilen. Bring it to Lord of the Dusk Baro Negrado.
-	-->
-    <etcitem id="30294" name="Blood of the Guardian of the Altar">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="destroyable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.etc_dragons_blood_i00"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="23"/>
-    </etcitem>
-    <!--
-		30295 - Embryo's Imprinting
-		Embryo's seal that has been imprinted in blood. Bring it to a worker of the Dusk in the Town of Aden and ask about it.
-	-->
-    <etcitem id="30295" name="Embryo's Imprinting">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="destroyable" value="false"/>
-        <set name="dropable" value="false"/>
-        <set name="tradeable" value="false"/>
-        <set name="icon" value="icon.yogi_stick_i00"/>
-        <set name="crystal_type" value="NONE"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="23"/>
-    </etcitem>
-    <!--
-		30292 - Immortal Accessory Pack
-		Can acquire immortal accessories.
-	-->
-    <etcitem id="30292" name="Immortal Accessory Pack">
+    <etcitem id="30284" name="Requiem Weapon Pack">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2885,10 +3012,10 @@
         <set name="material" value="0"/>
     </etcitem>
     <!--
-		30293 - Twilight Accessory Pack
-		Can acquire Twilight accessories.
+		30285 - Immortal Heavy Armor Pack
+		Can acquire immortal heavy armor.
 	-->
-    <etcitem id="30293" name="Twilight Accessory Pack">
+    <etcitem id="30285" name="Immortal Heavy Armor Pack">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2902,10 +3029,10 @@
         <set name="material" value="0"/>
     </etcitem>
     <!--
-		30290 - Twilight Light Armor Pack
-		Can acquire Twilight light armor.
+		30286 - Immortal Light Armor Pack
+		Can acquire immortal light armor.
 	-->
-    <etcitem id="30290" name="Twilight Light Armor Pack">
+    <etcitem id="30286" name="Immortal Light Armor Pack">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2919,10 +3046,10 @@
         <set name="material" value="0"/>
     </etcitem>
     <!--
-		30291 - Twilight Robe Armor Pack
-		Can acquire Twilight robe armor.
+		30287 - Immortal Robe Armor Pack
+		Can acquire immortal robe armor.
 	-->
-    <etcitem id="30291" name="Twilight Robe Armor Pack">
+    <etcitem id="30287" name="Immortal Robe Armor Pack">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2970,298 +3097,171 @@
         <set name="material" value="0"/>
     </etcitem>
     <!--
-		30203 - Amaranthine Fighter
-		<Soul Crystal Enhancement>\\nP. Atk. + 415 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+		30290 - Twilight Light Armor Pack
+		Can acquire Twilight light armor.
 	-->
-    <weapon id="30203" name="Amaranthine Fighter" add_name="Damage Up + Haste">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_durga_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1550"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13267" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
+    <etcitem id="30290" name="Twilight Light Armor Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
+        <set name="material" value="0"/>
+    </etcitem>
     <!--
-		30202 - Amaranthine Fighter
-		<Soul Crystal Enhancement>\\nIncreases Critical by 81.9 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+		30291 - Twilight Robe Armor Pack
+		Can acquire Twilight robe armor.
 	-->
-    <weapon id="30202" name="Amaranthine Fighter" add_name="Focus + Damage">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_durga_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1550"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13267" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3567" level="7"/>
-            <!--Special Ability: Focus-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
+    <etcitem id="30291" name="Twilight Robe Armor Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
+        <set name="material" value="0"/>
+    </etcitem>
     <!--
-		30201 - Amaranthine Avenger
-		<Soul Crystal Enhancement>\\nIncreases Critical by 78.7 and Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
+		30292 - Immortal Accessory Pack
+		Can acquire immortal accessories.
 	-->
-    <weapon id="30201" name="Amaranthine Avenger" add_name="Focus + Haste">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_qutram_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1740"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13256" level="3"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
+    <etcitem id="30292" name="Immortal Accessory Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
+        <set name="material" value="0"/>
+    </etcitem>
     <!--
-		30200 - Amaranthine Avenger
-		<Soul Crystal Enhancement>\\nP. Atk. + 1232 during a Critical Attack. Increases Critical by 78.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to + 4.
+		30293 - Twilight Accessory Pack
+		Can acquire Twilight accessories.
 	-->
-    <weapon id="30200" name="Amaranthine Avenger" add_name="Critical Damage + Focus">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_qutram_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1740"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13256" level="3"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3572" level="8"/>
-            <!--Special Ability: Crtical Damage-->
-            <skill id="3566" level="7"/>
-            <!--Special Ability: Focus-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
+    <etcitem id="30293" name="Twilight Accessory Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.event_hero_treasure_box_i00"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
+        <set name="material" value="0"/>
+    </etcitem>
     <!--
-		30207 - Amaranthine Stormer
-		<Soul Crystal Enhancement>\\nP. Atk. + 415. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
+		30294 - Blood of the Guardian of the Altar
+		It is the blood of Embryo's high level disciples Isadora and Maliss who protect Shilen's Altar inside the Seal of Shilen. Bring it to Lord of the Dusk Baro Negrado.
 	-->
-    <weapon id="30207" name="Amaranthine Stormer" add_name="Damage Up + HP Drain">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_crabel_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="2010"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13263" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3568" level="1"/>
-            <!--Special Ability: HP Drain-->
-            <skill id="13062" level="4"/>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
+    <etcitem id="30294" name="Blood of the Guardian of the Altar">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="destroyable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.etc_dragons_blood_i00"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="6"/>
-    </weapon>
+        <set name="material" value="23"/>
+    </etcitem>
     <!--
-		30206 - Amaranthine Stormer
-		<Soul Crystal Enhancement>\\nIncreases Accuracy by 7.8 and P. Atk. by 415. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
+		30295 - Embryo's Imprinting
+		Embryo's seal that has been imprinted in blood. Bring it to a worker of the Dusk in the Town of Aden and ask about it.
 	-->
-    <weapon id="30206" name="Amaranthine Stormer" add_name="Guidance + Damage Up">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_crabel_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="2010"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13263" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="13062" level="4"/>
-            <skill id="3573" level="6"/>
-            <!--Special Ability: Guidance-->
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
+    <etcitem id="30295" name="Embryo's Imprinting">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="destroyable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.yogi_stick_i00"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="6"/>
-    </weapon>
+        <set name="material" value="23"/>
+    </etcitem>
     <!--
-		30205 - Amaranthine Stormer
-		<Soul Crystal Enhancement>\\nAbsorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases Accuracy by 7.9. Increases damage inflicted during PvP. Increases Multi Attack when enchanted to + 4.
+		30296 - Ranger's Report
+		The report of a ranger of the Dusk that was found in the Catacomb and the Necropolis.
 	-->
-    <weapon id="30205" name="Amaranthine Stormer" add_name="HP Drain + Guidance">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_crabel_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="2010"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13263" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3568" level="1"/>
-            <!--Special Ability: HP Drain-->
-            <skill id="3573" level="7"/>
-            <!--Special Ability: Guidance-->
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="638"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
+    <etcitem id="30296" name="Ranger's Report">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="destroyable" value="false"/>
+        <set name="dropable" value="false"/>
+        <set name="tradeable" value="false"/>
+        <set name="icon" value="icon.etc_letter_white_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="6"/>
-    </weapon>
+        <set name="material" value="23"/>
+    </etcitem>
     <!--
-		30204 - Amaranthine Fighter
-		<Soul Crystal Enhancement>\\nIncreases Atk. Spd. by about 15%. Increases Critical by 75.5. Increases damage inflicted during PvP. Increases Atk. Spd. and P. Atk. when enchanted to + 4.
+		30297 - Superior Giant's Codex
+		Superior Giant's Codex. Rare item needed for skill enchantment after Awakening.
 	-->
-    <weapon id="30204" name="Amaranthine Fighter" add_name="Haste + Focus">
-        <set name="variation_group_id" value="30"/>
-        <set name="crystal_type" value="R99"/>
-        <set name="icon" value="icon.weapon_durga_i01"/>
-        <set name="price" value="646636000"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="1550"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="crystal_count" value="6897"/>
-        <enchant4_skill id="13267" level="3"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3565" level="7"/>
-            <!--Special Ability: Focus-->
-            <skill id="3564" level="8"/>
-            <!--Special Ability: Haste-->
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="777"/>
-            <add stat="mAtk" order="0x10" value="278"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
+    <etcitem id="30297" name="Superior Giant's Codex">
+        <set name="sellable" value="false"/>
+        <set name="icon" value="icon.codex_of_incuse"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
         <!--added by blood-->
-        <set name="grade" value="10"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30298 - Superior Giant's CoDEX - Mastery
+		Superior Giant's Codex. Rare item needed for blessed skill enchantment after Awakening.
+	-->
+    <etcitem id="30298" name="Superior Giant's CoDEX - Mastery">
+        <set name="sellable" value="false"/>
+        <set name="icon" value="icon.codex_of_incuse_dexterity"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		30299 - Superior Giant's CoDEX - Discipline
+		Superior Giant's Codex. Rare item needed to change an enchantment path after Awakening.
+	-->
+    <etcitem id="30299" name="Superior Giant's CoDEX - Discipline">
+        <set name="sellable" value="false"/>
+        <set name="icon" value="icon.codex_of_incuse_training"/>
+        <set name="weight" value="10"/>
+        <set name="stackable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
 </list>

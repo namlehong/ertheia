@@ -2,166 +2,86 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
     <!--
-		2511 - Spiritshot (C-grade)
-		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon.
+		2500 - Dark Legion's Edge
+		Bestows one of the following functions: P. Critical Damage, Health, or Rsk. Focus.
 	-->
-    <etcitem id="2511" name="Spiritshot (C-grade)">
-        <set name="type" value="SPIRITSHOT"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.etc_spell_shot_green_i00"/>
-        <set name="price" value="35"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="2"/>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		2510 - Spiritshot (D-grade)
-		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon.
-	-->
-    <etcitem id="2510" name="Spiritshot (D-grade)">
-        <set name="type" value="SPIRITSHOT"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.etc_spell_shot_blue_i00"/>
-        <set name="price" value="18"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="4"/>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		2509 - Spiritshot (No-grade)
-		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a No-grade weapon.
-	-->
-    <etcitem id="2509" name="Spiritshot (No-grade)">
-        <set name="type" value="SPIRITSHOT"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.etc_spell_shot_white_i00"/>
-        <set name="price" value="15"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="4"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <etcitem id="2508" name="Cursed Bone">
-        <set name="type" value="MATERIAL"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.etc_piece_bone_red_i00"/>
-        <set name="price" value="240"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="3"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <weapon id="2507" name="Lizardspear">
-        <set name="crystal_count" value="743"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_doomed_dagger_i00"/>
-        <set name="price" value="409000"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="300"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="5"/>
-            <add stat="mAtk" order="0x10" value="5"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		2506 - Wolf's Leather Armor
-		Double-click to wear. Only for wolves, great wolves, and fenrir.
-	-->
-    <armor id="2506" name="Wolf's Leather Armor">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.etc_pet_armor_i00"/>
-        <set name="price" value="3060"/>
-        <set name="type" value="PET"/>
-        <set name="weight" value="160"/>
-        <equip>
-            <slot id="WOLF"/>
-        </equip>
-        <for>
-            <add stat="pDef" order="0x10" value="9"/>
-            <add stat="mDef" order="0x10" value="14"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="19"/>
-    </armor>
-    <!--
-		2505 - Iron Canine
-		Double-click to wear. Only for wolves, great wolves, and fenrir.
-	-->
-    <weapon id="2505" name="Iron Canine">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.etc_pet_arms_i00"/>
-        <set name="price" value="7000"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="0"/>
-        <set name="spiritshots" value="0"/>
-        <set name="type" value="PET"/>
-        <set name="weight" value="100"/>
-        <equip>
-            <slot id="WOLF"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="4"/>
-            <add stat="mAtk" order="0x10" value="5"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="277"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		2504 - Meteor Shower
-		Bestows one of the following functions: Focus, Critical Bleed, or Rsk. Haste.
-	-->
-    <weapon id="2504" name="Meteor Shower">
-        <set name="variation_group_id" value="7"/>
-        <set name="crystal_count" value="1128"/>
+    <weapon id="2500" name="Dark Legion's Edge">
+        <set name="variation_group_id" value="8"/>
+        <set name="crystal_count" value="1659"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_meteor_shower_i00"/>
-        <set name="price" value="14098000"/>
-        <set name="rnd_dam" value="20"/>
+        <set name="icon" value="icon.weapon_dark_legions_edge_i00"/>
+        <set name="kamael_convert" value="9340"/>
+        <set name="price" value="20741000"/>
+        <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1600"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="1320"/>
         <equip>
             <slot id="RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="213"/>
-            <add stat="mAtk" order="0x10" value="107"/>
+            <add stat="pAtk" order="0x10" value="232"/>
+            <add stat="mAtk" order="0x10" value="114"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2501" name="Bone Club">
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.weapon_club_i00"/>
+        <set name="price" value="21000"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1850"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="24"/>
+            <add stat="mAtk" order="0x10" value="17"/>
             <set stat="basePCritRate" order="0x08" value="60"/>
             <set stat="basePAtkSpd" order="0x08" value="379"/>
             <add stat="pAccCombat" order="0x10" value="8"/>
         </for>
         <!--added by blood-->
-        <set name="grade" value="4"/>
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2502 - Dwarven War Hammer
+		Bestows one of the following functions: Anger, Health or Haste.
+	-->
+    <weapon id="2502" name="Dwarven War Hammer">
+        <set name="variation_group_id" value="2"/>
+        <set name="crystal_count" value="884"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dwarven_warhammer_i00"/>
+        <set name="price" value="441940"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1670"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="122"/>
+            <add stat="mAtk" order="0x10" value="68"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
@@ -196,163 +116,364 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		2502 - Dwarven War Hammer
-		Bestows one of the following functions: Anger, Health or Haste.
+		2504 - Meteor Shower
+		Bestows one of the following functions: Focus, Critical Bleed, or Rsk. Haste.
 	-->
-    <weapon id="2502" name="Dwarven War Hammer">
-        <set name="variation_group_id" value="2"/>
-        <set name="crystal_count" value="884"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dwarven_warhammer_i00"/>
-        <set name="price" value="441940"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1670"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="122"/>
-            <add stat="mAtk" order="0x10" value="68"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2501" name="Bone Club">
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.weapon_club_i00"/>
-        <set name="price" value="21000"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="1850"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="24"/>
-            <add stat="mAtk" order="0x10" value="17"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2500 - Dark Legion's Edge
-		Bestows one of the following functions: P. Critical Damage, Health, or Rsk. Focus.
-	-->
-    <weapon id="2500" name="Dark Legion's Edge">
-        <set name="variation_group_id" value="8"/>
-        <set name="crystal_count" value="1659"/>
+    <weapon id="2504" name="Meteor Shower">
+        <set name="variation_group_id" value="7"/>
+        <set name="crystal_count" value="1128"/>
         <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.weapon_dark_legions_edge_i00"/>
-        <set name="kamael_convert" value="9340"/>
-        <set name="price" value="20741000"/>
-        <set name="rnd_dam" value="10"/>
+        <set name="icon" value="icon.weapon_meteor_shower_i00"/>
+        <set name="price" value="14098000"/>
+        <set name="rnd_dam" value="20"/>
         <set name="soulshots" value="1"/>
         <set name="spiritshots" value="1"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="1320"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="1600"/>
         <equip>
             <slot id="RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="232"/>
-            <add stat="mAtk" order="0x10" value="114"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
+            <add stat="pAtk" order="0x10" value="213"/>
+            <add stat="mAtk" order="0x10" value="107"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
             <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="4"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2526" name="Bastard Sword*Spinebone Sword">
-        <set name="crystal_count" value="1983"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="214800"/>
+    <!--
+		2505 - Iron Canine
+		Double-click to wear. Only for wolves, great wolves, and fenrir.
+	-->
+    <weapon id="2505" name="Iron Canine">
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.etc_pet_arms_i00"/>
+        <set name="price" value="7000"/>
         <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2470"/>
+        <set name="soulshots" value="0"/>
+        <set name="spiritshots" value="0"/>
+        <set name="type" value="PET"/>
+        <set name="weight" value="100"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="WOLF"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
+            <add stat="pAtk" order="0x10" value="4"/>
+            <add stat="mAtk" order="0x10" value="5"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <set stat="basePAtkSpd" order="0x08" value="277"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		2506 - Wolf's Leather Armor
+		Double-click to wear. Only for wolves, great wolves, and fenrir.
+	-->
+    <armor id="2506" name="Wolf's Leather Armor">
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.etc_pet_armor_i00"/>
+        <set name="price" value="3060"/>
+        <set name="type" value="PET"/>
+        <set name="weight" value="160"/>
+        <equip>
+            <slot id="WOLF"/>
+        </equip>
+        <for>
+            <add stat="pDef" order="0x10" value="9"/>
+            <add stat="mDef" order="0x10" value="14"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="19"/>
+    </armor>
+    <weapon id="2507" name="Lizardspear">
+        <set name="crystal_count" value="743"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_doomed_dagger_i00"/>
+        <set name="price" value="409000"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="300"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="5"/>
+            <add stat="mAtk" order="0x10" value="5"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
+        <set name="material" value="8"/>
     </weapon>
-    <weapon id="2527" name="Bastard Sword*Artisan's Sword">
-        <set name="crystal_count" value="1983"/>
+    <etcitem id="2508" name="Cursed Bone">
+        <set name="type" value="MATERIAL"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.etc_piece_bone_red_i00"/>
+        <set name="price" value="240"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="3"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		2509 - Spiritshot (No-grade)
+		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a No-grade weapon.
+	-->
+    <etcitem id="2509" name="Spiritshot (No-grade)">
+        <set name="type" value="SPIRITSHOT"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.etc_spell_shot_white_i00"/>
+        <set name="price" value="15"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="4"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		2510 - Spiritshot (D-grade)
+		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon.
+	-->
+    <etcitem id="2510" name="Spiritshot (D-grade)">
+        <set name="type" value="SPIRITSHOT"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="214800"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2480"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
+        <set name="icon" value="icon.etc_spell_shot_blue_i00"/>
+        <set name="price" value="18"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="4"/>
         <!--added by blood-->
         <set name="grade" value="1"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2524" name="Saber*Elven Long Sword">
-        <set name="variation_group_id" value="1"/>
-        <set name="crystal_count" value="705"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		2511 - Spiritshot (C-grade)
+		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon.
+	-->
+    <etcitem id="2511" name="Spiritshot (C-grade)">
+        <set name="type" value="SPIRITSHOT"/>
         <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.etc_spell_shot_green_i00"/>
+        <set name="price" value="35"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="2"/>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		2512 - Spiritshot (B-grade)
+		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon.
+	-->
+    <etcitem id="2512" name="Spiritshot (B-grade)">
+        <set name="type" value="SPIRITSHOT"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.etc_spell_shot_red_i00"/>
+        <set name="price" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="2"/>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		2513 - Spiritshot (A-grade)
+		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with an A-grade weapon.
+	-->
+    <etcitem id="2513" name="Spiritshot (A-grade)">
+        <set name="type" value="SPIRITSHOT"/>
+        <set name="crystal_type" value="A"/>
+        <set name="icon" value="icon.etc_spell_shot_silver_i00"/>
+        <set name="price" value="120"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="1"/>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		2514 - Spiritshot (S-grade)
+		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with an S-grade weapon.
+	-->
+    <etcitem id="2514" name="Spiritshot (S-grade)">
+        <set name="type" value="SPIRITSHOT"/>
+        <set name="crystal_type" value="S"/>
+        <set name="icon" value="icon.etc_spell_shot_gold_i00"/>
+        <set name="price" value="150"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="1"/>
+        <!--added by blood-->
+        <set name="grade" value="5"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		2515 - Wolf Food
+		When the hunger gauge of a wolf reaches 55% or below, its food will be consumed automatically.
+	-->
+    <etcitem id="2515" name="Wolf Food">
+        <set name="handler" value="SkillsReduce"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="icon.etc_pouch_yellow_i00"/>
+        <set name="price" value="100"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="10"/>
+        <skills>
+            <skill id="2048" level="1"/>
+            <!--Wolves\' Food-->
+        </skills>
+        <cond msgId="113">
+            <target is_pet_feed="2515"/>
+        </cond>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <weapon id="2516" name="Saber*Saber">
+        <set name="crystal_count" value="1245"/>
+        <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="352580"/>
+        <set name="price" value="134880"/>
         <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="2"/>
         <set name="spiritshots" value="2"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="2420"/>
+        <set name="weight" value="2530"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="130"/>
-            <add stat="mAtk" order="0x10" value="61"/>
+            <add stat="pAtk" order="0x10" value="73"/>
+            <add stat="mAtk" order="0x10" value="37"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
         </for>
         <!--added by blood-->
-        <set name="grade" value="2"/>
+        <set name="grade" value="1"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2525" name="Bastard Sword*Bastard Sword">
+    <weapon id="2517" name="Saber*Bastard Sword">
+        <set name="crystal_count" value="1510"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="163560"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2520"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="83"/>
+            <add stat="mAtk" order="0x10" value="41"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2518" name="Saber*Spinebone Sword">
+        <set name="crystal_count" value="1510"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="163560"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2530"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="83"/>
+            <add stat="mAtk" order="0x10" value="41"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2519" name="Saber*Artisan's Sword">
+        <set name="crystal_count" value="1510"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="163560"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2520"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="83"/>
+            <add stat="mAtk" order="0x10" value="41"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2520" name="Saber*Knight's Sword">
+        <set name="crystal_count" value="1510"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="163560"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2510"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="83"/>
+            <add stat="mAtk" order="0x10" value="41"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2521" name="Saber*Crimson Sword">
         <set name="crystal_count" value="1983"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -361,7 +482,7 @@
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="2470"/>
+        <set name="weight" value="2530"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -425,225 +546,32 @@
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2520" name="Saber*Knight's Sword">
-        <set name="crystal_count" value="1510"/>
-        <set name="crystal_type" value="D"/>
+    <weapon id="2524" name="Saber*Elven Long Sword">
+        <set name="variation_group_id" value="1"/>
+        <set name="crystal_count" value="705"/>
+        <set name="crystal_type" value="C"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="163560"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2510"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="83"/>
-            <add stat="mAtk" order="0x10" value="41"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2521" name="Saber*Crimson Sword">
-        <set name="crystal_count" value="1983"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="214800"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2530"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2518" name="Saber*Spinebone Sword">
-        <set name="crystal_count" value="1510"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="163560"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2530"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="83"/>
-            <add stat="mAtk" order="0x10" value="41"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2519" name="Saber*Artisan's Sword">
-        <set name="crystal_count" value="1510"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="163560"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2520"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="83"/>
-            <add stat="mAtk" order="0x10" value="41"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2516" name="Saber*Saber">
-        <set name="crystal_count" value="1245"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="134880"/>
+        <set name="price" value="352580"/>
         <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="2"/>
         <set name="spiritshots" value="2"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="2530"/>
+        <set name="weight" value="2420"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="73"/>
-            <add stat="mAtk" order="0x10" value="37"/>
+            <add stat="pAtk" order="0x10" value="130"/>
+            <add stat="mAtk" order="0x10" value="61"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
         </for>
         <!--added by blood-->
-        <set name="grade" value="1"/>
+        <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2517" name="Saber*Bastard Sword">
-        <set name="crystal_count" value="1510"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="163560"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2520"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="83"/>
-            <add stat="mAtk" order="0x10" value="41"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2514 - Spiritshot (S-grade)
-		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with an S-grade weapon.
-	-->
-    <etcitem id="2514" name="Spiritshot (S-grade)">
-        <set name="type" value="SPIRITSHOT"/>
-        <set name="crystal_type" value="S"/>
-        <set name="icon" value="icon.etc_spell_shot_gold_i00"/>
-        <set name="price" value="150"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="1"/>
-        <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		2515 - Wolf Food
-		When the hunger gauge of a wolf reaches 55% or below, its food will be consumed automatically.
-	-->
-    <etcitem id="2515" name="Wolf Food">
-        <set name="handler" value="SkillsReduce"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="icon.etc_pouch_yellow_i00"/>
-        <set name="price" value="100"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="10"/>
-        <skills>
-            <skill id="2048" level="1"/>
-            <!--Wolves\' Food-->
-        </skills>
-        <cond msgId="113">
-            <target is_pet_feed="2515"/>
-        </cond>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		2512 - Spiritshot (B-grade)
-		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon.
-	-->
-    <etcitem id="2512" name="Spiritshot (B-grade)">
-        <set name="type" value="SPIRITSHOT"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.etc_spell_shot_red_i00"/>
-        <set name="price" value="100"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="2"/>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		2513 - Spiritshot (A-grade)
-		The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with an A-grade weapon.
-	-->
-    <etcitem id="2513" name="Spiritshot (A-grade)">
-        <set name="type" value="SPIRITSHOT"/>
-        <set name="crystal_type" value="A"/>
-        <set name="icon" value="icon.etc_spell_shot_silver_i00"/>
-        <set name="price" value="120"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="1"/>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <weapon id="2541" name="Artisan's Sword*Knight's Sword">
+    <weapon id="2525" name="Bastard Sword*Bastard Sword">
         <set name="crystal_count" value="1983"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -667,7 +595,31 @@
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2540" name="Artisan's Sword*Artisan's Sword">
+    <weapon id="2526" name="Bastard Sword*Spinebone Sword">
+        <set name="crystal_count" value="1983"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="214800"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2470"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2527" name="Bastard Sword*Artisan's Sword">
         <set name="crystal_count" value="1983"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -691,153 +643,7 @@
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2543" name="Artisan's Sword*Elven Sword">
-        <set name="crystal_count" value="2355"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="255140"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2470"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="107"/>
-            <add stat="mAtk" order="0x10" value="51"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2542" name="Artisan's Sword*Crimson Sword">
-        <set name="crystal_count" value="2355"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="255140"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2450"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="107"/>
-            <add stat="mAtk" order="0x10" value="51"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2537" name="Spinebone Sword*Elven Sword">
-        <set name="crystal_count" value="2355"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="255140"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2460"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="107"/>
-            <add stat="mAtk" order="0x10" value="51"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2536" name="Spinebone Sword*Crimson Sword">
-        <set name="crystal_count" value="2355"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="255140"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2520"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="107"/>
-            <add stat="mAtk" order="0x10" value="51"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2539" name="Spinebone Sword*Elven Long Sword">
-        <set name="variation_group_id" value="2"/>
-        <set name="crystal_count" value="761"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="380700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2390"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="136"/>
-            <add stat="mAtk" order="0x10" value="63"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2538" name="Spinebone Sword*Sword of Revolution">
-        <set name="variation_group_id" value="1"/>
-        <set name="crystal_count" value="652"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="326000"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2460"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="124"/>
-            <add stat="mAtk" order="0x10" value="58"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2533" name="Spinebone Sword*Spinebone Sword">
+    <weapon id="2528" name="Bastard Sword*Knight's Sword">
         <set name="crystal_count" value="1983"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -846,80 +652,7 @@
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="2520"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2532" name="Bastard Sword*Elven Long Sword">
-        <set name="variation_group_id" value="2"/>
-        <set name="crystal_count" value="761"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="380700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2430"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="136"/>
-            <add stat="mAtk" order="0x10" value="63"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2535" name="Spinebone Sword*Knight's Sword">
-        <set name="crystal_count" value="1983"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="214800"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2470"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2534" name="Spinebone Sword*Artisan's Sword">
-        <set name="crystal_count" value="1983"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="214800"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2460"/>
+        <set name="weight" value="2500"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -958,22 +691,22 @@
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2528" name="Bastard Sword*Knight's Sword">
-        <set name="crystal_count" value="1983"/>
+    <weapon id="2530" name="Bastard Sword*Elven Sword">
+        <set name="crystal_count" value="2355"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="214800"/>
+        <set name="price" value="255140"/>
         <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="2500"/>
+        <set name="weight" value="2460"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
+            <add stat="pAtk" order="0x10" value="107"/>
+            <add stat="mAtk" order="0x10" value="51"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
         </for>
@@ -1007,7 +740,128 @@
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
-    <weapon id="2530" name="Bastard Sword*Elven Sword">
+    <weapon id="2532" name="Bastard Sword*Elven Long Sword">
+        <set name="variation_group_id" value="2"/>
+        <set name="crystal_count" value="761"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="380700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2430"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="136"/>
+            <add stat="mAtk" order="0x10" value="63"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2533" name="Spinebone Sword*Spinebone Sword">
+        <set name="crystal_count" value="1983"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="214800"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2520"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2534" name="Spinebone Sword*Artisan's Sword">
+        <set name="crystal_count" value="1983"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="214800"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2460"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2535" name="Spinebone Sword*Knight's Sword">
+        <set name="crystal_count" value="1983"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="214800"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2470"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2536" name="Spinebone Sword*Crimson Sword">
+        <set name="crystal_count" value="2355"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="255140"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2520"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="107"/>
+            <add stat="mAtk" order="0x10" value="51"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2537" name="Spinebone Sword*Elven Sword">
         <set name="crystal_count" value="2355"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
@@ -1028,6 +882,455 @@
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2538" name="Spinebone Sword*Sword of Revolution">
+        <set name="variation_group_id" value="1"/>
+        <set name="crystal_count" value="652"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="326000"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2460"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="124"/>
+            <add stat="mAtk" order="0x10" value="58"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2539" name="Spinebone Sword*Elven Long Sword">
+        <set name="variation_group_id" value="2"/>
+        <set name="crystal_count" value="761"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="380700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2390"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="136"/>
+            <add stat="mAtk" order="0x10" value="63"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2540" name="Artisan's Sword*Artisan's Sword">
+        <set name="crystal_count" value="1983"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="214800"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2480"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2541" name="Artisan's Sword*Knight's Sword">
+        <set name="crystal_count" value="1983"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="214800"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2470"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2542" name="Artisan's Sword*Crimson Sword">
+        <set name="crystal_count" value="2355"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="255140"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2450"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="107"/>
+            <add stat="mAtk" order="0x10" value="51"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2543" name="Artisan's Sword*Elven Sword">
+        <set name="crystal_count" value="2355"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="255140"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2470"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="107"/>
+            <add stat="mAtk" order="0x10" value="51"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2544" name="Artisan's Sword*Sword of Revolution">
+        <set name="variation_group_id" value="1"/>
+        <set name="crystal_count" value="652"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="326000"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2420"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="124"/>
+            <add stat="mAtk" order="0x10" value="58"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2545" name="Artisan's Sword*Elven Long Sword">
+        <set name="variation_group_id" value="2"/>
+        <set name="crystal_count" value="761"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="380700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2410"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="136"/>
+            <add stat="mAtk" order="0x10" value="63"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2546" name="Knight's Sword*Knight's Sword">
+        <set name="crystal_count" value="1983"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="214800"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2460"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2547" name="Knight's Sword*Crimson Sword">
+        <set name="crystal_count" value="2355"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="255140"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2460"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="107"/>
+            <add stat="mAtk" order="0x10" value="51"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2548" name="Knight's Sword*Elven Sword">
+        <set name="crystal_count" value="2355"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="255140"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2450"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="107"/>
+            <add stat="mAtk" order="0x10" value="51"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2549" name="Knight's Sword*Sword of Revolution">
+        <set name="variation_group_id" value="1"/>
+        <set name="crystal_count" value="652"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="326000"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2430"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="124"/>
+            <add stat="mAtk" order="0x10" value="58"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2550" name="Knight's Sword*Elven Long Sword">
+        <set name="variation_group_id" value="2"/>
+        <set name="crystal_count" value="761"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="380700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2370"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="136"/>
+            <add stat="mAtk" order="0x10" value="63"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2551" name="Crimson Sword*Crimson Sword">
+        <set name="variation_group_id" value="1"/>
+        <set name="crystal_count" value="602"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="300880"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2440"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="118"/>
+            <add stat="mAtk" order="0x10" value="56"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2552" name="Crimson Sword*Elven Sword">
+        <set name="variation_group_id" value="1"/>
+        <set name="crystal_count" value="602"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="300880"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2450"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="118"/>
+            <add stat="mAtk" order="0x10" value="56"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2553" name="Crimson Sword*Sword of Revolution">
+        <set name="variation_group_id" value="2"/>
+        <set name="crystal_count" value="761"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="380700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2390"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="136"/>
+            <add stat="mAtk" order="0x10" value="63"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2554 - Crimson Sword*Elven Long Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
+	-->
+    <weapon id="2554" name="Crimson Sword*Elven Long Sword">
+        <set name="variation_group_id" value="2"/>
+        <set name="crystal_count" value="884"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="441940"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2360"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="2"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="148"/>
+            <add stat="mAtk" order="0x10" value="68"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <weapon id="2555" name="Elven Sword*Elven Sword">
+        <set name="variation_group_id" value="1"/>
+        <set name="crystal_count" value="602"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="300880"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2440"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="118"/>
+            <add stat="mAtk" order="0x10" value="56"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
@@ -1146,1177 +1449,6 @@
         </for>
         <!--added by blood-->
         <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2552" name="Crimson Sword*Elven Sword">
-        <set name="variation_group_id" value="1"/>
-        <set name="crystal_count" value="602"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="300880"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2450"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="118"/>
-            <add stat="mAtk" order="0x10" value="56"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2553" name="Crimson Sword*Sword of Revolution">
-        <set name="variation_group_id" value="2"/>
-        <set name="crystal_count" value="761"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="380700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2390"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="136"/>
-            <add stat="mAtk" order="0x10" value="63"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2554 - Crimson Sword*Elven Long Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
-	-->
-    <weapon id="2554" name="Crimson Sword*Elven Long Sword">
-        <set name="variation_group_id" value="2"/>
-        <set name="crystal_count" value="884"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="441940"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2360"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="2"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="148"/>
-            <add stat="mAtk" order="0x10" value="68"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2555" name="Elven Sword*Elven Sword">
-        <set name="variation_group_id" value="1"/>
-        <set name="crystal_count" value="602"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="300880"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2440"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="118"/>
-            <add stat="mAtk" order="0x10" value="56"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2548" name="Knight's Sword*Elven Sword">
-        <set name="crystal_count" value="2355"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="255140"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2450"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="107"/>
-            <add stat="mAtk" order="0x10" value="51"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2549" name="Knight's Sword*Sword of Revolution">
-        <set name="variation_group_id" value="1"/>
-        <set name="crystal_count" value="652"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="326000"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2430"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="124"/>
-            <add stat="mAtk" order="0x10" value="58"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2550" name="Knight's Sword*Elven Long Sword">
-        <set name="variation_group_id" value="2"/>
-        <set name="crystal_count" value="761"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="380700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2370"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="136"/>
-            <add stat="mAtk" order="0x10" value="63"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2551" name="Crimson Sword*Crimson Sword">
-        <set name="variation_group_id" value="1"/>
-        <set name="crystal_count" value="602"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="300880"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2440"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="118"/>
-            <add stat="mAtk" order="0x10" value="56"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2544" name="Artisan's Sword*Sword of Revolution">
-        <set name="variation_group_id" value="1"/>
-        <set name="crystal_count" value="652"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="326000"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2420"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="124"/>
-            <add stat="mAtk" order="0x10" value="58"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2545" name="Artisan's Sword*Elven Long Sword">
-        <set name="variation_group_id" value="2"/>
-        <set name="crystal_count" value="761"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="380700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2410"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="136"/>
-            <add stat="mAtk" order="0x10" value="63"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2546" name="Knight's Sword*Knight's Sword">
-        <set name="crystal_count" value="1983"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="214800"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2460"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <weapon id="2547" name="Knight's Sword*Crimson Sword">
-        <set name="crystal_count" value="2355"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="255140"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2460"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="107"/>
-            <add stat="mAtk" order="0x10" value="51"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2598 - Spirit Sword*Samurai Long Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
-	-->
-    <weapon id="2598" name="Spirit Sword*Samurai Long Sword">
-        <set name="variation_group_id" value="6"/>
-        <set name="crystal_count" value="979"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1468880"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2110"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3013" level="1"/>
-        <!--Special Ability: Health-->
-        <for>
-            <add stat="pAtk" order="0x10" value="220"/>
-            <add stat="mAtk" order="0x10" value="94"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2599 - Raid Sword*Raid Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 4%.
-	-->
-    <weapon id="2599" name="Raid Sword*Raid Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2250"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3045" level="8"/>
-        <!--Special Ability: Haste-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2596 - Spirit Sword*Sword of Nightmare
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 65.
-	-->
-    <weapon id="2596" name="Spirit Sword*Sword of Nightmare">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2250"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3044" level="10"/>
-        <!--Special Ability: Focus-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2597 - Spirit Sword*Tsurugi
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 6%.
-	-->
-    <weapon id="2597" name="Spirit Sword*Tsurugi">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2220"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3045" level="10"/>
-        <!--Special Ability: Haste-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2594 - Spirit Sword*Ultimate Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 146 during a Critical Attack.
-	-->
-    <weapon id="2594" name="Spirit Sword*Ultimate Sword">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2240"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3042" level="10"/>
-        <!--Special Ability: Critical Damage-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2595 - Spirit Sword*Sword of Delusion
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
-	-->
-    <weapon id="2595" name="Spirit Sword*Sword of Delusion">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2250"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3013" level="1"/>
-        <!--Special Ability: Health-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2592 - Spirit Sword*Raid Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 40.
-	-->
-    <weapon id="2592" name="Spirit Sword*Raid Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2260"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3044" level="8"/>
-        <!--Special Ability: Focus-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2593 - Spirit Sword*Caliburs
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 4.
-	-->
-    <weapon id="2593" name="Spirit Sword*Caliburs">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2240"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="10"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2581 - Shamshir*Samurai Long Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 3.
-	-->
-    <weapon id="2581" name="Shamshir*Samurai Long Sword">
-        <set name="variation_group_id" value="6"/>
-        <set name="crystal_count" value="979"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1468880"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2110"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="12"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="220"/>
-            <add stat="mAtk" order="0x10" value="94"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2580 - Shamshir*Tsurugi
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 6%.
-	-->
-    <weapon id="2580" name="Shamshir*Tsurugi">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2220"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3045" level="10"/>
-        <!--Special Ability: Haste-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2583 - Katana*Spirit Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
-	-->
-    <weapon id="2583" name="Katana*Spirit Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2250"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="8"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2582 - Katana*Katana
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%.
-	-->
-    <weapon id="2582" name="Katana*Katana">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2270"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3045" level="8"/>
-        <!--Special Ability: Haste-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2577 - Shamshir*Ultimate Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 146 during a Critical Attack.
-	-->
-    <weapon id="2577" name="Shamshir*Ultimate Sword">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2240"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3042" level="10"/>
-        <!--Special Ability: Critical Damage-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2576 - Shamshir*Caliburs
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 4.
-	-->
-    <weapon id="2576" name="Shamshir*Caliburs">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2230"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="10"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2579 - Shamshir*Sword of Nightmare
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Critical increases by 65.
-	-->
-    <weapon id="2579" name="Shamshir*Sword of Nightmare">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2210"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3044" level="10"/>
-        <!--Special Ability: Focus-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2578 - Shamshir*Sword of Delusion
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Max HP increases by 25%.
-	-->
-    <weapon id="2578" name="Shamshir*Sword of Delusion">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2200"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3013" level="1"/>
-        <!--Special Ability: Health-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2589 - Katana*Tsurugi
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 6%.
-	-->
-    <weapon id="2589" name="Katana*Tsurugi">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2210"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3045" level="10"/>
-        <!--Special Ability: Haste-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2588 - Katana*Sword of Nightmare
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 65.
-	-->
-    <weapon id="2588" name="Katana*Sword of Nightmare">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2170"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3044" level="10"/>
-        <!--Special Ability: Focus-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2591 - Spirit Sword*Spirit Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
-	-->
-    <weapon id="2591" name="Spirit Sword*Spirit Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2240"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3013" level="1"/>
-        <!--Special Ability: Health-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2590 - Katana*Samurai Long Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 106 during a Critical Attack.
-	-->
-    <weapon id="2590" name="Katana*Samurai Long Sword">
-        <set name="variation_group_id" value="6"/>
-        <set name="crystal_count" value="979"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1468880"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2130"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3042" level="12"/>
-        <!--Special Ability: Critical Damage-->
-        <for>
-            <add stat="pAtk" order="0x10" value="220"/>
-            <add stat="mAtk" order="0x10" value="94"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2585 - Katana*Caliburs
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 4.
-	-->
-    <weapon id="2585" name="Katana*Caliburs">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2220"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="10"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2584 - Katana*Raid Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 84 during a Critical Attack.
-	-->
-    <weapon id="2584" name="Katana*Raid Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2270"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3042" level="8"/>
-        <!--Special Ability: Critical Damage-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2587 - Katana*Sword of Delusion
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
-	-->
-    <weapon id="2587" name="Katana*Sword of Delusion">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2190"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3013" level="1"/>
-        <!--Special Ability: Health-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2586 - Katana*Ultimate Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 146 during a Critical Attack.
-	-->
-    <weapon id="2586" name="Katana*Ultimate Sword">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="803"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1204520"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2180"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3042" level="10"/>
-        <!--Special Ability: Critical Damage-->
-        <for>
-            <add stat="pAtk" order="0x10" value="204"/>
-            <add stat="mAtk" order="0x10" value="89"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2564 - StormBringer*Spirit Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Critical Attack increases by 24.
-	-->
-    <weapon id="2564" name="StormBringer*Spirit Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1623"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="811600"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2310"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3044" level="7"/>
-        <!--Special Ability: Focus-->
-        <for>
-            <add stat="pAtk" order="0x10" value="183"/>
-            <add stat="mAtk" order="0x10" value="81"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2565 - StormBringer*Raid Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 2%.
-	-->
-    <weapon id="2565" name="StormBringer*Raid Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1623"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="811600"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2340"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3045" level="7"/>
-        <!--Special Ability: Haste-->
-        <for>
-            <add stat="pAtk" order="0x10" value="183"/>
-            <add stat="mAtk" order="0x10" value="81"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2566 - StormBringer*Caliburs
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 5.
-	-->
-    <weapon id="2566" name="StormBringer*Caliburs">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="716"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1073500"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2260"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="9"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="197"/>
-            <add stat="mAtk" order="0x10" value="86"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2567 - StormBringer*Ultimate Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its P. Atk. Increases by 166 during a Critical Attack.
-	-->
-    <weapon id="2567" name="StormBringer*Ultimate Sword">
-        <set name="variation_group_id" value="5"/>
-        <set name="crystal_count" value="716"/>
-        <set name="crystal_type" value="B"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="1073500"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="1"/>
-        <set name="spiritshots" value="1"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2240"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3042" level="9"/>
-        <!--Special Ability: Critical Damage-->
-        <for>
-            <add stat="pAtk" order="0x10" value="197"/>
-            <add stat="mAtk" order="0x10" value="86"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="3"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
@@ -2445,46 +1577,15 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		2572 - Shamshir*Shamshir
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
+		2564 - StormBringer*Spirit Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Critical Attack increases by 24.
 	-->
-    <weapon id="2572" name="Shamshir*Shamshir">
+    <weapon id="2564" name="StormBringer*Spirit Sword">
         <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
+        <set name="crystal_count" value="1623"/>
         <set name="crystal_type" value="C"/>
         <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2330"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3046" level="8"/>
-        <!--Special Ability: Guidance-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2573 - Shamshir*Katana
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its P. Atk. Increases by 84 during a Critical Attack.
-	-->
-    <weapon id="2573" name="Shamshir*Katana">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
+        <set name="price" value="811600"/>
         <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
@@ -2493,78 +1594,109 @@
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
-        <enchant4_skill id="3042" level="8"/>
-        <!--Special Ability: Critical Damage-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2574 - Shamshir*Spirit Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Max HP increases by 25%.
-	-->
-    <weapon id="2574" name="Shamshir*Spirit Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2280"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3013" level="1"/>
-        <!--Special Ability: Health-->
-        <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="2"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		2575 - Shamshir*Raid Sword
-		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Critical increases by 40.
-	-->
-    <weapon id="2575" name="Shamshir*Raid Sword">
-        <set name="variation_group_id" value="4"/>
-        <set name="crystal_count" value="1885"/>
-        <set name="crystal_type" value="C"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="942700"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="2280"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3044" level="8"/>
+        <enchant4_skill id="3044" level="7"/>
         <!--Special Ability: Focus-->
         <for>
-            <add stat="pAtk" order="0x10" value="190"/>
-            <add stat="mAtk" order="0x10" value="83"/>
+            <add stat="pAtk" order="0x10" value="183"/>
+            <add stat="mAtk" order="0x10" value="81"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2565 - StormBringer*Raid Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 2%.
+	-->
+    <weapon id="2565" name="StormBringer*Raid Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1623"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="811600"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2340"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3045" level="7"/>
+        <!--Special Ability: Haste-->
+        <for>
+            <add stat="pAtk" order="0x10" value="183"/>
+            <add stat="mAtk" order="0x10" value="81"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2566 - StormBringer*Caliburs
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 5.
+	-->
+    <weapon id="2566" name="StormBringer*Caliburs">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="716"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1073500"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2260"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="9"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="197"/>
+            <add stat="mAtk" order="0x10" value="86"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2567 - StormBringer*Ultimate Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its P. Atk. Increases by 166 during a Critical Attack.
+	-->
+    <weapon id="2567" name="StormBringer*Ultimate Sword">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="716"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1073500"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2240"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3042" level="9"/>
+        <!--Special Ability: Critical Damage-->
+        <for>
+            <add stat="pAtk" order="0x10" value="197"/>
+            <add stat="mAtk" order="0x10" value="86"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>
@@ -2689,6 +1821,874 @@
         </for>
         <!--added by blood-->
         <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2572 - Shamshir*Shamshir
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
+	-->
+    <weapon id="2572" name="Shamshir*Shamshir">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2330"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="8"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2573 - Shamshir*Katana
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its P. Atk. Increases by 84 during a Critical Attack.
+	-->
+    <weapon id="2573" name="Shamshir*Katana">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2310"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3042" level="8"/>
+        <!--Special Ability: Critical Damage-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2574 - Shamshir*Spirit Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Max HP increases by 25%.
+	-->
+    <weapon id="2574" name="Shamshir*Spirit Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2280"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3013" level="1"/>
+        <!--Special Ability: Health-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2575 - Shamshir*Raid Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Critical increases by 40.
+	-->
+    <weapon id="2575" name="Shamshir*Raid Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2280"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3044" level="8"/>
+        <!--Special Ability: Focus-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2576 - Shamshir*Caliburs
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 4.
+	-->
+    <weapon id="2576" name="Shamshir*Caliburs">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2230"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="10"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2577 - Shamshir*Ultimate Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 146 during a Critical Attack.
+	-->
+    <weapon id="2577" name="Shamshir*Ultimate Sword">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2240"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3042" level="10"/>
+        <!--Special Ability: Critical Damage-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2578 - Shamshir*Sword of Delusion
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Max HP increases by 25%.
+	-->
+    <weapon id="2578" name="Shamshir*Sword of Delusion">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2200"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3013" level="1"/>
+        <!--Special Ability: Health-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2579 - Shamshir*Sword of Nightmare
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Critical increases by 65.
+	-->
+    <weapon id="2579" name="Shamshir*Sword of Nightmare">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2210"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3044" level="10"/>
+        <!--Special Ability: Focus-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2580 - Shamshir*Tsurugi
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 6%.
+	-->
+    <weapon id="2580" name="Shamshir*Tsurugi">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2220"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3045" level="10"/>
+        <!--Special Ability: Haste-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2581 - Shamshir*Samurai Long Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 3.
+	-->
+    <weapon id="2581" name="Shamshir*Samurai Long Sword">
+        <set name="variation_group_id" value="6"/>
+        <set name="crystal_count" value="979"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1468880"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2110"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="12"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="220"/>
+            <add stat="mAtk" order="0x10" value="94"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2582 - Katana*Katana
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%.
+	-->
+    <weapon id="2582" name="Katana*Katana">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2270"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3045" level="8"/>
+        <!--Special Ability: Haste-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2583 - Katana*Spirit Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Accuracy increases by 2.
+	-->
+    <weapon id="2583" name="Katana*Spirit Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2250"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="8"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2584 - Katana*Raid Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 84 during a Critical Attack.
+	-->
+    <weapon id="2584" name="Katana*Raid Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2270"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3042" level="8"/>
+        <!--Special Ability: Critical Damage-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2585 - Katana*Caliburs
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 4.
+	-->
+    <weapon id="2585" name="Katana*Caliburs">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2220"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="10"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2586 - Katana*Ultimate Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 146 during a Critical Attack.
+	-->
+    <weapon id="2586" name="Katana*Ultimate Sword">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2180"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3042" level="10"/>
+        <!--Special Ability: Critical Damage-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2587 - Katana*Sword of Delusion
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
+	-->
+    <weapon id="2587" name="Katana*Sword of Delusion">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2190"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3013" level="1"/>
+        <!--Special Ability: Health-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2588 - Katana*Sword of Nightmare
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 65.
+	-->
+    <weapon id="2588" name="Katana*Sword of Nightmare">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2170"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3044" level="10"/>
+        <!--Special Ability: Focus-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2589 - Katana*Tsurugi
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 6%.
+	-->
+    <weapon id="2589" name="Katana*Tsurugi">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2210"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3045" level="10"/>
+        <!--Special Ability: Haste-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2590 - Katana*Samurai Long Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 106 during a Critical Attack.
+	-->
+    <weapon id="2590" name="Katana*Samurai Long Sword">
+        <set name="variation_group_id" value="6"/>
+        <set name="crystal_count" value="979"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1468880"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2130"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3042" level="12"/>
+        <!--Special Ability: Critical Damage-->
+        <for>
+            <add stat="pAtk" order="0x10" value="220"/>
+            <add stat="mAtk" order="0x10" value="94"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2591 - Spirit Sword*Spirit Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
+	-->
+    <weapon id="2591" name="Spirit Sword*Spirit Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2240"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3013" level="1"/>
+        <!--Special Ability: Health-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2592 - Spirit Sword*Raid Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 40.
+	-->
+    <weapon id="2592" name="Spirit Sword*Raid Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2260"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3044" level="8"/>
+        <!--Special Ability: Focus-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2593 - Spirit Sword*Caliburs
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 4.
+	-->
+    <weapon id="2593" name="Spirit Sword*Caliburs">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2240"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3046" level="10"/>
+        <!--Special Ability: Guidance-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2594 - Spirit Sword*Ultimate Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, P. Atk. Increases by 146 during a Critical Attack.
+	-->
+    <weapon id="2594" name="Spirit Sword*Ultimate Sword">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2240"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3042" level="10"/>
+        <!--Special Ability: Critical Damage-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2595 - Spirit Sword*Sword of Delusion
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
+	-->
+    <weapon id="2595" name="Spirit Sword*Sword of Delusion">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2250"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3013" level="1"/>
+        <!--Special Ability: Health-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2596 - Spirit Sword*Sword of Nightmare
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 65.
+	-->
+    <weapon id="2596" name="Spirit Sword*Sword of Nightmare">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2250"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3044" level="10"/>
+        <!--Special Ability: Focus-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2597 - Spirit Sword*Tsurugi
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 6%.
+	-->
+    <weapon id="2597" name="Spirit Sword*Tsurugi">
+        <set name="variation_group_id" value="5"/>
+        <set name="crystal_count" value="803"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1204520"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2220"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3045" level="10"/>
+        <!--Special Ability: Haste-->
+        <for>
+            <add stat="pAtk" order="0x10" value="204"/>
+            <add stat="mAtk" order="0x10" value="89"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2598 - Spirit Sword*Samurai Long Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP increases by 25%.
+	-->
+    <weapon id="2598" name="Spirit Sword*Samurai Long Sword">
+        <set name="variation_group_id" value="6"/>
+        <set name="crystal_count" value="979"/>
+        <set name="crystal_type" value="B"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="1468880"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="1"/>
+        <set name="spiritshots" value="1"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2110"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3013" level="1"/>
+        <!--Special Ability: Health-->
+        <for>
+            <add stat="pAtk" order="0x10" value="220"/>
+            <add stat="mAtk" order="0x10" value="94"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="3"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		2599 - Raid Sword*Raid Sword
+		When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 4%.
+	-->
+    <weapon id="2599" name="Raid Sword*Raid Sword">
+        <set name="variation_group_id" value="4"/>
+        <set name="crystal_count" value="1885"/>
+        <set name="crystal_type" value="C"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="942700"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="2250"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3045" level="8"/>
+        <!--Special Ability: Haste-->
+        <for>
+            <add stat="pAtk" order="0x10" value="190"/>
+            <add stat="mAtk" order="0x10" value="83"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
         <set name="material" value="51"/>
     </weapon>

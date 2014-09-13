@@ -2,227 +2,474 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
     <!--
-		20332 - Beast Soulshot
-		The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its P. Atk. significantly. Used from the master's inventory.
+		20300 - Agathion - Blue Sumo Wrestler
+		Bracelet that summons Agathion - Blue Sumo Wrestler. Cooldown is 1 hour.
 	-->
-    <etcitem id="20332" name="Beast Soulshot">
+    <armor id="20300" name="Agathion - Blue Sumo Wrestler" add_name="Wild Magic (7-day)">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="handler" value="BeastShot"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_beast_soul_shot_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20333 - Beast Spiritshot
-		The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. Used from the master's inventory.
-	-->
-    <etcitem id="20333" name="Beast Spiritshot">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="BeastShot"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_beast_spirit_shot_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20334 - Blessed Beast Spiritshot
-		The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. significantly. Used from the master's inventory.
-	-->
-    <etcitem id="20334" name="Blessed Beast Spiritshot">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="BeastShot"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_blessed_beast_spirit_shot_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20335 - XP Rune III (Lv. 1-99) 30%
-		Ancient charm endowed with mysterious symbols. When held in your inventory, increases acquired XP by 30%. The timer decreases even during log-off state. Only one XP Rune can be applied at any given time regardless of additional XP Runes in ones inventory.
-	-->
-    <etcitem id="20335" name="XP Rune III (Lv. 1-99) 30%" add_name="5-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="300"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_sumo_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
         <skills>
-            <skill id="22039" level="1"/>
+            <skill id="3267" level="1"/>
+            <skill id="21044" level="1"/>
+            <skill id="23058" level="1"/>
         </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
+        <set name="material" value="4"/>
+    </armor>
     <!--
-		20328 - Blessed Beast Spiritshot Pack
-		If used, five thousand Blessed Beast Spiritshots are acquired.
+		20301 - Agathion - Great Sumo Match
+		Bracelet that summons Agathion - Great Sumo Match.
 	-->
-    <etcitem id="20328" name="Blessed Beast Spiritshot Pack">
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.icon.br_box_blessed_beast_spirit_shot_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="500"/>
-        <capsuled_items>
-            <capsuled_item id="20334" min_count="5000" max_count="5000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20329 - Beast Soulshot Large Pack
-		If used, ten thousand Beast Soulshots are acquired.
-	-->
-    <etcitem id="20329" name="Beast Soulshot Large Pack">
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.icon.br_box_beast_soul_shot_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="500"/>
-        <capsuled_items>
-            <capsuled_item id="20332" min_count="10000" max_count="10000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20330 - Beast Spiritshot Large Pack
-		If used, ten thousand Beast Spiritshots are acquired.
-	-->
-    <etcitem id="20330" name="Beast Spiritshot Large Pack">
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.icon.br_box_beast_spirit_shot_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="500"/>
-        <capsuled_items>
-            <capsuled_item id="20333" min_count="10000" max_count="10000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20331 - Blessed Beast Spiritshot Large Pack
-		If used, ten thousand Blessed Beast Spiritshots are acquired.
-	-->
-    <etcitem id="20331" name="Blessed Beast Spiritshot Large Pack">
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.icon.br_box_blessed_beast_spirit_shot_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="weight" value="500"/>
-        <capsuled_items>
-            <capsuled_item id="20334" min_count="10000" max_count="10000" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20324 - Black Gem Mask
-		Black gem mask accessory made of luxurious metal material.
-	-->
-    <armor id="20324" name="Black Gem Mask">
+    <armor id="20301" name="Agathion - Great Sumo Match">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="variation_group_id" value="34"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_black_gem_mask_i00"/>
+        <set name="icon" value="BranchSys.icon.br_aga_sumo_match_i00"/>
         <set name="tradeable" value="false"/>
         <set name="type" value="NONE"/>
-        <set name="weight" value="10"/>
+        <set name="weight" value="150"/>
         <equip>
-            <slot id="FACE"/>
+            <slot id="LEFT_BRACELET"/>
         </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21045" level="1"/>
+            <skill id="23051" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="13"/>
+        <set name="material" value="4"/>
     </armor>
     <!--
-		20325 - Plastic Hair
-		Plastic Hair. It changes to an attractive pink wig for female and a blue wig for male. Uses 2 accessory slots.
+		20302 - Agathion - Great Sumo Match
+		Bracelet that summons Agathion - Great Sumo Match. Cooldown is 1 hour.
 	-->
-    <armor id="20325" name="Plastic Hair">
+    <armor id="20302" name="Agathion - Great Sumo Match" add_name="Big Head / Firework (7-day)">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="variation_group_id" value="34"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_sumo_match_i00"/>
+        <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
         <set name="type" value="NONE"/>
-        <set name="weight" value="10"/>
+        <set name="weight" value="150"/>
         <equip>
-            <slot id="HAIR_ALL"/>
+            <slot id="LEFT_BRACELET"/>
         </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21045" level="1"/>
+            <skill id="23059" level="1"/>
+            <skill id="23060" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="13"/>
+        <set name="material" value="4"/>
     </armor>
     <!--
-		20326 - Beast Soulshot Pack
-		If used, five thousand Beast Soulshots are acquired.
+		20303 - Agathion - Button-eyed Bear Doll
+		Bracelet that summons Agathion - Button-eyed Bear Doll.
 	-->
-    <etcitem id="20326" name="Beast Soulshot Pack">
+    <armor id="20303" name="Agathion - Button-eyed Bear Doll">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21046" level="1"/>
+            <skill id="23052" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20304 - Agathion - Button-eyed Bear Doll
+		Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hours.
+	-->
+    <armor id="20304" name="Agathion - Button-eyed Bear Doll" add_name="Escape (7-day)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21046" level="1"/>
+            <skill id="23061" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20305 - Agathion - Button-eyed Bear Doll
+		Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hours.
+	-->
+    <armor id="20305" name="Agathion - Button-eyed Bear Doll" add_name="Resurrection (7-day)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21046" level="1"/>
+            <skill id="23062" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20306 - Agathion - Button-eyed Bear Doll
+		Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 1 hour.
+	-->
+    <armor id="20306" name="Agathion - Button-eyed Bear Doll" add_name="Vitality (7-day)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21046" level="1"/>
+            <skill id="23063" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20307 - Agathion - God of Fortune
+		Bracelet that summons Agathion - God of Fortune.
+	-->
+    <armor id="20307" name="Agathion - God of Fortune">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_aga_wealth_god_i00"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21047" level="1"/>
+            <skill id="23053" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20308 - Agathion - God of Fortune
+		Bracelet that summons Agathion - God of Fortune. Cooldown is 1 hour.
+	-->
+    <armor id="20308" name="Agathion - God of Fortune" add_name="Vitality (7-day)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_wealth_god_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21047" level="1"/>
+            <skill id="23064" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20309 - Agathion - Dryad
+		Can summon Agathion - Dryad when equipped.
+	-->
+    <armor id="20309" name="Agathion - Dryad">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_aga_dryad_i00"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21048" level="1"/>
+            <skill id="23054" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20310 - Agathion - Wonboso
+		Bracelet that summons Agathion - Wonboso.
+	-->
+    <armor id="20310" name="Agathion - Wonboso">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_aga_cashcow_i00"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21049" level="1"/>
+            <skill id="23055" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20311 - Agathion - Wonboso
+		Bracelet that summons Agathion - Wonboso. Cooldown is 1 hour.
+	-->
+    <armor id="20311" name="Agathion - Wonboso" add_name="Wind Walk (7-day)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_cashcow_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21049" level="1"/>
+            <skill id="23065" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20312 - Agathion - Daewoonso
+		Bracelet that summons Agathion - Daewoonso.
+	-->
+    <armor id="20312" name="Agathion - Daewoonso">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_aga_luckycow_i00"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21050" level="1"/>
+            <skill id="23056" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20313 - Agathion - Daewoonso
+		Bracelet that summons Agathion - Daewoonso. Cooldown is 1 hour.
+	-->
+    <armor id="20313" name="Agathion - Daewoonso" add_name="New Year's Gift (7-day)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_aga_luckycow_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="3267" level="1"/>
+            <skill id="21050" level="1"/>
+            <skill id="23066" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20314 - Birthday Cake Pack
+		Wrapped Pack containing Birthday Cake.
+	-->
+    <etcitem id="20314" name="Birthday Cake Pack" add_name="Vitality">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
         <set name="type" value="EXTRACTABLE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.icon.br_box_beast_soul_shot_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="stackable" value="true"/>
-        <set name="weight" value="500"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
         <capsuled_items>
-            <capsuled_item id="20332" min_count="5000" max_count="5000" chance="100.0"/>
+            <capsuled_item id="20320" min_count="1" max_count="1" chance="100.0"/>
         </capsuled_items>
         <!--added by blood-->
         <set name="grade" value="0"/>
@@ -230,18 +477,119 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20327 - Beast Spiritshot Pack
-		If used, five thousand Beast Spiritshots are acquired.
+		20315 - Goggles Pack
+		Wrapped Pack containing Goggles.
 	-->
-    <etcitem id="20327" name="Beast Spiritshot Pack">
+    <etcitem id="20315" name="Goggles Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
         <set name="type" value="EXTRACTABLE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
-        <set name="icon" value="BranchSys.icon.br_box_beast_spirit_shot_i00"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="stackable" value="true"/>
-        <set name="weight" value="500"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
         <capsuled_items>
-            <capsuled_item id="20333" min_count="5000" max_count="5000" chance="100.0"/>
+            <capsuled_item id="20321" min_count="1" max_count="1" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20316 - Napoleon Hat Pack
+		Wrapped Pack containing Napoleon Hat.
+	-->
+    <etcitem id="20316" name="Napoleon Hat Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
+        <capsuled_items>
+            <capsuled_item id="20322" min_count="1" max_count="1" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20317 - Horn Hairband Pack
+		Wrapped Pack containing Horn Hairband. Females only.
+	-->
+    <etcitem id="20317" name="Horn Hairband Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
+        <capsuled_items>
+            <capsuled_item id="20323" min_count="1" max_count="1" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20318 - Black Gem Mask Pack
+		Wrapped Pack containing Black Gem Mask.
+	-->
+    <etcitem id="20318" name="Black Gem Mask Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
+        <capsuled_items>
+            <capsuled_item id="20324" min_count="1" max_count="1" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20319 - Plastic Hair Pack
+		Wrapped Pack containing Plastic Hair.
+	-->
+    <etcitem id="20319" name="Plastic Hair Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
+        <capsuled_items>
+            <capsuled_item id="20325" min_count="1" max_count="1" chance="100.0"/>
         </capsuled_items>
         <!--added by blood-->
         <set name="grade" value="0"/>
@@ -347,35 +695,232 @@
         <set name="material" value="13"/>
     </armor>
     <!--
-		20349 - Rune of Crystal (Lv. 3)
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 3 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
+		20324 - Black Gem Mask
+		Black gem mask accessory made of luxurious metal material.
 	-->
-    <etcitem id="20349" name="Rune of Crystal (Lv. 3)" add_name="10-hour">
+    <armor id="20324" name="Black Gem Mask">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
+        <set name="variation_group_id" value="34"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="durability" value="600"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
-        <set name="temporal" value="true"/>
+        <set name="icon" value="BranchSys.icon.br_black_gem_mask_i00"/>
         <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22041" level="1"/>
-        </skills>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <equip>
+            <slot id="FACE"/>
+        </equip>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="13"/>
+    </armor>
+    <!--
+		20325 - Plastic Hair
+		Plastic Hair. It changes to an attractive pink wig for female and a blue wig for male. Uses 2 accessory slots.
+	-->
+    <armor id="20325" name="Plastic Hair">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="variation_group_id" value="34"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <equip>
+            <slot id="HAIR_ALL"/>
+        </equip>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="13"/>
+    </armor>
+    <!--
+		20326 - Beast Soulshot Pack
+		If used, five thousand Beast Soulshots are acquired.
+	-->
+    <etcitem id="20326" name="Beast Soulshot Pack">
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.icon.br_box_beast_soul_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="500"/>
+        <capsuled_items>
+            <capsuled_item id="20332" min_count="5000" max_count="5000" chance="100.0"/>
+        </capsuled_items>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20348 - Rune of Crystal (Lv. 5)
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
+		20327 - Beast Spiritshot Pack
+		If used, five thousand Beast Spiritshots are acquired.
 	-->
-    <etcitem id="20348" name="Rune of Crystal (Lv. 5)" add_name="5-hour">
+    <etcitem id="20327" name="Beast Spiritshot Pack">
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.icon.br_box_beast_spirit_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="500"/>
+        <capsuled_items>
+            <capsuled_item id="20333" min_count="5000" max_count="5000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20328 - Blessed Beast Spiritshot Pack
+		If used, five thousand Blessed Beast Spiritshots are acquired.
+	-->
+    <etcitem id="20328" name="Blessed Beast Spiritshot Pack">
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.icon.br_box_blessed_beast_spirit_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="500"/>
+        <capsuled_items>
+            <capsuled_item id="20334" min_count="5000" max_count="5000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20329 - Beast Soulshot Large Pack
+		If used, ten thousand Beast Soulshots are acquired.
+	-->
+    <etcitem id="20329" name="Beast Soulshot Large Pack">
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.icon.br_box_beast_soul_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="500"/>
+        <capsuled_items>
+            <capsuled_item id="20332" min_count="10000" max_count="10000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20330 - Beast Spiritshot Large Pack
+		If used, ten thousand Beast Spiritshots are acquired.
+	-->
+    <etcitem id="20330" name="Beast Spiritshot Large Pack">
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.icon.br_box_beast_spirit_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="500"/>
+        <capsuled_items>
+            <capsuled_item id="20333" min_count="10000" max_count="10000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20331 - Blessed Beast Spiritshot Large Pack
+		If used, ten thousand Blessed Beast Spiritshots are acquired.
+	-->
+    <etcitem id="20331" name="Blessed Beast Spiritshot Large Pack">
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="icon" value="BranchSys.icon.br_box_blessed_beast_spirit_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="weight" value="500"/>
+        <capsuled_items>
+            <capsuled_item id="20334" min_count="10000" max_count="10000" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20332 - Beast Soulshot
+		The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its P. Atk. significantly. Used from the master's inventory.
+	-->
+    <etcitem id="20332" name="Beast Soulshot">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="BeastShot"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_beast_soul_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20333 - Beast Spiritshot
+		The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. Used from the master's inventory.
+	-->
+    <etcitem id="20333" name="Beast Spiritshot">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="BeastShot"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_beast_spirit_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20334 - Blessed Beast Spiritshot
+		The power of a higher-level spirit is bestowed upon a pet/servitor, temporarily increasing its M. Atk. significantly. Used from the master's inventory.
+	-->
+    <etcitem id="20334" name="Blessed Beast Spiritshot">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="BeastShot"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_blessed_beast_spirit_shot_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20335 - XP Rune III (Lv. 1-99) 30%
+		Ancient charm endowed with mysterious symbols. When held in your inventory, increases acquired XP by 30%. The timer decreases even during log-off state. Only one XP Rune can be applied at any given time regardless of additional XP Runes in ones inventory.
+	-->
+    <etcitem id="20335" name="XP Rune III (Lv. 1-99) 30%" add_name="5-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -384,281 +929,6 @@
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
         <set name="durability" value="300"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22041" level="2"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20351 - Rune of Crystal (Lv. 3)
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 3 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20351" name="Rune of Crystal (Lv. 3)" add_name="7-day">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22041" level="1"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20350 - Rune of Crystal (Lv. 5)
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20350" name="Rune of Crystal (Lv. 5)" add_name="10-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="600"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22041" level="2"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20345 - SP Rune 30%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired SP by 30%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20345" name="SP Rune 30%" add_name="7-day">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22040" level="1"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20344 - SP Rune 50%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20344" name="SP Rune 50%" add_name="10-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="600"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22040" level="2"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20347 - Rune of Crystal (Lv. 3)
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 3 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20347" name="Rune of Crystal (Lv. 3)" add_name="5-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="300"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22041" level="1"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20346 - SP Rune 50%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20346" name="SP Rune 50%" add_name="7-day">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22040" level="2"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20341 - SP Rune 30%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20341" name="SP Rune 30%" add_name="5-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="300"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22040" level="1"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20340 - XP Rune III (Lv. 1-99) 50%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP by 50%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20340" name="XP Rune III (Lv. 1-99) 50%" add_name="7-day">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22039" level="2"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20343 - SP Rune 30%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired SP by 30%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20343" name="SP Rune 30%" add_name="10-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="600"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22040" level="1"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20342 - SP Rune 50%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20342" name="SP Rune 50%" add_name="5-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="300"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22040" level="2"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20337 - XP Rune III (Lv. 1-99) 30%
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired XP by 30%. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20337" name="XP Rune III (Lv. 1-99) 30%" add_name="10-hour">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="600"/>
         <set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
@@ -697,10 +967,10 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20339 - XP Rune III (Lv. 1-99) 30%
+		20337 - XP Rune III (Lv. 1-99) 30%
 		Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired XP by 30%. The remaining time decreases even when not playing.
 	-->
-    <etcitem id="20339" name="XP Rune III (Lv. 1-99) 30%" add_name="7-day">
+    <etcitem id="20337" name="XP Rune III (Lv. 1-99) 30%" add_name="10-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -708,7 +978,7 @@
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
+        <set name="durability" value="600"/>
         <set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
@@ -747,1066 +1017,380 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20302 - Agathion - Great Sumo Match
-		Bracelet that summons Agathion - Great Sumo Match. Cooldown is 1 hour.
+		20339 - XP Rune III (Lv. 1-99) 30%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired XP by 30%. The remaining time decreases even when not playing.
 	-->
-    <armor id="20302" name="Agathion - Great Sumo Match" add_name="Big Head / Firework (7-day)">
+    <etcitem id="20339" name="XP Rune III (Lv. 1-99) 30%" add_name="7-day">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
         <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_sumo_match_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21045" level="1"/>
-            <skill id="23059" level="1"/>
-            <skill id="23060" level="1"/>
+            <skill id="22039" level="1"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
+        <set name="material" value="18"/>
+    </etcitem>
     <!--
-		20303 - Agathion - Button-eyed Bear Doll
-		Bracelet that summons Agathion - Button-eyed Bear Doll.
+		20340 - XP Rune III (Lv. 1-99) 50%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP by 50%. The remaining time decreases even when not playing.
 	-->
-    <armor id="20303" name="Agathion - Button-eyed Bear Doll">
+    <etcitem id="20340" name="XP Rune III (Lv. 1-99) 50%" add_name="7-day">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
-        <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21046" level="1"/>
-            <skill id="23052" level="1"/>
-        </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20300 - Agathion - Blue Sumo Wrestler
-		Bracelet that summons Agathion - Blue Sumo Wrestler. Cooldown is 1 hour.
-	-->
-    <armor id="20300" name="Agathion - Blue Sumo Wrestler" add_name="Wild Magic (7-day)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
         <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_sumo_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_exp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21044" level="1"/>
-            <skill id="23058" level="1"/>
+            <skill id="22039" level="2"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
+        <set name="material" value="18"/>
+    </etcitem>
     <!--
-		20301 - Agathion - Great Sumo Match
-		Bracelet that summons Agathion - Great Sumo Match.
+		20341 - SP Rune 30%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
 	-->
-    <armor id="20301" name="Agathion - Great Sumo Match">
+    <etcitem id="20341" name="SP Rune 30%" add_name="5-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_aga_sumo_match_i00"/>
+        <set name="durability" value="300"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
+        <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21045" level="1"/>
-            <skill id="23051" level="1"/>
+            <skill id="22040" level="1"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20319 - Plastic Hair Pack
-		Wrapped Pack containing Plastic Hair.
-	-->
-    <etcitem id="20319" name="Plastic Hair Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="20325" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20318 - Black Gem Mask Pack
-		Wrapped Pack containing Black Gem Mask.
+		20342 - SP Rune 50%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
 	-->
-    <etcitem id="20318" name="Black Gem Mask Pack">
+    <etcitem id="20342" name="SP Rune 50%" add_name="5-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
-        <set name="stackable" value="true"/>
+        <set name="durability" value="300"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
+        <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="20324" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
+        <set name="weight" value="120"/>
+        <skills>
+            <skill id="22040" level="2"/>
+        </skills>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20317 - Horn Hairband Pack
-		Wrapped Pack containing Horn Hairband. Females only.
+		20343 - SP Rune 30%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired SP by 30%. The remaining time decreases even when not playing.
 	-->
-    <etcitem id="20317" name="Horn Hairband Pack">
+    <etcitem id="20343" name="SP Rune 30%" add_name="10-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
-        <set name="stackable" value="true"/>
+        <set name="durability" value="600"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
+        <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="20323" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
+        <set name="weight" value="120"/>
+        <skills>
+            <skill id="22040" level="1"/>
+        </skills>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20316 - Napoleon Hat Pack
-		Wrapped Pack containing Napoleon Hat.
+		20344 - SP Rune 50%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
 	-->
-    <etcitem id="20316" name="Napoleon Hat Pack">
+    <etcitem id="20344" name="SP Rune 50%" add_name="10-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
-        <set name="stackable" value="true"/>
+        <set name="durability" value="600"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
+        <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="20322" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
+        <set name="weight" value="120"/>
+        <skills>
+            <skill id="22040" level="2"/>
+        </skills>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20315 - Goggles Pack
-		Wrapped Pack containing Goggles.
+		20345 - SP Rune 30%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired SP by 30%. The remaining time decreases even when not playing.
 	-->
-    <etcitem id="20315" name="Goggles Pack">
+    <etcitem id="20345" name="SP Rune 30%" add_name="7-day">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="20321" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20314 - Birthday Cake Pack
-		Wrapped Pack containing Birthday Cake.
-	-->
-    <etcitem id="20314" name="Birthday Cake Pack" add_name="Vitality">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="20320" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20313 - Agathion - Daewoonso
-		Bracelet that summons Agathion - Daewoonso. Cooldown is 1 hour.
-	-->
-    <armor id="20313" name="Agathion - Daewoonso" add_name="New Year's Gift (7-day)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
         <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_luckycow_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21050" level="1"/>
-            <skill id="23066" level="1"/>
+            <skill id="22040" level="1"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
+        <set name="material" value="18"/>
+    </etcitem>
     <!--
-		20312 - Agathion - Daewoonso
-		Bracelet that summons Agathion - Daewoonso.
+		20346 - SP Rune 50%
+		Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired SP by 50%. The remaining time decreases even when not playing.
 	-->
-    <armor id="20312" name="Agathion - Daewoonso">
+    <etcitem id="20346" name="SP Rune 50%" add_name="7-day">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_aga_luckycow_i00"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
-        <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21050" level="1"/>
-            <skill id="23056" level="1"/>
-        </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20311 - Agathion - Wonboso
-		Bracelet that summons Agathion - Wonboso. Cooldown is 1 hour.
-	-->
-    <armor id="20311" name="Agathion - Wonboso" add_name="Wind Walk (7-day)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
         <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_cashcow_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_sp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21049" level="1"/>
-            <skill id="23065" level="1"/>
+            <skill id="22040" level="2"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
+        <set name="material" value="18"/>
+    </etcitem>
     <!--
-		20310 - Agathion - Wonboso
-		Bracelet that summons Agathion - Wonboso.
+		20347 - Rune of Crystal (Lv. 3)
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 3 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
 	-->
-    <armor id="20310" name="Agathion - Wonboso">
+    <etcitem id="20347" name="Rune of Crystal (Lv. 3)" add_name="5-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_aga_cashcow_i00"/>
+        <set name="durability" value="300"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
+        <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21049" level="1"/>
-            <skill id="23055" level="1"/>
+            <skill id="22041" level="1"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
+        <set name="material" value="18"/>
+    </etcitem>
     <!--
-		20309 - Agathion - Dryad
-		Can summon Agathion - Dryad when equipped.
+		20348 - Rune of Crystal (Lv. 5)
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
 	-->
-    <armor id="20309" name="Agathion - Dryad">
+    <etcitem id="20348" name="Rune of Crystal (Lv. 5)" add_name="5-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_aga_dryad_i00"/>
+        <set name="durability" value="300"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
+        <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21048" level="1"/>
-            <skill id="23054" level="1"/>
+            <skill id="22041" level="2"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
+        <set name="material" value="18"/>
+    </etcitem>
     <!--
-		20308 - Agathion - God of Fortune
-		Bracelet that summons Agathion - God of Fortune. Cooldown is 1 hour.
+		20349 - Rune of Crystal (Lv. 3)
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 3 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
 	-->
-    <armor id="20308" name="Agathion - God of Fortune" add_name="Vitality (7-day)">
+    <etcitem id="20349" name="Rune of Crystal (Lv. 3)" add_name="10-hour">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="600"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="120"/>
+        <skills>
+            <skill id="22041" level="1"/>
+        </skills>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20350 - Rune of Crystal (Lv. 5)
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
+	-->
+    <etcitem id="20350" name="Rune of Crystal (Lv. 5)" add_name="10-hour">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="600"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="120"/>
+        <skills>
+            <skill id="22041" level="2"/>
+        </skills>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20351 - Rune of Crystal (Lv. 3)
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 3 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
+	-->
+    <etcitem id="20351" name="Rune of Crystal (Lv. 3)" add_name="7-day">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
         <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_wealth_god_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21047" level="1"/>
-            <skill id="23064" level="1"/>
+            <skill id="22041" level="1"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
+        <set name="material" value="18"/>
+    </etcitem>
     <!--
-		20307 - Agathion - God of Fortune
-		Bracelet that summons Agathion - God of Fortune.
+		20352 - Rune of Crystal (Lv. 5)
+		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
 	-->
-    <armor id="20307" name="Agathion - God of Fortune">
+    <etcitem id="20352" name="Rune of Crystal (Lv. 5)" add_name="7-day">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_aga_wealth_god_i00"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
-        <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21047" level="1"/>
-            <skill id="23053" level="1"/>
-        </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20306 - Agathion - Button-eyed Bear Doll
-		Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 1 hour.
-	-->
-    <armor id="20306" name="Agathion - Button-eyed Bear Doll" add_name="Vitality (7-day)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
+        <set name="type" value="RUNE"/>
         <set name="freightable" value="true"/>
         <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
         <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
         <set name="temporal" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
+        <set name="weight" value="120"/>
         <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21046" level="1"/>
-            <skill id="23063" level="1"/>
+            <skill id="22041" level="2"/>
         </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20305 - Agathion - Button-eyed Bear Doll
-		Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hours.
-	-->
-    <armor id="20305" name="Agathion - Button-eyed Bear Doll" add_name="Resurrection (7-day)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
-        <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21046" level="1"/>
-            <skill id="23062" level="1"/>
-        </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20304 - Agathion - Button-eyed Bear Doll
-		Bracelet that summons Agathion - Button-eyed Bear Doll. Cooldown is 12 hours.
-	-->
-    <armor id="20304" name="Agathion - Button-eyed Bear Doll" add_name="Escape (7-day)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_aga_toybear_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
-        <skills>
-            <skill id="3267" level="1"/>
-            <skill id="21046" level="1"/>
-            <skill id="23061" level="1"/>
-        </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20385 - Scroll of Escape: Ivory Tower
-		Magic scroll that moves you to Ivory Tower.
-	-->
-    <etcitem id="20385" name="Scroll of Escape: Ivory Tower">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="14"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
         <!--added by blood-->
         <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20384 - Scroll of Escape: Town of Oren
-		Magic scroll that moves you to Town of Oren.
+		20353 - Greater CP Potion
+		It recovers CP by 200. Cooldown is very short.
 	-->
-    <etcitem id="20384" name="Scroll of Escape: Town of Oren">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="13"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20387 - Scroll of Escape: Town of Aden
-		Magic scroll that teleports you to the Town of Aden.
-	-->
-    <etcitem id="20387" name="Scroll of Escape: Town of Aden">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="16"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20386 - Scroll of Escape: Hunter's Village
-		Magic scroll that moves you to Hunter's Village.
-	-->
-    <etcitem id="20386" name="Scroll of Escape: Hunter's Village">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="15"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20389 - Scroll of Escape: Town of Rune
-		Magic scroll that moves you to the Town of Rune.
-	-->
-    <etcitem id="20389" name="Scroll of Escape: Town of Rune">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="18"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20388 - Scroll of Escape: Town of Goddard
-		Magic scroll that moves you to Town of Goddard.
-	-->
-    <etcitem id="20388" name="Scroll of Escape: Town of Goddard">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="17"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20391 - Vitality Maintaining Potion
-		Retains Vitality for 10 min. Cooldown is 30min. Vitality item with limited usage.
-	-->
-    <etcitem id="20391" name="Vitality Maintaining Potion">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="1800000"/>
-        <set name="delay_share_group" value="15"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_vitality_potion_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="36"/>
-        <skills>
-            <skill id="22054" level="1"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20390 - Scroll of Escape: Town of Schuttgart
-		Magic scroll that moves you to Town of Schuttgart.
-	-->
-    <etcitem id="20390" name="Scroll of Escape: Town of Schuttgart">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="19"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20393 - Sweet Fruit Cocktail
-		A Cocktail made of various rare fruits. When consumed, the effects of Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance and Blessed Body can be felt for 1 hour .
-	-->
-    <etcitem id="20393" name="Sweet Fruit Cocktail">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="handler" value="Cocktails"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="3000"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_fruit_cocktail_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="5"/>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20392 - Vitality Replenishing Potion
-		Magic potion that replenishes some Vitality. Cooldown is 60 minutes. Vitality item with limited usage.
-	-->
-    <etcitem id="20392" name="Vitality Replenishing Potion">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="1800000"/>
-        <set name="delay_share_group" value="15"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_vitality_potion_i01"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <skills>
-            <skill id="22055" level="1"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20395 - Mount - Steam Beetle Pack
-		Wrapped Pack containing bracelet that summons Steam Beetle.
-	-->
-    <etcitem id="20395" name="Mount - Steam Beetle Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="icon.etc_pi_gift_box_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="20396" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="0"/>
-    </etcitem>
-    <!--
-		20394 - Fresh Fruit Cocktail
-		A Cocktail made of various rare fruits. When consumed, the effects of Berserker Spirit, Magic Barrier, Blessed Soul, Empower, Greater Acumen, Clarity, Blessed Body and Wild Magic can be felt for 1 hour.
-	-->
-    <etcitem id="20394" name="Fresh Fruit Cocktail">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="handler" value="Cocktails"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="3000"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_fruit_cocktail_i01"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="5"/>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20397 - Newbie Level-Up Pack
-		When used, several types of items that help hunting can be acquired.
-	-->
-    <etcitem id="20397" name="Newbie Level-Up Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_lucky_bag_box_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="6354" min_count="1" max_count="1" chance="100.0"/>
-            <capsuled_item id="6355" min_count="1" max_count="1" chance="100.0"/>
-            <capsuled_item id="13121" min_count="1" max_count="1" chance="100.0"/>
-            <capsuled_item id="1060" min_count="20" max_count="20" chance="100.0"/>
-            <capsuled_item id="5789" min_count="1000" max_count="1000" chance="100.0"/>
-            <capsuled_item id="5790" min_count="1000" max_count="1000" chance="100.0"/>
-            <capsuled_item id="9191" min_count="1" max_count="1" chance="100.0"/>
-            <capsuled_item id="5593" min_count="1" max_count="1" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20396 - Mount - Steam Beetle
-		Can mount a Steam Beetle when equipped.
-	-->
-    <armor id="20396" name="Mount - Steam Beetle">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="30"/>
-        <equip>
-            <slot id="LEFT_BRACELET"/>
-        </equip>
-        <skills>
-            <skill id="8261" level="1"/>
-        </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		20399 - Laborer Hat
-		Hat that was worn by Reipung.
-	-->
-    <armor id="20399" name="Laborer Hat" add_name="Blessed Body (7-day)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="BranchSys.icon.br_people_cap_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="10"/>
-        <equip>
-            <slot id="FACE"/>
-        </equip>
-        <skills>
-            <skill id="21052" level="4"/>
-        </skills>
-        <cond msgId="1507">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="13"/>
-    </armor>
-    <!--
-		20398 - Fast Growth Pack
-		When used, several types of items that help hunting can be acquired.
-	-->
-    <etcitem id="20398" name="Fast Growth Pack">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="EXTRACTABLE"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_lucky_bag_box_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <capsuled_items>
-            <capsuled_item id="13421" min_count="10" max_count="10" chance="100.0"/>
-            <capsuled_item id="22000" min_count="1" max_count="1" chance="100.0"/>
-            <capsuled_item id="22003" min_count="1" max_count="1" chance="100.0"/>
-            <capsuled_item id="10649" min_count="3" max_count="3" chance="100.0"/>
-        </capsuled_items>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20355 - Elixir of CP (C-grade)
-		It recovers CP by 1500. Any character level 40 or above and level 51 or below can use it only for oneself. Cooldown 5 min.
-	-->
-    <etcitem id="20355" name="Elixir of CP (C-grade)">
+    <etcitem id="20353" name="Greater CP Potion">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
         <set name="type" value="POTION"/>
         <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="300000"/>
-        <set name="delay_share_group" value="7"/>
-        <set name="crystal_type" value="C"/>
+        <set name="reuse_delay" value="100"/>
+        <set name="crystal_type" value="NONE"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_combative_c_i00"/>
+        <set name="icon" value="BranchSys.icon.br_cp_potion_i01"/>
         <set name="stackable" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="weight" value="5"/>
+        <set name="weight" value="100"/>
         <skills>
-            <skill id="22043" level="3"/>
+            <skill id="22042" level="1"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
         </cond>
         <!--added by blood-->
-        <set name="grade" value="2"/>
+        <set name="grade" value="0"/>
         <set name="rarity" value="1"/>
         <set name="material" value="53"/>
     </etcitem>
@@ -1840,92 +1424,10 @@
         <set name="material" value="53"/>
     </etcitem>
     <!--
-		20353 - Greater CP Potion
-		It recovers CP by 200. Cooldown is very short.
+		20355 - Elixir of CP (C-grade)
+		It recovers CP by 1500. Any character level 40 or above and level 51 or below can use it only for oneself. Cooldown 5 min.
 	-->
-    <etcitem id="20353" name="Greater CP Potion">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="100"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_cp_potion_i01"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="100"/>
-        <skills>
-            <skill id="22042" level="1"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20352 - Rune of Crystal (Lv. 5)
-		Ancient characters which bestow a mysterious ability if stored in the inventory. It decreases 5 levels of penalty for your equipment grade. The remaining time decreases even when not playing.
-	-->
-    <etcitem id="20352" name="Rune of Crystal (Lv. 5)" add_name="7-day">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="RUNE"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="durability" value="10080"/>
-        <set name="icon" value="br_cashtex.item.br_cash_rune_of_rp_i00"/>
-        <set name="temporal" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <skills>
-            <skill id="22041" level="2"/>
-        </skills>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20359 - Elixir of Life (D-grade)
-		Recovers HP by 50%. Any character between levels 20 and 39 can use it only for oneself. Cooldown 5 min.
-	-->
-    <etcitem id="20359" name="Elixir of Life (D-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="300000"/>
-        <set name="delay_share_group" value="2"/>
-        <set name="crystal_type" value="D"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_d_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="5"/>
-        <skills>
-            <skill id="22044" level="2"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20358 - Elixir of CP (S-grade)
-		It recovers CP by 3000. Can only be used by characters level 76 - 84 upon themselves. Cooldown 5 min.
-	-->
-    <etcitem id="20358" name="Elixir of CP (S-grade)">
+    <etcitem id="20355" name="Elixir of CP (C-grade)">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -1933,49 +1435,20 @@
         <set name="freightable" value="true"/>
         <set name="reuse_delay" value="300000"/>
         <set name="delay_share_group" value="7"/>
-        <set name="crystal_type" value="S"/>
+        <set name="crystal_type" value="C"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_combative_s_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_combative_c_i00"/>
         <set name="stackable" value="true"/>
         <set name="tradeable" value="false"/>
         <set name="weight" value="5"/>
         <skills>
-            <skill id="22043" level="6"/>
+            <skill id="22043" level="3"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
         </cond>
         <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20357 - Elixir of CP (A-grade)
-		It recovers CP by 2500. Any character between levels 61 and 75 can use it only for oneself. Cooldown 5 min.
-	-->
-    <etcitem id="20357" name="Elixir of CP (A-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="300000"/>
-        <set name="delay_share_group" value="7"/>
-        <set name="crystal_type" value="A"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_combative_a_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="5"/>
-        <skills>
-            <skill id="22043" level="5"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="4"/>
+        <set name="grade" value="2"/>
         <set name="rarity" value="1"/>
         <set name="material" value="53"/>
     </etcitem>
@@ -2009,54 +1482,25 @@
         <set name="material" value="53"/>
     </etcitem>
     <!--
-		20363 - Elixir of Life (S-grade)
-		Recovers HP by 50%. Can only be used by characters level 76 - 84 upon themselves. Cooldown 5 min.
+		20357 - Elixir of CP (A-grade)
+		It recovers CP by 2500. Any character between levels 61 and 75 can use it only for oneself. Cooldown 5 min.
 	-->
-    <etcitem id="20363" name="Elixir of Life (S-grade)">
+    <etcitem id="20357" name="Elixir of CP (A-grade)">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
         <set name="type" value="POTION"/>
         <set name="freightable" value="true"/>
         <set name="reuse_delay" value="300000"/>
-        <set name="delay_share_group" value="6"/>
-        <set name="crystal_type" value="S"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_s_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="5"/>
-        <skills>
-            <skill id="22044" level="6"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="53"/>
-    </etcitem>
-    <!--
-		20362 - Elixir of Life (A-grade)
-		Recovers HP by 50%. Any character between levels 61 and 75 can use it only for oneself. Cooldown 5 min.
-	-->
-    <etcitem id="20362" name="Elixir of Life (A-grade)">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="POTION"/>
-        <set name="freightable" value="true"/>
-        <set name="reuse_delay" value="300000"/>
-        <set name="delay_share_group" value="5"/>
+        <set name="delay_share_group" value="7"/>
         <set name="crystal_type" value="A"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_a_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_combative_a_i00"/>
         <set name="stackable" value="true"/>
         <set name="tradeable" value="false"/>
         <set name="weight" value="5"/>
         <skills>
-            <skill id="22044" level="5"/>
+            <skill id="22043" level="5"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
@@ -2067,31 +1511,60 @@
         <set name="material" value="53"/>
     </etcitem>
     <!--
-		20361 - Elixir of Life (B-grade)
-		Recovers HP by 50%. Any character level 52 or above and level 60 or below can use it only for oneself. Cooldown 5 min.
+		20358 - Elixir of CP (S-grade)
+		It recovers CP by 3000. Can only be used by characters level 76 - 84 upon themselves. Cooldown 5 min.
 	-->
-    <etcitem id="20361" name="Elixir of Life (B-grade)">
+    <etcitem id="20358" name="Elixir of CP (S-grade)">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
         <set name="type" value="POTION"/>
         <set name="freightable" value="true"/>
         <set name="reuse_delay" value="300000"/>
-        <set name="delay_share_group" value="4"/>
-        <set name="crystal_type" value="B"/>
+        <set name="delay_share_group" value="7"/>
+        <set name="crystal_type" value="S"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_b_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_combative_s_i00"/>
         <set name="stackable" value="true"/>
         <set name="tradeable" value="false"/>
         <set name="weight" value="5"/>
         <skills>
-            <skill id="22044" level="4"/>
+            <skill id="22043" level="6"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
         </cond>
         <!--added by blood-->
-        <set name="grade" value="3"/>
+        <set name="grade" value="5"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		20359 - Elixir of Life (D-grade)
+		Recovers HP by 50%. Any character between levels 20 and 39 can use it only for oneself. Cooldown 5 min.
+	-->
+    <etcitem id="20359" name="Elixir of Life (D-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="POTION"/>
+        <set name="freightable" value="true"/>
+        <set name="reuse_delay" value="300000"/>
+        <set name="delay_share_group" value="2"/>
+        <set name="crystal_type" value="D"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_d_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="5"/>
+        <skills>
+            <skill id="22044" level="2"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
         <set name="rarity" value="1"/>
         <set name="material" value="53"/>
     </etcitem>
@@ -2125,37 +1598,97 @@
         <set name="material" value="53"/>
     </etcitem>
     <!--
-		20367 - Transformation Scroll: Unicorn
-		Transforms you into a Unicorn for 30 min.
+		20361 - Elixir of Life (B-grade)
+		Recovers HP by 50%. Any character level 52 or above and level 60 or below can use it only for oneself. Cooldown 5 min.
 	-->
-    <etcitem id="20367" name="Transformation Scroll: Unicorn">
+    <etcitem id="20361" name="Elixir of Life (B-grade)">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
-        <set name="type" value="SCROLL"/>
+        <set name="type" value="POTION"/>
         <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
+        <set name="reuse_delay" value="300000"/>
+        <set name="delay_share_group" value="4"/>
+        <set name="crystal_type" value="B"/>
         <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_scroll_of_transformation_i00"/>
+        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_b_i00"/>
         <set name="stackable" value="true"/>
         <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
+        <set name="weight" value="5"/>
         <skills>
-            <skill id="22048" level="1"/>
+            <skill id="22044" level="4"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
         </cond>
         <!--added by blood-->
-        <set name="grade" value="0"/>
+        <set name="grade" value="3"/>
         <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
+        <set name="material" value="53"/>
     </etcitem>
     <!--
-		20366 - Transformation Scroll: Grail Apostle
-		Transforms you into a Grail Apostle for 30 min.
+		20362 - Elixir of Life (A-grade)
+		Recovers HP by 50%. Any character between levels 61 and 75 can use it only for oneself. Cooldown 5 min.
 	-->
-    <etcitem id="20366" name="Transformation Scroll: Grail Apostle">
+    <etcitem id="20362" name="Elixir of Life (A-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="POTION"/>
+        <set name="freightable" value="true"/>
+        <set name="reuse_delay" value="300000"/>
+        <set name="delay_share_group" value="5"/>
+        <set name="crystal_type" value="A"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_a_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="5"/>
+        <skills>
+            <skill id="22044" level="5"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="4"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		20363 - Elixir of Life (S-grade)
+		Recovers HP by 50%. Can only be used by characters level 76 - 84 upon themselves. Cooldown 5 min.
+	-->
+    <etcitem id="20363" name="Elixir of Life (S-grade)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="POTION"/>
+        <set name="freightable" value="true"/>
+        <set name="reuse_delay" value="300000"/>
+        <set name="delay_share_group" value="6"/>
+        <set name="crystal_type" value="S"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="br_cashtex.item.br_cash_elixir_of_life_s_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="5"/>
+        <skills>
+            <skill id="22044" level="6"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="5"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		20364 - Transformation Scroll: Onyx Beast
+		Transforms you into an Onyx Beast for 30 min.
+	-->
+    <etcitem id="20364" name="Transformation Scroll: Onyx Beast">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2200,10 +1733,85 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20364 - Transformation Scroll: Onyx Beast
-		Transforms you into an Onyx Beast for 30 min.
+		20366 - Transformation Scroll: Grail Apostle
+		Transforms you into a Grail Apostle for 30 min.
 	-->
-    <etcitem id="20364" name="Transformation Scroll: Onyx Beast">
+    <etcitem id="20366" name="Transformation Scroll: Grail Apostle">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="SCROLL"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_scroll_of_transformation_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="120"/>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20367 - Transformation Scroll: Unicorn
+		Transforms you into a Unicorn for 30 min.
+	-->
+    <etcitem id="20367" name="Transformation Scroll: Unicorn">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="SCROLL"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_scroll_of_transformation_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="120"/>
+        <skills>
+            <skill id="22048" level="1"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20368 - Transformation Scroll: Lilim Knight
+		Transforms you into a Lilim Knight for 30 min.
+	-->
+    <etcitem id="20368" name="Transformation Scroll: Lilim Knight">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="SCROLL"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_scroll_of_transformation_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="120"/>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20369 - Transformation Scroll: Golem Guardian
+		Transforms you into a Golem Guardian for 30 min.
+	-->
+    <etcitem id="20369" name="Transformation Scroll: Golem Guardian">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2275,108 +1883,6 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20368 - Transformation Scroll: Lilim Knight
-		Transforms you into a Lilim Knight for 30 min.
-	-->
-    <etcitem id="20368" name="Transformation Scroll: Lilim Knight">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="SCROLL"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_scroll_of_transformation_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20369 - Transformation Scroll: Golem Guardian
-		Transforms you into a Golem Guardian for 30 min.
-	-->
-    <etcitem id="20369" name="Transformation Scroll: Golem Guardian">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="type" value="SCROLL"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_scroll_of_transformation_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="120"/>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20374 - Scroll of Escape: Dark Elf Village
-		Magic scroll that moves you to Dark Elf Village.
-	-->
-    <etcitem id="20374" name="Scroll of Escape: Dark Elf Village">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="3"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
-		20375 - Scroll of Escape: Orc Village
-		Magic scroll that moves you to Orc Village.
-	-->
-    <etcitem id="20375" name="Scroll of Escape: Orc Village">
-        <set name="commissionable" value="false"/>
-        <set name="sellable" value="false"/>
-        <set name="privatestoreable" value="false"/>
-        <set name="handler" value="SkillsReduce"/>
-        <set name="freightable" value="true"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="dropable" value="false"/>
-        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
-        <set name="stackable" value="true"/>
-        <set name="tradeable" value="false"/>
-        <set name="weight" value="30"/>
-        <skills>
-            <skill id="22053" level="4"/>
-        </skills>
-        <cond msgId="1508">
-            <player olympiad="false"/>
-        </cond>
-        <!--added by blood-->
-        <set name="grade" value="0"/>
-        <set name="rarity" value="1"/>
-        <set name="material" value="18"/>
-    </etcitem>
-    <!--
 		20372 - Scroll of Escape: Talking Island Village
 		Magic scroll that moves you to Talking Island Village.
 	-->
@@ -2431,10 +1937,10 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20378 - Scroll of Escape: Town of Gludio
-		Magic scroll that teleports you to the Town of Gludio.
+		20374 - Scroll of Escape: Dark Elf Village
+		Magic scroll that moves you to Dark Elf Village.
 	-->
-    <etcitem id="20378" name="Scroll of Escape: Town of Gludio">
+    <etcitem id="20374" name="Scroll of Escape: Dark Elf Village">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2447,7 +1953,7 @@
         <set name="tradeable" value="false"/>
         <set name="weight" value="30"/>
         <skills>
-            <skill id="22053" level="7"/>
+            <skill id="22053" level="3"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
@@ -2458,10 +1964,10 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20379 - Scroll of Escape: Town of Dion
-		Magic scroll that moves you to Town of Dion.
+		20375 - Scroll of Escape: Orc Village
+		Magic scroll that moves you to Orc Village.
 	-->
-    <etcitem id="20379" name="Scroll of Escape: Town of Dion">
+    <etcitem id="20375" name="Scroll of Escape: Orc Village">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2474,7 +1980,7 @@
         <set name="tradeable" value="false"/>
         <set name="weight" value="30"/>
         <skills>
-            <skill id="22053" level="8"/>
+            <skill id="22053" level="4"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
@@ -2539,10 +2045,10 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20382 - Scroll of Escape: Hardin's Academy
-		Magic scroll that moves you to Hardin's Academy.
+		20378 - Scroll of Escape: Town of Gludio
+		Magic scroll that teleports you to the Town of Gludio.
 	-->
-    <etcitem id="20382" name="Scroll of Escape: Hardin's Academy">
+    <etcitem id="20378" name="Scroll of Escape: Town of Gludio">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2555,7 +2061,7 @@
         <set name="tradeable" value="false"/>
         <set name="weight" value="30"/>
         <skills>
-            <skill id="22053" level="11"/>
+            <skill id="22053" level="7"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
@@ -2566,10 +2072,10 @@
         <set name="material" value="18"/>
     </etcitem>
     <!--
-		20383 - Scroll of Escape: Heine
-		Magic scroll that moves you to Heine.
+		20379 - Scroll of Escape: Town of Dion
+		Magic scroll that moves you to Town of Dion.
 	-->
-    <etcitem id="20383" name="Scroll of Escape: Heine">
+    <etcitem id="20379" name="Scroll of Escape: Town of Dion">
         <set name="commissionable" value="false"/>
         <set name="sellable" value="false"/>
         <set name="privatestoreable" value="false"/>
@@ -2582,7 +2088,7 @@
         <set name="tradeable" value="false"/>
         <set name="weight" value="30"/>
         <skills>
-            <skill id="22053" level="12"/>
+            <skill id="22053" level="8"/>
         </skills>
         <cond msgId="1508">
             <player olympiad="false"/>
@@ -2646,4 +2152,498 @@
         <set name="rarity" value="1"/>
         <set name="material" value="18"/>
     </etcitem>
+    <!--
+		20382 - Scroll of Escape: Hardin's Academy
+		Magic scroll that moves you to Hardin's Academy.
+	-->
+    <etcitem id="20382" name="Scroll of Escape: Hardin's Academy">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="11"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20383 - Scroll of Escape: Heine
+		Magic scroll that moves you to Heine.
+	-->
+    <etcitem id="20383" name="Scroll of Escape: Heine">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="12"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20384 - Scroll of Escape: Town of Oren
+		Magic scroll that moves you to Town of Oren.
+	-->
+    <etcitem id="20384" name="Scroll of Escape: Town of Oren">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="13"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20385 - Scroll of Escape: Ivory Tower
+		Magic scroll that moves you to Ivory Tower.
+	-->
+    <etcitem id="20385" name="Scroll of Escape: Ivory Tower">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="14"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20386 - Scroll of Escape: Hunter's Village
+		Magic scroll that moves you to Hunter's Village.
+	-->
+    <etcitem id="20386" name="Scroll of Escape: Hunter's Village">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="15"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20387 - Scroll of Escape: Town of Aden
+		Magic scroll that teleports you to the Town of Aden.
+	-->
+    <etcitem id="20387" name="Scroll of Escape: Town of Aden">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="16"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20388 - Scroll of Escape: Town of Goddard
+		Magic scroll that moves you to Town of Goddard.
+	-->
+    <etcitem id="20388" name="Scroll of Escape: Town of Goddard">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="17"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20389 - Scroll of Escape: Town of Rune
+		Magic scroll that moves you to the Town of Rune.
+	-->
+    <etcitem id="20389" name="Scroll of Escape: Town of Rune">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="18"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20390 - Scroll of Escape: Town of Schuttgart
+		Magic scroll that moves you to Town of Schuttgart.
+	-->
+    <etcitem id="20390" name="Scroll of Escape: Town of Schuttgart">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_escape_scroll_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="30"/>
+        <skills>
+            <skill id="22053" level="19"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20391 - Vitality Maintaining Potion
+		Retains Vitality for 10 min. Cooldown is 30min. Vitality item with limited usage.
+	-->
+    <etcitem id="20391" name="Vitality Maintaining Potion">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="POTION"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="reuse_delay" value="1800000"/>
+        <set name="delay_share_group" value="15"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_vitality_potion_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="36"/>
+        <skills>
+            <skill id="22054" level="1"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		20392 - Vitality Replenishing Potion
+		Magic potion that replenishes some Vitality. Cooldown is 60 minutes. Vitality item with limited usage.
+	-->
+    <etcitem id="20392" name="Vitality Replenishing Potion">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="POTION"/>
+        <set name="handler" value="SkillsReduce"/>
+        <set name="freightable" value="true"/>
+        <set name="reuse_delay" value="1800000"/>
+        <set name="delay_share_group" value="15"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_vitality_potion_i01"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <skills>
+            <skill id="22055" level="1"/>
+        </skills>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		20393 - Sweet Fruit Cocktail
+		A Cocktail made of various rare fruits. When consumed, the effects of Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance and Blessed Body can be felt for 1 hour .
+	-->
+    <etcitem id="20393" name="Sweet Fruit Cocktail">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="POTION"/>
+        <set name="handler" value="Cocktails"/>
+        <set name="freightable" value="true"/>
+        <set name="reuse_delay" value="3000"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_fruit_cocktail_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="5"/>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		20394 - Fresh Fruit Cocktail
+		A Cocktail made of various rare fruits. When consumed, the effects of Berserker Spirit, Magic Barrier, Blessed Soul, Empower, Greater Acumen, Clarity, Blessed Body and Wild Magic can be felt for 1 hour.
+	-->
+    <etcitem id="20394" name="Fresh Fruit Cocktail">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="POTION"/>
+        <set name="handler" value="Cocktails"/>
+        <set name="freightable" value="true"/>
+        <set name="reuse_delay" value="3000"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_fruit_cocktail_i01"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="5"/>
+        <cond msgId="1508">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="53"/>
+    </etcitem>
+    <!--
+		20395 - Mount - Steam Beetle Pack
+		Wrapped Pack containing bracelet that summons Steam Beetle.
+	-->
+    <etcitem id="20395" name="Mount - Steam Beetle Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="icon.etc_pi_gift_box_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
+        <capsuled_items>
+            <capsuled_item id="20396" min_count="1" max_count="1" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="0"/>
+    </etcitem>
+    <!--
+		20396 - Mount - Steam Beetle
+		Can mount a Steam Beetle when equipped.
+	-->
+    <armor id="20396" name="Mount - Steam Beetle">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="icon.etc_rbracelet_aga_agit_i00"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="30"/>
+        <equip>
+            <slot id="LEFT_BRACELET"/>
+        </equip>
+        <skills>
+            <skill id="8261" level="1"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		20397 - Newbie Level-Up Pack
+		When used, several types of items that help hunting can be acquired.
+	-->
+    <etcitem id="20397" name="Newbie Level-Up Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_lucky_bag_box_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
+        <capsuled_items>
+            <capsuled_item id="6354" min_count="1" max_count="1" chance="100.0"/>
+            <capsuled_item id="6355" min_count="1" max_count="1" chance="100.0"/>
+            <capsuled_item id="13121" min_count="1" max_count="1" chance="100.0"/>
+            <capsuled_item id="1060" min_count="20" max_count="20" chance="100.0"/>
+            <capsuled_item id="5789" min_count="1000" max_count="1000" chance="100.0"/>
+            <capsuled_item id="5790" min_count="1000" max_count="1000" chance="100.0"/>
+            <capsuled_item id="9191" min_count="1" max_count="1" chance="100.0"/>
+            <capsuled_item id="5593" min_count="1" max_count="1" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20398 - Fast Growth Pack
+		When used, several types of items that help hunting can be acquired.
+	-->
+    <etcitem id="20398" name="Fast Growth Pack">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="type" value="EXTRACTABLE"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="icon" value="BranchSys.icon.br_lucky_bag_box_i00"/>
+        <set name="stackable" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="weight" value="100"/>
+        <capsuled_items>
+            <capsuled_item id="13421" min_count="10" max_count="10" chance="100.0"/>
+            <capsuled_item id="22000" min_count="1" max_count="1" chance="100.0"/>
+            <capsuled_item id="22003" min_count="1" max_count="1" chance="100.0"/>
+            <capsuled_item id="10649" min_count="3" max_count="3" chance="100.0"/>
+        </capsuled_items>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="18"/>
+    </etcitem>
+    <!--
+		20399 - Laborer Hat
+		Hat that was worn by Reipung.
+	-->
+    <armor id="20399" name="Laborer Hat" add_name="Blessed Body (7-day)">
+        <set name="commissionable" value="false"/>
+        <set name="sellable" value="false"/>
+        <set name="privatestoreable" value="false"/>
+        <set name="freightable" value="true"/>
+        <set name="crystal_type" value="NONE"/>
+        <set name="dropable" value="false"/>
+        <set name="durability" value="10080"/>
+        <set name="icon" value="BranchSys.icon.br_people_cap_i00"/>
+        <set name="temporal" value="true"/>
+        <set name="tradeable" value="false"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="10"/>
+        <equip>
+            <slot id="FACE"/>
+        </equip>
+        <skills>
+            <skill id="21052" level="4"/>
+        </skills>
+        <cond msgId="1507">
+            <player olympiad="false"/>
+        </cond>
+        <!--added by blood-->
+        <set name="grade" value="0"/>
+        <set name="rarity" value="1"/>
+        <set name="material" value="13"/>
+    </armor>
 </list>

@@ -2,33 +2,1487 @@
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
     <!--
-		11649 - Common Item - Fleuret
-		Kamael-exclusive Weapon: Shadow weapon - Spinebone Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+		11600 - Dynasty Ring
+		Masterwork Item that has the effect of MP + 23 and Dark Resistance + 1.14.
 	-->
-    <weapon id="11649" name="Common Item - Fleuret">
+    <armor id="11600" name="Dynasty Ring">
+        <set name="variation_group_id" value="24"/>
+        <set name="crystal_count" value="190"/>
+        <set name="crystal_type" value="S"/>
+        <set name="icon" value="icon.accessary_dynasty_ring_i00"/>
+        <set name="price" value="3971000"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <skills>
+            <skill id="3823" level="1"/>
+        </skills>
+        <for>
+            <add stat="mDef" order="0x10" value="60"/>
+            <add stat="maxMp" order="0x60" value="23"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="5"/>
+        <set name="rarity" value="2"/>
+        <set name="material" value="3"/>
+    </armor>
+    <!--
+		11601 - Dynasty Earring
+		Masterwork Item that has the effect of MP+ 35 and Sleep Resistance + 5.
+	-->
+    <armor id="11601" name="Dynasty Earring">
+        <set name="variation_group_id" value="24"/>
+        <set name="crystal_count" value="285"/>
+        <set name="crystal_type" value="S"/>
+        <set name="icon" value="icon.accessary_dynasty_earing_i00"/>
+        <set name="price" value="5956000"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_EAR"/>
+            <slot id="LEFT_EAR"/>
+        </equip>
+        <skills>
+            <skill id="3824" level="1"/>
+        </skills>
+        <for>
+            <add stat="mDef" order="0x10" value="79"/>
+            <add stat="maxMp" order="0x60" value="35"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="5"/>
+        <set name="rarity" value="2"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		11602 - Sealed Dynasty Necklace
+		Sealed Masterwork Item that has the effect of MP + 46 and Max MP + 30 when the seal is broken.
+	-->
+    <armor id="11602" name="Sealed Dynasty Necklace">
+        <set name="crystal_count" value="258"/>
+        <set name="crystal_type" value="S"/>
+        <set name="icon" value="icon.accessary_dynasty_necklace_i01"/>
+        <set name="price" value="5376000"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="NECKLACE"/>
+        </equip>
+        <for>
+            <add stat="mDef" order="0x10" value="95"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="5"/>
+        <set name="rarity" value="2"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		11603 - Sealed Dynasty Ring
+		Sealed Masterwork Item that increases Dark Resistance by 1.14.
+	-->
+    <armor id="11603" name="Sealed Dynasty Ring">
+        <set name="crystal_count" value="129"/>
+        <set name="crystal_type" value="S"/>
+        <set name="icon" value="icon.accessary_dynasty_ring_i01"/>
+        <set name="price" value="2688000"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_FINGER"/>
+            <slot id="LEFT_FINGER"/>
+        </equip>
+        <for>
+            <add stat="mDef" order="0x10" value="53"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="5"/>
+        <set name="rarity" value="2"/>
+        <set name="material" value="3"/>
+    </armor>
+    <!--
+		11604 - Sealed Dynasty Earring
+		Sealed Masterwork Item that has the effect of MP+ 35 and Sleep Resistance + 5.
+	-->
+    <armor id="11604" name="Sealed Dynasty Earring">
+        <set name="crystal_count" value="194"/>
+        <set name="crystal_type" value="S"/>
+        <set name="icon" value="icon.accessary_dynasty_earing_i01"/>
+        <set name="price" value="4032000"/>
+        <set name="type" value="NONE"/>
+        <set name="weight" value="150"/>
+        <equip>
+            <slot id="RIGHT_EAR"/>
+            <slot id="LEFT_EAR"/>
+        </equip>
+        <for>
+            <add stat="mDef" order="0x10" value="71"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="5"/>
+        <set name="rarity" value="2"/>
+        <set name="material" value="4"/>
+    </armor>
+    <!--
+		11605 - Common Item - Steel Sword
+		Steel Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11605" name="Common Item - Steel Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_iron_sword_i00"/>
+        <set name="kamael_convert" value="11621"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="700"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="49"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11606 - Common Item - Reinforced Bow
+		Reinforced Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11606" name="Common Item - Reinforced Bow">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_strengthening_bow_i00"/>
+        <set name="kamael_convert" value="11624"/>
+        <set name="mp_consume" value="2"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="6"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="623"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="82"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11607 - Common Item - Rapier
+		Kamael-exclusive Weapon: Shadow weapon - Saber conversion. Rapier with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+	-->
+    <weapon id="11607" name="Common Item - Rapier">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_rapier_i00"/>
-        <set name="kamael_convert" value="11636"/>
-        <set name="price" value="5204"/>
+        <set name="kamael_convert" value="11614"/>
+        <set name="price" value="3492"/>
         <set name="rnd_dam" value="40"/>
         <set name="soulshots" value="2"/>
         <set name="spiritshots" value="2"/>
         <set name="type" value="RAPIER"/>
-        <set name="weight" value="500"/>
+        <set name="weight" value="507"/>
         <equip>
             <slot id="RIGHT_HAND"/>
         </equip>
         <enchant4_skill id="3426" level="1"/>
         <!--Maximum Ability-->
         <for>
-            <add stat="pAtk" order="0x10" value="46"/>
-            <add stat="mAtk" order="0x10" value="32"/>
+            <add stat="pAtk" order="0x10" value="36"/>
+            <add stat="mAtk" order="0x10" value="26"/>
             <set stat="basePCritRate" order="0x08" value="100"/>
             <set stat="basePAtkSpd" order="0x08" value="406"/>
             <add stat="pAccCombat" order="0x10" value="-1.5"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11608 - Common Item - Bagh-Nakh
+		Bagh-Nakh with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11608" name="Common Item - Bagh-Nakh">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_baghnakh_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="513"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="49"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11609 - Common Item - Proof of Revenge
+		Proof of Revenge with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11609" name="Common Item - Proof of Revenge">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_proof_of_revenge_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ETC"/>
+        <set name="weight" value="200"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="32"/>
+            <add stat="mAtk" order="0x10" value="35"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11610 - Common Item - Bone Staff
+		Bone Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11610" name="Common Item - Bone Staff">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_apprentices_staff_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="353"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="39"/>
+            <add stat="mAtk" order="0x10" value="39"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="14"/>
+    </weapon>
+    <!--
+		11611 - Common Item - Priest Sword
+		Priest Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11611" name="Common Item - Priest Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_sword_of_priest_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="507"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="32"/>
+            <add stat="mAtk" order="0x10" value="35"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11612 - Common Item - Branch of Life
+		Branch of Life with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11612" name="Common Item - Branch of Life">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_branch_of_life_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ETC"/>
+        <set name="weight" value="207"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="32"/>
+            <add stat="mAtk" order="0x10" value="35"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11613 - Common Item - Crafted Dagger
+		Crafted Dagger with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11613" name="Common Item - Crafted Dagger">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_handiwork_dagger_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="367"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="35"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="49"/>
+    </weapon>
+    <!--
+		11614 - Common Item - Saber
+		Saber with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11614" name="Common Item - Saber">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_saber_i00"/>
+        <set name="kamael_convert" value="11607"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="507"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="40"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11615 - Common Item - Scalpel
+		Scalpel with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11615" name="Common Item - Scalpel">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_scalpel_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="603"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="40"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11616 - Common Item - Temptation of Abyss
+		Temptation of Abyss with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11616" name="Common Item - Temptation of Abyss">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_temptation_of_abyss_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ETC"/>
+        <set name="weight" value="203"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="32"/>
+            <add stat="mAtk" order="0x10" value="35"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11617 - Common Item - Assassin Knife
+		Assassin Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11617" name="Common Item - Assassin Knife">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_assassin_knife_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="367"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="35"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11618 - Common Item - Work Hammer
+		Work Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11618" name="Common Item - Work Hammer">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_work_hammer_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="597"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="40"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11619 - Common Item - Scroll of Wisdom
+		Scroll of Wisdom with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11619" name="Common Item - Scroll of Wisdom">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_scroll_of_wisdom_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ETC"/>
+        <set name="weight" value="203"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="32"/>
+            <add stat="mAtk" order="0x10" value="35"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="18"/>
+    </weapon>
+    <!--
+		11620 - Common Item - Talwar
+		Kamael-exclusive Weapon: Shadow weapon - Steel Sword conversion. Talwar with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+	-->
+    <weapon id="11620" name="Common Item - Talwar">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_tulwar_i00"/>
+        <set name="kamael_convert" value="11625"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="15"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ANCIENTSWORD"/>
+        <set name="weight" value="700"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="43"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="350"/>
+            <add stat="pAccCombat" order="0x10" value="2"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11621 - Common Item - Talwar
+		Kamael-exclusive Weapon: Shadow weapon - Heavy Sword conversion. Talwar with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+	-->
+    <weapon id="11621" name="Common Item - Talwar">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_tulwar_i00"/>
+        <set name="kamael_convert" value="11605"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="15"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ANCIENTSWORD"/>
+        <set name="weight" value="700"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="43"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="350"/>
+            <add stat="pAccCombat" order="0x10" value="2"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11622 - Common Item - Trident
+		Trident with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11622" name="Common Item - Trident">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_trident_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="700"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="40"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="6"/>
+    </weapon>
+    <!--
+		11623 - Common Item - Hand Axe
+		Hand Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11623" name="Common Item - Hand Axe">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_hand_axe_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="607"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="40"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11624 - Common Item - Field Gun
+		Kamael-exclusive Weapon: Shadow weapon - Reinforced Bow conversion. Field Gun with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+	-->
+    <weapon id="11624" name="Common Item - Field Gun">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_hunting_gun_i00"/>
+        <set name="kamael_convert" value="11606"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="623"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="100"/>
+            <set stat="basePAtkSpd" order="0x08" value="303"/>
+            <add stat="pAccCombat" order="0x10" value="-1.5"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11625 - Common Item - Heavy Sword
+		Heavy Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11625" name="Common Item - Heavy Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_heavy_sword_i00"/>
+        <set name="kamael_convert" value="11620"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BIGSWORD"/>
+        <set name="weight" value="507"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="49"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11626 - Common Item - Heavy Mace
+		Heavy Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11626" name="Common Item - Heavy Mace">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="32"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_heavy_mace_i00"/>
+        <set name="price" value="3492"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="600"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="40"/>
+            <add stat="mAtk" order="0x10" value="26"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11627 - Common Item - Mace of Prayer
+		Mace of Prayer with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11627" name="Common Item - Mace of Prayer">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_mace_of_prayer_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="433"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="41"/>
+            <add stat="mAtk" order="0x10" value="43"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11628 - Common Item - Knight's Sword
+		Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11628" name="Common Item - Knight's Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_knights_sword_i00"/>
+        <set name="kamael_convert" value="11651"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="500"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11629 - Common Item - Dark Elven Bow
+		Dark Elven Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11629" name="Common Item - Dark Elven Bow">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dark_elven_bow_i00"/>
+        <set name="kamael_convert" value="11654"/>
+        <set name="mp_consume" value="2"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="6"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="610"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="105"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11630 - Common Item - Doom Hammer
+		Doom Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11630" name="Common Item - Doom Hammer">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_doom_hammer_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="400"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="41"/>
+            <add stat="mAtk" order="0x10" value="43"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11631 - Common Item - Dwarven Trident
+		Dwarven Trident with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11631" name="Common Item - Dwarven Trident">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dwarven_trident_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="697"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11632 - Common Item - Longbow
+		Longbow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11632" name="Common Item - Longbow">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_long_bow_i00"/>
+        <set name="kamael_convert" value="11652"/>
+        <set name="mp_consume" value="2"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="6"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="610"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="114"/>
+            <add stat="mAtk" order="0x10" value="35"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="227"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11633 - Common Item - Staff of Mana
+		Staff of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11633" name="Common Item - Staff of Mana">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_staff_of_mana_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="347"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="50"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="13"/>
+    </weapon>
+    <!--
+		11634 - Common Item - Mystic Staff
+		Mystic Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11634" name="Common Item - Mystic Staff">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_mystic_staff_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="347"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="50"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="13"/>
+    </weapon>
+    <!--
+		11635 - Common Item - Bastard Sword
+		Bastard Sword with limited enhancement options Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11635" name="Common Item - Bastard Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_bastard_sword_i00"/>
+        <set name="kamael_convert" value="11648"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="503"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11636 - Common Item - Spinebone Sword
+		Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11636" name="Common Item - Spinebone Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_spinebone_sword_i00"/>
+        <set name="kamael_convert" value="11649"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="503"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="14"/>
+    </weapon>
+    <!--
+		11637 - Common Item - Divine Tome
+		Divine Tome with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11637" name="Common Item - Divine Tome">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_divine_tome_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ETC"/>
+        <set name="weight" value="190"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="41"/>
+            <add stat="mAtk" order="0x10" value="43"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11638 - Common Item - Mace of Judgment
+		Mace of Judgment with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11638" name="Common Item - Mace of Judgment">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_mace_of_judgment_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="427"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="41"/>
+            <add stat="mAtk" order="0x10" value="43"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11639 - Common Item - Military Talwar
+		Military Talwar with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11639" name="Common Item - Military Talwar">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_tulwar_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="15"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="ANCIENTSWORD"/>
+        <set name="weight" value="693"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="55"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="350"/>
+            <add stat="pAccCombat" order="0x10" value="2"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11640 - Common Item - Elven Bow
+		Elven Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11640" name="Common Item - Elven Bow">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_elven_bow_i00"/>
+        <set name="kamael_convert" value="11653"/>
+        <set name="mp_consume" value="2"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="6"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="617"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="105"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="293"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="2"/>
+    </weapon>
+    <!--
+		11641 - Common Item - Mace of Miracle
+		Mace of Miracle with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11641" name="Common Item - Mace of Miracle">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_mace_of_miracle_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="417"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="41"/>
+            <add stat="mAtk" order="0x10" value="43"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11642 - Common Item - Single-Edged Jamadhr
+		Single-Edged Jamadhr with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11642" name="Common Item - Single-Edged Jamadhr">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_single-edged_jamadhr_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DUALFIST"/>
+        <set name="weight" value="517"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="62"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11643 - Common Item - Artisan's Sword
+		Artisan's Sword with limited enhancement options Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11643" name="Common Item - Artisan's Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_artisans_sword_i00"/>
+        <set name="kamael_convert" value="11650"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="500"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11644 - Common Item - Conjuror's Staff
+		Conjuror's Staff with limited enhancement options Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11644" name="Common Item - Conjuror's Staff">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_conjure_staff_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BIGBLUNT"/>
+        <set name="weight" value="343"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="50"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="1"/>
+    </weapon>
+    <!--
+		11645 - Common Item - Tomahawk
+		Tomahawk with limited enhancement options Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11645" name="Common Item - Tomahawk">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_tomahawk_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="20"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="593"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="6"/>
+    </weapon>
+    <!--
+		11646 - Common Item - Poniard Dagger
+		Poniard Dagger with limited enhancement options Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11646" name="Common Item - Poniard Dagger">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dirk_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="363"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="45"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11647 - Common Item - Pike
+		Pike with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11647" name="Common Item - Pike">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_pike_i00"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="POLE"/>
+        <set name="weight" value="697"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <skills>
+            <skill id="3599" level="1"/>
+        </skills>
+        <for>
+            <add stat="pAtk" order="0x10" value="51"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
@@ -70,16 +1524,16 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		11651 - Common Item - Fleuret
-		Kamael-exclusive Weapon: Shadow weapon - Knight's Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+		11649 - Common Item - Fleuret
+		Kamael-exclusive Weapon: Shadow weapon - Spinebone Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
 	-->
-    <weapon id="11651" name="Common Item - Fleuret">
+    <weapon id="11649" name="Common Item - Fleuret">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="48"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_rapier_i00"/>
-        <set name="kamael_convert" value="11628"/>
+        <set name="kamael_convert" value="11636"/>
         <set name="price" value="5204"/>
         <set name="rnd_dam" value="40"/>
         <set name="soulshots" value="2"/>
@@ -138,6 +1592,72 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
+		11651 - Common Item - Fleuret
+		Kamael-exclusive Weapon: Shadow weapon - Knight's Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+	-->
+    <weapon id="11651" name="Common Item - Fleuret">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_rapier_i00"/>
+        <set name="kamael_convert" value="11628"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="40"/>
+        <set name="soulshots" value="2"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="RAPIER"/>
+        <set name="weight" value="500"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <enchant4_skill id="3426" level="1"/>
+        <!--Maximum Ability-->
+        <for>
+            <add stat="pAtk" order="0x10" value="46"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="100"/>
+            <set stat="basePAtkSpd" order="0x08" value="406"/>
+            <add stat="pAccCombat" order="0x10" value="-1.5"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
+		11652 - Common Item - Hand Crossbow
+		Kamael-exclusive Weapon: Shadow weapon - Dark Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+	-->
+    <weapon id="11652" name="Common Item - Hand Crossbow">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="48"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_hunting_gun_i00"/>
+        <set name="kamael_convert" value="11632"/>
+        <set name="price" value="5204"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="4"/>
+        <set name="spiritshots" value="2"/>
+        <set name="type" value="CROSSBOW"/>
+        <set name="weight" value="617"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="64"/>
+            <add stat="mAtk" order="0x10" value="32"/>
+            <set stat="basePCritRate" order="0x08" value="100"/>
+            <set stat="basePAtkSpd" order="0x08" value="303"/>
+            <add stat="pAccCombat" order="0x10" value="-1.5"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="8"/>
+    </weapon>
+    <!--
 		11653 - Common Item - Hand Crossbow
 		Kamael-exclusive Weapon: Shadow weapon - Longbow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
 	-->
@@ -170,16 +1690,16 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		11652 - Common Item - Hand Crossbow
-		Kamael-exclusive Weapon: Shadow weapon - Dark Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+		11654 - Common Item - Hand Crossbow
+		Kamael-exclusive Weapon: Shadow weapon - Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
 	-->
-    <weapon id="11652" name="Common Item - Hand Crossbow">
+    <weapon id="11654" name="Common Item - Hand Crossbow">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="48"/>
         <set name="crystal_type" value="D"/>
         <set name="icon" value="icon.weapon_hunting_gun_i00"/>
-        <set name="kamael_convert" value="11632"/>
+        <set name="kamael_convert" value="11629"/>
         <set name="price" value="5204"/>
         <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="4"/>
@@ -233,36 +1753,35 @@
         <set name="material" value="6"/>
     </weapon>
     <!--
-		11654 - Common Item - Hand Crossbow
-		Kamael-exclusive Weapon: Shadow weapon - Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
+		11656 - Common Item - Sword of Mystic
+		Sword of Mystic with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11654" name="Common Item - Hand Crossbow">
+    <weapon id="11656" name="Common Item - Sword of Mystic">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="53"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_hunting_gun_i00"/>
-        <set name="kamael_convert" value="11629"/>
-        <set name="price" value="5204"/>
+        <set name="icon" value="icon.weapon_sword_of_mystic_i00"/>
+        <set name="price" value="5724"/>
         <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="4"/>
+        <set name="soulshots" value="2"/>
         <set name="spiritshots" value="2"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="617"/>
+        <set name="type" value="SWORD"/>
+        <set name="weight" value="327"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="64"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="100"/>
-            <set stat="basePAtkSpd" order="0x08" value="303"/>
-            <add stat="pAccCombat" order="0x10" value="-1.5"/>
+            <add stat="pAtk" order="0x10" value="43"/>
+            <add stat="mAtk" order="0x10" value="45"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
         <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
+        <set name="material" value="51"/>
     </weapon>
     <!--
 		11657 - Common Item - Sword of Occult
@@ -296,30 +1815,29 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11656 - Common Item - Sword of Mystic
-		Sword of Mystic with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11658 - Common Item - Saber*Saber
+		Saber*Saber with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11656" name="Common Item - Sword of Mystic">
+    <weapon id="11658" name="Common Item - Saber*Saber">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="53"/>
+        <set name="crystal_count" value="63"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_sword_of_mystic_i00"/>
-        <set name="price" value="5724"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="6848"/>
         <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="2"/>
         <set name="spiritshots" value="2"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="327"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="843"/>
         <equip>
-            <slot id="RIGHT_HAND"/>
+            <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="43"/>
-            <add stat="mAtk" order="0x10" value="45"/>
+            <add stat="pAtk" order="0x10" value="73"/>
+            <add stat="mAtk" order="0x10" value="37"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
@@ -360,34 +1878,36 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11658 - Common Item - Saber*Saber
-		Saber*Saber with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11660 - Common Item - Shilen Knife
+		Shilen Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11658" name="Common Item - Saber*Saber">
+    <weapon id="11660" name="Common Item - Shilen Knife">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="63"/>
+        <set name="is_magic_weapon" value="true"/>
+        <set name="crystal_count" value="69"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="6848"/>
-        <set name="rnd_dam" value="10"/>
+        <set name="icon" value="icon.weapon_knife_o\'_silenus_i00"/>
+        <set name="price" value="7480"/>
+        <set name="rnd_dam" value="5"/>
         <set name="soulshots" value="2"/>
         <set name="spiritshots" value="2"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="843"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="250"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="73"/>
-            <add stat="mAtk" order="0x10" value="37"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAtk" order="0x10" value="45"/>
+            <add stat="mAtk" order="0x10" value="52"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
         <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
+        <set name="material" value="6"/>
     </weapon>
     <!--
 		11661 - Common Item - Dwarven Pike
@@ -424,16 +1944,16 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11660 - Common Item - Shilen Knife
-		Shilen Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11662 - Common Item - Dagger of Mana
+		Dagger of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11660" name="Common Item - Shilen Knife">
+    <weapon id="11662" name="Common Item - Dagger of Mana">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="is_magic_weapon" value="true"/>
         <set name="crystal_count" value="69"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_knife_o\'_silenus_i00"/>
+        <set name="icon" value="icon.weapon_dagger_of_mana_i00"/>
         <set name="price" value="7480"/>
         <set name="rnd_dam" value="5"/>
         <set name="soulshots" value="2"/>
@@ -453,7 +1973,7 @@
         <!--added by blood-->
         <set name="grade" value="1"/>
         <set name="rarity" value="0"/>
-        <set name="material" value="6"/>
+        <set name="material" value="51"/>
     </weapon>
     <!--
 		11663 - Common Item - Staff of Magic
@@ -486,38 +2006,6 @@
         <set name="grade" value="1"/>
         <set name="rarity" value="0"/>
         <set name="material" value="13"/>
-    </weapon>
-    <!--
-		11662 - Common Item - Dagger of Mana
-		Dagger of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11662" name="Common Item - Dagger of Mana">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="69"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dagger_of_mana_i00"/>
-        <set name="price" value="7480"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="250"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="45"/>
-            <add stat="mAtk" order="0x10" value="52"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
     </weapon>
     <!--
 		11664 - Common Item - Mystic Knife
@@ -1028,43 +2516,10 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11683 - Common Item - Reinforced Longbow
-		Reinforced Longbow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11680 - Common Item - Saber*Bastard Sword
+		Saber*Bastard Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11683" name="Common Item - Reinforced Longbow">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="96"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_strengthening_long_bow_i00"/>
-        <set name="kamael_convert" value="11701"/>
-        <set name="mp_consume" value="2"/>
-        <set name="price" value="10410"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="10"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="607"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="179"/>
-            <add stat="mAtk" order="0x10" value="51"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="227"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11682 - Common Item - Saber*Artisan's Sword
-		Saber*Artisan's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11682" name="Common Item - Saber*Artisan's Sword">
+    <weapon id="11680" name="Common Item - Saber*Bastard Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="75"/>
@@ -1121,10 +2576,10 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11680 - Common Item - Saber*Bastard Sword
-		Saber*Bastard Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11682 - Common Item - Saber*Artisan's Sword
+		Saber*Artisan's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11680" name="Common Item - Saber*Bastard Sword">
+    <weapon id="11682" name="Common Item - Saber*Artisan's Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="75"/>
@@ -1151,10 +2606,43 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11687 - Common Item - Bastard Sword*Knight's Sword
-		Bastard Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11683 - Common Item - Reinforced Longbow
+		Reinforced Longbow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11687" name="Common Item - Bastard Sword*Knight's Sword">
+    <weapon id="11683" name="Common Item - Reinforced Longbow">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="96"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_strengthening_long_bow_i00"/>
+        <set name="kamael_convert" value="11701"/>
+        <set name="mp_consume" value="2"/>
+        <set name="price" value="10410"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="10"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="BOW"/>
+        <set name="weight" value="607"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="179"/>
+            <add stat="mAtk" order="0x10" value="51"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="227"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11684 - Common Item - Knight's Sword*Knight's Sword
+		Knight's Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11684" name="Common Item - Knight's Sword*Knight's Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="96"/>
@@ -1165,7 +2653,7 @@
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="833"/>
+        <set name="weight" value="820"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -1174,6 +2662,37 @@
             <add stat="mAtk" order="0x10" value="47"/>
             <set stat="basePCritRate" order="0x08" value="80"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11685 - Common Item - Maingauche
+		Maingauche with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11685" name="Common Item - Maingauche">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="96"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_maingauche_i00"/>
+        <set name="price" value="10410"/>
+        <set name="rnd_dam" value="5"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DAGGER"/>
+        <set name="weight" value="357"/>
+        <equip>
+            <slot id="RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="69"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="120"/>
+            <set stat="basePAtkSpd" order="0x08" value="433"/>
+            <add stat="pAccCombat" order="0x10" value="-3.75"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
@@ -1212,41 +2731,10 @@
         <set name="material" value="8"/>
     </weapon>
     <!--
-		11685 - Common Item - Maingauche
-		Maingauche with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11687 - Common Item - Bastard Sword*Knight's Sword
+		Bastard Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11685" name="Common Item - Maingauche">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="96"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_maingauche_i00"/>
-        <set name="price" value="10410"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="357"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="69"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11684 - Common Item - Knight's Sword*Knight's Sword
-		Knight's Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11684" name="Common Item - Knight's Sword*Knight's Sword">
+    <weapon id="11687" name="Common Item - Bastard Sword*Knight's Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="96"/>
@@ -1257,7 +2745,97 @@
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="820"/>
+        <set name="weight" value="833"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11688 - Common Item - Bastard Sword*Bastard Sword
+		Bastard Sword*Bastard Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11688" name="Common Item - Bastard Sword*Bastard Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="96"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="10410"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="823"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11689 - Common Item - Bastard Sword*Spinebone Sword
+		Bastard Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11689" name="Common Item - Bastard Sword*Spinebone Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="96"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="10410"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="823"/>
+        <equip>
+            <slot id="LEFT_RIGHT_HAND"/>
+        </equip>
+        <for>
+            <add stat="pAtk" order="0x10" value="96"/>
+            <add stat="mAtk" order="0x10" value="47"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
+            <set stat="basePAtkSpd" order="0x08" value="325"/>
+        </for>
+        <!--added by blood-->
+        <set name="grade" value="1"/>
+        <set name="rarity" value="0"/>
+        <set name="material" value="51"/>
+    </weapon>
+    <!--
+		11690 - Common Item - Bastard Sword*Artisan's Sword
+		Bastard Sword*Artisan's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+	-->
+    <weapon id="11690" name="Common Item - Bastard Sword*Artisan's Sword">
+        <set name="item_quality" value="COMMON"/>
+        <set name="enchantable" value="false"/>
+        <set name="crystal_count" value="96"/>
+        <set name="crystal_type" value="D"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="10410"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="827"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -1304,154 +2882,36 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11690 - Common Item - Bastard Sword*Artisan's Sword
-		Bastard Sword*Artisan's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11692 - Common Item - Priest Mace
+		Priest Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11690" name="Common Item - Bastard Sword*Artisan's Sword">
+    <weapon id="11692" name="Common Item - Priest Mace">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
+        <set name="is_magic_weapon" value="true"/>
         <set name="crystal_count" value="96"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="icon" value="icon.weapon_mace_of_priest_i00"/>
         <set name="price" value="10410"/>
-        <set name="rnd_dam" value="10"/>
+        <set name="rnd_dam" value="20"/>
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="827"/>
+        <set name="type" value="BLUNT"/>
+        <set name="weight" value="573"/>
         <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
+            <slot id="RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
+            <add stat="pAtk" order="0x10" value="63"/>
+            <add stat="mAtk" order="0x10" value="63"/>
+            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePAtkSpd" order="0x08" value="379"/>
+            <add stat="pAccCombat" order="0x10" value="8"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
         <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11689 - Common Item - Bastard Sword*Spinebone Sword
-		Bastard Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11689" name="Common Item - Bastard Sword*Spinebone Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="96"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="10410"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="823"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11688 - Common Item - Bastard Sword*Bastard Sword
-		Bastard Sword*Bastard Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11688" name="Common Item - Bastard Sword*Bastard Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="96"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="10410"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="823"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11695 - Common Item - Saber*Crimson Sword
-		Saber*Crimson Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11695" name="Common Item - Saber*Crimson Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="96"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="10410"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="843"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11694 - Common Item - Saber*Elven Sword
-		Saber*Elven Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11694" name="Common Item - Saber*Elven Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="96"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dual_sword_i00"/>
-        <set name="price" value="10410"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="DUAL"/>
-        <set name="weight" value="837"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="96"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
+        <set name="material" value="8"/>
     </weapon>
     <!--
 		11693 - Common Item - Goat Head Staff
@@ -1486,42 +2946,10 @@
         <set name="material" value="13"/>
     </weapon>
     <!--
-		11692 - Common Item - Priest Mace
-		Priest Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11694 - Common Item - Saber*Elven Sword
+		Saber*Elven Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11692" name="Common Item - Priest Mace">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="96"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_mace_of_priest_i00"/>
-        <set name="price" value="10410"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="3"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="573"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="63"/>
-            <add stat="mAtk" order="0x10" value="63"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11698 - Common Item - Spinebone Sword*Knight's Sword
-		Spinebone Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11698" name="Common Item - Spinebone Sword*Knight's Sword">
+    <weapon id="11694" name="Common Item - Saber*Elven Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="96"/>
@@ -1532,7 +2960,7 @@
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="823"/>
+        <set name="weight" value="837"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -1548,10 +2976,10 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11699 - Common Item - Spinebone Sword*Spinebone Sword
-		Spinebone Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11695 - Common Item - Saber*Crimson Sword
+		Saber*Crimson Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11699" name="Common Item - Spinebone Sword*Spinebone Sword">
+    <weapon id="11695" name="Common Item - Saber*Crimson Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
         <set name="crystal_count" value="96"/>
@@ -1562,7 +2990,7 @@
         <set name="soulshots" value="3"/>
         <set name="spiritshots" value="3"/>
         <set name="type" value="DUAL"/>
-        <set name="weight" value="840"/>
+        <set name="weight" value="843"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
@@ -1640,1390 +3068,29 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11613 - Common Item - Crafted Dagger
-		Crafted Dagger with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11698 - Common Item - Spinebone Sword*Knight's Sword
+		Spinebone Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11613" name="Common Item - Crafted Dagger">
+    <weapon id="11698" name="Common Item - Spinebone Sword*Knight's Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
+        <set name="crystal_count" value="96"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_handiwork_dagger_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="367"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="35"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="49"/>
-    </weapon>
-    <!--
-		11612 - Common Item - Branch of Life
-		Branch of Life with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11612" name="Common Item - Branch of Life">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_branch_of_life_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ETC"/>
-        <set name="weight" value="207"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="32"/>
-            <add stat="mAtk" order="0x10" value="35"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11615 - Common Item - Scalpel
-		Scalpel with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11615" name="Common Item - Scalpel">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_scalpel_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="603"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="40"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11614 - Common Item - Saber
-		Saber with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11614" name="Common Item - Saber">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_saber_i00"/>
-        <set name="kamael_convert" value="11607"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="507"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="40"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11609 - Common Item - Proof of Revenge
-		Proof of Revenge with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11609" name="Common Item - Proof of Revenge">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_proof_of_revenge_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ETC"/>
-        <set name="weight" value="200"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="32"/>
-            <add stat="mAtk" order="0x10" value="35"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11608 - Common Item - Bagh-Nakh
-		Bagh-Nakh with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11608" name="Common Item - Bagh-Nakh">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_baghnakh_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="513"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="49"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11611 - Common Item - Priest Sword
-		Priest Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11611" name="Common Item - Priest Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_sword_of_priest_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="507"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="32"/>
-            <add stat="mAtk" order="0x10" value="35"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11610 - Common Item - Bone Staff
-		Bone Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11610" name="Common Item - Bone Staff">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_apprentices_staff_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="353"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="39"/>
-            <add stat="mAtk" order="0x10" value="39"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="14"/>
-    </weapon>
-    <!--
-		11605 - Common Item - Steel Sword
-		Steel Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11605" name="Common Item - Steel Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_iron_sword_i00"/>
-        <set name="kamael_convert" value="11621"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BIGSWORD"/>
-        <set name="weight" value="700"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="49"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="51"/>
-    </weapon>
-    <!--
-		11604 - Sealed Dynasty Earring
-		Sealed Masterwork Item that has the effect of MP+ 35 and Sleep Resistance + 5.
-	-->
-    <armor id="11604" name="Sealed Dynasty Earring">
-        <set name="crystal_count" value="194"/>
-        <set name="crystal_type" value="S"/>
-        <set name="icon" value="icon.accessary_dynasty_earing_i01"/>
-        <set name="price" value="4032000"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_EAR"/>
-            <slot id="LEFT_EAR"/>
-        </equip>
-        <for>
-            <add stat="mDef" order="0x10" value="71"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="2"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		11607 - Common Item - Rapier
-		Kamael-exclusive Weapon: Shadow weapon - Saber conversion. Rapier with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
-	-->
-    <weapon id="11607" name="Common Item - Rapier">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_rapier_i00"/>
-        <set name="kamael_convert" value="11614"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="40"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="RAPIER"/>
-        <set name="weight" value="507"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <enchant4_skill id="3426" level="1"/>
-        <!--Maximum Ability-->
-        <for>
-            <add stat="pAtk" order="0x10" value="36"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="100"/>
-            <set stat="basePAtkSpd" order="0x08" value="406"/>
-            <add stat="pAccCombat" order="0x10" value="-1.5"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11606 - Common Item - Reinforced Bow
-		Reinforced Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11606" name="Common Item - Reinforced Bow">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_strengthening_bow_i00"/>
-        <set name="kamael_convert" value="11624"/>
-        <set name="mp_consume" value="2"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="6"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="623"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="82"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11601 - Dynasty Earring
-		Masterwork Item that has the effect of MP+ 35 and Sleep Resistance + 5.
-	-->
-    <armor id="11601" name="Dynasty Earring">
-        <set name="variation_group_id" value="24"/>
-        <set name="crystal_count" value="285"/>
-        <set name="crystal_type" value="S"/>
-        <set name="icon" value="icon.accessary_dynasty_earing_i00"/>
-        <set name="price" value="5956000"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_EAR"/>
-            <slot id="LEFT_EAR"/>
-        </equip>
-        <skills>
-            <skill id="3824" level="1"/>
-        </skills>
-        <for>
-            <add stat="mDef" order="0x10" value="79"/>
-            <add stat="maxMp" order="0x60" value="35"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="2"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		11600 - Dynasty Ring
-		Masterwork Item that has the effect of MP + 23 and Dark Resistance + 1.14.
-	-->
-    <armor id="11600" name="Dynasty Ring">
-        <set name="variation_group_id" value="24"/>
-        <set name="crystal_count" value="190"/>
-        <set name="crystal_type" value="S"/>
-        <set name="icon" value="icon.accessary_dynasty_ring_i00"/>
-        <set name="price" value="3971000"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_FINGER"/>
-            <slot id="LEFT_FINGER"/>
-        </equip>
-        <skills>
-            <skill id="3823" level="1"/>
-        </skills>
-        <for>
-            <add stat="mDef" order="0x10" value="60"/>
-            <add stat="maxMp" order="0x60" value="23"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="2"/>
-        <set name="material" value="3"/>
-    </armor>
-    <!--
-		11603 - Sealed Dynasty Ring
-		Sealed Masterwork Item that increases Dark Resistance by 1.14.
-	-->
-    <armor id="11603" name="Sealed Dynasty Ring">
-        <set name="crystal_count" value="129"/>
-        <set name="crystal_type" value="S"/>
-        <set name="icon" value="icon.accessary_dynasty_ring_i01"/>
-        <set name="price" value="2688000"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="RIGHT_FINGER"/>
-            <slot id="LEFT_FINGER"/>
-        </equip>
-        <for>
-            <add stat="mDef" order="0x10" value="53"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="2"/>
-        <set name="material" value="3"/>
-    </armor>
-    <!--
-		11602 - Sealed Dynasty Necklace
-		Sealed Masterwork Item that has the effect of MP + 46 and Max MP + 30 when the seal is broken.
-	-->
-    <armor id="11602" name="Sealed Dynasty Necklace">
-        <set name="crystal_count" value="258"/>
-        <set name="crystal_type" value="S"/>
-        <set name="icon" value="icon.accessary_dynasty_necklace_i01"/>
-        <set name="price" value="5376000"/>
-        <set name="type" value="NONE"/>
-        <set name="weight" value="150"/>
-        <equip>
-            <slot id="NECKLACE"/>
-        </equip>
-        <for>
-            <add stat="mDef" order="0x10" value="95"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="5"/>
-        <set name="rarity" value="2"/>
-        <set name="material" value="4"/>
-    </armor>
-    <!--
-		11630 - Common Item - Doom Hammer
-		Doom Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11630" name="Common Item - Doom Hammer">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_doom_hammer_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="400"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="41"/>
-            <add stat="mAtk" order="0x10" value="43"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11631 - Common Item - Dwarven Trident
-		Dwarven Trident with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11631" name="Common Item - Dwarven Trident">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dwarven_trident_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="697"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11628 - Common Item - Knight's Sword
-		Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11628" name="Common Item - Knight's Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_knights_sword_i00"/>
-        <set name="kamael_convert" value="11651"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="500"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11629 - Common Item - Dark Elven Bow
-		Dark Elven Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11629" name="Common Item - Dark Elven Bow">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dark_elven_bow_i00"/>
-        <set name="kamael_convert" value="11654"/>
-        <set name="mp_consume" value="2"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="6"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="610"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="105"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11626 - Common Item - Heavy Mace
-		Heavy Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11626" name="Common Item - Heavy Mace">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_heavy_mace_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="600"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="40"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11627 - Common Item - Mace of Prayer
-		Mace of Prayer with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11627" name="Common Item - Mace of Prayer">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_mace_of_prayer_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="433"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="41"/>
-            <add stat="mAtk" order="0x10" value="43"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11624 - Common Item - Field Gun
-		Kamael-exclusive Weapon: Shadow weapon - Reinforced Bow conversion. Field Gun with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
-	-->
-    <weapon id="11624" name="Common Item - Field Gun">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_hunting_gun_i00"/>
-        <set name="kamael_convert" value="11606"/>
-        <set name="price" value="3492"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="10410"/>
         <set name="rnd_dam" value="10"/>
         <set name="soulshots" value="3"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="CROSSBOW"/>
-        <set name="weight" value="623"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="823"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="100"/>
-            <set stat="basePAtkSpd" order="0x08" value="303"/>
-            <add stat="pAccCombat" order="0x10" value="-1.5"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11625 - Common Item - Heavy Sword
-		Heavy Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11625" name="Common Item - Heavy Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_heavy_sword_i00"/>
-        <set name="kamael_convert" value="11620"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BIGSWORD"/>
-        <set name="weight" value="507"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="49"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11622 - Common Item - Trident
-		Trident with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11622" name="Common Item - Trident">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_trident_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="700"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="40"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="6"/>
-    </weapon>
-    <!--
-		11623 - Common Item - Hand Axe
-		Hand Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11623" name="Common Item - Hand Axe">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_hand_axe_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="607"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="40"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11620 - Common Item - Talwar
-		Kamael-exclusive Weapon: Shadow weapon - Steel Sword conversion. Talwar with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
-	-->
-    <weapon id="11620" name="Common Item - Talwar">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_tulwar_i00"/>
-        <set name="kamael_convert" value="11625"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="15"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ANCIENTSWORD"/>
-        <set name="weight" value="700"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="43"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="350"/>
-            <add stat="pAccCombat" order="0x10" value="2"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11621 - Common Item - Talwar
-		Kamael-exclusive Weapon: Shadow weapon - Heavy Sword conversion. Talwar with limited ability enhancement. Enchantment, special abilities and augmentation are not possible.
-	-->
-    <weapon id="11621" name="Common Item - Talwar">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_tulwar_i00"/>
-        <set name="kamael_convert" value="11605"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="15"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ANCIENTSWORD"/>
-        <set name="weight" value="700"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="43"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="350"/>
-            <add stat="pAccCombat" order="0x10" value="2"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11618 - Common Item - Work Hammer
-		Work Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11618" name="Common Item - Work Hammer">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_work_hammer_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="597"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="40"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11619 - Common Item - Scroll of Wisdom
-		Scroll of Wisdom with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11619" name="Common Item - Scroll of Wisdom">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_scroll_of_wisdom_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ETC"/>
-        <set name="weight" value="203"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="32"/>
-            <add stat="mAtk" order="0x10" value="35"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="18"/>
-    </weapon>
-    <!--
-		11616 - Common Item - Temptation of Abyss
-		Temptation of Abyss with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11616" name="Common Item - Temptation of Abyss">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_temptation_of_abyss_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ETC"/>
-        <set name="weight" value="203"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="32"/>
-            <add stat="mAtk" order="0x10" value="35"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11617 - Common Item - Assassin Knife
-		Assassin Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11617" name="Common Item - Assassin Knife">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="32"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_assassin_knife_i00"/>
-        <set name="price" value="3492"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="367"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="35"/>
-            <add stat="mAtk" order="0x10" value="26"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11647 - Common Item - Pike
-		Pike with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11647" name="Common Item - Pike">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_pike_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="POLE"/>
-        <set name="weight" value="697"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <skills>
-            <skill id="3599" level="1"/>
-        </skills>
-        <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11646 - Common Item - Poniard Dagger
-		Poniard Dagger with limited enhancement options Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11646" name="Common Item - Poniard Dagger">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_dirk_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DAGGER"/>
-        <set name="weight" value="363"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="45"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="433"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11645 - Common Item - Tomahawk
-		Tomahawk with limited enhancement options Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11645" name="Common Item - Tomahawk">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_tomahawk_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="593"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="6"/>
-    </weapon>
-    <!--
-		11644 - Common Item - Conjuror's Staff
-		Conjuror's Staff with limited enhancement options Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11644" name="Common Item - Conjuror's Staff">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_conjure_staff_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="343"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="50"/>
+            <add stat="pAtk" order="0x10" value="96"/>
             <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="1"/>
-    </weapon>
-    <!--
-		11643 - Common Item - Artisan's Sword
-		Artisan's Sword with limited enhancement options Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11643" name="Common Item - Artisan's Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_artisans_sword_i00"/>
-        <set name="kamael_convert" value="11650"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="500"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11642 - Common Item - Single-Edged Jamadhr
-		Single-Edged Jamadhr with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11642" name="Common Item - Single-Edged Jamadhr">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_single-edged_jamadhr_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="DUALFIST"/>
-        <set name="weight" value="517"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="62"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11641 - Common Item - Mace of Miracle
-		Mace of Miracle with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11641" name="Common Item - Mace of Miracle">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_mace_of_miracle_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="417"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="41"/>
-            <add stat="mAtk" order="0x10" value="43"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11640 - Common Item - Elven Bow
-		Elven Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11640" name="Common Item - Elven Bow">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_elven_bow_i00"/>
-        <set name="kamael_convert" value="11653"/>
-        <set name="mp_consume" value="2"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="6"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="617"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="105"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="293"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="2"/>
-    </weapon>
-    <!--
-		11639 - Common Item - Military Talwar
-		Military Talwar with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11639" name="Common Item - Military Talwar">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_tulwar_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="15"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ANCIENTSWORD"/>
-        <set name="weight" value="693"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="55"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="350"/>
-            <add stat="pAccCombat" order="0x10" value="2"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11638 - Common Item - Mace of Judgment
-		Mace of Judgment with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11638" name="Common Item - Mace of Judgment">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_mace_of_judgment_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BLUNT"/>
-        <set name="weight" value="427"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="41"/>
-            <add stat="mAtk" order="0x10" value="43"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11637 - Common Item - Divine Tome
-		Divine Tome with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11637" name="Common Item - Divine Tome">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_divine_tome_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="ETC"/>
-        <set name="weight" value="190"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="41"/>
-            <add stat="mAtk" order="0x10" value="43"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
-    </weapon>
-    <!--
-		11636 - Common Item - Spinebone Sword
-		Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11636" name="Common Item - Spinebone Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_spinebone_sword_i00"/>
-        <set name="kamael_convert" value="11649"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="503"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="14"/>
-    </weapon>
-    <!--
-		11635 - Common Item - Bastard Sword
-		Bastard Sword with limited enhancement options Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11635" name="Common Item - Bastard Sword">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_bastard_sword_i00"/>
-        <set name="kamael_convert" value="11648"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="10"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="SWORD"/>
-        <set name="weight" value="503"/>
-        <equip>
-            <slot id="RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="51"/>
-            <add stat="mAtk" order="0x10" value="32"/>
-            <set stat="basePCritRate" order="0x08" value="80"/>
-            <set stat="basePAtkSpd" order="0x08" value="379"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
@@ -3031,100 +3098,33 @@
         <set name="material" value="51"/>
     </weapon>
     <!--
-		11634 - Common Item - Mystic Staff
-		Mystic Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
+		11699 - Common Item - Spinebone Sword*Spinebone Sword
+		Spinebone Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
 	-->
-    <weapon id="11634" name="Common Item - Mystic Staff">
+    <weapon id="11699" name="Common Item - Spinebone Sword*Spinebone Sword">
         <set name="item_quality" value="COMMON"/>
         <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
+        <set name="crystal_count" value="96"/>
         <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_mystic_staff_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="347"/>
+        <set name="icon" value="icon.weapon_dual_sword_i00"/>
+        <set name="price" value="10410"/>
+        <set name="rnd_dam" value="10"/>
+        <set name="soulshots" value="3"/>
+        <set name="spiritshots" value="3"/>
+        <set name="type" value="DUAL"/>
+        <set name="weight" value="840"/>
         <equip>
             <slot id="LEFT_RIGHT_HAND"/>
         </equip>
         <for>
-            <add stat="pAtk" order="0x10" value="50"/>
+            <add stat="pAtk" order="0x10" value="96"/>
             <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
+            <set stat="basePCritRate" order="0x08" value="80"/>
             <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
         </for>
         <!--added by blood-->
         <set name="grade" value="1"/>
         <set name="rarity" value="0"/>
-        <set name="material" value="13"/>
-    </weapon>
-    <!--
-		11633 - Common Item - Staff of Mana
-		Staff of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11633" name="Common Item - Staff of Mana">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="is_magic_weapon" value="true"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_staff_of_mana_i00"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="20"/>
-        <set name="soulshots" value="2"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BIGBLUNT"/>
-        <set name="weight" value="347"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="50"/>
-            <add stat="mAtk" order="0x10" value="47"/>
-            <set stat="basePCritRate" order="0x08" value="60"/>
-            <set stat="basePAtkSpd" order="0x08" value="325"/>
-            <add stat="pAccCombat" order="0x10" value="8"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="13"/>
-    </weapon>
-    <!--
-		11632 - Common Item - Longbow
-		Longbow with limited enhancement options. Enchantment, soul storing and augmenting are impossible.
-	-->
-    <weapon id="11632" name="Common Item - Longbow">
-        <set name="item_quality" value="COMMON"/>
-        <set name="enchantable" value="false"/>
-        <set name="crystal_count" value="48"/>
-        <set name="crystal_type" value="D"/>
-        <set name="icon" value="icon.weapon_long_bow_i00"/>
-        <set name="kamael_convert" value="11652"/>
-        <set name="mp_consume" value="2"/>
-        <set name="price" value="5204"/>
-        <set name="rnd_dam" value="5"/>
-        <set name="soulshots" value="6"/>
-        <set name="spiritshots" value="2"/>
-        <set name="type" value="BOW"/>
-        <set name="weight" value="610"/>
-        <equip>
-            <slot id="LEFT_RIGHT_HAND"/>
-        </equip>
-        <for>
-            <add stat="pAtk" order="0x10" value="114"/>
-            <add stat="mAtk" order="0x10" value="35"/>
-            <set stat="basePCritRate" order="0x08" value="120"/>
-            <set stat="basePAtkSpd" order="0x08" value="227"/>
-            <add stat="pAccCombat" order="0x10" value="-3.75"/>
-        </for>
-        <!--added by blood-->
-        <set name="grade" value="1"/>
-        <set name="rarity" value="0"/>
-        <set name="material" value="8"/>
+        <set name="material" value="51"/>
     </weapon>
 </list>

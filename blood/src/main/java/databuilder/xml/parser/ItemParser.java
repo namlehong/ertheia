@@ -69,58 +69,58 @@ public final class ItemParser extends StatParser<ItemHolder>
 			org.dom4j.Element itemElement = itemIterator.next();
 			int item_id = Integer.parseInt(itemElement.attributeValue("id"));
 			ItemBuilder.getInstance().addElement(item_id, itemElement);
-//			StatsSet set = new StatsSet();
-//			set.set("item_id", itemElement.attributeValue("id"));
-//			set.set("name", itemElement.attributeValue("name"));
-//			set.set("add_name", itemElement.attributeValue("add_name", StringUtils.EMPTY));
-//
-//			int slot = 0;
-//			for(Iterator<org.dom4j.Element> subIterator = itemElement.elementIterator(); subIterator.hasNext();)
-//			{
-//				org.dom4j.Element subElement = subIterator.next();
-//				String subName = subElement.getName();
-//				if(subName.equalsIgnoreCase("set"))
-//				{
-//					set.set(subElement.attributeValue("name"), subElement.attributeValue("value"));
-//				}
-//				else if(subName.equalsIgnoreCase("equip"))
-//				{
-//					for(Iterator<org.dom4j.Element> slotIterator = subElement.elementIterator(); slotIterator.hasNext();)
-//					{
-//						org.dom4j.Element slotElement = slotIterator.next();
-//						Bodypart bodypart = Bodypart.valueOf(slotElement.attributeValue("id"));
-//						if(bodypart.getReal() != null)
-//							slot = bodypart.mask();
-//						else
-//							slot |= bodypart.mask();
-//					}
-//				}
-//			}
-//
-//			set.set("bodypart", slot);
-//
-//			ItemTemplate template = null;
-//			try
-//			{
-//				if(itemElement.getName().equalsIgnoreCase("weapon"))
-//					template = new WeaponTemplate(set);
-//				else if(itemElement.getName().equalsIgnoreCase("armor"))
-//					template = new ArmorTemplate(set);
-//				else
-//					//if(itemElement.getName().equalsIgnoreCase("etcitem"))
-//					template = new EtcItemTemplate(set);
-//			}
-//			catch(Exception e)
-//			{
-//				//for(Map.Entry<String, Object> entry : set.entrySet())
-//				//{
-//				//	info("set " + entry.getKey() + ":" + entry.getValue());
-//				//}
-//				warn("Fail create item: " + set.get("item_id"), e);
-//				continue;
-//			}
-//
-//			boolean haveNoAltSkill = false;
+			StatsSet set = new StatsSet();
+			set.set("item_id", itemElement.attributeValue("id"));
+			set.set("name", itemElement.attributeValue("name"));
+			set.set("add_name", itemElement.attributeValue("add_name", StringUtils.EMPTY));
+
+			int slot = 0;
+			for(Iterator<org.dom4j.Element> subIterator = itemElement.elementIterator(); subIterator.hasNext();)
+			{
+				org.dom4j.Element subElement = subIterator.next();
+				String subName = subElement.getName();
+				if(subName.equalsIgnoreCase("set"))
+				{
+					set.set(subElement.attributeValue("name"), subElement.attributeValue("value"));
+				}
+				else if(subName.equalsIgnoreCase("equip"))
+				{
+					for(Iterator<org.dom4j.Element> slotIterator = subElement.elementIterator(); slotIterator.hasNext();)
+					{
+						org.dom4j.Element slotElement = slotIterator.next();
+						Bodypart bodypart = Bodypart.valueOf(slotElement.attributeValue("id"));
+						if(bodypart.getReal() != null)
+							slot = bodypart.mask();
+						else
+							slot |= bodypart.mask();
+					}
+				}
+			}
+
+			set.set("bodypart", slot);
+
+			ItemTemplate template = null;
+			try
+			{
+				if(itemElement.getName().equalsIgnoreCase("weapon"))
+					template = new WeaponTemplate(set);
+				else if(itemElement.getName().equalsIgnoreCase("armor"))
+					template = new ArmorTemplate(set);
+				else
+					//if(itemElement.getName().equalsIgnoreCase("etcitem"))
+					template = new EtcItemTemplate(set);
+			}
+			catch(Exception e)
+			{
+				//for(Map.Entry<String, Object> entry : set.entrySet())
+				//{
+				//	info("set " + entry.getKey() + ":" + entry.getValue());
+				//}
+				warn("Fail create item: " + set.get("item_id"), e);
+				continue;
+			}
+
+			boolean haveNoAltSkill = false;
 //			for(Iterator<org.dom4j.Element> subIterator = itemElement.elementIterator(); subIterator.hasNext();)
 //			{
 //				org.dom4j.Element subElement = subIterator.next();
@@ -242,7 +242,7 @@ public final class ItemParser extends StatParser<ItemHolder>
 //					}
 //				}
 //			}
-//			getHolder().addItem(template);
+			getHolder().addItem(template);
 		}
 	}
 

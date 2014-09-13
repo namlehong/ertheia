@@ -4,9 +4,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -17,18 +21,21 @@ import l2s.gameserver.stats.conditions.ConditionPlayerMaxLevel;
 import l2s.gameserver.stats.conditions.ConditionPlayerMinLevel;
 import l2s.gameserver.templates.item.Bodypart;
 import l2s.gameserver.templates.item.ItemGrade;
+import l2s.gameserver.templates.item.ItemTemplate;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
 import databuilder.MainBuilder;
+import databuilder.MainBuilder.CustomComparator;
 import databuilder.utils.XmlPretty;
+import databuilder.xml.holder.ItemHolder;
 
 public class ItemBuilder {
 	private HashMap<String, Element> _rootHolder = new HashMap<String, Element>();
 	private HashMap<Integer, Element> _l2sHolder = new HashMap<Integer, Element>();
-	private HashMap<Integer, L2ItemInfo> _itemHolder = new HashMap<Integer, L2ItemInfo>();
+	private TreeMap<Integer, L2ItemInfo> _itemHolder = new TreeMap<Integer, L2ItemInfo>();
 	
 	public class L2ItemInfo{
 		int _id;
@@ -446,13 +453,66 @@ public class ItemBuilder {
 	}
 	
 	public void buildFated(){
+		
+			Integer[] items = {
+					37224,37224,37225,37226,37226,
+					37227,37227,37228,37229,37229,
+					37230,37230,37231,37232,37232,
+					37233,37233,37234,37235,37235,
+					37236,37236,37237,37238,37238,
+					37242,37243,37244,37245,37246,37247,37248,37249,37250,37251,37252,37253,26224,37139,
+					37254,37255,37256,37257,37258,37259,37260,37261,37262,37263,37264,37265,26225,37152,
+					37266,37267,37268,37269,37270,37271,37272,37273,37274,37275,37276,37277,26226,37165,
+					37278,37279,37280,37281,37282,37283,37376,37284,37285,37286,37287,37288,26227,37180,
+					37289,37290,37291,37289,37292,37293,37377,37295,37296,37294,37297,37298,26228,37195,
+					37135,37136,37137,37138, 37140,37141,37142,37143,37135, 37144,37145,37146,37147,37135,
+					37148,37149,37150,37151, 37153,37154,37155,37156,37157, 37158,37159,37160,37148,
+					37161,37162,37163,37164, 37166,37167,37168,37169,37170, 37171,37172,37173,37174,37167,
+					37175,37176,37177,37178,37179, 37181,37182,37183,37184,37185, 37186,37187,37188,37189,
+					37190,37191,37192,37193,37194, 37196,37197,37198,37199,37200,37201, 37202,37203,37204,37205,37206,
+			};
+			
+			items = new HashSet<Integer>(Arrays.asList(items)).toArray(new Integer[items.length]);
+			
+//			Arrays.sort(items);
+			
+			ArrayList<ItemTemplate> arrayList = new ArrayList<ItemTemplate>(); 
+			
+			for(int item_id: items){
+				arrayList.add(ItemHolder.getInstance().getTemplate(item_id));
+			}
+						
+			Document document = DocumentHelper.createDocument();
+			Element rootElement = document.addElement("list");
+			
+			HashMap<ItemGrade, Element> nodeHolder = new HashMap<ItemGrade, Element>();
+			
+			for(ItemTemplate item: arrayList){
+				
+				Element capsuledElement = nodeHolder.get(item.getGrade());
+				
+				if(capsuledElement == null){
+					capsuledElement = rootElement.addElement("capsuled_items");
+					nodeHolder.put(item.getGrade(), capsuledElement);
+				}
+				
+				capsuledElement.addElement("capsuled_item")
+				.addAttribute("id", Integer.toString(item.getItemId()))
+				.addAttribute("min_count", item.getName().toLowerCase().contains("ring") ? "2" : "1")
+				.addAttribute("max_count", item.getName().toLowerCase().contains("ring") ? "2" : "1")
+				.addAttribute("chance", "100.00");
+				capsuledElement.addComment(String.format("%s-grade | %s", item.getGrade(), item.getName() ));			
+			}
+
+		
 		try {
 			PreparedStatement statement = MainBuilder.connection().prepareStatement("SELECT id FROM L2ItemName where name LIKE ?");
 			statement.setString(1, "Fated%");
 			ResultSet rset = statement.executeQuery();
 			while(rset.next()){
 				L2ItemInfo info = getItem(rset.getInt("id"));
-				info.getElement().addElement("set").addAttribute("name", "handler").addAttribute("value", "FateSupportBox");				
+				info.getElement().add(nodeHolder.get(ItemGrade.C).createCopy());
+//				info.getElement().addElement("set").addAttribute("name", "handler").addAttribute("value", "FateSupportBox");				
 //				Element cond = item.addElement("cond");
 				
 			
