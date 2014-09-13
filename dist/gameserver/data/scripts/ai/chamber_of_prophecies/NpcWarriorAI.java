@@ -68,7 +68,6 @@ public class NpcWarriorAI extends Fighter
 
 	private boolean startAttack()
 	{
-		System.out.println("Kain starts attack");
 		NpcInstance actor = getActor();
 		if(target == null)
 		{
@@ -79,18 +78,15 @@ public class NpcWarriorAI extends Fighter
 				{
 					if(checkTarget(npc))
 					{
-						System.out.println("Kain checks target");
-						if(target == null || actor.getDistance3D(npc) < actor.getDistance3D(target))
+						if(target == null)
 							target = npc;
 						
-						if(target != null)
-							System.out.println("target not null");
 					}
 				}
 			}
 		}
 
-		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
+		if(target != null && !target.isDead() && target.isVisible())
 		{
 			actor.getAggroList().addDamageHate(target, 10000, 10000);
 			actor.setAggressionTarget(target);
@@ -99,7 +95,7 @@ public class NpcWarriorAI extends Fighter
 			return true;
 		}
 
-		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
+		if(target != null && (!target.isVisible() || target.isDead()))
 		{
 			target = null;
 			return false;
