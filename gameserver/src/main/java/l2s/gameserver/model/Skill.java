@@ -1488,7 +1488,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				
 				for(Creature target : targets)
 				{
-					if(!target.isPlayable())
+					if(!target.isPlayer())
 						targets_exclude_playable.add(target);
 				}
 				System.out.println("targets_exclude_playable " + targets_exclude_playable.size());

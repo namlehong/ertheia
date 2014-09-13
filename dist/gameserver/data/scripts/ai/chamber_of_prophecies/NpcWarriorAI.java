@@ -48,21 +48,9 @@ public class NpcWarriorAI extends Fighter
 		if(actor.isDead())
 			return;
 
-		Location loc = actor.getSpawnedLoc();
-		if(!actor.isInRange(loc, MAX_PURSUE_RANGE) && !(actor instanceof DecoyInstance))
+		if(!actor.isAttackingNow() && !actor.isCastingNow())
 		{
-			teleportHome();
-			return;
-		}
-
-		System.out.println("Kain thinks attack");
-		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
-		{
-			if(!createNewTask())
-			{
-				if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
-					returnHome();
-			}
+			startAttack();
 		}
 	}
 
@@ -86,7 +74,7 @@ public class NpcWarriorAI extends Fighter
 			}
 		}
 
-		if(target != null && !target.isDead() && target.isVisible())
+		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
 		{
 			actor.getAggroList().addDamageHate(target, 10000, 10000);
 			actor.setAggressionTarget(target);
@@ -95,7 +83,7 @@ public class NpcWarriorAI extends Fighter
 			return true;
 		}
 
-		if(target != null && (!target.isVisible() || target.isDead()))
+		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
 		{
 			target = null;
 			return false;
@@ -109,7 +97,7 @@ public class NpcWarriorAI extends Fighter
 		if(target == null)
 			return false;
 		
-		if(target.isPlayable()) 
+		if(target.isPlayer()) 
 			return false;
 		
 		if(target.getFaction().equals(getActor().getFaction()))
