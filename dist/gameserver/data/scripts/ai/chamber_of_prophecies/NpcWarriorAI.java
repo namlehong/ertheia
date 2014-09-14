@@ -5,6 +5,7 @@ import java.util.List;
 import l2s.commons.collections.CollectionUtils;
 import l2s.commons.util.Rnd;
 import l2s.gameserver.Config;
+import l2s.gameserver.ai.CtrlEvent;
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
 import l2s.gameserver.geodata.GeoEngine;
@@ -14,6 +15,8 @@ import l2s.gameserver.model.AggroList.AggroInfo;
 import l2s.gameserver.model.instances.MinionInstance;
 import l2s.gameserver.model.instances.MonsterInstance;
 import l2s.gameserver.model.instances.NpcInstance;
+import l2s.gameserver.network.l2.components.NpcString;
+import l2s.gameserver.scripts.Functions;
 
 /**
  * @author Hien Son
@@ -28,90 +31,11 @@ public class NpcWarriorAI extends Fighter
 	}
 
 	@Override
-	protected void onEvtThink()
-	{
-		System.out.println("Kain onEvtThink");
-		
-		if(_randomAnimationEnd > System.currentTimeMillis())
-			return;
-		try
-		{
-			System.out.println("Kain getIntention " + getIntention());
-			if(getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
-				thinkActive();
-			else if(getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
-				thinkAttack();
-			else if(getIntention() == CtrlIntention.AI_INTENTION_FOLLOW)
-				thinkFollow();
-		}
-		finally
-		{
-			
-		}
-		
-	}
-	
-	@Override
 	protected boolean thinkActive()
 	{
-		System.out.println("Kain thinkActive");
 		NpcInstance actor = getActor();
-		if(actor.isActionsDisabled())
-			return true;
-
-		if(_randomAnimationEnd > System.currentTimeMillis())
-			return true;
-
-		if(_def_think)
-		{
-			if(doTask())
-				clearTasks();
-			return true;
-		}
-
-		long now = System.currentTimeMillis();
-		if(now - _checkAggroTimestamp > Config.AGGRO_CHECK_INTERVAL)
-		{
-			_checkAggroTimestamp = now;
-
-			System.out.println("Kain checkAgrro");
-			if(actor.getAggroList().isEmpty())
-			{
-				System.out.println("Kain getAggroList empty");
-				List<NpcInstance> chars = actor.getAroundNpc(3000, 150);
-				System.out.println("chars size " + chars.size());
-				CollectionUtils.eqSort(chars, _nearestTargetComparator);
-				System.out.println("chars size after eqSort " + chars.size());
-				for(Creature cha : chars)
-				{
-					System.out.println("Kain thinkActive checkAggression " + cha.getName() + " " + checkAggression(cha));
-					if(checkAggression(cha))
-						changeIntention(CtrlIntention.AI_INTENTION_ATTACK, cha, null);
-				}
-			}
-		}
-
-		if(randomAnimation())
-			return true;
-
-		if(randomWalk())
-			return true;
-
-		return false;
-	}
-
-	@Override
-	protected void thinkAttack()
-	{
-		System.out.println("Kain thinkAttack");
-		NpcInstance actor = getActor();
-		if(actor.isDead())
-			return;
 		
-		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
-		{
-			startAttack();
-		}
+		return startAttack();
 	}
 
 	private boolean startAttack()
@@ -123,6 +47,7 @@ public class NpcWarriorAI extends Fighter
 			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
 			if(around != null && !around.isEmpty())
 			{
+				System.out.println("npcaround size " + around.size());
 				for(NpcInstance npc : around)
 				{
 					if(checkTarget(npc))
