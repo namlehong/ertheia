@@ -3,6 +3,8 @@ package quests;
 import java.util.ArrayList;
 import java.util.List;
 
+import l2s.commons.util.Rnd;
+import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.ItemInstance;
@@ -496,7 +498,9 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			npc.setRunning();
 			if(npc.getLoc().distance(player.getLoc()) > 300)
 			{
-				npc.moveToLocation(Location.coordsRandomize(player.getLoc(), 50, 150), 100, true);
+				Location loc = new Location(player.getX() + Rnd.get(-60, 60), player.getY() + Rnd.get(-60, 60), player.getZ());
+				npc.followToCharacter(loc, player, Config.FOLLOW_RANGE, false);
+				//npc.moveToLocation(Location.coordsRandomize(player.getLoc(), 50, 150), 100, true);
 			}
 		}
 		

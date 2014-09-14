@@ -2,46 +2,27 @@ package ai.chamber_of_prophecies;
 
 import java.util.List;
 
-import l2s.commons.util.Rnd;
-
-import l2s.gameserver.ai.CtrlEvent;
-import l2s.gameserver.ai.Priest;
-import l2s.gameserver.model.instances.NpcInstance;
-import l2s.gameserver.network.l2.components.NpcString;
-import l2s.gameserver.scripts.Functions;
+import l2s.gameserver.ai.CtrlIntention;
+import l2s.gameserver.ai.Fighter;
 import l2s.gameserver.geodata.GeoEngine;
-
+import l2s.gameserver.model.instances.DecoyInstance;
+import l2s.gameserver.model.instances.NpcInstance;
+import l2s.gameserver.utils.Location;
 /**
  * @author Hien Son
  */
-public class NpcHealerAI extends Priest
+public class NpcHealerAI extends Fighter
 {
-	private NpcInstance target = null;
-
+	NpcInstance target = null;
+	
 	public NpcHealerAI(NpcInstance actor)
 	{
 		super(actor);
 	}
 
 	@Override
-	public boolean isGlobalAI()
-	{
-		return false;
-	}
-	
-	@Override
-	protected void onEvtSpawn()
-	{
-		startAttack();
-	}
-
-	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		
-		if(Rnd.chance(3))
-			Functions.npcSay(actor, NpcString.DID_SOMEONE_CRY_MEDIC_HERE_BE_HEALED);				
 		return startAttack();
 	}
 
@@ -50,7 +31,7 @@ public class NpcHealerAI extends Priest
 		NpcInstance actor = getActor();
 		if(target == null)
 		{
-			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
+			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
 			if(around != null && !around.isEmpty())
 			{
 				for(NpcInstance npc : around)
@@ -59,6 +40,7 @@ public class NpcHealerAI extends Priest
 					{
 						if(target == null || actor.getDistance3D(npc) < actor.getDistance3D(target))
 							target = npc;
+						
 					}
 				}
 			}
@@ -66,33 +48,103 @@ public class NpcHealerAI extends Priest
 
 		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
 		{
-			actor.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, target, 1);
+			actor.getAggroList().addDamageHate(target, 10, 10);
+			actor.setAggressionTarget(target);
+			actor.setRunning();
+			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 			return true;
 		}
-		
+
 		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
 		{
 			target = null;
 			return false;
 		}
 		
-		else if(defaultThinkBuff(10, 5))
-			return true;
-			
 		return false;
 	}
+	
+	@Override
+	protected void thinkAttack()
+	{
+		NpcInstance actor = getActor();
+		if(actor.isDead())
+			return;
 
+		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
+		{
+			if(!createNewTask())
+			{
+				if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
+					returnHome();
+			}
+		}
+	}
+
+
+	@Override
+	protected boolean isGlobalAggro()
+	{
+		return true;
+	}
+	
 	private boolean checkTarget(NpcInstance target)
 	{
 		if(target == null)
 			return false;
 		
-		if(target.isPlayable()) 
-			return false;
-		
-		if(target.getFaction() == getActor().getFaction())
+		if (((NpcInstance) target).isInFaction(getActor()))
 			return false;
 			
 		return true;
+	}
+
+	@Override
+	public int getMaxAttackTimeout()
+	{
+		return 0;
+	}
+
+	@Override
+	protected boolean randomWalk()
+	{
+		return true;
+	}
+	
+
+	@Override
+	public int getRateDOT()
+	{
+		return 0;
+	}
+
+	@Override
+	public int getRateDEBUFF()
+	{
+		return 50;
+	}
+
+	@Override
+	public int getRateDAM()
+	{
+		return 80;
+	}
+
+	@Override
+	public int getRateSTUN()
+	{
+		return 30;
+	}
+
+	@Override
+	public int getRateBUFF()
+	{
+		return 0;
+	}
+
+	@Override
+	public int getRateHEAL()
+	{
+		return 0;
 	}
 }

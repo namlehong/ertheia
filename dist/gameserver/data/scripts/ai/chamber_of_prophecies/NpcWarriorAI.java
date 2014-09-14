@@ -31,14 +31,14 @@ public class NpcWarriorAI extends Fighter
 		NpcInstance actor = getActor();
 		if(target == null)
 		{
-			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
+			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
 			if(around != null && !around.isEmpty())
 			{
 				for(NpcInstance npc : around)
 				{
 					if(checkTarget(npc))
 					{
-						if(target == null)
+						if(target == null || actor.getDistance3D(npc) < actor.getDistance3D(target))
 							target = npc;
 						
 					}
@@ -75,7 +75,6 @@ public class NpcWarriorAI extends Fighter
 		{
 			if(!createNewTask())
 			{
-				System.out.println("Kain returnHome");
 				if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
 					returnHome();
 			}
