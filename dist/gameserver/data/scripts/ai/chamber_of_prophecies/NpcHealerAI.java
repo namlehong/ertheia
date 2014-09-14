@@ -46,15 +46,20 @@ public class NpcHealerAI extends Priest
 					if(checkHealTarget(player) == 1)
 					{
 						Skill[] healSkillList = selectUsableSkills(player, distance, actor.getTemplate().getHealSkills());
-						int randomIndex = (int)Math.random()*healSkillList.length;
-						skill = healSkillList[randomIndex];
-						
+						if(healSkillList != null)
+						{
+							int randomIndex = (int)Math.random()*healSkillList.length;
+							skill = healSkillList[randomIndex];
+						}
 					}
 					else if(checkHealTarget(player) == 2)
 					{
 						Skill[] rechargeSkillList = selectUsableSkills(player, distance, actor.getTemplate().getManaHealSkills());
-						int randomIndex = (int)Math.random()*rechargeSkillList.length;
-						skill = rechargeSkillList[randomIndex];
+						if(rechargeSkillList != null)
+						{
+							int randomIndex = (int)Math.random()*rechargeSkillList.length;
+							skill = rechargeSkillList[randomIndex];
+						}
 					}
 					
 					if(skill == null)
