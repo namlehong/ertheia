@@ -15,7 +15,8 @@ import l2s.gameserver.model.instances.NpcInstance;
  */
 public class NpcHealerAI extends Priest
 {
-	Creature target = null;
+	Creature attackTarget = null;
+	Player healTarget = null;
 	
 	public NpcHealerAI(NpcInstance actor)
 	{
@@ -38,82 +39,86 @@ public class NpcHealerAI extends Priest
 	private boolean startHeal()
 	{
 		NpcInstance actor = getActor();
-		if(target == null || target.isNpc() || target.isDead())
+		if(healTarget == null || healTarget.isNpc() || healTarget.isDead())
 		{
 			List<Player> around = World.getAroundPlayers(actor);
 			if(around != null && !around.isEmpty())
 			{
 				for(Player player : around)
 				{
-					if(checkHealTarget(player))
+					if(checkHealattackTarget(player) != 0)
 					{
-						target = player;
+						healTarget = player;
 					}
 				}
 			}
 		}
 
-		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
+		if(healTarget != null && !actor.isAttackingNow() && !actor.isCastingNow() && !healTarget.isDead() && GeoEngine.canSeeTarget(actor, healTarget, false) && healTarget.isVisible())
 		{
-			setIntention(CtrlIntention.AI_INTENTION_CAST, target);
+			if(checkHealattackTarget(healTarget) == 1)
+				setIntention(CtrlIntention.AI_INTENTION_CAST, actor.getTemplate().getHealSkills(), healTarget);
+			else if(checkHealattackTarget(healTarget) == 2)
+				setIntention(CtrlIntention.AI_INTENTION_CAST, actor.getTemplate().getManaHealSkills(), healTarget);
+			
 			return true;
 		}
 
-		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
+		if(healTarget != null && (!healTarget.isVisible() || healTarget.isDead() || !GeoEngine.canSeeTarget(actor, healTarget, false)))
 		{
-			target = null;
+			healTarget = null;
 			return false;
 		}
 		
 		return false;
 	}
 	
-	private boolean checkHealTarget(Player player)
+	private int checkHealattackTarget(Player player)
 	{
 		if(player == null)
-			return false;
+			return 0;
 		
 		if(player.getCurrentHpPercents() < 80)
-			return true;
+			return 1;
 		
 		if(player.getCurrentMpPercents() < 80)
-			return true;
+			return 2;
 		
-		return false;
+		return 0;
 	}
 
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
-		if(target == null || target.isDead())
+		if(attackTarget == null || attackTarget.isDead())
 		{
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
 			if(around != null && !around.isEmpty())
 			{
 				for(NpcInstance npc : around)
 				{
-					if(checkTarget(npc))
+					if(checkattackTarget(npc))
 					{
-						if(target == null || actor.getDistance3D(npc) < actor.getDistance3D(target))
-							target = npc;
+						if(attackTarget == null || actor.getDistance3D(npc) < actor.getDistance3D(attackTarget))
+							attackTarget = npc;
 						
 					}
 				}
 			}
 		}
 
-		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
+		if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow() && !attackTarget.isDead() && GeoEngine.canSeeTarget(actor, attackTarget, false) && attackTarget.isVisible())
 		{
-			actor.getAggroList().addDamageHate(target, 10, 10);
-			actor.setAggressionTarget(target);
+			actor.getAggroList().addDamageHate(attackTarget, 10, 10);
+			actor.setAggressionTarget(attackTarget);
 			actor.setRunning();
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attackTarget);
 			return true;
 		}
 
-		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
+		if(attackTarget != null && (!attackTarget.isVisible() || attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false)))
 		{
-			target = null;
+			attackTarget = null;
 			return false;
 		}
 		
@@ -144,12 +149,12 @@ public class NpcHealerAI extends Priest
 		return true;
 	}
 	
-	private boolean checkTarget(NpcInstance target)
+	private boolean checkattackTarget(NpcInstance attackTarget)
 	{
-		if(target == null)
+		if(attackTarget == null)
 			return false;
 		
-		if (((NpcInstance) target).isInFaction(getActor()))
+		if (((NpcInstance) attackTarget).isInFaction(getActor()))
 			return false;
 			
 		return true;

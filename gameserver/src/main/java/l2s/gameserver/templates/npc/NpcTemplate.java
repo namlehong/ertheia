@@ -93,6 +93,7 @@ public class NpcTemplate extends CreatureTemplate
 	private Skill[] _buffSkills = Skill.EMPTY_ARRAY;
 	private Skill[] _stunSkills = Skill.EMPTY_ARRAY;
 	private Skill[] _healSkills = Skill.EMPTY_ARRAY;
+	private Skill[] _manaHealSkills = Skill.EMPTY_ARRAY;
 
 	private Class<NpcInstance> _classType = NpcInstance.class;
 	private Constructor<NpcInstance> _constructorType = DEFAULT_TYPE_CONSTRUCTOR;
@@ -417,6 +418,8 @@ public class NpcTemplate extends CreatureTemplate
 			case HOT:
 				_healSkills = ArrayUtils.add(_healSkills, skill);
 				break;
+			case MANAHEAL:
+				_manaHealSkills = ArrayUtils.add(_manaHealSkills, skill);
 			default:
 
 				break;
@@ -451,6 +454,11 @@ public class NpcTemplate extends CreatureTemplate
 	public Skill[] getHealSkills()
 	{
 		return _healSkills;
+	}
+	
+	public Skill[] getManaHealSkills()
+	{
+		return _manaHealSkills;
 	}
 
 	public List<MinionData> getMinionData()
