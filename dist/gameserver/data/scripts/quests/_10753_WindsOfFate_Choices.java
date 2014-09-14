@@ -425,7 +425,8 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88552, 186840, -10476), 0);
 			
 			st.startQuestTimer("npc_follow_timer", check_interval);
-			tellNpcFollowPlayer(kain_fighter_instance, player);
+			kain_fighter_instance.moveToLocation(-88504, 184280, -104701, 100, true);
+			//tellNpcFollowPlayer(kain_fighter_instance, player);
 			tellNpcFollowPlayer(ferin_healer_instance, player);
 			st.set("follow", 1);
 			npc.deleteMe();

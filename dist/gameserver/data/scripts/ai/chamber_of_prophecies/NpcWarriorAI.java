@@ -78,11 +78,11 @@ public class NpcWarriorAI extends Fighter
 			if(actor.getAggroList().isEmpty())
 			{
 				System.out.println("Kain getAggroList empty");
-				List<Creature> chars = World.getAroundCharacters(actor);
+				List<NpcInstance> chars = actor.getAroundNpc(3000, 150);
 				CollectionUtils.eqSort(chars, _nearestTargetComparator);
 				for(Creature cha : chars)
 				{
-					System.out.println("Kain thinkActive checkAggression(cha)" + checkAggression(cha));
+					System.out.println("Kain thinkActive checkAggression " + cha.getName() + " " + checkAggression(cha));
 					if(checkAggression(cha))
 						changeIntention(CtrlIntention.AI_INTENTION_ATTACK, cha, null);
 				}
@@ -176,10 +176,13 @@ public class NpcWarriorAI extends Fighter
 		System.out.println("Kain checkAggression");
 		NpcInstance actor = getActor();
 		if(getIntention() != CtrlIntention.AI_INTENTION_ACTIVE || !isGlobalAggro())
+		{
+			System.out.println("Kain checkAggression " + getIntention() + " isGlobalAggro " + isGlobalAggro());
 			return false;
-
+		}
 		if(target.isPlayable())
 		{
+			System.out.println("Kain checkAggression target.isPlayable true");
 			return false;
 		}
 		
@@ -187,12 +190,14 @@ public class NpcWarriorAI extends Fighter
 		{
 			if (((NpcInstance) target).isInFaction(actor))
 			{
+				System.out.println("Kain checkAggression target.isInFaction true");
 				return false;
 			}
 		}
 		
 		if(target.isMonster())
 		{
+			System.out.println("Kain checkAggression target.isMonster true");
 			return true;
 		}
 
