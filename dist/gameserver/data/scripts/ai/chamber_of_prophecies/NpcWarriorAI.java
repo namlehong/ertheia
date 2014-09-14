@@ -2,22 +2,12 @@ package ai.chamber_of_prophecies;
 
 import java.util.List;
 
-import l2s.commons.collections.CollectionUtils;
-import l2s.commons.util.Rnd;
-import l2s.gameserver.Config;
-import l2s.gameserver.ai.CtrlEvent;
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
 import l2s.gameserver.geodata.GeoEngine;
-import l2s.gameserver.model.Creature;
-import l2s.gameserver.model.World;
-import l2s.gameserver.model.AggroList.AggroInfo;
-import l2s.gameserver.model.instances.MinionInstance;
-import l2s.gameserver.model.instances.MonsterInstance;
+import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
-import l2s.gameserver.network.l2.components.NpcString;
-import l2s.gameserver.scripts.Functions;
-
+import l2s.gameserver.utils.Location;
 /**
  * @author Hien Son
  */
@@ -33,21 +23,17 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
-		NpcInstance actor = getActor();
-		
 		return startAttack();
 	}
 
 	private boolean startAttack()
 	{
-		System.out.println("Kain startAttack");
 		NpcInstance actor = getActor();
 		if(target == null)
 		{
 			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
 			if(around != null && !around.isEmpty())
 			{
-				System.out.println("npcaround size " + around.size());
 				for(NpcInstance npc : around)
 				{
 					if(checkTarget(npc))
@@ -77,58 +63,39 @@ public class NpcWarriorAI extends Fighter
 		
 		return false;
 	}
-
+	
 	@Override
-	public boolean canAttackCharacter(Creature target)
+	protected void thinkAttack()
 	{
-		System.out.println("Kain check canAttackCharacter");
+		System.out.println("Kain thinking Attack");
 		NpcInstance actor = getActor();
-		if(getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
+		if(actor.isDead())
+			return;
+
+		Location loc = actor.getSpawnedLoc();
+		if(!actor.isInRange(loc, MAX_PURSUE_RANGE) && !(actor instanceof DecoyInstance))
 		{
-			AggroInfo ai = actor.getAggroList().get(target);
-			return ai != null && ai.hate > 0;
+			System.out.println("Kain teleportHome");
+			teleportHome();
+			return;
 		}
-		return target.isMonster() || target.isPlayable();
+
+		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
+		{
+			if(!createNewTask())
+			{
+				System.out.println("Kain returnHome");
+				if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
+					returnHome();
+			}
+		}
 	}
+
 
 	@Override
 	protected boolean isGlobalAggro()
 	{
 		return true;
-	}
-
-	@Override
-	public boolean checkAggression(Creature target)
-	{
-		System.out.println("Kain checkAggression");
-		NpcInstance actor = getActor();
-		if(getIntention() != CtrlIntention.AI_INTENTION_ACTIVE || !isGlobalAggro())
-		{
-			System.out.println("Kain checkAggression " + getIntention() + " isGlobalAggro " + isGlobalAggro());
-			return false;
-		}
-		if(target.isPlayable())
-		{
-			System.out.println("Kain checkAggression target.isPlayable true");
-			return false;
-		}
-		
-		if (target.isNpc())
-		{
-			if (((NpcInstance) target).isInFaction(actor))
-			{
-				System.out.println("Kain checkAggression target.isInFaction true");
-				return false;
-			}
-		}
-		
-		if(target.isMonster())
-		{
-			System.out.println("Kain checkAggression target.isMonster true");
-			return true;
-		}
-
-		return super.checkAggression(target);
 	}
 	
 	private boolean checkTarget(NpcInstance target)
