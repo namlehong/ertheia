@@ -79,7 +79,9 @@ public class NpcWarriorAI extends Fighter
 			{
 				System.out.println("Kain getAggroList empty");
 				List<NpcInstance> chars = actor.getAroundNpc(3000, 150);
+				System.out.println("chars size " + chars.size());
 				CollectionUtils.eqSort(chars, _nearestTargetComparator);
+				System.out.println("chars size after eqSort " + chars.size());
 				for(Creature cha : chars)
 				{
 					System.out.println("Kain thinkActive checkAggression " + cha.getName() + " " + checkAggression(cha));
