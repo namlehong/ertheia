@@ -1492,7 +1492,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					if(!target.isPlayer())
 						targets_exclude_playable.add(target);
 				}
-				System.out.println("targets_exclude_playable " + targets_exclude_playable.size());
+				//System.out.println("targets_exclude_playable " + targets_exclude_playable.size());
 				addTargetsToList(targets_exclude_playable, activeChar, activeChar, forceUse);
 				
 				//System.out.println("targets " + targets.size());

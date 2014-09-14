@@ -29,7 +29,7 @@ public class NpcHealerAI extends Fighter
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
-		if(target == null)
+		if(target == null || target.isDead())
 		{
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
 			if(around != null && !around.isEmpty())
@@ -121,13 +121,13 @@ public class NpcHealerAI extends Fighter
 	@Override
 	public int getRateDEBUFF()
 	{
-		return 50;
+		return 30;
 	}
 
 	@Override
 	public int getRateDAM()
 	{
-		return 80;
+		return 30;
 	}
 
 	@Override
@@ -139,12 +139,12 @@ public class NpcHealerAI extends Fighter
 	@Override
 	public int getRateBUFF()
 	{
-		return 0;
+		return 90;
 	}
 
 	@Override
 	public int getRateHEAL()
 	{
-		return 0;
+		return 90;
 	}
 }
