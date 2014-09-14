@@ -123,7 +123,7 @@ public class NpcWarriorAI extends Fighter
 			{
 				for(NpcInstance npc : around)
 				{
-					if(checkAggression(npc))
+					if(checkTarget(npc))
 					{
 						if(target == null)
 							target = npc;
@@ -202,6 +202,17 @@ public class NpcWarriorAI extends Fighter
 		}
 
 		return super.checkAggression(target);
+	}
+	
+	private boolean checkTarget(NpcInstance target)
+	{
+		if(target == null)
+			return false;
+		
+		if (((NpcInstance) target).isInFaction(getActor()))
+			return false;
+			
+		return true;
 	}
 
 	@Override
