@@ -1484,8 +1484,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				break;
 			}
 			case TARGET_AURA_EXCLUDE_PLAYER:
-				/*
-				List<Creature> targets_exclude_playable = new LazyArrayList<Creature>(1);
+				
+				List<Creature> targets_exclude_playable = new LazyArrayList<Creature>();
 				
 				for(Creature target : targets)
 				{
@@ -1494,9 +1494,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				}
 				System.out.println("targets_exclude_playable " + targets_exclude_playable.size());
 				addTargetsToList(targets_exclude_playable, activeChar, activeChar, forceUse);
-				*/
-				System.out.println("targets " + targets.size());
-				addTargetsToList(targets, activeChar, activeChar, forceUse);
+				
+				//System.out.println("targets " + targets.size());
+				//addTargetsToList(targets, activeChar, activeChar, false);
 				break;
 			case TARGET_COMMCHANNEL:
 			{
