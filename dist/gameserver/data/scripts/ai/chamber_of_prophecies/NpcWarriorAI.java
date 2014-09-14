@@ -67,27 +67,13 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	protected void thinkAttack()
 	{
-		System.out.println("Kain thinking Attack");
 		NpcInstance actor = getActor();
 		if(actor.isDead())
 			return;
 
-		Location loc = actor.getSpawnedLoc();
-		if(!actor.isInRange(loc, MAX_PURSUE_RANGE) && !(actor instanceof DecoyInstance))
-		{
-			System.out.println("Kain teleportHome");
-			teleportHome();
-			return;
-		}
-
 		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
 		{
-			if(!createNewTask())
-			{
-				System.out.println("Kain returnHome");
-				if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
-					returnHome();
-			}
+			createNewTask();
 		}
 	}
 
