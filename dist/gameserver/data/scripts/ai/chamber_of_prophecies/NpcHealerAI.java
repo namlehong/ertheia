@@ -7,6 +7,7 @@ import l2s.gameserver.ai.Priest;
 import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.model.Creature;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.Skill;
 import l2s.gameserver.model.World;
 import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
@@ -57,10 +58,22 @@ public class NpcHealerAI extends Priest
 		if(healTarget != null && !actor.isAttackingNow() && !actor.isCastingNow() && !healTarget.isDead() && GeoEngine.canSeeTarget(actor, healTarget, false) && healTarget.isVisible())
 		{
 			if(checkHealattackTarget(healTarget) == 1)
-				setIntention(CtrlIntention.AI_INTENTION_CAST, actor.getTemplate().getHealSkills(), healTarget);
+			{
+				Skill[] healSkillList = actor.getTemplate().getHealSkills();
+				int randomIndex = (int)Math.random()*healSkillList.length;
+				Skill healSkill = healSkillList[randomIndex];
+				
+				setIntention(CtrlIntention.AI_INTENTION_CAST, healSkill, healTarget);
+			}
 			else if(checkHealattackTarget(healTarget) == 2)
-				setIntention(CtrlIntention.AI_INTENTION_CAST, actor.getTemplate().getManaHealSkills(), healTarget);
-			
+			{
+				Skill[] rechargeSkillList = actor.getTemplate().getHealSkills();
+				int randomIndex = (int)Math.random()*rechargeSkillList.length;
+				Skill rechargeSkill = rechargeSkillList[randomIndex];
+				setIntention(CtrlIntention.AI_INTENTION_CAST, rechargeSkill, healTarget);
+				
+			}
+				
 			return true;
 		}
 
