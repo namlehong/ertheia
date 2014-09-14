@@ -29,7 +29,7 @@ public class NpcWarriorAI extends Fighter
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
-		if(target == null)
+		if(target == null || target.isDead())
 		{
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
 			if(around != null && !around.isEmpty())
