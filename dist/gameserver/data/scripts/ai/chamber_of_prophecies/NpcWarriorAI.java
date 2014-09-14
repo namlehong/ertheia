@@ -2,11 +2,17 @@ package ai.chamber_of_prophecies;
 
 import java.util.List;
 
+import l2s.commons.collections.CollectionUtils;
+import l2s.commons.util.Rnd;
+import l2s.gameserver.Config;
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
 import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.World;
 import l2s.gameserver.model.AggroList.AggroInfo;
+import l2s.gameserver.model.instances.MinionInstance;
+import l2s.gameserver.model.instances.MonsterInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 
 /**
@@ -45,6 +51,50 @@ public class NpcWarriorAI extends Fighter
 	}
 	
 	@Override
+	protected boolean thinkActive()
+	{
+		NpcInstance actor = getActor();
+		if(actor.isActionsDisabled())
+			return true;
+
+		if(_randomAnimationEnd > System.currentTimeMillis())
+			return true;
+
+		if(_def_think)
+		{
+			if(doTask())
+				clearTasks();
+			return true;
+		}
+
+		long now = System.currentTimeMillis();
+		if(now - _checkAggroTimestamp > Config.AGGRO_CHECK_INTERVAL)
+		{
+			_checkAggroTimestamp = now;
+
+			if(actor.getAggroList().isEmpty())
+			{
+				List<Creature> chars = World.getAroundCharacters(actor);
+				CollectionUtils.eqSort(chars, _nearestTargetComparator);
+				for(Creature cha : chars)
+				{
+					if(actor.getAggroList().get(cha) != null)
+						if(checkAggression(cha))
+							return true;
+				}
+			}
+		}
+
+		if(randomAnimation())
+			return true;
+
+		if(randomWalk())
+			return true;
+
+		return false;
+	}
+
+	@Override
 	protected void thinkAttack()
 	{
 		System.out.println("Kain thinkAttack");
@@ -81,7 +131,7 @@ public class NpcWarriorAI extends Fighter
 
 		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
 		{
-			actor.getAggroList().addDamageHate(target, 10000, 10000);
+			actor.getAggroList().addDamageHate(target, 10, 10);
 			actor.setAggressionTarget(target);
 			actor.setRunning();
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
