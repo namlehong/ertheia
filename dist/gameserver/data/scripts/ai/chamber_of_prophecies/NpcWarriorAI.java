@@ -80,7 +80,7 @@ public class NpcWarriorAI extends Fighter
 				{
 					if(actor.getAggroList().get(cha) != null)
 						if(checkAggression(cha))
-							changeIntention(CtrlIntention.AI_INTENTION_ATTACK, cha, null);
+							return true;
 				}
 			}
 		}
