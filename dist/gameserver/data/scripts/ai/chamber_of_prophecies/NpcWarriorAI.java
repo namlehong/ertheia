@@ -1,108 +1,71 @@
 package ai.chamber_of_prophecies;
 
-import java.util.List;
-
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
-import l2s.gameserver.model.instances.DecoyInstance;
+import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.AggroList.AggroInfo;
+import l2s.gameserver.model.instances.MonsterInstance;
 import l2s.gameserver.model.instances.NpcInstance;
-import l2s.gameserver.utils.Location;
-import l2s.gameserver.geodata.GeoEngine;
 
 /**
  * @author Hien Son
  */
 public class NpcWarriorAI extends Fighter
 {
-	private NpcInstance target = null;
-
 	public NpcWarriorAI(NpcInstance actor)
 	{
 		super(actor);
 	}
 
 	@Override
-	public boolean isGlobalAI()
-	{
-		return false;
-	}
-	
-	@Override
-	protected void onEvtSpawn()
-	{
-		startAttack();
-	}
-
-	@Override
-	protected boolean thinkActive()
+	public boolean canAttackCharacter(Creature target)
 	{
 		NpcInstance actor = getActor();
-		
-		return startAttack();
-	}
-	
-	@Override
-	protected void thinkAttack()
-	{
-		NpcInstance actor = getActor();
-		if(actor.isDead())
-			return;
-
-		if(!actor.isAttackingNow() && !actor.isCastingNow())
+		if(getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
-			startAttack();
+			AggroInfo ai = actor.getAggroList().get(target);
+			return ai != null && ai.hate > 0;
 		}
+		return target.isMonster() || target.isPlayable();
 	}
 
-	private boolean startAttack()
+	@Override
+	public boolean checkAggression(Creature target)
 	{
 		NpcInstance actor = getActor();
-		if(target == null)
+		if(getIntention() != CtrlIntention.AI_INTENTION_ACTIVE || !isGlobalAggro())
+			return false;
+
+		if(target.isPlayable())
 		{
-			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
-			if(around != null && !around.isEmpty())
+			return false;
+		}
+		
+		if (target.isNpc())
+		{
+			if (((NpcInstance) target).isInFaction(actor))
 			{
-				for(NpcInstance npc : around)
-				{
-					if(checkTarget(npc))
-					{
-						if(target == null)
-							target = npc;
-						
-					}
-				}
+				return false;
 			}
 		}
-
-		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
+		
+		if(target.isMonster())
 		{
-			actor.getAggroList().addDamageHate(target, 10000, 10000);
-			actor.setAggressionTarget(target);
-			actor.setRunning();
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 			return true;
 		}
 
-		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
-		{
-			target = null;
-			return false;
-		}
-		
-		return false;
+		return super.checkAggression(target);
 	}
 
-	private boolean checkTarget(NpcInstance target)
+	@Override
+	public int getMaxAttackTimeout()
 	{
-		if(target == null)
-			return false;
-		
-		if(target.isPlayer()) 
-			return false;
-		
-		if(target.getFaction().equals(getActor().getFaction()))
-			return false;
-			
+		return 0;
+	}
+
+	@Override
+	protected boolean randomWalk()
+	{
 		return true;
 	}
 	
@@ -116,13 +79,13 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	public int getRateDEBUFF()
 	{
-		return 0;
+		return 50;
 	}
 
 	@Override
 	public int getRateDAM()
 	{
-		return 50;
+		return 80;
 	}
 
 	@Override
