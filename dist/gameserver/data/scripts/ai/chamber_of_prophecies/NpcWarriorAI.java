@@ -82,12 +82,9 @@ public class NpcWarriorAI extends Fighter
 				CollectionUtils.eqSort(chars, _nearestTargetComparator);
 				for(Creature cha : chars)
 				{
-					if(actor.getAggroList().get(cha) != null)
-					{
-						System.out.println("Kain thinkActive checkAggression(cha)" + checkAggression(cha));
-						if(checkAggression(cha))
-							changeIntention(CtrlIntention.AI_INTENTION_ATTACK, cha, null);
-					}
+					System.out.println("Kain thinkActive checkAggression(cha)" + checkAggression(cha));
+					if(checkAggression(cha))
+						changeIntention(CtrlIntention.AI_INTENTION_ATTACK, cha, null);
 				}
 			}
 		}
