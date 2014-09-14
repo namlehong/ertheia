@@ -36,6 +36,7 @@ public class NpcWarriorAI extends Fighter
 			return;
 		try
 		{
+			System.out.println("Kain getIntention " + getIntention());
 			if(getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
 				thinkActive();
 			else if(getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
@@ -53,6 +54,7 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
+		System.out.println("Kain thinkActive");
 		NpcInstance actor = getActor();
 		if(actor.isActionsDisabled())
 			return true;
@@ -72,8 +74,10 @@ public class NpcWarriorAI extends Fighter
 		{
 			_checkAggroTimestamp = now;
 
+			System.out.println("Kain checkAgrro");
 			if(actor.getAggroList().isEmpty())
 			{
+				System.out.println("Kain getAggroList empty");
 				List<Creature> chars = World.getAroundCharacters(actor);
 				CollectionUtils.eqSort(chars, _nearestTargetComparator);
 				for(Creature cha : chars)
