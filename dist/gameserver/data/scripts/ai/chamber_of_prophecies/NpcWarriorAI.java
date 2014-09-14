@@ -17,6 +17,61 @@ public class NpcWarriorAI extends Fighter
 		super(actor);
 	}
 
+	
+	/*
+
+	@Override
+	protected void thinkAttack()
+	{
+		NpcInstance actor = getActor();
+		if(actor.isDead())
+			return;
+
+		System.out.println("Kain thinks attack");
+		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
+		{
+			startAttack();
+		}
+	}
+
+	private boolean startAttack()
+	{
+		NpcInstance actor = getActor();
+		if(target == null)
+		{
+			List<NpcInstance> around = actor.getAroundNpc(3000, 150);
+			if(around != null && !around.isEmpty())
+			{
+				for(NpcInstance npc : around)
+				{
+					if(checkTarget(npc))
+					{
+						if(target == null)
+							target = npc;
+						
+					}
+				}
+			}
+		}
+
+		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
+		{
+			actor.getAggroList().addDamageHate(target, 10000, 10000);
+			actor.setAggressionTarget(target);
+			actor.setRunning();
+			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			return true;
+		}
+
+		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
+		{
+			target = null;
+			return false;
+		}
+		
+		return false;
+	}
+	*/
 	@Override
 	public boolean canAttackCharacter(Creature target)
 	{
@@ -27,6 +82,12 @@ public class NpcWarriorAI extends Fighter
 			return ai != null && ai.hate > 0;
 		}
 		return target.isMonster() || target.isPlayable();
+	}
+
+	@Override
+	protected boolean isGlobalAggro()
+	{
+		return true;
 	}
 
 	@Override
