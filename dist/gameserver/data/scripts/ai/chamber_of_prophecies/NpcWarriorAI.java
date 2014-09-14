@@ -1,10 +1,12 @@
 package ai.chamber_of_prophecies;
 
+import java.util.List;
+
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.Fighter;
+import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.model.Creature;
 import l2s.gameserver.model.AggroList.AggroInfo;
-import l2s.gameserver.model.instances.MonsterInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 
 /**
@@ -12,22 +14,44 @@ import l2s.gameserver.model.instances.NpcInstance;
  */
 public class NpcWarriorAI extends Fighter
 {
+	NpcInstance target = null;
+	
 	public NpcWarriorAI(NpcInstance actor)
 	{
 		super(actor);
 	}
 
+	@Override
+	protected void onEvtThink()
+	{
+		System.out.println("Kain onEvtThink");
+		
+		if(_randomAnimationEnd > System.currentTimeMillis())
+			return;
+		try
+		{
+			if(getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
+				thinkActive();
+			else if(getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
+				thinkAttack();
+			else if(getIntention() == CtrlIntention.AI_INTENTION_FOLLOW)
+				thinkFollow();
+		}
+		finally
+		{
+			
+		}
+		
+	}
 	
-	/*
-
 	@Override
 	protected void thinkAttack()
 	{
+		System.out.println("Kain thinkAttack");
 		NpcInstance actor = getActor();
 		if(actor.isDead())
 			return;
-
-		System.out.println("Kain thinks attack");
+		
 		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
 		{
 			startAttack();
@@ -36,6 +60,7 @@ public class NpcWarriorAI extends Fighter
 
 	private boolean startAttack()
 	{
+		System.out.println("Kain startAttack");
 		NpcInstance actor = getActor();
 		if(target == null)
 		{
@@ -44,7 +69,7 @@ public class NpcWarriorAI extends Fighter
 			{
 				for(NpcInstance npc : around)
 				{
-					if(checkTarget(npc))
+					if(checkAggression(npc))
 					{
 						if(target == null)
 							target = npc;
@@ -71,10 +96,11 @@ public class NpcWarriorAI extends Fighter
 		
 		return false;
 	}
-	*/
+
 	@Override
 	public boolean canAttackCharacter(Creature target)
 	{
+		System.out.println("Kain check canAttackCharacter");
 		NpcInstance actor = getActor();
 		if(getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
 		{
@@ -93,6 +119,7 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	public boolean checkAggression(Creature target)
 	{
+		System.out.println("Kain checkAggression");
 		NpcInstance actor = getActor();
 		if(getIntention() != CtrlIntention.AI_INTENTION_ACTIVE || !isGlobalAggro())
 			return false;
