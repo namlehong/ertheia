@@ -35,28 +35,38 @@ public class NpcHealerAI extends Priest
 		if(chance*100 < getRateHEAL())
 		{
 			System.out.println("Ferin heal chance triggered");
-			for(Player player : World.getAroundPlayers(actor, 600, 300))
+			for(Player player : World.getAroundPlayers(actor, 2000, 300))
 			{
 				System.out.println("player " + player.getName() + " isDead " + player.isDead() + " isAlikeDead " + player.isAlikeDead() + " isVisible " + player.isVisible());
 				if(player != null && !player.isDead() && !player.isAlikeDead() && player.isVisible())
 				{
 					Skill skill = null;
-					System.out.println("checkHealTarget " + checkHealattackTarget(healTarget));
-					if(checkHealattackTarget(player) == 1)
+					System.out.println("checkHealTarget " + checkHealTarget(healTarget));
+					double distance = actor.getDistance(player);
+					if(checkHealTarget(player) == 1)
 					{
-						Skill[] healSkillList = actor.getTemplate().getHealSkills();
+						Skill[] healSkillList = selectUsableSkills(player, distance, actor.getTemplate().getHealSkills());
 						int randomIndex = (int)Math.random()*healSkillList.length;
 						skill = healSkillList[randomIndex];
 						
 					}
-					else if(checkHealattackTarget(player) == 2)
+					else if(checkHealTarget(player) == 2)
 					{
-						Skill[] rechargeSkillList = actor.getTemplate().getHealSkills();
+						Skill[] rechargeSkillList = selectUsableSkills(player, distance, actor.getTemplate().getManaHealSkills());
 						int randomIndex = (int)Math.random()*rechargeSkillList.length;
 						skill = rechargeSkillList[randomIndex];
 					}
 					
-					if(skill != null && canUseSkill(skill, player, actor.getDistance(player), false))
+					if(skill == null)
+						continue;
+					
+					if(distance > skill.getCastRange())
+					{
+						tryMoveToTarget(player, skill.getCastRange());
+						return false;
+					}
+					
+					if(canUseSkill(skill, player, distance))
 					{
 						System.out.println("skill " + skill.getName());
 						actor.doCast(skill, player, true);
@@ -129,7 +139,7 @@ public class NpcHealerAI extends Priest
 	}
 	
 	
-	private int checkHealattackTarget(Player player)
+	private int checkHealTarget(Player player)
 	{
 		if(player == null)
 			return 0;
