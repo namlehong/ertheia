@@ -12,6 +12,7 @@ import l2s.gameserver.model.World;
 import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.s2c.MagicSkillUse;
+import l2s.gameserver.stats.Stats;
 /**
  * @author Hien Son
  */
@@ -55,10 +56,10 @@ public class NpcHealerAI extends Priest
 						skill = rechargeSkillList[randomIndex];
 					}
 					
-					if(skill != null)
+					if(skill != null && canUseSkill(skill, player, actor.getDistance(player), false))
 					{
 						System.out.println("skill " + skill.getName());
-						actor.doCast(skill, healTarget, true);
+						actor.doCast(skill, player, true);
 						actor.broadcastPacket(new MagicSkillUse(actor, player, skill.getId(), 1, 0, 0, false));
 					}
 					else
@@ -71,6 +72,62 @@ public class NpcHealerAI extends Priest
 		else
 			return startAttack();
 	}
+	
+
+	
+	protected boolean canUseSkill(Skill skill, Creature target, double distance, boolean override)
+	{
+
+		NpcInstance actor = getActor();
+		
+		if ((skill == null) || skill.isNotUsedByAI())
+		{
+			return false;
+		}
+		
+		if(!skill.checkCondition(actor, target, true, false, false))
+		{
+			return false;
+		}
+				
+		if ((skill.getTargetType() == Skill.SkillTargetType.TARGET_SELF) && (target != actor))
+		{
+			return false;
+		}
+		
+		int castRange = skill.getAOECastRange();
+		if ((castRange <= 200) && (distance > 200))
+		{
+			return false;
+		}
+		
+		if (actor.isSkillDisabled(skill) || actor.isMuted(skill) || actor.isUnActiveSkill(skill.getId()))
+		{
+			return false;
+		}
+		
+		double mpConsume2 = skill.getMpConsume2();
+		if (skill.isMagic())
+		{
+			mpConsume2 = actor.calcStat(Stats.MP_MAGIC_SKILL_CONSUME, mpConsume2, target, skill);
+		}
+		else
+		{
+			mpConsume2 = actor.calcStat(Stats.MP_PHYSICAL_SKILL_CONSUME, mpConsume2, target, skill);
+		}
+		if (actor.getCurrentMp() < mpConsume2)
+		{
+			return false;
+		}
+		
+		if (!override && target.getEffectList().containsEffects(skill))
+		{
+			return false;
+		}
+		
+		return true;
+	}
+	
 	
 	private int checkHealattackTarget(Player player)
 	{
