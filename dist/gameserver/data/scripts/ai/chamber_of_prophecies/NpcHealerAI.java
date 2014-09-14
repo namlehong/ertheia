@@ -37,7 +37,7 @@ public class NpcHealerAI extends Priest
 			for(Player player : World.getAroundPlayers(actor, 600, 300))
 			{
 				System.out.println("player " + player.getName() + " isDead " + player.isDead() + " isAlikeDead " + player.isAlikeDead() + " isVisible " + player.isVisible());
-				if(player != null && !player.isDead() && !player.isAlikeDead() && !player.isVisible())
+				if(player != null && !player.isDead() && !player.isAlikeDead() && player.isVisible())
 				{
 					Skill skill = null;
 					System.out.println("checkHealTarget " + checkHealattackTarget(healTarget));
