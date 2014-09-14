@@ -41,14 +41,14 @@ public class NpcHealerAI extends Priest
 				{
 					Skill skill = null;
 					System.out.println("checkHealTarget " + checkHealattackTarget(healTarget));
-					if(checkHealattackTarget(healTarget) == 1)
+					if(checkHealattackTarget(player) == 1)
 					{
 						Skill[] healSkillList = actor.getTemplate().getHealSkills();
 						int randomIndex = (int)Math.random()*healSkillList.length;
 						skill = healSkillList[randomIndex];
 						
 					}
-					else if(checkHealattackTarget(healTarget) == 2)
+					else if(checkHealattackTarget(player) == 2)
 					{
 						Skill[] rechargeSkillList = actor.getTemplate().getHealSkills();
 						int randomIndex = (int)Math.random()*rechargeSkillList.length;
@@ -59,7 +59,7 @@ public class NpcHealerAI extends Priest
 					{
 						System.out.println("skill " + skill.getName());
 						actor.doCast(skill, healTarget, true);
-						actor.broadcastPacket(new MagicSkillUse(actor, healTarget, skill.getId(), 1, 0, 0, false));
+						actor.broadcastPacket(new MagicSkillUse(actor, player, skill.getId(), 1, 0, 0, false));
 					}
 					else
 						System.out.println("Skill is null");
