@@ -73,7 +73,12 @@ public class NpcWarriorAI extends Fighter
 
 		if(doTask() && !actor.isAttackingNow() && !actor.isCastingNow())
 		{
-			createNewTask();
+			if(!createNewTask())
+			{
+				System.out.println("Kain returnHome");
+				if(System.currentTimeMillis() > getAttackTimeout() && !(actor instanceof DecoyInstance))
+					returnHome();
+			}
 		}
 	}
 
