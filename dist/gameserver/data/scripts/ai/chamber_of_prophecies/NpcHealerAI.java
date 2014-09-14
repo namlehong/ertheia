@@ -33,11 +33,14 @@ public class NpcHealerAI extends Priest
 		
 		if(chance*100 < getRateHEAL())
 		{
+			System.out.println("Ferin heal chance triggered");
 			for(Player player : World.getAroundPlayers(actor, 600, 300))
 			{
+				System.out.println("player " + player.getName() + " isDead " + player.isDead() + " isAlikeDead " + player.isAlikeDead() + " isVisible " + player.isVisible());
 				if(player != null && !player.isDead() && !player.isAlikeDead() && !player.isVisible())
 				{
 					Skill skill = null;
+					System.out.println("checkHealTarget " + checkHealattackTarget(healTarget));
 					if(checkHealattackTarget(healTarget) == 1)
 					{
 						Skill[] healSkillList = actor.getTemplate().getHealSkills();
@@ -54,9 +57,12 @@ public class NpcHealerAI extends Priest
 					
 					if(skill != null)
 					{
+						System.out.println("skill " + skill.getName());
 						actor.doCast(skill, healTarget, true);
 						actor.broadcastPacket(new MagicSkillUse(actor, healTarget, skill.getId(), 1, 0, 0, false));
 					}
+					else
+						System.out.println("Skill is null");
 					
 				}
 			}
