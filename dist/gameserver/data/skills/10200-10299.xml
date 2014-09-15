@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list>
 	<skill id="10244" levels="1" name="True Vanguard">
-		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill0810"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CONT"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect time="-1">
 				<mul order="0x30" stat="pvePhysDmgBonus" value="1.50"/>
@@ -15,108 +15,99 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10245" levels="1" name="Уникальное Умение Волшебника - Пассивное">
-		<table name="#spd">1.03</table>
+	<skill id="10245" levels="1" name="Wizard - Individual Passive">
 		<table name="#power">438</table>
-		<set name="magicLevel" value="85"/>
+		<table name="#spd">1.03</table>
 		<set name="icon" value="icon.skill0217"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="power" value="#power"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="runSpd" value="#spd"/>
 		</for>
 	</skill>
-	<skill id="10246" levels="1" name="Уникальное Умение Волшебника">
+	<skill id="10246" levels="1" name="Wizard - Individual">
 		<table name="#spd">1.3</table>
-		<table name="#power">438</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="attack_time_down_special"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill1543"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="5000"/>
-		<set name="hitTime" value="500"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="attack_time_down_special"/>
-		<set name="magicLevel" value="85"/>
-		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill1543"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="runSpd" value="#spd"/>
+				<mul order="0x30" stat="pAtkSpd" value="#spd"/>
 			</effect>
 		</for>
 	</skill>
-	<skill id="10247" levels="1" name="Уникальное Умение Рыцаря - Пассивное">
+	<skill id="10247" levels="1" name="Heavy Hit">
 		<table name="#spd">1.03</table>
 		<table name="#power">438</table>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill0217"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
-		<for>
-			<mul order="0x30" stat="runSpd" value="#spd"/>
-		</for>
-	</skill>
-	<skill id="10248" levels="1" name="Уникальное Умение Рыцаря">
-		<table name="#spd">1.3</table>
-		<table name="#power">438</table>
-		<set name="reuseDelay" value="6000"/>
-		<set name="hitTime" value="500"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="attack_time_down_special"/>
-		<set name="magicLevel" value="85"/>
-		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill1543"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<for>
-			<effect>
-				<mul order="0x30" stat="runSpd" value="#spd"/>
-			</effect>
-		</for>
-	</skill>
-	<skill id="10249" levels="1" name="Обездвиживающая Атака Рыцаря">
-		<table name="#power">15000</table>
-		<set name="reuseDelay" value="7000"/>
-		<set name="coolTime" value="296"/>
-		<set name="hitTime" value="1500"/>
-		<set name="icon" value="icon.skill10317"/>
-		<set name="mpConsume2" value="92"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="100"/>
-	</skill>
-	<skill id="10250" levels="1" name="Оглушающая Атака Рыцаря">
-		<table name="#power">15000</table>
-		<table name="#time">10</table>
-		<set name="reuseDelay" value="10000"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3380"/>
 		<set name="icon" value="icon.skill10317"/>
-		<set name="mpConsume2" value="92"/>
-		<set name="castRange" value="100"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="10248" levels="1" name="Heavy Hit">
+		<table name="#power">438</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1830"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="10249" levels="1" name="Heavy Hit">
+		<table name="#power">15000</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="3700"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="10250" levels="1" name="Heavy Hit">
+		<table name="#power">15000</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="3700"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
 	<skill id="10251" levels="1" name="Superior Weapon Mastery">
-		<table name="#pAtk">1252</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#pAtk">1252</table>
 		<set name="icon" value="icon.skill10251"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<set name="analog_skills" value="216;472;210;257;330;331;421;422;168"/>
 		<triggers>
 			<trigger id="10284" level="1" type="CRIT" chance="50"/>
@@ -127,18 +118,24 @@
 		</enchant>
 		<for>
 			<add order="0x10" stat="STR" value="2">
+				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</add>
+			<mul order="0x30" stat="pAtk" value="1.3">
+				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
+			</mul>
 			<mul order="0x30" stat="pAtkSpd" value="1.25">
 				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</mul>
 			<add order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</add>
-			<add order="0x40" stat="pAccCombat" value="3">
-				<using kind="Sword, Blunt, Big Blunt, Big Sword"/>
+			<add order="0x40" stat="pAccCombat" value="8">
+				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</add>
 			<set order="0x100" stat="activateSkillMasterySTR" value="1"/>
-			<add order="0x40" stat="poleTargetCount" value="5"/>
+			<add order="0x40" stat="poleTargetCount" value="5">
+				<using kind="Pole"/>
+			</add>
 		</for>
 	</skill>
 	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
