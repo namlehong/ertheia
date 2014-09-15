@@ -812,9 +812,10 @@
 		<cond msgId="113">
 			<using kind="Shield"/>
 		</cond>
-		<enchant type="1" levels="10" group="7" name="Power">
+		<enchant type="1" levels="10" group="7" name="Attack">
 			<table name="#Type">PDAM</table>
 			<table name="#power">1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000</table>
+			<table name="#mpConsume2">58 58 58 58 58 58 58 58 58 58</table>
 		</enchant>
 		<for>
 			<effect name="ThrowHorizontal">
@@ -828,28 +829,28 @@
 		<table name="#mpConsume2">58 61 63 66 69 72</table>
 		<table name="#power">65000 67000 69000 71000 73000 75000</table>
 		<table name="#radius">200</table>
-		<set name="reuseDelay" value="45000"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="50"/>
+		<set name="activateRate" value="70"/>
+		<set name="analog_skills" value="404;407"/>
+		<set name="castRange" value="600"/>
 		<set name="coolTime" value="1000"/>
 		<set name="hitTime" value="500"/>
-		<set name="abnormal_time" value="1"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="stun"/>
-		<set name="activateRate" value="70"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10016"/>
-		<set name="activateRate" value="50"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="#power"/>
-		<set name="castRange" value="600"/>
-		<set name="skillRadius" value="#radius"/>
 		<set name="icon" value="icon.skill10015"/>
+		<set name="icon" value="icon.skill10016"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="saveVs" value="CON"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="trait" value="PULL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="404;407"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="45000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillRadius" value="#radius"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PULL"/>
 		<cond msgId="113">
 			<using kind="Shield"/>
 		</cond>
