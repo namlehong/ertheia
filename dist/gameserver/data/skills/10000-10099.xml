@@ -631,6 +631,7 @@
 		<table name="#power">10314 11026 11738 12450 13162 13874 14586 15298</table>
 		<table name="#powerPvP">0</table>
 		<set name="analog_skills" value="105;49"/>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="370"/>
 		<set name="criticalRate" value="10"/>
 		<set name="elements" value="#element"/>
@@ -696,33 +697,33 @@
 		</enchant>-->
 	</skill>
 	<skill id="10014" levels="8" name="Chain Galaxy">
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<set name="reuseDelay" value="10000"/>
-		<set name="coolTime" value="370"/>
-		<set name="hitTime" value="1700"/>
-		<set name="abnormal_time" value="3"/>
-		<set name="abnormal_level" value="3"/>
-		<set name="abnormal_type" value="heal_effect_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10014"/>
-		<table name="#power">14300 14789 15769 16748 17727 18707 19686 20666</table>
-		<table name="#mpConsume2">159 162 167 173 179 184 190 196</table>
-		<table name="#reuseDelay">10000</table>
-		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">159 162 167 173 179 184 190 196</table>
+		<table name="#power">14300 14789 15769 16748 17727 18707 19686 20666</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">10000</table>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="heal_effect_down"/>
+		<set name="coolTime" value="370"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1700"/>
+		<set name="icon" value="icon.skill10014"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="reuseDelay" value="10000"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="skillRadius" value="250"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA"/>
 		<cond msgId="113">
 			<using kind="Sword, Blunt"/>
 		</cond>
@@ -784,30 +785,30 @@
 		</for>
 	</skill>
 	<skill id="10015" levels="8" name="Chain Strike">
-		<table name="#mpConsume2">58 61 63 66 69 72</table>
 		<table name="#activateRate">60 65 70 75 80 85</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
-		<table name="#Type">DEBUFF</table>
+		<table name="#mpConsume2">58 61 63 66 69 72</table>
 		<table name="#power">0</table>
-		<set name="reuseDelay" value="10000"/>
+		<table name="#Type">DEBUFF</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="402;403"/>
+		<set name="castRange" value="600"/>
 		<set name="coolTime" value="1000"/>
 		<set name="hitTime" value="500"/>
-		<set name="abnormal_time" value="1"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="activateRate" value="#activateRate"/>	<!--Проверить.-->
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="castRange" value="600"/>
 		<set name="icon" value="icon.skill10015"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="saveVs" value="CON"/>
-		<set name="trait" value="PULL"/>
-		<set name="power" value="#power"/>
-		<set name="skillType" value="#Type"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="402;403"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="#Type"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="PULL"/>
 		<cond msgId="113">
 			<using kind="Shield"/>
 		</cond>
@@ -823,8 +824,10 @@
 		</for>
 	</skill>
 	<skill id="10016" levels="6" name="Chain Hydra">
-	<!-- TODO: Add Hate Effect, Remove Stun Effect -->
 		<table name="#magicLevel">89 91 93 95 97 99</table>
+		<table name="#mpConsume2">58 61 63 66 69 72</table>
+		<table name="#power">65000 67000 69000 71000 73000 75000</table>
+		<table name="#radius">200</table>
 		<set name="reuseDelay" value="45000"/>
 		<set name="coolTime" value="1000"/>
 		<set name="hitTime" value="500"/>
@@ -834,10 +837,7 @@
 		<set name="activateRate" value="70"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10016"/>
-		<table name="#mpConsume2">58 61 63 66 69 72</table>
-		<table name="#power">65000 67000 69000 71000 73000 75000</table>
-		<table name="#radius">200</table>
-		<set name="activateRate" value="50"/>	<!--Проверить.-->
+		<set name="activateRate" value="50"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="600"/>
