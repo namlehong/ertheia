@@ -2459,10 +2459,9 @@
 		</for>
 	</skill>
 	<skill id="10067" levels="4" name="Spirit of Revenge">
-		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3 4</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pmAtk">1.02 1.03 1.04 1.06</table>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="icon" value="icon.skill11830"/>
@@ -2481,9 +2480,9 @@
 		</for>
 	</skill>
 	<skill id="10068" levels="4" name="Summon Blood Panther">
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">154 156 164 173</table>
 		<table name="#npcIds">15138 15139 15140 15141</table>
-		<table name="#magicLevel">85 90 95 99</table>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="3500"/>
 		<set name="icon" value="icon.skill11853"/>
@@ -2511,8 +2510,8 @@
 		</triggers>
 	</skill>
 	<skill id="10070" levels="4" name="Vampirism">
-		<table name="#power">300 500 800 1000</table>
 		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#power">300 500 800 1000</table>
 		<set name="icon" value="icon.skill10069"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
@@ -2625,13 +2624,18 @@
 	<skill id="10076" levels="4" name="Superior Guard Stance">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#rShld">1.05 1.07 1.10 1.15</table>
+		<table name="#sDef">1.02 1.03 1.04 1.05</table>
 		<set name="icon" value="icon.skill0288"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Shield"/>
+		</cond>
 		<for>
 			<mul order="0x30" stat="rShld" value="#rShld"/>
+			<mul order="0x30" stat="sDef" value="#sDef"/>
 		</for>
 	</skill>
 	<skill id="10077" levels="4" name="Shilen's Presence">
