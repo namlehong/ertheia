@@ -15,31 +15,38 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 	<skill id="11501" levels="1" name="Superior Dual Weapon Mastery">
-		<table name="#pAtk">235</table>
-		<table name="#mAtk">104</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#pAtk">1.2</table>
+		<set name="analog_skills" value="832;257;141;144;474;925;330;331;626"/>
 		<set name="icon" value="icon.skill10252"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="saveVs" value="STR"/>
-		<set name="analog_skills" value="832;257;141;144;474;925;330;331;626"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">250 266 281 297 312 327 343 358 374 389</table>
-			<table name="#mAtk">111 118 124 131 138 145 152 158 165 172</table>
+			<table name="#pAtk">1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
-			<add order="0x40" stat="pAtk" value="#pAtk">
-				<using kind="Dual Sword, Dual Blunt"/>
-			</add>
-			<add order="0x40" stat="mAtk" value="#mAtk">
-				<using kind="Dual Sword, Dual Blunt"/>
-			</add>
-			<mul order="0x30" stat="pAtkSpd" value="1.1">
+			<mul order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Dual Sword, Dual Blunt"/>
 			</mul>
+			<mul order="0x30" stat="pAtkSpd" value="1.2">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pCritRate" value="1.15">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pvePhysDmgBonus" value="1.2">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</mul>
+			<add order="0x40" stat="pAccCombat" value="4">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</add>
+			<add order="0x40" stat="runSpd" value="13">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</add>
 			<set order="0x100" stat="activateSkillMasterySTR" value="1"/>
 		</for>
 	</skill>
@@ -211,86 +218,86 @@
 		</for>
 	</skill>
 	<skill id="11509" levels="8" name="Crippling Attack">
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#reuseDelay">7000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="910"/>
-		<set name="abnormal_time" value="20"/>
-		<set name="abnormal_level" value="5"/>
-		<set name="abnormal_type" value="ultimate_debuff"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11509"/>
-		<table name="#power">8268 8556 9134 9711 10288 10866 11443 12020</table>
-		<table name="#powerPvP">0</table>
-		<table name="#mpConsume2">46 47 48 50 52 53 55 57</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">46 47 48 50 52 53 55 57</table>
+		<table name="#power">14608 15192 16360 17528 18696 19864 21032 22200</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">7000</table>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="ultimate_debuff"/>
+		<set name="activateRate" value="70"/>
+		<set name="coolTime" value="300"/>
+		<set name="criticalRate" value="15"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="910"/>
+		<set name="icon" value="icon.skill11509"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="activateRate" value="70"/>
-		<set name="nextAction" value="attack"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="criticalRate" value="15"/>
-		<set name="overHit" value="true"/>
+		<set name="target" value="TARGET_ONE"/>
 		<set name="analog_skills" value="939;1244;105;1245;1484;102;1209;1564;122;98"/>
 		<cond msgId="113">
 			<using kind="Dual Sword, Sword, Blunt, Dual Blunt"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#mpConsume2">54 52 50 47 45 43 41 38 36 34</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
-			<table name="#powerPvP">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
+			<table name="#powerPvP">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">6699 6500 6300 6099 5900 5699 5500 5300 5099 4900</table>
 		</enchant>
@@ -303,78 +310,79 @@
 		</for>
 	</skill>
 	<skill id="11510" levels="8" name="Shadow Blade">
-		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
-		<table name="#reuseDelay">7000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1009"/>
-		<set name="abnormal_time" value="20"/>
-		<set name="abnormal_level" value="5"/>
-		<set name="abnormal_type" value="critical_prob_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11510"/>
-		<table name="#power">9133 9769 10404 11040 11675 12311 12946 13582</table>
-		<table name="#powerPvP">0</table>
-		<table name="#mpConsume2">50 51 53 55 57 59 60 62</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#mpConsume2">50 51 53 55 57 59 60 62</table>
+		<table name="#power">14608 15776 16944 18112 19280 20448 21616 22784</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">7000</table>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="critical_prob_down"/>
+		<set name="activateRate" value="70"/>
+		<set name="analog_skills" value="70;1102;1104;927;115;504"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="300"/>
+		<set name="criticalRate" value="15"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1009"/>
+		<set name="icon" value="icon.skill11510"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="activateRate" value="70"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="nextAction" value="attack"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="criticalRate" value="15"/>
-		<set name="overHit" value="true"/>
-		<set name="analog_skills" value="70;1102;1104;927;115;504"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dual Sword, Sword, Blunt, Dual Blunt"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#mpConsume2">59 57 54 52 49 47 44 42 39 37</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
-			<table name="#powerPvP">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
+			<table name="#powerPvP">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#reuseDelay">6699 6500 6300 6099 5900 5699 5500 5300 5099 4900</table>
 		</enchant>
 		<for>
@@ -385,80 +393,81 @@
 		</for>
 	</skill>
 	<skill id="11511" levels="8" name="Death Strike">
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#reuseDelay">7000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1409"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11511"/>
-		<table name="#mpConsume2">73 74 76 79 82 84 87 90</table>
-		<table name="#power">14326 14819 15803 16788 17773 18758 19743 20727</table>
-		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
-		<set name="power" value="#power"/>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 74 76 79 82 84 87 90</table>
+		<table name="#power">21642 22507 24237 25967 27697 29427 31157 32887</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">7000</table>
+		<set name="analog_skills" value="1099;1096;505;986"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="500"/>
 		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1409"/>
+		<set name="icon" value="icon.skill11511"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
 		<set name="nextAction" value="attack"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="analog_skills" value="1099;1096;505;986"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dual Sword, Sword, Blunt, Dual Blunt"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#mpConsume2">86 82 79 75 72 68 64 61 57 54</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
-			<table name="#powerPvP">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
+			<table name="#powerPvP">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">6699 6500 6300 6099 5900 5699 5500 5300 5099 4900</table>
 		</enchant>
@@ -1573,34 +1582,38 @@
 		</for>
 	</skill>
 	<skill id="11526" levels="110" name="Superior Sword/Blunt Weapon Mastery">
-		<table name="#pAtk">235</table>
-		<table name="#mAtk">104</table>
+		<table name="#pAtk">1.2</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="analog_skills" value="934;935;330;331"/>
 		<set name="icon" value="icon.skill10001"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="saveVs" value="STR"/>
-		<set name="analog_skills" value="934;935;330;331"/>
-		<!--TODO: <triggers>
-			<trigger id="" level="1" type="ATTACK" chance="#triggerChance">
-				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
-			</trigger>
-		</triggers>-->
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">250 266 281 297 312 327 343 358 374 389</table>
-			<table name="#mAtk">111 118 124 131 138 145 152 158 165 172</table>
+			<table name="#pAtk">1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
-			<add order="0x40" stat="pAtk" value="#pAtk">
+			<mul order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pAtkSpd" value="1.2">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pCritRate" value="1.15">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pvePhysDmgBonus" value="1.2">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<add order="0x40" stat="pAccCombat" value="4">
 				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
 			</add>
-			<add order="0x40" stat="mAtk" value="#mAtk">
+			<add order="0x40" stat="runSpd" value="13">
 				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
 			</add>
-			<mul order="0x30" stat="pAtkSpd" value="1.10"/>
 		</for>
 	</skill>
 	<skill id="11529" levels="1" name="Prevailing Sonata">

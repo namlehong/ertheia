@@ -68,16 +68,27 @@
 	</skill>
 	<skill id="10951" levels="4" name="Superior Instinct Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#mod">1.05 1.06 1.07 1.10</table>
-		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#mod">1.05 1.07 1.10 1.15</table>
 		<set name="icon" value="icon.skill10951"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
-			<mul order="0x30" stat="pvpPhysDmgBonus" value="#mod"/>
-			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#mod"/>
-			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#mod"/>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="#mod">
+					<using kind="Crossbow"/>
+				</mul>
+				<mul order="0x30" stat="pvpPhysDmgBonus" value="#mod">
+					<using kind="Crossbow"/>
+				</mul>
+				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#mod">
+					<using kind="Crossbow"/>
+				</mul>
+				<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#mod">
+					<using kind="Crossbow"/>
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="10997" levels="1" name="Archer - Individual Passive">
