@@ -826,16 +826,17 @@
 	</skill>
 	<skill id="10016" levels="6" name="Chain Hydra">
 		<table name="#magicLevel">89 91 93 95 97 99</table>
-		<table name="#mpConsume2">58 61 63 66 69 72</table>
+		<table name="#mpConsume2">123 127 132 136 140 144</table>
 		<table name="#power">65000 67000 69000 71000 73000 75000</table>
 		<table name="#radius">200</table>
+		<table name="#castRange">600</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="1"/>
 		<set name="abnormal_type" value="stun"/>
 		<set name="activateRate" value="50"/>
 		<set name="activateRate" value="70"/>
 		<set name="analog_skills" value="404;407"/>
-		<set name="castRange" value="600"/>
+		<set name="castRange" value="#castRange"/>
 		<set name="coolTime" value="1000"/>
 		<set name="hitTime" value="500"/>
 		<set name="icon" value="icon.skill10015"/>
@@ -854,13 +855,14 @@
 		<cond msgId="113">
 			<using kind="Shield"/>
 		</cond>
-		<enchant type="1" levels="10" group="7" name="Cost">
+		<enchant type="1" levels="10" group="7" name="Distance">
 			<table name="#radius">200 210 220 230 240 250 260 270 280 290 300</table>
+			<table name="#castRange">620 640 660 680 700 720 740 760 780 800</table>
 		</enchant>
 		<for>
 			<effect name="ThrowHorizontal">
-				<def name="fly_speed" value="600"/>
-				<def name="fly_delay" value="600"/>
+				<def name="fly_speed" value="#castRange"/>
+				<def name="fly_delay" value="#castRange"/>
 			</effect>
 		</for>
 	</skill>
