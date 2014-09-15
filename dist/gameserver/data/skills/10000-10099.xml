@@ -1406,15 +1406,15 @@
 		</for>
 	</skill>
 	<skill id="10028" levels="1" name="Rage Aura">
-		<set name="abnormal_level" value="2"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
-		<set name="abnormal_type" value="aura"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
-		<set name="reuseDelay" value="1000"/>
 		<set name="abnormal_effect" value="AURA_DEBUFF_SELF"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10028"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="aura"/>
 		<set name="analog_skills" value="982"/>
+		<set name="icon" value="icon.skill10028"/>
+		<set name="magicLevel" value="85"/>
 		<set name="mpConsume2" value="7"/>
 		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="reuseDelay" value="1000"/>
 		<set name="skillRadius" value="200"/>
 		<set name="skillType" value="CONT"/>
 		<set name="target" value="TARGET_PARTY"/>
@@ -1440,23 +1440,23 @@
 		</for>
 	</skill>
 	<skill id="10029" levels="1" name="Rage Aura">
-		<set name="reuseDelay" value="1000"/>
-		<set name="hitTime" value="500"/>
 		<set name="abnormal_effect" value="AURA_DEBUFF"/>
-		<set name="abnormal_time" value="6"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="6"/>
 		<set name="abnormal_type" value="aura"/>
-		<set name="magicLevel" value="85"/>
+		<set name="hitTime" value="500"/>
 		<set name="icon" value="icon.skill10028"/>
-		<set name="mpConsume2" value="1"/>
-		<set name="levelModifier" value="1"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="target" value="TARGET_AURA"/>
 		<set name="isHideStartMessage" value="true"/>
 		<set name="isHideUseMessage" value="true"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="1000"/>
 		<set name="saveVs" value="CON"/>
 		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
 		<set name="useSS" value="false"/>
 		<for>
 			<effect name="Debuff" hide_time="true" combine="true">
@@ -1466,8 +1466,8 @@
 		</for>
 	</skill>
 	<skill id="10030" levels="1" name="Challenge Aura">
-		<set name="abnormal_level" value="2"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
-		<set name="abnormal_type" value="aura"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="aura"/>
 		<set name="reuseDelay" value="1000"/>
 		<set name="abnormal_effect" value="AURA_BUFF_SELF"/>
 		<set name="magicLevel" value="85"/>
@@ -1520,8 +1520,8 @@
 	</skill>
 	<skill id="10032" levels="1" name="Iron Aura">
 		<set name="abnormal_effect" value="AURA_BUFF_SELF"/>
-		<set name="abnormal_level" value="2"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
-		<set name="abnormal_type" value="aura"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="aura"/>
 		<set name="analog_skills" value="982"/>
 		<set name="icon" value="icon.skill10032"/>
 		<set name="magicLevel" value="85"/>
@@ -1532,15 +1532,24 @@
 		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect time="-1">
-				<mul order="0x30" stat="pAtkSpd" value="1.05"/>
-				<mul order="0x30" stat="pAtk" value="1.05"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.05">
+					<using armor="Heavy"/>
+				</mul>
+				<mul order="0x30" stat="pAtk" value="1.05">
+					<using armor="Heavy"/>
+				</mul>
 				<add order="0x40" stat="pDef" value="215">
 					<using armor="Heavy"/>
 				</add>
-				<mul order="0x30" stat="sDef" value="1.5"/>
-				<mul order="0x30" stat="rShld" value="2"/>
+				<mul order="0x30" stat="sDef" value="1.5">
+					<using armor="Heavy"/>
+				</mul>
+				<mul order="0x30" stat="rShld" value="2">
+					<using armor="Heavy"/>
+				</mul>
 				<mul order="0x30" stat="bowWpnVuln" value="0.8"/>
 				<mul order="0x30" stat="crossbowWpnVuln" value="0.8"/>
+				<mul order="0x30" stat="critDamRcpt" value="0.85"/>
 				<triggers>
 					<trigger id="10033" level="1" type="ADD"/>
 					<trigger id="10033" level="1" type="IDLE"/>
@@ -1568,7 +1577,6 @@
 			<effect hide_time="true" combine="true">
 				<mul order="0x30" stat="pAtk" value="1.05"/>
 				<mul order="0x30" stat="pAtkSpd" value="1.05"/>
-				<mul order="0x30" stat="rShld" value="1.50"/>
 				<mul order="0x30" stat="pDef" value="1.1"/>
 				<mul order="0x30" stat="bowWpnVuln" value="0.8"/>
 				<mul order="0x30" stat="crossbowWpnVuln" value="0.8"/>
