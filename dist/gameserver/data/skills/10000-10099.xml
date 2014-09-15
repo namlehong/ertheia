@@ -2127,10 +2127,10 @@
 		</enchant>
 	</skill>
 	<skill id="10053" levels="6" name="Lion Dash">
+		<table name="#effectPoint">145 150 154 164 169 173</table>
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#mpConsume2">15 16 17 18 18 18</table>
 		<table name="#power">3200 3300 3400 3500 3600 3700</table>
-		<table name="#effectPoint">145 150 154 164 169 173</table>
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="5"/>
@@ -2164,9 +2164,9 @@
 		</for>
 	</skill>
 	<skill id="10054" levels="6" name="Lion Flame">
+		<table name="#effectPoint">227 243 268 285 313 331</table>
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#mpConsume2">99 108 116 120 120 120</table>
-		<table name="#effectPoint">227 243 268 285 313 331</table>
 		<table name="#power">90 92 94 96 97 99</table>
 		<set name="castRange" value="900"/>
 		<set name="coolTime" value="70"/>
@@ -2201,15 +2201,15 @@
 		<set name="target" value="TARGET_NONE"/>
 	</skill>
 	<skill id="10056" levels="8" name="Cubic Protection">
-		<table name="#abnormal_type">none abnormal_invincibility</table>
 		<table name="#abnormal_level">0 3</table>
 		<table name="#abnormal_time">0 3 6</table>
+		<table name="#abnormal_type">none abnormal_invincibility</table>
 		<table name="#count">0 1</table>
+		<table name="#mDef">0 0 0 0 500 500 500 500</table>
+		<table name="#mDef">0 0 0 0 500 500 500 500</table>
 		<table name="#pDef">0 0 0 500 500 500 500 500</table>
-		<table name="#mDef">0 0 0 0 500 500 500 500</table>
-		<table name="#mDef">0 0 0 0 500 500 500 500</table>
-		<table name="#skillType">BUFF BUFF BUFF BUFF BUFF HEAL_PERCENT</table>
 		<table name="#power">0 0 0 0 0 3 6 10</table>
+		<table name="#skillType">BUFF BUFF BUFF BUFF BUFF HEAL_PERCENT</table>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="#abnormal_type"/>
@@ -2390,9 +2390,8 @@
 	</skill>
 	<skill id="10063" levels="4" name="Phoenix Spirit">
 		<table name="#abnormal_level">1 2 3 4</table>
-		<table name="#pmDef">1.02 1.03 1.04 1.06</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<table name="#pmDef">1.02 1.03 1.04 1.06</table>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="icon" value="icon.skill11829"/>
@@ -2412,8 +2411,8 @@
 	</skill>
 	<skill id="10064" levels="4" name="Holy Sacrifice">
 		<table name="#hpConsume">800 1100 1200 1600</table>
-		<table name="#power">1000 1300 1500 2000</table>
 		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#power">1000 1300 1500 2000</table>
 		<set name="castRange" value="400"/>
 		<set name="hitCancelTime" value="500"/>
 		<set name="hitTime" value="1000"/>
@@ -2431,12 +2430,14 @@
 	</skill>
 	<skill id="10065" levels="4" name="Fortress Shield">
 		<table name="#sDef">1.05 1.07 1.1 1.15</table>
+		<table name="#rShld">1.02 1.03 1.04 1.05</table>
 		<set name="icon" value="icon.skill0322"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="sDef" value="#sDef"/>
+			<mul order="0x30" stat="rShld" value="#rShld"/>
 		</for>
 	</skill>
 	<skill id="10066" levels="4" name="Spirit of Revenge">
