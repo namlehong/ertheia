@@ -2661,7 +2661,6 @@
 		<table name="#abnormal_level">1 2 3 4</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pmAtk">1.02 1.03 1.04 1.06</table>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="icon" value="icon.skill11832"/>
@@ -3055,15 +3054,37 @@
 	</skill>
 	<skill id="10095" levels="1" name="Blood Panther's Death Touch">
 		<set name="icon" value="icon.skll10091"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="magicLevel" value="1"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<triggers>
+			<trigger id="10096" level="1" type="ATTACK" chance="30">
+				<target damage="50;0"/>
+			</trigger>
+			<trigger id="10096" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="30">
+				<target damage="50;0"/>
+			</trigger>
+		</triggers>
 	</skill>
 	<skill id="10096" levels="1" name="Death Touch">
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="coolTime" value="100"/>
+		<set name="hitTime" value="500"/>
 		<set name="icon" value="icon.skll10091"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillRadius" value="400"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="critDamRcpt" value="1.35"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10097" levels="3" name="Riot Shield">
 		<table name="#magicLevel">97 98 99</table>
