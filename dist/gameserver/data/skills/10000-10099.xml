@@ -8,13 +8,13 @@
 	</skill>
 	<skill id="10001" levels="1" name="Superior Sword/Blunt Weapon Mastery ">
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10001"/>
 		<table name="#pAtk">205</table>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="257;205;217"/>
+		<set name="icon" value="icon.skill10001"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#pAtk">218 232 245 259 272 286 299 313 326 340</table>
 			<table name="#magicLevel">99</table>
@@ -543,31 +543,31 @@
 		</for>
 	</skill>
 	<skill id="10012" levels="7" name="Shield Wave">
-		<table name="#magicLevel">87 89 91 93 95 97 99</table>
-		<table name="#reuseDelay">60000</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="470"/>
-		<set name="hitTime" value="1000"/>
-		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="9"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10012"/>
-		<table name="#Power">10174 10833 11492 12150 12809 13468 14126</table>
-		<table name="#mpConsume2">59 62 63 64 65 69 71</table>
 		<table name="#activateRate">65</table>
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">87 89 91 93 95 97 99</table>
+		<table name="#mpConsume2">59 62 63 64 65 69 71</table>
+		<table name="#Power">10174 10833 11492 12150 12809 13468 14126</table>
+		<table name="#reuseDelay">60000</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="coolTime" value="470"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10012"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#Power"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="CON"/>
 		<set name="skillRadius" value="150"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="saveVs" value="CON"/>
+		<set name="target" value="TARGET_AURA"/>
 		<cond msgId="113">
 			<using kind="Shield"/>
 		</cond>
@@ -624,32 +624,32 @@
 		</for>
 	</skill>
 	<skill id="10013" levels="8" name="Gust Blade">
-		<table name="#mpConsume2">121 125 129 133 138 142 146 151</table>
-		<table name="#power">10314 11026 11738 12450 13162 13874 14586 15298</table>
-		<table name="#powerPvP">0</table>
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
-		<set name="reuseDelay" value="10000"/>
+		<table name="#mpConsume2">121 125 129 133 138 142 146 151</table>
+		<table name="#power">10314 11026 11738 12450 13162 13874 14586 15298</table>
+		<table name="#powerPvP">0</table>
+		<set name="analog_skills" value="105;49"/>
 		<set name="coolTime" value="370"/>
-		<set name="hitTime" value="1200"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="#power"/>
-		<set name="powerPvP" value="#powerPvP"/>
+		<set name="criticalRate" value="10"/>
 		<set name="elements" value="#element"/>
 		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1200"/>
 		<set name="icon" value="icon.skill10013"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="10000"/>
 		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="400"/>
-		<set name="criticalRate" value="10"/>
-		<set name="overHit" value="true"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="2.0"/>
 		<set name="target" value="TARGET_AURA"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="nextAction" value="attack"/>
-		<set name="analog_skills" value="105;49"/>
 		<cond msgId="113">
 			<using kind="Sword, Blunt, Dual Sword, Dual Blunt"/>
 		</cond>
