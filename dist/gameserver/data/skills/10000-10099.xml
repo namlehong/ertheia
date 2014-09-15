@@ -2995,19 +2995,36 @@
 		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect name="Cubic" time="900">
-				<!-- Unknown cubic ID
-				<def name="cubicId" value="21"/>
+				<def name="cubicId" value="22"/>
 				<def name="cubicLevel" value="#cubicLevel"/>
 				<player cubic="21"/>
-				-->
 			</effect>
 		</for>
 	</skill>
 	<skill id="10093" levels="4" name="Guardian Cubic">
+		<table name="#magicLevel">85 90 95 99</table>	
+		<table name="#mod">1.05 1.07 1.1 1.15</table>
+		<set name="abnormal_time" value="5"/>
+		<set name="castRange" value="1000"/>
 		<set name="icon" value="icon.skll10093"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="isHideUseMessage" value="true"/>
+		<set name="levelModifier" value="2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="useSS" value="false"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="sDef" value="#mod"/>
+				<mul order="0x30" stat="rShld" value="#mod"/>
+				<add order="0x04" stat="runSpd" value="13"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10094" levels="4" name="Mass Lightning Strike">
 		<table name="#activateRate">40</table>
