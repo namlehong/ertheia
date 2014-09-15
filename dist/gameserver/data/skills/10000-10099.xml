@@ -2893,10 +2893,10 @@
 		</for>
 	</skill>
 	<skill id="10088" levels="4" name="Blood Panther Rush">
+		<table name="#effectPoint">145 154 169 173</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">30 32 34 36</table>
 		<table name="#power">3875 3955 4220 4465</table>
-		<table name="#effectPoint">145 154 169 173</table>
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="5"/>
@@ -2933,8 +2933,8 @@
 	</skill>
 	<skill id="10090" levels="4" name="Provoking Shackle">
 		<table name="#effectPoint">5000 5500 6000 6500</table>
-		<table name="#mpConsume2">59 61 63 65</table>
 		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">59 61 63 65</table>
 		<set name="abnormal_effect" value="ROOT"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="9"/>
@@ -2961,10 +2961,20 @@
 		</for>
 	</skill>
 	<skill id="10091" levels="1" name="Templar's Will">
+		<set name="hitTime" value="200"/>
 		<set name="icon" value="icon.skll10092"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="mpConsume2" value="35"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="10"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10092" levels="4" name="Summon Guardian Cubic">
 		<set name="icon" value="icon.skll10093"/>
