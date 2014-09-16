@@ -6,7 +6,7 @@ import org.dom4j.tree.LazyList;
 
 import l2s.commons.util.Rnd;
 import l2s.gameserver.ai.CtrlIntention;
-import l2s.gameserver.ai.DefaultAI;
+import l2s.gameserver.ai.Fighter;
 import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.model.Creature;
 import l2s.gameserver.model.Player;
@@ -19,7 +19,7 @@ import l2s.gameserver.utils.Location;
 /**
  * @author Hien Son
  */
-public class NpcHealerAI extends DefaultAI
+public class NpcHealerAI extends Fighter
 {
 	Creature attackTarget = null;
 	List<Player> targetPlayers = null;
@@ -222,20 +222,21 @@ public class NpcHealerAI extends DefaultAI
 				System.out.println("there is no target around");
 				return false;
 			}
-		}
+			
 
-		if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow() && !attackTarget.isDead() && GeoEngine.canSeeTarget(actor, attackTarget, false) && attackTarget.isVisible())
-		{
-			System.out.println("actor is eligible to start attack");
-			actor.getAggroList().addDamageHate(attackTarget, 10, 10);
-			actor.setAggressionTarget(attackTarget);
-			actor.setRunning();
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attackTarget);
-			return true;
-		}
-		else
-		{
-			System.out.println("actor is busy");
+			if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow() && !attackTarget.isDead() && GeoEngine.canSeeTarget(actor, attackTarget, false) && attackTarget.isVisible())
+			{
+				System.out.println("actor is eligible to start attack");
+				actor.getAggroList().addDamageHate(attackTarget, 10, 10);
+				actor.setAggressionTarget(attackTarget);
+				actor.setRunning();
+				setIntention(CtrlIntention.AI_INTENTION_ATTACK, attackTarget);
+				return true;
+			}
+			else
+			{
+				System.out.println("actor is busy");
+			}
 		}
 		
 		return false;
