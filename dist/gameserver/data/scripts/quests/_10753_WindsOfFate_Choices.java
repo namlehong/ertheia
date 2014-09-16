@@ -452,10 +452,11 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			decoy_instance_2 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 179976, -10469), 0);
 			decoy_instance_3 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 176184, -10469), 0);
 			
+			/*
 			decoy_instance_1.toggleVisible();
 			decoy_instance_2.toggleVisible();
 			decoy_instance_3.toggleVisible();
-			
+			*/
 			st.startQuestTimer("check_open_door", 3000);
 			
 			return null;
