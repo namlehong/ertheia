@@ -134,10 +134,8 @@ public class NpcHealerAI extends DefaultAI
 	{
 
 		NpcInstance actor = getActor();
-		System.out.println("Ferin heal chance triggered");
 		for(Player player : targetPlayers)
 		{
-			System.out.println("player " + player.getName() + " isDead " + player.isDead() + " isAlikeDead " + player.isAlikeDead() + " isVisible " + player.isVisible());
 			if(player != null && !player.isDead() && !player.isAlikeDead() && player.isVisible())
 			{
 				Skill skill = null;
@@ -196,6 +194,8 @@ public class NpcHealerAI extends DefaultAI
 
 	private boolean startAttack()
 	{
+		System.out.println("Ferin starts attack");
+		
 		NpcInstance actor = getActor();
 		if(attackTarget == null || attackTarget.isDead())
 		{
