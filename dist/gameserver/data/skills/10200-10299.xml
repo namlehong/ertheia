@@ -1490,16 +1490,16 @@
 		</for>
 	</skill>
 	<skill id="10285" levels="1" name="HP Drain">
-		<table name="#power">313</table>
 		<table name="#heal">20</table>
-		<set name="reuseDelay" value="10000"/>
+		<table name="#power">313</table>
+		<set name="icon" value="icon.skill10285"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10285"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="HEAL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect name="HealPercent" time="0" value="#heal"/>
 		</for>
@@ -1508,12 +1508,12 @@
 		<table name="#mDef">199</table>
 		<table name="#vuln">20</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10005"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="481"/>
+		<set name="icon" value="icon.skill10005"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#mDef">206 213 220 227 234 241 248 255 262 270</table>
 			<table name="#vuln">21 22 23 24 25 26 27 28 29 30</table>
@@ -1529,60 +1529,60 @@
 		</for>
 	</skill>
 	<skill id="10287" levels="6" name="Rolling Thunder">
-		<table name="#power">225 228 232 235 238 242</table>
-		<table name="#activateRate">35 36 37 38 39 40</table>
-		<table name="#mpConsume2">22</table>
-		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<table name="#abnormal_level">1 2 3 4 5 6</table>
-		<set name="reuseDelay" value="3000"/>
-		<set name="hitTime" value="500"/>
+		<table name="#activateRate">35 36 37 38 39 40</table>
+		<table name="#magicLevel">89 91 93 95 97 99</table>
+		<table name="#mpConsume2">22</table>
+		<table name="#power">225 228 232 235 238 242</table>
 		<set name="abnormal_effect" value="HURRICANE"/>
-		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="song_of_vengeance"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill0494"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="#power"/>
 		<set name="activateRate" value="#activateRate"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill0494"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="target" value="TARGET_AURA"/>
 		<set name="skillRadius" value="200"/>
 		<set name="skillType" value="POISON"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_AURA"/>
 		<for>
 			<effect count="3" name="DamOverTime" time="1" value="#power"/>
 		</for>
 	</skill>
 	<skill id="10288" levels="8" name="Hurricane Storm">
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">161 163 169 175 180 186 192 198</table>
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#powerPvP">0</table>
-		<table name="#mpConsume2">161 163 169 175 180 186 192 198</table>
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="reuseDelay" value="10000"/>
+		<set name="analog_skills" value="6;7;347;54;35;526"/>
+		<set name="castRange" value="500"/>
 		<set name="coolTime" value="300"/>
+		<set name="criticalRate" value="10"/>
+		<set name="decreaseOnNoPole" value="0.9"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
 		<set name="hitTime" value="1789"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10288"/>
+		<set name="increaseOnPole" value="1.5"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="skillRadius" value="500"/>
-		<set name="overHit" value="true"/>
-		<set name="decreaseOnNoPole" value="0.9"/>
-		<set name="increaseOnPole" value="1.5"/>
-		<set name="SSBoost" value="2.0"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="500"/>
-		<set name="criticalRate" value="10"/>
-		<set name="analog_skills" value="6;7;347;54;35;526"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="500"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AREA"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -1632,12 +1632,22 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
+			<effect>
+				<mul order="0x30" stat="pSkillPower" value="0.9">
+					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Fist"/>
+				</mul>
+				<mul order="0x30" stat="pSkillPower" value="1.5">
+					<using kind="Pole"/>
+				</mul>
+			</effect>
+			<!---
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Fist">
 				<table name="#power">10401 10760 11478 12197 12915 13635 14353 15072</table>
 			</using>
 			<using kind="Pole">
 				<table name="#power">17335 17934 19131 20329 21526 22725 23922 25120</table>
 			</using>
+			-->
 		</for>
 	</skill>
 	<skill id="10289" levels="4" name="Boost">
