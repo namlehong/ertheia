@@ -237,6 +237,9 @@ public class NpcSupportAI extends DefaultAI
 			return false;
 		}
 		
+		if(!attackTarget.isMonster())
+			return false;
+		
 		return true;
 	}
 	
