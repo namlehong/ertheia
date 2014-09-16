@@ -1657,7 +1657,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					System.out.println("Remove player " + creature.getName() + " from target list");
 					around.remove(creature);
 				}
-				else if(activeChar.isNpc() && ((NpcInstance) creature).isInFaction((NpcInstance)activeChar))
+				if(((NpcInstance) creature).isInFaction((NpcInstance)activeChar))
 				{
 					System.out.println("Remove NPC " + creature.getName() + " from target list");
 					around.remove(creature);

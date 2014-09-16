@@ -8,12 +8,14 @@ import ai.chamber_of_prophecies.NpcWarriorAI;
 import l2s.commons.util.Rnd;
 import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
+import l2s.gameserver.model.instances.DoorInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.items.PcInventory;
 import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
 import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.World;
 import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.Race;
@@ -47,6 +49,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int MYSTERIOUS_WIZARD = 33980;
 	private static final int GRAIL = 33996;
 	private static final int NAVARI = 33931;
+	private static final int DECOY = 13436;
 	
 	private static final int KAIN_VAN_HALTER_FIGHTER = 33999;
 	private static final int FERIN_HEALER = 34000;
@@ -94,6 +97,9 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	NpcInstance kain_fighter_instance = null;
 	NpcInstance mysterious_wizard_instance = null;
 	List<NpcInstance> athrea_boxes = new ArrayList<NpcInstance>();
+	NpcInstance decoy_instance_1 = null;
+	NpcInstance decoy_instance_2 = null;
+	NpcInstance decoy_instance_3 = null;
 	
 	@Override
 	public void onLoad()
@@ -425,6 +431,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			
 			prophecies_chamber.getDoor(17230101).openMe();
 			
+			//spawn support
 			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, new Location(-88408, 186824, -10476), 0);
 			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88552, 186840, -10476), 0);
 			
@@ -438,6 +445,52 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			kain_ai.setFollow(1);
 			
 			npc.deleteMe();
+			
+			//spawn door listener
+			decoy_instance_1 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 183736, -10469), 0);
+			decoy_instance_2 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 179976, -10469), 0);
+			decoy_instance_3 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 176184, -10469), 0);
+			
+			st.startQuestTimer("check_open_door", 3000);
+			
+			return null;
+		}
+		
+		if(event.equalsIgnoreCase("check_open_door"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			DoorInstance door_room_1 = prophecies_chamber.getDoor(17230102);
+			DoorInstance door_room_2 = prophecies_chamber.getDoor(17230103);
+			DoorInstance door_room_3 = prophecies_chamber.getDoor(17230104);
+			
+			if(decoy_instance_1 != null && !door_room_1.isOpen())
+			{
+				List<NpcInstance> npcs_room_1 = World.getAroundNpc(decoy_instance_1, 1600, 200);
+				
+				if(isAllDead(npcs_room_1))
+					door_room_1.openMe();
+			}
+			
+			if(decoy_instance_2 != null && !door_room_2.isOpen())
+			{
+				List<NpcInstance> npcs_room_2 = World.getAroundNpc(decoy_instance_2, 1600, 200);
+				
+				if(isAllDead(npcs_room_2))
+					door_room_1.openMe();
+			}
+			
+			if(decoy_instance_3 != null && !door_room_3.isOpen())
+			{
+				List<NpcInstance> npcs_room_3 = World.getAroundNpc(decoy_instance_3, 1600, 200);
+				
+				if(isAllDead(npcs_room_3))
+				{
+					door_room_3.openMe();
+				}	
+			}
+			
+			if(!door_room_3.isOpen())
+				st.startQuestTimer("check_open_door", 3000);
 			
 			return null;
 		}
@@ -481,6 +534,16 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		}
 		
 		return htmltext;
+	}
+	
+	private boolean isAllDead(List<NpcInstance> npcs)
+	{
+		for(NpcInstance npc : npcs)
+		{
+			if(npc.isMonster() && !npc.isDead())
+				return false;
+		}
+		return true;
 	}
 	
 
