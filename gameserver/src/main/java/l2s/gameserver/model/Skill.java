@@ -1477,27 +1477,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				break;
 			}
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_GROUND:
 			case TARGET_MULTIFACE_AURA:
 			{
 				addTargetsToList(targets, activeChar, activeChar, forceUse);
 				break;
 			}
-			case TARGET_AURA_EXCLUDE_PLAYER:
-				/*
-				List<Creature> targets_exclude_playable = new LazyArrayList<Creature>();
-				
-				for(Creature target : targets)
-				{
-					if(!target.isPlayer())
-						targets_exclude_playable.add(target);
-				}
-				//System.out.println("targets_exclude_playable " + targets_exclude_playable.size());
-				addTargetsToList(targets_exclude_playable, activeChar, activeChar, forceUse);
-				*/
-				//System.out.println("targets " + targets.size());
-				addTargetsToList(targets, activeChar, activeChar, false);
-				break;
 			case TARGET_COMMCHANNEL:
 			{
 				if(activeChar.getPlayer() != null)
@@ -1626,7 +1612,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 
 	private void addTargetsToList(List<Creature> targets, Creature aimingTarget, Creature activeChar, boolean forceUse)
 	{
-		List<Creature> arround = aimingTarget.getAroundCharacters(_skillRadius, 300);
+		List<Creature> around = aimingTarget.getAroundCharacters(_skillRadius, 300);
 
 		int count = 0;
 		Polygon terr = null;
@@ -1655,10 +1641,18 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			if(loc == null)
 				return;
 
-			arround = World.getAroundCharacters(loc, aimingTarget.getObjectId(), aimingTarget.getReflectionId(), _skillRadius, 300);
+			around = World.getAroundCharacters(loc, aimingTarget.getObjectId(), aimingTarget.getReflectionId(), _skillRadius, 300);
+		}
+		else if(_targetType == SkillTargetType.TARGET_AURA_EXCLUDE_PLAYER)
+		{
+			for(Creature creature : around)
+			{
+				if(creature.isPlayable())
+					around.remove(creature);
+			}
 		}
 
-		for(Creature target : arround)
+		for(Creature target : around)
 		{
 			if(terr != null && !terr.isInside(target.getX(), target.getY(), target.getZ()))
 				continue;
