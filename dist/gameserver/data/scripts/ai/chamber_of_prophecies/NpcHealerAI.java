@@ -208,7 +208,7 @@ public class NpcHealerAI extends Fighter
 					if(checkattackTarget(npc))
 					{
 						System.out.println("Target " + npc.getName() + " is eligible to attack");
-						if(attackTarget == null || actor.getDistance3D(npc) < actor.getDistance3D(attackTarget))
+						if(attackTarget == null || (actor.getDistance3D(npc) < actor.getDistance3D(attackTarget) && !npc.isDead()))
 							attackTarget = npc;
 						
 					}
