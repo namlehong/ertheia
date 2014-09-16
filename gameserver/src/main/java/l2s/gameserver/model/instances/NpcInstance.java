@@ -279,7 +279,7 @@ public class NpcInstance extends Creature
 	@Override
 	protected void onReduceCurrentHp(double damage, Creature attacker, Skill skill, boolean awake, boolean standUp, boolean directHp)
 	{
-		//if(attacker.isPlayable())
+		if(attacker.isPlayable())
 			getAggroList().addDamageHate(attacker, (int) damage, 0);
 
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);
