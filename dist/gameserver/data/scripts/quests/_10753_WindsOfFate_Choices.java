@@ -80,7 +80,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int ABBYSAL_SHADOW = 19572;
 	private static final int SECLUDED_SHADOW = 19573;
 	
-	private static final int check_interval = 2000;
+	private static final int door_check_interval = 2000;
 	
 	private static final int minLevel = 85;
 	private static final int maxLevel = 99;
