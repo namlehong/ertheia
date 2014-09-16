@@ -16,6 +16,7 @@ import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
 import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.World;
+import l2s.gameserver.model.WorldRegion;
 import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.Race;
@@ -469,7 +470,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			
 			if(decoy_instance_1 != null && !door_room_1.isOpen())
 			{
-				List<NpcInstance> npcs_room_1 = World.getAroundNpc(decoy_instance_1, 1800, 200);
+				List<NpcInstance> npcs_room_1 = World.getAroundNpc(decoy_instance_1.getLoc(), decoy_instance_1.getCurrentRegion(), decoy_instance_1.getReflectionId(), 1800, 200);
 				
 				if(isAllDead(npcs_room_1))
 				{
@@ -480,7 +481,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			
 			if(decoy_instance_2 != null && !door_room_2.isOpen())
 			{
-				List<NpcInstance> npcs_room_2 = World.getAroundNpc(decoy_instance_2, 1800, 200);
+				List<NpcInstance> npcs_room_2 = World.getAroundNpc(decoy_instance_2.getLoc(), decoy_instance_2.getCurrentRegion(), decoy_instance_2.getReflectionId(), 1800, 200);
 				
 				if(isAllDead(npcs_room_2))
 				{
@@ -491,7 +492,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			
 			if(decoy_instance_3 != null && !door_room_3.isOpen())
 			{
-				List<NpcInstance> npcs_room_3 = World.getAroundNpc(decoy_instance_3, 1800, 200);
+				List<NpcInstance> npcs_room_3 = World.getAroundNpc(decoy_instance_3.getLoc(), decoy_instance_3.getCurrentRegion(), decoy_instance_3.getReflectionId(), 1800, 200);
 				
 				if(isAllDead(npcs_room_3))
 				{
