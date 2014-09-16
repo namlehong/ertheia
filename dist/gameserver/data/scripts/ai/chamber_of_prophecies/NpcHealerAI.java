@@ -238,6 +238,11 @@ public class NpcHealerAI extends Fighter
 			else
 			{
 				System.out.println("actor is busy");
+				System.out.println("actor.isAttackingNow() " + actor.isAttackingNow());
+				System.out.println("actor.isCastingNow() " + actor.isCastingNow());
+				System.out.println("attackTarget.isDead() " + attackTarget.isDead());
+				System.out.println("GeoEngine.canSeeTarget(actor, attackTarget, false) " + GeoEngine.canSeeTarget(actor, attackTarget, false));
+				System.out.println("attackTarget.isVisible() " + attackTarget.isVisible());
 			}
 		}
 		else
