@@ -253,9 +253,6 @@ public class NpcSupportAI extends DefaultAI
 		if(target.isNpc() && !target.isAutoAttackable(actor))
 			return false;
 		
-		if(target.getAI().equals(NpcSupportAI.class))
-			return false;
-		
 		if(target.isTransformed() && !target.getTransform().isNormalAttackable())
 			return false;
 
@@ -269,6 +266,9 @@ public class NpcSupportAI extends DefaultAI
 			return false;
 		
 		if(!GeoEngine.canSeeTarget(actor, target, false))
+			return false;
+
+		if(((NpcInstance) target).isInFaction(actor))
 			return false;
 
 		actor.getAggroList().addDamageHate(target, 0, 2);
