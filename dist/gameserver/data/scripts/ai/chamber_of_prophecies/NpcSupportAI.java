@@ -335,5 +335,8 @@ public class NpcSupportAI extends DefaultAI
 	public void setFollow(int targetIndex)
 	{
 		followTargetIndex = targetIndex;
+		
+		if(targetIndex == -1)
+			targetPlayers = null;
 	}
 }

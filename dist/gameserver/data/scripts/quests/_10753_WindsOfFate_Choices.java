@@ -84,7 +84,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int ABBYSAL_SHADOW = 19572;
 	private static final int SECLUDED_SHADOW = 19573;
 	
-	private static final int door_check_interval = 2000;
+	private static final int door_check_interval = 3000;
 	
 	private static final int minLevel = 85;
 	private static final int maxLevel = 99;
@@ -96,6 +96,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	
 	NpcInstance ferin_healer_instance = null;
 	NpcInstance kain_fighter_instance = null;
+	NpcInstance makkum_instance = null;
 	NpcInstance mysterious_wizard_instance = null;
 	List<NpcInstance> athrea_boxes = new ArrayList<NpcInstance>();
 	NpcInstance decoy_instance_1 = null;
@@ -457,7 +458,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			decoy_instance_2.toggleVisible();
 			decoy_instance_3.toggleVisible();
 			*/
-			st.startQuestTimer("check_open_door", 3000);
+			st.startQuestTimer("check_open_door", door_check_interval);
 			
 			return null;
 		}
@@ -475,7 +476,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 				
 				if(isAllDead(npcs_room_1))
 				{
-					System.out.println("monster room 1 all dead " + npcs_room_1.size());
+					//System.out.println("monster room 1 all dead " + npcs_room_1.size());
 					door_room_1.openMe();
 				}
 			}
@@ -486,7 +487,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 				
 				if(isAllDead(npcs_room_2))
 				{
-					System.out.println("monster room 2 all dead " + npcs_room_2.size());
+					//System.out.println("monster room 2 all dead " + npcs_room_2.size());
 					door_room_2.openMe();
 				}
 			}
@@ -497,13 +498,25 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 				
 				if(isAllDead(npcs_room_3))
 				{
-					System.out.println("monster room 3 all dead " + npcs_room_3.size());
+					//System.out.println("monster room 3 all dead " + npcs_room_3.size());
 					door_room_3.openMe();
+					
+					//let Ferin & Kain stop following
+					NpcHealerAI ferin_ai = (NpcHealerAI)ferin_healer_instance.getAI();
+					NpcWarriorAI kain_ai = (NpcWarriorAI)kain_fighter_instance.getAI();
+					
+					ferin_ai.setFollow(-1);
+					kain_ai.setFollow(-1);
+					
+					spawnMakkum(st);
+					
+					kain_fighter_instance.sendMessage("Cửa mở rồi, đi lấy chiếc Chén Thánh đi!");
+					ferin_healer_instance.sendMessage("Con Makkum này Kain dư sức lo được, ngươi cứ đi đi");
 				}	
 			}
 			
 			if(!door_room_3.isOpen())
-				st.startQuestTimer("check_open_door", 3000);
+				st.startQuestTimer("check_open_door", door_check_interval);
 			
 			return null;
 		}
@@ -549,6 +562,17 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		return htmltext;
 	}
 	
+	private void spawnMakkum(QuestState st) 
+	{
+		Player player = st.getPlayer();
+		
+		if(player == null) return;
+		
+		Reflection prophecies_chamber = player.getReflection();
+		makkum_instance = prophecies_chamber.addSpawnWithoutRespawn(MAKKUM, new Location(-88504, 176184, -10469), 0);
+		
+	}
+
 	private boolean isAllDead(List<NpcInstance> npcs)
 	{
 		for(NpcInstance npc : npcs)
