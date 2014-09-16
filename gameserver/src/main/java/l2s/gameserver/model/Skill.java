@@ -1649,21 +1649,21 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		}
 		else if(_targetType == SkillTargetType.TARGET_AURA_EXCLUDE_PLAYER)
 		{
-			System.out.println("Creature list size before " + around.size());
+			//System.out.println("Creature list size before " + around.size());
 			for(Creature creature : around)
 			{
 				if(creature.isPlayable())
 				{
-					System.out.println("Remove player " + creature.getName() + " from target list");
+					//System.out.println("Remove player " + creature.getName() + " from target list");
 					around.remove(creature);
 				}
 				if(((NpcInstance) creature).isInFaction((NpcInstance)activeChar))
 				{
-					System.out.println("Remove NPC " + creature.getName() + " from target list");
+					//System.out.println("Remove NPC " + creature.getName() + " from target list");
 					around.remove(creature);
 				}
 			}
-			System.out.println("Creature list size after " + around.size());
+			//System.out.println("Creature list size after " + around.size());
 		}
 
 		for(Creature target : around)
