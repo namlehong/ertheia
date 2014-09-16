@@ -746,7 +746,7 @@
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">76 79 81 84 87 90 92 95</table>
 		<table name="#power">0</table>
-		<table name="#reuseDelay">120000</table>
+		<table name="#reuseDelay">60000</table>
 		<table name="#Type">DEBUFF</table>
 		<set name="abnormal_effect" value="KNOCKDOWN"/>
 		<set name="abnormal_level" value="1"/>
@@ -786,6 +786,9 @@
 		<enchant type="4" name="Chance">
 			<table name="#ench4Hex">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90</table>
 		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">59000 58000 56000 54000 52000 50000 48000 46000 44000 42000</table>
+		</enchant>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -797,32 +800,32 @@
 		</for>
 	</skill>
 	<skill id="10267" levels="6" name="Hurricane Rush">
-		<table name="#mpConsume2">38 39 41 43 44 47</table>
 		<table name="#chance"> 61 62 63 64 65 66 67 68 69 70 </table>
-		<table name="#magicLevel">85 87 90 93 96 99</table>
-		<table name="#reuseDelay">15000</table>
 		<table name="#ench4Hex">1</table>
-		<table name="#Type">DEBUFF</table>
+		<table name="#magicLevel">85 87 90 93 96 99</table>
+		<table name="#mpConsume2">38 39 41 43 44 47</table>
 		<table name="#power">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="100"/>
-		<set name="hitTime" value="500"/>
+		<table name="#reuseDelay">15000</table>
+		<table name="#Type">DEBUFF</table>
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10267"/>
-		<set name="castRange" value="600"/>
 		<set name="activateRate" value="#chance"/>
-		<set name="fly_type" value="CHARGE"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="100"/>
 		<set name="fly_radius" value="55"/>
-		<set name="saveVs" value="CON"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill10267"/>
 		<set name="levelModifier" value="2"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="CON"/>
 		<set name="skillType" value="#Type"/>
 		<set name="SSBoost" value="2.0"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -844,6 +847,9 @@
 		</enchant>
 		<enchant type="4" name="Chance">
 			<table name="#ench4Hex">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">14000 14000 13000 13000 12000 12000 11000 11000 10000 10000</table>
 		</enchant>
 		<for>
 			<effect name="Stun" chance="60">
