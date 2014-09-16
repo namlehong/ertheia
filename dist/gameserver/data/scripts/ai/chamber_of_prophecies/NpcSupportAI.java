@@ -41,6 +41,8 @@ public class NpcSupportAI extends DefaultAI
 	protected boolean startHeal()
 	{
 
+		if(targetPlayers == null) return false;
+		
 		NpcInstance actor = getActor();
 		for(Player player : targetPlayers)
 		{
