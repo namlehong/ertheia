@@ -977,16 +977,8 @@ public class DefaultAI extends CharacterAI
 					qs.getQuest().notifyAttack(actor, qs);
 		}
 
-		if(attacker.isNpc())
-			System.out.println(actor.getName() + " is being attacked by " + attacker.getName() + " with dmg " + damage);
-		
 		//Добавляем только хейт, урон, если атакующий - игровой персонаж, будет добавлен в L2NpcInstance.onReduceCurrentHp
 		actor.getAggroList().addDamageHate(attacker, 0, damage);
-		
-		if(actor.getAggroList().get(attacker) != null)
-			System.out.println("dmg " + actor.getAggroList().get(attacker).damage + " hate " + actor.getAggroList().get(attacker).hate);
-		else
-			System.out.println("attacker is not available in the aggro list");
 		
 		// Обычно 1 хейт добавляется хозяину суммона, чтобы после смерти суммона моб накинулся на хозяина.
 		if(damage > 0 && attacker.isServitor())
