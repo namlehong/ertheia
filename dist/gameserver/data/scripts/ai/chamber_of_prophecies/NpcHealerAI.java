@@ -194,7 +194,6 @@ public class NpcHealerAI extends Fighter
 
 	private boolean startAttack()
 	{
-		System.out.println("Start attack");
 		NpcInstance actor = getActor();
 		
 		if(attackTarget !=null && (attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false))) 
@@ -210,53 +209,27 @@ public class NpcHealerAI extends Fighter
 				{
 					if(checkAttackTarget(npc))
 					{
-						System.out.println("Target " + npc.getName() + " is eligible to attack");
 						if(attackTarget == null)
 							attackTarget = npc;
 						else if(actor.getDistance3D(npc) < actor.getDistance3D(attackTarget))
-						{
 							attackTarget = npc;
-						}
 						
-					}
-					else
-					{
-						System.out.println("Target " + npc.getName() + " is NOT eligible to attack");
 					}
 				}
 			}
 			else
 			{
-				System.out.println("there is no target around");
 				return false;
 			}
 			
-
 			if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow())
 			{
-				System.out.println("actor is eligible to start attack");
 				actor.getAggroList().addDamageHate(attackTarget, 10, 10);
 				actor.setAggressionTarget(attackTarget);
 				actor.setRunning();
 				setIntention(CtrlIntention.AI_INTENTION_ATTACK, attackTarget);
 				return true;
 			}
-			else
-			{
-				System.out.println("actor is busy");
-				System.out.println("actor.isAttackingNow() " + actor.isAttackingNow());
-				System.out.println("actor.isCastingNow() " + actor.isCastingNow());
-				System.out.println("attackTarget.isDead() " + attackTarget.isDead());
-				System.out.println("GeoEngine.canSeeTarget(actor, attackTarget, false) " + GeoEngine.canSeeTarget(actor, attackTarget, false));
-				System.out.println("attackTarget.isVisible() " + attackTarget.isVisible());
-			}
-		}
-		else
-		{
-			System.out.println("Continue attack " + attackTarget.getName());
-			System.out.println("attackTarget.isDead() " + attackTarget.isDead());
-			System.out.println("GeoEngine.canSeeTarget(actor, attackTarget, false) " + GeoEngine.canSeeTarget(actor, attackTarget, false));
-			System.out.println("attackTarget.isAttackable(actor) " + attackTarget.isAttackable(actor));
 			
 		}
 		
