@@ -276,8 +276,16 @@ public class NpcHealerAI extends Fighter
 			return false;
 		
 		if (((NpcInstance) attackTarget).isInFaction(getActor()))
+		{
+			System.out.println(attackTarget.getName() + " is in same faction " + attackTarget.getFaction().toString());
 			return false;
-		
+		}
+		else
+		{
+			System.out.println(attackTarget.getName() + " is NOT in same faction");
+			System.out.println("attackTarget faction " + attackTarget.getFaction().toString());
+			System.out.println("actor faction " + getActor().getFaction().toString());
+		}
 
 		if(attackTarget != null && (!attackTarget.isVisible() || attackTarget.isDead() || !GeoEngine.canSeeTarget(getActor(), attackTarget, false)))
 		{
