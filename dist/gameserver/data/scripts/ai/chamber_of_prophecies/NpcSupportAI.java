@@ -8,8 +8,10 @@ import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.DefaultAI;
 import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.Playable;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.Skill;
+import l2s.gameserver.model.AggroList.AggroInfo;
 import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.s2c.MagicSkillUse;
@@ -237,49 +239,42 @@ public class NpcSupportAI extends DefaultAI
 	}
 	
 	@Override
-	protected boolean checkAggression(Creature target)
+	protected boolean checkTarget(Creature target, int range)
 	{
 		NpcInstance actor = getActor();
-		if(getIntention() != CtrlIntention.AI_INTENTION_ACTIVE || !isGlobalAggro())
+		if(target == null || target.isAlikeDead() || !actor.isInRangeZ(target, range))
 			return false;
 
-		if(target.isAlikeDead())
-			return false;
-
-		if(!target.isTargetable(actor))
-			return false;
-
-		
 		if(target.isNpc() && !target.isAutoAttackable(actor))
 			return false;
 		
-		if(target.isTransformed() && !target.getTransform().isNormalAttackable())
-			return false;
-
-		if(target.isPlayable())
-			return false;
-		
-		if(!actor.isAggressive() || !target.isInRangeZ(actor.getSpawnedLoc(), actor.getAggroRange()))
-			return false;
-
-		if(!canAttackCharacter(target))
-			return false;
-		
-		if(!GeoEngine.canSeeTarget(actor, target, false))
-			return false;
-
 		if(((NpcInstance) target).isInFaction(actor))
 			return false;
-
-		actor.getAggroList().addDamageHate(target, 0, 2);
-
-		if(target.isServitor())
+		
+		if(target.isPlayable())
 			return false;
 
-		startRunningTask(AI_TASK_ATTACK_DELAY);
-		setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+		final boolean hided = target.isPlayable() && !canSeeInHide((Playable) target);
 
-		return true;
+		if(!hided && actor.isConfused())
+			return true;
+
+		if(getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
+		{
+			AggroInfo ai = actor.getAggroList().get(target);
+			if(ai != null)
+			{
+				if(hided)
+				{
+					ai.hate = 0; // очищаем хейт
+					return false;
+				}
+				return ai.hate > 0;
+			}
+			return false;
+		}
+
+		return canAttackCharacter(target);
 	}
 
 	@Override
