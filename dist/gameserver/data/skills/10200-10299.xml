@@ -986,7 +986,7 @@
 		<set name="reuseDelay" value="120000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<enchant type="1" levels="10" group="7" name="Cost">
+		<enchant type="1" levels="10" group="7" name="Time">
 			<table name="#time">132 144 156 168 180 192 204 216 228 240</table>
 		</enchant>
 		<for>
@@ -999,33 +999,33 @@
 		</for>
 	</skill>
 	<skill id="10271" levels="2" name="Power Provoke">
-		<table name="#inc">1.2 1.2</table>
-		<table name="#dec">0.76 0.76</table>
-		<table name="#mpConsume2">76 83</table>
-		<table name="#activateRate">75</table>
-		<table name="#magicLevel">97 99</table>
 		<table name="#abnormal_time">10</table>
+		<table name="#activateRate">75</table>
+		<table name="#dec">0.76 0.76</table>
+		<table name="#stunResist">0</table>
+		<table name="#inc">1.2 1.2</table>
+		<table name="#magicLevel">97 99</table>
+		<table name="#knockDownResist">0</table>
+		<table name="#mpConsume2">76 83</table>
 		<table name="#reuseDelay">4000</table>
 		<table name="#skillRadius">600 700</table>
-		<table name="#mentalResist">0</table>
-		<table name="#fireResist">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1200"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="pd_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10271"/>
 		<set name="activateRate" value="#activateRate"/>
-		<set name="castRange" value="80"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="624"/>
-		<set name="skillRadius" value="#skillRadius"/>
 		<set name="analog_skills" value="503;286"/>
+		<set name="castRange" value="80"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="624"/>
+		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill10271"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillRadius" value="#skillRadius"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
 		<set name="trait" value="DERANGEMENT"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
@@ -1035,61 +1035,58 @@
 		</enchant>
 		<enchant type="2" name="Chance">
 			<table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
-			<table name="#abnormal_time">11 12 13 14 15 16 17 18 19 20</table>
 		</enchant>
-		<enchant type="3" levels="10" name="Radius">
+		<enchant type="3" levels="10" name="Distance">
 			<table name="#skillRadius">720 740 760 780 800 820 840 860 880 900</table>
 		</enchant>
-		<enchant type="4" levels="10" name="Mental">
-			<table name="#mentalResist">1 2 3 4 5 6 7 8 9 10</table>
+		<enchant type="4" levels="10" name="Break Knockdown">
+			<table name="#knockDownResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="5" levels="10" name="Fire">
-			<table name="#fireResist">20</table>
+		<enchant type="5" levels="10" name="Break Shock">
+			<table name="#stunResist">20</table>
 		</enchant>
-		<!--<enchant type="9" name="Recycle">
+		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">3000 3000 3000 3000 3000 3000 3000 3000 2000 2000</table>
-		</enchant>-->
+		</enchant>
 		<for>
 			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" value="#inc"/>
 				<mul order="0x30" stat="pAtkSpd" value="#inc"/>
 				<mul order="0x30" stat="pDef" value="#dec"/>
-				<add order="0x40" stat="rootResist" value="#mentalResist"/>
-				<add order="0x40" stat="sleepResist" value="#mentalResist"/>
-				<add order="0x40" stat="mentalResist" value="#mentalResist"/>
+				<sub order="0x40" stat="knockDownResist" value="#mentalResist"/>
 				<add order="0x40" stat="defenceFire" value="#fireResist"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="10273" levels="4" name="Lightning Disarm">
-		<table name="#atk">0.9 0.85 0.8 0.75</table>
-		<table name="#mpConsume2">92</table>
-		<table name="#skillRadius">200</table>
-		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#reuseDelay">120000</table>
 		<table name="#abnormal_time">5</table>
+		<table name="#atk">0.9 0.85 0.8 0.75</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mentalResist">0</table>
+		<table name="#mpConsume2">92</table>
+		<table name="#reuseDelay">120000</table>
+		<table name="#skillRadius">200</table>
 		<table name="#stunResist">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="disarm"/>
+		<set name="activateRate" value="80"/>
+		<set name="analog_skills" value="775;794"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1200"/>
-		<set name="abnormal_effect" value="DOT_BLEEDING"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="2"/>
-		<set name="abnormal_type" value="disarm"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="skillRadius" value="#skillRadius"/>
 		<set name="icon" value="icon.skill10273"/>
-		<set name="saveVs" value="STR"/>
 		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="maxChance" value="100"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="activateRate" value="80"/>
-		<set name="maxChance" value="100"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="STR"/>
+		<set name="skillRadius" value="#skillRadius"/>
 		<set name="skillType" value="DEBUFF"/>
-		<set name="trait" value="DISARM"/>
 		<set name="target" value="TARGET_AREA"/>
-		<set name="analog_skills" value="775;794"/>
+		<set name="trait" value="DISARM"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
