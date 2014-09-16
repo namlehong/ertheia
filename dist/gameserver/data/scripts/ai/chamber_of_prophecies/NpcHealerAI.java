@@ -194,6 +194,7 @@ public class NpcHealerAI extends DefaultAI
 
 	private boolean startAttack()
 	{
+		System.out.println("Start attack");
 		NpcInstance actor = getActor();
 		if(attackTarget == null || attackTarget.isDead())
 		{
@@ -204,9 +205,14 @@ public class NpcHealerAI extends DefaultAI
 				{
 					if(checkattackTarget(npc))
 					{
+						System.out.println("Target " + npc.getName() + " is eligible to attack");
 						if(attackTarget == null || actor.getDistance3D(npc) < actor.getDistance3D(attackTarget))
 							attackTarget = npc;
 						
+					}
+					else
+					{
+						System.out.println("Target " + npc.getName() + " is NOT eligible to attack");
 					}
 				}
 			}
@@ -220,17 +226,16 @@ public class NpcHealerAI extends DefaultAI
 
 		if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow() && !attackTarget.isDead() && GeoEngine.canSeeTarget(actor, attackTarget, false) && attackTarget.isVisible())
 		{
+			System.out.println("actor is eligible to start attack");
 			actor.getAggroList().addDamageHate(attackTarget, 10, 10);
 			actor.setAggressionTarget(attackTarget);
 			actor.setRunning();
 			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attackTarget);
 			return true;
 		}
-
-		if(attackTarget != null && (!attackTarget.isVisible() || attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false)))
+		else
 		{
-			attackTarget = null;
-			return false;
+			System.out.println("actor is busy");
 		}
 		
 		return false;
@@ -266,7 +271,13 @@ public class NpcHealerAI extends DefaultAI
 		
 		if (((NpcInstance) attackTarget).isInFaction(getActor()))
 			return false;
-			
+		
+
+		if(attackTarget != null && (!attackTarget.isVisible() || attackTarget.isDead() || !GeoEngine.canSeeTarget(getActor(), attackTarget, false)))
+		{
+			return false;
+		}
+		
 		return true;
 	}
 
