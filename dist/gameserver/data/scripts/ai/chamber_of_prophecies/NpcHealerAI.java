@@ -77,6 +77,12 @@ public class NpcHealerAI extends DefaultAI
 			return startAttack();
 			
 	}
+
+	@Override
+	protected boolean createNewTask()
+	{
+		return defaultFightTask();
+	}
 	
 	protected boolean canUseSkill(Skill skill, Creature target, double distance, boolean override)
 	{
