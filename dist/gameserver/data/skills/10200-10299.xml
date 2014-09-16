@@ -1194,6 +1194,7 @@
 		<table name="#power">65085</table>
 		<table name="#powerPvP">0</table>
 		<table name="#reuseDelay">30000</table>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="500"/>
 		<set name="criticalRate" value="10"/>
 		<set name="hitTime" value="5000"/>
@@ -1228,23 +1229,23 @@
 		</enchant>
 	</skill>
 	<skill id="10276" levels="1" name="Force of Nature">
-		<table name="#hpHealPower">0</table>
-		<table name="#hpHealCount">0</table>
-		<table name="#cpHealPower">0</table>
 		<table name="#cpHealCount">0</table>
-		<set name="reuseDelay" value="60000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1200"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10276"/>
-		<set name="hpConsume" value="80"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="power" value="200"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CHARGE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="fullCharge" value="true"/>
+		<table name="#cpHealPower">0</table>
+		<table name="#hpHealCount">0</table>
+		<table name="#hpHealPower">0</table>
 		<set name="charges" value="10"/>
+		<set name="coolTime" value="300"/>
+		<set name="fullCharge" value="true"/>
+		<set name="hitTime" value="1200"/>
+		<set name="hpConsume" value="80"/>
+		<set name="icon" value="icon.skill10276"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="200"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="skillType" value="CHARGE"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Hp Heal">
 			<table name="#hpHealPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#hpHealCount">1</table>
@@ -1259,7 +1260,8 @@
 		</for>
 	</skill>
 	<skill id="10277" levels="4" name="Final Cry">
-		<table name="#pAtk">1.1 1.11 1.13 1.16</table>
+		<table name="#pAtk">1.2 1.22 1.26 1.33</table>
+		<table name="#pvePhysSkillDmgBonus">1.1 1.11 1.13 1.16</table> 
 		<table name="#mpConsume"> 38 41 45 47 </table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3 4</table>
@@ -1278,9 +1280,18 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="effectPoint" value="408"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#magicLevel">99</table>
+			<table name="#reuseDelay">174000 169000 163000 158000 153000 147000 142000 136000 131000 126000</table>
+		</enchant>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+				<mul order="0x30" stat="pvePhysSkillDmgBonus" value="#pvePhysSkillDmgBonus"/>
 				<mul order="0x30" stat="pvpPhysDmgBonus" value="1.05"/>
 				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="1.05"/>
 			</effect>
