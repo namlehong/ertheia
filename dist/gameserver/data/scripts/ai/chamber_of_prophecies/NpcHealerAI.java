@@ -198,6 +198,7 @@ public class NpcHealerAI extends Fighter
 		NpcInstance actor = getActor();
 		if(attackTarget == null || attackTarget.isDead())
 		{
+			//set new attack target
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
 			if(around != null && !around.isEmpty() || !GeoEngine.canSeeTarget(actor, attackTarget, false))
 			{
@@ -237,6 +238,10 @@ public class NpcHealerAI extends Fighter
 			{
 				System.out.println("actor is busy");
 			}
+		}
+		else
+		{
+			System.out.println("Start attack " + attackTarget.getName());
 		}
 		
 		return false;
