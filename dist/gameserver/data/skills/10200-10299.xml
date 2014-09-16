@@ -1457,18 +1457,17 @@
 		</for>
 	</skill>
 	<skill id="10284" levels="3" name="Lightning Force">
-		 <!--  По сути верно но нада проверять! -->
-		<table name="#pAtk">1.10 1.12 1.15</table>
-		<table name="#pAtk2">1.10 1.15 1.20</table>
-		<table name="#chance">20 10 0</table>
-		<table name="#levelfit">1 2 3</table>
 		<table name="#abnormal_level">1 2 3</table>
 		<table name="#abnormal_time">30 20 15</table>
+		<table name="#chance">20 10 10</table>
+		<table name="#levelfit">1 2 3</table>
+		<table name="#pAtk">1.10 1.15 1.30</table>
+		<table name="#speed">5 7 10</table>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="weapon_master_special"/>
+		<set name="castRange" value="400"/>
 		<set name="magicLevel" value="85"/>
-		<set name="magicType" value="ITEM"/>
 		<set name="icon" value="icon.skill0786"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF_CHARGER"/>
@@ -1476,12 +1475,12 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<mul order="0x60" stat="pAtk" value="#pAtk">
-					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword, Dual Blunt, Pole"/>
+				<mul order="0x30" stat="pAtk" value="#pAtk">
+					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword, Dual Blunt, Pole, Dual Fist"/>
 				</mul>
-				<mul order="0x60" stat="pAtk" value="#pAtk2">
-					<using kind="Dual Fist"/>
-				</mul>
+				<add order="0x40" stat="runSpd" value="#speed">
+					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword, Dual Blunt, Pole, Dual Fist"/>
+				</add>
 				<triggers>
 					<trigger id="10284" level="#levelfit" type="CRIT" chance="#chance">
 						<player damage="1;0"/>
