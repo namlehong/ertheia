@@ -196,7 +196,8 @@ public class NpcHealerAI extends Fighter
 	{
 		System.out.println("Start attack");
 		NpcInstance actor = getActor();
-		if(attackTarget == null || attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false))
+		
+		if(attackTarget == null || attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false) || attackTarget.isAttackable(actor))
 		{
 			//set new attack target
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
@@ -241,7 +242,11 @@ public class NpcHealerAI extends Fighter
 		}
 		else
 		{
-			System.out.println("Start attack " + attackTarget.getName());
+			System.out.println("Continue attack " + attackTarget.getName());
+			System.out.println("attackTarget.isDead() " + attackTarget.isDead());
+			System.out.println("GeoEngine.canSeeTarget(actor, attackTarget, false) " + GeoEngine.canSeeTarget(actor, attackTarget, false));
+			System.out.println("attackTarget.isAttackable(actor) " + attackTarget.isAttackable(actor));
+			
 		}
 		
 		return false;
