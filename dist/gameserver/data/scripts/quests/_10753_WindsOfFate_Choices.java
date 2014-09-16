@@ -469,26 +469,33 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			
 			if(decoy_instance_1 != null && !door_room_1.isOpen())
 			{
-				List<NpcInstance> npcs_room_1 = World.getAroundNpc(decoy_instance_1, 1600, 200);
+				List<NpcInstance> npcs_room_1 = World.getAroundNpc(decoy_instance_1, 1800, 200);
 				
 				if(isAllDead(npcs_room_1))
+				{
+					System.out.println("monster room 1 all dead " + npcs_room_1.size());
 					door_room_1.openMe();
+				}
 			}
 			
 			if(decoy_instance_2 != null && !door_room_2.isOpen())
 			{
-				List<NpcInstance> npcs_room_2 = World.getAroundNpc(decoy_instance_2, 1600, 200);
+				List<NpcInstance> npcs_room_2 = World.getAroundNpc(decoy_instance_2, 1800, 200);
 				
 				if(isAllDead(npcs_room_2))
+				{
+					System.out.println("monster room 2 all dead " + npcs_room_2.size());
 					door_room_2.openMe();
+				}
 			}
 			
 			if(decoy_instance_3 != null && !door_room_3.isOpen())
 			{
-				List<NpcInstance> npcs_room_3 = World.getAroundNpc(decoy_instance_3, 1600, 200);
+				List<NpcInstance> npcs_room_3 = World.getAroundNpc(decoy_instance_3, 1800, 200);
 				
 				if(isAllDead(npcs_room_3))
 				{
+					System.out.println("monster room 3 all dead " + npcs_room_3.size());
 					door_room_3.openMe();
 				}	
 			}
@@ -547,6 +554,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			if(npc.isMonster() && !npc.isDead())
 				return false;
 		}
+		
 		return true;
 	}
 	
