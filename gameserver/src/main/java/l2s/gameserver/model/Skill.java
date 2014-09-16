@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import l2s.gameserver.skills.skillclasses.*;
+
 import org.apache.commons.lang3.math.NumberUtils;
+
 import l2s.commons.collections.LazyArrayList;
 import l2s.commons.geometry.Polygon;
 import l2s.commons.lang.ArrayUtils;
@@ -35,6 +37,7 @@ import l2s.gameserver.model.entity.events.GlobalEvent;
 import l2s.gameserver.model.instances.ChestInstance;
 import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.FeedableBeastInstance;
+import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.Inventory;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.network.l2.components.SystemMsg;
@@ -58,6 +61,7 @@ import l2s.gameserver.templates.StatsSet;
 import l2s.gameserver.templates.skill.EffectTemplate;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.PositionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -1648,6 +1652,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			for(Creature creature : around)
 			{
 				if(creature.isPlayable())
+					around.remove(creature);
+				else if(activeChar.isNpc() && ((NpcInstance) creature).isInFaction((NpcInstance)activeChar))
 					around.remove(creature);
 			}
 		}
