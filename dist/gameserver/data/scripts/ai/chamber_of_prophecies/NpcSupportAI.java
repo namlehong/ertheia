@@ -245,15 +245,15 @@ public class NpcSupportAI extends DefaultAI
 		if(target == null || target.isAlikeDead() || !actor.isInRangeZ(target, range))
 			return false;
 
+		if(target.isPlayable())
+			return false;
+
 		if(target.isNpc() && !target.isAutoAttackable(actor))
 			return false;
 		
 		if(((NpcInstance) target).isInFaction(actor))
 			return false;
 		
-		if(target.isPlayable())
-			return false;
-
 		final boolean hided = target.isPlayable() && !canSeeInHide((Playable) target);
 
 		if(!hided && actor.isConfused())
