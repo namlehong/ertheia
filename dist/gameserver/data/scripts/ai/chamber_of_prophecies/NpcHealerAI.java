@@ -182,7 +182,7 @@ public class NpcHealerAI extends Fighter
 				
 				if(canUseSkill(skill, player, distance, true))
 				{
-					System.out.println("Use skill " + skill.getName());
+					//System.out.println("Use skill " + skill.getName());
 					actor.doCast(skill, player, true);
 					actor.broadcastPacket(new MagicSkillUse(actor, player, skill.getId(), 1, 0, 0, false));
 				}
@@ -287,16 +287,17 @@ public class NpcHealerAI extends Fighter
 		
 		if (((NpcInstance) attackTarget).isInFaction(getActor()))
 		{
-			System.out.println(attackTarget.getName() + " is in same faction " + attackTarget.getFaction().toString());
+			//System.out.println(attackTarget.getName() + " is in same faction " + attackTarget.getFaction().toString());
 			return false;
 		}
+		/*
 		else
 		{
 			System.out.println(attackTarget.getName() + " is NOT in same faction");
 			System.out.println("attackTarget faction " + attackTarget.getFaction().toString());
 			System.out.println("actor faction " + getActor().getFaction().toString());
 		}
-
+		 */
 		if(attackTarget != null && (!attackTarget.isVisible() || attackTarget.isDead() || !GeoEngine.canSeeTarget(getActor(), attackTarget, false)))
 		{
 			return false;
