@@ -2,24 +2,30 @@ package ai.chamber_of_prophecies;
 
 import java.util.List;
 
+import org.dom4j.tree.LazyList;
+
+import l2s.commons.util.Rnd;
 import l2s.gameserver.ai.CtrlIntention;
-import l2s.gameserver.ai.Priest;
+import l2s.gameserver.ai.DefaultAI;
 import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.model.Creature;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.Skill;
-import l2s.gameserver.model.World;
 import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.s2c.MagicSkillUse;
 import l2s.gameserver.stats.Stats;
+import l2s.gameserver.utils.Location;
 /**
  * @author Hien Son
  */
-public class NpcHealerAI extends Priest
+public class NpcHealerAI extends DefaultAI
 {
 	Creature attackTarget = null;
-	Player healTarget = null;
+	List<Player> targetPlayers = null;
+	int maxFollowDistance = 300;
+	int minFollowDistance = 100;
+	int followTargetIndex = 0;
 	
 	public NpcHealerAI(NpcInstance actor)
 	{
@@ -29,66 +35,47 @@ public class NpcHealerAI extends Priest
 	@Override
 	protected boolean thinkActive()
 	{
-		double chance = Math.random();
 		NpcInstance actor = getActor();
+		Player player;
 		
-		if(chance*100 < getRateHEAL())
+		//follow the player
+		double distance;
+		
+		if(targetPlayers != null && targetPlayers.size() > 0 && followTargetIndex > 0)
 		{
-			System.out.println("Ferin heal chance triggered");
-			for(Player player : World.getAroundPlayers(actor, 2000, 300))
+			player = targetPlayers.get(followTargetIndex - 1);
+			
+			//in case the player set to follow is null, fall back to the first player in the list
+			if(player == null)
+				player = targetPlayers.get(0);
+			
+			distance = (int)actor.getDistance(player);
+			
+			if(distance > maxFollowDistance)
 			{
-				System.out.println("player " + player.getName() + " isDead " + player.isDead() + " isAlikeDead " + player.isAlikeDead() + " isVisible " + player.isVisible());
-				if(player != null && !player.isDead() && !player.isAlikeDead() && player.isVisible())
+				if(GeoEngine.canSeeTarget(actor, player, false))
 				{
-					Skill skill = null;
-					System.out.println("checkHealTarget " + checkHealTarget(healTarget));
-					double distance = actor.getDistance(player);
-					if(checkHealTarget(player) == 1)
-					{
-						Skill[] healSkillList = selectUsableSkills(player, distance, actor.getTemplate().getHealSkills());
-						if(healSkillList != null)
-						{
-							int randomIndex = (int)Math.random()*healSkillList.length;
-							skill = healSkillList[randomIndex];
-						}
-					}
-					else if(checkHealTarget(player) == 2)
-					{
-						Skill[] rechargeSkillList = selectUsableSkills(player, distance, actor.getTemplate().getManaHealSkills());
-						if(rechargeSkillList != null)
-						{
-							int randomIndex = (int)Math.random()*rechargeSkillList.length;
-							skill = rechargeSkillList[randomIndex];
-						}
-					}
-					
-					if(skill == null)
-						continue;
-					
-					if(distance > skill.getCastRange())
-					{
-						tryMoveToTarget(player, skill.getCastRange());
-						return false;
-					}
-					
-					if(canUseSkill(skill, player, distance))
-					{
-						System.out.println("skill " + skill.getName());
-						actor.doCast(skill, player, true);
-						actor.broadcastPacket(new MagicSkillUse(actor, player, skill.getId(), 1, 0, 0, false));
-					}
-					else
-						System.out.println("Skill is null");
-					
+					//in case the NPC can see the player
+					actor.setRunning();
+					Location loc = new Location(player.getX() + Rnd.get(-60, 60), player.getY() + Rnd.get(-60, 60), player.getZ());
+					actor.followToCharacter(loc, player, minFollowDistance, false);
 				}
+				else
+				{
+					//in case the NPC cannot see the player, then teleport straight to him
+					actor.teleToLocation(player.getLoc().getRandomLoc(100));
+				}
+				return true;
 			}
-			return false;
 		}
+		
+		//if healling is not possible, then start attack monsters instead
+		if(startHeal())
+			return true;
 		else
 			return startAttack();
+		
 	}
-	
-
 	
 	protected boolean canUseSkill(Skill skill, Creature target, double distance, boolean override)
 	{
@@ -143,19 +130,68 @@ public class NpcHealerAI extends Priest
 		return true;
 	}
 	
-	
-	private int checkHealTarget(Player player)
+	private boolean startHeal()
 	{
-		if(player == null)
-			return 0;
-		
-		if(player.getCurrentHpPercents() < 80)
-			return 1;
-		
-		if(player.getCurrentMpPercents() < 80)
-			return 2;
-		
-		return 0;
+
+		NpcInstance actor = getActor();
+		System.out.println("Ferin heal chance triggered");
+		for(Player player : targetPlayers)
+		{
+			System.out.println("player " + player.getName() + " isDead " + player.isDead() + " isAlikeDead " + player.isAlikeDead() + " isVisible " + player.isVisible());
+			if(player != null && !player.isDead() && !player.isAlikeDead() && player.isVisible())
+			{
+				Skill skill = null;
+				Skill healHPSkill = null;
+				Skill healMPSkill = null;
+				
+				double distance = actor.getDistance(player);
+				if(player.getCurrentHpPercents() < 80)
+				{
+					Skill[] healSkillList = selectUsableSkills(player, distance, actor.getTemplate().getHealSkills());
+					if(healSkillList != null)
+					{
+						int randomIndex = (int)Math.random()*healSkillList.length;
+						healHPSkill = healSkillList[randomIndex];
+					}
+				}
+				
+				if(player.getCurrentMpPercents() < 80)
+				{
+					Skill[] rechargeSkillList = selectUsableSkills(player, distance, actor.getTemplate().getManaHealSkills());
+					if(rechargeSkillList != null)
+					{
+						int randomIndex = (int)Math.random()*rechargeSkillList.length;
+						healMPSkill = rechargeSkillList[randomIndex];
+					}
+				}
+				
+				//check to get the skill to cast, prioritize heal HP skill higher than heal MP skill
+				if(healHPSkill != null) 
+					skill = healHPSkill;
+				else if(healMPSkill != null)
+					skill = healMPSkill;
+				
+				//if cannot get any skill to cast (out of MP, skill still cooling down, etc.), 
+				//then attack monsters instead
+				if(skill == null)
+					return false;
+				
+				if(distance > skill.getCastRange())
+				{
+					tryMoveToTarget(player, skill.getCastRange());
+					return true;
+				}
+				
+				if(canUseSkill(skill, player, distance, true))
+				{
+					System.out.println("Use skill " + skill.getName());
+					actor.doCast(skill, player, true);
+					actor.broadcastPacket(new MagicSkillUse(actor, player, skill.getId(), 1, 0, 0, false));
+				}
+				
+			}
+		}
+		return true;
 	}
 
 	private boolean startAttack()
@@ -277,5 +313,48 @@ public class NpcHealerAI extends Priest
 	public int getRateHEAL()
 	{
 		return 90;
+	}
+	
+	public List<Player> getTargetPlayer()
+	{
+		return targetPlayers;
+	}
+	
+	public void setTargetPlayer(Player... _targetPlayers)
+	{
+		targetPlayers = new LazyList<Player>();
+		
+		for(Player _targetPlayer : _targetPlayers)
+			targetPlayers.add(_targetPlayer);
+	}
+	
+	public int getMaxFollowDistance()
+	{
+		return maxFollowDistance;
+	}
+	
+	public void setMaxFollowDistance(int distance)
+	{
+		maxFollowDistance = distance;
+	}
+	
+	public int getMinFollowDistance()
+	{
+		return minFollowDistance;
+	}
+	
+	public void setMinFollowDistance(int distance)
+	{
+		minFollowDistance = distance;
+	}
+	
+	public int getFollow()
+	{
+		return followTargetIndex;
+	}
+	
+	public void setFollow(int targetIndex)
+	{
+		followTargetIndex = targetIndex;
 	}
 }

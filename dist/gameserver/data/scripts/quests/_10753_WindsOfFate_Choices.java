@@ -3,6 +3,7 @@ package quests;
 import java.util.ArrayList;
 import java.util.List;
 
+import ai.chamber_of_prophecies.NpcHealerAI;
 import l2s.commons.util.Rnd;
 import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
@@ -426,10 +427,13 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, new Location(-88408, 186824, -10476), 0);
 			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88552, 186840, -10476), 0);
 			
+			NpcHealerAI ferin_ai = (NpcHealerAI)ferin_healer_instance.getAI();
+			
+			ferin_ai.setTargetPlayer(player);
+			ferin_ai.setFollow(1);
+			
 			st.startQuestTimer("npc_follow_timer", check_interval);
-			//kain_fighter_instance.moveToLocation(-88504, 184280, -104701, 100, true);
 			tellNpcFollowPlayer(kain_fighter_instance, player);
-			tellNpcFollowPlayer(ferin_healer_instance, player);
 			st.set("follow", 1);
 			npc.deleteMe();
 			
