@@ -196,11 +196,11 @@ public class NpcHealerAI extends Fighter
 	{
 		System.out.println("Start attack");
 		NpcInstance actor = getActor();
-		if(attackTarget == null || attackTarget.isDead())
+		if(attackTarget == null || attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false))
 		{
 			//set new attack target
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
-			if(around != null && !around.isEmpty() || !GeoEngine.canSeeTarget(actor, attackTarget, false))
+			if(around != null && !around.isEmpty())
 			{
 				for(NpcInstance npc : around)
 				{
