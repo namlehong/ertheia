@@ -977,6 +977,9 @@ public class DefaultAI extends CharacterAI
 					qs.getQuest().notifyAttack(actor, qs);
 		}
 
+		if(attacker.isNpc())
+			System.out.println(actor.getName() + " is being attacked by " + attacker.getName() + " with dmg " + damage);
+		
 		//Добавляем только хейт, урон, если атакующий - игровой персонаж, будет добавлен в L2NpcInstance.onReduceCurrentHp
 		actor.getAggroList().addDamageHate(attacker, 0, damage);
 
