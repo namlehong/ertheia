@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ai.chamber_of_prophecies.NpcHealerAI;
+import ai.chamber_of_prophecies.NpcWarriorAI;
 import l2s.commons.util.Rnd;
 import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
@@ -428,28 +429,15 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88552, 186840, -10476), 0);
 			
 			NpcHealerAI ferin_ai = (NpcHealerAI)ferin_healer_instance.getAI();
+			NpcWarriorAI kain_ai = (NpcWarriorAI)kain_fighter_instance.getAI();
 			
 			ferin_ai.setTargetPlayer(player);
 			ferin_ai.setFollow(1);
 			
-			st.startQuestTimer("npc_follow_timer", check_interval);
-			tellNpcFollowPlayer(kain_fighter_instance, player);
-			st.set("follow", 1);
-			npc.deleteMe();
+			kain_ai.setTargetPlayer(player);
+			kain_ai.setFollow(1);
 			
-			return null;
-		}
-		
-		if(event.equalsIgnoreCase("npc_follow_timer"))
-		{
-			if(st.getInt("follow") == 1)
-			{
-				st.startQuestTimer("npc_follow_timer", check_interval);
-				
-				tellNpcFollowPlayer(kain_fighter_instance, player);
-				tellNpcFollowPlayer(ferin_healer_instance, player);
-				
-			}
+			npc.deleteMe();
 			
 			return null;
 		}
@@ -495,20 +483,6 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		return htmltext;
 	}
 	
-	private void tellNpcFollowPlayer(NpcInstance npc, Player player)
-	{
-		if(npc!= null)
-		{
-			npc.setRunning();
-			if(npc.getLoc().distance(player.getLoc()) > 300)
-			{
-				Location loc = new Location(player.getX() + Rnd.get(-60, 60), player.getY() + Rnd.get(-60, 60), player.getZ());
-				npc.followToCharacter(loc, player, Config.FOLLOW_RANGE, false);
-				//npc.moveToLocation(Location.coordsRandomize(player.getLoc(), 50, 150), 100, true);
-			}
-		}
-		
-	}
 
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)

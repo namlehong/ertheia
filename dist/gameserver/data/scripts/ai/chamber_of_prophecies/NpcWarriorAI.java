@@ -2,18 +2,27 @@ package ai.chamber_of_prophecies;
 
 import java.util.List;
 
+import org.dom4j.tree.LazyList;
+
+import l2s.commons.util.Rnd;
 import l2s.gameserver.ai.CtrlIntention;
-import l2s.gameserver.ai.Fighter;
+import l2s.gameserver.ai.DefaultAI;
 import l2s.gameserver.geodata.GeoEngine;
+import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.Player;
 import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.utils.Location;
 /**
  * @author Hien Son
  */
-public class NpcWarriorAI extends Fighter
+public class NpcWarriorAI extends DefaultAI
 {
-	NpcInstance target = null;
+	Creature attackTarget = null;
+	List<Player> targetPlayers = null;
+	int maxFollowDistance = 300;
+	int minFollowDistance = 100;
+	int followTargetIndex = 0;
 	
 	public NpcWarriorAI(NpcInstance actor)
 	{
@@ -23,42 +32,90 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	protected boolean thinkActive()
 	{
+		NpcInstance actor = getActor();
+		Player player;
+		
+		//follow the player
+		double distance;
+		
+		if(targetPlayers != null && targetPlayers.size() > 0 && followTargetIndex > 0)
+		{
+			player = targetPlayers.get(followTargetIndex - 1);
+			
+			//in case the player set to follow is null, fall back to the first player in the list
+			if(player == null)
+				player = targetPlayers.get(0);
+			
+			distance = (int)actor.getDistance(player);
+			
+			if(distance > maxFollowDistance)
+			{
+				if(GeoEngine.canSeeTarget(actor, player, false))
+				{
+					//in case the NPC can see the player
+					actor.setRunning();
+					Location loc = new Location(player.getX() + Rnd.get(-60, 60), player.getY() + Rnd.get(-60, 60), player.getZ());
+					actor.followToCharacter(loc, player, minFollowDistance, false);
+				}
+				else
+				{
+					//in case the NPC cannot see the player, then teleport straight to him
+					actor.teleToLocation(player.getLoc().getRandomLoc(100));
+				}
+				return true;
+			}
+		}
+		
+		
 		return startAttack();
+			
 	}
 
+	@Override
+	protected boolean createNewTask()
+	{
+		return defaultFightTask();
+	}
+	
 	private boolean startAttack()
 	{
 		NpcInstance actor = getActor();
-		if(target == null || target.isDead())
+		
+		if(attackTarget !=null && (attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false))) 
+			attackTarget = null;
+		
+		if(attackTarget == null)
 		{
+			//set new attack target
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
 			if(around != null && !around.isEmpty())
 			{
 				for(NpcInstance npc : around)
 				{
-					if(checkTarget(npc))
+					if(checkAttackTarget(npc))
 					{
-						if(target == null || actor.getDistance3D(npc) < actor.getDistance3D(target))
-							target = npc;
+						if(attackTarget == null)
+							attackTarget = npc;
+						else if(actor.getDistance3D(npc) < actor.getDistance3D(attackTarget))
+							attackTarget = npc;
 						
 					}
 				}
 			}
-		}
-
-		if(target != null && !actor.isAttackingNow() && !actor.isCastingNow() && !target.isDead() && GeoEngine.canSeeTarget(actor, target, false) && target.isVisible())
-		{
-			actor.getAggroList().addDamageHate(target, 10, 10);
-			actor.setAggressionTarget(target);
-			actor.setRunning();
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-			return true;
-		}
-
-		if(target != null && (!target.isVisible() || target.isDead() || !GeoEngine.canSeeTarget(actor, target, false)))
-		{
-			target = null;
-			return false;
+			else
+			{
+				return false;
+			}
+			
+			if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow())
+			{
+				actor.getAggroList().addDamageHate(attackTarget, 10, 10);
+				actor.setAggressionTarget(attackTarget);
+				actor.setRunning();
+				setIntention(CtrlIntention.AI_INTENTION_ATTACK, attackTarget);
+				return true;
+			}
+			
 		}
 		
 		return false;
@@ -81,21 +138,25 @@ public class NpcWarriorAI extends Fighter
 		}
 	}
 
-
 	@Override
 	protected boolean isGlobalAggro()
 	{
 		return true;
 	}
 	
-	private boolean checkTarget(NpcInstance target)
+	private boolean checkAttackTarget(NpcInstance attackTarget)
 	{
-		if(target == null)
+		if(attackTarget == null)
 			return false;
 		
-		if (((NpcInstance) target).isInFaction(getActor()))
+		if (((NpcInstance) attackTarget).isInFaction(getActor()) ||
+			!attackTarget.isVisible() || 
+			attackTarget.isDead() || 
+			!GeoEngine.canSeeTarget(getActor(), attackTarget, false))
+		{
 			return false;
-			
+		}
+		
 		return true;
 	}
 
@@ -121,13 +182,13 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	public int getRateDEBUFF()
 	{
-		return 50;
+		return 30;
 	}
 
 	@Override
 	public int getRateDAM()
 	{
-		return 80;
+		return 30;
 	}
 
 	@Override
@@ -139,12 +200,55 @@ public class NpcWarriorAI extends Fighter
 	@Override
 	public int getRateBUFF()
 	{
-		return 0;
+		return 90;
 	}
 
 	@Override
 	public int getRateHEAL()
 	{
-		return 0;
+		return 90;
+	}
+	
+	public List<Player> getTargetPlayer()
+	{
+		return targetPlayers;
+	}
+	
+	public void setTargetPlayer(Player... _targetPlayers)
+	{
+		targetPlayers = new LazyList<Player>();
+		
+		for(Player _targetPlayer : _targetPlayers)
+			targetPlayers.add(_targetPlayer);
+	}
+	
+	public int getMaxFollowDistance()
+	{
+		return maxFollowDistance;
+	}
+	
+	public void setMaxFollowDistance(int distance)
+	{
+		maxFollowDistance = distance;
+	}
+	
+	public int getMinFollowDistance()
+	{
+		return minFollowDistance;
+	}
+	
+	public void setMinFollowDistance(int distance)
+	{
+		minFollowDistance = distance;
+	}
+	
+	public int getFollow()
+	{
+		return followTargetIndex;
+	}
+	
+	public void setFollow(int targetIndex)
+	{
+		followTargetIndex = targetIndex;
 	}
 }
