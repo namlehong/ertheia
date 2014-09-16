@@ -6,7 +6,7 @@ import org.dom4j.tree.LazyList;
 
 import l2s.commons.util.Rnd;
 import l2s.gameserver.ai.CtrlIntention;
-import l2s.gameserver.ai.Fighter;
+import l2s.gameserver.ai.DefaultAI;
 import l2s.gameserver.geodata.GeoEngine;
 import l2s.gameserver.model.Creature;
 import l2s.gameserver.model.Player;
@@ -19,7 +19,7 @@ import l2s.gameserver.utils.Location;
 /**
  * @author Hien Son
  */
-public class NpcHealerAI extends Fighter
+public class NpcHealerAI extends DefaultAI
 {
 	Creature attackTarget = null;
 	List<Player> targetPlayers = null;
@@ -69,12 +69,13 @@ public class NpcHealerAI extends Fighter
 			}
 		}
 		
+		
 		//if healling is not possible, then start attack monsters instead
 		if(startHeal())
 			return true;
 		else
 			return startAttack();
-		
+			
 	}
 	
 	protected boolean canUseSkill(Skill skill, Creature target, double distance, boolean override)
