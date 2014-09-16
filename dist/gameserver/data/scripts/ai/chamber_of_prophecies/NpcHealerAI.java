@@ -194,13 +194,11 @@ public class NpcHealerAI extends DefaultAI
 
 	private boolean startAttack()
 	{
-		System.out.println("Ferin starts attack");
-		
 		NpcInstance actor = getActor();
 		if(attackTarget == null || attackTarget.isDead())
 		{
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
-			if(around != null && !around.isEmpty())
+			if(around != null && !around.isEmpty() || !GeoEngine.canSeeTarget(actor, attackTarget, false))
 			{
 				for(NpcInstance npc : around)
 				{
@@ -211,6 +209,12 @@ public class NpcHealerAI extends DefaultAI
 						
 					}
 				}
+			}
+			else
+			{
+				attackTarget = null;
+				System.out.println("there is no target around");
+				return false;
 			}
 		}
 
