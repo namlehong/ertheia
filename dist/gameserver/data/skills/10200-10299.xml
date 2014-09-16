@@ -1115,35 +1115,35 @@
 		</for>
 	</skill>
 	<skill id="10274" levels="4" name="Berserk">
-		<table name="#mpConsume2">38 41 45 47</table>
-		<table name="#derangementVuln"> 40 50 60 70 </table>
-		<table name="#runSpd"> 10 15 20 25 </table>
-		<table name="#pAtk"> 1.05 1.07 1.09 1.11 </table>
-		<table name="#accPhysical"> 10 15 20 25 </table>
-		<table name="#pDef"> 1.05 1.07 1.09 1.11 </table>
-		<table name="#pAtkSpd"> 1.05 1.07 1.09 1.11 </table>
-		<table name="#cAtkAdd"> 200 250 300 350 </table>
-		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3 4</table>
 		<table name="#abnormal_time">60</table>
+		<table name="#accPhysical"> 10 15 20 25 </table>
+		<table name="#cAtkAdd"> 200 250 300 350 </table>
+		<table name="#derangementVuln"> 40 50 60 70 </table>
 		<table name="#hp_penalty">70</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">38 41 45 47</table>
+		<table name="#pAtk"> 1.05 1.07 1.09 1.11 </table>
+		<table name="#pAtkSpd"> 1.05 1.07 1.09 1.11 </table>
+		<table name="#pDef"> 1.05 1.07 1.09 1.11 </table>
 		<table name="#reuseDelay">300000</table>
+		<table name="#runSpd"> 10 15 20 25 </table>
 		<table name="#stunPower">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1200"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="special_berserker"/>
+		<set name="analog_skills" value="176;130;297;1510;301;25;292;317"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="624"/>
+		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill10274"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10274"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="624"/>
-		<set name="analog_skills" value="176;130;297;1510;301;25;292;317"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<cond msgId="113">
 			<player percentHP="#hp_penalty"/>
 		</cond>
@@ -1182,40 +1182,49 @@
 					<player percentHP="30"/>
 				</add>
 			</effect>
-			<!--<effect name="Salvation"/> pay fucking attention to skill description, after the target is dead the caster with this skill will get 20% of his hp restored -->
+			<!-- after the target is dead the caster with this skill will get 20% of his hp restored 
+			<effect name="HealPercent" time="0" value="20">
+				<target percentHP="0"/>
+			</effect>
+			 -->
 		</for>
 	</skill>
 	<skill id="10275" levels="1" name="Infinity Strike">
 		<table name="#mpConsume2">1178</table>
-		<table name="#power">53213</table>
+		<table name="#power">65085</table>
 		<table name="#powerPvP">0</table>
 		<table name="#reuseDelay">30000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="10"/>
 		<set name="hitTime" value="5000"/>
+		<set name="icon" value="icon.skill10275"/>
 		<set name="magicLevel" value="99"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10275"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
+		<set name="onCrit" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="overHit" value="true"/>
-		<set name="onCrit" value="true"/>
-		<set name="criticalRate" value="10"/>
-		<set name="SSBoost" value="2.0"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2">1166 1154 1135 1120 1052 1021 977 955 920 900</table>
-			<table name="#power">54436 55659 56882 58105 59328 60551 61774 62997 64220 65443</table>
+			<table name="#mpConsume2">1131 1083 1037 989 942 896 848 801 753 707</table>
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#powerPvP">54436 55659 56882 58105 59328 60551 61774 62997 64220 65443</table>
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#powerPvP">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 20000</table>
 		</enchant>
 	</skill>
 	<skill id="10276" levels="1" name="Force of Nature">
