@@ -197,7 +197,10 @@ public class NpcHealerAI extends Fighter
 		System.out.println("Start attack");
 		NpcInstance actor = getActor();
 		
-		if(attackTarget == null || attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false) || attackTarget.isAttackable(actor))
+		if(attackTarget !=null && (attackTarget.isDead() || !GeoEngine.canSeeTarget(actor, attackTarget, false))) 
+			attackTarget = null;
+		
+		if(attackTarget == null)
 		{
 			//set new attack target
 			List<NpcInstance> around = actor.getAroundNpc(2000, 150);
@@ -205,11 +208,15 @@ public class NpcHealerAI extends Fighter
 			{
 				for(NpcInstance npc : around)
 				{
-					if(checkattackTarget(npc))
+					if(checkAttackTarget(npc))
 					{
 						System.out.println("Target " + npc.getName() + " is eligible to attack");
-						if(attackTarget == null || (actor.getDistance3D(npc) < actor.getDistance3D(attackTarget) && !npc.isDead()))
+						if(attackTarget == null)
 							attackTarget = npc;
+						else if(actor.getDistance3D(npc) < actor.getDistance3D(attackTarget))
+						{
+							attackTarget = npc;
+						}
 						
 					}
 					else
@@ -220,13 +227,12 @@ public class NpcHealerAI extends Fighter
 			}
 			else
 			{
-				attackTarget = null;
 				System.out.println("there is no target around");
 				return false;
 			}
 			
 
-			if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow() && !attackTarget.isDead() && GeoEngine.canSeeTarget(actor, attackTarget, false) && attackTarget.isVisible())
+			if(attackTarget != null && !actor.isAttackingNow() && !actor.isCastingNow())
 			{
 				System.out.println("actor is eligible to start attack");
 				actor.getAggroList().addDamageHate(attackTarget, 10, 10);
@@ -280,25 +286,15 @@ public class NpcHealerAI extends Fighter
 		return true;
 	}
 	
-	private boolean checkattackTarget(NpcInstance attackTarget)
+	private boolean checkAttackTarget(NpcInstance attackTarget)
 	{
 		if(attackTarget == null)
 			return false;
 		
-		if (((NpcInstance) attackTarget).isInFaction(getActor()))
-		{
-			//System.out.println(attackTarget.getName() + " is in same faction " + attackTarget.getFaction().toString());
-			return false;
-		}
-		/*
-		else
-		{
-			System.out.println(attackTarget.getName() + " is NOT in same faction");
-			System.out.println("attackTarget faction " + attackTarget.getFaction().toString());
-			System.out.println("actor faction " + getActor().getFaction().toString());
-		}
-		 */
-		if(attackTarget != null && (!attackTarget.isVisible() || attackTarget.isDead() || !GeoEngine.canSeeTarget(getActor(), attackTarget, false)))
+		if (((NpcInstance) attackTarget).isInFaction(getActor()) ||
+			!attackTarget.isVisible() || 
+			attackTarget.isDead() || 
+			!GeoEngine.canSeeTarget(getActor(), attackTarget, false))
 		{
 			return false;
 		}
