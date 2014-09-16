@@ -70,12 +70,7 @@ public class NpcHealerAI extends DefaultAI
 		}
 		
 		
-		//if healling is not possible, then start attack monsters instead
-		if(startHeal())
-			return true;
-		else
-			return startAttack();
-			
+		return startHeal();
 	}
 
 	@Override
