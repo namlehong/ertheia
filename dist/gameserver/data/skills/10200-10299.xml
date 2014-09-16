@@ -1386,13 +1386,13 @@
 		</for>
 	</skill>
 	<skill id="10280" levels="1" name="Momentum Charge">
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10283"/>
-		<set name="hpConsume" value="58"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CONT"/>
-		<set name="operateType" value="OP_TOGGLE"/>
 		<set name="analog_skills" value="8;50"/>
+		<set name="hpConsume" value="58"/>
+		<set name="icon" value="icon.skill10283"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect count="-1" name="DamOverTime" time="1" value="58">
 				<triggers>
@@ -1403,40 +1403,45 @@
 		</for>
 	</skill>
 	<skill id="10281" levels="2" name="Sonic Star">
-		<table name="#mpConsume2">1103 1558</table>
-		<table name="#power">21958 23344</table>
-		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">95 98</table>
+		<table name="#mpConsume2">1103 1158</table>
+		<table name="#power">44711 46723</table>
+		<table name="#powerPvP">0</table>
 		<table name="#reuseDelay">30000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="10"/>
 		<set name="hitTime" value="7500"/>
+		<set name="icon" value="icon.skill10281"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10281"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="CON"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="skillRadius" value="570"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="2.0"/>
 		<set name="target" value="TARGET_AREA"/>
-		<set name="overHit" value="true"/>
-		<set name="criticalRate" value="10"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
-			<table name="#mpConsume2">385 369 353 337 321 305 289 273 257 241</table>
+			<table name="#power">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#mpConsume2">1131 1083 1037 989 942 896 848 801 753 707</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
-			<table name="#powerPvP">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
+			<table name="#power">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#powerPvP">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#power">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 20000</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
