@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Master's Blessing - Elemental Resistance - The GM is always with you. For 1 hour, increases Fire/Water/Wind/Earth Resistance by 30.
+
+	-->
+    <skill id="14800" levels="1" name="Master's Blessing - Elemental Resistance">
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="armor_element_all"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill11565"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="armor_fire;armor_water;armor_wind;armor_earth;md_up_attr;dance_of_aqua_guard;dance_of_earth_guard;song_of_elemental;song_of_flame_guard;song_of_storm_guard;song_of_wind"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_fire"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_water"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_wind"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_earth"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="md_up_attr"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_aqua_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_earth_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_elemental"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_flame_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_storm_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_wind"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Holy Attack Resistance - The GM is always with you. For 1 hour, increases Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50%.
+
+	-->
+    <skill id="14801" levels="1" name="Master's Blessing - Holy Attack Resistance">
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="armor_holy"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill11567"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="dance_of_alignment;armor_unholy;dance_of_light;song_of_invocation;resist_bleeding"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_alignment"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_unholy"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_light"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_invocation"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="resist_bleeding"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Mental Attack Resistance - The GM is always with you. For 1 hour, increases Hold/Sleep/Mental Attack Resistance by 50, Buff Cancellation Resistance by 30, and Debuff Resistance by 20.
+
+	-->
+    <skill id="14802" levels="1" name="Master's Blessing - Mental Attack Resistance">
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="resist_derangement"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill11824"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="dance_of_protection;resist_debuff_dispel"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_protection"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="resist_debuff_dispel"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Garden Dark Magic - Body is rigid and paralyzed.
+
+	-->
+    <skill id="14803" levels="1" name="Garden Dark Magic">
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0279"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 10.
+
+	-->
+    <skill id="14804" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="10"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 20.
+
+	-->
+    <skill id="14805" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="20"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 30.
+
+	-->
+    <skill id="14806" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="30"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 40.
+
+	-->
+    <skill id="14807" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="40"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 50.
+
+	-->
+    <skill id="14808" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="50"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 60.
+
+	-->
+    <skill id="14809" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="60"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 70.
+
+	-->
+    <skill id="14810" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="70"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 80.
+
+	-->
+    <skill id="14811" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="80"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 90.
+
+	-->
+    <skill id="14812" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="90"/>
+		</for>
+	</skill>
+    <!--
+		Damage Reflect Resistance - Increases Damage Reflect Resistance by 100.
+
+	-->
+    <skill id="14813" levels="1" name="Damage Reflect Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0350"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="resistRelectDam" value="100"/>
+		</for>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has slight resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14814" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has slight resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14815" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has slight resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14816" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has strong resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14817" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has strong resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14818" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has strong resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14819" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has very strong resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14820" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has very strong resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14821" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Has very strong resistance to half-kill and lethal strike.
+
+	-->
+    <skill id="14822" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lethal Strike Resistance - Immune to half-kill and lethal strike.
+
+	-->
+    <skill id="14823" levels="1" name="Lethal Strike Resistance">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0263"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Event Neutralization Resistance - none
+
+	-->
+    <skill id="14824" levels="1" name="Event Neutralization Resistance">
+		<set name="magicLevel" value="50"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Peace Attack - Uses the strength of peace to attack the target with 1007 power.
+
+		LvL.1	description: Uses the strength of peace to attack the target with 1007 power.
+		LvL.2	description: Uses the strength of peace to attack the target with 9992 power.
+		LvL.3	description: Uses the strength of peace to attack the target with 485 power.
+		LvL.5	description: Uses the strength of peace to attack the target with 1857 power.
+		LvL.6	description: Uses the strength of peace to attack the target with 3122 power.
+		LvL.7	description: Uses the strength of peace to attack the target with 5343 power.
+		LvL.8	description: Uses the strength of peace to attack the target with 8043 power.
+		LvL.9	description: Uses the strength of peace to attack the target with 9992 power.
+	-->
+    <skill id="14825" levels="9" name="Peace Attack">
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Intensity Slash - Uses aligned power to attack nearby targets with 831 power.
+
+		LvL.1	description: Uses aligned power to attack nearby targets with 831 power.
+		LvL.2	description: Uses aligned power to attack nearby targets with 8287 power.
+		LvL.3	description: Uses aligned power to attack nearby targets with 400 power.
+		LvL.5	description: Uses aligned power to attack nearby targets with 1532 power.
+		LvL.6	description: Uses aligned power to attack nearby targets with 2575 power.
+		LvL.7	description: Uses aligned power to attack nearby targets with 4430 power.
+		LvL.8	description: Uses aligned power to attack nearby targets with 6656 power.
+		LvL.9	description: Uses aligned power to attack nearby targets with 8287 power.
+	-->
+    <skill id="14826" levels="9" name="Intensity Slash">
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lovely Fire - Uses magic power filled with love to attack nearby targets with 62 power.
+
+		LvL.1	description: Uses magic power filled with love to attack nearby targets with 62 power.
+		LvL.2	description: Uses magic power filled with love to attack nearby targets with 150 power.
+		LvL.3	description: Uses magic power filled with love to attack nearby targets with 49 power.
+		LvL.5	description: Uses magic power filled with love to attack nearby targets with 82 power.
+		LvL.6	description: Uses magic power filled with love to attack nearby targets with 102 power.
+		LvL.7	description: Uses magic power filled with love to attack nearby targets with 118 power.
+		LvL.8	description: Uses magic power filled with love to attack nearby targets with 135 power.
+		LvL.9	description: Uses magic power filled with love to attack nearby targets with 150 power.
+	-->
+    <skill id="14827" levels="9" name="Lovely Fire">
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Innocence Blast - Uses pure magic to attack enemies near the target with 50 power.
+
+		LvL.1	description: Uses pure magic to attack enemies near the target with 50 power.
+		LvL.2	description: Uses pure magic to attack enemies near the target with 120 power.
+		LvL.3	description: Uses pure magic to attack enemies near the target with 39 power.
+		LvL.5	description: Uses pure magic to attack enemies near the target with 66 power.
+		LvL.6	description: Uses pure magic to attack enemies near the target with 82 power.
+		LvL.7	description: Uses pure magic to attack enemies near the target with 94 power.
+		LvL.8	description: Uses pure magic to attack enemies near the target with 108 power.
+		LvL.9	description: Uses pure magic to attack enemies near the target with 120 power.
+	-->
+    <skill id="14828" levels="9" name="Innocence Blast">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Grace Strike - Attacks the target with awe-inspiring blows with 1187 power.
+
+		LvL.1	description: Attacks the target with awe-inspiring blows with 1187 power.
+		LvL.2	description: Attacks the target with awe-inspiring blows with 11821 power.
+		LvL.3	description: Attacks the target with awe-inspiring blows with 571 power.
+		LvL.5	description: Attacks the target with awe-inspiring blows with 2188 power.
+		LvL.6	description: Attacks the target with awe-inspiring blows with 3677 power.
+		LvL.7	description: Attacks the target with awe-inspiring blows with 6320 power.
+		LvL.8	description: Attacks the target with awe-inspiring blows with 9499 power.
+		LvL.9	description: Attacks the target with awe-inspiring blows with 11821 power.
+	-->
+    <skill id="14829" levels="9" name="Grace Strike">
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Gratitude Burst - Attacks nearby targets with a reverent heart with 985 power.
+
+		LvL.1	description: Attacks nearby targets with a reverent heart with 985 power.
+		LvL.2	description: Attacks nearby targets with a reverent heart with 9861 power.
+		LvL.3	description: Attacks nearby targets with a reverent heart with 473 power.
+		LvL.5	description: Attacks nearby targets with a reverent heart with 1814 power.
+		LvL.6	description: Attacks nearby targets with a reverent heart with 3048 power.
+		LvL.7	description: Attacks nearby targets with a reverent heart with 5269 power.
+		LvL.8	description: Attacks nearby targets with a reverent heart with 7904 power.
+		LvL.9	description: Attacks nearby targets with a reverent heart with 9861 power.
+	-->
+    <skill id="14830" levels="9" name="Gratitude Burst">
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mystery Bolt - Attacks the target with mysterious magic with 69 power.
+
+		LvL.1	description: Attacks the target with mysterious magic with 69 power.
+		LvL.2	description: Attacks the target with mysterious magic with 166 power.
+		LvL.3	description: Attacks the target with mysterious magic with 54 power.
+		LvL.5	description: Attacks the target with mysterious magic with 91 power.
+		LvL.6	description: Attacks the target with mysterious magic with 113 power.
+		LvL.7	description: Attacks the target with mysterious magic with 130 power.
+		LvL.8	description: Attacks the target with mysterious magic with 150 power.
+		LvL.9	description: Attacks the target with mysterious magic with 166 power.
+	-->
+    <skill id="14831" levels="9" name="Mystery Bolt">
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Platonic Storm - Uses magic to attack enemies near the target using all focus with 55 power.
+
+		LvL.1	description: Uses magic to attack enemies near the target using all focus with 55 power.
+		LvL.2	description: Uses magic to attack enemies near the target using all focus with 133 power.
+		LvL.3	description: Uses magic to attack enemies near the target using all focus with 43 power.
+		LvL.5	description: Uses magic to attack enemies near the target using all focus with 72 power.
+		LvL.6	description: Uses magic to attack enemies near the target using all focus with 91 power.
+		LvL.7	description: Uses magic to attack enemies near the target using all focus with 104 power.
+		LvL.8	description: Uses magic to attack enemies near the target using all focus with 120 power.
+		LvL.9	description: Uses magic to attack enemies near the target using all focus with 133 power.
+	-->
+    <skill id="14832" levels="9" name="Platonic Storm">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill_transform_s_attack"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Tersi's Holy Water - none
+
+	-->
+    <skill id="14833" levels="1" name="Tersi's Holy Water">
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Larva Blow - Stunned and unable to move momentarily.
+
+	-->
+    <skill id="14834" levels="1" name="Larva Blow">
+		<set name="icon" value="icon.skill0092"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dwarf Explosion - Stunned and unable to move momentarily.
+
+	-->
+    <skill id="14835" levels="1" name="Dwarf Explosion">
+		<set name="reuseDelay" value="30000"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Nonsense - Stunned and unable to move momentarily.
+
+	-->
+    <skill id="14836" levels="1" name="Nonsense">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill0092"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Poor and Pitiful Creature - Lifted to the air and momentarily immobilized.
+
+	-->
+    <skill id="14837" levels="1" name="Poor and Pitiful Creature">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill11052"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hide - Becomes transparent.
+
+	-->
+    <skill id="14838" levels="1" name="Hide">
+		<set name="icon" value="icon.skill11541"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cancel Hide - Cancels hide.
+
+	-->
+    <skill id="14839" levels="1" name="Cancel Hide">
+		<set name="icon" value="icon.skill01703"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Superior Aggression Aura - Provokes nearby enemies and forcefully changes their target to make them attack you.
+
+	-->
+    <skill id="14840" levels="1" name="Adolph's Superior Aggression Aura">
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10027"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Superior Aggression Aura - Provokes nearby enemies and forcefully changes their target to make them attack you.
+
+	-->
+    <skill id="14841" levels="1" name="Adolph's Superior Aggression Aura">
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10027"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Superior Aggression Aura - Provokes nearby enemies and forcefully changes their target to make them attack you.
+
+	-->
+    <skill id="14842" levels="1" name="Adolph's Superior Aggression Aura">
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10027"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Chain Hydra - Drags the selected target and enemies near the target to the user's location.
+
+	-->
+    <skill id="14843" levels="1" name="Adolph's Chain Hydra">
+		<set name="reuseDelay" value="45000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill10016"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="fly_speed" value="600"/>
+	</skill>
+    <!--
+		Adolph's Chain Hydra - Drags the selected target and enemies near the target to the user's location.
+
+	-->
+    <skill id="14844" levels="1" name="Adolph's Chain Hydra">
+		<set name="reuseDelay" value="45000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill10016"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="fly_speed" value="600"/>
+	</skill>
+    <!--
+		Adolph's Chain Hydra - Drags the selected target and enemies near the target to the user's location.
+
+	-->
+    <skill id="14845" levels="1" name="Adolph's Chain Hydra">
+		<set name="reuseDelay" value="45000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill10016"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="fly_speed" value="600"/>
+	</skill>
+    <!--
+		Adolph's Justice Punishment - Attacks the selected target with 13673 power added to P. Atk and decreases P. Atk./M. Atk. by 20%.
+
+	-->
+    <skill id="14846" levels="1" name="Adolph's Justice Punishment">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10010"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Justice Punishment - Attacks the selected target with 16034 power added to P. Atk and decreases P. Atk./M. Atk. by 20%.
+
+	-->
+    <skill id="14847" levels="1" name="Adolph's Justice Punishment">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10010"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Justice Punishment - Attacks the selected target with 18395 power added to P. Atk and decreases P. Atk./M. Atk. by 20%.
+
+	-->
+    <skill id="14848" levels="1" name="Adolph's Justice Punishment">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10010"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Shield Wave - Attacks the targets at the front with 9516 power added to P. Atk. and Stuns for 9 seconds.
+
+	-->
+    <skill id="14849" levels="1" name="Adolph's Shield Wave">
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10012"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Shield Wave - Attacks the targets at the front with 11162 power added to P. Atk. and Stuns for 9 seconds.
+
+	-->
+    <skill id="14850" levels="1" name="Adolph's Shield Wave">
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10012"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Shield Wave - Attacks the targets at the front with 12809 power added to P. Atk. and Stuns for 9 seconds.
+
+	-->
+    <skill id="14851" levels="1" name="Adolph's Shield Wave">
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10012"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Final Ultimate Defense - For 30 seconds, P. Def. + 4000 and M. Def. + 4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, + 80% Buff-canceling Attack Resistance.
+
+	-->
+    <skill id="14852" levels="1" name="Adolph's Final Ultimate Defense">
+		<set name="reuseDelay" value="900000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Final Ultimate Defense - For 30 seconds, P. Def. + 4000 and M. Def. + 4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, + 80% Buff-canceling Attack Resistance.
+
+	-->
+    <skill id="14853" levels="1" name="Adolph's Final Ultimate Defense">
+		<set name="reuseDelay" value="900000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Final Ultimate Defense - For 30 seconds, P. Def. + 4000 and M. Def. + 4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, + 80% Buff-canceling Attack Resistance.
+
+	-->
+    <skill id="14854" levels="1" name="Adolph's Final Ultimate Defense">
+		<set name="reuseDelay" value="900000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Hurricane Rush - Rushes in with the shoulder to attack the enemy and Stuns for 3 seconds.
+
+	-->
+    <skill id="14855" levels="1" name="Barton's Hurricane Rush">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.skill10267"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Hurricane Rush - Rushes in with the shoulder to attack the enemy and Stuns for 3 seconds.
+
+	-->
+    <skill id="14856" levels="1" name="Barton's Hurricane Rush">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.skill10267"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Hurricane Rush - Rushes in with the shoulder to attack the enemy and Stuns for 3 seconds.
+
+	-->
+    <skill id="14857" levels="1" name="Barton's Hurricane Rush">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.skill10267"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Infinity Strike - Inflicts a powerful attack on the target with 15303 power added to P. Atk.
+
+	-->
+    <skill id="14858" levels="1" name="Barton's Infinity Strike">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10275"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Infinity Strike - Inflicts a powerful attack on the target with 17947 power added to P. Atk.
+
+	-->
+    <skill id="14859" levels="1" name="Barton's Infinity Strike">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10275"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Infinity Strike - Inflicts a powerful attack on the target with 20592 power added to P. Atk.
+
+	-->
+    <skill id="14860" levels="1" name="Barton's Infinity Strike">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10275"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Sonic Star - Attacks nearby enemies at the speed of light with 11557 power added to P. Atk.
+
+	-->
+    <skill id="14861" levels="1" name="Barton's Sonic Star">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10281"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Sonic Star - Attacks nearby enemies at the speed of light with 13553 power added to P. Atk.
+
+	-->
+    <skill id="14862" levels="1" name="Barton's Sonic Star">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10281"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Sonic Star - Attacks nearby enemies at the speed of light with 15549 power added to P. Atk.
+
+	-->
+    <skill id="14863" levels="1" name="Barton's Sonic Star">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10281"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Power Bomber - Powerfully strikes the target with 11159 Power added to P. Atk. to knock down for 2 seconds.
+
+	-->
+    <skill id="14864" levels="1" name="Barton's Power Bomber">
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10262"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Power Bomber - Powerfully strikes the target with 13102 Power added to P. Atk. to knock down for 2 seconds.
+
+	-->
+    <skill id="14865" levels="1" name="Barton's Power Bomber">
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10262"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Power Bomber - Powerfully strikes the target with 15046 Power added to P. Atk. to knock down for 2 seconds.
+
+	-->
+    <skill id="14866" levels="1" name="Barton's Power Bomber">
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10262"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Berserker Rage - You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 1
+
+	-->
+    <skill id="14867" levels="1" name="Barton's Berserker Rage">
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10274"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Berserker Rage - You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 1
+
+	-->
+    <skill id="14868" levels="1" name="Barton's Berserker Rage">
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10274"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barton's Berserker Rage - You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 1
+
+	-->
+    <skill id="14869" levels="1" name="Barton's Berserker Rage">
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10274"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Multiple Arrow - Attacks enemies at the front with a ranged attack. Attacks the target with 23391 power added to P. Atk.
+
+	-->
+    <skill id="14870" levels="1" name="Hayuk's Multiple Arrow">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="349"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10771"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Multiple Arrow - Attacks enemies at the front with a ranged attack. Attacks the target with 27459 power added to P. Atk.
+
+	-->
+    <skill id="14871" levels="1" name="Hayuk's Multiple Arrow">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="349"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10771"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Multiple Arrow - Attacks enemies at the front with a ranged attack. Attacks the target with 31527 power added to P. Atk.
+
+	-->
+    <skill id="14872" levels="1" name="Hayuk's Multiple Arrow">
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="349"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10771"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Heavy Arrow Rain - Showers the enemy and nearby enemies with a rain of arrows with 22526 power added to P. Atk.
+
+	-->
+    <skill id="14873" levels="1" name="Hayuk's Heavy Arrow Rain">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="349"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10772"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Heavy Arrow Rain - Showers the enemy and nearby enemies with a rain of arrows with 26448 power added to P. Atk.
+
+	-->
+    <skill id="14874" levels="1" name="Hayuk's Heavy Arrow Rain">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="349"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10772"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Heavy Arrow Rain - Showers the enemy and nearby enemies with a rain of arrows with 30371 power added to P. Atk.
+
+	-->
+    <skill id="14875" levels="1" name="Hayuk's Heavy Arrow Rain">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="349"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10772"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Recoil Shot - Shoots an arrow with 24888 power added to P. Atk. to the target to push out the enemy.
+
+	-->
+    <skill id="14876" levels="1" name="Hayuk's Recoil Shot">
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="449"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10770"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Recoil Shot - Shoots an arrow with 26565 power added to P. Atk. to the target to push out the enemy.
+
+	-->
+    <skill id="14877" levels="1" name="Hayuk's Recoil Shot">
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="449"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10770"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Recoil Shot - Shoots an arrow with 28242 power added to P. Atk. to the target to push out the enemy.
+
+	-->
+    <skill id="14878" levels="1" name="Hayuk's Recoil Shot">
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="449"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10770"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Pinpoint Shot - Ranged attack at the target's weak points with 22198 power added to P. Atk, ignoring 30% of their P. Def.
+
+	-->
+    <skill id="14879" levels="1" name="Hayuk's Pinpoint Shot">
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="850"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10763"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Pinpoint Shot - Ranged attack at the target's weak points with 26075 power added to P. Atk, ignoring 30% of their P. Def.
+
+	-->
+    <skill id="14880" levels="1" name="Hayuk's Pinpoint Shot">
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="850"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10763"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Pinpoint Shot - Ranged attack at the target's weak points with 29176 power added to P. Atk, ignoring 30% of their P. Def.
+
+	-->
+    <skill id="14881" levels="1" name="Hayuk's Pinpoint Shot">
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="850"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10763"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hayuk's Quick Evasion - Quickly moves 300 units of distance back.
+
+	-->
+    <skill id="14882" levels="1" name="Hayuk's Quick Evasion">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill10774"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eliyah's Mass Exile - Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second.
+
+	-->
+    <skill id="14883" levels="1" name="Eliyah's Mass Exile">
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11296"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eliyah's Mass Exile - Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 296 per second.
+
+	-->
+    <skill id="14884" levels="1" name="Eliyah's Mass Exile">
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11296"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eliyah's Mass Exile - Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 313 per second.
+
+	-->
+    <skill id="14885" levels="1" name="Eliyah's Mass Exile">
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11296"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eliyah's Summon Death Gate - Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies.
+
+	-->
+    <skill id="14886" levels="1" name="Eliyah's Summon Death Gate">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11266"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eliyah's Summon Death Gate - Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies.
+
+	-->
+    <skill id="14887" levels="1" name="Eliyah's Summon Death Gate">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11266"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eliyah's Summon Death Gate - Summons a Death Gate. The summoned Death Gate continuously inflicts damage and Hold on nearby enemies.
+
+	-->
+    <skill id="14888" levels="1" name="Eliyah's Summon Death Gate">
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11266"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Aggression - Provokes the target to attack with 12439 Power.
+
+	-->
+    <skill id="14889" levels="1" name="Adolph's Aggression">
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill10026"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Aggression - Provokes the target to attack with 12660 Power.
+
+	-->
+    <skill id="14890" levels="1" name="Adolph's Aggression">
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill10026"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Adolph's Aggression - Provokes the target to attack with 12772 Power.
+
+	-->
+    <skill id="14891" levels="1" name="Adolph's Aggression">
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill10026"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Guardian Spirit's Blow - Inflicts a Guardian Spirit's blow.
+
+	-->
+    <skill id="14892" levels="1" name="Guardian Spirit's Blow">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Guardian Spirit's Blow - Inflicts a Guardian Spirit's blow.
+
+	-->
+    <skill id="14893" levels="1" name="Guardian Spirit's Blow">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Guardian Spirit's Blow - Inflicts a Guardian Spirit's blow.
+
+	-->
+    <skill id="14894" levels="1" name="Guardian Spirit's Blow">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Guardian Spirit's Wrath - Attacks nearby enemies with a Guardian Spirit's wrath.
+
+	-->
+    <skill id="14895" levels="1" name="Guardian Spirit's Wrath">
+		<set name="reuseDelay" value="20000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Guardian Spirit's Wrath - Attacks nearby enemies with a Guardian Spirit's wrath.
+
+	-->
+    <skill id="14896" levels="1" name="Guardian Spirit's Wrath">
+		<set name="reuseDelay" value="20000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Guardian Spirit's Wrath - Attacks nearby enemies with a Guardian Spirit's wrath.
+
+	-->
+    <skill id="14897" levels="1" name="Guardian Spirit's Wrath">
+		<set name="reuseDelay" value="20000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elise' Progressive Heal - Heals the target and the 10 most injured allies around the target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person.
+
+	-->
+    <skill id="14898" levels="1" name="Elise' Progressive Heal">
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11828"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elise' Radiant Heal - Heals the target with 1488 power. If HP is full, CP is restored with the remaining power.
+
+	-->
+    <skill id="14899" levels="1" name="Elise' Radiant Heal">
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="power" value="1488"/>
+		<set name="icon" value="icon.skill11755"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="castRange" value="600"/>
+		<set name="skillType" value="HEAL_HP_CP"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

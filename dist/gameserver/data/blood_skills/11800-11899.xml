@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Sustain - For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+
+		LvL.1	description: For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+		LvL.2	description: For 10 second, increases Healing power by 100.
+		LvL.3	description: For 10 seconds, increases Healing power by 200.
+	-->
+    <skill id="11800" levels="3" name="Sustain">
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="life_force_healer_self"/>
+		<set name="magicLevel" value="93"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Sustain - For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase.
+
+		LvL.1	mp_consume: 56
+		LvL.2	mp_consume: 0
+		LvL.3	mp_consume: 0
+	-->
+    <skill id="11801" levels="3" name="Sustain">
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="life_force_healer"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Sustain - For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+
+		LvL.1	description: For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+		LvL.2	description: For 10 second, increases Healing power by 100.
+		LvL.3	description: For 10 seconds, increases Healing power by 200.
+	-->
+    <skill id="11802" levels="3" name="Sustain">
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="life_force_healer_self"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Sustain - For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase.
+
+		LvL.1	mp_consume: 57
+		LvL.2	mp_consume: 0
+		LvL.3	mp_consume: 0
+	-->
+    <skill id="11803" levels="3" name="Sustain">
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="life_force_healer"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Sustain - For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+
+		LvL.1	description: For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+		LvL.2	description: For 10 second, increases Healing power by 100.
+		LvL.3	description: For 10 seconds, increases Healing power by 200.
+	-->
+    <skill id="11804" levels="3" name="Sustain">
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="life_force_healer_self"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Not in Use - none
+
+	-->
+    <skill id="11805" levels="1" name="Not in Use">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill1460"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessing of Tree - Recovers HP and removes bad abnormal statuses.
+
+	-->
+    <skill id="11806" levels="4" name="Blessing of Tree">
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1258"/>
+		<table name="#power">200 300 400 500 600</table>
+		<table name="#chanceToClean">65 66 67 68</table>
+		<set name="icon" value="icon.skill_agathion_special"/>
+		<set name="power" value="#power"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="HEAL_HP_CP"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#power">650 700 750 800 850 900 950 1000 1050 1100</table>
+			<table name="#chanceToClean">69 70 71 72 73 74 75 76 77 78</table>
+		</enchant>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="10"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Miracle of Fairy - none
+
+	-->
+    <skill id="11807" levels="5" name="Miracle of Fairy">
+		<table name="#magicLevel">87 90 93 96 99</table>
+		<table name="#aggroPoints">446 452 458 463 468</table>
+		<table name="#power">800 900 1000 1100 1200</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11807"/>
+		<set name="effectPoint" value="#aggroPoints"/>
+		<set name="castRange" value="600"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_ONE"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#power">1250 1300 1350 1400 1450 1500 1550 1600 1650 1700</table>
+		</enchant>
+	</skill>
+    <!--
+		Elegance of Light - Affected by Elegance of Light. HP is decreased.
+
+	-->
+    <skill id="11808" levels="2" name="Elegance of Light">
+		<table name="#magicLevel">91 97</table>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="all_regen_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elegance of Light - Affected by Elegance of Light. Increases HP.
+
+	-->
+    <skill id="11809" levels="2" name="Elegance of Light">
+		<table name="#magicLevel">91 97</table>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_debuff_earth"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Resurrection Wish - Can use the Mark of Resurrection for 30 seconds.
+
+	-->
+    <skill id="11810" levels="1" name="Resurrection Wish">
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="ab_hawk_eye"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Total Resurrection Wish - Can use the Mark of Resurrection and Mark of Total Resurrection for 30 seconds.
+
+	-->
+    <skill id="11811" levels="1" name="Total Resurrection Wish">
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="snipe"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mark of Resurrection - Bestows the mark of resurrection that can completely resurrect party members from death for 10 minutes. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear.
+
+	-->
+    <skill id="11812" levels="1" name="Mark of Resurrection">
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="resurrection_special"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1410"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="Salvation"/>
+		</for>
+	</skill>
+    <!--
+		Mark of Total Resurrection - Bestows the mark of resurrection that can completely resurrect all party members from death for 10 minutes. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear.
+
+	-->
+    <skill id="11813" levels="1" name="Mark of Total Resurrection">
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="resurrection_special"/>
+		<set name="magicLevel" value="93"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1410"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<for>
+			<effect name="Salvation"/>
+		</for>
+	</skill>
+    <!--
+		Dark Force - Inflicts damage on target with 124 Power added to M. Atk. Has a chance of pushing back target.
+
+		LvL.1	description: Inflicts damage on target with 124 Power added to M Atk.	mp_consume: 87
+		LvL.2	description: Inflicts damage on target with 127 Power added to M Atk.	mp_consume: 91
+		LvL.3	description: Inflicts damage on target with 129 Power added to M Atk.	mp_consume: 95
+		LvL.4	description: Inflicts damage on target with 133 Power added to M Atk.	mp_consume: 98
+		LvL.5	description: Inflicts damage on target with 137 Power added to M Atk.	mp_consume: 102
+		LvL.6	description: Inflicts damage on target with 141 Power added to M Atk.	mp_consume: 107
+		LvL.7	description: Inflicts damage on target with 144 Power added to M Atk.	mp_consume: 111
+		LvL.8	description: Inflicts damage on target with 148 Power added to M Atk.	mp_consume: 116
+
+		Enchant Route: 1 - 	Inflicts damage on target with 151 Power added to M. Atk. Has a chance of pushing back target. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Inflicts damage on target with 151 Power added to M Atk.	mp_consume: 108
+		LvL.102	description: Inflicts damage on target with 153 Power added to M Atk.	mp_consume: 101
+		LvL.103	description: Inflicts damage on target with 155 Power added to M Atk.	mp_consume: 95
+		LvL.104	description: Inflicts damage on target with 157 Power added to M Atk.	mp_consume: 87
+		LvL.105	description: Inflicts damage on target with 158 Power added to M Atk.	mp_consume: 80
+		LvL.106	description: Inflicts damage on target with 161 Power added to M Atk.	mp_consume: 73
+		LvL.107	description: Inflicts damage on target with 162 Power added to M Atk.	mp_consume: 66
+		LvL.108	description: Inflicts damage on target with 163 Power added to M Atk.	mp_consume: 60
+		LvL.109	description: Inflicts damage on target with 166 Power added to M Atk.	mp_consume: 52
+		LvL.110	description: Inflicts damage on target with 167 Power added to M Atk.	mp_consume: 46
+
+		Enchant Route: 2 - 	Inflicts damage on target with 151 Power added to M. Atk. Has a chance of pushing back target. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Inflicts damage on target with 151 Power added to M Atk.
+		LvL.202	description: Inflicts damage on target with 153 Power added to M Atk.
+		LvL.203	description: Inflicts damage on target with 155 Power added to M Atk.
+		LvL.204	description: Inflicts damage on target with 157 Power added to M Atk.
+		LvL.205	description: Inflicts damage on target with 158 Power added to M Atk.
+		LvL.206	description: Inflicts damage on target with 161 Power added to M Atk.
+		LvL.207	description: Inflicts damage on target with 162 Power added to M Atk.
+		LvL.208	description: Inflicts damage on target with 163 Power added to M Atk.
+		LvL.209	description: Inflicts damage on target with 166 Power added to M Atk.
+		LvL.210	description: Inflicts damage on target with 167 Power added to M Atk.
+
+		Enchant Route: 3 - 	Inflicts damage on target with 151 Power added to M. Atk. Has a chance of pushing back target. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.301	description: Inflicts damage on target with 151 Power added to M Atk.
+		LvL.302	description: Inflicts damage on target with 153 Power added to M Atk.
+		LvL.303	description: Inflicts damage on target with 155 Power added to M Atk.
+		LvL.304	description: Inflicts damage on target with 157 Power added to M Atk.
+		LvL.305	description: Inflicts damage on target with 158 Power added to M Atk.
+		LvL.306	description: Inflicts damage on target with 161 Power added to M Atk.
+		LvL.307	description: Inflicts damage on target with 162 Power added to M Atk.
+		LvL.308	description: Inflicts damage on target with 163 Power added to M Atk.
+		LvL.309	description: Inflicts damage on target with 166 Power added to M Atk.
+		LvL.310	description: Inflicts damage on target with 167 Power added to M Atk.
+
+		Enchant Route: 4 - 	Inflicts damage on target with 151 Power added to M. Atk. Has a chance of pushing back target. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.401	description: Inflicts damage on target with 151 Power added to M Atk.
+		LvL.402	description: Inflicts damage on target with 153 Power added to M Atk.
+		LvL.403	description: Inflicts damage on target with 155 Power added to M Atk.
+		LvL.404	description: Inflicts damage on target with 157 Power added to M Atk.
+		LvL.405	description: Inflicts damage on target with 158 Power added to M Atk.
+		LvL.406	description: Inflicts damage on target with 161 Power added to M Atk.
+		LvL.407	description: Inflicts damage on target with 162 Power added to M Atk.
+		LvL.408	description: Inflicts damage on target with 163 Power added to M Atk.
+		LvL.409	description: Inflicts damage on target with 166 Power added to M Atk.
+		LvL.410	description: Inflicts damage on target with 167 Power added to M Atk.
+
+		Enchant Route: 9 - 	Pushes back and attacks with magic.
+
+	-->
+    <skill id="11814" levels="8" name="Dark Force">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#reuseDelay">10000</table>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11814"/>
+		<table name="#mpConsume1">17 18 19 19 20 21 22 23</table>
+		<table name="#mpConsume2">70 73 76 79 82 86 89 93</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<table name="#power">95 97 99 102 105 108 110 113</table>
+		<table name="#powerPvP">0</table>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="activateRate" value="85"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="power" value="#power"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="elements" value="#element"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="castRange" value="400"/>
+		<set name="effetRange" value="400"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1028"/>
+		<set name="fly_speed" value="500"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#power">116 117 119 120 121 123 124 125 127 128</table>
+			<table name="#mpConsume1">21 20 19 17 16 14 13 12 10 9</table>
+			<table name="#mpConsume2">87 81 76 70 64 59 53 48 42 37</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="Duel">
+			<table name="#power">116 117 119 120 121 123 124 125 127 128</table>
+			<table name="#powerPvP">116 117 119 120 121 123 124 125 127 128</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="3" name="Holy Attack">
+			<table name="#element">Holy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Dark Attack">
+			<table name="#element">unholy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Reuse">
+			<table name="#reuseDelay">4000 4000 4000 4000 4000 4000 4000 4000 4000 4000</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect name="KnockBack">
+				<def name="fly_radius" value="200"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Sustain - For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase.
+
+		LvL.1	mp_consume: 57
+		LvL.2	mp_consume: 0
+		LvL.3	mp_consume: 0
+	-->
+    <skill id="11815" levels="3" name="Sustain">
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="life_force_healer"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Sustain - For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+
+		LvL.1	description: For 10 second, increases Healing power by 50. If triggered again, the effect will increase.
+		LvL.2	description: For 10 second, increases Healing power by 100.
+		LvL.3	description: For 10 seconds, increases Healing power by 200.
+	-->
+    <skill id="11816" levels="3" name="Sustain">
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="life_force_healer_self"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dark Rain - Inflicts damage on nearby enemies with 102 Power added to M. Atk. and decreases aggression toward yourself.
+
+		LvL.1	description: Inflicts damage on nearby enemies with 102 Power added to M Atk.	mp_consume: 282
+		LvL.2	description: Inflicts damage on nearby enemies with 104 Power added to M Atk.	mp_consume: 288
+		LvL.3	description: Inflicts damage on nearby enemies with 107 Power added to M Atk.	mp_consume: 300
+		LvL.4	description: Inflicts damage on nearby enemies with 110 Power added to M Atk.	mp_consume: 312
+		LvL.5	description: Inflicts damage on nearby enemies with 113 Power added to M Atk.	mp_consume: 325
+		LvL.6	description: Inflicts damage on nearby enemies with 116 Power added to M Atk.	mp_consume: 337
+		LvL.7	description: Inflicts damage on nearby enemies with 119 Power added to M Atk.	mp_consume: 351
+		LvL.8	description: Inflicts damage on nearby enemies with 122 Power added to M Atk.	mp_consume: 365
+
+		Enchant Route: 1 - 	Inflicts damage on nearby enemies with 125 Power added to M. Atk. and decreases aggression toward yourself. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Inflicts damage on nearby enemies with 125 Power added to M Atk.	mp_consume: 342
+		LvL.102	description: Inflicts damage on nearby enemies with 126 Power added to M Atk.	mp_consume: 320
+		LvL.103	description: Inflicts damage on nearby enemies with 127 Power added to M Atk.	mp_consume: 298
+		LvL.104	description: Inflicts damage on nearby enemies with 129 Power added to M Atk.	mp_consume: 276
+		LvL.105	description: Inflicts damage on nearby enemies with 130 Power added to M Atk.	mp_consume: 255
+		LvL.106	description: Inflicts damage on nearby enemies with 132 Power added to M Atk.	mp_consume: 232
+		LvL.107	description: Inflicts damage on nearby enemies with 133 Power added to M Atk.	mp_consume: 211
+		LvL.108	description: Inflicts damage on nearby enemies with 135 Power added to M Atk.	mp_consume: 188
+		LvL.109	description: Inflicts damage on nearby enemies with 136 Power added to M Atk.	mp_consume: 167
+		LvL.110	description: Inflicts damage on nearby enemies with 138 Power added to M Atk.	mp_consume: 145
+
+		Enchant Route: 2 - 	Inflicts damage on nearby enemies with 125 Power added to M. Atk. and decreases aggression toward yourself. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Inflicts damage on nearby enemies with 125 Power added to M Atk.
+		LvL.202	description: Inflicts damage on nearby enemies with 126 Power added to M Atk.
+		LvL.203	description: Inflicts damage on nearby enemies with 127 Power added to M Atk.
+		LvL.204	description: Inflicts damage on nearby enemies with 129 Power added to M Atk.
+		LvL.205	description: Inflicts damage on nearby enemies with 130 Power added to M Atk.
+		LvL.206	description: Inflicts damage on nearby enemies with 132 Power added to M Atk.
+		LvL.207	description: Inflicts damage on nearby enemies with 133 Power added to M Atk.
+		LvL.208	description: Inflicts damage on nearby enemies with 135 Power added to M Atk.
+		LvL.209	description: Inflicts damage on nearby enemies with 136 Power added to M Atk.
+		LvL.210	description: Inflicts damage on nearby enemies with 138 Power added to M Atk.
+
+		Enchant Route: 3 - 	Inflicts damage on nearby enemies with 125 Power added to M. Atk. and decreases aggression toward yourself. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.301	description: Inflicts damage on nearby enemies with 125 Power added to M Atk.
+		LvL.302	description: Inflicts damage on nearby enemies with 126 Power added to M Atk.
+		LvL.303	description: Inflicts damage on nearby enemies with 127 Power added to M Atk.
+		LvL.304	description: Inflicts damage on nearby enemies with 129 Power added to M Atk.
+		LvL.305	description: Inflicts damage on nearby enemies with 130 Power added to M Atk.
+		LvL.306	description: Inflicts damage on nearby enemies with 132 Power added to M Atk.
+		LvL.307	description: Inflicts damage on nearby enemies with 133 Power added to M Atk.
+		LvL.308	description: Inflicts damage on nearby enemies with 135 Power added to M Atk.
+		LvL.309	description: Inflicts damage on nearby enemies with 136 Power added to M Atk.
+		LvL.310	description: Inflicts damage on nearby enemies with 138 Power added to M Atk.
+
+		Enchant Route: 4 - 	Inflicts damage on nearby enemies with 125 Power added to M. Atk. and decreases aggression toward yourself. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.401	description: Inflicts damage on nearby enemies with 125 Power added to M Atk.
+		LvL.402	description: Inflicts damage on nearby enemies with 126 Power added to M Atk.
+		LvL.403	description: Inflicts damage on nearby enemies with 127 Power added to M Atk.
+		LvL.404	description: Inflicts damage on nearby enemies with 129 Power added to M Atk.
+		LvL.405	description: Inflicts damage on nearby enemies with 130 Power added to M Atk.
+		LvL.406	description: Inflicts damage on nearby enemies with 132 Power added to M Atk.
+		LvL.407	description: Inflicts damage on nearby enemies with 133 Power added to M Atk.
+		LvL.408	description: Inflicts damage on nearby enemies with 135 Power added to M Atk.
+		LvL.409	description: Inflicts damage on nearby enemies with 136 Power added to M Atk.
+		LvL.410	description: Inflicts damage on nearby enemies with 138 Power added to M Atk.
+
+		Enchant Route: 9 - 	Inflicts damage on enemies in the selected range with 174 Power added to M. Atk. and decreases aggression toward yourself.
+
+	-->
+    <skill id="11817" levels="8" name="Dark Rain">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">282 288 300 312 325 337 351 365</table>
+		<set name="reuseDelay" value="6699"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3779"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11817"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<table name="#power">102 104 107 110 113 116 119 122</table>
+		<table name="#powerPvP">0</table>
+		<table name="#elementPower">0</table>
+		<table name="#element">none</table>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="230"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#magicLevel">99</table>
+			<table name="#mpConsume2">342 320 298 276 255 232 211 188 167 145</table>
+		</enchant>
+		<enchant type="2" name="Duel">
+			<table name="#powerPvP">125 126 127 129 130 132 133 135 136 138</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="3" name="Holy Attack">
+			<table name="#element">holy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Dark Attack">
+			<table name="#element">unholy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Radius">
+			<!-- TODO -->
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect name="UnAggro" time="0"/>
+		</for>
+	</skill>
+    <!--
+		Price of Summoning - Healing abilities are decreased as a price for summoning Lumi.
+
+	-->
+    <skill id="11818" levels="1" name="Price of Summoning">
+		<set name="reuseDelay" value="8000"/>
+		<set name="abnormal_time" value="180"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dot_mp"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1100"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="apply_effects_on_summon" value="false"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="hpEff" value="0.4"/>
+				<triggers>
+					<trigger id="11818" level="1" type="ON_EXIT_EFFECT">
+						<or>
+							<player has_summon_id="14925"/>
+							<player has_summon_id="14944"/>
+							<player has_summon_id="14945"/>
+							<player has_summon_id="14946"/>
+							<player has_summon_id="15000"/>
+							<player has_summon_id="15001"/>
+							<player has_summon_id="15002"/>
+							<player has_summon_id="15003"/>
+							<player has_summon_id="15004"/>
+							<player has_summon_id="15005"/>
+							<player has_summon_id="15006"/>
+							<player has_summon_id="15007"/>
+							<player has_summon_id="15008"/>
+							<player has_summon_id="15009"/>
+						</or>
+					</trigger>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Party Return - Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service.
+
+
+		Enchant Route: 1 - 	Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 88
+		LvL.102	mp_consume: 85
+		LvL.103	mp_consume: 82
+		LvL.104	mp_consume: 79
+		LvL.105	mp_consume: 76
+		LvL.106	mp_consume: 73
+		LvL.107	mp_consume: 70
+		LvL.108	mp_consume: 67
+		LvL.109	mp_consume: 64
+		LvL.110	mp_consume: 61
+	-->
+    <skill id="11819" levels="1" name="Party Return">
+		<set name="reuseDelay" value="150000"/>
+		<set name="hitTime" value="3500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11819"/>
+		<table name="#mpConsume2">91</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1050;1255"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">88 85 82 79 76 73 70 67 64 61</table>
+		</enchant>
+	</skill>
+    <!--
+		Power of Saha - For 30 minutes, target's P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, M. Def. + 30%. 
+
+
+		Enchant Route: 1 - 	For 33 minutes, target's P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, M. Def. + 30%. Enchant Time: Increases the duration.
+
+		LvL.101	description: For 33 minutes, target's P Atk.
+		LvL.102	description: For 36 minutes, target's P Atk.
+		LvL.103	description: For 39 minutes, target's P Atk.
+		LvL.104	description: For 42 minutes, target's P Atk.
+		LvL.105	description: For 45 minutes, target's P Atk.
+		LvL.106	description: For 48 minutes, target's P Atk.
+		LvL.107	description: For 51 minutes, target's P Atk.
+		LvL.108	description: For 54 minutes, target's P Atk.
+		LvL.109	description: For 57 minutes, target's P Atk.
+		LvL.110	description: For 60 minutes, target's P Atk.
+	-->
+    <skill id="11820" levels="1" name="Power of Saha">
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="buff_special_attack"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11820"/>
+		<table name="#mpConsume2">17</table>
+		<table name="#time">1800</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="effectPoint" value="379"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1059;1068;1040"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="improve_pa_pd_up;pa_up;pd_up;improve_ma_md_up;md_up;ma_up"/>
+				<mul order="0x30" stat="pAtk" value="1.17"/>
+				<mul order="0x30" stat="pDef" value="1.15"/>
+				<mul order="0x30" stat="mAtk" value="1.79"/>
+				<mul order="0x30" stat="mDef" value="1.3"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="improve_pa_pd_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="pa_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="pd_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="improve_ma_md_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="md_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="ma_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Critical of Saha - For 30 minutes, target's P. Critical Rate + 32%, P. Critical Damage + 35%, M. Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+
+
+		Enchant Route: 1 - 	For 33 minutes, target's P. Critical Rate + 32%, P. Critical Damage + 35%, M. Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%. Enchant Time: Increases Duration.
+
+		LvL.101	description: For 33 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.102	description: For 36 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.103	description: For 39 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.104	description: For 42 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.105	description: For 45 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.106	description: For 48 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.107	description: For 51 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.108	description: For 54 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.109	description: For 57 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+		LvL.110	description: For 60 minutes, target's P Critical Rate + 32%, P Critical Damage + 35%, M Critical Rate + 20, MP Consumption for physical skills - 20% and MP Consumption for magic skills - 10%.
+	-->
+    <skill id="11821" levels="1" name="Critical of Saha">
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="buff_special_critical"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11821"/>
+		<table name="#mpConsume2">17</table>
+		<table name="#time">1800</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="effectPoint" value="635"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1303;1077;1397;1242"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="improve_crt_rate_dmg_up;critical_prob_up;critical_dmg_up;cheap_magic;magic_critical_up"/>
+				<add order="0x40" stat="pCritRate" value="32"/>
+				<mul order="0x30" stat="pCritDamage" value="1.35"/>
+				<add order="0x40" stat="baseMCritRate" value="20"/>
+				<mul order="0x30" stat="mpConsumePhysical" value="1.2"/>
+				<mul order="0x30" stat="mpConsum" value="1.1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="improve_crt_rate_dmg_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="critical_prob_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="critical_dmg_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="cheap_magic"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="magic_critical_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Force of Saha - For 30 minutes, target's Atk. Spd. + 34% and Casting Spd. + 31%. Bestows a 9% Vampiric Rage effect at a certain rate.
+
+
+		Enchant Route: 1 - 	For 33 minutes, target's Atk. Spd. + 34% and Casting Spd. + 31%. Bestows a 9% Vampiric Rage effect at a certain rate. Enchant Time: Increases the duration.
+
+		LvL.101	description: For 33 minutes, target's Atk.
+		LvL.102	description: For 36 minutes, target's Atk.
+		LvL.103	description: For 39 minutes, target's Atk.
+		LvL.104	description: For 42 minutes, target's Atk.
+		LvL.105	description: For 45 minutes, target's Atk.
+		LvL.106	description: For 48 minutes, target's Atk.
+		LvL.107	description: For 51 minutes, target's Atk.
+		LvL.108	description: For 54 minutes, target's Atk.
+		LvL.109	description: For 57 minutes, target's Atk.
+		LvL.110	description: For 60 minutes, target's Atk.
+	-->
+    <skill id="11822" levels="1" name="Force of Saha">
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="buff_special_move"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11822"/>
+		<table name="#mpConsume2">17</table>
+		<table name="#time">1800</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="effectPoint" value="495"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1268"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="improve_vampiric_haste;attack_time_down;vampiric_attack;casting_time_down"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.34"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.31"/>
+				<add order="0x40" stat="absorbDam" value="9"/>
+				<add order="0x40" stat="absorbBowDam" value="9"/>
+				<add order="0x40" stat="absorbPSkillDam" value="9"/>
+				<add order="0x40" stat="absorbMSkillDam" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="improve_vampiric_haste"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="attack_time_down"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="vampiric_attack"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="casting_time_down"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Speed of Saha - For 30 minutes, target's P. Accuracy + 5, P. and M. Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+
+
+		Enchant Route: 1 - 	For 33 minutes, target's P. Accuracy + 5, P. and M. Evasion + 5, Speed + 34 and received Critical Damage - 30%. Enchant Time: Increases the duration.
+
+		LvL.101	description: For 33 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.102	description: For 36 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.103	description: For 39 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.104	description: For 42 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.105	description: For 45 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.106	description: For 48 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.107	description: For 51 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.108	description: For 54 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.109	description: For 57 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		LvL.110	description: For 60 minutes, target's P Accuracy + 5, P and M Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+	-->
+    <skill id="11823" levels="1" name="Speed of Saha">
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="buff_special_hitavoid"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11823"/>
+		<table name="#mpConsume2">17</table>
+		<table name="#time">1800</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="effectPoint" value="379"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1240;1087"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="improve_hit_defence_crt_rate_up;hit_up;t_crt_dmg_down;improve_speed_avoid_up;speed_up;avoid_up"/>
+				<add order="0x40" stat="pAccCombat" value="5"/>
+				<add order="0x40" stat="mEvasRate" value="5"/>
+				<add order="0x40" stat="pEvasRate" value="5"/>
+				<add order="0x40" stat="runSpd" value="34"/>
+				<mul order="0x30" stat="critChanceRcpt" value="0.7"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="improve_hit_defence_crt_rate_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="hit_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="t_crt_dmg_down"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="improve_speed_avoid_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="speed_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="avoid_up"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Resistance of Saha - For 30 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+
+
+		Enchant Route: 1 - 	For 33 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30. Enchant Time: Increases the duration.
+
+		LvL.101	description: For 33 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.102	description: For 36 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.103	description: For 39 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.104	description: For 42 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.105	description: For 45 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.106	description: For 48 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.107	description: For 51 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.108	description: For 54 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.109	description: For 57 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+		LvL.110	description: For 60 minutes, Stun Resistance + 40%, Poison Resistance + 50% and Holy/Dark Attack Resistance + 30.
+	-->
+    <skill id="11824" levels="1" name="Resistance of Saha">
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="armor_holy"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11567"/>
+		<table name="#mpConsume2">17</table>
+		<table name="#time">1800</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1259;1392;1393;1033"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="dance_of_alignment;armor_unholy;dance_of_light;song_of_invocation;resist_bleeding"/>
+				<add order="0x40" stat="stunResist" value="40"/>
+				<add order="0x40" stat="poisonResist" value="50"/>
+				<add order="0x40" stat="defenceHoly" value="30"/>
+				<add order="0x40" stat="defenceUnholy" value="30"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_alignment"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_unholy"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_light"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_invocation"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="resist_bleeding"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Clarity of Saha - For 30 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+
+
+		Enchant Route: 1 - 	For 33 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20. Enchant Time: Increases the duration.
+
+		LvL.101	description: For 33 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.102	description: For 36 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.103	description: For 39 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.104	description: For 42 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.105	description: For 45 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.106	description: For 48 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.107	description: For 51 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.108	description: For 54 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.109	description: For 57 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+		LvL.110	description: For 60 minutes, Hold/Sleep/Mental Attack Resistance + 50, Buff-canceling Attack Resistance + 30 and Debuff Resistance + 20.
+	-->
+    <skill id="11825" levels="1" name="Clarity of Saha">
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="resist_derangement"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11825"/>
+		<table name="#mpConsume2">17</table>
+		<table name="#time">1800</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1035;1354"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="dance_of_protection;resist_debuff_dispel"/>
+				<add order="0x40" stat="rootResist" value="50"/>
+				<add order="0x40" stat="sleepResist" value="50"/>
+				<add order="0x40" stat="mentalResist" value="50"/>
+				<add order="0x40" stat="cancelResist" value="30"/>
+				<add order="0x40" stat="debuffResist" value="20"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_protection"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="resist_debuff_dispel"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Emblem of Salvation - Resurrects from death fully recovered. Buffs/debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear.
+
+
+		Enchant Route: 1 - 	Resurrects from death fully recovered. Buffs/debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 67
+		LvL.102	mp_consume: 65
+		LvL.103	mp_consume: 63
+		LvL.104	mp_consume: 61
+		LvL.105	mp_consume: 58
+		LvL.106	mp_consume: 56
+		LvL.107	mp_consume: 54
+		LvL.108	mp_consume: 52
+		LvL.109	mp_consume: 49
+		LvL.110	mp_consume: 47
+
+		Enchant Route: 2 - 	Resurrects from death fully recovered. Buffs/debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. Enchant Time: Increases Duration.
+
+	-->
+    <skill id="11826" levels="1" name="Emblem of Salvation">
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="resurrection_special"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11826"/>
+		<table name="#mpConsume2">70</table>
+		<table name="#time">3600</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="analog_skills" value="1410"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">67 65 63 61 58 56 54 52 49 47</table>
+		</enchant>
+		<enchant type="2" name="Time">
+			<table name="#time">3660 3740 3800 3860 3940 4000 4060 4120 4180 4260</table>
+		</enchant>
+		<for>
+			<effect name="Salvation"/>
+		</for>
+	</skill>
+    <!--
+		Fairy Blessing - none
+
+	-->
+    <skill id="11827" levels="5" name="Fairy Blessing">
+		<table name="#magicLevel">85 88 91 94 97</table>
+		<set name="reuseDelay" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill11827"/>
+		<table name="#aggroPoints"> 446 452 458 463 468 </table>
+		<table name="#power">800 900 1000 1100 1200</table>
+		<set name="effectPoint" value="#aggroPoints"/>
+		<set name="castRange" value="600"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_SELF"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#power">1250 1300 1350 1400 1450 1500 1550 1600 1650 1700</table>
+		</enchant>
+	</skill>
+    <!--
+		Progressive Heal - Heals target and the 10 most injured allies around target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person.
+
+
+		Enchant Route: 1 - 	Heals target and the 10 most injured allies around target by up to 40% of their Max HP. The recovery amount decreases starting from the most injured person. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 561
+		LvL.102	mp_consume: 543
+		LvL.103	mp_consume: 525
+		LvL.104	mp_consume: 507
+		LvL.105	mp_consume: 489
+		LvL.106	mp_consume: 468
+		LvL.107	mp_consume: 450
+		LvL.108	mp_consume: 432
+		LvL.109	mp_consume: 414
+		LvL.110	mp_consume: 396
+	-->
+    <skill id="11828" levels="1" name="Progressive Heal">
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11828"/>
+		<set name="effectPoint" value="398"/>
+		<set name="effectPoint" value="698"/>
+		<set name="castRange" value="900"/>
+		<set name="healRadius" value="350"/>
+		<table name="#mpConsume1">573</table>
+		<table name="#mpConsume2">38</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="healPercents" value="40;37;34;31;28;25;22;20;20;20;20"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="CHAIN_HEAL"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="analog_skills" value="1553"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">565 534 505 475 472 453 421 400 387 374</table>
+			<table name="#mpConsume1">0</table>
+		</enchant>
+	</skill>
+    <!--
+		Blessing of Saha - For 30 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M. Critical Rate - 20, Critical Damage during a normal attack - 20%, P. Atk. - 10%, P. Def. - 20%, Atk. Spd. - 20%, M. Atk. - 20%, M. Def. - 20%, Casting Spd. - 20%, Debuff Resistance - 10%
+
+
+		Enchant Route: 1 - 	For 33 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M. Critical Rate - 20, Critical Damage during a normal attack - 20%, P. Atk. - 10%, P. Def. - 20%, Atk. Spd. - 20%, M. Atk. - 20%, M. Def. - 20%, Casting Spd. - 20%, Debuff Resistance - 10%
+
+		LvL.101	description: For 33 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.102	description: For 36 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.103	description: For 39 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.104	description: For 42 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.105	description: For 45 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.106	description: For 48 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.107	description: For 51 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.108	description: For 54 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.109	description: For 57 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+		LvL.110	description: For 60 minutes, target's Max MP - 20%, HP Recovery Bonus - 20%, M Critical Rate - 20, Critical Damage during a normal attack - 20%, P Atk.
+	-->
+    <skill id="11830" levels="1" name="Blessing of Saha">
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="buff_special_defence"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11522"/>
+		<table name="#mpConsume2">35</table>
+		<table name="#time">1800</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="effectPoint" value="379"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1311;1357;1355"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="multi_buff;counter_critical"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<mul order="0x30" stat="regHp" value="1.2"/>
+				<add order="0x40" stat="baseMCritRate" value="20"/>
+				<add order="0x40" stat="pCritRate" value="20"/>
+				<mul order="0x30" stat="pCritDamage" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="multi_buff"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="counter_critical"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Erase Impact - Banishes the enemy's servitor into another dimension.
+
+		LvL.1	mp_consume: 373
+		LvL.2	mp_consume: 377
+		LvL.3	mp_consume: 380
+		LvL.4	mp_consume: 383
+		LvL.5	mp_consume: 384
+		LvL.6	mp_consume: 387
+		LvL.7	mp_consume: 390
+		LvL.8	mp_consume: 393
+
+		Enchant Route: 1 - 	Banishes the enemy's servitor into another dimension. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 380
+		LvL.102	mp_consume: 367
+		LvL.103	mp_consume: 355
+		LvL.104	mp_consume: 342
+		LvL.105	mp_consume: 330
+		LvL.106	mp_consume: 317
+		LvL.107	mp_consume: 305
+		LvL.108	mp_consume: 292
+		LvL.109	mp_consume: 279
+		LvL.110	mp_consume: 267
+	-->
+    <skill id="11831" levels="8" name="Erase Impact">
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1395"/>
+		<table name="#Rate">30 35 50 55 60 65 70 75</table>
+		<table name="#mpConsume2">370</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="600"/>
+		<set name="activateRate" value="#Rate"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="target" value="TARGET_ENEMY_SUMMON"/>
+		<set name="skillType" value="DESTROY_SUMMON"/>
+		<set name="summonOnly" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="levelModifier" value="2"/>
+		<set name="analog_skills" value="1395"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">373 377 380 383 384 387 390 393</table>
+		</enchant>
+	</skill>
+    <!--
+		Mass Fatal Sleep - Casts Sleep on nearby enemies for 30 seconds.
+
+		LvL.1	mp_consume: 52
+		LvL.3	mp_consume: 54
+		LvL.4	mp_consume: 60
+		LvL.5	mp_consume: 62
+		LvL.6	mp_consume: 66
+
+		Enchant Route: 1 - 	Casts Sleep on nearby enemies for 30 seconds. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 63
+		LvL.102	mp_consume: 61
+		LvL.103	mp_consume: 59
+		LvL.104	mp_consume: 57
+		LvL.105	mp_consume: 55
+		LvL.106	mp_consume: 53
+		LvL.107	mp_consume: 50
+		LvL.108	mp_consume: 48
+		LvL.109	mp_consume: 46
+		LvL.110	mp_consume: 44
+
+		Enchant Route: 2 - 	Casts Sleep on nearby enemies for 30 seconds. Enchant Chance: Increases Success Rate.
+
+	-->
+    <skill id="11832" levels="6" name="Mass Fatal Sleep">
+		<table name="#magicLevel">85 86 89 92 95 98</table>
+		<set name="reuseDelay" value="120000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1072"/>
+		<table name="#activateRate">45 46 47 48 49 50</table>
+		<set name="activateRate" value="#activateRate"/>
+		<table name="#mpConsume2">52 52 54 60 62 66</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="666"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="1508;1042"/>
+		<set name="trait" value="HOLD"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">64 63 61 60 58 55 54 53 51 49</table>
+		</enchant>
+		<enchant type="2" name="Chance">
+			<table name="#activateRate">51 52 53 54 55 56 57 58 59 60</table>
+		</enchant>
+		<for>
+			<effect name="Sleep"/>
+		</for>
+	</skill>
+    <!--
+		Lingering Protection - Lingering Celestial Protection. For 1 minute, increases HP/MP recovery bonus and Spd. + 5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis.
+
+	-->
+    <skill id="11833" levels="1" name="Lingering Protection">
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_type" value="invincibility_special"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11758"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSelfDispellable" value="false"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="runSpd" value="5"/>
+				<add order="0x40" stat="regHp" value="10"/> <!-- TODO: Верное значение -->
+				<add order="0x40" stat="regMp" value="10"/> <!-- TODO: Верное значение -->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Lingering Protection - Lingering Celestial Party Protection. For 1 minute, increases HP/MP recovery bonus and Spd. + 5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis.
+
+	-->
+    <skill id="11834" levels="1" name="Lingering Protection">
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_type" value="invincibility_special"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11759"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSelfDispellable" value="false"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="runSpd" value="5"/>
+				<add order="0x40" stat="regHp" value="10"/> <!-- TODO: Верное значение -->
+				<add order="0x40" stat="regMp" value="10"/> <!-- TODO: Верное значение -->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Dissolve - Increases Speed.
+
+	-->
+    <skill id="11835" levels="1" name="Dissolve">
+		<set name="icon" value="icon.skill11770"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Summon Lumi Power Passive - Increases P. Atk.
+
+	-->
+    <skill id="11836" levels="110" name="Summon Lumi Power Passive">
+		<set name="icon" value="icon.skill10001"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Miraculous Benediction - Restores clan members' CP/HP. Can only be used when MP is 50% or below.
+
+		LvL.1	description: Restores clan members' CP/HP Can only be used when MP is 50% or below.	mp_consume: 185
+		LvL.2	description: Restores clan members' CP/HP Can only be used when MP is 60% or below.	mp_consume: 205
+		LvL.3	description: Restores clan members' CP/HP Can only be used when MP is 70% or below.	mp_consume: 225
+		LvL.4	description: Restores clan members' CP/HP	mp_consume: 243
+	-->
+    <skill id="11850" levels="4" name="Miraculous Benediction">
+		<set name="icon" value="icon.skill11850new"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="100"/>
+		<set name="hitTime" value="10000"/>
+		<set name="magicLevel" value="99"/>
+		<table name="#mpConsume2">185 205 225 243</table>
+		<table name="#Hp">50 60 70 100</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="HEAL_HP_CP"/>
+		<set name="power" value="50000"/> <!--TODO new skilltype that heals everything! !-->
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<player percentHP="#Hp"/>
+		</cond>
+	</skill>
+    <!--
+		Divine Prayer - For 30 min., party members' HP heal amount + 5%.
+
+		LvL.1	description: , party members' HP heal amount + 5%.	mp_consume: 185
+		LvL.2	description: , party members' HP heal amount + 7%.	mp_consume: 205
+		LvL.3	description: , party members' HP heal amount + 10%.	mp_consume: 225
+		LvL.4	description: , party members' HP heal amount + 15%.	mp_consume: 243
+	-->
+    <skill id="11851" levels="4" name="Divine Prayer">
+		<set name="icon" value="icon.skill11859"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="100"/>
+		<set name="hitTime" value="1400"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="magicLevel" value="99"/>
+		<table name="#mpConsume2">185 205 225 243</table>
+		<table name="#gainHp">1.05 1.07 1.1 1.15</table>
+		<set name="castRange" value="900"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="hpEff" value="#gainHp"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Mass Mana Gain - For 30 min., party members' MP heal amount + 33.
+
+		LvL.1	description: , party members' MP heal amount + 33.	mp_consume: 185
+		LvL.2	description: , party members' MP heal amount + 35.	mp_consume: 205
+		LvL.3	description: , party members' MP heal amount + 37.	mp_consume: 225
+		LvL.4	description: , party members' MP heal amount + 40.	mp_consume: 243
+	-->
+    <skill id="11852" levels="4" name="Mass Mana Gain">
+		<set name="icon" value="icon.skill11852new"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="100"/>
+		<set name="hitTime" value="1400"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="magicLevel" value="99"/>
+		<table name="#mpConsume2">185 205 225 243</table>
+		<table name="#gainMp">33 35 37 40</table>
+		<set name="castRange" value="900"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="mpEff" value="#gainMp"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Superior Quick Recovery - Magic skill Cooldown - 5%.
+
+		LvL.1	description: Magic skill Cooldown - 5%.
+		LvL.2	description: Magic skill Cooldown - 6%.
+		LvL.3	description: Magic skill Cooldown - 7%.
+		LvL.4	description: Magic skill Cooldown - 10%.
+	-->
+    <skill id="11853" levels="4" name="Superior Quick Recovery">
+		<set name="icon" value="icon.skill0228"/>
+		<table name="#reuse">1.05 1.06 1.07 1.1</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pReuse" value="#reuse"/>
+			<mul order="0x30" stat="mReuse" value="#reuse"/>
+		</for>
+	</skill>
+    <!--
+		Mass Mana Gain - For 30 min., party members' MP heal amount + 33.
+
+		LvL.1	description: , party members' MP heal amount + 33.	mp_consume: 185
+		LvL.2	description: , party members' MP heal amount + 35.	mp_consume: 205
+		LvL.3	description: , party members' MP heal amount + 37.	mp_consume: 225
+		LvL.4	description: , party members' MP heal amount + 40.	mp_consume: 243
+	-->
+    <skill id="11854" levels="4" name="Mass Mana Gain">
+		<set name="icon" value="icon.skill11852new"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="100"/>
+		<set name="hitTime" value="1400"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="magicLevel" value="99"/>
+		<table name="#mpConsume2">185 205 225 243</table>
+		<table name="#gainMp">33 35 37 40</table>
+		<set name="castRange" value="900"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="mpEff" value="#gainMp"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Superior Wizard Combat - M. Atk. + 10%. M. Skill MP Consumption - 10%.
+
+		LvL.1	description: + 10%.
+		LvL.2	description: + 12%.
+		LvL.3	description: + 15%.
+		LvL.4	description: + 20%.
+	-->
+    <skill id="11855" levels="4" name="Superior Wizard Combat">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#mAtk">1.1 1.12 1.15 1.2</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#mAtk"/>
+			<mul order="0x30" stat="mReuse" value="0.9"/>
+		</for>
+	</skill>
+    <!--
+		Mental Recharge - Restores target's MP.
+
+	-->
+    <skill id="11856" levels="1" name="Mental Recharge">
+		<set name="icon" value="icon.skill11856"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="100"/>
+		<set name="hitTime" value="5500"/>
+		<set name="magicLevel" value="99"/>
+		<table name="#mpConsume2">66</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_PARTY_ONE"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="MANAHEAL"/>
+		<set name="power" value="50000"/> <!--TODO new skilltype that heals everything! !-->
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Summon Flag of Life - Summons a Flag of Life, which restores the HP of those that click on it.
+
+	-->
+    <skill id="11857" levels="3" name="Summon Flag of Life">
+		<set name="icon" value="icon.skill11774"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Protective Heal - For 1 min., puts a barrier around a party member. The barrier blocks 5 times.
+
+		LvL.1	description: The barrier blocks 5 times.
+		LvL.2	description: The barrier blocks 7 times.
+		LvL.3	description: The barrier blocks 10 times.
+	-->
+    <skill id="11858" levels="3" name="Protective Heal">
+		<set name="icon" value="icon.skill11754"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dark Vampirism - Attacks target with 198 Power added to M. Atk. and recovers HP equivalent to 50% of damage inflicted. Consumes 1 Spirit Ore.
+
+		LvL.1	description: Attacks target with 198 Power added to M Atk.	mp_consume: 92
+		LvL.2	description: Attacks target with 200 Power added to M Atk.	mp_consume: 96
+		LvL.3	description: Attacks target with 203 Power added to M Atk.	mp_consume: 100
+	-->
+    <skill id="11859" levels="3" name="Dark Vampirism">
+		<table name="#absorbPart">0.5 0.5 0.5</table>
+		<table name="#magicLevel">90 95 99</table>
+		<table name="#mpConsume2">92 96 100</table>
+		<table name="#power">198 200 203</table>
+		<set name="absorbPart" value="#absorbPart"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill11859"/>
+		<set name="is_self_offensive" value="false"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="skillType" value="DRAIN"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+    <!--
+		Healing Flag - Attacks target with 2490 Power added to M. Atk. If HP is full, CP is restored.
+
+		LvL.1	description: Attacks target with 2490 Power added to M Atk.
+		LvL.2	description: Attacks target with 3520 Power added to M Atk.
+		LvL.3	description: Attacks target with 5760 Power added to M Atk.
+	-->
+    <skill id="11860" levels="3" name="Healing Flag">
+		<set name="icon" value="icon.skill11755"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Resistance - For 30 min., increases party member's Elemental Resistance by 30. Consumes 10 Spirit Ores.
+
+	-->
+    <skill id="11861" levels="1" name="Elemental Resistance">
+		<table name="#abnormal_time">1800</table>
+		<table name="#abnormalLevel">15</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">92</table>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="armor_element_all"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="514"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill11861"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="armor_fire;armor_water;armor_wind;armor_earth;md_up_attr;dance_of_aqua_guard;dance_of_earth_guard;song_of_elemental;song_of_flame_guard;song_of_storm_guard;song_of_wind"/>
+				<add order="0x40" stat="defenceFire" value="30"/>
+				<add order="0x40" stat="defenceWater" value="30"/>
+				<add order="0x40" stat="defenceWind" value="30"/>
+				<add order="0x40" stat="defenceEarth" value="30"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_fire"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_water"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_wind"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="armor_earth"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="md_up_attr"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_aqua_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_earth_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_elemental"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_flame_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_storm_guard"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_wind"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Limited Melee Weapon Resistance - For 30 min., increases party member's resistance to melee weapons by 5%. Consumes 10 Spirit Ores.
+
+	-->
+    <skill id="11862" levels="1" name="Limited Melee Weapon Resistance">
+		<table name="#abnormal_level">5</table>
+		<table name="#abnormal_time">1800</table>
+		<table name="#effectPoint">500</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">82</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="castRange" value="900"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill11862"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="swordWpnVuln" value="5"/>
+				<sub order="0x40" stat="dualWpnVuln" value="5"/>
+				<sub order="0x40" stat="bluntWpnVuln" value="5"/>
+				<sub order="0x40" stat="dualWpnVuln" value="5"/>
+				<sub order="0x40" stat="daggerWpnVuln" value="5"/>
+				<sub order="0x40" stat="poleWpnVuln" value="5"/>
+				<sub order="0x40" stat="fistWpnVuln" value="5"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Limited Ranged Weapon Resistance - For 30 min., increases party member's resistance to ranged weapons by 5%. Consumes 10 Spirit Ores.
+
+	-->
+    <skill id="11863" levels="1" name="Limited Ranged Weapon Resistance">
+		<table name="#abnormal_level">5</table>
+		<table name="#abnormal_time">1800</table>
+		<table name="#effectPoint">500</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">82</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="pd_up_bow"/>
+		<set name="castRange" value="900"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill11863"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="bowWpnVuln" value="5"/>
+				<sub order="0x40" stat="crossbowWpnVuln" value="5"/>
+			</effect>
+		</for>
+	</skill>
+</list>

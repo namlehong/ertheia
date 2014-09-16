@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Dr. Destroy's Sealed Rune of Wisdom - INT + 7 permanently, and has a 10% chance of not consuming MP for healing skills.
+
+	-->
+    <skill id="22700" levels="1" name="Dr. Destroy's Sealed Rune of Wisdom">
+		<set name="icon" value="br_cashtex.skill.br_cash_rune_of_exp_buff_1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="3856" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="10">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="INT" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Harp's Sealed Rune of Power_Trigger - Has a 5% chance of Stunning all enemies within 400 grids for 3 sec.
+
+	-->
+    <skill id="22701" levels="1" name="Harp's Sealed Rune of Power_Trigger">
+		<set name="icon" value="icon.skill1551"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="10299" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="5">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="STR" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Harp's Sealed Rune of Magic_Trigger_Decrease Defense - Decreases M. Def. of target and all enemies within 400 grids by 20% for 10 sec.
+
+	-->
+    <skill id="22702" levels="1" name="Harp's Sealed Rune of Magic_Trigger_Decrease Defense">
+		<set name="icon" value="icon.skill1263"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="4487" level="12" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="10">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="INT" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Flynt's Sealed Rune of Will_Trigger - Becomes invincible for 5 sec.
+
+	-->
+    <skill id="22703" levels="1" name="Flynt's Sealed Rune of Will_Trigger">
+		<set name="icon" value="icon.skill1551"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="13518" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="CON" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Flynt's Sealed Rune of Destruction_Trigger - Rune is activated, inflicting a brand and additional damage.
+
+	-->
+    <skill id="22704" levels="1" name="Flynt's Sealed Rune of Destruction_Trigger">
+		<set name="icon" value="icon.skill11511"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="6313" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="STR" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Dr. Destroy's Sealed Rune of Skill - For 10 sec., Critical Damage and Critical Rage are increased.
+
+	-->
+    <skill id="22705" levels="1" name="Dr. Destroy's Sealed Rune of Skill">
+		<set name="icon" value="icon.etc_scroll_white_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="4086" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="DEX" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Dr. Destroy's Sealed Rune of Wisdom_Trigger - For 10 sec., skills do not consume MP.
+
+	-->
+    <skill id="22706" levels="1" name="Dr. Destroy's Sealed Rune of Wisdom_Trigger">
+		<set name="icon" value="icon.etc_hot_spring_nectar_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="3856" level="1" type="RECEIVE_DAMAGE" chance="5">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="INT" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Vitality Maintaining Potion - Maintains Vitality for 30 min.
+
+	-->
+    <skill id="22707" levels="2" name="Vitality Maintaining Potion">
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		XP Buff 50% (1-hour) - Obtained XP + 50%.
+
+	-->
+    <skill id="22708" levels="1" name="XP Buff 50% (1-hour)">
+		<set name="icon" value="icon.etc_dragons_blood_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		XP Buff 50% (2-hour) - Obtained XP + 50%.
+
+	-->
+    <skill id="22709" levels="1" name="XP Buff 50% (2-hour)">
+		<set name="icon" value="icon.etc_dragons_blood_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Increase Vitality - none
+
+	-->
+    <skill id="22710" levels="3" name="Scroll: Increase Vitality">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Replenish Vitality - none
+
+	-->
+    <skill id="22711" levels="3" name="Scroll: Replenish Vitality">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vitality Recovering Potion - For 30 min., Vitality is replenished with XP gain through hunting. Effect remains even after death.
+
+	-->
+    <skill id="22712" levels="1" name="Vitality Recovering Potion">
+		<set name="icon" value="icon.etc_hot_spring_mineral_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Letter Collector's Gift - For 2 hr., Atk./Casting Spd. + 15%, and Speed + 20.
+
+	-->
+    <skill id="22713" levels="1" name="Letter Collector's Gift">
+		<set name="icon" value="icon.shield_bread_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll Pack - none
+
+	-->
+    <skill id="22714" levels="1" name="Transformation Scroll Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Heavenly Treasure Chest - none
+
+	-->
+    <skill id="22715" levels="1" name="Heavenly Treasure Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantastical Treasure Chest - none
+
+	-->
+    <skill id="22716" levels="1" name="Fantastical Treasure Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Glorious Treasure Chest - none
+
+	-->
+    <skill id="22717" levels="1" name="Glorious Treasure Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessed Griffin Egg - none
+
+	-->
+    <skill id="22718" levels="1" name="Blessed Griffin Egg">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll Pack - none
+
+	-->
+    <skill id="22719" levels="1" name="Transformation Scroll Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Brilliant Talisman Pack - none
+
+	-->
+    <skill id="22720" levels="1" name="Brilliant Talisman Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Seal Weapon Pack - none
+
+	-->
+    <skill id="22721" levels="1" name="Scroll: Seal Weapon Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Seal Armor Pack - none
+
+	-->
+    <skill id="22722" levels="1" name="Scroll: Seal Armor Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Enchant Weapon Pack - none
+
+	-->
+    <skill id="22723" levels="1" name="Scroll: Enchant Weapon Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Enchant Armor Pack - none
+
+	-->
+    <skill id="22724" levels="1" name="Scroll: Enchant Armor Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessed Scroll: Enchant Weapon Pack - none
+
+	-->
+    <skill id="22725" levels="1" name="Blessed Scroll: Enchant Weapon Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessed Scroll: Enchant Armor Pack - none
+
+	-->
+    <skill id="22726" levels="1" name="Blessed Scroll: Enchant Armor Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Saber Tooth Tiger - Transforms into Saber Tooth Tiger.
+
+	-->
+    <skill id="22727" levels="1" name="Transformation Scroll: Saber Tooth Tiger">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Oel Mahum - Transforms into Oel Mahum.
+
+	-->
+    <skill id="22728" levels="1" name="Transformation Scroll: Oel Mahum">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Doll Blader - Transforms into Doll Blader.
+
+	-->
+    <skill id="22729" levels="1" name="Transformation Scroll: Doll Blader">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Zaken - Transforms into Zaken.
+
+	-->
+    <skill id="22730" levels="1" name="Transformation Scroll: Zaken">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Anakim - Transforms into Anakim.
+
+	-->
+    <skill id="22731" levels="1" name="Transformation Scroll: Anakim">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Venom - Transforms into Venom.
+
+	-->
+    <skill id="22732" levels="1" name="Transformation Scroll: Venom">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Gordon - Transforms into Gordon.
+
+	-->
+    <skill id="22733" levels="1" name="Transformation Scroll: Gordon">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Ranku - Transforms into Ranku.
+
+	-->
+    <skill id="22734" levels="1" name="Transformation Scroll: Ranku">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Kechi - Transforms into Kechi.
+
+	-->
+    <skill id="22735" levels="1" name="Transformation Scroll: Kechi">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Scroll: Demon Prince - Transforms into Demon Prince.
+
+	-->
+    <skill id="22736" levels="1" name="Transformation Scroll: Demon Prince">
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Ink Herb - none
+
+	-->
+    <skill id="22737" levels="1" name="Ink Herb">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Ink Gauge Reduced - none
+
+	-->
+    <skill id="22738" levels="1" name="Ink Gauge Reduced">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Greater Ink Herb - none
+
+	-->
+    <skill id="22739" levels="2" name="Greater Ink Herb">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Greater Ink Gauge Reduced - none
+
+	-->
+    <skill id="22740" levels="1" name="Greater Ink Gauge Reduced">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantasy Gift Box - none
+
+	-->
+    <skill id="22741" levels="1" name="Fantasy Gift Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantasy Health Potion - none
+
+	-->
+    <skill id="22742" levels="1" name="Fantasy Health Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantasy Mana Potion - none
+
+	-->
+    <skill id="22743" levels="1" name="Fantasy Mana Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantasy Cookie - For 60 min., Speed + 33.
+
+	-->
+    <skill id="22744" levels="1" name="Fantasy Cookie">
+		<set name="icon" value="BranchSys3.Icon.ev_halloween_cookie"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantasy Homemade Cookie - For 60 min., Max MP + 20%, HP Recovery Bonus + 20%,  M. Critical Rate + 2, Critical Damage + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, and increases P. Def. when receiv
+
+	-->
+    <skill id="22745" levels="1" name="Fantasy Homemade Cookie">
+		<set name="icon" value="BranchSys3.Icon.ev_halloween_cookie"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantasy Special Cookie - For 60 min., acquired XP/SP + 100%. (Lv.95 or below)
+
+	-->
+    <skill id="22746" levels="1" name="Fantasy Special Cookie">
+		<set name="icon" value="BranchSys3.Icon.ev_halloween_cookie"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fantasy Isle Medal of Glory - Individual Fame + 200.
+
+	-->
+    <skill id="22747" levels="1" name="Fantasy Isle Medal of Glory">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: PK (Low-grade) - none
+
+	-->
+    <skill id="22748" levels="1" name="Scroll: PK (Low-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: PK (Mid-grade) - none
+
+	-->
+    <skill id="22749" levels="1" name="Scroll: PK (Mid-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: PK (High-grade) - none
+
+	-->
+    <skill id="22750" levels="1" name="Scroll: PK (High-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: PK (Top-grade) - none
+
+	-->
+    <skill id="22751" levels="1" name="Scroll: PK (Top-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Reputation (Low-grade) - none
+
+	-->
+    <skill id="22752" levels="1" name="Scroll: Reputation (Low-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Reputation (Mid-grade) - none
+
+	-->
+    <skill id="22753" levels="1" name="Scroll: Reputation (Mid-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Reputation (High-grade) - none
+
+	-->
+    <skill id="22754" levels="1" name="Scroll: Reputation (High-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: Reputation (Top-grade) - none
+
+	-->
+    <skill id="22755" levels="1" name="Scroll: Reputation (Top-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transform: Ninja Outfit - CON + 1, MEN + 1, WIT + 1.
+
+	-->
+    <skill id="22756" levels="1" name="Transform: Ninja Outfit">
+		<set name="icon" value="BranchSys3.icon1.g_co_ninja_u"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transform: Traditional Taiwanese Costume - CON + 1, MEN + 1, WIT + 1.
+
+	-->
+    <skill id="22757" levels="1" name="Transform: Traditional Taiwanese Costume">
+		<set name="icon" value="BranchSys3.icon1.g_co_paiwan_u"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transform: Military Outfit - CON + 1, MEN + 1, WIT + 1.
+
+	-->
+    <skill id="22758" levels="1" name="Transform: Military Outfit">
+		<set name="icon" value="BranchSys3.icon1.g_co_military_u"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transform: Metal Suit - CON + 1, MEN + 1, WIT + 1.
+
+	-->
+    <skill id="22759" levels="1" name="Transform: Metal Suit">
+		<set name="icon" value="BranchSys3.icon1.g_co_sf_u"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transform: Maid Costume - CON + 1, MEN + 1, WIT + 1.
+
+	-->
+    <skill id="22760" levels="1" name="Transform: Maid Costume">
+		<set name="icon" value="BranchSys3.icon1.g_co_cutie_maid"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transform: Emerald Weapon - STR + 1, DEX + 1, INT + 1.
+
+	-->
+    <skill id="22761" levels="1" name="Transform: Emerald Weapon">
+		<set name="icon" value="BranchSys3.Icon.g_beam_sword"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transform: Japanese Weapon - STR + 1, DEX + 1, INT + 1.
+
+	-->
+    <skill id="22762" levels="1" name="Transform: Japanese Weapon">
+		<set name="icon" value="BranchSys3.Icon.g_japan_sword"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Santa Outfit Appearance Stone (14-day) - none
+
+	-->
+    <skill id="22763" levels="1" name="Santa Outfit Appearance Stone (14-day)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Santa Outfit Appearance Stone - none
+
+	-->
+    <skill id="22764" levels="1" name="Santa Outfit Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		PC Vitality - For 60 min., Vitality is replenished with XP gain through hunting.
+
+	-->
+    <skill id="22765" levels="1" name="PC Vitality">
+		<set name="icon" value="icon.etc_pccafe_point_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vitality Maintaining Potion - Maintains Vitality for 10 min.
+
+	-->
+    <skill id="22766" levels="1" name="Vitality Maintaining Potion">
+		<set name="icon" value="icon.etc_lesser_potion_blue_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vitality Maintaining Potion - Maintains Vitality for 30 min.
+
+	-->
+    <skill id="22767" levels="2" name="Vitality Maintaining Potion">
+		<set name="icon" value="icon.etc_lesser_potion_scarlet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Top Appearance Stone - none
+
+	-->
+    <skill id="22768" levels="1" name="Metal Suit Top Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Pants Appearance Stone - none
+
+	-->
+    <skill id="22769" levels="1" name="Metal Suit Pants Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Gloves Appearance Stone - none
+
+	-->
+    <skill id="22770" levels="1" name="Metal Suit Gloves Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Shoes Appearance Stone - none
+
+	-->
+    <skill id="22771" levels="1" name="Metal Suit Shoes Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Hair Accessory Appearance Stone - none
+
+	-->
+    <skill id="22772" levels="1" name="Metal Suit Hair Accessory Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Top Appearance Stone - none
+
+	-->
+    <skill id="22773" levels="1" name="Metal Suit Top Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Pants Appearance Stone - none
+
+	-->
+    <skill id="22774" levels="1" name="Metal Suit Pants Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Gloves Appearance Stone - none
+
+	-->
+    <skill id="22775" levels="1" name="Metal Suit Gloves Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Shoes Appearance Stone - none
+
+	-->
+    <skill id="22776" levels="1" name="Metal Suit Shoes Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Metal Suit Hair Accessory Appearance Stone - none
+
+	-->
+    <skill id="22777" levels="1" name="Metal Suit Hair Accessory Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Top Appearance Stone - none
+
+	-->
+    <skill id="22778" levels="1" name="Military Top Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Pants Appearance Stone - none
+
+	-->
+    <skill id="22779" levels="1" name="Military Pants Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Gloves Appearance Stone - none
+
+	-->
+    <skill id="22780" levels="1" name="Military Gloves Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Shoes Appearance Stone - none
+
+	-->
+    <skill id="22781" levels="1" name="Military Shoes Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Hair Accessory Appearance Stone - none
+
+	-->
+    <skill id="22782" levels="1" name="Military Hair Accessory Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Top Appearance Stone - none
+
+	-->
+    <skill id="22783" levels="1" name="Military Top Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Pants Appearance Stone - none
+
+	-->
+    <skill id="22784" levels="1" name="Military Pants Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Gloves Appearance Stone - none
+
+	-->
+    <skill id="22785" levels="1" name="Military Gloves Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Shoes Appearance Stone - none
+
+	-->
+    <skill id="22786" levels="1" name="Military Shoes Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Military Hair Accessory Appearance Stone - none
+
+	-->
+    <skill id="22787" levels="1" name="Military Hair Accessory Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Maid Appearance Stone - none
+
+	-->
+    <skill id="22788" levels="1" name="Maid Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Maid Hair Accessory Appearance Stone - none
+
+	-->
+    <skill id="22789" levels="1" name="Maid Hair Accessory Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Maid Appearance Stone - none
+
+	-->
+    <skill id="22790" levels="1" name="Maid Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Maid Hair Accessory Appearance Stone - none
+
+	-->
+    <skill id="22791" levels="1" name="Maid Hair Accessory Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Automatic Appearance Stone: Emerald Weapon - none
+
+	-->
+    <skill id="22792" levels="1" name="Automatic Appearance Stone: Emerald Weapon">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Automatic Appearance Stone: Japanese Weapon - none
+
+	-->
+    <skill id="22793" levels="1" name="Automatic Appearance Stone: Japanese Weapon">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Shining Accessory Pack - none
+
+	-->
+    <skill id="22794" levels="1" name="Shining Accessory Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vesper Noble Top Appearance Stone - none
+
+	-->
+    <skill id="22795" levels="1" name="Vesper Noble Top Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vesper Noble Pants Appearance Stone - none
+
+	-->
+    <skill id="22796" levels="1" name="Vesper Noble Pants Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vesper Noble Gloves Appearance Stone - none
+
+	-->
+    <skill id="22797" levels="1" name="Vesper Noble Gloves Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vesper Noble Shoes Appearance Stone - none
+
+	-->
+    <skill id="22798" levels="1" name="Vesper Noble Shoes Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vesper Noble Top Appearance Stone - none
+
+	-->
+    <skill id="22799" levels="1" name="Vesper Noble Top Appearance Stone">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

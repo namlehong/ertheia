@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Elemental Destruction: Double Casting - 4 Elements
+
+	-->
+    <skill id="11100" levels="1" name="Elemental Destruction: Double Casting">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Destruction: Fire - Body is destroyed.
+
+	-->
+    <skill id="11101" levels="1" name="Elemental Destruction: Fire">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+    <!--
+		Elemental Destruction: Water - Body is destroyed.
+
+	-->
+    <skill id="11102" levels="1" name="Elemental Destruction: Water">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+    <!--
+		Elemental Destruction: Wind - Body is destroyed.
+
+	-->
+    <skill id="11103" levels="1" name="Elemental Destruction: Wind">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+    <!--
+		Elemental Destruction: Earth - Body is destroyed.
+
+	-->
+    <skill id="11104" levels="1" name="Elemental Destruction: Earth">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+    <!--
+		Elemental Destruction: 4 Attributes - Body is destroyed.
+
+	-->
+    <skill id="11105" levels="1" name="Elemental Destruction: 4 Attributes">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+    <!--
+		Elemental Mass Burst - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M Def.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 618 Power. For 20 seconds, M Def.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 649 Power. For 25 seconds, M Def.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 683 Power. For 30 sec., M Def.	mp_consume: 179
+	-->
+    <skill id="11106" levels="4" name="Elemental Mass Burst">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="fire_skill_id" value="11107"/>
+		<set name="water_skill_id" value="11108"/>
+		<set name="wind_skill_id" value="11109"/>
+		<set name="earth_skill_id" value="11110"/>
+		<set name="multi_elemental_skill_id" value="11111"/>
+	</skill>
+    <!--
+		Elemental Mass Burst: Fire - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M Def.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 618 Power. For 20 seconds, M Def.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 649 Power. For 25 seconds, M Def.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 683 Power. For 30 sec., M Def.	mp_consume: 179
+	-->
+    <skill id="11107" levels="4" name="Elemental Mass Burst: Fire">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="fire"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11101"/>
+		</cond>
+	</skill>
+    <!--
+		Elemental Mass Burst: Water - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M Def.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 618 Power. For 20 seconds, M Def.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 649 Power. For 25 seconds, M Def.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 683 Power. For 30 sec., M Def.	mp_consume: 179
+	-->
+    <skill id="11108" levels="4" name="Elemental Mass Burst: Water">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="water"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11102"/>
+		</cond>
+	</skill>
+    <!--
+		Elemental Mass Burst: Wind - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M Def.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 618 Power. For 20 seconds, M Def.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 649 Power. For 25 seconds, M Def.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 683 Power. For 30 sec., M Def.	mp_consume: 179
+	-->
+    <skill id="11109" levels="4" name="Elemental Mass Burst: Wind">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="wind"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11103"/>
+		</cond>
+	</skill>
+    <!--
+		Elemental Mass Burst: Earth - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M Def.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 618 Power. For 20 seconds, M Def.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 649 Power. For 25 seconds, M Def.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 683 Power. For 30 sec., M Def.	mp_consume: 179
+	-->
+    <skill id="11110" levels="4" name="Elemental Mass Burst: Earth">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="earth"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11104"/>
+		</cond>
+	</skill>
+    <!--
+		Elemental Mass Burst: 4 Attributes - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M Def.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 618 Power. For 20 seconds, M Def.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 649 Power. For 25 seconds, M Def.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage on nearby enemies with 683 Power. For 30 sec., M Def.	mp_consume: 179
+	-->
+    <skill id="11111" levels="4" name="Elemental Mass Burst: 4 Attributes">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="fire;water;wind;earth"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11105"/>
+		</cond>
+	</skill>
+    <!--
+		Elemental Speed Burst - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage with 562 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage with 591 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage with 622 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11112" levels="4" name="Elemental Speed Burst">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">517 562 591 622</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ELEMENTAL_DES"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Speed Burst: Fire - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage with 562 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage with 591 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage with 622 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11113" levels="4" name="Elemental Speed Burst: Fire">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Speed Burst: Water - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage with 562 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage with 591 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage with 622 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11114" levels="4" name="Elemental Speed Burst: Water">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Speed Burst: Wind - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage with 562 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage with 591 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage with 622 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11115" levels="4" name="Elemental Speed Burst: Wind">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Speed Burst: Earth - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage with 562 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage with 591 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage with 622 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11116" levels="4" name="Elemental Speed Burst: Earth">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Speed Burst: 4 Attributes - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict damage with 562 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict damage with 591 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict damage with 622 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11117" levels="4" name="Elemental Speed Burst: 4 Attributes">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Power Burst - Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict severe damage with 618 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict severe damage with 649 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict severe damage with 683 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11118" levels="4" name="Elemental Power Burst">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ELEMENTAL_DES"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Power Burst: Fire - Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict severe damage with 618 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict severe damage with 649 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict severe damage with 683 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11119" levels="4" name="Elemental Power Burst: Fire">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Power Burst: Water - Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict severe damage with 618 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict severe damage with 649 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict severe damage with 683 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11120" levels="4" name="Elemental Power Burst: Water">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Power Burst: Wind - Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict severe damage with 618 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict severe damage with 649 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict severe damage with 683 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11121" levels="4" name="Elemental Power Burst: Wind">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Power Burst: Earth - Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict severe damage with 618 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict severe damage with 649 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict severe damage with 683 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11122" levels="4" name="Elemental Power Burst: Earth">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Power Burst: 4 Attributes - Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.
+
+		LvL.1	description: Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.	mp_consume: 137
+		LvL.2	description: Detonates an Elemental Destruction to inflict severe damage with 618 Power on a single target.	mp_consume: 154
+		LvL.3	description: Detonates an Elemental Destruction to inflict severe damage with 649 Power on a single target.	mp_consume: 166
+		LvL.4	description: Detonates an Elemental Destruction to inflict severe damage with 683 Power on a single target.	mp_consume: 179
+	-->
+    <skill id="11123" levels="4" name="Elemental Power Burst: 4 Attributes">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Superior Wizardry - M. Atk. + 5%, Max MP, MP Recovery + 5%, and debuff resistance + 10%.
+
+		LvL.1	description: + 5%, Max MP, MP Recovery + 5%, and debuff resistance + 10%.
+		LvL.2	description: + 6%, Max MP, MP Recovery + 7%, and debuff resistance + 10%.
+		LvL.3	description: + 7%, Max MP, MP Recovery + 10%, and debuff resistance + 10%.
+		LvL.4	description: + 10%, Max MP, MP Recovery + 15%, and debuff resistance + 10%.
+	-->
+    <skill id="11124" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#attr1">1.05 1.06 1.07 1.1</table>
+		<table name="#attr2">1.05 1.06 1.07 1.1</table>
+		<table name="#attr3">1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#attr1"/>
+			<mul order="0x30" stat="maxMp" value="#attr2"/>
+			<mul order="0x30" stat="regMp" value="#attr3"/>
+		</for>
+	</skill>
+    <!--
+		Superior Wizardry - M. Atk. + 10%.
+
+		LvL.1	description: + 10%.
+		LvL.2	description: + 12%.
+		LvL.3	description: + 15%.
+		LvL.4	description: + 20%.
+	-->
+    <skill id="11125" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#mAtk">1.1 1.12 1.15 1.2</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#mAtk"/>
+		</for>
+	</skill>
+    <!--
+		Fire Destruction - Inflicts 620 magical damage on target, and inflicts Fear. Over-hit.
+
+		LvL.1	description: Inflicts 620 magical damage on target, and inflicts Fear.	mp_consume: 768
+		LvL.2	description: Inflicts 657 magical damage on target, and inflicts Fear.	mp_consume: 873
+		LvL.3	description: Inflicts 695 magical damage on target, and inflicts Fear.	mp_consume: 993
+	-->
+    <skill id="11126" levels="3" name="Fire Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dark Destruction - Inflicts 713 magical damage on target. Over-hit.
+
+		LvL.1	description: Inflicts 713 magical damage on target.	mp_consume: 768
+		LvL.2	description: Inflicts 755 magical damage on target.	mp_consume: 873
+		LvL.3	description: Inflicts 799 magical damage on target.	mp_consume: 993
+	-->
+    <skill id="11127" levels="3" name="Dark Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Water Destruction - Inflicts 620 magical damage on target, and decreases their Speed by 130. Over-hit.
+
+		LvL.1	description: Inflicts 620 magical damage on target, and decreases their Speed by 130.	mp_consume: 768
+		LvL.2	description: Inflicts 657 magical damage on target, and decreases their Speed by 130.	mp_consume: 873
+		LvL.3	description: Inflicts 695 magical damage on target, and decreases their Speed by 130.	mp_consume: 993
+	-->
+    <skill id="11128" levels="3" name="Water Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wind Destruction - Inflicts 620 magical damage on target, and inflicts Knock Back. Over-hit.
+
+		LvL.1	description: Inflicts 620 magical damage on target, and inflicts Knock Back.	mp_consume: 768
+		LvL.2	description: Inflicts 657 magical damage on target, and inflicts Knock Back.	mp_consume: 873
+		LvL.3	description: Inflicts 695 magical damage on target, and inflicts Knock Back.	mp_consume: 993
+	-->
+    <skill id="11129" levels="3" name="Wind Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Soul Destruction - Inflicts 620 magical damage on target, and inflicts Hold. Over-hit.
+
+		LvL.1	description: Inflicts 620 magical damage on target, and inflicts Hold.	mp_consume: 768
+		LvL.2	description: Inflicts 657 magical damage on target, and inflicts Hold.	mp_consume: 873
+		LvL.3	description: Inflicts 695 magical damage on target, and inflicts Hold.	mp_consume: 993
+	-->
+    <skill id="11130" levels="3" name="Soul Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Life Straw - For 10 sec., attacks target with 115 Power per second and recovers HP equivalent to 100% of damage inflicted.
+
+		LvL.1	description: , attacks target with 115 Power per second and recovers HP equivalent to 100% of damage inflicted.	mp_consume: 68
+		LvL.2	description: , attacks target with 225 Power per second and recovers HP equivalent to 100% of damage inflicted.	mp_consume: 72
+		LvL.3	description: , attacks target with 225 Power per second and recovers HP equivalent to 100% of damage inflicted.	mp_consume: 84
+	-->
+    <skill id="11131" levels="3" name="Life Straw">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lightning Shield - For 30 sec., creates a shield of lightning and Paralyzes those that attack you.
+
+	-->
+    <skill id="11132" levels="3" name="Lightning Shield">
+		<set name="icon" value="icon.skill1515"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lightning Shield: Paralyze - Momentarily stiffened.
+
+	-->
+    <skill id="11133" levels="3" name="Lightning Shield: Paralyze">
+		<set name="icon" value="icon.skill1515"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Damaged Area - Momentarily incurs damage. All speeds are decreased.
+
+	-->
+    <skill id="11142" levels="3" name="Damaged Area">
+		<table name="#abnormal_time">3 3 5</table>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="90"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11032"/>
+		<table name="#power">126 130 140 146</table>
+		<table name="#mpConsume2">61 63 65</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="800"/>
+		<set name="levelModifier" value="1"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="saveVs" value="CON"/>
+		<set name="target" value="TARGET_AURA"/>
+	</skill>
+    <!--
+		Damaged Area - Momentarily incurs damage. All speeds are decreased.
+
+	-->
+    <skill id="11143" levels="3" name="Damaged Area">
+		<table name="#abnormal_time">3 3 5</table>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11032"/>
+		<table name="#power">126 130 140 146</table>
+		<table name="#mpConsume2">61 63 65</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="800"/>
+		<set name="levelModifier" value="1"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="saveVs" value="CON"/>
+		<set name="target" value="TARGET_AURA"/>
+	</skill>
+    <!--
+		Dark Curse - For 10 sec., decreases target's M. Def. by 50% and Attribute Resistance by 50.
+
+	-->
+    <skill id="11150" levels="1" name="Dark Curse">
+		<set name="icon" value="icon.skill11867"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="99"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="activateRate" value="60"/>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="mDef" value="0.5"/>
+				<sub order="0x40" stat="defenceWater" value="50"/>
+				<sub order="0x40" stat="defenceFire" value="50"/>
+				<sub order="0x40" stat="defenceWind" value="50"/>
+				<sub order="0x40" stat="defenceEarth" value="50"/>
+				<sub order="0x40" stat="defenceHoly" value="50"/>
+				<sub order="0x40" stat="defenceUnholy" value="50"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Superior Wizardry - M. Atk., Max MP, and MP Recovery Rate + 5%.
+
+		LvL.1	description: , Max MP, and MP Recovery Rate + 5%.
+		LvL.2	description: , Max MP, and MP Recovery Rate + 6%.
+		LvL.3	description: , Max MP, and MP Recovery Rate + 7%.
+		LvL.4	description: , Max MP, and MP Recovery Rate + 10%.
+	-->
+    <skill id="11151" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#attr1">1.05 1.06 1.07 1.1</table>
+		<table name="#attr2">1.05 1.06 1.07 1.1</table>
+		<table name="#attr3">1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#attr1"/>
+			<mul order="0x30" stat="maxMp" value="#attr2"/>
+			<mul order="0x30" stat="regMp" value="#attr3"/>
+		</for>
+	</skill>
+    <!--
+		Sacrificial Soul - Sacrifice your servitor to become immune to debuffs for 3 sec.
+
+	-->
+    <skill id="11152" levels="1" name="Sacrificial Soul">
+		<set name="icon" value="icon.skill1395"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Shadow Snare Zone - Pulls nearby enemies to the center.
+
+	-->
+    <skill id="11174" levels="1" name="Shadow Snare Zone">
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1469"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="activateRate" value="100"/>
+		<set name="skillRadius" value="280"/>
+		<for>
+			<effect name="ThrowHorizontal"/>
+		</for>
+	</skill>
+    <!--
+		Shadow Snare Zone - Pulls nearby enemies to the center.
+
+	-->
+    <skill id="11175" levels="1" name="Shadow Snare Zone">
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1469"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="activateRate" value="100"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="skillRadius" value="280"/>
+		<for>
+			<effect name="ThrowHorizontal"/>
+		</for>
+	</skill>
+    <!--
+		Superior Wizardry - M. Skill cooldown - 5%.
+
+		LvL.1	description: M Skill cooldown - 5%.
+		LvL.2	description: M Skill cooldown - 6%.
+		LvL.3	description: M Skill cooldown - 7%.
+		LvL.4	description: M Skill cooldown - 10%.
+	-->
+    <skill id="11176" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#reuse">0.95 0.94 0.93 0.9</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mReuse" value="#reuse"/>
+			<mul order="0x30" stat="pReuse" value="#reuse"/>
+		</for>
+	</skill>
+    <!--
+		Aqua Crash - Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 s
+
+		LvL.1	description: Inflicts damage with 193 Power to target.
+		LvL.2	description: Inflicts damage with 195 Power to target.
+		LvL.3	description: Inflicts damage with 197Power to target. Instead, there is a chance target will be frozen for 3 se
+		LvL.4	description: Inflicts damage with 1939Power to target.
+	-->
+    <skill id="11177" levels="4" name="Aqua Crash">
+		<set name="icon" value="icon.skill10879"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Aqua Crash - Speed Decrease - Use Aqua Crash to decrease target's Speed.
+
+	-->
+    <skill id="11178" levels="1" name="Aqua Crash - Speed Decrease">
+		<set name="icon" value="icon.skill11011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Yoke Status - Momentarily immobilized midair.
+
+	-->
+    <skill id="11179" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="89"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+    <!--
+		Yoke Status - Momentarily immobilized midair.
+
+	-->
+    <skill id="11180" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="93"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+    <!--
+		Yoke Status - Momentarily immobilized midair.
+
+	-->
+    <skill id="11181" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+    <!--
+		Yoke Status - Momentarily immobilized midair.
+
+	-->
+    <skill id="11182" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+    <!--
+		Superior Quick Recovery - INT + 2 and Cooldown - 25% for magic skills.
+
+	-->
+    <skill id="11183" levels="1" name="Superior Quick Recovery">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill11004"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="analog_skills" value="164"/>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<mul order="0x30" stat="mReuse" value="0.75"/>
+			<mul order="0x30" stat="pReuse" value="0.75"/>
+		</for>
+	</skill>
+    <!--
+		Superior Arcane Lore - INT + 2 and increases Fire/Water/Wind/Earth Resistance by 20 and M. Def. by 5%.
+
+	-->
+    <skill id="11184" levels="1" name="Superior Arcane Lore">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10044"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="analog_skills" value="481;1442;433"/>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="defenceFire" value="20"/>
+			<add order="0x40" stat="defenceWater" value="20"/>
+			<add order="0x40" stat="defenceWind" value="20"/>
+			<add order="0x40" stat="defenceEarth" value="20"/>
+			<mul order="0x30" stat="mDef" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Superior MP Boost - INT + 2 and increases Max MP by 313.
+
+
+		Enchant Route: 1 - 	INT + 2 and increases Max MP by 333. Enchant Power: Increases the effect.
+
+		LvL.101	description: INT + 2 and increases Max MP by 333. Enchant Power: Increases the effect.
+		LvL.102	description: INT + 2 and increases Max MP by 354. Enchant Power: Increases the effect.
+		LvL.103	description: INT + 2 and increases Max MP by 374. Enchant Power: Increases the effect.
+		LvL.104	description: INT + 2 and increases Max MP by 395. Enchant Power: Increases the effect.
+		LvL.105	description: INT + 2 and increases Max MP by 415. Enchant Power: Increases the effect.
+		LvL.106	description: INT + 2 and increases Max MP by 435. Enchant Power: Increases the effect.
+		LvL.107	description: INT + 2 and increases Max MP by 456. Enchant Power: Increases the effect.
+		LvL.108	description: INT + 2 and increases Max MP by 476. Enchant Power: Increases the effect.
+		LvL.109	description: INT + 2 and increases Max MP by 497. Enchant Power: Increases the effect.
+		LvL.110	description: INT + 2 and increases Max MP by 517. Enchant Power: Increases the effect.
+	-->
+    <skill id="11185" levels="1" name="Superior MP Boost">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0213"/>
+		<table name="#maxMp">313</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="analog_skills" value="1565;213"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#maxMp">333 354 374 395 415 435 456 476 497 517</table>
+		</enchant>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="maxMp" value="#maxMp"/>
+		</for>
+	</skill>
+    <!--
+		Superior Fast MP Recovery - INT + 2 and increases MP Recovery Bonus by 3.6.
+
+
+		Enchant Route: 1 - 	INT + 2 and increases MP Recovery Bonus by 3.8. Enchant Power: Increases the effect.
+
+		LvL.101	description: INT + 2 and increases MP Recovery Bonus by 3.8. Enchant Power: Increases the effect.
+		LvL.102	description: INT + 2 and increases MP Recovery Bonus by 4. Enchant Power: Increases the effect.
+		LvL.103	description: INT + 2 and increases MP Recovery Bonus by 4.2. Enchant Power: Increases the effect.
+		LvL.104	description: INT + 2 and increases MP Recovery Bonus by 4.4. Enchant Power: Increases the effect.
+		LvL.105	description: INT + 2 and increases MP Recovery Bonus by 4.7. Enchant Power: Increases the effect.
+		LvL.106	description: INT + 2 and increases MP Recovery Bonus by 4.9. Enchant Power: Increases the effect.
+		LvL.107	description: INT + 2 and increases MP Recovery Bonus by 5.1. Enchant Power: Increases the effect.
+		LvL.108	description: INT + 2 and increases MP Recovery Bonus by 5.3. Enchant Power: Increases the effect.
+		LvL.109	description: INT + 2 and increases MP Recovery Bonus by 5.5. Enchant Power: Increases the effect.
+		LvL.110	description: INT + 2 and increases MP Recovery Bonus by 5.7. Enchant Power: Increases the effect.
+	-->
+    <skill id="11186" levels="1" name="Superior Fast MP Recovery">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0229"/>
+		<table name="#regMp">3.6</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="analog_skills" value="229"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#regMp">3.8 4 4.2 4.4 4.7 4.9 5.1 5.3 5.5 5.7</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="regMp" value="#regMp"/>
+		</for>
+	</skill>
+    <!--
+		Superior Clear Mind - INT + 2, increases MP Recovery Bonus by 5.1 while standing and by 6.5 while walking.
+
+
+		Enchant Route: 1 - 	INT + 2, increases MP Recovery Bonus by 5.4 while standing and by 6.9 while walking. Enchant Power: Increases the effect.
+
+		LvL.101	description: 4 while standing and by 6.9 while walking.
+		LvL.102	description: 7 while standing and by 7.3 while walking.
+		LvL.103	description: INT + 2, increases MP Recovery Bonus by 6 while standing and by 7.7 while walking.
+		LvL.104	description: INT + 2, increases MP Recovery Bonus by 6.3 while standing and by 8.1 while walking.
+		LvL.105	description: INT + 2, increases MP Recovery Bonus by 6.7 while standing and by 8.5 while walking.
+		LvL.106	description: INT + 2, increases MP Recovery Bonus by 7 while standing and by 8.9 while walking. Enchant Power: Increases the effect.
+		LvL.107	description: INT + 2, increases MP Recovery Bonus by 7.3 while standing and by 9.3 while walking.
+		LvL.108	description: INT + 2, increases MP Recovery Bonus by 7.6 while standing and by 9.7 while walking.
+		LvL.109	description: INT + 2, increases MP Recovery Bonus by 7.9 while standing and by 10.1 while walking.
+		LvL.110	description: INT + 2, increases MP Recovery Bonus by 8.2 while standing and by 10.5 while walking.
+	-->
+    <skill id="11187" levels="1" name="Superior Clear Mind">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill11187"/>
+		<table name="#regMp">5.1</table>
+		<table name="#regMp2">6.5</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="analog_skills" value="1297"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#regMp">6.1 7.1 8.1 9.1 10.1 11.1 12.1 13.1 14.1 15.1</table>
+			<table name="#regMp2">7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="regMp" value="#regMp">
+				<player resting="true"/>
+			</add>
+			<add order="0x40" stat="regMp" value="#regMp2">
+				<player running="true"/>
+			</add>
+		</for>
+	</skill>
+    <!--
+		Frozen - The cold is creeping up from your feet.
+
+		LvL.1	description: The cold is creeping up from your feet.
+		LvL.5	description: Frozen.
+	-->
+    <skill id="11188" levels="5" name="Frozen">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Aqua Crash - Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 s
+
+		LvL.1	description: Inflicts damage with 193 Power to target.
+		LvL.2	description: Inflicts damage with 195 Power to target.
+		LvL.3	description: Inflicts damage with 197Power to target. Instead, there is a chance target will be frozen for 3 se
+		LvL.4	description: Inflicts damage with 1939Power to target.
+	-->
+    <skill id="11189" levels="4" name="Aqua Crash">
+		<set name="icon" value="icon.skill10879"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Destruction: Fire - Fire Attribute
+
+	-->
+    <skill id="11190" levels="1" name="Elemental Destruction: Fire">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Destruction: Water - Water Attribute
+
+	-->
+    <skill id="11191" levels="1" name="Elemental Destruction: Water">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Destruction: Wind - Wind Attribute
+
+	-->
+    <skill id="11192" levels="1" name="Elemental Destruction: Wind">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Destruction: Earth - Earth Attribute
+
+	-->
+    <skill id="11193" levels="1" name="Elemental Destruction: Earth">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Destruction: Double Casting - 4 Elements
+
+	-->
+    <skill id="11194" levels="1" name="Elemental Destruction: Double Casting">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Aqua Crash - Freeze - Use Aqua Crash to freeze target.
+
+	-->
+    <skill id="11195" levels="1" name="Aqua Crash - Freeze">
+		<set name="icon" value="icon.skill11011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Frozen - Frozen.
+
+	-->
+    <skill id="11196" levels="1" name="Frozen">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Elemental Destruction: Fire - Fire Attribute
+
+	-->
+    <skill id="11199" levels="1" name="Elemental Destruction: Fire">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

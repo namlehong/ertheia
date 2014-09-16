@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Hydro Attack: Debuff - Stacks Storm Marks when using Hydro Attack.
+
+	-->
+    <skill id="30000" levels="1" name="Hydro Attack: Debuff">
+		<set name="icon" value="icon.skill11011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hydro Attack - Attacks target with 6 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon.
+
+		LvL.1	description: Attacks target with 6 Power added to M Atk. 10% more damage if target is debuffed.	mp_consume: 3
+		LvL.2	description: Attacks target with 14 Power added to M Atk.	mp_consume: 8
+		LvL.3	description: Attacks target with 19 Power added to M Atk.	mp_consume: 10
+		LvL.4	description: Attacks target with 25 Power added to M Atk.	mp_consume: 13
+		LvL.5	description: Attacks target with 32 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 16
+		LvL.6	description: Attacks target with 36 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 18
+		LvL.7	description: Attacks target with 41 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 20
+		LvL.8	description: Attacks target with 46 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 21
+		LvL.9	description: Attacks target with 50 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 23
+		LvL.10	description: Attacks target with 55 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 25
+		LvL.11	description: Attacks target with 60 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 27
+		LvL.12	description: Attacks target with 64 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 29
+		LvL.13	description: Attacks target with 69 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 30
+		LvL.14	description: Attacks target with 72 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 31
+		LvL.15	description: Attacks target with 75 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 32
+		LvL.16	description: Attacks target with 77 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 32
+		LvL.17	description: Attacks target with 79 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 33
+		LvL.18	description: Attacks target with 171 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 33
+		LvL.19	description: Attacks target with 179 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 33
+		LvL.20	description: Attacks target with 187 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 34
+		LvL.21	description: Attacks target with 195 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 34
+		LvL.22	description: Attacks target with 203 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 34
+		LvL.23	description: Attacks target with 211 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 34
+		LvL.24	description: Attacks target with 219 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 34
+		LvL.25	description: Attacks target with 227 Power added to M Atk., and brands target with Storm Sign. 10% more damage if target is debuffed.	mp_consume: 35
+	-->
+    <skill id="30001" levels="25" name="Hydro Attack">
+		<table name="#mpConsume1">1 2 2 3 4 4 5 5 5 6 6 7 7 7 8 8 8 8 8 8 8 8 8 8 8</table>
+		<table name="#mpConsume2">2 6 8 8 12 14 15 16 18 19 21 22 23 24 24 24 25 25 25 26 26 26 26 26 27</table>
+		<table name="#magicLevel">1 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99</table>
+		<table name="#power">6 14 19 25 32 36 41 46 50 55 60 64 69 72 75 77 79 171 179 187 195 203 211 219 227</table>
+		<table name="#effectPoint">60 140 190 250 320 360 410 460 500 550 600 640 690 720 750 770 790 1710 1790 1870 1950 2030 2110 2190 2270</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="icon" value="icon.skill30001"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<triggers>
+			<trigger id="30002" level="1" type="ON_SUCCES_FINISH_CAST" chance="25" increasing="true"/>
+		</triggers>
+		<!--TODO: Наносимый урон +10, если на противника наложен отрицательный эффект.-->
+	</skill>
+    <!--
+		Storm Sign - M. Def. - 30%, Speed - 70.
+
+	-->
+    <skill id="30002" levels="3" name="Storm Sign">
+		<table name="#abnormal_level">1 2 3</table>
+		<table name="#abnormal_effect">NONE NONE STIGMA_STORM</table>
+		<set name="castRange" value="1100"/>
+		<set name="abnormal_effect" value="#abnormal_effect"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="stigma_storm"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill30027"/>
+		<!--<set name="activateRate" value="40"/>-->
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mDef" value="0.7"/>
+				<sub order="0x40" stat="runSpd" value="70"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Hydro Flare - Eliminates Storm Sign and attacks target with 110 Power added to M. Atk. 10% more damage if target is debuffed. Storm Sign Stage 3 only. Requires a sword or blunt weapon.
+
+		LvL.1	description: Eliminates Storm Sign and attacks target with 110 Power added to M Atk. Requires a sword or blunt weapon.	mp_consume: 47
+		LvL.2	description: Eliminates Storm Sign and attacks target with 120 Power added to M Atk.	mp_consume: 51
+		LvL.3	description: Eliminates Storm Sign and attacks target with 130 Power added to M Atk.	mp_consume: 54
+		LvL.4	description: Eliminates Storm Sign and attacks target with 140 Power added to M Atk.	mp_consume: 58
+		LvL.5	description: Eliminates Storm Sign and attacks target with 150 Power added to M Atk.	mp_consume: 60
+		LvL.6	description: Eliminates Storm Sign and attacks target with 157 Power added to M Atk.	mp_consume: 62
+		LvL.7	description: Eliminates Storm Sign and attacks target with 162 Power added to M Atk.	mp_consume: 64
+		LvL.8	description: Eliminates Storm Sign and attacks target with 167 Power added to M Atk.	mp_consume: 65
+		LvL.9	description: Eliminates Storm Sign and attacks target with 172 Power added to M Atk.	mp_consume: 66
+		LvL.10	description: Eliminates Storm Sign and attacks target with 501 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 67
+		LvL.11	description: Eliminates Storm Sign and attacks target with 515 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 67
+		LvL.12	description: Eliminates Storm Sign and attacks target with 543 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 68
+		LvL.13	description: Eliminates Storm Sign and attacks target with 571 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 68
+		LvL.14	description: Eliminates Storm Sign and attacks target with 599 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 68
+		LvL.15	description: Eliminates Storm Sign and attacks target with 627 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 69
+		LvL.16	description: Eliminates Storm Sign and attacks target with 655 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 69
+		LvL.17	description: Eliminates Storm Sign and attacks target with 683 Power added to M Atk. Has a chance of branding Storm Sign Stage 4, which allows free use of Hydro Flare. Requires a sword or blunt weapon.	mp_consume: 70
+	-->
+    <skill id="30003" levels="17" name="Hydro Flare">
+	<!--TODO: С определенной вероятностью может наложить Клеймо Шторма Ур. 4, при этом персонажу можно будет использовать Факел.-->
+		<table name="#mpConsume1">11 12 13 14 15 15 16 16 16 16 16 17 17 17 17 17 17</table>
+		<table name="#mpConsume2">36 39 41 44 45 47 48 49 50 51 51 51 51 51 52 52 53</table>
+		<table name="#magicLevel">58 62 66 70 74 77 79 81 83 85 86 88 90 92 94 96 98</table>
+		<table name="#power">110 120 130 140 150 157 162 167 172 501 515 543 571 599 627 655 683</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="4000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="icon" value="icon.skill30003"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Sword, Blunt, Big Blunt"/>
+				<target hasBuffId="30002;3"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="stigma_storm"/>
+				<def name="max_abnormal_level" value="3"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Hydro Strike - Attacks target with 57 Power added to M. Atk., and knocks out target in a windy trap for 5 sec. Must be blended into wind. Requires a sword or blunt weapon.
+
+		LvL.1	description: Attacks target with 57 Power added to M Atk.	mp_consume: 31
+		LvL.2	description: Attacks target with 66 Power added to M Atk.	mp_consume: 34
+		LvL.3	description: Attacks target with 74 Power added to M Atk.	mp_consume: 38
+		LvL.4	description: Attacks target with 83 Power added to M Atk.	mp_consume: 41
+		LvL.5	description: Attacks target with 92 Power added to M Atk.	mp_consume: 45
+		LvL.6	description: Attacks target with 101 Power added to M Atk.	mp_consume: 49
+		LvL.7	description: Attacks target with 110 Power added to M Atk.	mp_consume: 53
+		LvL.8	description: Attacks target with 118 Power added to M Atk.	mp_consume: 56
+		LvL.9	description: Attacks target with 127 Power added to M Atk.	mp_consume: 59
+		LvL.10	description: Attacks target with 136 Power added to M Atk.	mp_consume: 62
+		LvL.11	description: Attacks target with 140 Power added to M Atk.	mp_consume: 63
+		LvL.12	description: Attacks target with 145 Power added to M Atk.	mp_consume: 64
+		LvL.13	description: Attacks target with 149 Power added to M Atk.	mp_consume: 65
+		LvL.14	description: Attacks target with 154 Power added to M Atk.	mp_consume: 66
+		LvL.15	description: Attacks target with 420 Power added to M Atk.	mp_consume: 67
+		LvL.16	description: Attacks target with 442 Power added to M Atk.	mp_consume: 67
+		LvL.17	description: Attacks target with 464 Power added to M Atk.	mp_consume: 68
+		LvL.18	description: Attacks target with 486 Power added to M Atk.	mp_consume: 68
+		LvL.19	description: Attacks target with 508 Power added to M Atk.	mp_consume: 69
+		LvL.20	description: Attacks target with 530 Power added to M Atk.	mp_consume: 69
+		LvL.21	description: Attacks target with 552 Power added to M Atk.	mp_consume: 69
+		LvL.22	description: Attacks target with 574 Power added to M Atk.	mp_consume: 70
+	-->
+    <skill id="30004" levels="22" name="Hydro Strike">
+		<table name="#mpConsume1">7 8 9 10 11 12 13 14 14 15 15 16 16 16 16 16 17 17 17 17 17 17</table>
+		<table name="#mpConsume2">24 26 29 31 34 37 40 42 45 47 48 48 49 50 51 51 51 51 52 52 52 53</table>
+		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 76 78 80 82 84 85 87 89 91 93 95 97 98</table>
+		<table name="#power">57 66 74 83 92 101 110 118 127 136 140 145 149 154 420 442 464 486 508 530 552 574</table>
+		<table name="#effectPoint">250 320 360 410 460 500 550 600 640 690 720 750 770 790 1710 1790 1870 1950 2030 2110 2190 2270</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="3000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="activateRate" value="40"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="icon" value="icon.skill30004"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="trait" value="AIRJOKE"/>
+		<set name="saveVs" value="MEN"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Sword, Blunt, Big Blunt"/>
+				<player hasBuffId="30008"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="FlyUp"/>
+		</for>
+	</skill>
+    <!--
+		Storm Sign - M. Def. - 50%, Speed - 100.
+
+	-->
+    <skill id="30005" levels="4" name="Storm Sign">
+		<set name="icon" value="icon.skill30027"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Storm Rage - Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon.
+
+		LvL.1	description: Attacks target with 255 Power added to M Atk.	mp_consume: 134
+		LvL.2	description: Attacks target with 269 Power added to M Atk.	mp_consume: 135
+		LvL.3	description: Attacks target with 283 Power added to M Atk.	mp_consume: 136
+		LvL.4	description: Attacks target with 297 Power added to M Atk.	mp_consume: 137
+		LvL.5	description: Attacks target with 311 Power added to M Atk.	mp_consume: 138
+		LvL.6	description: Attacks target with 325 Power added to M Atk.	mp_consume: 138
+		LvL.7	description: Attacks target with 339 Power added to M Atk.	mp_consume: 139
+		LvL.8	description: Attacks target with 353 Power added to M Atk.	mp_consume: 141
+	-->
+    <skill id="30006" levels="8" name="Storm Rage">
+		<table name="#mpConsume1">33 33 34 34 34 34 34 35</table>
+		<table name="#mpConsume2">101 102 102 103 104 104 105 106</table>
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#power">255 269 283 297 311 325 339 353</table>
+		<table name="#effectPoint">1710 1790 1870 1950 2030 2110 2190 2270</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1799"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="activateRate" value="75"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="icon" value="icon.skill30006"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="trait" value="AIRJOKE"/>
+		<set name="saveVs" value="MEN"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect name="FlyUp"/>
+			<!--TODO: Наносимый урон +10, если на противника наложен отрицательный эффект.-->
+		</for>
+	</skill>
+    <!--
+		Hydro Drain - Eliminates Storm Sign and attacks target with 123 Power added to M. atk. and recovers 10% HP and 5% MP. Over-hit. Storm Sign Stage 3 only. Requires a sword or blunt weapon.
+
+		LvL.1	description: Eliminates Storm Sign and attacks target with 123 Power added to M atk.	mp_consume: 63
+		LvL.2	description: Eliminates Storm Sign and attacks target with 127 Power added to M atk.	mp_consume: 64
+		LvL.3	description: Eliminates Storm Sign and attacks target with 130 Power added to M atk.	mp_consume: 65
+		LvL.4	description: Eliminates Storm Sign and attacks target with 134 Power added to M atk.	mp_consume: 66
+		LvL.5	description: Eliminates Storm Sign and attacks target with 386 Power added to M atk.	mp_consume: 67
+		LvL.6	description: Eliminates Storm Sign and attacks target with 396 Power added to M atk.	mp_consume: 67
+		LvL.7	description: Eliminates Storm Sign and attacks target with 416 Power added to M atk.	mp_consume: 68
+		LvL.8	description: Eliminates Storm Sign and attacks target with 436 Power added to M atk.	mp_consume: 68
+		LvL.9	description: Eliminates Storm Sign and attacks target with 456 Power added to M atk.	mp_consume: 68
+		LvL.10	description: Eliminates Storm Sign and attacks target with 476 Power added to M atk.	mp_consume: 69
+		LvL.11	description: Eliminates Storm Sign and attacks target with 496 Power added to M atk.	mp_consume: 69
+		LvL.12	description: Eliminates Storm Sign and attacks target with 516 Power added to M atk.	mp_consume: 70
+	-->
+    <skill id="30007" levels="12" name="Hydro Drain">
+		<table name="#mpConsume1">15 16 16 16 16 16 17 17 17 17 17 17</table>
+		<table name="#mpConsume2">48 48 49 50 51 51 51 51 51 52 52 53</table>
+		<table name="#magicLevel">78 80 82 84 85 86 88 90 92 94 96 98</table>
+		<table name="#power">123 127 130 134 386 396 416 436 456 476 496 516</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="4000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="icon" value="icon.skill30007"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Sword, Blunt, Big Blunt"/>
+				<target hasBuffId="30002;3"/>
+			</and>
+		</cond>
+		<for>
+			<self_effect name="HealPercent" value="10"/>
+			<self_effect name="ManaHealPercent" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Wind Blend - for 10 sec., blends into the wind and Speed + 70. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon.
+
+		LvL.1	description: , blends into the wind and Speed + 70.	reuse_delay: 50	mp_consume: 16
+		LvL.2	description: , blends into the wind and Speed + 100.	mp_consume: 67
+		LvL.3	description: , blends into the wind and Speed + 100.	reuse_delay: 40	mp_consume: 68
+		LvL.4	description: , blends into the wind and Speed + 100.	reuse_delay: 30	mp_consume: 69
+		LvL.5	description: , blends into the wind and Speed + 100.	reuse_delay: 25	mp_consume: 70
+	-->
+    <skill id="30008" levels="5" name="Wind Blend">
+		<table name="#normalBuff">1 1 0 0 0</table>
+		<table name="#invisibleBuff">0 0 1 1 1</table>
+		<table name="#runSpd">70 100 100 100 100</table>
+		<table name="#effectPoint">113 356 485 650 761</table>
+		<table name="#mpConsume1">4 16 17 17 17</table>
+		<table name="#mpConsume2">12 51 51 52 53</table>
+		<table name="#abnormal_level">1 2 3 4 5</table>
+		<table name="#reuseDelay">50000 50000 40000 30000 25000</table>
+		<table name="#magicLevel">20 85 90 95 99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="abnormal_effect" value="GREEN_SPEED_UP"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="icon" value="icon.skill30008"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect count="#normalBuff">
+				<add order="0x40" stat="runSpd" value="#runSpd"/>
+			</effect>
+			<effect count="#invisibleBuff" name="Invisible" cancelOnAction="true">
+				<add order="0x40" stat="runSpd" value="#runSpd"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Deceptive Blink - For 5 sec., blends into the wind and teleports backward, and Speed + 100. Requires a sword or blunt weapon.
+
+		LvL.1	mp_consume: 77
+		LvL.2	mp_consume: 78
+		LvL.3	mp_consume: 79
+		LvL.4	mp_consume: 80
+		LvL.5	mp_consume: 81
+		LvL.6	mp_consume: 82
+		LvL.7	mp_consume: 82
+		LvL.8	mp_consume: 83
+		LvL.9	mp_consume: 83
+		LvL.10	mp_consume: 84
+	-->
+    <skill id="30009" levels="10" name="Deceptive Blink">
+		<table name="#mpConsume1">19 19 19 20 20 20 20 20 20 21</table>
+		<table name="#mpConsume2">58 59 60 60 61 62 62 63 63 63</table>
+		<table name="#magicLevel">80 82 82 86 88 90 92 94 96 98</table>
+		<table name="#effectPoint">1540 1670 1710 1790 1870 1950 2030 2110 2190 2270</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="icon" value="icon.skill30009"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="fly_type" value="DUMMY"/>
+		<set name="fly_radius" value="-600"/>	<!--TODO: Check.-->
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="runSpd" value="100"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Windy Refuge - Cancels all debuffs and recovers HP/MP for 10 sec. inside a refuge of wind. Cannot move.
+
+	-->
+    <skill id="30010" levels="1" name="Windy Refuge">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="WIND_PROTECTION"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="reuseDelay" value="180000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="30"/>
+		<set name="magicLevel" value="88"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="effectPoint" value="787"/>
+		<set name="icon" value="icon.skill30010"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="-1"/>
+			</effect>
+			<effect count="10" name="HealOverTime" time="1" value="333"/>	<!--TODO: Check.-->
+			<effect count="10" name="ManaHealOverTime" time="1" value="111"/>	<!--TODO: Check.-->
+			<effect name="Immobilize"/>
+		</for>
+	</skill>
+    <!--
+		Threatening Wind - Sends a slashing wind to brand target with Storm Sign Stage 3. Requires a sword or blunt Weapon.
+
+		LvL.1	mp_consume: 31
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 32
+		LvL.5	mp_consume: 33
+		LvL.6	mp_consume: 33
+		LvL.7	mp_consume: 34
+		LvL.8	mp_consume: 34
+		LvL.9	mp_consume: 34
+		LvL.10	mp_consume: 34
+		LvL.11	mp_consume: 34
+		LvL.12	mp_consume: 35
+	-->
+    <skill id="30011" levels="12" name="Threatening Wind">
+		<table name="#mpConsume1">7 7 8 8 8 8 8 8 8 8 8 8</table>
+		<table name="#mpConsume2">24 24 24 24 25 25 26 26 26 26 26 27</table>
+		<table name="#magicLevel">76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<table name="#triggerChance">76 78 80 82 84 86 88 90 92 94 96 98</table>	<!--TODO: Check.-->
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1200"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30011"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill30027"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<triggers>
+			<trigger id="30002" level="3" type="ON_SUCCES_FINISH_CAST" chance="#triggerChance"/>
+		</triggers>
+	</skill>
+    <!--
+		Air Rush - Knocks down target and attacks with 57 Power added to M. Atk. 10% more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon.
+
+		LvL.1	description: Knocks down target and attacks with 57 Power added to M Atk.	mp_consume: 31
+		LvL.2	description: Knocks down target and attacks with 66 Power added to M Atk.	mp_consume: 34
+		LvL.3	description: Knocks down target and attacks with 74 Power added to M Atk.	mp_consume: 38
+		LvL.4	description: Knocks down target and attacks with 83 Power added to M Atk.	mp_consume: 41
+		LvL.5	description: Knocks down target and attacks with 92 Power added to M Atk.	mp_consume: 45
+		LvL.6	description: Knocks down target and attacks with 101 Power added to M Atk.	mp_consume: 49
+		LvL.7	description: Knocks down target and attacks with 110 Power added to M Atk.	mp_consume: 53
+		LvL.8	description: Knocks down target and attacks with 118 Power added to M Atk.	mp_consume: 56
+		LvL.9	description: Knocks down target and attacks with 127 Power added to M Atk.	mp_consume: 59
+		LvL.10	description: Knocks down target and attacks with 136 Power added to M Atk.	mp_consume: 62
+		LvL.11	description: Knocks down target and attacks with 141 Power added to M Atk.	mp_consume: 63
+		LvL.12	description: Knocks down target and attacks with 145 Power added to M Atk.	mp_consume: 64
+		LvL.13	description: Knocks down target and attacks with 150 Power added to M Atk.	mp_consume: 65
+		LvL.14	description: Knocks down target and attacks with 154 Power added to M Atk.	mp_consume: 66
+		LvL.15	description: Knocks down target and attacks with 376 Power added to M Atk.	mp_consume: 67
+		LvL.16	description: Knocks down target and attacks with 397 Power added to M Atk.	mp_consume: 67
+		LvL.17	description: Knocks down target and attacks with 418 Power added to M Atk.	mp_consume: 68
+		LvL.18	description: Knocks down target and attacks with 438 Power added to M Atk.	mp_consume: 68
+		LvL.19	description: Knocks down target and attacks with 459 Power added to M Atk.	mp_consume: 69
+		LvL.20	description: Knocks down target and attacks with 480 Power added to M Atk.	mp_consume: 69
+		LvL.21	description: Knocks down target and attacks with 501 Power added to M Atk.	mp_consume: 69
+		LvL.22	description: Knocks down target and attacks with 522 Power added to M Atk.	mp_consume: 70
+	-->
+    <skill id="30012" levels="22" name="Air Rush">
+		<table name="#mpConsume1">7 8 9 10 11 12 13 14 14 15 15 16 16 16 16 16 17 17 17 17 17 17</table>
+		<table name="#mpConsume2">24 26 29 31 34 37 40 42 45 47 48 48 49 50 51 51 51 51 52 52 52 53</table>
+		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 76 78 80 82 84 85 87 89 91 93 95 97 99</table>
+		<table name="#power">57 66 74 83 92 101 110 118 127 136 141 145 150 154 376 397 418 438 459 480 501 522</table>
+		<table name="#effectPoint">250 320 360 410 460 500 550 600 640 690 720 750 770 790 1710 1790 1870 1950 2030 2110 2190 2270</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="85"/>
+		<set name="icon" value="icon.skill30012"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="KNOCKDOWN"/>   
+		<set name="saveVs" value="MEN"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="fly_radius" value="900"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Sword, Blunt, Big Blunt"/>
+				<target min_distance="200"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="KnockDown">
+				<def name="fly_radius" value="80"/>
+			</effect>
+		</for>
+		<!--TODO: Наносимый урон +10, если на противника наложен отрицательный эффект. Если на цель наложенно Клеймо Шторма, снимает его и наносит дополнительный урон.-->
+	</skill>
+    <!--
+		Switch Places - Trades places with target. Requires a sword or blunt weapon. PC targets only.
+
+	-->
+    <skill id="30013" levels="1" name="Switch Places">
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="300"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1200"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="176"/>
+		<set name="mpConsume2" value="529"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill30005"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="REPLACE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isPvpSkill" value="true"/>
+		<set name="isOffensive" value="true"/>
+		<set name="face-to-face" value="true"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Sword, Blunt, Big Blunt"/>
+				<target type="PLAYER"/>
+			</and>
+		</cond>
+	</skill>
+    <!--
+		Compelling Wind - Sends a breeze that pushes target toward you. Requires a sword / blunt weapon.
+
+		LvL.1	mp_consume: 31
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 32
+		LvL.5	mp_consume: 33
+		LvL.6	mp_consume: 33
+		LvL.7	mp_consume: 34
+		LvL.8	mp_consume: 34
+		LvL.9	mp_consume: 34
+		LvL.10	mp_consume: 34
+		LvL.11	mp_consume: 34
+		LvL.12	mp_consume: 35
+	-->
+    <skill id="30014" levels="12" name="Compelling Wind">
+		<table name="#mpConsume1">7 7 8 8 8 8 8 8 8 8 8 8</table>
+		<table name="#mpConsume2">24 24 24 24 25 25 26 26 26 26 26 27</table>
+		<table name="#activateRate">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#magicLevel">76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<table name="#effectPoint">720 750 770 790 1710 1790 1870 1950 2030 2110 2190 2270</table>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="1200"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_effect" value="LOVE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>	<!--TODO: Check.-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="#activateRate"/>	<!--TODO: Check.-->
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="icon" value="icon.skill30014"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect name="MoveToEffector"/>
+		</for>
+	</skill>
+    <!--
+		Mass Compelling Wind - Sends a breeze that pushes target and nearby enemies toward you.
+
+	-->
+    <skill id="30015" levels="1" name="Mass Compelling Wind">
+		<set name="icon" value="icon.skill0028"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eye of the Storm - For 30 sec., M. Critical Rate + 100%, P./M. Def. + 30%.
+
+		LvL.1	description: + 30%.	mp_consume: 18
+		LvL.2	description: + 30%, and M Skill MP Consumption - 50%.	mp_consume: 37
+		LvL.3	description: + 30%, Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90, and M Skill MP Consumption - 50%.	mp_consume: 40
+	-->
+    <skill id="30016" levels="3" name="Eye of the Storm">
+		<table name="#mpConsum">1 0.5 0.5</table>
+		<table name="#resist">0 0 90</table>
+		<table name="#effectPoint">113 485 761</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<table name="#magicLevel">40 76 85</table>
+		<table name="#mpConsume1">4 9 10</table>
+		<table name="#mpConsume2">14 28 30</table>
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="icon" value="icon.skill30016"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="baseMCritRate" value="100"/>
+				<mul order="0x30" stat="pDef" value="1.3"/>
+				<mul order="0x30" stat="mDef" value="1.3"/>
+				<mul order="0x30" stat="mpConsum" value="#mpConsum"/>
+				<add order="0x40" stat="knockDownResist" value="#resist"/>
+				<add order="0x40" stat="knockBackResist" value="#resist"/>
+				<add order="0x40" stat="pullResist" value="#resist"/>
+				<add order="0x40" stat="airjokeResist" value="#resist"/>
+				<!--TODO: Сопротивление агрессии +90.-->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Squall - For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning.
+
+		LvL.1	description: For 10 min.	mp_consume: 18
+		LvL.2	description: Speed + 7.	mp_consume: 37
+		LvL.3	description: Removes all debuffs, and for 10 min. Speed + 7.	mp_consume: 40
+	-->
+    <skill id="30017" levels="3" name="Squall">
+		<table name="#mpConsume1">4 9 10</table>
+		<table name="#mpConsume2">14 28 30</table>
+		<table name="#magicLevel">40 76 85</table>
+		<table name="#effectPoint">113 485 761</table>
+		<table name="#dispel">0 0 1</table>
+		<table name="#runSpd">0 7 7</table>
+		<table name="#triggerLevel">1 2 3</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="PERFECT_STORM"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="30"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="icon" value="icon.skill30017"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="critDamRcpt" value="1.15"/>
+				<add order="0x80" stat="runSpd" value="#runSpd"/>
+				<triggers>
+					<trigger id="30026" level="#triggerLevel" type="RECEIVE_DAMAGE" chance="25">
+						<player damage="10;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+			<effect count="#dispel" name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Windy Illusion - Removes all debuffs and becomes invincible against targeting for 10 sec.
+
+	-->
+    <skill id="30018" levels="1" name="Windy Illusion">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="31"/>
+		<set name="magicLevel" value="93"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="effectPoint" value="761"/>
+		<set name="icon" value="icon.skill30018"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="TargetableDisable"/>
+			<effect name="RemoveTarget" time="0"/>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Sayha's Word - Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon.
+
+		LvL.1	description: Attacks target with 533 Power added to M Atk.	mp_consume: 670
+		LvL.2	description: Attacks target with 561 Power added to M Atk.	mp_consume: 677
+		LvL.3	description: Attacks target with 589 Power added to M Atk.	mp_consume: 682
+		LvL.4	description: Attacks target with 617 Power added to M Atk.	mp_consume: 687
+		LvL.5	description: Attacks target with 645 Power added to M Atk.	mp_consume: 690
+		LvL.6	description: Attacks target with 673 Power added to M Atk.	mp_consume: 694
+		LvL.7	description: Attacks target with 701 Power added to M Atk.	mp_consume: 699
+		LvL.8	description: Attacks target with 729 Power added to M Atk.	mp_consume: 705
+	-->
+    <skill id="30019" levels="8" name="Sayha's Word">
+		<table name="#mpConsume1">167 169 170 171 172 173 174 176</table>
+		<table name="#mpConsume2">503 508 512 516 518 521 525 529</table>
+		<table name="#magicLevel">85 87 89 91 93 95 97 98</table>
+		<table name="#power">533 561 589 617 645 673 701 729</table>
+		<table name="#effectPoint">1710 1790 1870 1950 2030 2110 2190 2270</table>
+		<table name="#activateRate">60 65 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="5500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="#activateRate"/>	<!--TODO: Check.-->
+		<set name="icon" value="icon.skill30019"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="MEN"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<triggers>
+			<trigger id="30002" level="3" type="ON_SUCCES_FINISH_CAST" chance="100"/>	<!--TODO: Check chance.-->
+		</triggers>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
+				<sub order="0x40" stat="runSpd" value="180"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Sayha's Fury - For 30 sec., Received P./M. Critical Damage - 50%, and Speed + 70. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage 4. Requires a sword or blunt weapon.
+
+	-->
+    <skill id="30020" levels="1" name="Sayha's Fury">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="RED_SPEED_UP"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="30"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="effectPoint" value="761"/>
+		<set name="icon" value="icon.skill30020"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="critDamRcpt" value="1.5"/>
+				<add order="0x80" stat="runSpd" value="70"/>
+				<triggers>
+					<trigger id="30027" level="1" type="RECEIVE_DAMAGE" chance="25">
+						<player damage="10;0"/>
+					</trigger>
+				</triggers>
+			</effect>
+			<!--TODO: Накладывает Клеймо Шторма Ур. 4.-->
+		</for>
+	</skill>
+    <!--
+		Sayha's Blessing - For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon.
+
+	-->
+    <skill id="30022" levels="1" name="Sayha's Blessing">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="5500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill30022"/>
+		<set name="mpConsume1" value="21"/>
+		<set name="mpConsume2" value="63"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="runSpd" value="50"/>
+				<add order="0x40" stat="knockDownResist" value="30"/>
+				<add order="0x40" stat="knockBackResist" value="30"/>
+				<add order="0x40" stat="pullResist" value="30"/>
+				<add order="0x40" stat="airjokeResist" value="30"/>
+				<!--TODO: Сопротивление агрессии +30.-->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Decoy Lock - Cannot change target.
+
+	-->
+    <skill id="30023" levels="1" name="Decoy Lock">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lightning Squall - Attacks target with 50 Power added to M. Atk., and decreases Speed by 20.
+
+		LvL.1	description: Attacks target with 50 Power added to M Atk.
+		LvL.2	description: Attacks target with 100 Power added to M Atk.
+		LvL.3	description: Attacks target with 150 Power added to M Atk.
+	-->
+    <skill id="30026" levels="3" name="Lightning Squall">
+		<table name="#magicLevel">40 76 85</table>
+		<table name="#power">50 100 150</table>
+		<table name="#effectPoint">140 750 1790</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="#power"/>
+		<set name="activateRate" value="80"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="icon" value="icon.skill30026"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="castRange" value="1100"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect name="Debuff">
+				<sub order="0x40" stat="runSpd" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Destructive Bolt - Attacks target with 300 Power added to M. Atk. and has a 10% chance of branding target with Storm Sign Stage 4.
+
+	-->
+    <skill id="30027" levels="1" name="Destructive Bolt">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="150"/>
+		<set name="icon" value="icon.skill30026"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="castRange" value="1100"/>
+		<set name="saveVs" value="MEN"/>
+		<!--TODO: С 10% вероятностью накладывает Клеймо Шторма Ур. 4.-->
+	</skill>
+    <!--
+		Divine Storm - Attacks nearby target with 448 Power added to M. Atk. and locks them inside a storm for 5 sec. 10% more damage if target is debuffed. Requires a sword or blunt weapon.
+
+	-->
+    <skill id="30029" levels="1" name="Divine Storm">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="351"/>
+		<set name="mpConsume2" value="1054"/>
+		<set name="magicLevel" value="98"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="448"/>
+		<set name="effectPoint" value="2270"/>
+		<set name="icon" value="icon.iconskill30007"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Sword, Blunt, Big Blunt"/>
+		</cond>
+		<triggers>
+			<trigger id="30030" level="1" type="ON_SUCCES_FINISH_CAST"/>
+		</triggers>
+		<!--TODO: Наносимый урон +10, если на противника наложен отрицательный эффект.-->
+	</skill>
+    <!--
+		Storm Captivity - Trapped by a storm that gives continuous damage.
+
+	-->
+    <skill id="30030" levels="1" name="Storm Captivity">
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="98"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="activateRate" value="75"/>
+		<set name="effectPoint" value="1790"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect count="5" name="DamOverTime" time="1" value="448"/>	<!--TODO: Check.-->
+		</for>
+	</skill>
+    <!--
+		Magic Potential - Increases Max. M. Critical Rate to 550.
+
+	-->
+    <skill id="30031" levels="1" name="Magic Potential">
+		<set name="icon" value="icon.skill30025"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="mCritDamageStatic" value="500"/>	<!--TODO: Check.-->
+		</for>
+	</skill>
+    <!--
+		Eminent Blunt Weapon Mastery - When equipped with a blunt weapon, M. Atk. +17% and + 10, Casting Spd. + 5%.
+
+		LvL.1	description: +17% and + 10, Casting Spd. + 5%.
+		LvL.2	description: +17% and + 57, Casting Spd.
+		LvL.3	description: +17% and + 228, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack.
+		LvL.4	description: +17% and + 436, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack.
+		LvL.5	description: +17% and + 728, Casting Spd. + 10%. and brands target with Storm Sign when using Hydro Attack.
+		LvL.6	description: +17% and + 834, Casting Spd. + 15%. and brands target with Storm Sign when using Hydro Attack.
+		LvL.7	description: +17% and + 942, Casting Spd. + 20%. and brands target with Storm Sign when using Hydro Attack.
+		LvL.8	description: +40% and + 1050, Casting Spd. + 30%, M Critical Rate + 10%, M Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with
+		LvL.9	description: +40% and + 1252, Casting Spd. + 30%, M Critical Rate + 10%, M Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with
+		LvL.10	description: +40% and + 1454, Casting Spd. + 30%, M Critical Rate + 10%, M Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with
+		LvL.11	description: +40% and + 1727, Casting Spd. + 30%, M Critical Rate + 10%, M Critical Damage + 10%. and brands target with Storm Sign when using Hydro Attack. When using Hydro Flare, has a 33% chance of branding target with
+	-->
+    <skill id="30040" levels="11" name="Eminent Blunt Weapon Mastery">
+		<!--TODO: Разобраться с: Накладывает Клеймо Шторма.-->
+		<table name="#mAtk">1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.40 1.40 1.40 1.40</table>
+		<table name="#addMAtk">10 10 228 436 728 834 942 1050 1252 1454 1727</table>
+		<table name="#mAtkSpd">1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.3 1.3 1.3 1.3</table>
+		<table name="#mCritRate">0 0 0 0 0 0 0 10 10 10 10</table>
+		<table name="#mCritDamage">1 1 1 1 1 1 1 1.1 1.1 1.1 1.1</table>
+		<set name="icon" value="icon.skill30023"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#mAtk">
+				<using kind="Blunt, Big Blunt"/>
+			</mul>
+			<add order="0x80" stat="mAtk" value="#addMAtk">
+				<using kind="Blunt, Big Blunt"/>
+			</add>
+			<mul order="0x30" stat="mAtkSpd" value="#mAtkSpd">
+				<using kind="Blunt, Big Blunt"/>
+			</mul>
+			<add order="0x40" stat="mCritRate" value="#mCritRate">
+				<using kind="Blunt, Big Blunt"/>
+			</add>
+			<mul order="0x30" stat="mCritDamage" value="#mCritDamage">
+				<using kind="Blunt, Big Blunt"/>
+			</mul>
+		</for>
+	</skill>
+    <!--
+		Eminent Robe Mastery - When equipped with a robe, P. Def. +7. Shields and Sigils are not worn, as you move with the wind.
+
+		LvL.1	description: +7. Shields and Sigils are not worn, as you move with the wind.
+		LvL.2	description: +12, Magic Resistance + 5%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.3	description: +27, Magic Resistance + 10%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.4	description: +39, Magic Resistance + 15%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.5	description: +55, Magic Resistance + 20%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.6	description: +69, Magic Resistance + 25%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.7	description: +77, M Def. + 533, M Def. + 3%, Magic Resistance + 30%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.8	description: +1238, M Def. + 1156, M Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.9	description: +1347, M Def. + 1258, M Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.10	description: +1456, M Def. + 1360, M Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind.
+		LvL.11	description: +1601, M Def. + 1496, M Def. + 5%, Magic Resistance + 35%. Shields and Sigils are not worn, as you move with the wind.
+	-->
+    <skill id="30041" levels="11" name="Eminent Robe Mastery">
+		<table name="#pDef">7 12 27 39 55 69 77 1238 1347 1456 1601</table>
+		<table name="#mDef">1 1 1 1 1 1 1.03 1.03 1.03 1.03 1.03</table>
+		<table name="#addMDef">0 0 0 0 0 0 533 1258 1258 1360 1496</table>
+		<table name="#magicResist">0 5 10 15 20 25 30 30 30 30 30</table>
+		<set name="icon" value="icon.skill30024"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pDef" value="#pDef"/>
+			<mul order="0x30" stat="mDef" value="#mDef"/>
+			<add order="0x80" stat="mDef" value="#addMDef"/>
+			<add order="0x40" stat="magicResist" value="#magicResist"/>
+		</for>
+	</skill>
+    <!--
+		Eminent Quick Recovery - Max. MP + 33, MP Recovery Bonus + 1, and M. Skill Cooldown - 10%.
+
+		LvL.1	icon_name: icon.skill11004	description: Max. MP + 33, MP Recovery Bonus + 1, and M Skill Cooldown - 10%.
+		LvL.2	icon_name: icon.skill10504	description: MP + 77, MP Recovery Bonus + 3, and M Skill Cooldown - 15%.
+		LvL.3	icon_name: icon.skill10504	description: MP + 223, MP Recovery Bonus + 5, and M Skill Cooldown - 20%, M Skill MP Consumption - 5%.
+		LvL.4	icon_name: icon.skill10504	description: Max. HP + 4891, Max. MP + 344, MP Recovery Bonus + 7, and M Skill Cooldown - 30%, M Skill MP Consumption - 7%.
+		LvL.5	icon_name: icon.skill10504	description: Max. HP + 4891, Max. MP + 411, MP Recovery Bonus + 8, and M Skill Cooldown - 30%, M Skill MP Consumption - 7%.
+		LvL.6	icon_name: icon.skill10504	description: Max. HP + 4891, Max. MP + 478, MP Recovery Bonus + 10, and M Skill Cooldown - 30%, M Skill MP Consumption - 7%.
+		LvL.7	icon_name: icon.skill10504	description: Max. HP + 4891, Max. MP + 568, MP Recovery Bonus + 11, and M Skill Cooldown - 30%, M Skill MP Consumption - 7%.
+	-->
+    <skill id="30042" levels="7" name="Eminent Quick Recovery">
+		<table name="#maxMp">33 77 223 344 411 478 568</table>
+		<table name="#regMp">1 3 5 7 8 10 11</table>
+		<table name="#mReuse">0.9 0.85 0.8 0.7 0.7 0.7 0.7</table>
+		<table name="#mpConsum">1 1 0.95 0.93 0.93 0.93 0.93</table>
+		<set name="icon" value="icon.skill11004"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" value="#maxMp"/>
+			<add order="0x40" stat="regMp" value="#regMp"/>
+			<mul order="0x30" stat="mReuse" value="#mReuse"/>
+			<mul order="0x30" stat="mpConsum" value="#mpConsum"/>
+		</for>
+	</skill>
+    <!--
+		Eminent Attribute Resistance - Wind Resistance + 30.
+
+		LvL.1	description: Wind Resistance + 30.
+		LvL.2	description: Wind/Holy Resistance + 30.
+	-->
+    <skill id="30043" levels="2" name="Eminent Attribute Resistance">
+		<table name="#defenceHoly">0 30</table>
+		<set name="icon" value="icon.skill11006"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="defenceWater" value="30"/>
+			<add order="0x40" stat="defenceHoly" value="#defenceHoly"/>
+		</for>
+	</skill>
+    <!--
+		Eminent Trait Resistance - Hold/Mental Resistance + 30.
+
+		LvL.1	description: Hold/Mental Resistance + 30.
+		LvL.2	description: Hold/Mental/Pull/Hate Resistance + 30.
+	-->
+    <skill id="30044" levels="2" name="Eminent Trait Resistance">
+		<table name="#pullResist">0 30</table>
+		<table name="#hateResist">0 30</table>
+		<set name="icon" value="icon.skill10005"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="rootResist" value="30"/>
+			<add order="0x40" stat="mentalResist" value="30"/>
+			<add order="0x40" stat="pullResist" value="#pullResist"/>
+			<!--TODO: <add order="0x40" stat="hateResist" value="#hateResist"/>-->
+		</for>
+	</skill>
+    <!--
+		Eminent Ability - INT + 2.
+
+		LvL.1	description: INT + 2.
+		LvL.2	description: INT + 4. Your INT can reset cooldown or double skill effect duration.
+		LvL.3	description: INT + 16. Your INT can reset cooldown or double skill effect duration.
+	-->
+    <skill id="30045" levels="3" name="Eminent Ability">
+		<table name="#INT">2 4 16</table>
+		<table name="#activateSkillMasteryINT">0 1 1</table>
+		<set name="icon" value="icon.skill11253"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="INT" value="#INT"/>
+			<set order="0x100" stat="activateSkillMasteryINT" value="#activateSkillMasteryINT"/>
+		</for>
+	</skill>
+</list>

@@ -1,0 +1,2622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Great Wizard's Soul Power - For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%.
+
+	-->
+    <skill id="21100" levels="1" name="Great Wizard's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: For five minutes, the Great Spirit increases M.Atk. by 20%, M.Def. by 20% and casting speed by 20%. Decreases MP cost of skills by 5%.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_maid_hairband_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mpConsum" value="0.95"/>
+				<mul order="0x30" stat="mpConsumePhysical" value="0.95"/>
+				<mul order="0x30" stat="mpDanceConsume" value="0.95"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessed Escape - Allows the use of Blessed Escape. Cooldown is 12 hours.
+
+	-->
+    <skill id="21101" levels="1" name="Blessed Escape">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Can use the ability of Blessed Return. Reuse Delay 12 hours.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="43200000"/>
+		<set name="hitTime" value="200"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_babypanda_cap_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Blessed Resurrection - Allows the use of Blessed Resurrection. Cooldown is 12 hours.
+
+	-->
+    <skill id="21102" levels="1" name="Blessed Resurrection">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Can use the ability of Blessed Resurrection. Reuse Delay 12 hours.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="43200000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_sexypanda_cap_i00"/>
+		<set name="power" value="100"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CORPSE_PLAYER"/>
+		<set name="corpse" value="true"/>
+		<set name="skillType" value="RESURRECT"/>
+		<set name="useSS" value="false"/>
+		<set name="canPet" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Great Adventurer's Soul Power - For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%.
+
+	-->
+    <skill id="21103" levels="1" name="Great Adventurer's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_kungfupanda_cap_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Appetite for Destruction - For 30 seconds, awakens your destructive instincts and increases P. Atk., P. Critical Rate and P. Critical Damage by 50%.
+
+	-->
+    <skill id="21104" levels="1" name="Appetite for Destruction">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: For 30 seconds, awakens destruction instinct and increases P.Atk./Critical rate/Critical damage by 50%.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="instinct"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_gatekeeper_of_hat_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.5"/>
+				<add order="0x40" stat="pCritRate" value="50"/>
+				<mul order="0x30" stat="pCritDamage" value="1.5"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Release Agathion's Seal - Lucky Girl - Removes the Agathion's seal.
+
+	-->
+    <skill id="21105" levels="1" name="Release Agathion's Seal - Lucky Girl">
+		<!--
+			Last modify:	29.12.2009
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1529"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Lucky Boy - Removes the Agathion's seal.
+
+	-->
+    <skill id="21106" levels="1" name="Release Agathion's Seal - Lucky Boy">
+		<!--
+			Last modify:	29.12.2009
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1530"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Dancing Lucky Kid - Removes the Agathion's seal.
+
+	-->
+    <skill id="21107" levels="1" name="Release Agathion's Seal - Dancing Lucky Kid">
+		<!--
+			Last modify:	29.12.2009
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1531"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Monkey King - Removes the Agathion's seal.
+
+	-->
+    <skill id="21108" levels="1" name="Release Agathion's Seal - Monkey King">
+		<!--
+			Last modify:	29.12.2009
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1532"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Uthanka - Removes the Agathion's seal.
+
+	-->
+    <skill id="21109" levels="1" name="Release Agathion's Seal - Uthanka">
+		<!--
+			Last modify:	29.12.2009
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1533"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Bonus B - Removes the Agathion's seal.
+
+	-->
+    <skill id="21110" levels="1" name="Release Agathion's Seal - Bonus B">
+		<!--
+			Last modify:	29.12.2009
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1534"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Great Adventurer's Soul Power - For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase Debuff Resistance by 10%. Cooldown is 1 hour.
+
+	-->
+    <skill id="21111" levels="1" name="Great Adventurer's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_headphone_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Brave Warrior's Soul Power - For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour.
+
+	-->
+    <skill id="21112" levels="1" name="Brave Warrior's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes.  Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_headphone_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<add order="0x40" stat="absorbDam" value="5"/>
+				<add order="0x40" stat="absorbBowDam" value="5"/>
+				<add order="0x40" stat="absorbPSkillDam" value="5"/>
+				<add order="0x40" stat="absorbMSkillDam" value="5"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Great Wizard's Soul Power - For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour.
+
+	-->
+    <skill id="21113" levels="1" name="Great Wizard's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes.  Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_headphone_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mpConsum" value="0.95"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Great Adventurer's Soul Power - For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase Debuff Resistance by 10%. Cooldown is 1 hour.
+
+	-->
+    <skill id="21114" levels="1" name="Great Adventurer's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_spirit_skill_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Brave Warrior's Soul Power - For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour.
+
+	-->
+    <skill id="21115" levels="1" name="Brave Warrior's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes.  Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_spirit_skill_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<add order="0x40" stat="absorbDam" value="5"/>
+				<add order="0x40" stat="absorbBowDam" value="5"/>
+				<add order="0x40" stat="absorbPSkillDam" value="5"/>
+				<add order="0x40" stat="absorbMSkillDam" value="5"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Great Wizard's Soul Power - For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour.
+
+	-->
+    <skill id="21116" levels="1" name="Great Wizard's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes.  Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_spirit_skill_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mpConsum" value="0.95"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Great Adventurer's Soul Power - For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Cooldown is 1 hour.
+
+	-->
+    <skill id="21117" levels="1" name="Great Adventurer's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase HP recovery bonus by 20%, MP recovery bonus by 20%. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_spirit_skill_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<mul order="0x30" stat="regHp" value="1.2"/>
+				<mul order="0x30" stat="regMp" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Brave Warrior's Soul Power - For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. receives the soul's help to increase Critical Damage by 20% and Critical Rate by 20%. Cooldown is 1 hour.
+
+	-->
+    <skill id="21118" levels="1" name="Brave Warrior's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes.  Increase power of Critical Attack by 20%, Chance of Critical Attack by 20%.  Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_spirit_skill_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="pCritDamage" value="1.2"/>
+				<add order="0x40" stat="pCritRate" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Great Wizard's Soul Power - For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. receives the soul's help to increase the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring thro
+
+	-->
+    <skill id="21119" levels="1" name="Great Wizard's Soul Power">
+		<!--
+		      Last modify: 12.01.2010
+		      Description: Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes.  Increase power of Prominent Damage caused with damage magic by 20%, chance of Prominent Damage caused with damage magic by 2. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_spirit_skill_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mCritDamageStatic" value="1.2"/>
+				<add order="0x40" stat="baseMCritRate" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Jack O'Lantern Card - Jack's game Skill
+
+	-->
+    <skill id="21120" levels="1" name="Jack O'Lantern Card">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Jack Game Skill
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_jack_ghost_i00"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Rotten Jack O'Lantern Card - Jack's game Skill
+
+	-->
+    <skill id="21121" levels="1" name="Rotten Jack O'Lantern Card">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Jack Game Skill
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_rotten_jack_ghost_i00"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Skooldie's Blessing: Protection of Darkness - For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21122" levels="1" name="Skooldie's Blessing: Protection of Darkness">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="BranchSys.icon.br_scooldie_mask_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Skooldie's Blessing: Protection of Darkness - For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21123" levels="1" name="Skooldie's Blessing: Protection of Darkness">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="BranchSys.icon.br_scooldie_mask_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Skooldie's Blessing: Protection of Darkness - For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21124" levels="1" name="Skooldie's Blessing: Protection of Darkness">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="BranchSys.icon.br_scooldie_mask_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Skooldie's Blessing: Protection of Darkness - For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21125" levels="1" name="Skooldie's Blessing: Protection of Darkness">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="BranchSys.icon.br_scooldie_mask_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Skooldie's Blessing: Protection of Darkness - For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21126" levels="1" name="Skooldie's Blessing: Protection of Darkness">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="BranchSys.icon.br_scooldie_mask_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Dark Resistance by 20. Cooldown is 2 hours.
+
+	-->
+    <skill id="21127" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 1 hour.Increase dark attack resistance by 20. Reuse Delay 2 hours.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 1 hour, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Dark Resistance by 20. Cooldown is 2 hours.
+
+	-->
+    <skill id="21128" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 2 hours.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="pCritRate" value="10"/>
+				<mul order="0x30" stat="pCritDamage" value="1.1"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 1 hour, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Increases Dark Resistance by 20. Cooldown is 2 hours.
+
+	-->
+    <skill id="21129" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, speed by 10% for 1 hour. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 2 hours.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="runSpd" value="10"/>
+				<add order="0x40" stat="absorbDam" value="5"/>
+				<add order="0x40" stat="absorbBowDam" value="5"/>
+				<add order="0x40" stat="absorbPSkillDam" value="5"/>
+				<add order="0x40" stat="absorbMSkillDam" value="5"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP Consumption for skill use by 5%. Increases Dark Resistance by 20. Cooldown is 2 hours.
+
+	-->
+    <skill id="21130" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, speed by 20% for 1 hour. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 2 hours.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<mul order="0x30" stat="mpConsum" value="0.95"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Dark Resistance by 20. Cooldown is 2 hours.
+
+	-->
+    <skill id="21131" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 13.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, casting speed by 20% for 1 hour. Increases chance of prominent damage by Damage Magic by 2. Increase dark attack resistance by 20. Reuse Delay 2 hours.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<add order="0x40" stat="baseMCritRate" value="20"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Shadow Ability - For 2 minutes, decreases the user's Speed by 30%, and obtains the ability to prevent a monster's preemptive attack. Cooldown is 1 hour.
+
+	-->
+    <skill id="21132" levels="1" name="Shadow Ability">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Decrease own speed by 30% and will not receive monster's preemptive attack for 2 minutes. Reuse Delay 1 hour.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 16-12-2009  18:32
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_effect" value="STEALTH"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="stealth"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill5739"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Release Agathion's Seal - Zombie - Removes the Agathion's seal.
+
+	-->
+    <skill id="21133" levels="1" name="Release Agathion's Seal - Zombie">
+		<!--
+		    Last modify: 22.12.2009
+		    Description: Summon an Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1535"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Bluebird - Removes the Agathion's seal.
+
+	-->
+    <skill id="21134" levels="1" name="Release Agathion's Seal - Bluebird">
+		<!--
+		    Last modify: 22.12.2009
+		    Description: Summon an Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1536"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Hatbird - Removes the Agathion's seal.
+
+	-->
+    <skill id="21135" levels="1" name="Release Agathion's Seal - Hatbird">
+		<!--
+		    Last modify: 22.12.2009
+		    Description: Summon an Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1537"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Golden Jack O'Lantern's Authority - For 10 minutes, increases party members' Max HP by 40%, Max MP by 40%, Max CP by 40%, P. Def. by 30%, M. Def. by 30%, and Speed by 30. Cooldown is 1 hour.
+
+	-->
+    <skill id="21136" levels="1" name="Golden Jack O'Lantern's Authority">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increase max HP 40%, max MP 40%, max CP 40%, Physical Def. 30%, Magic Def. 30%, Spd. 30% of party members for 10 minutes. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_golden_jack0_mask_i00"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="ETC"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<mul order="0x30" stat="maxCp" value="1.4"/>
+				<mul order="0x30" stat="pDef" value="1.3"/>
+				<mul order="0x30" stat="mDef" value="1.3"/>
+				<add order="0x40" stat="runSpd" value="30"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 10 minutes, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21137" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 10 minutes.Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 10 minutes, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21138" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 10 minutes. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="pCritRate" value="10"/>
+				<mul order="0x30" stat="pCritDamage" value="1.1"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21139" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, speed by 10% for 10 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="runSpd" value="10"/>
+				<add order="0x40" stat="absorbDam" value="5"/>
+				<add order="0x40" stat="absorbBowDam" value="5"/>
+				<add order="0x40" stat="absorbPSkillDam" value="5"/>
+				<add order="0x40" stat="absorbMSkillDam" value="5"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP Consumption for skill use by 5%. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21140" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, speed by 20% for 10 minutes. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<mul order="0x30" stat="mpConsum" value="0.95"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Halloween - For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Dark Resistance by 20. Cooldown is 1 hour.
+
+	-->
+    <skill id="21141" levels="1" name="Blessing of Halloween">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increase max HP by 40%, max MP by 40%, speed by 20% for 10 minutes. Increases chance of prominent damage by Damage Magic by 2. Increase dark attack resistance by 20. Reuse Delay 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1528"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.4"/>
+				<mul order="0x30" stat="maxMp" value="1.4"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+				<add order="0x40" stat="baseMCritRate" value="20"/>
+				<add order="0x40" stat="defenceUnholy" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Release Agathion's Seal - Guangong - Removes the Agathion's seal.
+
+	-->
+    <skill id="21142" levels="1" name="Release Agathion's Seal - Guangong">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1551"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Gwanseum Nyang Nyang - Removes the Agathion's seal.
+
+	-->
+    <skill id="21143" levels="1" name="Release Agathion's Seal - Gwanseum Nyang Nyang">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1552"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Blue Opera - Removes the Agathion's seal.
+
+	-->
+    <skill id="21144" levels="1" name="Release Agathion's Seal - Blue Opera">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1553"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Blue Opera - Removes the Agathion's seal.
+
+	-->
+    <skill id="21145" levels="1" name="Release Agathion's Seal - Blue Opera">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1553"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Red Opera - Removes the Agathion's seal.
+
+	-->
+    <skill id="21146" levels="1" name="Release Agathion's Seal - Red Opera">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1554"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Opera - Removes the Agathion's seal.
+
+	-->
+    <skill id="21147" levels="1" name="Release Agathion's Seal - Opera">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1555"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Miss Chipao - Removes the Agathion's seal.
+
+	-->
+    <skill id="21148" levels="1" name="Release Agathion's Seal - Miss Chipao">
+		<!--
+			Last modify: 01.06.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1556"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Nepal Snow - Removes the Agathion's seal.
+
+	-->
+    <skill id="21149" levels="1" name="Release Agathion's Seal - Nepal Snow">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1557"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Round Ball Snow - Removes the Agathion's seal.
+
+	-->
+    <skill id="21150" levels="1" name="Release Agathion's Seal - Round Ball Snow">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1558"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Ladder Snow - Removes the Agathion's seal.
+
+	-->
+    <skill id="21151" levels="1" name="Release Agathion's Seal - Ladder Snow">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1559"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Chain Fireworks - Sets off firecrackers. Cooldown is 5 minutes.
+
+	-->
+    <skill id="21152" levels="1" name="Chain Fireworks">
+		<!--
+		      Last modify: 20.01.2010
+		      Description: Sets off firecrackers.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_rocket_cap_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+    <!--
+		Blessed Body - Increases Max HP by 25% for 20 minutes. Cooldown is 1 hour.
+
+	-->
+    <skill id="21153" levels="4" name="Blessed Body">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increases Max HP by 25% for 20 minutes. Reuse Delay 1 hours.
+		-->
+		<table name="#Tab-maxHp">1.1 1.15 1.2 1.25</table>
+		<table name="#ride_state">NONE;STRIDER;WYVERN;WOLF</table>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="max_hp_up"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_party_hat_gold_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="#Tab-maxHp"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessed Soul - Increases Max MP by 25% for 20 minutes. Cooldown is 1 hour.
+
+	-->
+    <skill id="21154" levels="4" name="Blessed Soul">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increases Max MP by 25% for 20 minutes. Reuse Delay 1 hours.
+		-->
+		<table name="#Tab-maxMp">1.1 1.15 1.2 1.25</table>
+		<table name="#ride_state">NONE;STRIDER;WYVERN;WOLF</table>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="max_mp_up"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_party_hat_mask_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxMp" value="#Tab-maxMp"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Scent of Flavorful Cheese - For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases P. Critical Damage and P. Critical Rate by 20%. Cooldown is 1 hour.
+
+	-->
+    <skill id="21155" levels="1" name="Scent of Flavorful Cheese">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: For 5 minutes, receives the soul's help to raise Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases Critical attack power by 20% and Critical attack rate by 20%. Reuse delay is 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_bigrat_cap_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<add order="0x40" stat="pCritRate" value="20"/>
+				<mul order="0x30" stat="pCritDamage" value="1.2"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Scent of Sweet Cheese - For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Increases the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. Cool
+
+	-->
+    <skill id="21156" levels="1" name="Scent of Sweet Cheese">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Raises Prominent Damage power via damage magic by 20% and the chance of Prominent Damage occurring via damage magic by 2. Reuse delay is 1 hour.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_goldrat_cap_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mCritDamageStatic" value="1.2"/>
+				<add order="0x40" stat="baseMCritRate" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Release Agathion's Seal - Iken - Removes the Agathion's seal.
+
+	-->
+    <skill id="21157" levels="1" name="Release Agathion's Seal - Iken">
+		<!--
+			Last modify: 13.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1539"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Lanya - Removes the Agathion's seal.
+
+	-->
+    <skill id="21158" levels="1" name="Release Agathion's Seal - Lanya">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1540"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Gnosian - Removes the Agathion's seal.
+
+	-->
+    <skill id="21159" levels="1" name="Release Agathion's Seal - Gnosian">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1541"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Orodriel - Removes the Agathion's seal.
+
+	-->
+    <skill id="21160" levels="1" name="Release Agathion's Seal - Orodriel">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1542"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Lakinos - Removes the Agathion's seal.
+
+	-->
+    <skill id="21161" levels="1" name="Release Agathion's Seal - Lakinos">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1543"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Mortia - Removes the Agathion's seal.
+
+	-->
+    <skill id="21162" levels="1" name="Release Agathion's Seal - Mortia">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1544"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Heintz - Removes the Agathion's seal.
+
+	-->
+    <skill id="21163" levels="1" name="Release Agathion's Seal - Heintz">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1545"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Meruril - Removes the Agathion's seal.
+
+	-->
+    <skill id="21164" levels="1" name="Release Agathion's Seal - Meruril">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1546"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Taman Zu Rapatui - Removes the Agathion's seal.
+
+	-->
+    <skill id="21165" levels="1" name="Release Agathion's Seal - Taman Zu Rapatui">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1547"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Kaurin - Removes the Agathion's seal.
+
+	-->
+    <skill id="21166" levels="1" name="Release Agathion's Seal - Kaurin">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1548"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Ahertbein - Removes the Agathion's seal.
+
+	-->
+    <skill id="21167" levels="1" name="Release Agathion's Seal - Ahertbein">
+		<!--
+			Last modify: 14.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1549"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Naonin - Removes the Agathion's seal.
+
+	-->
+    <skill id="21168" levels="1" name="Release Agathion's Seal - Naonin">
+		<!--
+			Last modify: 07.01.2010
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1550"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Transform Kadomas - Transforms into a Kadomas.
+
+	-->
+    <skill id="21169" levels="1" name="Transform Kadomas">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Transforms into a Kadomas.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond>
+			<player can_transform="20000"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="20000"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessed Soul - Increases Max MP by 25% for 20 minutes. Cooldown is 1 hour.
+
+	-->
+    <skill id="21170" levels="4" name="Blessed Soul">
+		<!--
+		      Last modify: 14.01.2010
+		      Description: Increases Max MP by 25% for 20 minutes. Reuse Delay 1 hours.
+		-->
+		<table name="#Tab-maxMp">1.1 1.15 1.2 1.25</table>
+		<table name="#ride_state">NONE;STRIDER;WYVERN;WOLF</table>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="max_mp_up"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="BranchSys.icon.br_party_mask_purple_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxMp" value="#Tab-maxMp"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Ride Jet Bike - Ride a Jet Bike.
+
+	-->
+    <skill id="21171" levels="1" name="Ride Jet Bike">
+		<!--
+			Last modify: 21.04.2009
+			Description: Mounts a tawny maned lion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="useSS" value="false"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="20001"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="20001"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Reinforced Authority - CON + 1 / STR + 1 - By enhance authority, CON + 1 / STR + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes.
+
+	-->
+    <skill id="21172" levels="1" name="Reinforced Authority - CON + 1 / STR + 1">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_stat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Reinforced Authority - WIT + 1 / INT + 1 - By enhance authority, WIT + 1 / INT + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes.
+
+	-->
+    <skill id="21173" levels="1" name="Reinforced Authority - WIT + 1 / INT + 1">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_stat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Reinforced Authority - WIT + 1 / MEN + 1 - By enhance authority, WIT + 1 / MEN + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes.
+
+	-->
+    <skill id="21174" levels="1" name="Reinforced Authority - WIT + 1 / MEN + 1">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_stat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Reinforced Authority - CON + 1 / DEX + 1 - By enhance authority, CON + 1 / DEX + 1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes.
+
+	-->
+    <skill id="21175" levels="1" name="Reinforced Authority - CON + 1 / DEX + 1">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="br_event_buf1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_stat_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Protection - Holy - Increases Holy P. Atk. and P. Def. by 10 each. Continuously consumes energy.
+
+	-->
+    <skill id="21176" levels="1" name="Divine Protection - Holy">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Protection - Water - Increases Water P. Atk. and P. Def. by 10 each. Continuously consumes energy.
+
+	-->
+    <skill id="21177" levels="1" name="Divine Protection - Water">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Protection - Fire - Increases Fire P. Atk. and P. Def. by 10 each. Continuously consumes energy.
+
+	-->
+    <skill id="21178" levels="1" name="Divine Protection - Fire">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Protection - Wind - Increases Water P. Atk. and P. Def. by 10 each. Continuously consumes energy.
+
+	-->
+    <skill id="21179" levels="1" name="Divine Protection - Wind">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Protection - Earth - Increases Earth P. Atk. and P. Def. by 10 each. Continuously consumes energy.
+
+	-->
+    <skill id="21180" levels="1" name="Divine Protection - Earth">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Protection - Dark - Increases Dark P. Atk. and P. Def. by 10 each. Continuously consumes energy.
+
+	-->
+    <skill id="21181" levels="1" name="Divine Protection - Dark">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_attr_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessing of Resistance - Hold - Increases Hold Resistance by 40%. Continuously consumes energy.
+
+	-->
+    <skill id="21182" levels="1" name="Blessing of Resistance - Hold">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_resist_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessing of Resistance - Paralysis - Increases Paralysis Resistance by 40%. Continuously consumes energy.
+
+	-->
+    <skill id="21183" levels="1" name="Blessing of Resistance - Paralysis">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_resist_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessing of Resistance - Sleep - Increases Sleep Resistance by 40%. Continuously consumes energy.
+
+	-->
+    <skill id="21184" levels="1" name="Blessing of Resistance - Sleep">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_resist_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessing of Resistance - Decrease Speed - Increases Slow Resistance by 40%. Continuously consumes energy.
+
+	-->
+    <skill id="21185" levels="1" name="Blessing of Resistance - Decrease Speed">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_resist_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessing of Resistance - Bleed - Increases Bleed Resistance by 40%. Continuously consumes energy.
+
+	-->
+    <skill id="21186" levels="1" name="Blessing of Resistance - Bleed">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_resist_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blessing of Resistance - Stun - Increases Stun Resistance by 40%. Continuously consumes energy.
+
+	-->
+    <skill id="21187" levels="1" name="Blessing of Resistance - Stun">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_resist_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Recovery Ability: HP - Increases HP Recovery Bonus by 20%. Continuously consumes energy.
+
+	-->
+    <skill id="21188" levels="1" name="Recovery Ability: HP">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_regen_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Recovery Ability: MP - Increases MP Recovery Bonus by 20%. Continuously consumes energy.
+
+	-->
+    <skill id="21189" levels="1" name="Recovery Ability: MP">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="BR_SOUL_AVATAR"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_regen_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Soul's Shield - For 10 seconds, increases P. Def. and M. Def. by 60%. Consumes 500 energy. Cooldown 20 minutes.
+
+	-->
+    <skill id="21190" levels="1" name="Soul's Shield">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="pd_up_special"/>
+		<set name="icon" value="BranchSys2.icon.br_soulavatar_active_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Phoenix - Removes the Agathion's seal.
+
+	-->
+    <skill id="21191" levels="1" name="Release Agathion's Seal - Phoenix">
+		<!--
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1574"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Silent Move - For 2 minutes, blocks receive preemptive attacks from monsters. Decreases Speed by 40%. Cooldown is 4 hours.
+
+	-->
+    <skill id="21192" levels="1" name="Silent Move">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="14400000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="STEALTH"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="stealth"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="BranchSys2.icon.br_fox_japan_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power of Guardian Deity - Increases Critical Damage by 35% for 10 minutes. Cooldown is 1 hour.
+
+	-->
+    <skill id="21193" levels="1" name="Power of Guardian Deity">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="critical_dmg_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="BranchSys2.icon.br_paiwan_cap_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Three-headed Dragon - Removes the Agathion's seal.
+
+	-->
+    <skill id="21194" levels="1" name="Release Agathion's Seal - Three-headed Dragon">
+		<!--
+			Description: Removes the seal on the Agathion.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<set name="npcId" value="1575"/>
+		<set name="summonType" value="agathion"/>
+	</skill>
+    <!--
+		Blessed Child Transformation Skill: Trejuo - Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers Vitality upon acquiring XP. Cooldown is 4 hours.
+
+	-->
+    <skill id="21195" levels="1" name="Blessed Child Transformation Skill: Trejuo">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="14400000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond>
+			<player can_transform="20002"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="20002"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessed Child Transformation Skill: Sujin - Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers Vitality upon acquiring XP. Cooldown is 4 hours.
+
+	-->
+    <skill id="21196" levels="1" name="Blessed Child Transformation Skill: Sujin">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="14400000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond>
+			<player can_transform="20003"/>
+		</cond>
+		<for>
+			<effect name="Transformation" value="20003"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Induk's Buff - Restores all HP, MP, and CP using the strength of Induk. Cooldown 30 minutes. Can only be used when HP, MP, and CP are all below 30%. Consumes 1 Proof of a Warrior upon skill use.
+
+	-->
+    <skill id="21197" levels="1" name="Induk's Buff">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="20976"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_pekingopera_mask_a_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Silence of Loyalty - Through the power of loyalty, increases party members' P. Def., M. Def. by 30%, P. Atk. by 20%, M. Atk. by 45%, and Speed by 30 for 5 minutes. Cooldown 30 minutes. Consumes 1 Proof of a Warrior upon skill use.
+
+	-->
+    <skill id="21198" levels="1" name="Silence of Loyalty">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="20976"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_pekingopera_mask_b_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Vitality of Courage - Restores Vitality by certain amount using the power of Excellence, and for 5 minutes, maintains the Vitality stage. Cooldown 30 minutes. Consumes 1 Proof of a Warrior and 2 Vitality Effects upon skill use.
+
+	-->
+    <skill id="21199" levels="1" name="Vitality of Courage">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="26"/>
+		<set name="abnormal_type" value="vp_keep"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="20976"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="BranchSys2.icon.br_pekingopera_mask_c_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

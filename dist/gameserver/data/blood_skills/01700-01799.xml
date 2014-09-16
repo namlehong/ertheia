@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Life - Recovers HP by 15%.
+
+	-->
+    <skill id="1700" levels="1" name="Life">
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1258"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mass Life - Recovers HP by 15%.
+
+	-->
+    <skill id="1701" levels="1" name="Mass Life">
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1258"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cancel Hold - none
+
+	-->
+    <skill id="1702" levels="1" name="Cancel Hold">
+		<set name="magicLevel" value="60"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill01702"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="root_magically"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cancel Fear - none
+
+	-->
+    <skill id="1703" levels="1" name="Cancel Fear">
+		<set name="magicLevel" value="60"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill01703"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_flee"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Aggression Aura - none
+
+	-->
+    <skill id="1704" levels="1" name="Aggression Aura">
+		<set name="reuseDelay" value="40000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0018"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fury - none
+
+	-->
+    <skill id="1705" levels="1" name="Fury">
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dance_of_fury"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0275"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Earthquake - none
+
+	-->
+    <skill id="1706" levels="1" name="Earthquake">
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="1799"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0347"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bleeding Shot - none
+
+	-->
+    <skill id="1708" levels="1" name="Bleeding Shot">
+		<set name="reuseDelay" value="8000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Poison Shot - none
+
+	-->
+    <skill id="1709" levels="1" name="Poison Shot">
+		<set name="reuseDelay" value="8000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bleeding Shot - none
+
+	-->
+    <skill id="1710" levels="1" name="Bleeding Shot">
+		<set name="reuseDelay" value="8000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Poison Shot - none
+
+	-->
+    <skill id="1711" levels="1" name="Poison Shot">
+		<set name="reuseDelay" value="8000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Burst Shot - none
+
+	-->
+    <skill id="1712" levels="1" name="Burst Shot">
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0024"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Unison Whirl - none
+
+	-->
+    <skill id="1713" levels="1" name="Unison Whirl">
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="800"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0245"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Unison Downblow - none
+
+	-->
+    <skill id="1714" levels="1" name="Unison Downblow">
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="800"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0245"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Unison Rush - Provoked by the unison of light.
+
+	-->
+    <skill id="1715" levels="1" name="Unison Rush">
+		<set name="reuseDelay" value="6000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="800"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0245"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wise Retainer's Resurrection - none
+
+	-->
+    <skill id="1716" levels="1" name="Wise Retainer's Resurrection">
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1271"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wise Retainer's Protection - Protected by Lakcis, the giant of light.
+
+	-->
+    <skill id="1717" levels="1" name="Wise Retainer's Protection">
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="pd_up_special"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1271"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wise Retainer's Punishment - none
+
+	-->
+    <skill id="1718" levels="1" name="Wise Retainer's Punishment">
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1271"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wise Retainer's Price - none
+
+	-->
+    <skill id="1719" levels="1" name="Wise Retainer's Price">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill1271"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lakcis' Protection - none
+
+	-->
+    <skill id="1720" levels="1" name="Lakcis' Protection">
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1271"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="400"/>
+		<for>
+			<effect name="Laksis" value="500" hide_time="true" combine="true"/>
+		</for>
+	</skill>
+    <!--
+		Chain Attack - none
+
+	-->
+    <skill id="1721" levels="1" name="Chain Attack">
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Chain Attack - none
+
+	-->
+    <skill id="1722" levels="1" name="Chain Attack">
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Breakthrough - none
+
+	-->
+    <skill id="1723" levels="1" name="Breakthrough">
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Breakthrough - none
+
+	-->
+    <skill id="1724" levels="1" name="Breakthrough">
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Strong Offense - none
+
+	-->
+    <skill id="1725" levels="1" name="Strong Offense">
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Strong Offense - none
+
+	-->
+    <skill id="1726" levels="1" name="Strong Offense">
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Comeback - none
+
+	-->
+    <skill id="1727" levels="1" name="Comeback">
+		<set name="hitTime" value="500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Rally - none
+
+	-->
+    <skill id="1728" levels="1" name="Rally">
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Inspire - none
+
+	-->
+    <skill id="1729" levels="1" name="Inspire">
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimensional Force - none
+
+	-->
+    <skill id="1730" levels="1" name="Dimensional Force">
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimensional Force - none
+
+	-->
+    <skill id="1731" levels="1" name="Dimensional Force">
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Magmeld's Promise - none
+
+	-->
+    <skill id="1732" levels="1" name="Magmeld's Promise">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Celestia's Wrath - none
+
+	-->
+    <skill id="1733" levels="1" name="Celestia's Wrath">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Acheron's Penitence - none
+
+	-->
+    <skill id="1734" levels="1" name="Acheron's Penitence">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Increase Skill Power - none
+
+	-->
+    <skill id="1735" levels="3" name="Increase Skill Power">
+		<table name="#magicLevel">86 90 95</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Increase M. Atk. - none
+
+	-->
+    <skill id="1736" levels="3" name="Increase M. Atk.">
+		<table name="#magicLevel">86 90 95</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Slaughter - none
+
+	-->
+    <skill id="1747" levels="1" name="Slaughter">
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Slaughter - none
+
+	-->
+    <skill id="1748" levels="1" name="Slaughter">
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="UNK_MAG_TYPE_21"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Decrease Speed - 10 second Slow
+
+	-->
+    <skill id="1749" levels="1" name="Decrease Speed">
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1201"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Invincibility - Invincibility
+
+	-->
+    <skill id="1750" levels="1" name="Invincibility">
+		<set name="abnormal_effect" value="INVINCIBILITY"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="invincibility"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1418"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Monster PC Bomb Making - Invincibility
+
+	-->
+    <skill id="1751" levels="1" name="Monster PC Bomb Making">
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="invincibility"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1418"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		PC becomes monster bomb - DD + DOT
+
+	-->
+    <skill id="1752" levels="1" name="PC becomes monster bomb">
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill1169"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mass Kill - none
+
+	-->
+    <skill id="1753" levels="1" name="Mass Kill">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Self-destruction - DD + DOT
+
+	-->
+    <skill id="1754" levels="1" name="Self-destruction">
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill1754"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Monster Area Attack - Range Attack
+
+	-->
+    <skill id="1755" levels="1" name="Monster Area Attack">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0036"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Trick - Cancel target
+
+	-->
+    <skill id="1756" levels="1" name="Trick">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Attack Enhance - Enhances P. Atk., M. Atk., Atk. Spd., and Casting Spd.
+
+	-->
+    <skill id="1757" levels="10" name="Attack Enhance">
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0077"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Monster Mass Kill - none
+
+	-->
+    <skill id="1758" levels="1" name="Monster Mass Kill">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Armor Destroyer - Cuts the enemy's P. Def. and M. Def. when attacking.
+
+	-->
+    <skill id="1759" levels="1" name="Armor Destroyer">
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0122"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Armor Destruction - P. Def. and M. Def. decreased 7%. Additional 350 decrease. Evasion 4 decrease. Accumulates with every incurred attack.
+
+		LvL.1	description: decreased 7%. Additional 350 decrease. Evasion 4 decrease. Accumulates with every incurred attack.	cast_range: 900
+		LvL.2	description: decreased 14%. Additional 420 decrease. Evasion 5 decrease.	cast_range: -1
+		LvL.3	description: decreased 21%. Additional 490 decrease. Evasion 6 decrease.	cast_range: -1
+		LvL.4	description: decreased 28%. Additional 560 decrease. Evasion 7 decrease.	cast_range: -1
+		LvL.5	description: decreased 35%. Additional 630 decrease. Evasion 8 decrease.	cast_range: -1
+		LvL.6	description: decreased 35%. Additional 1400 decrease. Evasion 9 decrease.	cast_range: -1
+	-->
+    <skill id="1760" levels="6" name="Armor Destruction">
+		<table name="#abnormal_level">1 2 3 4 5 6</table>
+		<table name="#abnormal_time">5 10 15 20 20 20</table>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="absorb"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0122"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Armor Destruction - Decreases P. Def. as it accumulates. Currently decreased by 10%.
+
+		LvL.1	description: Currently decreased by 10%.
+		LvL.2	description: Currently decreased by 20%.
+		LvL.3	description: Currently decreased by 30%.
+		LvL.4	description: Currently decreased by 40%.
+		LvL.5	description: Currently decreased by 50%.
+		LvL.6	description: Currently decreased by 60%.
+		LvL.7	description: Currently decreased by 70%.
+		LvL.8	description: Currently decreased by 80%.
+		LvL.9	description: Currently decreased by 90%.
+		LvL.10	description: Currently decreased by 99%.
+	-->
+    <skill id="1761" levels="10" name="Armor Destruction">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9 10</table>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="absorb"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0122"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Boss Multi Resistance - Immune to knock back, knock down, binding, mutation, sleep, paralysis, hold
+
+	-->
+    <skill id="1762" levels="1" name="Boss Multi Resistance">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Boss Knock Back Resistance - none
+
+	-->
+    <skill id="1763" levels="1" name="Boss Knock Back Resistance">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Boss Knock Down Resistance - none
+
+	-->
+    <skill id="1764" levels="1" name="Boss Knock Down Resistance">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Boss Binding Resistance - none
+
+	-->
+    <skill id="1765" levels="1" name="Boss Binding Resistance">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Boss Transform Resistance - none
+
+	-->
+    <skill id="1766" levels="1" name="Boss Transform Resistance">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

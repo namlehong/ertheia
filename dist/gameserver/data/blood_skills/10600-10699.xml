@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Shadow Dodge - For 10 sec., has a 90% of evading melee and ranged P. Skill attacks. Requires a dagger or dual dagger.
+
+	-->
+    <skill id="10606" levels="1" name="Shadow Dodge">
+		<set name="abnormal_time" value="10"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill11862"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="pSkillEvasion" value="90"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Maximum Mortality - For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger.
+
+	-->
+    <skill id="10607" levels="1" name="Maximum Mortality">
+		<set name="abnormal_time" value="60"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10607"/>
+		<set name="lethal2DepensencyAddon" value="20"/>
+		<set name="lethal2SkillDepencensyAddon" value="10607"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.0"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Superior Haste - Physical skill Cooldown - 5%. Spd. + 5.
+
+		LvL.1	description: Physical skill Cooldown - 5%. + 5.
+		LvL.2	description: Physical skill Cooldown - 6%. + 6.
+		LvL.3	description: Physical skill Cooldown - 7%. + 7.
+		LvL.4	description: Physical skill Cooldown - 10%. + 10.
+	-->
+    <skill id="10608" levels="4" name="Superior Haste">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#reuse">0.95 0.94 0.93 0.9</table>
+		<table name="#spd">5 6 7 10</table>
+		<set name="icon" value="icon.skill10608"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<mul order="0x30" stat="mReuse" value="#reuse"/>
+			<mul order="0x30" stat="pReuse" value="#reuse"/>
+			<add order="0x40" stat="runSpd" value="#spd"/>
+		</for>
+	</skill>
+    <!--
+		Critical Chances - For 5 min., Critical Damage + 304 and vital spot attack success rate + 15%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger.
+
+	-->
+    <skill id="10609" levels="1" name="Critical Chances">
+		<set name="icon" value="icon.skill10878"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Critical Expansions - Max P. Critical increases. Applies when a dagger or dual dagger is equipped.
+
+	-->
+    <skill id="10610" levels="1" name="Critical Expansions">
+		<set name="icon" value="icon.skill0819"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Melee Reflect - For 10 sec, has a 90% chance of reflecting physical skill damage to the attacker. Requires a dagger or dual dagger.
+
+	-->
+    <skill id="10653" levels="1" name="Melee Reflect">
+		<table name="#mpConsume2">38</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="avoid_skill_special"/>
+		<set name="coolTime" value="100"/>
+		<set name="hitTime" value="900"/>
+		<set name="icon" value="icon.skill11863"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="reflectPSkillDam" value="50"/> <!--maybe more or less? !-->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Maximum Mortality - For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger.
+
+	-->
+    <skill id="10654" levels="1" name="Maximum Mortality">
+		<set name="abnormal_time" value="60"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10607"/>
+		<set name="lethal2DepensencyAddon" value="20"/>
+		<set name="lethal2SkillDepencensyAddon" value="10654"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113" addName="1">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.0"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Superior Critical Damage - Critical Damage + 5%, Speed + 2.
+
+		LvL.1	description: Critical Damage + 5%, Speed + 2.
+		LvL.2	description: Critical Damage + 6%, Speed + 3.
+		LvL.3	description: Critical Damage + 7%, Speed + 4.
+		LvL.4	description: Critical Damage + 10%, Speed + 5.
+	-->
+    <skill id="10655" levels="4" name="Superior Critical Damage">
+		<table name="#dam">1.05 1.06 1.07 1.1</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#spd">2 3 4 5</table>
+		<set name="icon" value="icon.skill10655"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<mul order="0x30" stat="pCritDamage" value="#dam"/>
+			<add order="0x40" stat="runSpd" value="#spd"/>
+		</for>
+	</skill>
+    <!--
+		Critical Prowess - For 5 min., Critical Damage + 608 and vital spot attack success rate + 5%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger.
+
+	-->
+    <skill id="10656" levels="1" name="Critical Prowess">
+		<set name="icon" value="icon.skill10656"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

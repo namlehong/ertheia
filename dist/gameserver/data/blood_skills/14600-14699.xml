@@ -1,0 +1,1580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Chain Skills - Enables use of chain skills.
+
+	-->
+    <skill id="14600" levels="1" name="Chain Skills">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Mark of Weakness - For 10 seconds, weakens the enemy. Decreases 174 HP per second and increases weakness to de-buff by 5%.
+
+	-->
+    <skill id="14601" levels="1" name="Cry of Destiny - Mark of Weakness">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1200"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_debuff"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11259"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack1"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cry of Destiny - Mark of Plague - Stigma that connects to the epidemic dimension. For 10 seconds, inflicts the plague in the enemy. Decreases 238 HP per second and block recovery.
+
+	-->
+    <skill id="14602" levels="1" name="Cry of Destiny - Mark of Plague">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_debuff_b"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11261"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack2"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cry of Destiny - Exile - Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second.
+
+	-->
+    <skill id="14603" levels="1" name="Cry of Destiny - Exile">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DEPORT"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="deport"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11273"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack3"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Chain Skills - Enables use of chain skills.
+
+	-->
+    <skill id="14604" levels="1" name="Chain Skills">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Crippling Attack - Attacks the target with 5175 power added to P. Atk. For 5 seconds, decreases the enemy's P. Def./M. Def. by 70% and evasion by 10.
+
+	-->
+    <skill id="14605" levels="1" name="Cry of Destiny - Crippling Attack">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="910"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="critical_prob_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill11509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack1"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cry of Destiny - Death Strike - Attacks the target with 9444 Power added to P. Atk.
+
+	-->
+    <skill id="14606" levels="1" name="Cry of Destiny - Death Strike">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1409"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill11511"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack2"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cry of Destiny - Pipe Organ Melody - For 10 seconds, increases Max HP by 2572, Max MP by 953, HP recovery by 20%, and MP recovery by 20%.
+
+	-->
+    <skill id="14607" levels="1" name="Cry of Destiny - Pipe Organ Melody">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="max_hp_up"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11519"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Chain Skills - Enables use of chain skills.
+
+	-->
+    <skill id="14608" levels="1" name="Chain Skills">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Dark Blast - Inflicts no-type damage on the enemy with 124 power added to M. Atk. Decreases the enemy's attacking urge against yourself.
+
+	-->
+    <skill id="14609" levels="1" name="Cry of Destiny - Dark Blast">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11766"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack1"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cry of Destiny - Radiant Heal - Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP.
+
+	-->
+    <skill id="14610" levels="1" name="Cry of Destiny - Radiant Heal">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11755"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack2"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cry of Destiny - Dark Force - Pushes and inflicts a magic attack.
+
+	-->
+    <skill id="14611" levels="1" name="Cry of Destiny - Dark Force">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack3"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Press the icon to use the chain skill. - Can use chain attacks.
+
+	-->
+    <skill id="14612" levels="1" name="Press the icon to use the chain skill.">
+		<set name="reuseDelay" value="3000"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="npc_attack1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CHAIN_CALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="chainIndex" value="0"/>
+		<set name="isHideUseMessage" value="true"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack2"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack3"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Press the icon to use the chain skill. - Can use chain attacks.
+
+	-->
+    <skill id="14613" levels="1" name="Press the icon to use the chain skill.">
+		<set name="reuseDelay" value="3000"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="npc_attack2"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CHAIN_CALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="chainIndex" value="0"/>
+		<set name="isHideUseMessage" value="true"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack1"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack3"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Press the icon to use the chain skill. - Can use chain attacks.
+
+	-->
+    <skill id="14614" levels="1" name="Press the icon to use the chain skill.">
+		<set name="reuseDelay" value="3000"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="npc_attack3"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CHAIN_CALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="chainIndex" value="0"/>
+		<set name="isHideUseMessage" value="true"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack1"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="npc_attack2"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Teredor Biting - P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack.
+
+	-->
+    <skill id="14615" levels="1" name="Teredor Biting">
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="absorb"/>
+		<set name="icon" value="icon.skill0122"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blood Siphon - Blood is being sucked.
+
+	-->
+    <skill id="14616" levels="1" name="Blood Siphon">
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Knock Down Resistance - none
+
+	-->
+    <skill id="14617" levels="1" name="Knock Down Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Knock Back Resistance - none
+
+	-->
+    <skill id="14618" levels="1" name="Knock Back Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Disarm Resistance - none
+
+	-->
+    <skill id="14619" levels="1" name="Disarm Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Aerial Yoke Resistance 1 - none
+
+		LvL.1	name: Aerial Yoke Resistance 1
+		LvL.2	name: Aerial Yoke Resistance 2
+		LvL.3	name: Aerial Yoke Resistance 3
+		LvL.4	name: Aerial Yoke Resistance 4
+	-->
+    <skill id="14620" levels="1" name="Aerial Yoke Resistance 1">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Pulling Resistance - none
+
+	-->
+    <skill id="14621" levels="1" name="Pulling Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Banishment Resistance - none
+
+	-->
+    <skill id="14622" levels="1" name="Banishment Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mutation Resistance - none
+
+	-->
+    <skill id="14623" levels="1" name="Mutation Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Apherus Dark Space - Atk. Spd. and HP are decreased.
+
+	-->
+    <skill id="14624" levels="1" name="Apherus Dark Space">
+		<set name="castRange" value="1000"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0048"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect time="1" count="10" name="DamOverTime" value="810">
+				<mul order="0x30" stat="pAtkSpd" value="0.90"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Release of Power - Shares power with the target.
+
+	-->
+    <skill id="14625" levels="1" name="Release of Power">
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="10000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="power" value="1488"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="castRange" value="900"/>
+	</skill>
+    <!--
+		Mental Attack Resistance - none
+
+	-->
+    <skill id="14626" levels="1" name="Mental Attack Resistance">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Foul Secretion - P. Def. is decreased.
+
+	-->
+    <skill id="14627" levels="1" name="Foul Secretion">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0122"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Gastric Juice Eruption - Speed is decreased.
+
+	-->
+    <skill id="14628" levels="1" name="Gastric Juice Eruption">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill1184"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Corpse Grinding - Bleed status.
+
+	-->
+    <skill id="14629" levels="1" name="Corpse Grinding">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0096"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Discard Decayed Branch - Knocked back.
+
+	-->
+    <skill id="14630" levels="1" name="Discard Decayed Branch">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Foul Spore - Silence status.
+
+	-->
+    <skill id="14631" levels="1" name="Foul Spore">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="SILENCE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1064"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Terrifying Sword Dance - Atk. Spd. is increased.
+
+	-->
+    <skill id="14632" levels="1" name="Terrifying Sword Dance">
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="7000"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Severed Ankle - Knocked back.
+
+	-->
+    <skill id="14633" levels="1" name="Severed Ankle">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="87"/>
+		<set name="icon" value="icon.skill0261"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stigma's Despair - none
+
+	-->
+    <skill id="14634" levels="1" name="Stigma's Despair">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="7000"/>
+		<set name="magicLevel" value="87"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill14634"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Corpse Explosion - none
+
+	-->
+    <skill id="14635" levels="1" name="Corpse Explosion">
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="87"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill14635"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Merciless Grip - Aerial yoke status.
+
+	-->
+    <skill id="14636" levels="1" name="Merciless Grip">
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="87"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Driving Fog - none
+
+	-->
+    <skill id="14637" levels="1" name="Driving Fog">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="87"/>
+		<set name="icon" value="icon.skill0014637"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blade Claw - Bleed status.
+
+	-->
+    <skill id="14638" levels="1" name="Blade Claw">
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0096"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Compound Poison - Poison status.
+
+	-->
+    <skill id="14639" levels="1" name="Compound Poison">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0129"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		High-speed Movement - Evasion is increased.
+
+	-->
+    <skill id="14640" levels="1" name="High-speed Movement">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="avoid_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1087"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Earthquake - none
+
+	-->
+    <skill id="14641" levels="1" name="Earthquake">
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0014641"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Sever - Knocked back.
+
+	-->
+    <skill id="14642" levels="1" name="Sever">
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="87"/>
+		<set name="icon" value="icon.skill0261"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Summon - none
+
+	-->
+    <skill id="14643" levels="1" name="Summon">
+		<set name="reuseDelay" value="20000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="87"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		White Dog's Fang - none
+
+	-->
+    <skill id="14644" levels="1" name="White Dog's Fang">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="87"/>
+		<set name="icon" value="icon.skill0014644"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dark Arrow - Knocked back.
+
+	-->
+    <skill id="14645" levels="1" name="Dark Arrow">
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="88"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Polarization - Atk. Spd. is decreased.
+
+	-->
+    <skill id="14646" levels="1" name="Polarization">
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="88"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0115"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Polarization - Atk. Spd. is decreased.
+
+	-->
+    <skill id="14647" levels="1" name="Polarization">
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="88"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0115"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Flood - Flood status.
+
+	-->
+    <skill id="14648" levels="1" name="Flood">
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="berserker"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1062"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bounce - Bounce status.
+
+	-->
+    <skill id="14649" levels="1" name="Bounce">
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="fly_away"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill4107"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Corpse' Blow - Monster attack!
+
+	-->
+    <skill id="14650" levels="1" name="Corpse' Blow">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stun - Stuns the enemy for 7 seconds.
+
+	-->
+    <skill id="14651" levels="1" name="Stun">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1200"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="7"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0092"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blood Siphon - Damage blood siphon 100%.
+
+	-->
+    <skill id="14652" levels="1" name="Blood Siphon">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="vampiric_attack"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1268"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Rigor Mortis - Monster absolute defense. Defense increased 50000.
+
+	-->
+    <skill id="14653" levels="1" name="Rigor Mortis">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pd_up_special"/>
+		<set name="icon" value="icon.skill0110"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Darkness Drain - Monster heal. Power 1024.
+
+	-->
+    <skill id="14654" levels="1" name="Darkness Drain">
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1401"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Barrier of Reflection - Reflect damage 50%
+
+	-->
+    <skill id="14655" levels="1" name="Barrier of Reflection">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dmg_shield"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Corpse Lunacy - Increases P. Atk., Critical rage/damage, and Atk. Spd. by 100%.
+
+	-->
+    <skill id="14656" levels="1" name="Corpse Lunacy">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1068"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lingering Lunacy - Aftereffect of going insane.
+
+	-->
+    <skill id="14657" levels="1" name="Lingering Lunacy">
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1170"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spinning Slasher - Monster attack! Power 36675.
+
+	-->
+    <skill id="14658" levels="1" name="Spinning Slasher">
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0036"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stun - Stuns the enemy for 7 seconds.
+
+	-->
+    <skill id="14659" levels="1" name="Stun">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1200"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="7"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0092"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blood Strike - Monster attack! Power 50937.
+
+	-->
+    <skill id="14660" levels="1" name="Blood Strike">
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Darkness Wave - Monster attack! Power 49414.
+
+	-->
+    <skill id="14661" levels="1" name="Darkness Wave">
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0056"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Darkness Shiver - Monster attack! Power 50937.
+
+	-->
+    <skill id="14662" levels="1" name="Darkness Shiver">
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0056"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Guardian's Blow - Monster attack! Power 45844.
+
+	-->
+    <skill id="14663" levels="1" name="Guardian's Blow">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Destruction Blow - Monster attack! Power 50937.
+
+	-->
+    <skill id="14664" levels="1" name="Destruction Blow">
+		<set name="reuseDelay" value="15000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0003"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Ferocious Charge - Monster Rush
+
+	-->
+    <skill id="14665" levels="1" name="Ferocious Charge">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0493"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Penetrating Blow - Monster attack! Power 50937.
+
+	-->
+    <skill id="14666" levels="1" name="Penetrating Blow">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0056"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Flames of Judgment - none
+
+	-->
+    <skill id="14667" levels="1" name="Flames of Judgment">
+		<set name="reuseDelay" value="1200"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1230"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Firestorm of Judgment - none
+
+	-->
+    <skill id="14668" levels="1" name="Firestorm of Judgment">
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1296"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Earth Wyrm Feeler Strike - none
+
+	-->
+    <skill id="14669" levels="1" name="Earth Wyrm Feeler Strike">
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0773"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Earth Wyrm Feeler Strike - none
+
+	-->
+    <skill id="14670" levels="1" name="Earth Wyrm Feeler Strike">
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0036"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Earth Wyrm Feeler Strike - none
+
+	-->
+    <skill id="14671" levels="1" name="Earth Wyrm Feeler Strike">
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0036"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bounce - Bounce status.
+
+	-->
+    <skill id="14672" levels="1" name="Bounce">
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="fly_away"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill4107"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Shield Charge - Uses a shield to attack the selected target with 1500 power added to P. Atk. Also decreases P. Def. by 10% and physical evasion by 2. Increase incurred physical critical damage by 10%.
+
+	-->
+    <skill id="14673" levels="1" name="Cry of Destiny - Shield Charge">
+		<set name="coolTime" value="569"/>
+		<set name="hitTime" value="800"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="shield_attack"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10008"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Chain Strike - Drags a target to the center.
+
+	-->
+    <skill id="14674" levels="1" name="Cry of Destiny - Chain Strike">
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10015"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Last Judgment - Attacks with 2000 power added to P. Atk. Decreases Speed by 10%.
+
+	-->
+    <skill id="14675" levels="1" name="Cry of Destiny - Last Judgment">
+		<set name="coolTime" value="470"/>
+		<set name="hitTime" value="1200"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10009"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Armor Destruction - Attacks the enemy with 1300 power added to P. Atk. Weakens P. Def. Additionally absorbs Momentum.
+
+	-->
+    <skill id="14676" levels="1" name="Cry of Destiny - Armor Destruction">
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="1090"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pd_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10258"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Giant Punch - Strikes down at the ground with a fist to knock down nearby enemies for 3 seconds. Dualsword/two-handed sword/spear/blunt weapon must be equipped.
+
+	-->
+    <skill id="14677" levels="1" name="Cry of Destiny - Giant Punch">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10266"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Power Bomber - Powerfully strikes the target with 2000 Power added to P. Atk. to knock down for 2 seconds.
+
+	-->
+    <skill id="14678" levels="1" name="Cry of Destiny - Power Bomber">
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="1490"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10262"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Heart Breaker - Inflicts a powerful vital spot attack by striking the heart. Attack the target with 1700 Power added to P. Atk. Over-hit. Half-kill.
+
+	-->
+    <skill id="14679" levels="1" name="Cry of Destiny - Heart Breaker">
+		<set name="coolTime" value="699"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Dark Paralysis - Seals with the power of darkness. Causes the enemy's body to go completely rigid for 10 seconds and causes paralysis for 5 seconds.
+
+	-->
+    <skill id="14680" levels="1" name="Cry of Destiny - Dark Paralysis">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10514"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Throwing Sand - Hurls poison sand at the target. Greatly decreases Accuracy for 5 seconds and lures to yourself.
+
+	-->
+    <skill id="14681" levels="1" name="Cry of Destiny - Throwing Sand">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="hit_down"/>
+		<set name="icon" value="icon.skill10540"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Pinpoint Shot - Attacks the weak points of long-range enemies. Attack the target with 2700 Power added to P. Atk. Disregards 30% of P. Def. and attacks.
+
+	-->
+    <skill id="14682" levels="1" name="Cry of Destiny - Pinpoint Shot">
+		<set name="coolTime" value="850"/>
+		<set name="hitTime" value="2200"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10763"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Quick Fire - Increases Atk. Spd. by 50% when equipped with a bow or crossbow.
+
+	-->
+    <skill id="14683" levels="1" name="Cry of Destiny - Quick Fire">
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="800"/>
+		<set name="abnormal_effect" value="REAL_TARGET"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="real_target"/>
+		<set name="icon" value="icon.skill10779"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Recoil Shot - Shoots an arrow with 1200 power added to P. Atk. to the target to push out the enemy. Bow/crossbow required. Over-hit. Chance of canceling the opponent's target.
+
+	-->
+    <skill id="14684" levels="1" name="Cry of Destiny - Recoil Shot">
+		<set name="coolTime" value="449"/>
+		<set name="hitTime" value="2200"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10770"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Elemental Spike - Inflicts magic damage with 30 power on the selected target. Decreases Fire Resistance by 20.
+
+	-->
+    <skill id="14685" levels="1" name="Cry of Destiny - Elemental Spike">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="2279"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="armor_unholy"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Elemental Crash - Inflicts magic damage on the enemy with 35 power. Also decreases Speed and inflicts fear.
+
+	-->
+    <skill id="14686" levels="1" name="Cry of Destiny - Elemental Crash">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="2779"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11513"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Hell Binding - Floats the target into the air and stops him from moving for awhile.
+
+	-->
+    <skill id="14687" levels="1" name="Cry of Destiny - Hell Binding">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill11050"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Mark of Weakness - For 10 seconds, weakens the enemy. Decreases 40 HP per second and increases weakness to de-buff by 5%.
+
+		LvL.1	description: Decreases 40 HP per second and increases weakness to de-buff by 5%.
+		LvL.2	description: Decreases 5 HP per second and increases weakness to de-buff by 5%.
+	-->
+    <skill id="14688" levels="2" name="Cry of Destiny - Mark of Weakness">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1200"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_debuff"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11259"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Mark of Plague - Stigma that connects to the epidemic dimension. For 10 seconds, inflicts the plague in the enemy. Decreases 70 HP per second and block recovery.
+
+		LvL.1	description: Decreases 70 HP per second and block recovery.
+		LvL.2	description: Decreases 8 HP per second and block recovery.
+	-->
+    <skill id="14689" levels="2" name="Cry of Destiny - Mark of Plague">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="multi_debuff_b"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11261"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Exile - Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second.
+
+	-->
+    <skill id="14690" levels="1" name="Cry of Destiny - Exile">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DEPORT"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="deport"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11273"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Crippling Attack - Attacks the target with 1300 power added to P. Atk. For 5 seconds, decreases the enemy's P. Def./M. Def. by 30% and evasion by 10.
+
+	-->
+    <skill id="14691" levels="1" name="Cry of Destiny - Crippling Attack">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="910"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="critical_prob_down"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill11509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Death Strike - Attacks the target with 1400 Power added to P. Atk.
+
+	-->
+    <skill id="14692" levels="1" name="Cry of Destiny - Death Strike">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1409"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill11511"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Pipe Organ Melody - For 30 minutes, increases Max HP by 2572, Max MP by 953, HP recovery by 20%, and MP recovery by 20%.
+
+	-->
+    <skill id="14693" levels="1" name="Cry of Destiny - Pipe Organ Melody">
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="699"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="max_hp_up"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="icon" value="icon.skill11519"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Dark Blast - Inflicts no-type damage on the enemy with 31 power added to M. Atk. Decreases the enemy's attacking urge against yourself.
+
+	-->
+    <skill id="14694" levels="1" name="Cry of Destiny - Dark Blast">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1175"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Radiant Heal - Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP.
+
+	-->
+    <skill id="14695" levels="1" name="Cry of Destiny - Radiant Heal">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11755"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cry of Destiny - Dark Force - Pushes and inflicts a magic attack.
+
+	-->
+    <skill id="14696" levels="1" name="Cry of Destiny - Dark Force">
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Ghost's Hell Binding - Floats the target into the air and stops him from moving for awhile.
+
+	-->
+    <skill id="14697" levels="1" name="Ghost's Hell Binding">
+		<set name="reuseDelay" value="120000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill11050"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Current Shock - Incurs a current shock.
+
+	-->
+    <skill id="14698" levels="1" name="Current Shock">
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="multi_debuff_b"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1072"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect count="3" name="DamOverTime" value="40"/>
+		</for>
+	</skill>
+    <!--
+		Illusion of Pain - Translucent status.
+
+	-->
+    <skill id="14699" levels="1" name="Illusion of Pain">
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="STEALTH"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="stealth"/>
+		<set name="icon" value="icon.skill0411"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

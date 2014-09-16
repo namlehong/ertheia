@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Light Armor Mastery - Test - Spd. And Skill Critical Rate increase depending on DEX.
+
+	-->
+    <skill id="19100" levels="1" name="Light Armor Mastery - Test">
+		<set name="icon" value="icon.skill19100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Chain Blow - Test - Inflicts damage with 33717 Power added to P. Atk. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. Additional damage occurs with Bleed.
+
+	-->
+    <skill id="19101" levels="1" name="Chain Blow - Test">
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="699"/>
+		<set name="hitTime" value="1130"/>
+		<set name="icon" value="icon.skill19101"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Chaos Sympathy - Temporarily makes a participant in the Ceremony of Chaos invincible.
+
+	-->
+    <skill id="19102" levels="1" name="Chaos Sympathy">
+		<set name="icon" value="icon.skill1505"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Resident Power - For clan members owning a residence, Max CP + 700, and PvP Def. + 3%.
+
+	-->
+    <skill id="19103" levels="1" name="Resident Power">
+		<set name="icon" value="icon.skill0050"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" value="700"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.03"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.03"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.03"/>
+		</for>
+	</skill>
+    <!--
+		Resident Power - For clan members owning a residence, Max CP + 1000, and PvP Def. + 5%.
+
+	-->
+    <skill id="19104" levels="2" name="Resident Power">
+		<set name="icon" value="icon.skill0050"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" value="1000"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Resident Advantage - For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 13%.
+
+	-->
+    <skill id="19105" levels="1" name="Resident Advantage">
+		<set name="icon" value="icon.skill0820"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.13">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="mAtkSpd" value="1.13">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="runSpd" value="1.13">
+				<player maxLevel="84"/>
+			</mul>
+		</for>
+	</skill>
+    <!--
+		Resident Advantage - For clan members level 1 - 84 owning a residence, Atk. Spd./ Casting Spd/ Speed + 15%.
+
+	-->
+    <skill id="19106" levels="2" name="Resident Advantage">
+		<set name="icon" value="icon.skill0820"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.15">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="mAtkSpd" value="1.15">
+				<player maxLevel="84"/>
+			</mul>
+			<mul order="0x30" stat="runSpd" value="1.15">
+				<player maxLevel="84"/>
+			</mul>
+		</for>
+	</skill>
+    <!--
+		Resident Guidance - For clan members owning a residence, acquired XP + 3%.
+
+	-->
+    <skill id="19107" levels="1" name="Resident Guidance">
+		<set name="icon" value="icon.skill0788_3"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="ExpMultiplier" value="0.03"/>
+		</for>
+	</skill>
+    <!--
+		Resident Guidance - For clan members owning a residence, acquired XP + 5%.
+
+	-->
+    <skill id="19108" levels="2" name="Resident Guidance">
+		<set name="icon" value="icon.skill0788_5"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="ExpMultiplier" value="0.05"/>
+		</for>
+	</skill>
+    <!--
+		Siege Golem's Spirit - Merge with a powerful Siege Golem. For 5 min., P. Def./ M. Def. + 50%, and resistance to bows/crossbows + 50%. Consumes 10 Crystals (R-grade).
+
+	-->
+    <skill id="19109" levels="4" name="Siege Golem's Spirit">
+		<set name="icon" value="icon.skill19109"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="10000"/>
+		<set name="mpConsume2" value="70"/>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<table name="#npcId">15054 15055 15056 15057</table>
+		<set name="hitCancelTime" value="500"/>
+		<set name="itemConsumeId" value="17371"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summonType" value="SIEGE_SUMMON"/>
+		<set name="is_saveable_summon" value="false"/>	<!--TODO: Check.-->
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="abnormal_time" value="300"/>
+		<!-- Summon-specific -->
+		<set name="npcId" value="#npcId"/>
+		<cond msgId="16">
+			<player summon_siege_golem=""/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="pAtk" value="1.5"/>
+				<add order="0x40" stat="mAtk" value="1.5"/>
+				<mul order="0x30" stat="crossbowWpnVuln" value="0.5"/>
+				<mul order="0x30" stat="bowWpnVuln" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Clan Resilience - Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only.
+
+		LvL.1	description: Clan members' resistance to Knock Back / Knock Down + 12. Elder or above only.
+		LvL.2	description: Clan members' resistance to Knock Back / Knock Down + 13. Elder or above only.
+		LvL.3	description: Clan members' resistance to Knock Back / Knock Down + 14. Elder or above only.
+		LvL.4	description: Clan members' resistance to Knock Back / Knock Down + 15. Elder or above only.
+		LvL.5	description: Clan members' resistance to Knock Back / Knock Down + 16. Elder or above only.
+	-->
+    <skill id="19110" levels="5" name="Clan Resilience">
+		<table name="#resist">12 13 14 15 16</table>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill_tough_spirit"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="min_pledge_rank" value="WISEMAN"/>
+		<for>
+			<add order="0x40" stat="knockBackResist" value="#resist"/>
+			<add order="0x40" stat="knockDownResist" value="#resist"/>
+		</for>
+	</skill>
+    <!--
+		Clan Steadfastness - Clan members' resistance to Aerial Yoke + 12. Elder or above only.
+
+		LvL.1	description: Clan members' resistance to Aerial Yoke + 12. Elder or above only.
+		LvL.2	description: Clan members' resistance to Aerial Yoke + 13. Elder or above only.
+		LvL.3	description: Clan members' resistance to Aerial Yoke + 14. Elder or above only.
+		LvL.4	description: Clan members' resistance to Aerial Yoke + 15. Elder or above only.
+		LvL.5	description: Clan members' resistance to Aerial Yoke + 16. Elder or above only.
+	-->
+    <skill id="19111" levels="5" name="Clan Steadfastness">
+		<table name="#airjokeResist">12 13 14 15 16</table>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill_heavy_heart"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="min_pledge_rank" value="WISEMAN"/>
+		<for>
+			<add order="0x40" stat="airjokeResist" value="#airjokeResist"/>
+		</for>
+	</skill>
+    <!--
+		Clan Escape - Teleports nearby clan members to town. Cannot be used in special places such as GM Consultation Services. Consumes 50 Spirit Ores and 2000 Individual Fame. Viscount or above only.
+
+	-->
+    <skill id="19112" levels="1" name="Clan Escape">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="3500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_pledge_party_recall"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_CLAN_ONLY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="50"/>
+		<set name="fameConsume" value="2000"/>
+		<set name="min_pledge_rank" value="VISCOUNT"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Clan Escape Lock - For 60 sec., blocks target's Escape. Consumes 100 Spirit Ores and 3000 Individual Fame. Marquis or above only.
+
+	-->
+    <skill id="19113" levels="1" name="Clan Escape Lock">
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="180"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="clan_recall_block"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_recall"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="min_pledge_rank" value="MARQUIS"/>	<!--Маркиза-->
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="100"/>
+		<set name="castRange" value="600"/>
+		<set name="fameConsume" value="3000"/>
+		<for>
+			<effect name="TeleportBlock"/>
+		</for>
+	</skill>
+    <!--
+		Clan Resurrection Lock - For 60 sec., blocks target's Resurrection. Consumes 150 Spirit Ores and 1000 Clan Reputation. Marquis or above only.
+
+	-->
+    <skill id="19114" levels="1" name="Clan Resurrection Lock">
+		<set name="coolTime" value="500"/>
+		<set name="reuseDelay" value="1800000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="180"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="clan_resurrection_block"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_resurrection"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="min_pledge_rank" value="MARQUIS"/>	<!--Маркиза-->
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="150"/>
+		<set name="castRange" value="600"/>
+		<set name="fameConsume" value="1000"/>
+		<for>
+			<effect name="ResurrectBlock"/>
+		</for>
+	</skill>
+    <!--
+		Air Bike - Can mount the Air Bike. Must belong to a clan Lv. 5 or above.
+
+	-->
+    <skill id="19115" levels="1" name="Air Bike">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_dwarf_craft_vehicle"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<and>
+				<player min_clan_level="5"/>
+				<player can_transform="146"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="Transformation" time="-1" value="146"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Summon Lyn Draco - Can mount a Lind Rider.
+
+	-->
+    <skill id="19116" levels="1" name="Summon Lyn Draco">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_lind_vehicle"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="hitCancelTime" value="500"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+		<cond>
+			<player can_transform="147"/>
+		</cond>
+		<for>
+			<effect name="Transformation" time="-1" value="147"/>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="changebody"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_special_multi"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Dimensional Defense - Status defense abilities are greatly increased by receiving dimensional abilities.
+
+	-->
+    <skill id="19117" levels="1" name="Dimensional Defense">
+		<set name="icon" value="icon.skill14216"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bike Ability - Blend in with enemies to avoid their notice. If you attack in this state, the entire party becomes exposed.
+
+		LvL.1	mp_consume: 61
+		LvL.2	mp_consume: 63
+		LvL.3	mp_consume: 67
+		LvL.4	mp_consume: 70
+	-->
+    <skill id="19118" levels="4" name="Bike Ability">
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noblesse Grace - Retains target's buffs/debuffs upon death, except for Noblesse Grace and Lucky Charm. Consumes 1000 Spirit Ore.
+
+	-->
+    <skill id="19119" levels="1" name="Noblesse Grace">
+		<set name="icon" value="icon.skill1323"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Shield - P. Def. + 2%.
+
+		LvL.1	description: + 2%.
+		LvL.2	description: + 4%.
+		LvL.3	description: + 6%.
+		LvL.4	description: + 8%.
+	-->
+    <skill id="19120" levels="4" name="Noble Shield">
+		<set name="icon" value="icon.skill19120"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Magic Barrier - M. Def. + 3%.
+
+		LvL.1	description: + 3%.
+		LvL.2	description: + 5%.
+		LvL.3	description: + 7%.
+		LvL.4	description: + 10%.
+	-->
+    <skill id="19121" levels="4" name="Noble Magic Barrier">
+		<set name="icon" value="icon.skill19121"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Blessed Body - Max HP + 6%.
+
+		LvL.1	description: Max HP + 6%.
+		LvL.2	description: Max HP + 10%.
+		LvL.3	description: Max HP + 12%.
+		LvL.4	description: Max HP + 16%.
+	-->
+    <skill id="19122" levels="4" name="Noble Blessed Body">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Haste - Atk. Spd. + 2%.
+
+		LvL.1	description: + 2%.
+		LvL.2	description: + 4%.
+		LvL.3	description: + 6%.
+		LvL.4	description: + 9%.
+	-->
+    <skill id="19123" levels="4" name="Noble Haste">
+		<set name="icon" value="icon.skill1086"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Knight Buffs - Paralysis/Stun success rate and defense rate + 5%.
+
+		LvL.1	description: Paralysis/Stun success rate and defense rate + 5%.
+		LvL.2	description: Paralysis/Stun success rate and defense rate + 10%.
+	-->
+    <skill id="19124" levels="2" name="Noble Knight Buffs">
+		<set name="icon" value="icon.skill19124"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Critical Focus - Physical Skill Critical Rate + 5%.
+
+		LvL.1	description: Physical Skill Critical Rate + 5%.
+		LvL.2	description: Physical Skill Critical Rate + 10%.
+	-->
+    <skill id="19125" levels="2" name="Noble Critical Focus">
+		<set name="icon" value="icon.skill0193"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Mindset - MP Recovery Bonus + 4.
+
+		LvL.1	description: MP Recovery Bonus + 4.
+		LvL.2	description: MP Recovery Bonus + 10.
+	-->
+    <skill id="19126" levels="2" name="Noble Mindset">
+		<set name="icon" value="icon.skill0229"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Guidance - P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15.
+
+		LvL.1	description: P Accuracy + 8, M Accuracy + 8, servitor's P Accuracy + 15.
+		LvL.2	description: P Accuracy + 16, M Accuracy + 16, servitor's P Accuracy + 23. Activates Hidden Skill.
+	-->
+    <skill id="19127" levels="2" name="Noble Guidance">
+		<set name="icon" value="icon.skill19127"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Sting - Physical Skill Critical Damage + 5%.
+
+		LvL.1	description: Physical Skill Critical Damage + 5%.
+		LvL.2	description: Physical Skill Critical Damage + 10%.
+	-->
+    <skill id="19128" levels="2" name="Noble Sting">
+		<set name="icon" value="icon.skill10655"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Protection - Critical rate in a normal attack - 2%.
+
+		LvL.1	description: Critical rate in a normal attack - 2%.
+		LvL.2	description: Critical rate in a normal attack - 4%.
+	-->
+    <skill id="19129" levels="2" name="Noble Protection">
+		<set name="icon" value="icon.skill19129"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Attributes - Attack Attribute + 20. 6 Attributes Resistance + 20.
+
+		LvL.1	description: Attack Attribute + 20. 6 Attributes Resistance + 20.
+		LvL.2	description: Attack Attribute + 50. 6 Attributes Resistance + 50.
+	-->
+    <skill id="19130" levels="2" name="Noble Attributes">
+		<set name="icon" value="icon.skill19130"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Expertise - P. Atk. + 3% when a melee two-handed weapon is equipped. Atk. Spd. + 3% when a shield is equipped.
+
+		LvL.1	description: + 3% when a melee two-handed weapon is equipped. + 3% when a shield is equipped.
+		LvL.2	description: + 5% when a melee two-handed weapon is equipped. + 5% when a shield is equipped.
+	-->
+    <skill id="19131" levels="2" name="Noble Expertise">
+		<set name="icon" value="icon.skill19131"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Mind - Physical Skill Cooldown - 3%.
+
+		LvL.1	description: Physical Skill Cooldown - 3%.
+		LvL.2	description: Physical Skill Cooldown - 5%.
+	-->
+    <skill id="19132" levels="2" name="Noble Mind">
+		<set name="icon" value="icon.skill19132"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Heavy Armor Shield - When equipped with Heavy Armor, P. Def. + 3% and Max MP + 6%.
+
+	-->
+    <skill id="19133" levels="1" name="Noble Heavy Armor Shield">
+		<set name="icon" value="icon.skill19133"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Heavy Armor Defense - When equipped with Heavy Armor, P. Def. + 3%.
+
+		LvL.1	description: + 3%.
+		LvL.2	description: + 5%.
+		LvL.3	description: + 7%.
+		LvL.4	description: + 10%.
+	-->
+    <skill id="19134" levels="4" name="Noble Heavy Armor Defense">
+		<set name="icon" value="icon.skill19134"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Heavy Armor Attack - When equipped with Heavy Armor, P. Atk. + 2%.
+
+		LvL.1	description: + 2%.
+		LvL.2	description: + 4%.
+		LvL.3	description: + 6%.
+		LvL.4	description: + 8%.
+	-->
+    <skill id="19135" levels="4" name="Noble Heavy Armor Attack">
+		<set name="icon" value="icon.skill19135"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Prayer - Received heal amount + 3%.
+
+		LvL.1	description: Received heal amount + 3%.
+		LvL.2	description: Received heal amount + 6%.
+		LvL.3	description: Received heal amount + 9%.
+	-->
+    <skill id="19136" levels="3" name="Noble Prayer">
+		<set name="icon" value="icon.skill1273"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Guts - Received damage - 10%.
+
+	-->
+    <skill id="19137" levels="1" name="Noble Guts">
+		<set name="icon" value="icon.skill19137"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Frenzy - Physical Skill Power + 10%.
+
+	-->
+    <skill id="19138" levels="1" name="Noble Frenzy">
+		<set name="icon" value="icon.skill19138"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Might - P. Atk. + 2%.
+
+		LvL.1	description: + 2%.
+		LvL.2	description: + 4%.
+		LvL.3	description: + 6%.
+		LvL.4	description: + 9%.
+	-->
+    <skill id="19139" levels="4" name="Noble Might">
+		<set name="icon" value="icon.skill19139"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Cost - Physical Skill MP Consumption - 5%.
+
+		LvL.1	description: Physical Skill MP Consumption - 5%.
+		LvL.2	description: Physical Skill MP Consumption - 10%.
+	-->
+    <skill id="19140" levels="2" name="Noble Cost">
+		<set name="icon" value="icon.skill19140"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Wind Walk - Speed + 5.
+
+		LvL.1	description: Speed + 5.
+		LvL.2	description: Speed + 10.
+	-->
+    <skill id="19141" levels="2" name="Noble Wind Walk">
+		<set name="icon" value="icon.skill1204"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Warrior Buffs - Stun/Restrain success rate and defense rate + 5%.
+
+		LvL.1	description: Stun/Restrain success rate and defense rate + 5%.
+		LvL.2	description: Stun/Restrain success rate and defense rate + 10%.
+	-->
+    <skill id="19142" levels="2" name="Noble Warrior Buffs">
+		<set name="icon" value="icon.skill19142"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Focus - P. Critical Rate + 20.
+
+		LvL.1	description: P Critical Rate + 20.
+		LvL.2	description: P Critical Rate + 40.
+	-->
+    <skill id="19143" levels="2" name="Noble Focus">
+		<set name="icon" value="icon.skill1077"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Backfire - Rear Damage + 3%.
+
+		LvL.1	description: Rear Damage + 3%.
+		LvL.2	description: Rear Damage + 6%.
+	-->
+    <skill id="19144" levels="2" name="Noble Backfire">
+		<set name="icon" value="icon.skill0030"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Death Whisper - Physical Critical Damage + 3%.
+
+		LvL.1	description: Physical Critical Damage + 3%.
+		LvL.2	description: Physical Critical Damage + 5%.
+	-->
+    <skill id="19145" levels="2" name="Noble Death Whisper">
+		<set name="icon" value="icon.skill4278"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Protection Magic - Chance of receiving an M. Critical attack - 2%.
+
+		LvL.1	description: Chance of receiving an M Critical attack - 2%.
+		LvL.2	description: Chance of receiving an M Critical attack - 4%.
+	-->
+    <skill id="19146" levels="2" name="Noble Protection Magic">
+		<set name="icon" value="icon.skill19146"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Ambush - Spd. + 6 when not engaged in battle.
+
+		LvL.1	description: + 6 when not engaged in battle.
+		LvL.2	description: + 12 when not engaged in battle.
+	-->
+    <skill id="19147" levels="2" name="Noble Ambush">
+		<set name="icon" value="icon.skill1905"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Light Armor Blessing - When equipped with Light Armor, Max HP + 6% and Max MP + 6%.
+
+	-->
+    <skill id="19148" levels="1" name="Noble Light Armor Blessing">
+		<set name="icon" value="icon.skill19148"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Anti Magic - When equipped with Light Armor, M. Def. + 3%.
+
+		LvL.1	description: + 3%.
+		LvL.2	description: + 5%.
+		LvL.3	description: + 9%.
+		LvL.4	description: + 12%.
+	-->
+    <skill id="19149" levels="4" name="Noble Anti Magic">
+		<set name="icon" value="icon.skill0146"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Light Armor Attack - When equipped with Light Armor, P. Atk. + 2%.
+
+		LvL.1	description: + 2%.
+		LvL.2	description: + 4%.
+		LvL.3	description: + 6%.
+		LvL.4	description: + 8%.
+	-->
+    <skill id="19150" levels="4" name="Noble Light Armor Attack">
+		<set name="icon" value="icon.skill19150"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Vampiric Rage - During an attack, there is a chance of restoring 3% of damage as HP.
+
+		LvL.1	description: During an attack, there is a chance of restoring 3% of damage as HP
+		LvL.2	description: During an attack, there is a chance of restoring 6% of damage as HP
+		LvL.3	description: During an attack, there is a chance of restoring 9% of damage as HP
+	-->
+    <skill id="19151" levels="3" name="Noble Vampiric Rage">
+		<set name="icon" value="icon.skill1268"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Endurance - Damage received while immobile decreases - 21%.
+
+	-->
+    <skill id="19152" levels="1" name="Noble Endurance">
+		<set name="icon" value="icon.skill19152"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Critical Boost - P. Critical Rate + 50, M. Critical Rate + 20, and Skill Mastery Rate + 50%.
+
+	-->
+    <skill id="19153" levels="1" name="Noble Critical Boost">
+		<set name="icon" value="icon.skill19153"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Empower - M. Atk. + 3% and recovery magic Power + 47.
+
+		LvL.1	description: + 3% and recovery magic Power + 47.
+		LvL.2	description: + 6% and recovery magic Power + 94.
+		LvL.3	description: + 9% and recovery magic Power + 141.
+		LvL.4	description: + 14% and recovery magic Power + 211.
+	-->
+    <skill id="19154" levels="4" name="Noble Empower">
+		<set name="icon" value="icon.skill1059"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Acumen - Casting Spd. + 2%.
+
+		LvL.1	description: + 2%.
+		LvL.2	description: + 4%.
+	-->
+    <skill id="19155" levels="2" name="Noble Acumen">
+		<set name="icon" value="icon.skill1085"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Wizard Buffs - Restrain/Mind success rate and defense rate + 5%.
+
+		LvL.1	description: Restrain/Mind success rate and defense rate + 5%.
+		LvL.2	description: Restrain/Mind success rate and defense rate + 10%.
+	-->
+    <skill id="19156" levels="2" name="Noble Wizard Buffs">
+		<set name="icon" value="icon.skill19156"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Wild Magic - M. Critical Rate + 20.
+
+		LvL.1	description: M Critical Rate + 20.
+		LvL.2	description: M Critical Rate + 30.
+	-->
+    <skill id="19157" levels="2" name="Noble Wild Magic">
+		<set name="icon" value="icon.skill1303"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Blessed Soul - Max MP + 6%.
+
+		LvL.1	description: Max MP + 6%.
+		LvL.2	description: Max MP + 10%.
+	-->
+    <skill id="19158" levels="2" name="Noble Blessed Soul">
+		<set name="icon" value="icon.skill1048"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Resistance - Debuff Resistance + 5%.
+
+		LvL.1	description: Debuff Resistance + 5%.
+		LvL.2	description: Debuff Resistance + 10%.
+	-->
+    <skill id="19159" levels="2" name="Noble Resistance">
+		<set name="icon" value="icon.skill11567"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Magic Death - M. Critical Damage + 3% and recovery magic Power + 94.
+
+		LvL.1	description: M Critical Damage + 3% and recovery magic Power + 94.
+		LvL.2	description: M Critical Damage + 5% and recovery magic Power + 211.
+	-->
+    <skill id="19160" levels="2" name="Noble Magic Death">
+		<set name="icon" value="icon.skill19160"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Protection Armor - Critical Damage during a normal attack - 2%.
+
+		LvL.1	description: Critical Damage during a normal attack - 2%.
+		LvL.2	description: Critical Damage during a normal attack - 4%.
+	-->
+    <skill id="19161" levels="2" name="Noble Protection Armor">
+		<set name="icon" value="icon.skill19161"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Recovery - MP Recovery Bonus + 8 while running.
+
+		LvL.1	description: MP Recovery Bonus + 8 while running.
+		LvL.2	description: MP Recovery Bonus + 12 while running.
+	-->
+    <skill id="19162" levels="2" name="Noble Recovery">
+		<set name="icon" value="icon.skill19162"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Skill Mastery - Skill Mastery rate + 30%.
+
+		LvL.1	description: Skill Mastery rate + 30%.
+		LvL.2	description: Skill Mastery rate + 50%.
+	-->
+    <skill id="19163" levels="2" name="Noble Skill Mastery">
+		<set name="icon" value="icon.skill0330"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Robe Shield - When equipped with a Robe, P. Def. + 3% and Max MP + 6%.
+
+	-->
+    <skill id="19164" levels="1" name="Noble Robe Shield">
+		<set name="icon" value="icon.skill19164"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Robe Defense - When equipped with a Robe, P. Def. + 3%.
+
+		LvL.1	description: + 3%.
+		LvL.2	description: + 5%.
+		LvL.3	description: + 7%.
+		LvL.4	description: + 10%.
+	-->
+    <skill id="19165" levels="4" name="Noble Robe Defense">
+		<set name="icon" value="icon.skill19165"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Robe Attack - When equipped with a Robe, M. Atk. + 3% and recovery skill Power + 47.
+
+		LvL.1	description: + 3% and recovery skill Power + 47.
+		LvL.2	description: + 6% and recovery skill Power + 94.
+		LvL.3	description: + 9%.
+		LvL.4	description: + 12%.
+	-->
+    <skill id="19166" levels="4" name="Noble Robe Attack">
+		<set name="icon" value="icon.skill19166"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Heal Boost - Recovery effects not affected by magic + 3%.
+
+		LvL.1	description: Recovery effects not affected by magic + 3%.
+		LvL.2	description: Recovery effects not affected by magic + 6%.
+		LvL.3	description: Recovery effects not affected by magic + 9%.
+	-->
+    <skill id="19167" levels="3" name="Noble Heal Boost">
+		<set name="icon" value="icon.skill19167"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Gain - MP Recovery Bonus + 33 and Max MP + 10%.
+
+	-->
+    <skill id="19168" levels="1" name="Noble Gain">
+		<set name="icon" value="icon.skill19168"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Advance - MP Recovery Bonus + 33 and magic skill Cooldown - 5%.
+
+	-->
+    <skill id="19169" levels="1" name="Noble Advance">
+		<set name="icon" value="icon.skill19169"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Blessing - P. Def. + 3%.
+
+		LvL.1	description: + 3%.
+		LvL.2	description: + 5%.
+	-->
+    <skill id="19170" levels="2" name="Noble Blessing">
+		<set name="icon" value="icon.skill19120"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Condition - Max HP + 6%.
+
+		LvL.1	description: Max HP + 6%.
+		LvL.2	description: Max HP + 10%.
+		LvL.3	description: Max HP + 14%.
+		LvL.4	description: Max HP + 20%.
+	-->
+    <skill id="19171" levels="4" name="Noble Condition">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Eagle Eye - P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15.
+
+		LvL.1	description: P Accuracy + 8, M Accuracy + 8, servitor's P Accuracy + 15.
+		LvL.2	description: P Accuracy + 16, M Accuracy + 16, servitor's P Accuracy + 23.
+	-->
+    <skill id="19172" levels="2" name="Noble Eagle Eye">
+		<set name="icon" value="icon.skill19127"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Emblem - Attack Attribute + 20. 6 Attributes Resistance + 20.
+
+		LvL.1	description: Attack Attribute + 20. 6 Attributes Resistance + 20.
+		LvL.2	description: Attack Attribute + 50. 6 Attributes Resistance + 50.
+	-->
+    <skill id="19173" levels="2" name="Noble Emblem">
+		<set name="icon" value="icon.skill19130"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Earth - Physical P. Def. + 3%.
+
+		LvL.1	description: + 3%.
+		LvL.2	description: + 5%.
+		LvL.3	description: + 6%.
+		LvL.4	description: + 8%.
+	-->
+    <skill id="19174" levels="4" name="Noble Earth">
+		<set name="icon" value="icon.skill19121"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Life - Max HP + 6%.
+
+		LvL.1	description: Max HP + 6%.
+		LvL.2	description: Max HP + 10%.
+	-->
+    <skill id="19175" levels="2" name="Noble Life">
+		<set name="icon" value="icon.skill1045"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Vision - P. Accuracy + 8, M. Accuracy + 8, servitor's P. Accuracy + 15.
+
+		LvL.1	description: P Accuracy + 8, M Accuracy + 8, servitor's P Accuracy + 15.
+		LvL.2	description: P Accuracy + 16, M Accuracy + 16, servitor's P Accuracy + 23.
+	-->
+    <skill id="19176" levels="2" name="Noble Vision">
+		<set name="icon" value="icon.skill19127"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Noble Spirit - Attack Attribute + 20. 6 Attributes Resistance + 20.
+
+		LvL.1	description: Attack Attribute + 20. 6 Attributes Resistance + 20.
+		LvL.2	description: Attack Attribute + 50. 6 Attributes Resistance + 50.
+	-->
+    <skill id="19177" levels="2" name="Noble Spirit">
+		<set name="icon" value="icon.skill19130"/>
+		<set name="magicLevel" value="99"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Knight Hidden Trigger - none
+
+	-->
+    <skill id="19178" levels="1" name="Knight Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Warrior Hidden Trigger - none
+
+	-->
+    <skill id="19179" levels="1" name="Warrior Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Rogue Hidden Trigger - none
+
+	-->
+    <skill id="19180" levels="1" name="Rogue Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Archer Hidden Trigger - none
+
+	-->
+    <skill id="19181" levels="1" name="Archer Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wizard Hidden Trigger - none
+
+	-->
+    <skill id="19182" levels="1" name="Wizard Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Enchanter Hidden Trigger - none
+
+	-->
+    <skill id="19183" levels="1" name="Enchanter Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Summoner Hidden Trigger - none
+
+	-->
+    <skill id="19184" levels="1" name="Summoner Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Healer Hidden Trigger - none
+
+	-->
+    <skill id="19185" levels="1" name="Healer Hidden Trigger">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Rampage Shield - Has a chance of increasing P. Atk. when Shield Defense is successful. Requires Abilities.
+
+	-->
+    <skill id="19186" levels="1" name="Rampage Shield">
+		<set name="icon" value="icon.skill19186"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Blockade - For 10 sec., seals target's P./M. Skills. Requires Abilities.
+
+	-->
+    <skill id="19187" levels="1" name="Blockade">
+		<set name="icon" value="icon.skill19187"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Snicker - When hit in PvP, has a chance of canceling target's target. Requires Abilities.
+
+	-->
+    <skill id="19188" levels="1" name="Snicker">
+		<set name="icon" value="icon.skill19188"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Retreating Shot - Attacks target with 30534 power added to P. Atk., and cancels their target while moving 450 grids backward. Requires Abilities and bow/crossbow.
+
+	-->
+    <skill id="19189" levels="1" name="Retreating Shot">
+		<set name="icon" value="icon.skill10858"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Brilliant Magic - MP Recovery Bonus + 10%, and extra + 8 when running. Requires Abilities.
+
+	-->
+    <skill id="19190" levels="1" name="Brilliant Magic">
+		<set name="icon" value="icon.skill19190"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mist Armor - Received Bonus - 10%. Requires Abilities.
+
+	-->
+    <skill id="19191" levels="1" name="Mist Armor">
+		<set name="icon" value="icon.skill19191"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mass Servitor Berserk - For 30 sec., servitor' sP. Atk. + 15%, and Critical Damage + 15%. Requires Abilities.
+
+	-->
+    <skill id="19192" levels="1" name="Mass Servitor Berserk">
+		<set name="icon" value="icon.skill19192"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Blessing - Healing power and magic power increases when using Radiant Heal. Requires Abilities.
+
+	-->
+    <skill id="19193" levels="1" name="Divine Blessing">
+		<set name="icon" value="icon.skill19193"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Rampage Shield - For 5 sec., P. Atk. + 30%. Requires a shield.
+
+	-->
+    <skill id="19196" levels="1" name="Rampage Shield">
+		<set name="icon" value="icon.skill19186"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Divine Blessing - For 15 sec., M. Atk. + 16%, and Healing Magic Power + 242.
+
+	-->
+    <skill id="19197" levels="1" name="Divine Blessing">
+		<set name="icon" value="icon.skill19193"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cancel Target - none
+
+	-->
+    <skill id="19198" levels="1" name="Cancel Target">
+		<set name="icon" value="icon.skill0445"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Hurricane Sign - For 60 sec., P./M. Atk. + 10%.
+
+	-->
+    <skill id="19199" levels="1" name="Hurricane Sign">
+		<set name="icon" value="icon.skill1996"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

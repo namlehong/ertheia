@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Divine Wind - Wind/Holy Resistance + 10.
+
+		LvL.1	description: Wind/Holy Resistance + 10.
+		LvL.2	description: Wind/Holy Resistance + 20.
+	-->
+    <skill id="30400" levels="2" name="Divine Wind">
+		<table name="#defence">10 20</table>
+		<set name="icon" value="icon.skill30400"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="defenceWind" value="#defence"/>
+			<add order="0x40" stat="defenceHoly" value="#defence"/>
+		</for>
+	</skill>
+    <!--
+		Tenacity - Max. HP + 1%, Speed + 4.
+
+		LvL.1	description: HP + 1%, Speed + 4.
+		LvL.2	description: HP + 2, Speed + 7.
+	-->
+    <skill id="30401" levels="2" name="Tenacity">
+		<table name="#maxHp">1.01 1.02</table>
+		<table name="#runSpd">4 7</table>
+		<set name="icon" value="icon.skill30401"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="maxHp" value="#maxHp"/>
+			<add order="0x40" stat="runSpd" value="#runSpd"/>
+		</for>
+	</skill>
+    <!--
+		Efficacy - MP Consumption - 1%.
+
+		LvL.1	description: MP Consumption - 1%.
+		LvL.2	description: MP Consumption - 2%.
+	-->
+    <skill id="30402" levels="2" name="Efficacy">
+		<table name="#mpConsum">0.99 0.98</table>
+		<set name="icon" value="icon.skill30402"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mpConsum" value="#mpConsum"/>
+			<mul order="0x30" stat="mpConsumePhysical" value="#mpConsum"/>
+			<mul order="0x30" stat="mpDanceConsume" value="#mpConsum"/>
+		</for>
+	</skill>
+</list>
