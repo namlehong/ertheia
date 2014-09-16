@@ -645,41 +645,42 @@
 		</for>
 	</skill>
 	<skill id="10265" levels="8" name="Eruption">
+		<table name="#activateRate">40 42 44 46 48 50 52 54</table>
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">122 124 129 133 137 142 146 151</table>
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<table name="#mpConsume2">122 124 129 133 137 142 146 151</table>
-		<table name="#activateRate">40 42 44 46 48 50 52 54</table>
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#reuseDelay">5000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="1389"/>
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="17;36;9;496"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="200"/>
+		<set name="criticalRate" value="15"/>
+		<set name="decreaseOnNoPole" value="0.9"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1389"/>
 		<set name="icon" value="icon.skill10265"/>
+		<set name="increaseOnPole" value="1.5"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
-		<set name="power" value="#power"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="criticalRate" value="15"/>
-		<set name="trait" value="SHOCK"/>
-		<set name="decreaseOnNoPole" value="0.9"/>
-		<set name="increaseOnPole" value="1.5"/>
-		<set name="SSBoost" value="2.0"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="300"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="17;36;9;496"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="SHOCK"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -729,11 +730,11 @@
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<!--<enchant type="9" name="Recycle">
+		<enchant type="9" name="Recycle">
 			<table name="#power">17545 17945 18344 18743 19142 19542 19941 20340 20739 21139</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">4000 4000 4000 4000 4000 4000 3000 3000 3000 3000</table>
-		</enchant>-->
+		</enchant>
 		<for>
 			<effect name="Stun"/>
 			<effect name="RemoveTarget" time="0" chance="80"/>
