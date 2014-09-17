@@ -530,7 +530,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			st.giveItems(ATELIA1, 1);
 			st.playSound(SOUND_ITEMGET);
 			player.sendPacket(new ExShowScreenMessage(TALK_TO_WIZARD, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
-			
+			npc.deleteMe();
 			mysterious_wizard_instance = prophecies_chamber.addSpawnWithoutRespawn(MYSTERIOUS_WIZARD, new Location(-88552, 173336, -10476), 0);
 			
 		}
@@ -789,14 +789,14 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		}
 		else if(npcId == MYSTERIOUS_WIZARD)
 		{
-			if(cond == 18)
+			if(cond == 16)
 			{
 				htmltext = "33980-1.htm";
 			}
 		}
 		else if(npcId == NAVARI)
 		{
-			if(cond == 8)
+			if(cond == 18)
 			{
 				htmltext = "33931-1.htm";
 			}
