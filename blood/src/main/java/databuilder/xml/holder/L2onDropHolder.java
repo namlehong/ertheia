@@ -259,7 +259,7 @@ public final class L2onDropHolder extends AbstractHolder
 	
 	public void store(){
 		for(Map.Entry<String, Element> entry: _rootHolder.entrySet())
-			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), null, "data/blood_droplist/");
+			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), "npc.dtd", "data/blood_droplist/");
 	}
 	
 	public void build()
