@@ -545,7 +545,7 @@
     <!--
 		Superior Two-handed Weapon Mastery - When a two-handed sword or two handed blunt is equipped, P. Atk. + 2 % and additional + 709.
 
-		LvL.1	description: + 2 % and additional + 709.
+		LvL.1	description: + 2% and additional + 709.
 		LvL.2	description: + 3% and additional + 825.
 		LvL.3	description: + 4% and additional + 982.
 		LvL.4	description: + 5% and additional + 1190.
@@ -572,6 +572,7 @@
     <skill id="10311" levels="4" name="Superior Two-handed Weapon Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
+		<table name="#pAtk">709 825 982 1190</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11838"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -581,6 +582,9 @@
 			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Big Blunt, Big Sword"/>
 			</mul>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Big Blunt, Big Sword"/>
+			</add>
 		</for>
 	</skill>
     <!--
