@@ -278,17 +278,17 @@
 		desc_add2: none
 	-->
     <skill id="10504" levels="1" name="Superior Movement">
+		<table name="#magicLevel">85</table>
 		<table name="#restingRegHp">7</table>
 		<table name="#restingRegMp">3.7</table>
 		<table name="#runningRegHp">6.3</table>
 		<table name="#runningRegMp">2.6</table>
-		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10504"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="171;212;169;148;211;198;766"/>
+		<set name="icon" value="icon.skill10504"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#restingRegHp">7.5 7.9 8.4 8.8 9.3 9.8 10.2 10.7 11.1 11.6</table>
 			<table name="#restingRegMp">3.9 4.2 4.4 4.6 4.9 5.1 5.3 5.5 5.8 6</table>
@@ -358,21 +358,21 @@
 		desc_add2: none
 	-->
     <skill id="10505" levels="1" name="Superior Critical Mastery">
-		<table name="#pCritDamageStatic">539</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10505"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pCritDamageStatic">539</table>
 		<set name="analog_skills" value="193;1559;334;137"/>
+		<set name="icon" value="icon.skill10505"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#pCritDamageStatic">574 609 644 679 715 750 785 820 855 891</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
 			<add order="0x10" stat="STR" value="2"/>
-			<add order="0x40" stat="pCritRate" value="60"/>
+			<mul order="0x30" stat="pCritRate" value="1.6"/>
 			<add order="0x40" stat="pCritDamageStatic" value="#pCritDamageStatic"/>
 			<!--<mul order="0x30" stat="skillMastery" value="11"/> until better days :) -->
 		</for>
