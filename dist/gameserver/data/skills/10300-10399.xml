@@ -1284,10 +1284,28 @@
 		desc_add2: none
 	-->
     <skill id="10326" levels="3" name="Bloody Fury">
+    	<table name="#level">90 95 99</table>
+    	<table name="#pAtk">450 600 850</table>
+    	<table name="#pSkill">1.05 1.1 1.2</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_type" value="possession"/>
 		<set name="icon" value="icon.skill10326"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#level"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="coolTime" value="200"/>
+    	<set name="hitTime" value="2000"/>
+    	<set name="magicLevel" value="#level"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="hpLimit" value="0.7"/>
+				<add order="0x40" stat="pAtk" value="#pAtk"/>
+				<mul order="0x30" stat="pSkillPower" value="#pSkill"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Momentum Flash - Attacks target with17348 Power added to P. Atk. Requires a sword/dagger/blunt weapon/fist weapon. Damage increases when using Momentum, which you can use up to 3. Over-hit. Critical.
