@@ -25,22 +25,22 @@
 		desc_add2: none
 	-->
     <skill id="10500" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="10000"/>
+		<set name="castRange" value="600"/>
 		<set name="coolTime" value="500"/>
-		<set name="magicLevel" value="85"/>
+		<set name="fly_position_degree" value="180"/>
+		<set name="fly_radius" value="600"/>
+		<set name="fly_speed" value="450"/>
+		<set name="fly_to_back" value="true"/>
+		<set name="fly_type" value="CHARGE"/>
 		<set name="icon" value="icon.skill10317"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="45000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="saveVs" value="CON"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="castRange" value="600"/>
-		<set name="levelModifier" value="1"/>
-		<set name="power" value="45000"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="saveVs" value="CON"/>
-		<set name="fly_type" value="CHARGE"/>
-		<set name="fly_radius" value="600"/>
-		<set name="fly_to_back" value="true"/>
-		<set name="fly_position_degree" value="180"/>
-		<set name="fly_speed" value="450"/>
 	</skill>
     <!--
 		Superior Dagger Mastery - STR + 2 and P. Atk. + 344 when a dagger is equipped. Increases Atk. Spd. + 25% and Vital Spot Attack Rate + 5%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your STR.
@@ -79,14 +79,14 @@
 		desc_add2: none
 	-->
     <skill id="10501" levels="1" name="Superior Dagger Mastery">
-		<table name="#pAtk">344</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10501"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pAtk">344</table>
 		<set name="analog_skills" value="216;209;257;330;331;432;168"/>
+		<set name="icon" value="icon.skill10501"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#pAtk">366 388 411 433 456 478 500 523 545 568</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
@@ -144,14 +144,14 @@
 		desc_add2: none
 	-->
     <skill id="10502" levels="1" name="Superior Dual Dagger Mastery">
-		<table name="#pAtk">344</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10502"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pAtk">344</table>
 		<set name="analog_skills" value="952"/>
+		<set name="icon" value="icon.skill10502"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#pAtk">366 388 411 433 456 478 500 523 545 568</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
@@ -159,6 +159,9 @@
 		<for>
 			<add order="0x10" stat="STR" value="2">
 				<using kind="Dual Dagger"/>
+			</add>
+			<add order="0x40" stat="pAccCombat" value="8">
+				<using kind="Dagger"/>
 			</add>
 			<add order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Dual Dagger"/>
