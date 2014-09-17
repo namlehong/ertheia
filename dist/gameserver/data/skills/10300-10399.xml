@@ -481,6 +481,7 @@
     <skill id="10309" levels="4" name="Superior Fist Weapon Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
+		<table name="#pAtk">709 825 982 1190</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11837"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -490,6 +491,9 @@
 			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Dual Fist"/>
 			</mul>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Dual Fist"/>
+			</add>
 		</for>
 	</skill>
     <!--
