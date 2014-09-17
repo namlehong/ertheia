@@ -862,7 +862,6 @@
 		<set name="criticalRate" value="10"/>
 		<set name="hitCancelTime" value="500"/>
 		<set name="hitTime" value="1390"/>
-		<set name="shieldignore" value="true"/>
 		<set name="icon" value="icon.skill10317new"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
@@ -872,6 +871,7 @@
 		<set name="power" value="#power"/>
 		<set name="reuseDelay" value="15000"/>
 		<set name="ride_state" value="NONE"/>
+		<set name="shieldignore" value="true"/>
 		<set name="skillRadius" value="300"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="2.0"/>
@@ -1036,10 +1036,42 @@
 		desc_add2: none
 	-->
     <skill id="10321" levels="4" name="Thunder Spear">
+    	<table name="#activateRate">32 34 38 40</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">122 124 129 133</table>
+		<table name="#power">22536 26428 29542 32656</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="900"/>
+		<set name="cond_charges" value="3"/>
+		<set name="criticalRate" value="10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2500"/>
 		<set name="icon" value="icon.skll10321"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="shieldignore" value="true"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="SHOCK"/>
+		<cond msgId="113">
+			<using kind="Pole"/>
+		</cond>
+		<for>
+			<effect name="Stun"/>
+			<effect name="RemoveTarget" time="0" chance="100"/>
+		</for>
 	</skill>
     <!--
 		Wolf's Cry - Shouts loudly to invoke the power of the Wolf. For 5 minutes, P. Def. and M. Def. + 50%, Max HP + 25%, and Spd. + 20. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword.
