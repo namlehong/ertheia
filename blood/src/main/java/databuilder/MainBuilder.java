@@ -113,9 +113,9 @@ public class MainBuilder
 			e.printStackTrace();
 		}
 		
-//		buildNpc();
+		buildNpc();
 //		buildSkill();
-		buildDropList();
+//		buildDropList();
 		
 		
 	}
