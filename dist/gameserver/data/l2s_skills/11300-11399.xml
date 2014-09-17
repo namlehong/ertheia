@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="11300" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="castRange" value="500"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="100"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect name="FlyUp"/>
+		</for>
+	</skill>
+	<skill id="11301" levels="8" name="Dimension Storm">
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">70</table>
+		<table name="#power">152 154 157 161 165 169 173 177</table>
+		<set name="coolTime" value="500"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="2559"/>
+		<set name="icon" value="icon.skill0005"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="soulBoost" value="true"/>
+		<set name="target" value="TARGET_AURA"/>
+	</skill>
+	<skill id="11302" levels="8" name="Servitor Major Heal">
+		<table name="#HP">1637 1645 1658 1671 1685 1698 1713 1727</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">70</table>
+		<set name="analog_skills" value="1127"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="433"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill1127"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#HP"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="target" value="TARGET_ONE_SUMMON"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+	</skill>
+	<skill id="11303" levels="1" name="Mass Servitor Magic Barrier">
+		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_type" value="md_up"/>
+		<set name="analog_skills" value="1139"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="433"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill1139"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="time">
+			<table name="#time"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mDef" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11304" levels="1" name="Mass Servitor Haste">
+		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="433"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill1141"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="time">
+			<table name="#time"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.34"/>
+			</effect>
+		</for>
+		<set name="analog_skills" value="1141"/>
+	</skill>
+	<skill id="11305" levels="1" name="Mass Servitor Shield">
+		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
+		<set name="reuseDelay" value="10000"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1140"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="900"/>
+		<set name="effectPoint" value="433"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="time">
+			<table name="#time"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pDef" value="1.15"/>
+			</effect>
+		</for>
+		<set name="analog_skills" value="1140"/>
+	</skill>
+	<skill id="11306" levels="1" name="Mass Servitor Empower">
+		<table name="#mpConsume2"> 70 </table>
+		<table name="#time"> 1800 </table>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_type" value="ma_up"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="433"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill1059"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="time">
+			<table name="#time"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtk" value="1.79"/>
+			</effect>
+		</for>
+		<set name="analog_skills" value="1145"/>
+	</skill>
+	<skill id="11307" levels="1" name="Mass Servitor Might">
+		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="castRange" value="900"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1146"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="effectPoint" value="433"/>
+		<set name="skillRadius" value="900"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="time">
+			<table name="#time"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.17"/>
+			</effect>
+		</for>
+		<set name="analog_skills" value="1146"/>
+	</skill>
+	<skill id="11308" levels="1" name="Mass Servitor Wind Walk">
+		<table name="#mpConsume2">70</table>
+		<table name="#time">1800</table>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_type" value="speed_up"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="433"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill1144"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 116 112 108 104 100 96 93 89 85 81 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="time">
+			<table name="#time"> 1980 2160 2340 2520 2700 2880 3060 3240 3420 3600 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect>
+				<add order="0x40" stat="runSpd" value="34"/>
+			</effect>
+		</for>
+		<set name="analog_skills" value="1144"/>
+	</skill>
+	<skill id="11309" levels="1" name="Mass Servitor Blessing">
+		<table name="#mpConsume1">17</table>
+		<table name="#mpConsume2">53</table>
+		<set name="analog_skills" value="1301"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill1301"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#mpConsume1">0</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="10"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11310" levels="1" name="Mass Servitor Ultimate Defense">
+		<table name="#runSpd">0</table>
+		<table name="#time">60</table>
+		<table name="#mpConsume1">17</table>
+		<table name="#mpConsume2">53</table>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="#time"/>
+		<set name="abnormal_type" value="pd_up_special"/>
+		<set name="analog_skills" value="1299"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="200"/>
+		<set name="effectPoint" value="433"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill1299"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="900000"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2"> 67 64 61 58 56 53 50 47 44 42 </table>
+			<table name="#mpConsume1">0</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="time">
+			<table name="#time"> 61 62 63 64 65 66 67 68 69 70 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="3" name="spd">
+			<table name="#runSpd"> 2 3 4 5 6 7 8 9 10 11 </table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" value="4680"/>
+				<add order="0x40" stat="mDef" value="4212"/>
+				<add order="0x40" stat="runSpd" value="#runSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11311" levels="3" name="Naviarope Strike">
+		<table name="#magicLevel">95 97 99</table>
+		<table name="#power">20633 21717 22799</table>
+		<set name="reuseDelay" value="4000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="mpConsume2" value="70"/>
+		<set name="power" value="#power"/>
+		<set name="levelModifier" value="2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11312" levels="3" name="Naviarope Flame">
+		<table name="#magicLevel">95 97 99</table>
+		<table name="#power">18758 19743 20727</table>
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="castRange" value="1290"/>
+		<set name="power" value="#power"/>
+		<set name="levelModifier" value="1"/>
+		<set name="mpConsume2" value="70"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AREA"/>
+	</skill>
+	<skill id="11313" levels="3" name="Naviarope Explosion">
+		<table name="#magicLevel">95 97 99</table>
+		<table name="#mpConsume2">70</table>
+		<table name="#power">18758 19743 20727</table>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill_transform_etc"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="power" value="#power"/>
+		<set name="nextAction" value="attack"/>
+		<set name="levelModifier" value="1"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="overHit" value="true"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="150"/>
+	</skill>
+	<skill id="11314" levels="3" name="Corpse Blast">
+		<table name="#magicLevel">95 97 99</table>
+		<table name="#mpConsume2">70</table>
+		<table name="#power">95</table>
+		<set name="castRange" value="400"/>
+		<set name="elements" value="0"/>
+		<set name="elementsPower" value="20"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill_transform_debuff"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+	</skill>
+	<skill id="11315" levels="1" name="Summon Defense">
+		<set name="icon" value="icon.skill11253"/>
+		<set name="isMusic" value="true"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<sub order="0x40" stat="bowWpnVuln" value="30"/>
+			<sub order="0x40" stat="crossbowWpnVuln" value="30"/>
+			<mul order="0x30" stat="mDef" value="1.5"/>
+		</for>
+	</skill>
+	<skill id="11316" levels="1" name="Summon Soulshots">
+		<set name="reuseDelay" value="60000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11316"/>
+		<set name="mpConsume2" value="400"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RESTORATION"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="itemConsumeId" value="17371"/>
+		<set name="itemConsumeCount" value="1"/>
+	</skill>
+	<skill id="11317" levels="8" name="Servitor Group Heal">
+		<table name="#effectPoint">711 722 733 743 753 763 772 780</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">270 275 280 285 290 296 300 307</table>
+		<table name="#power">1191 1191 1191 1191 1191 1191</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="hitTime" value="6500"/>
+		<set name="icon" value="icon.skill1027"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+	</skill>
+	<skill id="11320" levels="8" name="Summon Wynn Kai the Cat">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15066 15067 15068 15069 15070 15071 15072 15073</table>	<!--Кай Веньо-->
+		<!-- Summon-specific -->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11844"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11321" levels="8" name="Summon Wynn Feline King">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15074 15075 15076 15077 15078 15079 15080 15081</table>
+		<!-- Summon-specific -->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11845"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11322" levels="8" name="Summon Wynn Feline Queen">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15082 15083 15084 15085 15086 15087 15088 15089</table>
+		<!-- Summon-specific -->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11846"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11323" levels="8" name="Feline Aggression">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<table name="#power">200 230 260 290 320 350 380 410</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="castRange" value="50"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0028"/>
+		<set name="levelModifier" value="3"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="shieldignore" value="true"/>
+		<set name="skillRadius" value="250"/>
+		<set name="skillType" value="AGGRESSION"/>
+		<set name="target" value="TARGET_AURA"/>
+		<for>
+			<effect name="Aggression"/>
+		</for>
+	</skill>
+	<skill id="11324" levels="8" name="Feline Stun">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="35"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0028"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="11325" levels="8" name="Feline Bite">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
+		<set name="castRange" value="50"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0121"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11326" levels="8" name="Feline Pounce">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">8406 8920 9497 10043 10588 11134 11680 12225</table>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="fly_radius" value="450"/>
+		<set name="fly_speed" value="450"/>
+		<set name="fly_to_back" value="false"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.skill0121"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect name="Debuff" chance="30">
+				<mul order="0x30" stat="runSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11327" levels="8" name="Feline Touch">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
+		<set name="castRange" value="1100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2200"/>
+		<set name="icon" value="icon.skill1234"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value= "#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11328" levels="8" name="Feline Power">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<table name="#power">11558 12309 13059 13809 14559 15309 16060 16810</table>
+		<set name="castRange" value="1100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2900"/>
+		<set name="icon" value="icon.skill1171"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+	</skill>
+	<skill id="11329" levels="8" name="Summon Wynn Merrow">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15114 15115 15116 15117 15118 15119 15120 15121</table>	<!--Мэрроу Веньо-->
+		<!-- Summon-specific -->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11847"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11330" levels="8" name="Summon Wynn Magnus">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15122 15123 15124 15125 15126 15127 15128 15129</table>	<!--Магнус Веньо-->
+		<!-- Summon-specific -->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11848"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11331" levels="8" name="Summon Wynn Seraphim">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15130 15131 15132 15133 15134 15135 15136 15137</table>	<!--Серафим Веньо-->
+		<!-- Summon-specific -->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11849"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11332" levels="8" name="Unicorn's Aggression">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<table name="#power">200 230 260 290 320 350 380 410</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="castRange" value="50"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0028"/>
+		<set name="levelModifier" value="3"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="shieldignore" value="true"/>
+		<set name="skillRadius" value="250"/>
+		<set name="skillType" value="AGGRESSION"/>
+		<set name="target" value="TARGET_AURA"/>
+		<for>
+			<effect name="Aggression"/>
+		</for>
+	</skill>
+	<skill id="11333" levels="8" name="Unicorn's Stun">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="35"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0028"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="11334" levels="8" name="Unicorn's Bite">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
+		<set name="castRange" value="50"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0121"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11335" levels="8" name="Unicorn's Pounce">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">8406 8920 9497 10043 10588 11134 11680 12225</table>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="fly_radius" value="450"/>
+		<set name="fly_speed" value="450"/>
+		<set name="fly_to_back" value="false"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.skill0121"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect name="Debuff" chance="30">
+				<mul order="0x30" stat="runSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11336" levels="8" name="Unicorn's Touch">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
+		<set name="castRange" value="1100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2200"/>
+		<set name="icon" value="icon.skill1234"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value= "#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11337" levels="8" name="Unicorn's Power">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<table name="#power">11558 12309 13059 13809 14559 15309 16060 16810</table>
+		<set name="castRange" value="1100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2900"/>
+		<set name="icon" value="icon.skill1171"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+	</skill>
+	<skill id="11338" levels="8" name="Summon Wynn Nightshade">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15090 15091 15092 15093 15094 15095 15096 15097</table>	<!--Молох Веньо-->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11850"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11339" levels="8" name="Summon Wynn Spectral Lord">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15098 15099 15100 15101 15102 15103 15104 15105</table>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11851"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11340" levels="8" name="Summon Wynn Soulless">
+		<!--
+			Уровень: 1; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+			Уровень: 2; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+			Уровень: 3; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+			Уровень: 4; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+			Уровень: 5; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+			Уровень: 6; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+			Уровень: 7; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+			Уровень: 8; Описание: Призывает Вин Самаэля. Требуется 2 очка.
+		-->
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
+		<table name="#npcId">15106 15107 15108 15109 15110 15111 15112 15113</table>	<!--Самаэль Веньо-->
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11852"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="npcId" value="#npcId"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summon_points" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+	</skill>
+	<skill id="11341" levels="8" name="Phantom Aggression">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<table name="#power">200 230 260 290 320 350 380 410</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="castRange" value="50"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0028"/>
+		<set name="levelModifier" value="3"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="shieldignore" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect name="Aggression"/>
+		</for>
+	</skill>
+	<skill id="11342" levels="8" name="Phantom Stun">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="35"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0028"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+	<skill id="11343" levels="8" name="Phantom Bite">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
+		<set name="castRange" value="50"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1490"/>
+		<set name="icon" value="icon.skill0121"/>
+		<set name="levelModifier" value="3"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11344" levels="8" name="Phantom Pounce">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">8406 8920 9497 10043 10588 11134 11680 12225</table>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="fly_radius" value="450"/>
+		<set name="fly_speed" value="450"/>
+		<set name="fly_to_back" value="false"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.skill0121"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect name="Debuff" chance="30">
+				<mul order="0x30" stat="runSpd" value="0.5"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11345" levels="8" name="Phantom Touch">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
+		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
+		<set name="castRange" value="1100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2200"/>
+		<set name="icon" value="icon.skill1234"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value= "#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11346" levels="8" name="Phantom Power">
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 76 79 81 84 87 90 93</table>
+		<table name="#power">11558 12309 13059 13809 14559 15309 16060 16810</table>
+		<set name="castRange" value="1100"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2900"/>
+		<set name="icon" value="icon.skill1171"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
+	</skill>
+	<skill id="11347" levels="4" name="Greater Servitor Haste">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">61 67 73 79</table>
+		<table name="#pAtkSpd">1.1 1.12 1.15 1.2</table>
+		<set name="abnormal_time" value="1800"/>
+		<set name="castRange" value="900"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11347"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="#pAtkSpd"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11348" levels="4" name="Servitor Death Whisper">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">61 67 73 79</table>
+		<table name="#pCritDamage">1.1 1.12 1.15 1.2</table>
+		<set name="abnormal_time" value="1800"/>
+		<set name="castRange" value="900"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11348"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pCritDamage" value="#pCritDamage"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11349" levels="4" name="Greater Servitor Might">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">61 67 73 79</table>
+		<table name="#pAtk">1.1 1.12 1.15 1.2</table>
+		<set name="abnormal_time" value="1800"/>
+		<set name="castRange" value="900"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="icon" value="icon.skill11349"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SERVITORS"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11350" levels="4" name="Arcane Rage">
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">53 60 67 70</table>
+		<table name="#power">188 202 215 227</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="2800"/>
+		<set name="icon" value="icon.skill11350"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2400"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="soulBoost" value="true"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11351" levels="4" name="Arcane Link">
+		<set name="icon" value="icon.skill11351"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11352" levels="4" name="Arcane Ability">
+		<set name="icon" value="icon.skill11277"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11353" levels="4" name="Elemental Rage">
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">53 60 67 70</table>
+		<table name="#power">188 202 215 227</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="2800"/>
+		<set name="icon" value="icon.skill11353"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2400"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="soulBoost" value="true"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11354" levels="4" name="Elemental Link">
+		<set name="icon" value="icon.skill11354"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11355" levels="4" name="Elemental Ability">
+		<set name="icon" value="icon.skill11277"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11356" levels="4" name="Spectral Rage">
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">53 60 67 70</table>
+		<table name="#power">188 202 215 227</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="2800"/>
+		<set name="icon" value="icon.skill11356"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2400"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="soulBoost" value="true"/>
+		<set name="target" value="TARGET_ONE"/>
+	</skill>
+	<skill id="11357" levels="4" name="Spectral Link">
+		<set name="icon" value="icon.skill11357"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11358" levels="4" name="Spectral Ability">
+		<set name="icon" value="icon.skill11277"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11359" levels="3" name="Summon Protection Stone">
+		<set name="icon" value="icon.skill11359"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11360" levels="3" name="Arcane Protection">
+		<set name="icon" value="icon.skill11360"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11361" levels="3" name="Summon Moving Portal">
+		<set name="icon" value="icon.skill11361"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11362" levels="3" name="Summon Moving Portal">
+		<set name="icon" value="icon.skill11361"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11363" levels="3" name="Instant Teleport">
+		<set name="icon" value="icon.skill11363"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11364" levels="3" name="Elemental Dash">
+		<set name="icon" value="icon.skill0028"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11365" levels="3" name="Summon Demonic Crucifix">
+		<table name="#activateRate">50 55 60</table>
+		<table name="#itemCount">3 0 0</table>
+		<table name="#magicLevel">97 98 99</table>
+		<table name="#mpConsume2">392 384 392</table>
+		<table name="#power">518 506 518</table>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="600"/>
+		<set name="elements" value="water"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11365"/>
+		<set name="itemConsumeCount" value="#itemCount"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect>
+				<sub order="0x40" stat="runSpd" value="180"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11366" levels="3" name="Spectral Curse">
+		<set name="icon" value="icon.skill0028"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11367" levels="3" name="Arcane Protection">
+		<set name="icon" value="icon.skill11360"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11368" levels="3" name="Arcane Protection">
+		<set name="icon" value="icon.skill11360"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

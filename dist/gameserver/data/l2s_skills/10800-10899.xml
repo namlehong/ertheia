@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="10800" levels="1" name="Superior Elemental Resistance">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill10044"/>
+		<table name="#defenceElem">20</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#defenceElem">21 22 23 24 25 26 27 28 29 30</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<add order="0x10" stat="STR" value="2"/>
+			<add order="0x40" stat="defenceWater" value="#defenceElem"/>
+			<add order="0x40" stat="defenceFire" value="#defenceElem"/>
+			<add order="0x40" stat="defenceWind" value="#defenceElem"/>
+			<add order="0x40" stat="defenceEarth" value="#defenceElem"/>
+		</for>
+		<set name="analog_skills" value="481"/>
+	</skill>
+	<skill id="10801" levels="5" name="Bullseye">
+		<table name="#magicLevel">85 88 91 94 97</table>
+		<table name="#rootResist">0</table>
+		<table name="#stunResist">0</table>
+		<table name="#knockDownResist">0</table>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_effect" value="REAL_TARGET"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="real_target"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill10801"/>
+		<table name="#mDef">0.95 0.9 0.85 0.80 0.75</table>
+		<table name="#Tab-bowRcpt">40 45 50 55 60</table>
+		<table name="#mpConsume2">20 21 22 23 24</table>
+		<table name="#activateRate">30 40 50 60 70 80</table>
+		<table name="#castRange">700 900 900 900 900</table>
+		<set name="castRange" value="#castRange"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="522;122"/>
+		<enchant type="1" levels="10" group="7" name="Шанс">
+			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90</table>
+		</enchant>
+		<enchant type="2" name="Root Resist">
+			<table name="#rootResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="3" name="Stun Resist">
+			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Knockdown Resist">
+			<table name="#knockDownResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<for>
+			<effect name="Debuff">
+				<add order="0x40" stat="bowWpnVuln" value="#Tab-bowRcpt"/>
+				<add order="0x40" stat="crossbowWpnVuln" value="#Tab-bowRcpt"/>
+				<mul order="0x30" stat="mDef" value="#mDef"/>
+				<sub order="0x40" stat="rootResist" value="#rootResist"/>
+				<sub order="0x40" stat="stunResist" value="#stunResist"/>
+				<sub order="0x40" stat="knockDownResist" value="#knockDownResist"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10802" levels="1" name="Mass Bullseye">
+		<table name="#activateRate">70</table>
+		<table name="#stunResist">0</table>
+		<table name="#rootResist">0</table>
+		<table name="#knockDownResist">0</table>
+		<set name="reuseDelay" value="180000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="REAL_TARGET"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="real_target"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill10782"/>
+		<table name="#mpConsume2">93</table>
+		<table name="#castRange">1100</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="ignoreResists" value="true"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="activateRate" value="70"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="castRange" value="#castRange"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">89 85 81 78 74 70 66 63 59 55</table>
+		</enchant>
+		<enchant type="2" name="Chance">
+			<table name="#activateRate">71 72 73 74 75 76 77 78 79 80</table>
+		</enchant>
+		<enchant type="3" name="Stun Resist">
+			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Knockdown Resist">
+			<table name="#knockDownResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="5" name="Hold Resist">
+			<table name="#rootResist">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="bowWpnVuln" value="1.6"/>
+				<mul order="0x30" stat="crossbowWpnVuln" value="1.6"/>
+				<mul order="0x30" stat="mDef" value="0.75"/>
+				<sub order="0x40" stat="stunResist" value="#stunResist"/>
+				<sub order="0x40" stat="rootResist" value="#rootResist"/>
+				<sub order="0x40" stat="knockDownResist" value="#knockDownResist"/>
+				<triggers>
+					<trigger id="10804" level="1" type="ON_EXIT_EFFECT"/>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10803" levels="1" name="Time Bomb">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0099"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="isOffensive" value="false"/>
+		<set name="power" value="30000"/>
+	</skill>
+	<skill id="10804" levels="1" name="Bullseye">
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill0099"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="isOffensive" value="false"/>
+		<set name="power" value="30000"/>
+	</skill>
+	<skill id="10805" levels="4" name="Quick Charge">
+		<table name="#magicLevel">89 92 95 98</table>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="400"/>
+		<set name="hitTime" value="100"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill10805"/>
+		<table name="#flyRadius">500 600 700 800</table>
+		<table name="#mpConsume2">41 44 46 48</table>
+		<!-- Teleport to Front -->
+		<set name="fly_radius" value="#flyRadius"/>
+		<set name="fly_type" value="DUMMY"/>
+		<set name="fly_animation_speed" value="333"/>
+		 <!-- NOTE: Real hitTime is 0.1 sec, but here is increased to 0.3 sec, to match retail animation -->
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="#flyRadius"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Crossbow, Bow"/>
+		</cond>
+		<enchant type="1" levels="10" group="7" name="Distance">
+			<table name="#flyRadius">815 830 845 860 875 890 905 920 935 950</table>
+		</enchant>
+	</skill>
+	<skill id="10806" levels="1" name="Frost Trap">
+		<table name="#activateRate">80</table>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="all_speed_down"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0516"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="levelModifier" value="1"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="200"/>
+		<enchant type="1" levels="10" group="7" name="Chance">
+			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90</table>
+		</enchant>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="runSpd" value="0.6"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.67"/>
+				<mul order="0x30" stat="mAtkSpd" value="0.6"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10807" levels="1" name="Gravity Trap">
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0518"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="activateRate" value="80"/>
+		<set name="levelModifier" value="1"/>
+		<set name="trait" value="HOLD"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="200"/>
+		<for>
+			<effect name="Root"/>
+		</for>
+	</skill>
+	<skill id="10808" levels="1" name="Decoy Provocation">
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="target_lock"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10809" levels="1" name="Survival Movement">
+		<table name="#mpConsume2">54</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="icon" value="icon.skill1087"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="DispelOnHit">
+				<def name="max_hits" value="4"/>
+				<add order="0x40" stat="pEvasRate" value="15"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10810" levels="4" name="Sniping">
+		<table name="#abnormal_level">1 2 3 4</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mod">1.05 1.06 1.07 1.10</table>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill11870"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="magicType" value="MAGIC"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="#mod">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" value="#mod">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+				<mul order="0x30" stat="pDef" value="#mod">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10811" levels="4" name="Superior Hawk Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill10811"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="#pAtk">
+				<using kind="Crossbow, Bow"/>
+			</mul>
+		</for>
+	</skill>
+	<skill id="10812" levels="3" name="Sneak Shot">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10813" levels="3" name="Sneak Shot: Stun">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="10856" levels="4" name="Rapid Fire Position">
+		<table name="#abnormal_level">1 2 3 4</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
+		<table name="#reuse">0.95 0.94 0.93 0.90</table>
+		<set name="abnormal_time" value="1800"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill11871"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="magicType" value="MAGIC"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="#pAtk">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+				<mul order="0x30" stat="mReuse" value="#reuse">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+				<mul order="0x30" stat="pReuse" value="#reuse">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+				<mul order="0x30" stat="musicReuse" value="#reuse">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="10857" levels="4" name="Superior Speed Mastery">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#runSpd">10 12 15 20</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill10857"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="#runSpd"/>
+		</for>
+	</skill>
+	<skill id="10858" levels="3" name="Retreating Shot">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>
