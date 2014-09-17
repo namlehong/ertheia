@@ -232,10 +232,11 @@ public class SkillBuilder {
 							changedKeyword.add(keyword);
 					}
 					
+					sb.append(String.format("\n\t\tLvL.%s %s - %s", enchantMap.get("level"), enchantMap.get("desc_add1"), enchantMap.get("desc_add2")));
+					
+					
 					if(changedKeyword.size() <= 0)
 						continue;
-					
-					sb.append(String.format("\n\t\tLvL.%s %s", enchantMap.get("level"), enchantMap.get("desc_add1")));
 					
 					for(String keyword: changedKeyword){
 						if(keyword.equalsIgnoreCase("description") && !enchantMap.equals(baseMap))
