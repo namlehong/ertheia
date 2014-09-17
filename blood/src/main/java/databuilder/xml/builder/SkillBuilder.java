@@ -52,7 +52,13 @@ public class SkillBuilder {
 		String[] _keywords = {
 				"name", "level", "mp_consume", "description", "icon_name", "hp_consume", 
 				"cast_range", "hit_time", "cool_time", "reuse_delay", "is_magic", "oper_type",
-				"element_guess", "cast_style_guess", "skill_spec_type_guess", "base_elemental_skill_id"
+				"element_guess", "cast_style_guess", "skill_spec_type_guess", "base_elemental_skill_id", "desc_add1", "desc_add2"
+				};
+		
+		String[] _compare_keywords = {
+				"name", "level", "mp_consume", "description", "icon_name", "hp_consume", 
+				"cast_range", "hit_time", "cool_time", "reuse_delay", "is_magic", "oper_type",
+				"element_guess", "cast_style_guess", "skill_spec_type_guess", "base_elemental_skill_id", "desc_add1", "desc_add2"
 				};
 		
 		public L2SkillInfo(ResultSet rset){
@@ -218,7 +224,9 @@ public class SkillBuilder {
 				for(HashMap<String, String> enchantMap: enchantRoute){
 					HashSet<String> changedKeyword = new HashSet<String>(); 
 					for(String keyword: _keywords){
-						if(keyword.equalsIgnoreCase("level"))
+						if(keyword.equalsIgnoreCase("level") 
+								|| keyword.equalsIgnoreCase("desc_add1")
+								|| keyword.equalsIgnoreCase("desc_add2"))
 							continue;
 						if((enchantMap.equals(baseMap) && !baseMap.get(keyword).equalsIgnoreCase(secondMap.get(keyword))) || !baseMap.get(keyword).equalsIgnoreCase(enchantMap.get(keyword)))
 							changedKeyword.add(keyword);
@@ -227,7 +235,7 @@ public class SkillBuilder {
 					if(changedKeyword.size() <= 0)
 						continue;
 					
-					sb.append(String.format("\n\t\tLvL.%s", enchantMap.get("level")));
+					sb.append(String.format("\n\t\tLvL.%s %s", enchantMap.get("level"), enchantMap.get("desc_add1")));
 					
 					for(String keyword: changedKeyword){
 						if(keyword.equalsIgnoreCase("description") && !enchantMap.equals(baseMap))
@@ -239,6 +247,8 @@ public class SkillBuilder {
 					}
 				}
 			}
+			
+			sb.append(String.format("\n\t"));
 			
 			for(String keyword: _keywords){
 				sb.append(String.format("\n\t\t%s: %s", keyword, _baseLevel.get(keyword)));

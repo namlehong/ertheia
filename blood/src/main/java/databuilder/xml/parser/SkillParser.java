@@ -52,7 +52,7 @@ public final class SkillParser extends StatParser<ItemHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/skills/");
+		return new File(Config.DATAPACK_ROOT, "data/l2s_skills/");
 	}
 
 	@Override
