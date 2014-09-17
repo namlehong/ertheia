@@ -5,37 +5,18 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedList;
-
-import org.apache.commons.lang3.StringUtils;
-import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-import org.dom4j.Element;
 
 import l2s.gameserver.Config;
 import l2s.gameserver.data.xml.parser.BaseStatsBonusParser;
 import l2s.gameserver.data.xml.parser.LevelBonusParser;
-import l2s.gameserver.data.xml.parser.NpcParser;
 import l2s.gameserver.tables.SkillTable;
-import l2s.gameserver.templates.item.ArmorTemplate;
-import l2s.gameserver.templates.item.ArmorTemplate.ArmorType;
-import l2s.gameserver.templates.item.ItemGrade;
 import l2s.gameserver.templates.item.ItemTemplate;
-import databuilder.utils.L2String;
-import databuilder.utils.XmlPretty;
-import databuilder.utils.diff_match_patch;
-import databuilder.utils.diff_match_patch.Diff;
-import databuilder.utils.diff_match_patch.Operation;
 import databuilder.xml.builder.ItemBuilder;
+import databuilder.xml.builder.NpcBuilder;
 import databuilder.xml.builder.SkillBuilder;
-import databuilder.xml.holder.ItemHolder;
-import databuilder.xml.parser.ItemParser;
 import databuilder.xml.parser.NpcGaiParser;
+import databuilder.xml.parser.NpcParser;
 import databuilder.xml.parser.SkillParser;
 
 public class MainBuilder
@@ -75,9 +56,28 @@ public class MainBuilder
 		SkillTable.getInstance().load();
 		BaseStatsBonusParser.getInstance().load();
 		LevelBonusParser.getInstance().load();
+		NpcBuilder.getInstance();
 		NpcParser.getInstance().load();
 		NpcGaiParser.getInstance().load();
+		NpcBuilder.getInstance().buildAndStore();
 	}
+	
+	public static void buildItem(){
+//		SkillTable.getInstance().load();
+//		OptionDataParser.getInstance().load();
+//		VariationDataParser.getInstance().load();
+//		ItemParser.getInstance().load();
+//		buildFated();
+		
+		ItemBuilder.getInstance().build();
+		ItemBuilder.getInstance().store();
+	}
+	
+	public static void buildSkill(){
+		SkillParser.getInstance().load();
+		SkillBuilder.getInstance().buildAndStore();
+	}
+	
 	
 	public static class CustomComparator implements Comparator<ItemTemplate> {
 	    @Override
@@ -106,24 +106,10 @@ public class MainBuilder
 			e.printStackTrace();
 		}
 		
-//		SkillTable.getInstance().load();
-//		OptionDataParser.getInstance().load();
-//		VariationDataParser.getInstance().load();
-//		ItemParser.getInstance().load();
-//		buildFated();
+		buildNpc();
+//		buildSkill();
 		
 		
-		
-//		ItemBuilder.getInstance().build();
-//		ItemBuilder.getInstance().store();
-		
-		SkillParser.getInstance().load();
-		SkillBuilder.getInstance().buildAndStore();
-		
-		String text1 = "Attacks the enemy with 2581 Power added to P. Atk. Requires a dualsword. Over-hit and Critical are possible. Ignores Shield Defense. Enchant Power: Increases Power.";
-		String text2 = "Attacks the enemy with 2858 Power added to P. Atk. Requires a dualsword. Over-hit and Critical are possible. Ignores Shield Defense. Enchant Power: Increases Power.";
-		System.out.println(L2String.diffDesc(text1, text2));
-//		System.out.println(L2String.diffDesc("Attacks the enemy with 517 Power added to P. Atk. Requires a dualsword. Over-hit and Critical are possible. Ignores Shield Defense.", "Attacks the enemy with 1527 Power added to P. Atk. Requires a dualsword. Over-hit and Critical are possible. Ignores Shield Defense."));
 	}
 	
 	

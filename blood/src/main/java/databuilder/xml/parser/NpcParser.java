@@ -53,7 +53,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/npc/");
+		return new File(Config.DATAPACK_ROOT, "data/l2s_npc/");
 	}
 
 	@Override
@@ -316,7 +316,7 @@ public final class NpcParser extends AbstractDirParser<NpcHolder>
 					template.setRandomActions(randomActions);
 				}
 			}
-			NpcBuilder.getInstance().addElement(npcId, npcElement);
+			NpcBuilder.getInstance().addL2sElement(npcId, npcElement);
 			getHolder().addTemplate(template);
 		}
 	}

@@ -39,6 +39,7 @@ public class SkillBuilder {
 	private HashMap<Integer, Element> _l2sHolder = new HashMap<Integer, Element>();
 	private TreeMap<Integer, L2SkillInfo> _skillHolder = new TreeMap<Integer, L2SkillInfo>();
 	
+	
 	public class L2SkillInfo{
 		int _id;
 		int _levels = 0;
@@ -79,6 +80,8 @@ public class SkillBuilder {
 				}
 				
 				int level = rset.getInt("level");
+				
+//				addSkillName(_id, level, rset.getString("name"));
 				
 				if(level == 1 || _baseLevel == null)
 					_baseLevel = levelInfo;
@@ -322,7 +325,7 @@ public class SkillBuilder {
 	
 	public void store(){
 		for(Map.Entry<String, Element> entry: _rootHolder.entrySet())
-			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), "skill.dtd", "data/blood_skills/");
+			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), null, "data/blood_skills/");
 	}
 	
 	public void build()
