@@ -3397,19 +3397,18 @@
 		desc_add2: none
 	-->
     <skill id="10530" levels="1" name="Blind Spot">
-		<set name="reuseDelay" value="1000"/>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="super_buff"/>
 		<set name="coolTime" value="100"/>
 		<set name="hitTime" value="800"/>
-		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
-		<set name="abnormal_time" value="10"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="super_buff"/>
-		<set name="magicLevel" value="99"/>
 		<set name="icon" value="icon.skill10529"/>
-		 <!-- Тип тригер или хз что скила 10529 -->
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="99"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pAtk" value="1.1"/>
