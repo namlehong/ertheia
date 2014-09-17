@@ -1184,11 +1184,11 @@
     <skill id="10324" levels="3" name="Momentum Master">
 		<table name="#magicLevel">97 98 99</table>
 		<table name="#pSkillPower">1.1 1.15 1.20</table>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10324"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
@@ -1229,23 +1229,25 @@
 	-->
     <skill id="10325" levels="3" name="Dreadful Roar">
 		<table name="#effectPoint">633 644 653</table>
-		<table name="#mpConsume2">149 151 154</table>
 		<table name="#magicLevel">97 98 99</table>
-		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="120000"/>
-		<set name="hitTime" value="1500"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill10325"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="isCancel" value="true"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<table name="#mpConsume2">149 151 154</table>
 		<set name="activateRate" value="100"/>
 		<set name="effectPoint" value="#effectPoint"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="skillType" value="DEBUFF"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10325"/>
+		<set name="isCancel" value="true"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reflectable" value="false"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
 		<for>
 			<effect name="i_dispel_by_category" time="0">
 				<def name="abnormal_category" value="slot_buff"/>
