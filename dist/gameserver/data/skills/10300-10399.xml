@@ -345,17 +345,22 @@
 	-->
     <skill id="10306" levels="4" name="Superior Polearm Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#pAtk">1.02 1.03 1.04 1.05</table>
+		<table name="#pAtk">583 678 807 978</table>
+		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
+		<table name="#poleTargetCount">1 1 2 2</table>
 		<set name="icon" value="icon.skill11836"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
-			<mul order="0x30" stat="pAtk" value="#pAtk">
+			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Pole"/>
 			</mul>
-			<add order="0x40" stat="poleTargetCount" value="1">
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Pole"/>
+			</add>
+			<add order="0x40" stat="poleTargetCount" value="#poleTargetCount">
 				<using kind="Pole"/>
 			</add>
 		</for>
