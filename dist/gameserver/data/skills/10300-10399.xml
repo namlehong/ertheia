@@ -962,10 +962,22 @@
 		desc_add2: none
 	-->
     <skill id="10319" levels="1" name="Duelist's Fury">
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="hitTime" value="300"/>
 		<set name="icon" value="icon.skll10319"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.3"/>
+				<add order="0x40" stat="runSpd" value="66"/>
+				<mul order="0x30" stat="debuffResist" value="1.3"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Faceoff - Engages target in 1:1 combat. Ignores all normal attacks, skills, and debuffs, except those of the opponent. Increases your P. Atk., Spd., and debuff resistance.
