@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!ELEMENT list (npc)*>
-<!ELEMENT npc (set|faction|skills|equip|rewardlist|minions|teleportlist|absorblist|ai_params|attributes|walker_route|random_actions)*>
+<!ELEMENT npc (set|faction|skills|equip|rewardlist|teach_classes|minions|teleportlist|absorblist|ai_params|attributes|walker_route|random_actions)*>
 <!ATTLIST npc
 	id CDATA #REQUIRED
 	template_id CDATA #IMPLIED
@@ -17,7 +17,7 @@
 	level CDATA #REQUIRED>
 <!ELEMENT faction (ignore)*>
 <!ATTLIST faction
-	names CDATA #REQUIRED
+	name CDATA #REQUIRED
 	range CDATA #REQUIRED>
 <!ELEMENT ignore (#PCDATA)>
 <!ATTLIST ignore
@@ -29,6 +29,10 @@
 <!ELEMENT lhand (#PCDATA)>
 <!ATTLIST lhand
 	item_id CDATA #REQUIRED>
+<!ELEMENT teach_classes (class)*>
+<!ELEMENT class (#PCDATA)>
+<!ATTLIST class
+	id CDATA #REQUIRED>
 <!ELEMENT minions (minion)*>
 <!ELEMENT minion (#PCDATA)>
 <!ATTLIST minion
@@ -36,8 +40,7 @@
 	count CDATA #REQUIRED>
 <!ELEMENT rewardlist (group|reward)*>
 <!ATTLIST rewardlist
-	type CDATA #REQUIRED
-	auto_loot CDATA #IMPLIED>
+	type CDATA #REQUIRED>
 <!ELEMENT group (reward)*>
 <!ATTLIST group
 	chance CDATA #IMPLIED>
@@ -50,13 +53,12 @@
 <!ELEMENT teleportlist (sublist)*>
 <!ELEMENT sublist (target)*>
 <!ATTLIST sublist
-	id CDATA #REQUIRED
-	prime_hours CDATA #IMPLIED>
+	id CDATA #REQUIRED>
 <!ELEMENT target (#PCDATA)>
 <!ATTLIST target
 	item_id CDATA #REQUIRED
 	loc CDATA #REQUIRED
-	castle_id CDATA #IMPLIED
+        castle_id CDATA #IMPLIED
 	name CDATA #REQUIRED
 	price CDATA #REQUIRED>
 <!ELEMENT absorblist (absorb)*>
@@ -90,8 +92,7 @@
 	phrase_id CDATA #IMPLIED
 	social_action_id CDATA #IMPLIED
 	delay CDATA #IMPLIED
-	running CDATA #IMPLIED
-	teleport CDATA #IMPLIED>
+	running CDATA #IMPLIED>
 <!ELEMENT random_actions (action)*>
 <!ATTLIST random_actions
 	random_order CDATA #IMPLIED>
