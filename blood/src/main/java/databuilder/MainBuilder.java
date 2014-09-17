@@ -9,12 +9,17 @@ import java.util.Comparator;
 
 import l2s.gameserver.Config;
 import l2s.gameserver.data.xml.parser.BaseStatsBonusParser;
+import l2s.gameserver.data.xml.parser.ItemParser;
 import l2s.gameserver.data.xml.parser.LevelBonusParser;
+import l2s.gameserver.data.xml.parser.OptionDataParser;
+import l2s.gameserver.data.xml.parser.VariationDataParser;
 import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.templates.item.ItemTemplate;
 import databuilder.xml.builder.ItemBuilder;
 import databuilder.xml.builder.NpcBuilder;
 import databuilder.xml.builder.SkillBuilder;
+import databuilder.xml.parser.L2onDropParser;
+import databuilder.xml.parser.NpcDropParser;
 import databuilder.xml.parser.NpcGaiParser;
 import databuilder.xml.parser.NpcParser;
 import databuilder.xml.parser.SkillParser;
@@ -62,6 +67,15 @@ public class MainBuilder
 		NpcBuilder.getInstance().buildAndStore();
 	}
 	
+	public static void buildDropList(){
+		SkillTable.getInstance().load();
+		OptionDataParser.getInstance().load();
+		VariationDataParser.getInstance().load();
+		ItemParser.getInstance().load();
+		NpcDropParser.getInstance().load();
+		L2onDropParser.getInstance().load();
+	}
+	
 	public static void buildItem(){
 //		SkillTable.getInstance().load();
 //		OptionDataParser.getInstance().load();
@@ -89,15 +103,8 @@ public class MainBuilder
 	    }
 	}
 	
-	
-	
-	
-	
-	
-	
 	public static void main(String[] args)
 	{
-//		System.currentTimeMillis();
 		System.out.println("Start...");
 		try {
 			Config.DATAPACK_ROOT = new File(_datapack_path).getCanonicalFile();
@@ -106,8 +113,9 @@ public class MainBuilder
 			e.printStackTrace();
 		}
 		
-		buildNpc();
+//		buildNpc();
 //		buildSkill();
+		buildDropList();
 		
 		
 	}
