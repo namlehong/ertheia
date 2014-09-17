@@ -807,13 +807,17 @@
 		desc_add2: none
 	-->
     <skill id="10316" levels="1" name="Bloodthirst">
+    	<table name="#pvpBonus">1.05 1.06 1.06 1.07</table>
 		<set name="icon" value="icon.skill0193"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="target" value="TARGET_NONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="magicLevel" value="85"/>
 		<for>
 			<effect>
-				<!-- add pvp bonus -->
+				<mul order="0x30" stat="pvpPhysDmgBonus" value="#pvpBonus"/>
+				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#pvpBonus"/>
+				<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#pvpBonus"/>
 			</effect>
 		</for>
 	</skill>
