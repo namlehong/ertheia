@@ -2551,27 +2551,26 @@
 		desc_add2: none
 	-->
     <skill id="10523" levels="6" name="Poisoned">
-		<set name="reuseDelay" value="1000"/>
-		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#abnormal_level">1 2 3 4 5 6</table>
+		<table name="#magicLevel">85 87 90 93 96 99</table>
+		<table name="#pAtk">0.89 0.88 0.87 0.86 0.85 0.84</table>
+		<table name="#pmDef">0.89 0.88 0.87 0.86 0.85 0.84</table>
 		<table name="#power">687 700 721 742 762 783</table>
-		<table name="#runSpd">0.89 0.88 0.87 0.86 0.85 0.84</table> <!-- От балды -->
-		<table name="#pAtk">0.89 0.88 0.87 0.86 0.85 0.84</table> <!-- От балды -->
-		<table name="#sDef">0.89 0.88 0.87 0.86 0.85 0.84</table> <!-- От балды -->
-		<table name="#pmDef">0.89 0.88 0.87 0.86 0.85 0.84</table> <!-- От балды -->
+		<table name="#runSpd">0.89 0.88 0.87 0.86 0.85 0.84</table>
+		<table name="#sDef">0.89 0.88 0.87 0.86 0.85 0.84</table>
 		<set name="abnormal_effect" value="DOT_POISON"/>
-		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_type" value="poison"/>
 		<set name="activateRate" value="30"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill1167"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="saveVs" value="CON"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="trait" value="POISON"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="CON"/>
 		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="POISON"/>
 		<for>
 			<effect count="15" name="Poison" time="1" value="#power">
 				<mul order="0x30" stat="pAtk" value="#pAtk"/>
