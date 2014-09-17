@@ -1145,9 +1145,15 @@
 	-->
     <skill id="10323" levels="1" name="Self Heal (Warrior)">
 		<set name="icon" value="icon.skill0000"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="1"/>
+		<set name="mpConsume2" value="1"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect name="HealPercent" time="0" value="10"/>
+		</for>
 	</skill>
     <!--
 		Momentum Master - Power of skills that consume Momentum increase by 10%.
