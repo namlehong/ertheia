@@ -1308,12 +1308,12 @@
 		</for>
 	</skill>
     <!--
-		Momentum Flash - Attacks target with17348 Power added to P. Atk. Requires a sword/dagger/blunt weapon/fist weapon. Damage increases when using Momentum, which you can use up to 3. Over-hit. Critical.
+		Momentum Flash - Attacks target with 17348 Power added to P. Atk. Requires a sword/dagger/blunt weapon/fist weapon. Damage increases when using Momentum, which you can use up to 3. Over-hit. Critical.
 
-		LvL.1	description: Attacks target with17348 Power added to P Atk.	mp_consume: 98
-		LvL.2	description: Attacks target with20033 Power added to P Atk.	mp_consume: 105
-		LvL.3	description: Attacks target with22717 Power added to P Atk.	mp_consume: 112
-		LvL.4	description: Attacks target with25700 Power added to P Atk.	mp_consume: 119
+		LvL.1	description: Attacks target with 17348 Power added to P Atk.	mp_consume: 98
+		LvL.2	description: Attacks target with 20033 Power added to P Atk.	mp_consume: 105
+		LvL.3	description: Attacks target with 22717 Power added to P Atk.	mp_consume: 112
+		LvL.4	description: Attacks target with 25700 Power added to P Atk.	mp_consume: 119
 	
 		name: Momentum Flash
 		level: 1
@@ -1335,10 +1335,31 @@
 		desc_add2: none
 	-->
     <skill id="10327" levels="4" name="Momentum Flash">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">98 105 112 119</table>
+		<table name="#power">17348 20033 22717 25700</table>
+		<set name="castRange" value="600"/>
+		<set name="chargeBoost" value="true"/>
+		<set name="cond_charges" value="3"/>
+		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="10"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10327"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="useSS" value="false"/>
+		<cond msgId="113">
+			<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword"/>
+		</cond>
 	</skill>
     <!--
 		Soul Berserker - When equipped with a sword or blunt weapon, P. Atk. +10%, P. Critical Damage + 10%, and P. Skill MP Consumption + 10%.
