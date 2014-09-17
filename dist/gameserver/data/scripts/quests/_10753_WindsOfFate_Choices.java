@@ -573,7 +573,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			st.setCond(18);
 		}
 		
-		if(event.equalsIgnoreCase("33943-10.htm") || event.equalsIgnoreCase("33942-10.htm"))
+		if(event.equalsIgnoreCase("33931-4.htm") || event.equalsIgnoreCase("33931-6.htm"))
 		{
 			ClassId newClassId;
 			
