@@ -147,9 +147,9 @@
 		desc_add2: none
 	-->
     <skill id="10302" levels="4" name="Triple Sonic Slash">
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">98 105 112 119</table>
 		<table name="#power">22531 26017 29503 33377</table>
-		<table name="#magicLevel">85 90 95 99</table>
 		<set name="castRange" value="40"/>
 		<set name="cond_charges" value="3"/>
 		<set name="criticalRate" value="10"/>
@@ -241,6 +241,7 @@
     <skill id="10304" levels="4" name="Superior Dual Sword Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
+		<table name="#pAtk">709 825 982 1190</table>
 		<set name="icon" value="icon.skill11835"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -250,6 +251,9 @@
 			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Dual Sword, Dual Blunt"/>
 			</mul>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</add>
 		</for>
 	</skill>
     <!--
