@@ -967,6 +967,7 @@
 		<set name="abnormal_type" value="possession"/>
 		<set name="hitTime" value="300"/>
 		<set name="icon" value="icon.skll10319"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="300000"/>
 		<set name="skillType" value="BUFF"/>
@@ -1097,10 +1098,27 @@
 		desc_add2: none
 	-->
     <skill id="10322" levels="1" name="Wolf's Cry">
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="hitTime" value="2000"/>
 		<set name="icon" value="icon.skll10320"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="abnormal_level" value="1"/>
+		<cond msgId="113">
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Dual Blunt, Pole"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pDef" value="1.5"/>
+				<mul order="0x30" stat="mDef" value="1.5"/>
+				<mul order="0x30" stat="maxHp" value="1.25"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Self Heal (Warrior) - Recovers 10% of Max HP.
