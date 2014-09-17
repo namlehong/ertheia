@@ -1,0 +1,3479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Vorpal Heavy Armor Set - Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, M. Def. by 2%, Max HP by 541, Bleed/Hold/Sleep Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak. CON+ 2. STR-2
+
+		name: Vorpal Heavy Armor Set
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, M. Def. by 2%, Max HP by 541, Bleed/Hold/Sleep Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak. CON+ 2. STR-2
+		icon_name: icon.armor_t94_u_i03
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8400" levels="1" name="Vorpal Heavy Armor Set">
+	<!-- При ношении увеличивает Физ. Защ. на 8,47%, Физ. Атк. на 5,57%, Точность на 4, Скорость на 7,
+	сопротивление магическому урону на 2%, Макс. HP на 541, сопротивление удерживающим/усыпляющим/кровопускающим атакам на 50%,
+	сопротивление огню/воде/ветру/земле на 5. Позволяет носить плащ. ВЫН+2. СИЛ-2. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_u_i03"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAccCombat" value="4"/>
+			<add order="0x40" stat="runSpd" value="7"/>
+			<add order="0x10" stat="CON" value="2"/>
+			<sub order="0x10" stat="STR" value="2"/>
+			<mul order="0x30" stat="pDef" value="1.0847"/>
+			<mul order="0x30" stat="pAtk" value="1.0557"/>
+			<add order="0x40" stat="maxHp" value="541"/>
+			<add order="0x40" stat="magicResist" value="2"/>
+			<add order="0x40" stat="bleedResist" value="50"/>
+			<add order="0x40" stat="rootResist" value="50"/>
+			<add order="0x40" stat="sleepResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Vorpal Leather Armor Set - Increases P. Atk./P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak. STR+ 1, DEX+ 2, CON-3
+
+		name: Vorpal Leather Armor Set
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak. STR+ 1, DEX+ 2, CON-3
+		icon_name: icon.armor_t95_u_i03
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8401" levels="1" name="Vorpal Leather Armor Set">
+	<!-- При использовании увеличивает Физ. Атк./Физ. Защ. на 5,57%, Скор. Атк. - на 5%, Скорость - на 3%,
+	Мощь Крит. Удара - на 182, Макс. МР - на 360, сопротивление оглушающим атакам - на 50%, сопротивление огню/воде/ветру/земле - на 5.
+	Позволяет носить плащ. СИЛ+1, ЛВК+2, ВЫН-3. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_u_i03"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pCritDamageStatic" value="182"/>
+			<add order="0x40" stat="maxMp" value="360"/>
+			<add order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="DEX" value="2"/>
+			<sub order="0x10" stat="CON" value="3"/>
+			<mul order="0x30" stat="pAtk" value="1.0557"/>
+			<mul order="0x30" stat="pDef" value="1.0557"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.05"/>
+			<mul order="0x30" stat="runSpd" value="1.03"/>
+			<add order="0x40" stat="stunResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Vorpal Robe Set - Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak. WIT+ 2, MEN-1, INT-1
+
+		name: Vorpal Robe Set
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak. WIT+ 2, MEN-1, INT-1
+		icon_name: icon.armor_t96_u_i03
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8402" levels="1" name="Vorpal Robe Set">
+	<!-- При использовании увеличивает Маг. Атк. на 8,7%, Скор. Маг. на 15%, скорость восстановления MP на 5%, Скорость на 7,
+	Макс. МР на 92, сопротивление оглушающим атакам на 50%, сопротивление огню/воде/ветру/земле на 5.
+	Позволяет носить плащ. МДР+2, ДУХ-1, ИНТ-1. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_u_i03"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" value="92"/>
+			<add order="0x40" stat="runSpd" value="7"/>
+			<add order="0x10" stat="WIT" value="2"/>
+			<sub order="0x10" stat="MEN" value="1"/>
+			<sub order="0x10" stat="INT" value="1"/>
+			<mul order="0x30" stat="mAtk" value="1.087"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+			<mul order="0x30" stat="regMp" value="1.05"/>
+			<add order="0x40" stat="stunResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Elegia Heavy Armor Set - STR+ 3, CON-2.P. Atk. increases by 6.59% when equipped; Critical rate increases by 127; Bleed/Hold/Sleep Resistance increases by 50%; Magic Damage Resistance increases by 2%; Max HP increases by 550; Fire/Water/Wind/Earth Resistance increases by 5; Rest
+
+		name: Elegia Heavy Armor Set
+		level: 1
+		mp_consume: 0
+		description: STR+ 3, CON-2.P. Atk. increases by 6.59% when equipped; Critical rate increases by 127; Bleed/Hold/Sleep Resistance increases by 50%; Magic Damage Resistance increases by 2%; Max HP increases by 550; Fire/Water/Wind/Earth Resistance increases by 5; Rest
+		icon_name: icon.armor_t97_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8403" levels="1" name="Elegia Heavy Armor Set">
+	<!-- При использовании увеличивает Физ. Атк. на 6,59%, Шанс критического удара - на 127,
+	сопротивление удерживающим/усыпляющим/кровопускающим атакам - на 50%, сопротивление магическому урону - на 2%,
+	Макс. HP - на 550, сопротивление огню/воде/ветру/земле - на 5 и с определенной вероятностью
+	восстанавливает определенное количество HP от нанесенного противнику урона. Позволяет носить плащ. СИЛ+3, ВЫН-2. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t97_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="STR" value="3"/>
+			<sub order="0x10" stat="CON" value="2"/>
+			<mul order="0x30" stat="pAtk" value="1.0659"/>
+			<add order="0x40" stat="basePCritRate" value="127"/>
+			<add order="0x40" stat="maxHp" value="550"/>
+			<add order="0x40" stat="magicResist" value="2"/>
+			<add order="0x40" stat="absorbDam" value="3"/>
+			<add order="0x40" stat="absorbBowDam" value="3"/>
+			<add order="0x40" stat="absorbPSkillDam" value="3"/>
+			<add order="0x40" stat="absorbMSkillDam" value="3"/>
+			<add order="0x40" stat="bleedResist" value="50"/>
+			<add order="0x40" stat="rootResist" value="50"/>
+			<add order="0x40" stat="sleepResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Elegia Leather Armor Set - STR+ 1, DEX+ 2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak.
+
+		name: Elegia Leather Armor Set
+		level: 1
+		mp_consume: 0
+		description: STR+ 1, DEX+ 2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/Water/Wind/Earth Resistance by 5. Can equip a cloak.
+		icon_name: icon.armor_t98_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8404" levels="1" name="Elegia Leather Armor Set">
+	<!-- При использовании увеличивает Физ. Атк. на 6,59%, Скор. Атк. - на 6%, Шанс критического удара - на 171,
+	сопротивление парализующим атакам - на 50%, Скорость - на 3%, сопротивление огню/воде/ветру/земле - на 5.
+	Позволяет носить плащ. СИЛ+1, ЛВК+2, ВЫН-2. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t98_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="DEX" value="2"/>
+			<sub order="0x10" stat="CON" value="2"/>
+			<mul order="0x30" stat="pAtk" value="1.0659"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.06"/>
+			<add order="0x40" stat="basePCritRate" value="171"/>
+			<mul order="0x30" stat="runSpd" value="1.03"/>
+			<add order="0x40" stat="paralyzeResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Elegia Robe Set - Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. Can equip a cloak. WIT+ 2, INT+ 1, MEN-
+
+		name: Elegia Robe Set
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. Can equip a cloak. WIT+ 2, INT+ 1, MEN-
+		icon_name: icon.armor_t99_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8405" levels="1" name="Elegia Robe Set">
+	<!-- При использовании увеличивает Маг. Атк. на 10%, Скор. Маг. на 15%, Бонус при восстановлении MP на 5%,
+	Скорость на 7, Макс. МР на 97, сопротивление оглушающим атакам на 50%, сопротивление огню/воде/ветру/земле на 5.
+	Уменьшает Расход МР при использовании магических умений на 3%.Позволяет носить плащ. МДР+2, ИНТ+1, ДУХ-2. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t99_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" value="97"/>
+			<add order="0x40" stat="runSpd" value="7"/>
+			<add order="0x10" stat="INT" value="1"/>
+			<add order="0x10" stat="WIT" value="2"/>
+			<sub order="0x10" stat="MEN" value="2"/>
+			<mul order="0x30" stat="mAtk" value="1.1"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+			<mul order="0x30" stat="regMp" value="1.05"/>
+			<mul order="0x30" stat="mpConsum" value="0.97"/>
+			<add order="0x40" stat="stunResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Heavy Armor Set - PvP - Increases P. Atk. by 4.26%, Atk. Spd. by 4%, M. Def. by 2%, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 3. Decreases damage received during PvP, and has a chance to decrease the opponent's Speed. Cloak equip possible. STR+ 2. CON-2
+
+		name: Moirai Heavy Armor Set - PvP
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 4.26%, Atk. Spd. by 4%, M. Def. by 2%, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 3. Decreases damage received during PvP, and has a chance to decrease the opponent's Speed. Cloak equip possible. STR+ 2. CON-2
+		icon_name: icon.armor_t100_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8406" levels="1" name="Moirai Heavy Armor Set - PvP">
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t100_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5693" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="STR" value="2"/>
+			<sub order="0x10" stat="CON" value="2"/>
+			<mul order="0x30" stat="pAtk" value="1.0426"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.04"/>
+			<add order="0x40" stat="stunResist" value="50"/>
+			<add order="0x40" stat="magicResist" value="2"/>
+			<add order="0x40" stat="defenceFire" value="3"/>
+			<add order="0x40" stat="defenceWater" value="3"/>
+			<add order="0x40" stat="defenceWind" value="3"/>
+			<add order="0x40" stat="defenceEarth" value="3"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Light Armor Set - PvP - Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Hold Resistance by 50% and Fire/Water/Wind/Earth Resistance by 3. Decreases damage received during PvP, and has a chance of removing the opponent's target when attacked. Cloak equip possibl
+
+		name: Moirai Light Armor Set - PvP
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Hold Resistance by 50% and Fire/Water/Wind/Earth Resistance by 3. Decreases damage received during PvP, and has a chance of removing the opponent's target when attacked. Cloak equip possibl
+		icon_name: icon.armor_t101_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8407" levels="1" name="Moirai Light Armor Set - PvP">
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t101_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5694" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="DEX" value="2"/>
+			<sub order="0x10" stat="CON" value="2"/>
+			<mul order="0x30" stat="pAtk" value="1.0426"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.04"/>
+			<mul order="0x30" stat="runSpd" value="1.03"/>
+			<add order="0x40" stat="rootResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="3"/>
+			<add order="0x40" stat="defenceWater" value="3"/>
+			<add order="0x40" stat="defenceWind" value="3"/>
+			<add order="0x40" stat="defenceEarth" value="3"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Robe Set - PvP - Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 50% and Fire/Water/Wind/Earth Resistance by 5. Decreases damage received during PvP, and has a chance of decreasing Critical Rate/Damage when attacked. Cloak equip possible. WIT+ 2
+
+		name: Moirai Robe Set - PvP
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 50% and Fire/Water/Wind/Earth Resistance by 5. Decreases damage received during PvP, and has a chance of decreasing Critical Rate/Damage when attacked. Cloak equip possible. WIT+ 2
+		icon_name: icon.armor_t102_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8408" levels="1" name="Moirai Robe Set - PvP">
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t102_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5691" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="WIT" value="2"/>
+			<sub order="0x10" stat="MEN" value="2"/>
+			<mul order="0x30" stat="mAtk" value="1.0811"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+			<add order="0x40" stat="paralyzeResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Vorpal Heavy Armor Set - PvP - Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, M. Def. by 2%, Max HP by 541, Bleed/Hold/Sleep Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, received damage decreases, and all speeds of the attacker d
+
+		name: Vorpal Heavy Armor Set - PvP
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, M. Def. by 2%, Max HP by 541, Bleed/Hold/Sleep Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, received damage decreases, and all speeds of the attacker d
+		icon_name: icon.armor_t94_u_i03
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8409" levels="1" name="Vorpal Heavy Armor Set - PvP">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_u_i03"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5693" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x40" stat="pAccCombat" value="4"/>
+			<add order="0x40" stat="runSpd" value="7"/>
+			<add order="0x10" stat="CON" value="2"/>
+			<sub order="0x10" stat="STR" value="2"/>
+			<mul order="0x30" stat="pDef" value="1.0847"/>
+			<mul order="0x30" stat="pAtk" value="1.0557"/>
+			<add order="0x40" stat="maxHp" value="541"/>
+			<add order="0x40" stat="magicResist" value="2"/>
+			<add order="0x40" stat="bleedResist" value="50"/>
+			<add order="0x40" stat="rootResist" value="50"/>
+			<add order="0x40" stat="sleepResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Vorpal Leather Armor Set - PvP - Increases P. Atk./P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, received damage decreases and the opponent's target is cancelled at a
+
+		name: Vorpal Leather Armor Set - PvP
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, received damage decreases and the opponent's target is cancelled at a
+		icon_name: icon.armor_t95_u_i03
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8410" levels="1" name="Vorpal Leather Armor Set - PvP">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_u_i03"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5694" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x40" stat="pCritDamageStatic" value="182"/>
+			<add order="0x40" stat="maxMp" value="360"/>
+			<add order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="DEX" value="2"/>
+			<sub order="0x10" stat="CON" value="3"/>
+			<mul order="0x30" stat="pAtk" value="1.0557"/>
+			<mul order="0x30" stat="pDef" value="1.0557"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.05"/>
+			<mul order="0x30" stat="runSpd" value="1.03"/>
+			<add order="0x40" stat="stunResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Vorpal Robe Set - PvP - Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, received damage decreases and Critical Rate/damage decrease at a fixed rate
+
+		name: Vorpal Robe Set - PvP
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, received damage decreases and Critical Rate/damage decrease at a fixed rate
+		icon_name: icon.armor_t96_u_i03
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8411" levels="1" name="Vorpal Robe Set - PvP">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_u_i03"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5691" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x40" stat="maxMp" value="92"/>
+			<add order="0x40" stat="runSpd" value="7"/>
+			<add order="0x10" stat="WIT" value="2"/>
+			<sub order="0x10" stat="MEN" value="1"/>
+			<sub order="0x10" stat="INT" value="1"/>
+			<mul order="0x30" stat="mAtk" value="1.087"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+			<mul order="0x30" stat="regMp" value="1.05"/>
+			<add order="0x40" stat="stunResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Elegia Heavy Armor Set - PvP - STR+ 3, CON-2. P. Atk. increases by 6.59% when equipped; Critical rate increases by 127; Bleed/Hold/Sleep Resistance increases by 50%; Magic Damage Resistance increases by 2%; Max HP increases by 550; Fire/Water/Wind/Earth Resistance increases by 5; Res
+
+		name: Elegia Heavy Armor Set - PvP
+		level: 1
+		mp_consume: 0
+		description: STR+ 3, CON-2. P. Atk. increases by 6.59% when equipped; Critical rate increases by 127; Bleed/Hold/Sleep Resistance increases by 50%; Magic Damage Resistance increases by 2%; Max HP increases by 550; Fire/Water/Wind/Earth Resistance increases by 5; Res
+		icon_name: icon.armor_t97_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8412" levels="1" name="Elegia Heavy Armor Set - PvP">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t97_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5693" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="STR" value="3"/>
+			<sub order="0x10" stat="CON" value="2"/>
+			<mul order="0x30" stat="pAtk" value="1.0659"/>
+			<add order="0x40" stat="basePCritRate" value="124"/>
+			<add order="0x40" stat="maxHp" value="550"/>
+			<add order="0x40" stat="magicResist" value="2"/>
+			<add order="0x40" stat="absorbDam" value="3"/>
+			<add order="0x40" stat="absorbBowDam" value="3"/>
+			<add order="0x40" stat="absorbPSkillDam" value="3"/>
+			<add order="0x40" stat="absorbMSkillDam" value="3"/>
+			<add order="0x40" stat="bleedResist" value="50"/>
+			<add order="0x40" stat="rootResist" value="50"/>
+			<add order="0x40" stat="sleepResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Elegia Leather Armor Set - PvP - STR+ 1, DEX+ 2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, damage incurred upon attack decreases and the oppon
+
+		name: Elegia Leather Armor Set - PvP
+		level: 1
+		mp_consume: 0
+		description: STR+ 1, DEX+ 2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/Water/Wind/Earth Resistance by 5. During PvP, damage incurred upon attack decreases and the oppon
+		icon_name: icon.armor_t98_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8413" levels="1" name="Elegia Leather Armor Set - PvP">
+		<!-- "STR +1; DEX +2; CON -2; When equipped: Attack Power +6.59%, Atk. Spd. +6%, Crt. Rate +17.05, Resistance to Paralyze Atk. +50%, Moving Spd. +3%, and Resistance to fire/water/wind/earth attributes +5. During PvP, damage received decreased and chance to cancel the opponent's target when attacked. Opens cloak slot." -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t98_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5694" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="DEX" value="2"/>
+			<sub order="0x10" stat="CON" value="2"/>
+			<mul order="0x30" stat="pAtk" value="1.0659"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.06"/>
+			<add order="0x40" stat="basePCritRate" value="171"/>
+			<mul order="0x30" stat="runSpd" value="1.03"/>
+			<add order="0x40" stat="paralyzeResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Elegia Robe Set - PvP - Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. During PvP, received damage decreases a
+
+		name: Elegia Robe Set - PvP
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/Water/Wind/Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. During PvP, received damage decreases a
+		icon_name: icon.armor_t99_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8414" levels="1" name="Elegia Robe Set - PvP">
+		<!-- Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, resistance to Stun Atk. by 50%, resistance to Fire/Water/Wind/Earth attack by 5. Damage received during PvP is decreased and critical rate / critical damage decreases when being attacked. Cloak equip possible. WIT+2, INT+1, MEN-2 -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t99_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="5691" level="1" type="RECEIVE_DAMAGE" chance="2">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
+		<for>
+			<add order="0x40" stat="maxMp" value="97"/>
+			<add order="0x40" stat="runSpd" value="7"/>
+			<add order="0x10" stat="WIT" value="2"/>
+			<add order="0x10" stat="INT" value="1"/>
+			<sub order="0x10" stat="MEN" value="2"/>
+			<mul order="0x30" stat="mAtk" value="1.1"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+			<mul order="0x30" stat="regMp" value="1.05"/>
+			<mul order="0x30" stat="mpConsum" value="0.97"/>
+			<add order="0x40" stat="stunResist" value="50"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+			<mul order="0x30" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x30" stat="pvpMagicSkillDefenceBonus" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Ring Ability: Drop Rate Up - Increases item drop rate.
+
+		name: Ring Ability: Drop Rate Up
+		level: 1
+		mp_consume: 0
+		description: Increases item drop rate.
+		icon_name: icon.skill3080
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8415" levels="5" name="Ring Ability: Drop Rate Up">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Earring Ability: Increase Drop Rate - Increases item drop rate.
+
+		name: Earring Ability: Increase Drop Rate
+		level: 1
+		mp_consume: 0
+		description: Increases item drop rate.
+		icon_name: icon.skill3080
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8416" levels="5" name="Earring Ability: Increase Drop Rate">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Necklace Ability: Drop Rate Up - Increases item drop rate.
+
+		name: Necklace Ability: Drop Rate Up
+		level: 1
+		mp_consume: 0
+		description: Increases item drop rate.
+		icon_name: icon.skill3080
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8417" levels="5" name="Necklace Ability: Drop Rate Up">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill3080"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Moirai Helmet - Increases P. Atk. by 1.25%, Atk. Spd. by 1%, Stun Resistance by 5% and Fire Resistance by 3.
+
+		name: Moirai Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 1.25%, Atk. Spd. by 1%, Stun Resistance by 5% and Fire Resistance by 3.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8418" levels="1" name="Moirai Helmet">
+		<!-- Increases P.Atk. by 1.25%, Atk. Spd. by 1%, resistance to shock by 5% and resistance to Fire Attibute by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0125"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="defenceFire" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Breastplate - Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Stun Resistance by 5% and Fire/Water/Wind/Earth Resistance by 1.
+
+		name: Moirai Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Stun Resistance by 5% and Fire/Water/Wind/Earth Resistance by 1.
+		icon_name: icon.armor_t100_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8419" levels="1" name="Moirai Breastplate">
+		<!-- Increases P.Atk. by 4.26%, Atk. Spd. by 4%, resistance to shock by 5% and resistance to Fire/Water/Wind/Earth attack by 1. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t100_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0426"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.04"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="defenceWater" value="1"/>
+			<add order="0x40" stat="defenceFire" value="1"/>
+			<add order="0x40" stat="defenceWind" value="1"/>
+			<add order="0x40" stat="defenceEarth" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Gaiters - Increases P. Atk. by 2.08%, Atk. Spd. by 1.67%, Stun Resistance by 5% and Water Resistance by 3.
+
+		name: Moirai Gaiters
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 2.08%, Atk. Spd. by 1.67%, Stun Resistance by 5% and Water Resistance by 3.
+		icon_name: icon.armor_t100_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8420" levels="1" name="Moirai Gaiters">
+		<!-- Increases P.Atk. by 2.08%, Atk. Spd. by 1.67%, resistance to shock by 5% and resistance to Water Attibute by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t100_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0208"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0167"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="defenceWater" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Gauntlets - Increases P. Atk. by 0.83%, Atk. Spd. by 0.67%, Stun Resistance by 5% and Wind Resistance by 3.
+
+		name: Moirai Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.83%, Atk. Spd. by 0.67%, Stun Resistance by 5% and Wind Resistance by 3.
+		icon_name: icon.armor_t100_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8421" levels="1" name="Moirai Gauntlets">
+		<!-- Increases P.Atk. by 0.83%, Atk. Spd. by 0.67%, resistance to shock by 5% and resistance to Wind Attibute by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t100_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0083"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0067"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="defenceWind" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Boots - Increases P. Atk. by 0.83%, Atk. Spd. by 0.67%, Stun Resistance by 5% and Earth Resistance by 3.
+
+		name: Moirai Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.83%, Atk. Spd. by 0.67%, Stun Resistance by 5% and Earth Resistance by 3.
+		icon_name: icon.armor_t100_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8422" levels="1" name="Moirai Boots">
+		<!-- Increases P.Atk. by 0.83%, Atk. Spd. by 0.67%, resistance to shock by 5% and resistance to Earth Attibute by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t100_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0083"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0067"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Shield - Increases M. Def. by 2%.
+
+		name: Moirai Shield
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def. by 2%.
+		icon_name: icon.weapon_tysandy_shield_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8423" levels="1" name="Moirai Shield">
+		<!-- Increases resistance to magic damage by 2%. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.weapon_tysandy_shield_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="magicResist" value="2"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Leather Helmet - Increases P. Atk. by 1.25%, MP Recovery Bonus by 1%, Hold Resistance by 5%, and Fire Resistance by 3.
+
+		name: Moirai Leather Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 1.25%, MP Recovery Bonus by 1%, Hold Resistance by 5%, and Fire Resistance by 3.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8424" levels="1" name="Moirai Leather Helmet">
+		<!-- Increases P. Atk. by 1.25%, MP recovery rate by 1%, resistance to Hold by 5% and resistance to Fire by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0125"/>
+			<add order="0x40" stat="rootResist" value="5"/>
+			<mul order="0x30" stat="regMp" value="1.01"/>
+			<add order="0x40" stat="defenceFire" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Leather Breastplate - Increases P. Atk. by 4.26%, MP Recovery Bonus by 4%, Hold Resistance by 5%, and Water Resistance by 3.
+
+		name: Moirai Leather Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 4.26%, MP Recovery Bonus by 4%, Hold Resistance by 5%, and Water Resistance by 3.
+		icon_name: icon.armor_t101_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8425" levels="1" name="Moirai Leather Breastplate">
+		<!-- Increases P. Atk. by 4.26%, MP recovery rate by 4%, resistance to Hold by 5% and resistance to Water by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t101_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0426"/>
+			<add order="0x40" stat="rootResist" value="5"/>
+			<mul order="0x30" stat="regMp" value="1.04"/>
+			<add order="0x40" stat="defenceWater" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Leather Leggings - Increases P. Atk. by 2.08%, MP Recovery Bonus by 1.67%, Hold Resistance by 5%, and Water Resistance by 3.
+
+		name: Moirai Leather Leggings
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 2.08%, MP Recovery Bonus by 1.67%, Hold Resistance by 5%, and Water Resistance by 3.
+		icon_name: icon.armor_t101_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8426" levels="1" name="Moirai Leather Leggings">
+		<!-- Increases P. Atk. by 2.08%, MP recovery rate by 1.67%, resistance to Hold by 5% and resistance to Water by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t101_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0208"/>
+			<add order="0x40" stat="rootResist" value="5"/>
+			<mul order="0x30" stat="regMp" value="1.0167"/>
+			<add order="0x40" stat="defenceWater" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Leather Gloves - Increases P. Atk. by 0.83%, MP Recovery Bonus by 0.67%, Hold Resistance by 5%, and Earth Resistance by 3.
+
+		name: Moirai Leather Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.83%, MP Recovery Bonus by 0.67%, Hold Resistance by 5%, and Earth Resistance by 3.
+		icon_name: icon.armor_t101_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8427" levels="1" name="Moirai Leather Gloves">
+		<!-- Increases P. Atk. by 0.83%, MP recovery rate by 0.67%, resistance to Hold by 5% and resistance to Wind by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t101_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0083"/>
+			<add order="0x40" stat="rootResist" value="5"/>
+			<mul order="0x30" stat="regMp" value="1.0067"/>
+			<add order="0x40" stat="defenceWind" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Leather Boots - Increases P. Atk. by 0.83%, MP Recovery Bonus by 0.67%, Hold Resistance by 5%, and Earth Resistance by 3.
+
+		name: Moirai Leather Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.83%, MP Recovery Bonus by 0.67%, Hold Resistance by 5%, and Earth Resistance by 3.
+		icon_name: icon.armor_t101_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8428" levels="1" name="Moirai Leather Boots">
+		<!-- Increases P. Atk. by 0.83%, MP recovery rate by 0.67%, resistance to Hold by 5% and resistance to Earth by 3. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t101_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0083"/>
+			<add order="0x40" stat="rootResist" value="5"/>
+			<mul order="0x30" stat="regMp" value="1.0067"/>
+			<add order="0x40" stat="defenceEarth" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Circlet - Increases M. Atk. by 0.62%, Paralysis Resistance by 5% and Fire Resistance by 5.
+
+		name: Moirai Circlet
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.62%, Paralysis Resistance by 5% and Fire Resistance by 5.
+		icon_name: icon.armor_circlet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8429" levels="1" name="Moirai Circlet">
+		<!-- Increases M. Atk. by 0.62%, resistance to Paralysis by 5% and resistance to Fire by 5. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_circlet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0062"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+			<add order="0x40" stat="defenceFire" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Tunic - Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 5% and Fire/Water/Wind/Earth Resistance by 1.
+
+		name: Moirai Tunic
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 5% and Fire/Water/Wind/Earth Resistance by 1.
+		icon_name: icon.armor_t102_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8430" levels="1" name="Moirai Tunic">
+		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, resistance to Paralysis by 5% and resistance to Fire/Water/Wind/Earth by 1. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t102_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0811"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+			<add order="0x40" stat="defenceWater" value="1"/>
+			<add order="0x40" stat="defenceFire" value="1"/>
+			<add order="0x40" stat="defenceWind" value="1"/>
+			<add order="0x40" stat="defenceEarth" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Stockings - Increases M. Atk. by 1.03%, Paralysis Resistance by 5% and Water Resistance by 5.
+
+		name: Moirai Stockings
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 1.03%, Paralysis Resistance by 5% and Water Resistance by 5.
+		icon_name: icon.armor_t102_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8431" levels="1" name="Moirai Stockings">
+		<!-- Increases M. Atk. by 1.03%, resistance to Paralysis by 5% and resistance to Water by 5. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t102_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0103"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+			<add order="0x40" stat="defenceWater" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Gloves - Increases M. Atk. by 0.41%, Paralysis Resistance by 5% and Wind Resistance by 5.
+
+		name: Moirai Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.41%, Paralysis Resistance by 5% and Wind Resistance by 5.
+		icon_name: icon.armor_t102_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8432" levels="1" name="Moirai Gloves">
+		<!-- Increases M. Atk. by 0.41%, resistance to Paralysis by 5% and resistance to Wind by 5. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t102_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0041"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+			<add order="0x40" stat="defenceWind" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Shoes - Increases M. Atk. by 0.41%, Paralysis Resistance by 5% and Earth Resistance by 5.
+
+		name: Moirai Shoes
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.41%, Paralysis Resistance by 5% and Earth Resistance by 5.
+		icon_name: icon.armor_t102_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8433" levels="1" name="Moirai Shoes">
+		<!-- Increases M. Atk. by 0.41%, resistance to Paralysis by 5% and resistance to Earth by 5. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.armor_t102_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0041"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+			<add order="0x40" stat="defenceEarth" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Sigil - Increases M. Def. by 2%.
+
+		name: Moirai Sigil
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def. by 2%.
+		icon_name: icon.weapon_tysandy_sigil_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8434" levels="1" name="Moirai Sigil">
+		<!-- Increases resistance to magic damage by 2%. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.weapon_tysandy_sigil_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="magicResist" value="2"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Helmet - Increases P. Atk./P. Def. by 0.62%, Max HP by 133 and Sleep/Hold Resistance by 10.5%.
+
+		name: Vesper Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 0.62%, Max HP by 133 and Sleep/Hold Resistance by 10.5%.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8435" levels="1" name="Vesper Helmet">
+		<!-- Increases P. Atk./P. Def. by 0.62%, Max HP by 133 and resistance to Sleep/Hold Atk. by 10.5%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0062"/>
+			<mul order="0x30" stat="pDef" value="1.0062"/>
+			<add order="0x40" stat="maxHp" value="133"/>
+			<add order="0x40" stat="sleepResist" value="10.5"/>
+			<add order="0x40" stat="rootResist" value="10.5"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Breastplate - Increases P. Atk./P. Def. by 5.57%, Max HP by 531 and Sleep/Hold Resistance by 28%.
+
+		name: Vesper Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 5.57%, Max HP by 531 and Sleep/Hold Resistance by 28%.
+		icon_name: icon.armor_t94_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8436" levels="1" name="Vesper Breastplate">
+		<!-- Increases P. Atk./P. Def. by 5.57%, Max HP by 531 and resistance to Sleep/Hold Atk. by 28%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0557"/>
+			<mul order="0x30" stat="pDef" value="1.0557"/>
+			<add order="0x40" stat="maxHp" value="531"/>
+			<add order="0x40" stat="sleepResist" value="28"/>
+			<add order="0x40" stat="rootResist" value="28"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Gaiters - Increases P. Atk./P. Def. by 1.03%, Max HP by 55 and Sleep/Hold Resistance by 18%.
+
+		name: Vesper Gaiters
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 1.03%, Max HP by 55 and Sleep/Hold Resistance by 18%.
+		icon_name: icon.armor_t94_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8437" levels="1" name="Vesper Gaiters">
+		<!-- Increases P. Atk./P. Def. by 1/03%, Max HP by 55 and resistance to Sleep/Hold Atk. by 18%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0103"/>
+			<mul order="0x30" stat="pDef" value="1.0103"/>
+			<add order="0x40" stat="maxHp" value="55"/>
+			<add order="0x40" stat="sleepResist" value="18"/>
+			<add order="0x40" stat="rootResist" value="18"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Gauntlets - Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+
+		name: Vesper Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+		icon_name: icon.armor_t94_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8438" levels="1" name="Vesper Gauntlets">
+		<!-- Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and resistance to Sleep/Hold Atk. by 7%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0041"/>
+			<mul order="0x30" stat="pDef" value="1.0041"/>
+			<add order="0x40" stat="maxHp" value="22"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Boots - Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+
+		name: Vesper Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+		icon_name: icon.armor_t94_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8439" levels="1" name="Vesper Boots">
+		<!-- Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and resistance to Sleep/Hold Atk. by 7%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0041"/>
+			<mul order="0x30" stat="pDef" value="1.0041"/>
+			<add order="0x40" stat="maxHp" value="22"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Shield - Increases M. Def. by 2%.
+
+		name: Vesper Shield
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def. by 2%.
+		icon_name: icon.weapon_vesper_verteidiger_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8440" levels="1" name="Vesper Shield">
+		<!-- Increases resistance to magic damage by 2%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.weapon_vesper_verteidiger_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="magicResist" value="2"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Leather Helmet - Increases P. Atk. by 0.41%, Atk. Spd./MP Recovery Bonus by 0.41% and Max MP by 87.
+
+		name: Vesper Leather Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.41%, Atk. Spd./MP Recovery Bonus by 0.41% and Max MP by 87.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8441" levels="1" name="Vesper Leather Helmet">
+		<!-- Increases P. Atk. by 0.41%, Atk. Spd./MP Recovery Bonus by 0.41% and Max MP by 87. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0041"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0041"/>
+			<mul order="0x30" stat="regMp" value="1.0041"/>
+			<add order="0x40" stat="maxMp" value="87"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Leather Breastplate - Increases P. Atk. by 5.57%, Atk. Spd./MP Recovery Bonus by 5% and Max MP by 347.
+
+		name: Vesper Leather Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 5.57%, Atk. Spd./MP Recovery Bonus by 5% and Max MP by 347.
+		icon_name: icon.armor_t95_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8442" levels="1" name="Vesper Leather Breastplate">
+		<!-- Increases P. Atk. by 5.57%, Atk. Spd./MP Recovery Bonus by 5% and Max MP by 347. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0557"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.05"/>
+			<mul order="0x30" stat="regMp" value="1.05"/>
+			<add order="0x40" stat="maxMp" value="347"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Leather Leggings - Increases P. Atk. by 0.68%, Atk. Spd./MP Recovery Bonus by 0.68% and Max MP by 145.
+
+		name: Vesper Leather Leggings
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.68%, Atk. Spd./MP Recovery Bonus by 0.68% and Max MP by 145.
+		icon_name: icon.armor_t95_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8443" levels="1" name="Vesper Leather Leggings">
+		<!-- Increases P. Atk. by 0.68%, Atk. Spd./MP Recovery Bonus by 0.68% and Max MP by 145. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0068"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0068"/>
+			<mul order="0x30" stat="regMp" value="1.0068"/>
+			<add order="0x40" stat="maxMp" value="145"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Leather Gloves - Increases P. Atk. by 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+
+		name: Vesper Leather Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+		icon_name: icon.armor_t95_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8444" levels="1" name="Vesper Leather Gloves">
+		<!-- Increases P. Atk. by 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0027"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="maxMp" value="58"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Leather Boots - Increases P. Atk. by 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+
+		name: Vesper Leather Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. by 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+		icon_name: icon.armor_t95_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8445" levels="1" name="Vesper Leather Boots">
+		<!-- Increases P. Atk. by 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0027"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="maxMp" value="58"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Circlet - Increases M. Atk. by 0.41%, MP Recovery Rate by 0.41%, Stun Resistance by 7.5% and decreases magic cancel rate by 4.5.
+
+		name: Vesper Circlet
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.41%, MP Recovery Rate by 0.41%, Stun Resistance by 7.5% and decreases magic cancel rate by 4.5.
+		icon_name: icon.armor_circlet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8446" levels="1" name="Vesper Circlet">
+		<!-- Increases M. Atk. by 0.41%, MP recovery rate by 0.41%, resistance to Stun by 7.5% and decreases magic cancel rate by 4.5. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_circlet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0041"/>
+			<mul order="0x30" stat="regMp" value="1.0041"/>
+			<mul order="0x30" stat="stunResist" value="1.075"/>
+			<sub order="0x40" stat="concentration" value="4.5"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Tunic - Increases M. Atk. by 8.47%, Casting Spd. By 15%, MP Recovery Rate by 5%, Stun Resistance by 20% and decreases magic cancel rate by 12.
+
+		name: Vesper Tunic
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 8.47%, Casting Spd. By 15%, MP Recovery Rate by 5%, Stun Resistance by 20% and decreases magic cancel rate by 12.
+		icon_name: icon.armor_t96_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8447" levels="1" name="Vesper Tunic">
+		<!-- Increases M. Atk. by 8.47%, Casting Spd. By 15%, MP recovery rate by 5%, resistance to Stun by 20% and decreases magic cancel rate by 12. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0847"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+			<mul order="0x30" stat="regMp" value="1.05"/>
+			<add order="0x40" stat="stunResist" value="20"/>
+			<add order="0x40" stat="concentration" value="12"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Stockings - Increases M. Atk. by 0.68%, MP Recovery Bonus by 0.68%, Stun Resistance by 12.5% and decreases magic cancel rate by 7.5.
+
+		name: Vesper Stockings
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.68%, MP Recovery Bonus by 0.68%, Stun Resistance by 12.5% and decreases magic cancel rate by 7.5.
+		icon_name: icon.armor_t96_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8448" levels="1" name="Vesper Stockings">
+		<!-- Increases M. Atk. by 0.68%, MP recovery rate by 0.68%, resistance to Stun by 5% and decreases magic cancel rate by 7.5. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0068"/>
+			<mul order="0x30" stat="regMp" value="1.0068"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<sub order="0x40" stat="concentration" value="7.5"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Gloves - Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+
+		name: Vesper Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+		icon_name: icon.armor_t96_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8449" levels="1" name="Vesper Gloves">
+		<!-- Increases M. Atk. by 0.27%, MP recovery rate by 0.27%, resistance to Stun by 5% and decreases magic cancel rate by 3. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<sub order="0x40" stat="concentration" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Shoes - Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+
+		name: Vesper Shoes
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+		icon_name: icon.armor_t96_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8450" levels="1" name="Vesper Shoes">
+		<!-- Increases M. Atk. by 0.27%, MP recovery rate by 0.27%, resistance to Stun by 5% and decreases magic cancel rate by 3. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<sub order="0x40" stat="concentration" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Sigil - Increases M. Def. by 2%.
+
+		name: Vesper Sigil
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def. by 2%.
+		icon_name: icon.verper_sigil_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8451" levels="1" name="Vesper Sigil">
+		<!-- Increases resistance to magic damage by 2%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.verper_sigil_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="magicResist" value="2"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Earring - Increases Bleed Resistance.
+
+		name: Moirai Earring
+		level: 1
+		mp_consume: 0
+		description: Increases Bleed Resistance.
+		icon_name: icon.accessary_bluelycan_earring_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8452" levels="1" name="Moirai Earring">
+		<!-- Increases resistance to bleed attacks. -->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.accessary_bluelycan_earring_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="bleedResist" value="7.62"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Necklace - Increases Poison Resistance.
+
+		name: Moirai Necklace
+		level: 1
+		mp_consume: 0
+		description: Increases Poison Resistance.
+		icon_name: icon.accessary_bluelycan_necklace_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8453" levels="1" name="Moirai Necklace">
+		<!-- Increases resistance to poison attacks. -->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.accessary_bluelycan_necklace_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="poisonResist" value="6"/>
+		</for>
+	</skill>
+    <!--
+		Moirai Ring - Increases Max MP.
+
+		name: Moirai Ring
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP.
+		icon_name: icon.accessary_bluelycan_ring_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8454" levels="1" name="Moirai Ring">
+		<!-- Increases Max MP. -->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.accessary_bluelycan_ring_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="16"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Earring - Increases Sleep/Hold Resistance.
+
+		name: Vesper Earring
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance.
+		icon_name: icon.vesper_earring_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8455" levels="1" name="Vesper Earring">
+		<!-- Increases resistance to Sleep/Hold attacks. -->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.vesper_earring_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="sleepResist" value="5"/>
+			<add order="0x40" stat="rootResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Necklace - Increases Max MP by 33.
+
+		name: Vesper Necklace
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP by 33.
+		icon_name: icon.vesper_necklace_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8456" levels="1" name="Vesper Necklace">
+		<!-- Increases Max MP. -->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.vesper_necklace_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="32"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Ring - Increases Stun Resistance.
+
+		name: Vesper Ring
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance.
+		icon_name: icon.vesper_ring_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8457" levels="1" name="Vesper Ring">
+		<!-- Increases resistance to Stun attacks. -->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.vesper_ring_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="stunResist" value="4.76"/>
+		</for>
+	</skill>
+    <!--
+		Bracelet Weight Gauge Add - Increases weight gauge when a bracelet is equipped.
+
+		name: Bracelet Weight Gauge Add
+		level: 1
+		mp_consume: 0
+		description: Increases weight gauge when a bracelet is equipped.
+		icon_name: icon.skill0150
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8458" levels="1" name="Bracelet Weight Gauge Add">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: Increases the weight gauge when a bracelet is equipped.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0150"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Freya's Necklace - Increases Max MP by 50, MP Recovery Rate by 0.23, Bleed Resistance by 20%, Paralysis/Stun/Sleep Resistance by 15%, Mental Attack Resistance by 10% and Water Resistance by 10. Decreases Magic reuse time by 5%. Reflects 4% of the target's damage back to t
+
+		name: Freya's Necklace
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP by 50, MP Recovery Rate by 0.23, Bleed Resistance by 20%, Paralysis/Stun/Sleep Resistance by 15%, Mental Attack Resistance by 10% and Water Resistance by 10. Decreases Magic reuse time by 5%. Reflects 4% of the target's damage back to t
+		icon_name: icon.accessary_queen_of_ice_necklace_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8459" levels="1" name="Freya's Necklace">
+		<!-- Increases Max MP by 50, MP recovery rate by 0.23, resistance to bleed by 20%, resistance to Paralysis/Shock/Sleep by 15%, Mental Tolerance by 10% and  resistance to Water Attribute attack by 10. Decreases Magic reuse time by 5%, magic skill MP consumption by 5% and reflects 4% of the target's standard short-range damage back to the enemy. -->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.accessary_queen_of_ice_necklace_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="regMp" value="0.23"/>
+			<add order="0x40" stat="maxMp" value="50"/>
+			<add order="0x40" stat="bleedResist" value="20"/>
+			<add order="0x40" stat="sleepResist" value="15"/>
+			<add order="0x40" stat="paralyzeResist" value="15"/>
+			<add order="0x40" stat="stunResist" value="15"/>
+			<add order="0x40" stat="mentalResist" value="10"/>
+			<add order="0x40" stat="defenceWater" value="10"/>
+			<mul order="0x30" stat="mReuse" value="0.95"/>
+			<mul order="0x30" stat="mpConsum" value="0.95"/>
+			<add order="0x40" stat="reflectDam" value="4"/>
+			<add order="0x40" stat="reflectBowDam" value="4"/>
+			<add order="0x40" stat="reflectPSkillDam" value="4"/>
+			<add order="0x40" stat="reflectMSkillDam" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Blessed Freya's Necklace - Increases Max MP by 50, MP Recovery Rate by 0.46, Bleed Resistance by 25%, Paralysis/Stun/Sleep Resistance by 20%, Mental Attack Resistance by 10%, Water Resistance by 15 and Healing Power by 15. Decreases Magic reuse time by 5%, magic MP Consumption by
+
+		name: Blessed Freya's Necklace
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP by 50, MP Recovery Rate by 0.46, Bleed Resistance by 25%, Paralysis/Stun/Sleep Resistance by 20%, Mental Attack Resistance by 10%, Water Resistance by 15 and Healing Power by 15. Decreases Magic reuse time by 5%, magic MP Consumption by
+		icon_name: icon.accessary_queen_of_ice_necklace_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8460" levels="1" name="Blessed Freya's Necklace">
+		<!-- Increases Max MP by 50, MP recovery rate by 0.46, resistance to bleed by 25%, resistance to Paralysis/Shock/Sleep by 20%, Mental Tolerance by 10%, resistance to Water Attribute attack by 15 and Healing Power by 15. Decreases Magic reuse time by 5%, magic skill MP consumption by 5% and reflects 4% of the target's standard short-range damage back to the enemy. MEN +2, CON +1, STR -1 -->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.accessary_queen_of_ice_necklace_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="regMp" value="0.46"/>
+			<add order="0x40" stat="maxMp" value="50"/>
+			<add order="0x40" stat="bleedResist" value="25"/>
+			<add order="0x40" stat="sleepResist" value="20"/>
+			<add order="0x40" stat="paralyzeResist" value="20"/>
+			<add order="0x40" stat="stunResist" value="20"/>
+			<add order="0x40" stat="mentalResist" value="10"/>
+			<add order="0x40" stat="defenceWater" value="15"/>
+			<add order="0x40" stat="healPower" value="15"/>
+			<mul order="0x30" stat="mReuse" value="0.95"/>
+			<mul order="0x30" stat="mpConsum" value="0.95"/>
+			<add order="0x40" stat="reflectDam" value="4"/>
+			<add order="0x40" stat="reflectBowDam" value="4"/>
+			<add order="0x40" stat="reflectPSkillDam" value="4"/>
+			<add order="0x40" stat="reflectMSkillDam" value="4"/>
+			<add order="0x10" stat="MEN" value="2"/>
+			<sub order="0x10" stat="STR" value="1"/>
+			<add order="0x10" stat="CON" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Enchant Heavy Armor (S-grade) - Increases P. Def. and MP Recovery Bonus by enchanting set items.
+
+		LvL.1	description: Increases P Def. and MP Recovery Bonus by enchanting set items.
+		LvL.2	description: Increases P Def and MP Recovery Bonus by enchanting a set item.
+		LvL.3	description: Increases P Def and MP Recovery Bonus by enchanting a set item.
+		name: Enchant Heavy Armor (S-grade)
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def. and MP Recovery Bonus by enchanting set items.
+		icon_name: icon.skill0231
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8461" levels="1" name="Enchant Heavy Armor (S-grade)">
+		<!-- P. Def and MP Recovery Bonus increase when a set item is enchanted. -->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0231"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Enchant Light Armor (S-grade) - Increases M. Def. and Evasion by enchanting set items.
+
+		LvL.1	description: and Evasion by enchanting set items.
+		LvL.2	description: and Evasion by enchanting a set item.
+		LvL.3	description: and Evasion by enchanting a set item.
+		name: Enchant Light Armor (S-grade)
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def. and Evasion by enchanting set items.
+		icon_name: icon.skill0233
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8462" levels="1" name="Enchant Light Armor (S-grade)">
+		<!-- M. Def and Evasion increase when a set item is enchanted. -->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0233"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Enchant Robe (S-grade) - Increases P. Def. and weight capacity by enchanting set items.
+
+		LvL.1	description: and weight capacity by enchanting set items.
+		LvL.2	description: and weight capacity by enchanting a set item.
+		LvL.3	description: and weight capacity by enchanting a set item.
+		name: Enchant Robe (S-grade)
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def. and weight capacity by enchanting set items.
+		icon_name: icon.skill0234
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8463" levels="1" name="Enchant Robe (S-grade)">
+		<!-- P. Def and weight limit increase when a set item is enchanted. -->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0234"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Kid Rudolph - Removes the Agathion's seal.
+
+		name: Release Agathion's Seal - Kid Rudolph
+		level: 1
+		mp_consume: 0
+		description: Removes the Agathion's seal.
+		icon_name: icon.etc_summon_aga_agit_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8464" levels="1" name="Release Agathion's Seal - Kid Rudolph">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Notifier - Notifies about the Rudolph Agathion's gift resupply time.
+
+		name: Notifier
+		level: 1
+		mp_consume: 0
+		description: Notifies about the Rudolph Agathion's gift resupply time.
+		icon_name: icon.skill5239
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8465" levels="1" name="Notifier">
+		<!-- It's time to return Santa Claus's gift that the Agathions gave you. -->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill5239"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Sword of Vampiric Rage - When equipped with a sword, it restores HP by using some of the damage inflicted upon the enemy with a certain probability.
+
+		name: Sword of Vampiric Rage
+		level: 1
+		mp_consume: 0
+		description: When equipped with a sword, it restores HP by using some of the damage inflicted upon the enemy with a certain probability.
+		icon_name: icon.skill1268
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8466" levels="2" name="Sword of Vampiric Rage">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1268"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Two-handed Sword of Regeneration - Increases HP Recovery Bonus when equipped with a tow-handed sword.
+
+		name: Two-handed Sword of Regeneration
+		level: 1
+		mp_consume: 0
+		description: Increases HP Recovery Bonus when equipped with a tow-handed sword.
+		icon_name: icon.skill1044
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8467" levels="2" name="Two-handed Sword of Regeneration">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1044"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Sword of Mana Regeneration - Increases MP Recovery Bonus.
+
+		name: Sword of Mana Regeneration
+		level: 1
+		mp_consume: 0
+		description: Increases MP Recovery Bonus.
+		icon_name: icon.skill1047
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8468" levels="2" name="Sword of Mana Regeneration">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1047"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Dagger of Evasion - Increases Evasion when equipped with a dagger.
+
+		name: Dagger of Evasion
+		level: 1
+		mp_consume: 0
+		description: Increases Evasion when equipped with a dagger.
+		icon_name: icon.skill1087
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8469" levels="2" name="Dagger of Evasion">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1087"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Fist Weapon of Haste - Increases Atk. Spd.
+
+		name: Fist Weapon of Haste
+		level: 1
+		mp_consume: 0
+		description: Increases Atk. Spd.
+		icon_name: icon.skill1086
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8470" levels="2" name="Fist Weapon of Haste">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Polearm of Focus - Increases Critical Rate.
+
+		name: Polearm of Focus
+		level: 1
+		mp_consume: 0
+		description: Increases Critical Rate.
+		icon_name: icon.skill1077
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8471" levels="2" name="Polearm of Focus">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Blunt Weapon of Focus - Increases Critical Rate.
+
+		name: Blunt Weapon of Focus
+		level: 1
+		mp_consume: 0
+		description: Increases Critical Rate.
+		icon_name: icon.skill1077
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8472" levels="2" name="Blunt Weapon of Focus">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Two-handed Blunt Weapon of Death Whisper - Increases Critical Damage.
+
+		name: Two-handed Blunt Weapon of Death Whisper
+		level: 1
+		mp_consume: 0
+		description: Increases Critical Damage.
+		icon_name: icon.skill1242
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8473" levels="2" name="Two-handed Blunt Weapon of Death Whisper">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1242"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Blunt Weapon of Empower - Increases M. Atk.
+
+		name: Blunt Weapon of Empower
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk.
+		icon_name: icon.skill1059
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8474" levels="2" name="Blunt Weapon of Empower">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1059"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Staff of Arcane Acumen - Increases Casting Spd.
+
+		name: Staff of Arcane Acumen
+		level: 1
+		mp_consume: 0
+		description: Increases Casting Spd.
+		icon_name: icon.skill1085
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8475" levels="2" name="Staff of Arcane Acumen">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1085"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Bow of Boost HP - Increases Max HP.
+
+		name: Bow of Boost HP
+		level: 1
+		mp_consume: 0
+		description: Increases Max HP.
+		icon_name: icon.skill0211
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8476" levels="2" name="Bow of Boost HP">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0211"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Rapier of Vampiric Rage - When equipped with a rapier, restores HP by using some of the damage inflicted upon the enemy with a certain probability.
+
+		name: Rapier of Vampiric Rage
+		level: 1
+		mp_consume: 0
+		description: When equipped with a rapier, restores HP by using some of the damage inflicted upon the enemy with a certain probability.
+		icon_name: icon.skill1268
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8477" levels="2" name="Rapier of Vampiric Rage">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1268"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Crossbow of Boost HP - Increases Max HP.
+
+		name: Crossbow of Boost HP
+		level: 1
+		mp_consume: 0
+		description: Increases Max HP.
+		icon_name: icon.skill0211
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8478" levels="2" name="Crossbow of Boost HP">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0211"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Ancient Sword of Regeneration - Increases HP Recovery Bonus when equipped with an ancient sword.
+
+		name: Ancient Sword of Regeneration
+		level: 1
+		mp_consume: 0
+		description: Increases HP Recovery Bonus when equipped with an ancient sword.
+		icon_name: icon.skill1044
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8479" levels="2" name="Ancient Sword of Regeneration">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1044"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Dual-blade Weapon of Guidance - Increases Accuracy when equipped with a dual-blade weapon.
+
+		name: Dual-blade Weapon of Guidance
+		level: 1
+		mp_consume: 0
+		description: Increases Accuracy when equipped with a dual-blade weapon.
+		icon_name: icon.skill1240
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8480" levels="2" name="Dual-blade Weapon of Guidance">
+		<table name="#magicLevel">85 86</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill1240"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Vesper Noble Helmet - Increases P. Atk./P. Def. by 0.62%, Max HP by 133 and Sleep/Hold Resistance by 10.5%.
+
+		name: Vesper Noble Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 0.62%, Max HP by 133 and Sleep/Hold Resistance by 10.5%.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8481" levels="1" name="Vesper Noble Helmet">
+		<!-- Increases P. Atk./P. Def. by 0.62%, Max HP by 133 and resistance to Sleep/Hold by 10.5%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0062"/>
+			<mul order="0x30" stat="pDef" value="1.0062"/>
+			<add order="0x40" stat="maxHp" value="133"/>
+			<add order="0x40" stat="sleepResist" value="11"/>
+			<add order="0x40" stat="rootResist" value="11"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Gaiters - Increases P. Atk./P. Def. by 1.03%, Max HP by 55 and Sleep/Hold Resistance by 18%.
+
+		name: Vesper Noble Gaiters
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 1.03%, Max HP by 55 and Sleep/Hold Resistance by 18%.
+		icon_name: icon.armor_t94_l_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8482" levels="1" name="Vesper Noble Gaiters">
+		<!-- Increases P. Atk./P. Def. by 1.03%, Max HP by 55 and resistance to Sleep/Hold by 185%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_l_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0103"/>
+			<mul order="0x30" stat="pDef" value="1.0103"/>
+			<add order="0x40" stat="maxHp" value="55"/>
+			<add order="0x40" stat="sleepResist" value="18"/>
+			<add order="0x40" stat="rootResist" value="18"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Gauntlets - Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+
+		name: Vesper Noble Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+		icon_name: icon.armor_t94_g_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8483" levels="1" name="Vesper Noble Gauntlets">
+		<!-- Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and resistance to Sleep/Hold by 7%.-->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_g_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0041"/>
+			<mul order="0x30" stat="pDef" value="1.0041"/>
+			<add order="0x40" stat="maxHp" value="22"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Boots - Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+
+		name: Vesper Noble Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and Sleep/Hold Resistance by 7%.
+		icon_name: icon.armor_t94_b_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8484" levels="1" name="Vesper Noble Boots">
+		<!-- Increases P. Atk./P. Def. by 0.41%, Max HP by 22 and resistance to Sleep/Hold by 7%. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t94_b_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0041"/>
+			<mul order="0x30" stat="pDef" value="1.0041"/>
+			<add order="0x40" stat="maxHp" value="22"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Leather Helmet - Increases P. Atk. By 0.41%, Atk. Spd./MP Recovery Bonus by 0.41% and Max MP by 87.
+
+		name: Vesper Noble Leather Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. By 0.41%, Atk. Spd./MP Recovery Bonus by 0.41% and Max MP by 87.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8485" levels="1" name="Vesper Noble Leather Helmet">
+		<!-- Increases P.Atk. By 0.41%, Atk. Spd./MP Recovery Bonus by 0.41% and Max MP by 87. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0041"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0041"/>
+			<mul order="0x30" stat="regMp" value="1.0041"/>
+			<add order="0x40" stat="maxMp" value="87"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Leather Leggings - Increases P. Atk. By 0.68%, Atk. Spd./MP Recovery Bonus by 0.68% and Max MP by 145.
+
+		name: Vesper Noble Leather Leggings
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. By 0.68%, Atk. Spd./MP Recovery Bonus by 0.68% and Max MP by 145.
+		icon_name: icon.armor_t95_l_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8486" levels="1" name="Vesper Noble Leather Leggings">
+		<!-- Increases P.Atk. By 0.68%, Atk. Spd./MP Recovery Bonus by 0.68% and Max MP by 145. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_l_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0068"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0068"/>
+			<mul order="0x30" stat="regMp" value="1.0068"/>
+			<add order="0x40" stat="maxMp" value="145"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Leather Gloves - Increases P. Atk. By 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+
+		name: Vesper Noble Leather Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. By 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+		icon_name: icon.armor_t95_g_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8487" levels="1" name="Vesper Noble Leather Gloves">
+		<!-- Increases P.Atk. By 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_g_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0027"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="maxMp" value="58"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Leather Boots - Increases P. Atk. By 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+
+		name: Vesper Noble Leather Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. By 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58.
+		icon_name: icon.armor_t95_b_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8488" levels="1" name="Vesper Noble Leather Boots">
+		<!-- Increases P.Atk. By 0.27%, Atk. Spd./MP Recovery Bonus by 0.27% and Max MP by 58. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t95_b_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.0027"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="maxMp" value="58"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Circlet - Increases M. Atk. by 0.41%, MP Recovery Rate by 0.41%, Stun Resistance by 7.5% and decreases magic cancel rate by 4.5.
+
+		name: Vesper Noble Circlet
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.41%, MP Recovery Rate by 0.41%, Stun Resistance by 7.5% and decreases magic cancel rate by 4.5.
+		icon_name: icon.armor_circlet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8489" levels="1" name="Vesper Noble Circlet">
+		<!-- Increases M. Atk. by 0.41%, MP recovery rate by 0.41%, resistance to Stun Atk. by 7.5% and decreases magic cancel rate by 4.5. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_circlet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0041"/>
+			<mul order="0x30" stat="regMp" value="1.0041"/>
+			<mul order="0x30" stat="stunResist" value="1.075"/>
+			<sub order="0x40" stat="concentration" value="4.5"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Stockings - Increases M. Atk. by 0.68%, MP Recovery Bonus by 0.68%, Stun Resistance by 12.5% and decreases magic cancel rate by 7.5.
+
+		name: Vesper Noble Stockings
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.68%, MP Recovery Bonus by 0.68%, Stun Resistance by 12.5% and decreases magic cancel rate by 7.5.
+		icon_name: icon.armor_t96_l_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8490" levels="1" name="Vesper Noble Stockings">
+		<!-- Increases M. Atk. by 0.68%, MP recovery rate by 0.68%, resistance to Stun Atk. by 12.5% and decreases magic cancel rate by 7.5. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_l_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0068"/>
+			<mul order="0x30" stat="regMp" value="1.0068"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<sub order="0x40" stat="concentration" value="7.5"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Gloves - Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+
+		name: Vesper Noble Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+		icon_name: icon.armor_t96_g_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8491" levels="1" name="Vesper Noble Gloves">
+		<!-- Increases M. Atk. by 0.27%, MP recovery rate by 0.27%, resistance to Stun by 5% and decreases magic cancel rate by 3. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_g_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<sub order="0x40" stat="concentration" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Vesper Noble Shoes - Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+
+		name: Vesper Noble Shoes
+		level: 1
+		mp_consume: 0
+		description: Increases M. Atk. by 0.27%, MP Recovery Rate by 0.27%, Stun Resistance by 5% and decreases magic cancel rate by 3.
+		icon_name: icon.armor_t96_b_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8492" levels="1" name="Vesper Noble Shoes">
+		<!-- Increases M. Atk. by 0.27%, MP recovery rate by 0.27%, resistance to Stun by 5% and decreases magic cancel rate by 3. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.armor_t96_b_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.0027"/>
+			<mul order="0x30" stat="regMp" value="1.0027"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<sub order="0x40" stat="concentration" value="3"/>
+		</for>
+	</skill>
+    <!--
+		Equip Shield - Shield Defense is additionally increased.
+
+		name: Equip Shield
+		level: 1
+		mp_consume: 0
+		description: Shield Defense is additionally increased.
+		icon_name: icon.weapon_tysandy_shield_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8493" levels="1" name="Equip Shield">
+		<!-- Shield defense is increased. -->
+		<set name="magicLevel" value="82"/>
+		<set name="icon" value="icon.weapon_tysandy_shield_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Equip Shield - Shield Defense is additionally increased.
+
+		name: Equip Shield
+		level: 1
+		mp_consume: 0
+		description: Shield Defense is additionally increased.
+		icon_name: icon.weapon_vesper_verteidiger_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8494" levels="1" name="Equip Shield">
+		<!-- Shield defense is increased. -->
+		<set name="magicLevel" value="84"/>
+		<set name="icon" value="icon.weapon_vesper_verteidiger_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Equip Shield - Shield Defense is additionally increased.
+
+		name: Equip Shield
+		level: 1
+		mp_consume: 0
+		description: Shield Defense is additionally increased.
+		icon_name: icon.Evilgate_Shield_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8495" levels="1" name="Equip Shield">
+		<!-- Shield defense is increased. -->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.Evilgate_Shield_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Equip Shield - Shield Defense is additionally increased.
+
+		name: Equip Shield
+		level: 1
+		mp_consume: 0
+		description: Shield Defense is additionally increased.
+		icon_name: icon.heavengate_shield_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8496" levels="1" name="Equip Shield">
+		<!-- Shield defense is increased. -->
+		<set name="magicLevel" value="86"/>
+		<set name="icon" value="icon.heavengate_shield_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="rShld" value="1.05"/>
+		</for>
+	</skill>
+    <!--
+		Circlet of Ice - Increases Water Resistance by 30.
+
+		name: Circlet of Ice
+		level: 1
+		mp_consume: 0
+		description: Increases Water Resistance by 30.
+		icon_name: icon.accessory_ice_circlet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8497" levels="1" name="Circlet of Ice">
+		<!-- Increases resistance to water-type attacks by 30. -->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.accessory_ice_circlet_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Pink Talisman - STR - Increases STR when equipped.
+
+		name: Pink Talisman - STR
+		level: 1
+		mp_consume: 0
+		description: Increases STR when equipped.
+		icon_name: icon.etc_talisman_event_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8498" levels="1" name="Pink Talisman - STR">
+		<set name="magicLevel" value="55"/>
+		<set name="icon" value="icon.etc_talisman_event_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<cond>
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="STR" value="2"/>
+		</for>
+	</skill>
+    <!--
+		Pink Talisman - DEX - Increases DEX when equipped.
+
+		name: Pink Talisman - DEX
+		level: 1
+		mp_consume: 0
+		description: Increases DEX when equipped.
+		icon_name: icon.etc_talisman_event_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="8499" levels="1" name="Pink Talisman - DEX">
+		<set name="magicLevel" value="55"/>
+		<set name="icon" value="icon.etc_talisman_event_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<cond>
+			<player olympiad="false"/>
+		</cond>
+		<for>
+			<add order="0x10" stat="DEX" value="2"/>
+		</for>
+	</skill>
+</list>

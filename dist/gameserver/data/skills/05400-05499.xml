@@ -1,0 +1,3705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Presentation - Solar Spark - none
+
+		name: Presentation - Solar Spark
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 750
+		hit_time: 5
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5400" levels="1" name="Presentation - Solar Spark">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="750"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		name: Stun
+		level: 1
+		mp_consume: 0
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 5.8
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5401" levels="1" name="Stun">
+		<!--
+			Description:
+			You are stunned and temporarily prohibited from movement.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="5800"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="fly_away"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="100"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="STUN"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<for>
+			<effect name="Stun" time="9"/>
+		</for>
+	</skill>
+    <!--
+		Presentation - Baylor 2 - Baylor - Magic Skill1
+
+		name: Presentation - Baylor 2
+		level: 1
+		mp_consume: 0
+		description: Baylor - Magic Skill1
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0.5
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5402" levels="1" name="Presentation - Baylor 2">
+		<!--
+			Description: Balor - Magic Skill1
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Baylor 3 - Baylor - Magic Skill2
+
+		name: Presentation - Baylor 3
+		level: 1
+		mp_consume: 0
+		description: Baylor - Magic Skill2
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0.5
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5403" levels="1" name="Presentation - Baylor 3">
+		<!--
+			Description: Balor - Magic Skill2
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Baylor 4 - Baylor - Instant Cast Skill
+
+		name: Presentation - Baylor 4
+		level: 1
+		mp_consume: 0
+		description: Baylor - Instant Cast Skill
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 3.5
+		cool_time: 0.5
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5404" levels="1" name="Presentation - Baylor 4">
+		<!--
+			Description: Balor - Instant Cast Skill
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Demonic 1 - Demonic - General Long Range Magic Skill
+
+		name: Presentation - Demonic 1
+		level: 1
+		mp_consume: 0
+		description: Demonic - General Long Range Magic Skill
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5405" levels="1" name="Presentation - Demonic 1">
+		<!--
+			Description: Demonic - General Long Range Magic Skill
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Demonic 2 - None
+
+		name: Presentation - Demonic 2
+		level: 1
+		mp_consume: 0
+		description: None
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5406" levels="1" name="Presentation - Demonic 2">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Crystalline Golem 1 - Crystalline-Instant Cast Skill
+
+		name: Presentation - Crystalline Golem 1
+		level: 1
+		mp_consume: 0
+		description: Crystalline-Instant Cast Skill
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5407" levels="1" name="Presentation - Crystalline Golem 1">
+		<!--
+			Description: Crystaline-Instant Cast Skill
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Crystalline Golem 2 - Crystalline-General Long Range Magic Skill
+
+		name: Presentation - Crystalline Golem 2
+		level: 1
+		mp_consume: 0
+		description: Crystalline-General Long Range Magic Skill
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5408" levels="1" name="Presentation - Crystalline Golem 2">
+		<!--
+			Description: Crystaline-General Long Range Magic Skill
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Crystalline Golem 3 - Crystalline Golem
+
+		name: Presentation - Crystalline Golem 3
+		level: 1
+		mp_consume: 0
+		description: Crystalline Golem
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5409" levels="1" name="Presentation - Crystalline Golem 3">
+		<!--
+			Description: Crystaline Golem
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Baylor 10 - Baylor Social.
+
+		name: Presentation - Baylor 10
+		level: 1
+		mp_consume: 0
+		description: Baylor Social.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 17
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5410" levels="1" name="Presentation - Baylor 10">
+		<!--
+			Description: Balor Social.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="17000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Baylor 11 - None
+
+		name: Presentation - Baylor 11
+		level: 1
+		mp_consume: 0
+		description: None
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5411" levels="1" name="Presentation - Baylor 11">
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Presentation - Baylor 12 - None
+
+		name: Presentation - Baylor 12
+		level: 1
+		mp_consume: 0
+		description: None
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5412" levels="1" name="Presentation - Baylor 12">
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Beast Farm - See the summoned spirit perform cute tricks.
+
+		name: Agathion Cute Trick - Beast Farm
+		level: 1
+		mp_consume: 0
+		description: See the summoned spirit perform cute tricks.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 17
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5413" levels="1" name="Agathion Cute Trick - Beast Farm">
+		<!--
+			Description: See a summoned Agathion perform tricks.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="power" value="150"/>
+		<set name="useSS" value="false"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Rainbow Clan Hall - See the summoned spirit perform cute tricks.
+
+		name: Agathion Cute Trick - Rainbow Clan Hall
+		level: 1
+		mp_consume: 0
+		description: See the summoned spirit perform cute tricks.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 17
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5414" levels="1" name="Agathion Cute Trick - Rainbow Clan Hall">
+		<!--
+			Description: See a summoned Agathion perform tricks.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="power" value="150"/>
+		<set name="useSS" value="false"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Castle - See the summoned spirit perform cute tricks.
+
+		name: Agathion Cute Trick - Castle
+		level: 1
+		mp_consume: 0
+		description: See the summoned spirit perform cute tricks.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 17
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5415" levels="1" name="Agathion Cute Trick - Castle">
+		<!--
+			Description: See a summoned Agathion perform tricks.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="power" value="150"/>
+		<set name="useSS" value="false"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+    <!--
+		Dark Cloud Mansion - none
+
+		name: Dark Cloud Mansion
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5416" levels="1" name="Dark Cloud Mansion">
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Invincibility - Invincible against general attack and skill, buff/de-buff.
+
+		name: Invincibility
+		level: 1
+		mp_consume: 0
+		description: Invincible against general attack and skill, buff/de-buff.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5417" levels="1" name="Invincibility">
+		<!--
+			Description: "Invincible against general attack and skill, buff/de-buff."
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="cancelable" value="false"/>
+	</skill>
+    <!--
+		Invincibility - Invincible against general attack and skill, buff/de-buff.
+
+		name: Invincibility
+		level: 1
+		mp_consume: 0
+		description: Invincible against general attack and skill, buff/de-buff.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5418" levels="1" name="Invincibility">
+		<!--
+			Last modify:	22.05.2009
+			Description:
+			Invincible against general attack and skill, buff/de-buff.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect name="Invulnerable" time="10"/>
+		</for>
+	</skill>
+    <!--
+		Invincible Blow - Crystalline Golem
+
+		name: Invincible Blow
+		level: 1
+		mp_consume: 0
+		description: Crystalline Golem
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5419" levels="1" name="Invincible Blow">
+		<!--
+			Description: Crystaline Golem
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Invincibility - Invincible against general attack and skill, buff/de-buff.
+
+		name: Invincibility
+		level: 1
+		mp_consume: 0
+		description: Invincible against general attack and skill, buff/de-buff.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5420" levels="1" name="Invincibility">
+		<!--
+			Last modify:	20.05.2009
+			Description:
+			Invincible against general attack and skill, buff/de-buff.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect name="Invulnerable" time="3600"/>
+		</for>
+	</skill>
+    <!--
+		Flame - Body is on fire. HP continually decreases.
+
+		name: Flame
+		level: 1
+		mp_consume: 0
+		description: Body is on fire. HP continually decreases.
+		icon_name: icon.skill1101
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5422" levels="12" name="Flame">
+		<!--
+			Description: Body is on fire. HP continually decreases.
+		-->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="fire_dot"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill1101"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="MEN"/>
+	</skill>
+    <!--
+		Poison - HP decreases from poison momentarily.
+
+		name: Poison
+		level: 1
+		mp_consume: 0
+		description: HP decreases from poison momentarily.
+		icon_name: icon.skill4035
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5423" levels="12" name="Poison">
+		<table name="#value">40 105 285 455 665 895 1115 1255 1445 1590 1620 1770</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="poison"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill4035"/>
+		<set name="power" value="80"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="POISON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="300"/>
+		<set name="trait" value="POISON"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect count="6" name="Poison" time="5" value="#value">
+				<mul order="0x30" stat="runSpd" value="0.7"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Bleed - HP decreases from bleeding momentarily. Effect 2.
+
+		LvL.1	description: Effect 2.
+		LvL.2	description: Effect 3.
+		LvL.3	description: Effect 4.
+		LvL.4	description: Effect 5.
+		LvL.5	description: Effect 6.
+		LvL.6	description: Effect 7.
+		LvL.7	description: Effect 8.
+		LvL.8	description: Effect 8.
+		LvL.9	description: Effect 9.
+		LvL.10	description: Effect 9.
+		LvL.11	description: Effect 10.
+		LvL.12	description: Effect 10.
+		name: Bleed
+		level: 1
+		mp_consume: 0
+		description: HP decreases from bleeding momentarily. Effect 2.
+		icon_name: icon.skill0096
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5424" levels="12" name="Bleed">
+		<!--
+			Description: Condition causing target to instantly decrease HP by bleeding. Effect 2.
+		-->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0096"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BLEED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="trait" value="BLEED"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect count="10" name="Bleed" time="3"/>
+		</for>
+	</skill>
+    <!--
+		Iron Shield - Condition causing target to increase Shield Defense.
+
+		name: Iron Shield
+		level: 1
+		mp_consume: 0
+		description: Condition causing target to increase Shield Defense.
+		icon_name: icon.skill0527
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5425" levels="1" name="Iron Shield">
+		<!--
+			Description:
+			Condition causing target to increase shield defense power.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="iron_shield_i"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="icon" value="icon.skill0527"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="sDef" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Counter Chance - Condition causing target to decrease skill Casting Spd. and MP consumption.
+
+		name: Counter Chance
+		level: 1
+		mp_consume: 0
+		description: Condition causing target to decrease skill Casting Spd. and MP consumption.
+		icon_name: icon.skill0532
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5426" levels="1" name="Counter Chance">
+		<!--
+			Description: Condition causing target to decrease skill casting speed and MP consumption.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="archer_special"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="icon" value="icon.skill0532"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isTrigger" value="true"/>
+		<cond msgId="113">
+			<using kind="Bow"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtkSpd" value="1.15"/>
+				<mul order="0x30" stat="mpConsumePhysical" value="0.95"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Counter Rapid Shot - Bow/Crossbow Atk. Spd. has been increased.
+
+		name: Counter Rapid Shot
+		level: 1
+		mp_consume: 0
+		description: Bow/Crossbow Atk. Spd. has been increased.
+		icon_name: icon.skill0533
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5427" levels="1" name="Counter Rapid Shot">
+		<!--
+			Description: Condition causing target to increase bow attack speed.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="archer_special"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="icon" value="icon.skill0533"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="900"/>
+		<set name="isTrigger" value="true"/>
+		<cond msgId="113">
+			<using kind="Bow"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="basePAtkSpd" value="1.15">
+					<using kind="Bow,Crossbow"/>
+				</mul>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Counter Dash - Condition causing target to increase speed.
+
+		name: Counter Dash
+		level: 1
+		mp_consume: 0
+		description: Condition causing target to increase speed.
+		icon_name: icon.skill0534
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5428" levels="1" name="Counter Dash">
+		<!--
+			Description: Condition causing target to increase speed.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="archer_special_i"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="icon" value="icon.skill0534"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillRadius" value="900"/>
+		<set name="isTrigger" value="true"/>
+		<cond msgId="113">
+			<using kind="Bow"/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="runSpd" value="40"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Counter Mind - none
+
+		name: Counter Mind
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5429" levels="1" name="Counter Mind">
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="magicLevel" value="79"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="49"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="MANAHEAL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Bow"/>
+		</cond>
+	</skill>
+    <!--
+		Spoil Bomb - none
+
+		name: Spoil Bomb
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0537
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5430" levels="1" name="Spoil Bomb">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0537"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Decrease Speed - Atk. Spd. and Casting Spd. decreases temporarily.
+
+		name: Decrease Speed
+		level: 1
+		mp_consume: 0
+		description: Atk. Spd. and Casting Spd. decreases temporarily.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5431" levels="1" name="Decrease Speed">
+		<!--
+			Description: Condition causing target to temporarily decrease attack speed and casting speed.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="magicLevel" value="40"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_buff"/>
+				<def name="dispel_chance" value="25"/>
+				<def name="max_count" value="5"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Weapon Supply - none
+
+		name: Weapon Supply
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5432" levels="2" name="Weapon Supply">
+		<table name="#power">1.2 1.5</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CONT"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<for>
+			<effect count="-1" name="ManaDamOverTime" time="5">
+				<mul order="0x30" stat="pAtk" value="#power"/>
+				<mul order="0x30" stat="pDef" value="#power"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Presentation - Gathering of Evil Power - none
+
+		name: Presentation - Gathering of Evil Power
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5433" levels="1" name="Presentation - Gathering of Evil Power">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Gust - Inflicted with gust and unable to move momentarily.
+
+		name: Gust
+		level: 1
+		mp_consume: 0
+		description: Inflicted with gust and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.08
+		cool_time: 0.72
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5434" levels="1" name="Gust">
+		<!--
+			Description: Instantly immobilized by gust.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="86"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="GUST"/>
+		<set name="saveVs" value="CON"/>
+	</skill>
+    <!--
+		Gust - Inflicted with gust and unable to move momentarily.
+
+		name: Gust
+		level: 1
+		mp_consume: 0
+		description: Inflicted with gust and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1.08
+		cool_time: 0.72
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5435" levels="1" name="Gust">
+		<!--
+			Description:	Instantly immobilized by gust.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="86"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="GUST"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun" time="3"/>
+		</for>
+	</skill>
+    <!--
+		Increase Recovery Rate - HP and MP recovery bonus are increased.
+
+		name: Increase Recovery Rate
+		level: 1
+		mp_consume: 0
+		description: HP and MP recovery bonus are increased.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5436" levels="1" name="Increase Recovery Rate">
+		<!--
+			Description: Condition causing target to increase recovery rate of HP and MP.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="all_regen_up"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dissonance - A dissonance of body and soul that causes a condition rendering you unable to control your body.
+
+		name: Dissonance
+		level: 1
+		mp_consume: 0
+		description: A dissonance of body and soul that causes a condition rendering you unable to control your body.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 13
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5437" levels="2" name="Dissonance">
+		<!--
+			Description: A dissonance of body and soul that causes a condition rendering you unable to control your body.
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Heal - none
+
+		LvL.1	mp_consume: 25
+		LvL.2	mp_consume: 44
+		LvL.3	mp_consume: 67
+		LvL.4	mp_consume: 92
+		LvL.5	mp_consume: 120
+		LvL.6	mp_consume: 147
+		LvL.7	mp_consume: 170
+		LvL.8	mp_consume: 182
+		LvL.9	mp_consume: 189
+		name: Heal
+		level: 1
+		mp_consume: 25
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5438" levels="9" name="Heal">
+		<table name="#mpConsume2">20 35 53 73 96 117 136 145 151</table>
+		<table name="#mpConsume1">5 9 14 19 24 30 34 37 38</table>
+		<table name="#power">500 1000 1500 2000 2500 3000 3500 4000 4500</table>
+		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="displayId" value="1027"/>
+	</skill>
+    <!--
+		Heal - none
+
+		LvL.1	mp_consume: 25
+		LvL.2	mp_consume: 44
+		LvL.3	mp_consume: 67
+		LvL.4	mp_consume: 92
+		LvL.5	mp_consume: 120
+		LvL.6	mp_consume: 147
+		LvL.7	mp_consume: 170
+		LvL.8	mp_consume: 182
+		LvL.9	mp_consume: 189
+		name: Heal
+		level: 1
+		mp_consume: 25
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5439" levels="9" name="Heal">
+		<table name="#mpConsume2">20 35 53 73 96 117 136 145 151</table>
+		<table name="#mpConsume1">5 9 14 19 24 30 34 37 38</table>
+		<table name="#power">1000 2000 3000 4000 5000 6000 7000 8000 9000</table>
+		<table name="#magicLevel">75 78 81 84 87 90 93 96 99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="displayId" value="1219"/>
+	</skill>
+    <!--
+		Trap - none
+
+		name: Trap
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5440" levels="1" name="Trap">
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Incarnation - none
+
+		name: Incarnation
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5441" levels="1" name="Incarnation">
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bite Attack - Bite ferociously with sharp teeth.
+
+		LvL.1	mp_consume: 55
+		LvL.2	mp_consume: 61
+		LvL.3	mp_consume: 66
+		LvL.4	mp_consume: 71
+		name: Bite Attack
+		level: 1
+		mp_consume: 55
+		description: Bite ferociously with sharp teeth.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.08
+		cool_time: 0.72
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5442" levels="4" name="Bite Attack">
+		<!--
+			Last modify:	19.02.2009
+			Need correct:	#power
+			Description: Bite ferociously with sharp teeth.
+		-->
+		<table name="#mpConsume2">55 61 66 71</table>
+		<table name="#power">1091 1576 2077 2238</table>
+		<table name="#magicLevel">55 60 65 70</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+	</skill>
+    <!--
+		Cry of the Wolf - Dominate nearby enemies with a mighty roar.
+
+		LvL.1	mp_consume: 55
+		LvL.2	mp_consume: 61
+		LvL.3	mp_consume: 66
+		LvL.4	mp_consume: 71
+		name: Cry of the Wolf
+		level: 1
+		mp_consume: 55
+		description: Dominate nearby enemies with a mighty roar.
+		icon_name: icon.action109
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5443" levels="4" name="Cry of the Wolf">
+		<!--
+			Last modify:	19.02.2009
+			Description: Dominate nearby enemies with a mighty roar.
+		-->
+		<table name="#effectPoint">200 400 600 800</table>
+		<table name="#mpConsume2">55 61 66 71</table>
+		<table name="#magicLevel">55 60 65 70</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="1200"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="pa_down"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="levelModifier" value="2"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="icon" value="icon.action109"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect time="60">
+				<mul order="0x30" stat="pAtk" value="0.77"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Maul - Attacks with fore-claws to create wound. Power 1. Effect 3.
+
+		LvL.1	mp_consume: 66
+		LvL.2	mp_consume: 71
+		name: Maul
+		level: 1
+		mp_consume: 66
+		description: Attacks with fore-claws to create wound. Power 1. Effect 3.
+		icon_name: icon.skill0096
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.08
+		cool_time: 0.72
+		reuse_delay: 11
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5444" levels="2" name="Maul">
+		<!--
+			Last modify:	19.02.2009
+			Description: Attacks with fore-claws to create wound. Power 1. Effect 3.
+		-->
+		<table name="#mpConsume2">66 71</table>
+		<table name="#magicLevel">65 70</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="11000"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0096"/>
+		<set name="power" value="1"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="BLEED"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect count="10" name="Bleed" time="3"/>
+		</for>
+	</skill>
+    <!--
+		Awakening - Brings out the instinct of the wolf.
+
+		name: Awakening
+		level: 1
+		mp_consume: 71
+		description: Brings out the instinct of the wolf.
+		icon_name: icon.action105
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5445" levels="1" name="Awakening">
+		<!--
+			Last modify:	19.02.2009
+			Description: Brings out the instinct of the wolf.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_time" value="90"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pinch"/>
+		<set name="magicLevel" value="70"/>
+		<set name="icon" value="icon.action105"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="71"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.08"/>
+				<mul order="0x30" stat="pAtk" value="1.08"/>
+				<mul order="0x30" stat="mAtk" value="1.16"/>
+				<mul order="0x30" stat="pDef" value="0.92"/>
+				<mul order="0x30" stat="mDef" value="0.84"/>
+				<add order="0x40" stat="runSpd" value="8"/>
+				<sub order="0x40" stat="pEvasRate" value="4"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Soul Expansion - Soul increased to Lv. 1.
+
+		LvL.1	icon_name: icon.skill5446_1	description: 1.
+		LvL.2	icon_name: icon.skill5446_2	description: 2.
+		LvL.3	icon_name: icon.skill5446_3	description: 3.
+		LvL.4	icon_name: icon.skill5446_4	description: 4.
+		LvL.5	icon_name: icon.skill5446_5	description: 5.
+		LvL.6	icon_name: icon.skill5446_6	description: 6.
+		LvL.7	icon_name: icon.skill5446_7	description: 7.
+		LvL.8	icon_name: icon.skill5446_8	description: 8.
+		LvL.9	icon_name: icon.skill5446_9	description: 9.
+		LvL.10	icon_name: icon.skill5446_10	description: 10.
+		LvL.11	icon_name: icon.skill5446_11	description: 11.
+		LvL.12	icon_name: icon.skill5446_12	description: 12.
+		LvL.13	icon_name: icon.skill5446_13	description: 13.
+		LvL.14	icon_name: icon.skill5446_14	description: 14.
+		LvL.15	icon_name: icon.skill5446_15	description: 15.
+		LvL.16	icon_name: icon.skill5446_16	description: 16.
+		LvL.17	icon_name: icon.skill5446_17	description: 17.
+		LvL.18	icon_name: icon.skill5446_18	description: 18.
+		LvL.19	icon_name: icon.skill5446_19	description: 19.
+		LvL.20	icon_name: icon.skill5446_20	description: 20.
+		LvL.21	icon_name: icon.skill5446_21	description: 21.
+		LvL.22	icon_name: icon.skill5446_22	description: 22.
+		LvL.23	icon_name: icon.skill5446_23	description: 23.
+		LvL.24	icon_name: icon.skill5446_24	description: 24.
+		LvL.25	icon_name: icon.skill5446_25	description: 25.
+		LvL.26	icon_name: icon.skill5446_26	description: 26.
+		LvL.27	icon_name: icon.skill5446_27	description: 27.
+		LvL.28	icon_name: icon.skill5446_28	description: 28.
+		LvL.29	icon_name: icon.skill5446_29	description: 29.
+		LvL.30	icon_name: icon.skill5446_30	description: 30.
+		LvL.31	icon_name: icon.skill5446_31	description: 31.
+		LvL.32	icon_name: icon.skill5446_32	description: 32.
+		LvL.33	icon_name: icon.skill5446_33	description: 33.
+		LvL.34	icon_name: icon.skill5446_34	description: 34.
+		LvL.35	icon_name: icon.skill5446_35	description: 35.
+		LvL.36	icon_name: icon.skill5446_36	description: 36.
+		LvL.37	icon_name: icon.skill5446_37	description: 37.
+		LvL.38	icon_name: icon.skill5446_38	description: 38.
+		LvL.39	icon_name: icon.skill5446_39	description: 39.
+		LvL.40	icon_name: icon.skill5446_40	description: 40.
+		LvL.41	icon_name: icon.skill5446_41	description: 41.
+		LvL.42	icon_name: icon.skill5446_42	description: 42.
+		LvL.43	icon_name: icon.skill5446_43	description: 43.
+		LvL.44	icon_name: icon.skill5446_44	description: 44.
+		LvL.45	icon_name: icon.skill5446_45	description: 45.
+		name: Soul Expansion
+		level: 1
+		mp_consume: 0
+		description: Soul increased to Lv. 1.
+		icon_name: icon.skill5446_1
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5446" levels="45" name="Soul Expansion">
+		<!--
+			Description: Soul increased to level 1-45.
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill5446_1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Paralysis - Paralyzed and unable to move momentarily.
+
+		name: Paralysis
+		level: 1
+		mp_consume: 0
+		description: Paralyzed and unable to move momentarily.
+		icon_name: icon.skill0523
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5447" levels="7" name="Paralysis">
+		<!--
+			Description: A temporary paralysis which prevents movement.
+		-->
+		<table name="#magicLevel">62 64 66 68 70 72 74</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0523"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="activateRate" value="30"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="PARALYZE"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+    <!--
+		Oblivion - none
+
+		name: Oblivion
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5448" levels="1" name="Oblivion">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="79"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isOffensive" value="false"/>
+		<set name="reflectable" value="false"/>
+		<for>
+			<effect name="RemoveTarget" time="0" chance="50"/>
+		</for>
+	</skill>
+    <!--
+		Weak Constitution - Stunned and unable to move momentarily.
+
+		name: Weak Constitution
+		level: 1
+		mp_consume: 0
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5449" levels="1" name="Weak Constitution">
+		<!--
+			Description: Temporarily gets thrown into a state of shock and immobilized.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isOffensive" value="false"/>
+		<for>
+			<effect name="Stun" time="9" displayId="1482" displayLevel="1"/>
+		</for>
+	</skill>
+    <!--
+		Thin Skin - HP decreases from bleeding momentarily. Effect 4.
+
+		LvL.1	description: Effect 4.	is_magic: 0
+		LvL.2	description: Effect 5.	is_magic: 4
+		LvL.3	description: Effect 5.	is_magic: 4
+		LvL.4	description: Effect 6.	is_magic: 4
+		LvL.5	description: Effect 7.	is_magic: 4
+		LvL.6	description: Effect 8.	is_magic: 4
+		LvL.7	description: Effect 8.	is_magic: 4
+		name: Thin Skin
+		level: 1
+		mp_consume: 0
+		description: HP decreases from bleeding momentarily. Effect 4.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5450" levels="7" name="Thin Skin">
+		<!--
+			Description: Instantly decreases HP due to Bleed Attack. Effect 4 - 8
+		-->
+		<table name="#dmg">30 60 90 150 250 350</table>
+		<table name="#magicType">SPECIAL ITEM ITEM ITEM ITEM ITEM ITEM</table>
+		<table name="#magicLevel">46 52 58 62 66 70 74</table>
+		<table name="#abnormal_level">4 5 5 6 7 8 8</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="#magicType"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isOffensive" value="false"/>
+		<for>
+			<effect count="5" name="DamOverTime" value="#dmg" displayId="1483" displayLevel="1"/>
+		</for>
+	</skill>
+    <!--
+		Enervation - Decreases attack and Casting Spd.
+
+		name: Enervation
+		level: 1
+		mp_consume: 0
+		description: Decreases attack and Casting Spd.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5451" levels="1" name="Enervation">
+		<!--
+			Description: Decreases attack and magic speed.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="all_speed_down"/>
+		<set name="magicLevel" value="79"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isOffensive" value="false"/>
+		<for>
+			<effect name="Debuff" time="10" displayId="1484" displayLevel="1">
+				<mul order="0x30" stat="runSpd" value="0.7"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.77"/>
+				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Spite - Greatly increases the amount of Critical Damage received
+
+		LvL.1	description: Greatly increases the amount of Critical Damage received	is_magic: 0
+		LvL.2	is_magic: 4
+		LvL.3	description: Greatly increases the amount of Critical Damage received.	is_magic: 4
+		name: Spite
+		level: 1
+		mp_consume: 0
+		description: Greatly increases the amount of Critical Damage received
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5452" levels="3" name="Spite">
+		<!--
+			Description: Greatly increases the amount of critical damage received
+		-->
+		<table name="#cDam">1.4 1.5 1.6</table>
+		<table name="#level">1 2 3</table>
+		<table name="#magicType">SPECIAL ITEM ITEM</table>
+		<table name="#magicLevel">66 70 74</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="t_crt_dmg_up"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="#magicType"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isOffensive" value="false"/>
+		<for>
+			<effect name="Debuff" displayId="1485" displayLevel="#level">
+				<mul order="0x30" stat="critDamRcpt" value="#cDam"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Mental Impoverish - none
+
+		name: Mental Impoverish
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5453" levels="4" name="Mental Impoverish">
+		<table name="#level">1 2 3 4</table>
+		<table name="#power">50 100 150 200</table>
+		<table name="#magicLevel">68 70 72 74</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isOffensive" value="false"/>
+		<for>
+			<effect count="5" name="ManaDamOverTime" value="#power" displayId="1486" displayLevel="#level"/>
+		</for>
+	</skill>
+    <!--
+		Shadow Bind - Immobilized.
+
+		name: Shadow Bind
+		level: 1
+		mp_consume: 0
+		description: Immobilized.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5454" levels="1" name="Shadow Bind">
+		<!--
+			Description: Immobilized.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="25"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="magicLevel" value="77"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Voice Bind - Silenced.
+
+		name: Voice Bind
+		level: 1
+		mp_consume: 0
+		description: Silenced.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5455" levels="1" name="Voice Bind">
+		<!--
+			Description: Silenced.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="25"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="silence"/>
+		<set name="magicLevel" value="77"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stubborn Resistance - Atk. Spd. and Speed decreases momentarily due to stubborn resistance.
+
+		name: Stubborn Resistance
+		level: 1
+		mp_consume: 0
+		description: Atk. Spd. and Speed decreases momentarily due to stubborn resistance.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5456" levels="1" name="Stubborn Resistance">
+		<!--
+			Description: Condition causing target to instantly slow down Atk. Speed and Speed due to stubborn resistance.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="90"/>
+		<set name="isCancel" value="true"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x30" stat="runSpd" value="0.7"/>
+			</effect>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_buff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Full Recovery - none
+
+		name: Full Recovery
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5457" levels="1" name="Full Recovery">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Fortress - See the summoned spirit perform cute tricks.
+
+		name: Agathion Cute Trick - Fortress
+		level: 1
+		mp_consume: 0
+		description: See the summoned spirit perform cute tricks.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 17
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5458" levels="1" name="Agathion Cute Trick - Fortress">
+		<!--
+			Description: See a summoned Agathion perform tricks.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+	</skill>
+    <!--
+		Paralysis - Paralyzed and unable to move temporarily.
+
+		name: Paralysis
+		level: 1
+		mp_consume: 0
+		description: Paralyzed and unable to move temporarily.
+		icon_name: icon.skill1170
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5459" levels="1" name="Paralysis">
+		<!--
+			Description: A temporary paralysis that prevents movement.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="PARALYZE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="magicLevel" value="99"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill1170"/>
+		<set name="activateRate" value="50"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="PARALYZE"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect name="Paralyze"/>
+		</for>
+	</skill>
+    <!--
+		Fear - Causes a temporary fear so strong that a target flees mindlessly.
+
+		name: Fear
+		level: 1
+		mp_consume: 0
+		description: Causes a temporary fear so strong that a target flees mindlessly.
+		icon_name: icon.skill1092
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5460" levels="1" name="Fear">
+		<!--
+			Description: Causes a temporary fear so strong that a target flees mindlessly.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="TURN_FLEE"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="turn_flee"/>
+		<set name="magicLevel" value="99"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill1092"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="MEN"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 19
+		LvL.2	mp_consume: 22
+		LvL.3	mp_consume: 25
+		LvL.4	mp_consume: 28
+		LvL.5	mp_consume: 31
+		LvL.6	mp_consume: 33
+		LvL.7	mp_consume: 36
+		LvL.8	mp_consume: 38
+		LvL.9	mp_consume: 40
+		LvL.10	mp_consume: 42
+		LvL.11	mp_consume: 42
+		LvL.12	mp_consume: 43
+		name: Power Shot
+		level: 1
+		mp_consume: 19
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5461" levels="12" name="Power Shot">
+		<table name="#effectPoint">100 100 100 100 100 100 100 100 100 100 100 100</table>
+		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
+		<table name="#power">87 89 90 92 94 96 97 99 100 102 104 105</table>
+		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="elements" value="fire"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fire Attack - Strong against the element of fire.
+
+		name: Fire Attack
+		level: 1
+		mp_consume: 0
+		description: Strong against the element of fire.
+		icon_name: icon.skill4279_new
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5462" levels="1" name="Fire Attack">
+		<!--
+			Description: Strong against the element of fire
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill4279_new"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Water Attack - Strong against the element of water.
+
+		name: Water Attack
+		level: 1
+		mp_consume: 0
+		description: Strong against the element of water.
+		icon_name: icon.skill4280_new
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5463" levels="1" name="Water Attack">
+		<!--
+			Description: Strong against the element of water
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill4280_new"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Wind Attack - Strong against the element of wind.
+
+		name: Wind Attack
+		level: 1
+		mp_consume: 0
+		description: Strong against the element of wind.
+		icon_name: icon.skill4281_new
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5464" levels="1" name="Wind Attack">
+		<!--
+			Description: Strong against the element of wind
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill4281_new"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Earth Attack - Strong against the element of earth.
+
+		name: Earth Attack
+		level: 1
+		mp_consume: 0
+		description: Strong against the element of earth.
+		icon_name: icon.skill4282_new
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5465" levels="1" name="Earth Attack">
+		<!--
+			Description: Strong against the element of earth
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill4282_new"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Holy Attacks - Strong against the holy elemental.
+
+		name: Holy Attacks
+		level: 1
+		mp_consume: 0
+		description: Strong against the holy elemental.
+		icon_name: icon.skill4275_new
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5466" levels="1" name="Holy Attacks">
+		<!--
+			Description: Strong against the holy elemental
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill4275_new"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Dark Attack - Strong against the dark elemental.
+
+		name: Dark Attack
+		level: 1
+		mp_consume: 0
+		description: Strong against the dark elemental.
+		icon_name: icon.skill4336_new
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5467" levels="1" name="Dark Attack">
+		<!--
+			Description: Strong against the dark elemental
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill4336_new"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Fire Shot - none
+
+		LvL.1	mp_consume: 19
+		LvL.2	mp_consume: 22
+		LvL.3	mp_consume: 25
+		LvL.4	mp_consume: 28
+		LvL.5	mp_consume: 31
+		LvL.6	mp_consume: 33
+		LvL.7	mp_consume: 36
+		LvL.8	mp_consume: 38
+		LvL.9	mp_consume: 40
+		LvL.10	mp_consume: 42
+		LvL.11	mp_consume: 42
+		LvL.12	mp_consume: 43
+		name: Fire Shot
+		level: 1
+		mp_consume: 19
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 300
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5468" levels="12" name="Fire Shot">
+		<!--
+			Last modify:	10.02.2009
+		-->
+		<table name="#effectPoint">100 100 100 100 100 100 100 100 100 100 100 100</table>
+		<table name="#mpConsume2">19 22 25 28 31 33 36 38 40 42 42 43</table>
+		<table name="#power">87 89 90 92 94 96 97 99 100 102 104 105</table>
+		<table name="#magicLevel">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="300"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="elements" value="fire"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 22) - Past the secure entrance to this large cavern waits Mother Nornil, the ruler of Nornil's Garden.
+
+		name: Raid Boss (Lv. 22)
+		level: 1
+		mp_consume: 0
+		description: Past the secure entrance to this large cavern waits Mother Nornil, the ruler of Nornil's Garden.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5469" levels="1" name="Raid Boss (Lv. 22)">
+		<!--
+			Description: "Past the secure entrance to this large cavern waits Mother Nornil, the ruler of Nornil's Garden."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 81) - This cruel, soulless woman handled much of Beleth' dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard.
+
+		name: Raid Boss (Lv. 81)
+		level: 1
+		mp_consume: 0
+		description: This cruel, soulless woman handled much of Beleth' dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5470" levels="1" name="Raid Boss (Lv. 81)">
+		<!--
+			Description: "This cruel, soulless woman handled much of Beleth's dirty work. Her wickedness became even more pronounced after Kechi, the object of her affection, aspired unsuccessfully to become Chief Guard."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 82) - Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge.
+
+		name: Raid Boss (Lv. 82)
+		level: 1
+		mp_consume: 0
+		description: Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5471" levels="1" name="Raid Boss (Lv. 82)">
+		<!--
+			Description: "Kechi aspired to be the Chief Guard of the Crystal Caverns, but Beleth bypassed him in favor of Barler. Furious at the slight, Kechi plots his revenge."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 83) - Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control.
+
+		name: Raid Boss (Lv. 83)
+		level: 1
+		mp_consume: 0
+		description: Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5472" levels="1" name="Raid Boss (Lv. 83)">
+		<!--
+			Description: "Originally a handmaiden for Parme within the order of Fafurion, her mind was infected by the seed of evil scattered by Beleth, and she is under his control."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 81) - This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains.
+
+		name: Raid Boss (Lv. 81)
+		level: 1
+		mp_consume: 0
+		description: This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5473" levels="1" name="Raid Boss (Lv. 81)">
+		<!--
+			Description: This once-noble soul was originally a powerful seer able to communicate directly with the divine; now only his overwhelming hatred against Beleth remains.
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 81) - This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own.
+
+		name: Raid Boss (Lv. 81)
+		level: 1
+		mp_consume: 0
+		description: This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5474" levels="1" name="Raid Boss (Lv. 81)">
+		<!--
+			Description: "This supernatural wind tore through ancient Hellbound, filled with evil spirits and possessing a malicious will of its own."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 83) - This high-Lv. Demon general, royalty even to the infernal, was ordered by Darion to capture the Tower of Infinitum.
+
+		name: Raid Boss (Lv. 83)
+		level: 1
+		mp_consume: 0
+		description: This high-Lv. Demon general, royalty even to the infernal, was ordered by Darion to capture the Tower of Infinitum.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5475" levels="1" name="Raid Boss (Lv. 83)">
+		<!--
+			Description: "This high-level Demon general, royalty even to the infernal, was ordered by  Darion to capture the Tower of Infinitum."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 83) - Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth' invasion of the mainland.
+
+		name: Raid Boss (Lv. 83)
+		level: 1
+		mp_consume: 0
+		description: Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth' invasion of the mainland.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5476" levels="1" name="Raid Boss (Lv. 83)">
+		<!--
+			Description: "Along with Darion, this Demon was involved in the alliance against Beleth and was particularly involved in Beleth's invasion of the mainland."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 83) - Beleth' right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted.
+
+		name: Raid Boss (Lv. 83)
+		level: 1
+		mp_consume: 0
+		description: Beleth' right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5477" levels="1" name="Raid Boss (Lv. 83)">
+		<!--
+			Description: "Beleth's right hand, he designed the Iron Castle and created a number of powerful magical tools for his master. Because of his long association with the Demon, his soul has been irretrievably corrupted. "
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 83) - The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island.
+
+		name: Raid Boss (Lv. 83)
+		level: 1
+		mp_consume: 0
+		description: The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5478" levels="1" name="Raid Boss (Lv. 83)">
+		<!--
+			Description: "The Chief Guard of the Crystal Caverns, selected because of his strength and power. It is his responsibility to keep an eye on the imprisoned Parme as well as represent all the Demons on the island."
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Boss Petrification Resistance - Resist against Petrification.
+
+		name: Boss Petrification Resistance
+		level: 1
+		mp_consume: 0
+		description: Resist against Petrification.
+		icon_name: icon.skill5479
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5479" levels="1" name="Boss Petrification Resistance">
+		<!--
+			Last modify: 12.07.2008
+			Description: Resist against Petrification.
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill5479"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="paralyzeResist" value="95"/>
+		</for>
+	</skill>
+    <!--
+		Cancel Baylor Invincibility - none
+
+		name: Cancel Baylor Invincibility
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5480" levels="1" name="Cancel Baylor Invincibility">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="invincibility"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Transformation Penalty - You cannot be transformed while under this effect.
+
+		name: Transformation Penalty
+		level: 1
+		mp_consume: 0
+		description: You cannot be transformed while under this effect.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5481" levels="1" name="Transformation Penalty">
+		<!--
+			Description: You cannot be transformed while under this effect.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform_hangover"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Transformation Penalty - You cannot be transformed while under this effect.
+
+		name: Transformation Penalty
+		level: 1
+		mp_consume: 0
+		description: You cannot be transformed while under this effect.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5482" levels="1" name="Transformation Penalty">
+		<!--
+			Description: You cannot be transformed while under this effect.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="480"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="transform_hangover"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Counter Aggression - none
+
+		name: Counter Aggression
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5483" levels="1" name="Counter Aggression">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Endurance Defense Up - Increases P. Def. Effect 1.
+
+		name: Endurance Defense Up
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def. Effect 1.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5484" levels="1" name="Endurance Defense Up">
+		<!--
+			Description: Increases P. Def. Effect 1.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Endurance Defense Up - M. Def. is increased. Effect 1.
+
+		name: Endurance Defense Up
+		level: 1
+		mp_consume: 0
+		description: M. Def. is increased. Effect 1.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5485" levels="1" name="Endurance Defense Up">
+		<!--
+			Description: Increases P. Def. Effect 1.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="md_up"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Endurance Offense Up - P. Atk. is increased. Effect 1.
+
+		name: Endurance Offense Up
+		level: 1
+		mp_consume: 0
+		description: P. Atk. is increased. Effect 1.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5486" levels="1" name="Endurance Offense Up">
+		<!--
+			Description: Increases P. Atk. Effect 1.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Counter Delete Aggression - none
+
+		name: Counter Delete Aggression
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5487" levels="1" name="Counter Delete Aggression">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Counter Critical Damage Up - Increases critical P. Atk. Effect 1.
+
+		name: Counter Critical Damage Up
+		level: 1
+		mp_consume: 0
+		description: Increases critical P. Atk. Effect 1.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5488" levels="1" name="Counter Critical Damage Up">
+		<!--
+			Description: Increases critical attack power. Effect 1.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="critical_dmg_up"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Counter Critical Rate Up - Increases critical attack rate. Effect 1.
+
+		name: Counter Critical Rate Up
+		level: 1
+		mp_consume: 0
+		description: Increases critical attack rate. Effect 1.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5489" levels="1" name="Counter Critical Rate Up">
+		<!--
+			Description: Increases critical attack rate. Effect 1.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="critical_prob_up"/>
+		<set name="magicLevel" value="76"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Weakened Life - You have been infected by a fatal poison.
+
+		name: Weakened Life
+		level: 1
+		mp_consume: 0
+		description: You have been infected by a fatal poison.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5490" levels="1" name="Weakened Life">
+		<!--
+			Description: You have been infected by a fatal poison.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_effect" value="DOT_POISON"/>
+		<set name="abnormal_time" value="7200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="fatal_poison"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Decrease Bow/Crossbow Atk. Spd. - Decreases Atk. Spd. when equipped with bow/crossbow while transformed.
+
+		name: Decrease Bow/Crossbow Atk. Spd.
+		level: 1
+		mp_consume: 0
+		description: Decreases Atk. Spd. when equipped with bow/crossbow while transformed.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5491" levels="1" name="Decrease Bow/Crossbow Atk. Spd.">
+		<!--
+			Need correct:	effect multiplier
+			Last modify:	20.01.2008
+			Comment: В режиме трансформации лук становится melee оружием.
+			Description: Decreases attack speed when equipped with bow/crossbow while transformed.
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skilltransform3"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="0.8">
+				<using kind="Bow, Crossbow"/>
+			</mul>
+			<set order="0x80" stat="pAtkRange" value="40">
+				<using kind="Bow, Crossbow"/>
+			</set>
+			<set order="0x80" stat="atkReuse" value="0">
+				<using kind="Bow, Crossbow"/>
+			</set>
+		</for>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 25
+		LvL.2	mp_consume: 40
+		LvL.3	mp_consume: 56
+		LvL.4	mp_consume: 76
+		LvL.5	mp_consume: 99
+		LvL.6	mp_consume: 121
+		LvL.7	mp_consume: 142
+		LvL.8	mp_consume: 151
+		LvL.9	mp_consume: 159
+		LvL.10	mp_consume: 165
+		LvL.11	mp_consume: 168
+		LvL.12	mp_consume: 170
+		name: Power Shot
+		level: 1
+		mp_consume: 25
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 17
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5492" levels="12" name="Power Shot">
+		<table name="#rate">1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13</table>
+		<table name="#abnormal_time">1200</table>
+		<table name="#mpConsume2">25 40 56 76 99 121 142 151 159 165 168 170</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="17000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect time="#abnormal_time">
+				<mul order="0x30" stat="basePAtkSpd" value="#rate"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Naia Production - none
+
+		name: Naia Production
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 800
+		hit_time: 25
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 13
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5493" levels="1" name="Naia Production">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="25000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="8764"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="800"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Gust - none
+
+		name: Gust
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5494" levels="1" name="Gust">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="86"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="ThrowUp" time="0">
+				<def name="fly_radius" value="300"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Bleed - HP decreases from bleeding momentarily. Effect 10.
+
+		name: Bleed
+		level: 1
+		mp_consume: 0
+		description: HP decreases from bleeding momentarily. Effect 10.
+		icon_name: icon.skill0096
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5495" levels="1" name="Bleed">
+		<!--
+			Description: HP decreases temporarily by bleeding. Effect 10.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="3000"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="10"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="85"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill0096"/>
+		<set name="power" value="2616"/>
+		<set name="hitCancelTime" value="800"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="BLEED"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Bleed"/>
+		</for>
+	</skill>
+    <!--
+		Dark Fireball - none
+
+		name: Dark Fireball
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 1000
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5496" levels="1" name="Dark Fireball">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="460"/>
+		<set name="castRange" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="elements" value="fire"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Horn of Rising Darkness - Cannot move and HP decreases temporarily due to the stun and bleeding. Effect 1.
+
+		name: Horn of Rising Darkness
+		level: 1
+		mp_consume: 0
+		description: Cannot move and HP decreases temporarily due to the stun and bleeding. Effect 1.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 1000
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5497" levels="1" name="Horn of Rising Darkness">
+		<!--
+			Description: Cannot move and HP decreases temporarily due to the stun and bleeding. Effect 1.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="1500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="85"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="2319"/>
+		<set name="castRange" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Self-Destruct - none
+
+		name: Self-Destruct
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5498" levels="1" name="Self-Destruct">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dark Lightening - none
+
+		name: Dark Lightening
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 500
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 16
+		base_elemental_skill_id: 0
+	-->
+    <skill id="5499" levels="1" name="Dark Lightening">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="200"/>
+		<set name="castRange" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="elements" value="unholy"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

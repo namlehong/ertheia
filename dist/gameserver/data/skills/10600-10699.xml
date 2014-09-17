@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
 <list>
-	<skill id="10606" levels="1" name="Shadow Dodge">
+    <!--
+		Shadow Dodge - For 10 sec., has a 90% of evading melee and ranged P. Skill attacks. Requires a dagger or dual dagger.
+
+		name: Shadow Dodge
+		level: 1
+		mp_consume: 38
+		description: For 10 sec., has a 90% of evading melee and ranged P. Skill attacks. Requires a dagger or dual dagger.
+		icon_name: icon.skill11862
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10606" levels="1" name="Shadow Dodge">
 		<set name="abnormal_time" value="10"/>
 		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11862"/>
@@ -19,7 +40,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10607" levels="1" name="Maximum Mortality">
+    <!--
+		Maximum Mortality - For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger.
+
+		name: Maximum Mortality
+		level: 1
+		mp_consume: 38
+		description: For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger.
+		icon_name: icon.skill10607
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10607" levels="1" name="Maximum Mortality">
 		<set name="abnormal_time" value="60"/>
 		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10607"/>
@@ -40,7 +81,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10608" levels="4" name="Superior Haste">
+    <!--
+		Superior Haste - Physical skill Cooldown - 5%. Spd. + 5.
+
+		LvL.1	description: Physical skill Cooldown - 5%. + 5.
+		LvL.2	description: Physical skill Cooldown - 6%. + 6.
+		LvL.3	description: Physical skill Cooldown - 7%. + 7.
+		LvL.4	description: Physical skill Cooldown - 10%. + 10.
+		name: Superior Haste
+		level: 1
+		mp_consume: 0
+		description: Physical skill Cooldown - 5%. Spd. + 5.
+		icon_name: icon.skill10608
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10608" levels="4" name="Superior Haste">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#reuse">0.95 0.94 0.93 0.9</table>
 		<table name="#spd">5 6 7 10</table>
@@ -55,19 +120,79 @@
 			<add order="0x40" stat="runSpd" value="#spd"/>
 		</for>
 	</skill>
-	<skill id="10609" levels="1" name="Critical Chances">
+    <!--
+		Critical Chances - For 5 min., Critical Damage + 304 and vital spot attack success rate + 15%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger.
+
+		name: Critical Chances
+		level: 1
+		mp_consume: 36
+		description: For 5 min., Critical Damage + 304 and vital spot attack success rate + 15%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger.
+		icon_name: icon.skill10878
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10609" levels="1" name="Critical Chances">
 		<set name="icon" value="icon.skill10878"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10610" levels="1" name="Critical Expansions">
+    <!--
+		Critical Expansions - Max P. Critical increases. Applies when a dagger or dual dagger is equipped.
+
+		name: Critical Expansions
+		level: 1
+		mp_consume: 0
+		description: Max P. Critical increases. Applies when a dagger or dual dagger is equipped.
+		icon_name: icon.skill0819
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10610" levels="1" name="Critical Expansions">
 		<set name="icon" value="icon.skill0819"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10653" levels="1" name="Melee Reflect">
+    <!--
+		Melee Reflect - For 10 sec, has a 90% chance of reflecting physical skill damage to the attacker. Requires a dagger or dual dagger.
+
+		name: Melee Reflect
+		level: 1
+		mp_consume: 38
+		description: For 10 sec, has a 90% chance of reflecting physical skill damage to the attacker. Requires a dagger or dual dagger.
+		icon_name: icon.skill11863
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10653" levels="1" name="Melee Reflect">
 		<table name="#mpConsume2">38</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="10"/>
@@ -87,7 +212,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10654" levels="1" name="Maximum Mortality">
+    <!--
+		Maximum Mortality - For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger.
+
+		name: Maximum Mortality
+		level: 1
+		mp_consume: 38
+		description: For 1 min., Vital Spot Attack Rate + 20%. Requires a dagger or dual dagger.
+		icon_name: icon.skill10607
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10654" levels="1" name="Maximum Mortality">
 		<set name="abnormal_time" value="60"/>
 		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10607"/>
@@ -108,7 +253,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10655" levels="4" name="Superior Critical Damage">
+    <!--
+		Superior Critical Damage - Critical Damage + 5%, Speed + 2.
+
+		LvL.1	description: Critical Damage + 5%, Speed + 2.
+		LvL.2	description: Critical Damage + 6%, Speed + 3.
+		LvL.3	description: Critical Damage + 7%, Speed + 4.
+		LvL.4	description: Critical Damage + 10%, Speed + 5.
+		name: Superior Critical Damage
+		level: 1
+		mp_consume: 0
+		description: Critical Damage + 5%, Speed + 2.
+		icon_name: icon.skill10655
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10655" levels="4" name="Superior Critical Damage">
 		<table name="#dam">1.05 1.06 1.07 1.1</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#spd">2 3 4 5</table>
@@ -122,7 +291,27 @@
 			<add order="0x40" stat="runSpd" value="#spd"/>
 		</for>
 	</skill>
-	<skill id="10656" levels="1" name="Critical Prowess">
+    <!--
+		Critical Prowess - For 5 min., Critical Damage + 608 and vital spot attack success rate + 5%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger.
+
+		name: Critical Prowess
+		level: 1
+		mp_consume: 36
+		description: For 5 min., Critical Damage + 608 and vital spot attack success rate + 5%. Front Critical Damage - 30%, Side Critical Rate + 30% and Critical Damage + 30%. Rear Critical Rate + 50% and Critical Damage + 50%. Requires a dagger or dual dagger.
+		icon_name: icon.skill10656
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10656" levels="1" name="Critical Prowess">
 		<set name="icon" value="icon.skill10656"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>

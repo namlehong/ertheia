@@ -1,0 +1,5030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Gift of Queen - Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect 1.
+
+		LvL.1	description: Effect 1.	mp_consume: 122
+		LvL.2	description: Effect 2.	mp_consume: 157
+		LvL.3	description: Effect 3.	mp_consume: 194
+		LvL.4	description: Effect 3.	mp_consume: 202
+		LvL.5	description: Effect 3.	mp_consume: 207
+		LvL.6	description: Effect 3.	mp_consume: 212
+		LvL.7	description: Effect 3.	mp_consume: 215
+		LvL.8	description: Effect 3.	mp_consume: 220
+		LvL.9	description: Effect 3.	mp_consume: 224
+		LvL.10	description: Effect 3.	mp_consume: 229
+		LvL.11	description: Effect 3.	mp_consume: 233
+		LvL.12	description: Effect 3.	mp_consume: 237
+		LvL.13	description: Effect 3.	mp_consume: 242
+		name: Gift of Queen
+		level: 1
+		mp_consume: 122
+		description: Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect 1.
+		icon_name: icon.skill1331
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4700" levels="13" name="Gift of Queen">
+		<!--
+			Last modify:	07.06.2009
+		-->
+		<table name="#pAtk">1.06 1.08 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10</table>
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<table name="#mpConsume2">97 125 155 161 165 169 172 176 179 183 186 189 193</table>
+		<table name="#mpConsume1">25 32 39 41 42 43 43 44 45 46 47 48 49</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="buff_queen_of_cat"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1331"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+				<add order="0x40" stat="pAccCombat" value="2"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cure of Queen - Has a chance to remove curses that decrease Accuracy, P. Atk. and Atk. Spd. from all party members.
+
+		LvL.1	mp_consume: 62
+		LvL.2	mp_consume: 79
+		LvL.3	mp_consume: 98
+		LvL.4	mp_consume: 102
+		LvL.5	mp_consume: 104
+		LvL.6	mp_consume: 107
+		LvL.7	mp_consume: 108
+		LvL.8	mp_consume: 110
+		LvL.9	mp_consume: 113
+		LvL.10	mp_consume: 115
+		LvL.11	mp_consume: 117
+		LvL.12	mp_consume: 119
+		LvL.13	mp_consume: 122
+		name: Cure of Queen
+		level: 1
+		mp_consume: 62
+		description: Has a chance to remove curses that decrease Accuracy, P. Atk. and Atk. Spd. from all party members.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4701" levels="13" name="Cure of Queen">
+		<table name="#dispel_chance">40 45 50 55 60 65 70 75 80 85 90 95 100</table>
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#mpConsume2">49 63 78 81 83 85 86 88 90 92 93 95 97</table>
+		<table name="#mpConsume1">13 16 20 21 21 22 22 22 23 23 24 24 25</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="attack_time_up"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="hit_down"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="pa_down"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Blessing of Seraphim - Buff magic used by the Seraphim the Unicorn. Party members' MP Recovery Bonus increases temporarily. Effect 1.
+
+		LvL.1	description: Effect 1.	mp_consume: 122
+		LvL.2	description: Effect 2.	mp_consume: 157
+		LvL.3	description: Effect 3.	mp_consume: 194
+		LvL.4	description: Effect 3.	mp_consume: 202
+		LvL.5	description: Effect 3.	mp_consume: 207
+		LvL.6	description: Effect 3.	mp_consume: 212
+		LvL.7	description: Effect 3.	mp_consume: 215
+		LvL.8	description: Effect 3.	mp_consume: 220
+		LvL.9	description: Effect 3.	mp_consume: 224
+		LvL.10	description: Effect 3.	mp_consume: 229
+		LvL.11	description: Effect 3.	mp_consume: 233
+		LvL.12	description: Effect 3.	mp_consume: 237
+		LvL.13	description: Effect 3.	mp_consume: 242
+		name: Blessing of Seraphim
+		level: 1
+		mp_consume: 122
+		description: Buff magic used by the Seraphim the Unicorn. Party members' MP Recovery Bonus increases temporarily. Effect 1.
+		icon_name: icon.skill1332
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4702" levels="13" name="Blessing of Seraphim">
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#regMp">1.30 1.32 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<table name="#mpConsume2">97 125 155 161 165 169 172 176 179 183 186 189 193</table>
+		<table name="#mpConsume1">25 32 39 41 42 43 43 44 45 46 47 48 49</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="buff_unicorn_seraphim"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1332"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="regMp" value="#regMp"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Gift of Seraphim - Seraphim the Unicorn's buff magic temporarily reduces party members' magic skill recovery time. Effect 1.
+
+		LvL.1	description: Effect 1.	mp_consume: 122
+		LvL.2	description: Effect 2.	mp_consume: 157
+		LvL.3	description: Effect 3.	mp_consume: 194
+		LvL.4	description: Effect 3.	mp_consume: 202
+		LvL.5	description: Effect 3.	mp_consume: 207
+		LvL.6	description: Effect 3.	mp_consume: 212
+		LvL.7	description: Effect 3.	mp_consume: 215
+		LvL.8	description: Effect 3.	mp_consume: 220
+		LvL.9	description: Effect 3.	mp_consume: 224
+		LvL.10	description: Effect 3.	mp_consume: 229
+		LvL.11	description: Effect 3.	mp_consume: 233
+		LvL.12	description: Effect 3.	mp_consume: 237
+		LvL.13	description: Effect 3.	mp_consume: 242
+		name: Gift of Seraphim
+		level: 1
+		mp_consume: 122
+		description: Seraphim the Unicorn's buff magic temporarily reduces party members' magic skill recovery time. Effect 1.
+		icon_name: icon.skill1332
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4703" levels="13" name="Gift of Seraphim">
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#reuse">0.7 0.68 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65 0.65</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<table name="#mpConsume2">97 125 155 161 165 169 172 176 179 183 186 189 193</table>
+		<table name="#mpConsume1">25 32 39 41 42 43 43 44 45 46 47 48 49</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#abnormal_time">120 120 120 150 165 180 195 210 225 240 255 270 285</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="buff_unicorn_seraphim"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1332"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mReuse" value="#reuse"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Cure of Seraphim - Seraphim the Unicorn's cure magic. Removes Sleep, Hold, Stun, Silence and Paralysis debuffs from party members.
+
+		LvL.1	description: Seraphim the Unicorn's cure magic. Removes Sleep, Hold, Stun, Silence and Paralysis debuffs from party members.	mp_consume: 62
+		LvL.2	mp_consume: 79
+		LvL.3	mp_consume: 98
+		LvL.4	mp_consume: 102
+		LvL.5	mp_consume: 104
+		LvL.6	mp_consume: 107
+		LvL.7	description: Curse canceling magic used by Seraphim the Unicorn. Cancels party members' Sleep, Hold, Stun, and Paralysis debuff.	mp_consume: 108
+		LvL.8	description: Curse canceling magic used by Seraphim the Unicorn. Cancels party members' Sleep, Hold, Stun, and Paralysis debuff.	mp_consume: 110
+		LvL.9	description: Curse canceling magic used by Seraphim the Unicorn. Cancels party members' Sleep, Hold, Stun, and Paralysis debuff.	mp_consume: 113
+		LvL.10	description: Curse canceling magic used by Seraphim the Unicorn. Cancels party members' Sleep, Hold, Stun, and Paralysis debuff.	mp_consume: 115
+		LvL.11	description: Curse canceling magic used by Seraphim the Unicorn. Cancels party members' Sleep, Hold, Stun, and Paralysis debuff.	mp_consume: 117
+		LvL.12	description: Curse canceling magic used by Seraphim the Unicorn. Cancels party members' Sleep, Hold, Stun, and Paralysis debuff.	mp_consume: 119
+		LvL.13	description: Curse canceling magic used by Seraphim the Unicorn. Cancels party members' Sleep, Hold, Stun, and Paralysis debuff.	mp_consume: 122
+		name: Cure of Seraphim
+		level: 1
+		mp_consume: 62
+		description: Seraphim the Unicorn's cure magic. Removes Sleep, Hold, Stun, Silence and Paralysis debuffs from party members.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4704" levels="13" name="Cure of Seraphim">
+		<table name="#dispel_chance">40 45 50 55 60 65 70 75 80 85 90 95 100</table>
+		<table name="#effectPoint">541 611 659 666 669 673 676 679 681 684 687 689 692</table>
+		<table name="#mpConsume2">49 63 78 81 83 85 86 88 90 92 93 95 97</table>
+		<table name="#mpConsume1">13 16 20 21 21 22 22 22 23 23 24 24 25</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="sleep"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="root_magically"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="stun"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="paralyze"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+			<effect name="i_dispel_by_slot_probability" time="0">
+				<def name="abnormal_type" value="silence"/>
+				<def name="dispel_chance" value="#dispel_chance"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Curse of Shade - Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease their P. Def. and M. Def.  Effect 1.
+
+		LvL.1	description: Provokes the enemy to attack and then casts a curse to momentarily decrease their P Def.  Effect 1.	mp_consume: 53
+		LvL.2	description: Effect 2.	mp_consume: 62
+		LvL.3	description: Effect 3.	mp_consume: 69
+		LvL.4	description: Effect 3.	mp_consume: 70
+		LvL.5	description: Effect 3.	mp_consume: 72
+		LvL.6	description: Effect 3.	mp_consume: 73
+		LvL.7	description: Provokes the enemy to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 73
+		LvL.8	description: Provokes the enemy to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 73
+		LvL.9	description: Provokes the enemy to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 74
+		LvL.10	description: Provokes the enemy to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 74
+		LvL.11	description: Provokes the enemy to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 75
+		LvL.12	description: Provokes the enemy to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 75
+		LvL.13	description: Provokes the enemy to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 75
+		name: Curse of Shade
+		level: 1
+		mp_consume: 53
+		description: Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease their P. Def. and M. Def.  Effect 1.
+		icon_name: icon.skill1333
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4705" levels="13" name="Curse of Shade">
+		<table name="#effectPoint">1621 1831 1975 1997 2007 2017 2026 2035 2043 2051 2059 2066 2074</table>
+		<table name="#tab">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
+		<table name="#activateRate">40 40 40 41 42 43 44 45 46 47 48 49 50</table>
+		<table name="#mpConsume2">42 49 55 56 57 58 58 58 59 59 60 60 60</table>
+		<table name="#mpConsume1">11 13 14 14 15 15 15 15 15 15 15 15 15</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="debuff_nightshade"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill1333"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="AGGRESSION"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isOffensive" value="true"/>
+		<set name="elements" value="unholy"/>
+		<set name="elementsPower" value="20"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect name="Aggression" chance="80"/>
+			<effect>
+				<mul order="0x30" stat="mDef" value="#tab"/>
+				<mul order="0x30" stat="pDef" value="#tab"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Mass Curse of Shade - Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their P. Def. and M. Def.  Effect 1.
+
+		LvL.1	description: Provokes nearby enemies to attack and then casts a curse to momentarily decrease their P Def.  Effect 1.	mp_consume: 79
+		LvL.2	description: Effect 2.	mp_consume: 93
+		LvL.3	description: Effect 3.	mp_consume: 104
+		LvL.4	description: Effect 3.	mp_consume: 105
+		LvL.5	description: Effect 3.	mp_consume: 107
+		LvL.6	description: Effect 3.	mp_consume: 108
+		LvL.7	description: Provokes surrounding enemies to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 109
+		LvL.8	description: Provokes surrounding enemies to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 109
+		LvL.9	description: Provokes surrounding enemies to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 110
+		LvL.10	description: Provokes surrounding enemies to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 112
+		LvL.11	description: Provokes surrounding enemies to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 112
+		LvL.12	description: Provokes surrounding enemies to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 113
+		LvL.13	description: Provokes surrounding enemies to attack and then casts a curse to instantly decrease their P Def. Effect 3.	mp_consume: 113
+		name: Mass Curse of Shade
+		level: 1
+		mp_consume: 79
+		description: Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their P. Def. and M. Def.  Effect 1.
+		icon_name: icon.skill1333
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4706" levels="13" name="Mass Curse of Shade">
+		<table name="#tab">0.94 0.92 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9 0.9</table>
+		<table name="#activateRate">40 40 40 41 42 43 44 45 46 47 48 49 50</table>
+		<table name="#effectPoint">1621 1831 1975 1997 2007 2017 2026 2035 2043 2051 2059 2066 2074</table>
+		<table name="#mpConsume2">63 74 83 84 85 86 87 87 88 89 89 90 90</table>
+		<table name="#mpConsume1">16 19 21 21 22 22 22 22 22 23 23 23 23</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<table name="#abnormal_level">1 2 3 3 3 3 3 3 3 3 3 3 3</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="debuff_nightshade"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="levelModifier" value="1"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="icon" value="icon.skill1333"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="AGGRESSION"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="unholy"/>
+		<set name="elementsPower" value="20"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect name="Aggression" chance="40"/>
+			<effect>
+				<mul order="0x30" stat="mDef" value="#tab"/>
+				<mul order="0x30" stat="pDef" value="#tab"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Shade Sacrifice - Nightshade special HP recovery magic. Sacrifices one's own HP to regenerate HP of party members. Power 589.
+
+		LvL.1	hp_consume: 706	description: Power 589.
+		LvL.2	hp_consume: 840	description: Nightshade special ability. Sacrifice HP in order to regenerate the HP of a selected target. Power 700.
+		LvL.3	hp_consume: 946	description: Nightshade special ability. Sacrifice HP in order to regenerate the HP of a selected target. Power 789.
+		LvL.4	hp_consume: 964	description: Nightshade special ability. Sacrifice HP in order to regenerate the HP of a selected target. Power 804.
+		LvL.5	hp_consume: 972	description: Power 810.
+		LvL.6	hp_consume: 979	description: Power 816.
+		LvL.7	hp_consume: 991	description: Power 826.
+		LvL.8	hp_consume: 1002	description: Power 835.
+		LvL.9	hp_consume: 1013	description: Power 844.
+		LvL.10	hp_consume: 1023	description: Power 852.
+		LvL.11	hp_consume: 1032	description: Power 860.
+		LvL.12	hp_consume: 1041	description: Power 867.
+		LvL.13	hp_consume: 1049	description: Power 874.
+		name: Shade Sacrifice
+		level: 1
+		mp_consume: 0
+		description: Nightshade special HP recovery magic. Sacrifices one's own HP to regenerate HP of party members. Power 589.
+		icon_name: icon.skill0000
+		hp_consume: 706
+		cast_range: 600
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4707" levels="13" name="Shade Sacrifice">
+		<table name="#effectPoint">588 700 789 804 811 817 823 828 833 838 842 845 848</table>
+		<table name="#hpConsume">706 840 946 964 972 979 991 1002 1013 1023 1032 1041 1049</table>
+		<table name="#power">589 700 789 804 810 816 826 835 844 852 860 867 874</table>
+		<table name="#magicLevel">57 66 75 77 78 79 80 81 82 83 84 85 86</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hpConsume" value="#hpConsume"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cursed Strike - Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1046.
+
+		LvL.1	description: Power 1046.	mp_consume: 58
+		LvL.2	description: Power 1230.	mp_consume: 62
+		LvL.3	description: Power 1425.	mp_consume: 67
+		LvL.4	description: Power 1626.	mp_consume: 71
+		LvL.5	description: Power 1727.	mp_consume: 73
+		LvL.6	description: Power 1827.	mp_consume: 75
+		LvL.7	description: Power 1925.	mp_consume: 77
+		LvL.8	description: Power 2020.	mp_consume: 78
+		LvL.9	description: Power 2067.	mp_consume: 79
+		LvL.10	description: Power 2112.	mp_consume: 80
+		LvL.11	description: Power 6459.	mp_consume: 80
+		LvL.12	description: Power 6593.	mp_consume: 80
+		LvL.13	description: Power 7004.	mp_consume: 80
+		LvL.14	description: Power 7443.	mp_consume: 80
+		name: Cursed Strike
+		level: 1
+		mp_consume: 58
+		description: Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1046.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4708" levels="10" name="Cursed Strike">
+		<table name="#effectPoint">279 296 311 323 328 333 337 340 341 342</table>
+		<table name="#mpConsume2">58 62 67 71 73 75 77 78 79 80</table>
+		<table name="#power">1046 1230 1425 1626 1727 1827 1925 2020 2067 2112</table>
+		<table name="#magicLevel">58 62 66 70 72 74 76 78 79 80</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="50"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Cursed Blow - Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 4181.
+
+		LvL.1	description: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 4181.	mp_consume: 58
+		LvL.2	description: Power 4920.	mp_consume: 62
+		LvL.3	description: Power 5700.	mp_consume: 67
+		LvL.4	description: Power 6503.	mp_consume: 71
+		LvL.5	description: Power 6906.	mp_consume: 73
+		LvL.6	description: Power 7305.	mp_consume: 75
+		LvL.7	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 7698.	mp_consume: 77
+		LvL.8	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 8079.	mp_consume: 78
+		LvL.9	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 8265.	mp_consume: 79
+		LvL.10	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 8447.	mp_consume: 80
+		LvL.11	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 8743.	mp_consume: 80
+		LvL.12	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 8918.	mp_consume: 80
+		LvL.13	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 9101.	mp_consume: 80
+		LvL.14	description: Cursed Man's attack that unleashes a powerful attack upon the enemy's vital parts. Power 9283.	mp_consume: 80
+		name: Cursed Blow
+		level: 1
+		mp_consume: 58
+		description: Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power 4181.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4709" levels="10" name="Cursed Blow">
+		<table name="#effectPoint">279 296 311 323 328 333 337 340 341 342</table>
+		<table name="#mpConsume2">58 62 67 71 73 75 77 78 79 80</table>
+		<table name="#power">1249 2164 3408 4878 5627 6335 7698 8079 8265 8447</table>
+		<table name="#magicLevel">58 62 66 70 72 74 76 78 79 80</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="onCrit" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wild Stun - Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 16.
+
+		LvL.1	description: Power 16.	mp_consume: 3
+		LvL.2	description: Power 35.	mp_consume: 5
+		LvL.3	description: Power 73.	mp_consume: 7
+		LvL.4	description: Power 138.	mp_consume: 9
+		LvL.5	description: Power 238.	mp_consume: 12
+		LvL.6	description: Power 375.	mp_consume: 14
+		LvL.7	description: Power 537.	mp_consume: 17
+		LvL.8	description: Power 619.	mp_consume: 18
+		LvL.9	description: Power 697.	mp_consume: 18
+		LvL.10	description: Power 766.	mp_consume: 19
+		LvL.11	description: Power 821.	mp_consume: 20
+		LvL.12	description: Power 864.	mp_consume: 20
+		name: Wild Stun
+		level: 1
+		mp_consume: 3
+		description: Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 16.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.1
+		cool_time: 0.4
+		reuse_delay: 12
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4710" levels="12" name="Wild Stun">
+		<table name="#effectPoint">49 73 102 135 170 202 226 235 240 243 246 248</table>
+		<table name="#mpConsume2">3 5 7 9 12 14 17 18 18 19 20 20</table>
+		<table name="#power">16 35 73 138 238 375 537 619 697 766 821 864</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="12000"/>
+		<set name="coolTime" value="400"/>
+		<set name="hitTime" value="1100"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="15"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Wild Defense - Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed.
+
+		LvL.1	mp_consume: 46
+		LvL.2	mp_consume: 76
+		LvL.3	mp_consume: 104
+		LvL.4	mp_consume: 139
+		LvL.5	mp_consume: 179
+		LvL.6	mp_consume: 220
+		LvL.7	mp_consume: 258
+		LvL.8	mp_consume: 275
+		LvL.9	mp_consume: 288
+		LvL.10	mp_consume: 298
+		LvL.11	mp_consume: 305
+		LvL.12	mp_consume: 309
+		name: Wild Defense
+		level: 1
+		mp_consume: 46
+		description: Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed.
+		icon_name: icon.skill0110
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.1
+		cool_time: 0.4
+		reuse_delay: 1200
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4711" levels="12" name="Wild Defense">
+		<table name="#effectPoint">138 204 285 379 477 566 635 659 676 689 700 709</table>
+		<table name="#mDef">1350 1575 1800 2025 2250 2475 2700 2925 3150 3375 3600 3825</table>
+		<table name="#pDef">1800 2100 2400 2700 3000 3300 3600 3900 4200 4500 4800 5100</table>
+		<table name="#mpConsume2">46 76 104 139 179 220 258 275 288 298 305 309</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="coolTime" value="400"/>
+		<set name="hitTime" value="1100"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="ultimate_buff"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0110"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="pDef" value="#pDef"/>
+				<add order="0x40" stat="mDef" value="#mDef"/>
+				<mul order="0x30" stat="runSpd" value="0.1"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.2"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Bright Burst - Star Hatchling/Strider's attack skill. Power 6.
+
+		LvL.1	description: Power 6.	mp_consume: 6
+		LvL.2	description: Power 9.
+		LvL.3	description: Power 13.	mp_consume: 7
+		LvL.4	description: Power 17.	mp_consume: 7
+		LvL.5	description: Power 23.	mp_consume: 8
+		LvL.6	description: Power 28.	mp_consume: 8
+		LvL.7	description: Power 34.	mp_consume: 9
+		LvL.8	description: Power 36.	mp_consume: 9
+		LvL.9	description: Power 39.	mp_consume: 10
+		LvL.10	description: Power 41.	mp_consume: 10
+		LvL.11	description: Power 42.	mp_consume: 11
+		LvL.12	description: Power 43.	mp_consume: 11
+		name: Bright Burst
+		level: 1
+		mp_consume: 6
+		description: Star Hatchling/Strider's attack skill. Power 6.
+		icon_name: icon.skill4712
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4712" levels="12" name="Bright Burst">
+		<table name="#effectPoint">138 204 285 379 477 566 635 659 676 689 700 709</table>
+		<table name="#mpConsume2">4 4 5 5 5 5 6 6 7 7 8 8</table>
+		<table name="#mpConsume1">2 2 2 2 3 3 3 3 3 3 3 3</table>
+		<table name="#power">6 9 13 17 23 28 34 36 39 41 42 43</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill4712"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="1000"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="elements" value="fire"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bright Heal - Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 33.
+
+		LvL.1	description: Regenerates the pet's HP Power 33.	mp_consume: 5
+		LvL.2	description: Regenerates the pet's HP Power 61.	mp_consume: 9
+		LvL.3	description: Regenerates the pet's HP Power 98.	mp_consume: 12
+		LvL.4	description: Regenerates the pet's HP Power 145.	mp_consume: 15
+		LvL.5	description: Regenerates the pet's HP Power 198.	mp_consume: 19
+		LvL.6	description: Regenerates the pet's HP Power 251.	mp_consume: 23
+		LvL.7	description: Regenerates the pet's HP Power 298.	mp_consume: 27
+		LvL.8	description: Regenerates the pet's HP Power 316.	mp_consume: 28
+		LvL.9	description: Recovers one's own HP Power 331.	mp_consume: 30
+		LvL.10	description: Recovers one's own HP Power 347.	mp_consume: 30
+		LvL.11	description: Recovers one's own HP Power 358.	mp_consume: 32
+		LvL.12	description: Recovers one's own HP Power 366.	mp_consume: 32
+		name: Bright Heal
+		level: 1
+		mp_consume: 5
+		description: Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 33.
+		icon_name: icon.skill4713
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 1
+		reuse_delay: 12
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4713" levels="12" name="Bright Heal">
+		<table name="#effectPoint">33 61 98 145 198 251 298 316 330 338 342 341</table>
+		<table name="#mpConsume2">4 7 9 12 15 18 21 22 24 24 25 25</table>
+		<table name="#mpConsume1">1 2 3 3 4 5 6 6 6 6 7 7</table>
+		<table name="#power">33 61 98 145 198 251 298 316 330 338 342 341</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="12000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill4713"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="1000"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Twilight Dragon - An active dragon with fast moving feet.
+
+		name: Twilight Dragon
+		level: 1
+		mp_consume: 0
+		description: An active dragon with fast moving feet.
+		icon_name: icon.skill1373
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4714" levels="1" name="Twilight Dragon">
+		<set name="magicLevel" value="35"/>
+		<set name="icon" value="icon.skill1373"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Wind Dragon - A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases.
+
+		name: Wind Dragon
+		level: 1
+		mp_consume: 0
+		description: A warrior type dragon that possesses great power. When it is equipped with a weapon, its P. Atk increases greatly. When it is equipped with armor, P. Def. increases greatly and M. Def. also increases.
+		icon_name: icon.skill1373
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4715" levels="1" name="Wind Dragon">
+		<set name="magicLevel" value="35"/>
+		<set name="icon" value="icon.skill1373"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Star Dragon - A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases.
+
+		name: Star Dragon
+		level: 1
+		mp_consume: 0
+		description: A mystic type dragon that possesses powerful magic capability. When it is equipped with a weapon, its M. Atk. increases greatly. When equipped with armor, its M. Def. increases greatly and P. Def. also increases.
+		icon_name: icon.skill1373
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4716" levels="1" name="Star Dragon">
+		<set name="magicLevel" value="35"/>
+		<set name="icon" value="icon.skill1373"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Heal Trick - A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 9.
+
+		LvL.1	description: Power 9.	mp_consume: 5
+		LvL.2	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 16.	mp_consume: 8
+		LvL.3	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 25.	mp_consume: 12
+		LvL.4	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 37.	mp_consume: 17
+		LvL.5	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 50.	mp_consume: 20
+		LvL.6	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 63.	mp_consume: 25
+		LvL.7	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 75.	mp_consume: 29
+		LvL.8	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 79.	mp_consume: 32
+		LvL.9	description: Recovery magic used by a pet. Regenerates its master's HP a little bit. Power 83.	mp_consume: 33
+		LvL.10	description: Power 87.	mp_consume: 33
+		LvL.11	description: Power 90.	mp_consume: 34
+		LvL.12	description: Power 92.	mp_consume: 34
+		name: Heal Trick
+		level: 1
+		mp_consume: 5
+		description: A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 9.
+		icon_name: icon.skill4717
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4717" levels="12" name="Heal Trick">
+		<table name="#mpConsume2">4 6 9 13 16 20 23 25 26 26 27 27</table>
+		<table name="#mpConsume1">1 2 3 4 4 5 6 7 7 7 7 7</table>
+		<table name="#power">9 16 25 37 50 63 75 79 83 87 90 92</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill4717"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_OWNER"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Greater Heal Trick - Recovery magic used by a pet. Regenerates its master's HP. Power 37.
+
+		LvL.1	description: Regenerates its master's HP Power 37.	mp_consume: 33
+		LvL.2	description: Regenerates its master's HP Power 64.	mp_consume: 59
+		LvL.3	description: Regenerates its master's HP Power 99.	mp_consume: 88
+		LvL.4	description: Regenerates its master's HP Power 139.	mp_consume: 122
+		LvL.5	description: Regenerates its master's HP Power 171.	mp_consume: 159
+		LvL.6	description: Regenerates its master's HP Power 205.	mp_consume: 195
+		LvL.7	description: Regenerates its master's HP Power 236.	mp_consume: 228
+		LvL.8	description: Regenerates its master's HP Power 266.	mp_consume: 242
+		LvL.9	description: Regenerates its master's HP Power 300.	mp_consume: 252
+		LvL.10	description: Regenerates its master's HP Power 332.	mp_consume: 259
+		LvL.11	description: Regenerates its master's HP Power 355.	mp_consume: 262
+		LvL.12	description: Regenerates its master's HP Power 368.	mp_consume: 262
+		name: Greater Heal Trick
+		level: 1
+		mp_consume: 33
+		description: Recovery magic used by a pet. Regenerates its master's HP. Power 37.
+		icon_name: icon.skill4718
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4718" levels="12" name="Greater Heal Trick">
+		<table name="#mpConsume2">26 47 70 97 127 156 182 193 201 207 209 209</table>
+		<table name="#mpConsume1">7 12 18 25 32 39 46 49 51 52 53 53</table>
+		<table name="#power">37 64 99 139 171 205 236 266 300 332 355 368</table>
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill4718"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_OWNER"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4719" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">112 302 834 2177 5631 11008 17044 20119 23243 26363 29567 32796</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4720" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">95 255 705 1840 4754 9291 14390 16978 19710 22699 25871 28860</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4721" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">51 136 375 982 2536 4958 7667 9037 10483 12074 13778 15349</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4722" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">48 128 352 922 2377 4651 7195 8489 9855 11363 12921 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4723" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">45 120 330 858 2218 4344 6724 7942 9228 10625 12093 13512</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4724" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4725" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4726" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4727" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4728" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4729" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">168 453 1251 3265 8446 16511 25566 30178 34864 39544 44350 49193</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4730" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">142 382 1056 2760 7131 13935 21585 25467 29565 34048 38806 43290</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4731" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">76 204 563 1473 3804 7437 11500 13555 15724 18112 20667 23023</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4732" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">71 191 528 1382 3566 6977 10793 12734 14783 17044 19381 21645</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4733" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">67 179 494 1287 3327 6516 10085 11913 13841 15937 18140 20268</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spinning Slasher - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Spinning Slasher
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4734" levels="12" name="Spinning Slasher">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spinning Slasher - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Spinning Slasher
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4735" levels="12" name="Spinning Slasher">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spinning Slasher - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Spinning Slasher
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4736" levels="12" name="Spinning Slasher">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spinning Slasher - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Spinning Slasher
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4737" levels="12" name="Spinning Slasher">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spinning Slasher - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Spinning Slasher
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4738" levels="12" name="Spinning Slasher">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4739" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">112 302 834 2177 5631 11008 17044 20119 23243 26363 29567 32796</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4740" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">95 255 705 1840 4754 9291 14390 16978 19710 22699 25871 28860</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4741" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">51 136 375 982 2536 4958 7667 9037 10483 12074 13778 15349</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4742" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">48 128 352 922 2377 4651 7195 8489 9855 11363 12921 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Strike - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Power Strike
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4743" levels="12" name="Power Strike">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">45 120 330 858 2218 4344 6724 7942 9228 10625 12093 13512</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4744" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4745" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">48 128 352 920 2377 4645 7195 8490 9855 11350 12936 14430</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4746" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">26 68 188 491 1268 2479 3834 4519 5242 6037 6889 7675</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4747" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">24 64 176 461 1189 2326 3598 4245 4928 5682 6461 7215</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Stun
+		level: 1
+		mp_consume: 16
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0100
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4748" levels="12" name="Stun">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">23 60 165 429 1109 2172 3362 3971 4614 5313 6047 6756</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0100"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4749" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">280 755 2084 5441 14076 27518 42610 50296 58107 65907 73917 81989</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4750" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">236 637 1761 4600 11884 23226 35974 42445 49275 56746 64677 72150</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4751" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">126 339 937 2455 6339 12395 19166 22591 26206 30185 34445 38371</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4752" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">118 319 879 2303 5942 11627 17987 21223 24638 28406 32302 36075</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Mortal Blow - none
+
+		LvL.1	mp_consume: 16
+		LvL.2	mp_consume: 23
+		LvL.3	mp_consume: 32
+		LvL.4	mp_consume: 42
+		LvL.5	mp_consume: 53
+		LvL.6	mp_consume: 65
+		LvL.7	mp_consume: 75
+		LvL.8	mp_consume: 79
+		LvL.9	mp_consume: 82
+		LvL.10	mp_consume: 84
+		LvL.11	mp_consume: 85
+		LvL.12	mp_consume: 87
+		name: Mortal Blow
+		level: 1
+		mp_consume: 16
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.66
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4753" levels="12" name="Mortal Blow">
+		<table name="#mpConsume2">16 23 32 42 53 65 75 79 82 84 85 87</table>
+		<table name="#power">111 298 824 2145 5545 10860 16808 19855 23069 26561 30232 33780</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="660"/>
+		<set name="hitTime" value="829"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="onCrit" value="true"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="blow" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4754" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">327 882 2435 6357 16445 32150 49783 58763 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4755" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">275 744 2057 5374 13885 27135 42030 49590 57569 66298 75565 84295</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4756" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">147 396 1095 2868 7407 14481 22392 26393 30618 35267 40244 44830</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4757" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">138 372 1027 2691 6943 13584 21015 24795 28785 33188 37739 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4758" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">129 348 962 2506 6479 12688 19638 23198 26952 31032 35321 39466</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4759" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4760" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28795 33149 37783 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4761" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4762" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4763" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4764" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">327 882 2435 6357 16445 32150 49783 58763 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4765" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">275 744 2057 5374 13885 27135 42030 49590 57569 66298 75565 84295</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4766" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">147 396 1095 2868 7407 14481 22392 26393 30618 35267 40244 44830</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4767" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">138 372 1027 2691 6943 13584 21015 24795 28785 33188 37739 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Power Shot - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Power Shot
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4768" levels="12" name="Power Shot">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">129 348 962 2506 6479 12688 19638 23198 26952 31032 35321 39466</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4769" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4770" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">138 372 1029 2687 6943 13568 21015 24795 28795 33149 37783 42148</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4771" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">74 198 548 1434 3704 7241 11196 13197 15309 17634 20122 22415</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4772" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">69 186 514 1346 3472 6792 10508 12398 14393 16594 18870 21074</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Stun - Stunned and unable to move momentarily.
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Stun
+		level: 1
+		mp_consume: 32
+		description: Stunned and unable to move momentarily.
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4773" levels="12" name="Stun">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">65 174 481 1253 3240 6344 9819 11599 13476 15516 17661 19733</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0101"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="80"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Spear Attack - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Spear Attack
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4774" levels="12" name="Spear Attack">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spear Attack - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Spear Attack
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4775" levels="12" name="Spear Attack">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spear Attack - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Spear Attack
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4776" levels="12" name="Spear Attack">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spear Attack - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Spear Attack
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4777" levels="12" name="Spear Attack">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spear Attack - none
+
+		LvL.1	mp_consume: 32
+		LvL.2	mp_consume: 45
+		LvL.3	mp_consume: 63
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 106
+		LvL.6	mp_consume: 129
+		LvL.7	mp_consume: 150
+		LvL.8	mp_consume: 158
+		LvL.9	mp_consume: 164
+		LvL.10	mp_consume: 168
+		LvL.11	mp_consume: 170
+		LvL.12	mp_consume: 173
+		name: Spear Attack
+		level: 1
+		mp_consume: 32
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 4.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4778" levels="12" name="Spear Attack">
+		<table name="#mpConsume2">32 45 63 83 106 129 150 158 164 168 170 173</table>
+		<table name="#power">352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="4500"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="900"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Heal - none
+
+		LvL.1	mp_consume: 21
+		LvL.2	mp_consume: 34
+		LvL.3	mp_consume: 50
+		LvL.4	mp_consume: 67
+		LvL.5	mp_consume: 86
+		LvL.6	mp_consume: 104
+		LvL.7	mp_consume: 119
+		LvL.8	mp_consume: 125
+		LvL.9	mp_consume: 129
+		LvL.10	mp_consume: 131
+		LvL.11	mp_consume: 131
+		LvL.12	mp_consume: 132
+		name: Heal
+		level: 1
+		mp_consume: 21
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4779" levels="12" name="Heal">
+		<table name="#mpConsume2">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<table name="#power">1640 2824 4501 6612 9334 11649 12865 13406 13624 13544 13303 13157</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Heal - none
+
+		LvL.1	mp_consume: 21
+		LvL.2	mp_consume: 34
+		LvL.3	mp_consume: 50
+		LvL.4	mp_consume: 67
+		LvL.5	mp_consume: 86
+		LvL.6	mp_consume: 104
+		LvL.7	mp_consume: 119
+		LvL.8	mp_consume: 125
+		LvL.9	mp_consume: 129
+		LvL.10	mp_consume: 131
+		LvL.11	mp_consume: 131
+		LvL.12	mp_consume: 132
+		name: Heal
+		level: 1
+		mp_consume: 21
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4780" levels="12" name="Heal">
+		<table name="#mpConsume2">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<table name="#power">1382 2381 3802 5590 7881 9832 10862 11314 11553 11661 11640 11578</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Heal - none
+
+		LvL.1	mp_consume: 21
+		LvL.2	mp_consume: 34
+		LvL.3	mp_consume: 50
+		LvL.4	mp_consume: 67
+		LvL.5	mp_consume: 86
+		LvL.6	mp_consume: 104
+		LvL.7	mp_consume: 119
+		LvL.8	mp_consume: 125
+		LvL.9	mp_consume: 129
+		LvL.10	mp_consume: 131
+		LvL.11	mp_consume: 131
+		LvL.12	mp_consume: 132
+		name: Heal
+		level: 1
+		mp_consume: 21
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4781" levels="12" name="Heal">
+		<table name="#mpConsume2">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<table name="#power">736 1267 2024 2983 4204 5247 5787 6022 6144 6203 6199 6158</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Heal - none
+
+		LvL.1	mp_consume: 21
+		LvL.2	mp_consume: 34
+		LvL.3	mp_consume: 50
+		LvL.4	mp_consume: 67
+		LvL.5	mp_consume: 86
+		LvL.6	mp_consume: 104
+		LvL.7	mp_consume: 119
+		LvL.8	mp_consume: 125
+		LvL.9	mp_consume: 129
+		LvL.10	mp_consume: 131
+		LvL.11	mp_consume: 131
+		LvL.12	mp_consume: 132
+		name: Heal
+		level: 1
+		mp_consume: 21
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4782" levels="12" name="Heal">
+		<table name="#mpConsume2">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<table name="#power">691 1191 1899 2799 3941 4922 5431 5657 5777 5838 5813 5789</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Heal - none
+
+		LvL.1	mp_consume: 21
+		LvL.2	mp_consume: 34
+		LvL.3	mp_consume: 50
+		LvL.4	mp_consume: 67
+		LvL.5	mp_consume: 86
+		LvL.6	mp_consume: 104
+		LvL.7	mp_consume: 119
+		LvL.8	mp_consume: 125
+		LvL.9	mp_consume: 129
+		LvL.10	mp_consume: 131
+		LvL.11	mp_consume: 131
+		LvL.12	mp_consume: 132
+		name: Heal
+		level: 1
+		mp_consume: 21
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4783" levels="12" name="Heal">
+		<table name="#mpConsume2">21 34 50 67 86 104 119 125 129 131 131 132</table>
+		<table name="#power">647 1115 1778 2607 3677 4597 5075 5293 5409 5458 5441 5421</table>
+		<table name="#magicLevel">14 24 34 44 54 64 74 79 84 89 94 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Chant of Life - none
+
+		LvL.1	mp_consume: 43
+		LvL.2	mp_consume: 69
+		LvL.3	mp_consume: 99
+		LvL.4	mp_consume: 134
+		LvL.5	mp_consume: 173
+		LvL.6	mp_consume: 207
+		LvL.7	mp_consume: 239
+		LvL.8	mp_consume: 250
+		LvL.9	mp_consume: 258
+		LvL.10	mp_consume: 262
+		LvL.11	mp_consume: 262
+		LvL.12	mp_consume: 263
+		name: Chant of Life
+		level: 1
+		mp_consume: 43
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4784" levels="12" name="Chant of Life">
+		<table name="#power">118 202 322 473 667 833 919 958 974 968 951 940</table>
+		<table name="#mpConsume2">34 55 79 107 138 165 191 200 206 209 209 210</table>
+		<table name="#mpConsume1">9 14 20 27 35 42 48 50 52 53 53 53</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect count="15" name="HealOverTime" value="#power"/>
+		</for>
+	</skill>
+    <!--
+		Chant of Life - none
+
+		LvL.1	mp_consume: 43
+		LvL.2	mp_consume: 69
+		LvL.3	mp_consume: 99
+		LvL.4	mp_consume: 134
+		LvL.5	mp_consume: 173
+		LvL.6	mp_consume: 207
+		LvL.7	mp_consume: 239
+		LvL.8	mp_consume: 250
+		LvL.9	mp_consume: 258
+		LvL.10	mp_consume: 262
+		LvL.11	mp_consume: 262
+		LvL.12	mp_consume: 263
+		name: Chant of Life
+		level: 1
+		mp_consume: 43
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4785" levels="12" name="Chant of Life">
+		<table name="#power">99 171 272 400 563 703 776 809 826 833 832 827</table>
+		<table name="#mpConsume2">34 55 79 107 138 165 191 200 206 209 209 210</table>
+		<table name="#mpConsume1">9 14 20 27 35 42 48 50 52 53 53 53</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect count="15" name="HealOverTime" value="#power"/>
+		</for>
+	</skill>
+    <!--
+		Chant of Life - none
+
+		LvL.1	mp_consume: 43
+		LvL.2	mp_consume: 69
+		LvL.3	mp_consume: 99
+		LvL.4	mp_consume: 134
+		LvL.5	mp_consume: 173
+		LvL.6	mp_consume: 207
+		LvL.7	mp_consume: 239
+		LvL.8	mp_consume: 250
+		LvL.9	mp_consume: 258
+		LvL.10	mp_consume: 262
+		LvL.11	mp_consume: 262
+		LvL.12	mp_consume: 263
+		name: Chant of Life
+		level: 1
+		mp_consume: 43
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4786" levels="12" name="Chant of Life">
+		<table name="#power">53 91 145 214 301 375 414 431 439 444 443 440</table>
+		<table name="#mpConsume2">34 55 79 107 138 165 191 200 206 209 209 210</table>
+		<table name="#mpConsume1">9 14 20 27 35 42 48 50 52 53 53 53</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect count="15" name="HealOverTime" value="#power"/>
+		</for>
+	</skill>
+    <!--
+		Chant of Life - none
+
+		LvL.1	mp_consume: 43
+		LvL.2	mp_consume: 69
+		LvL.3	mp_consume: 99
+		LvL.4	mp_consume: 134
+		LvL.5	mp_consume: 173
+		LvL.6	mp_consume: 207
+		LvL.7	mp_consume: 239
+		LvL.8	mp_consume: 250
+		LvL.9	mp_consume: 258
+		LvL.10	mp_consume: 262
+		LvL.11	mp_consume: 262
+		LvL.12	mp_consume: 263
+		name: Chant of Life
+		level: 1
+		mp_consume: 43
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4787" levels="12" name="Chant of Life">
+		<table name="#power">50 86 136 200 282 352 388 405 413 417 416 414</table>
+		<table name="#mpConsume2">34 55 79 107 138 165 191 200 206 209 209 210</table>
+		<table name="#mpConsume1">9 14 20 27 35 42 48 50 52 53 53 53</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect count="15" name="HealOverTime" value="#power"/>
+		</for>
+	</skill>
+    <!--
+		Chant of Life - none
+
+		LvL.1	mp_consume: 43
+		LvL.2	mp_consume: 69
+		LvL.3	mp_consume: 99
+		LvL.4	mp_consume: 134
+		LvL.5	mp_consume: 173
+		LvL.6	mp_consume: 207
+		LvL.7	mp_consume: 239
+		LvL.8	mp_consume: 250
+		LvL.9	mp_consume: 258
+		LvL.10	mp_consume: 262
+		LvL.11	mp_consume: 262
+		LvL.12	mp_consume: 263
+		name: Chant of Life
+		level: 1
+		mp_consume: 43
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 700
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 8
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4788" levels="12" name="Chant of Life">
+		<table name="#power">47 80 127 187 263 329 363 379 387 390 389 388</table>
+		<table name="#mpConsume2">34 55 79 107 138 165 191 200 206 209 209 210</table>
+		<table name="#mpConsume1">9 14 20 27 35 42 48 50 52 53 53 53</table>
+		<table name="#power">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<table name="#abnormal_level">11 12 13 14 15 16 17 17 18 18 19 19</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="700"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="HOT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect count="15" name="HealOverTime" value="#power"/>
+		</for>
+	</skill>
+    <!--
+		High Lv. - none
+
+		name: High Lv.
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4789" levels="10" name="High Lv.">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 23) - A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracian Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in 
+
+		name: Raid Boss (Lv. 23)
+		level: 1
+		mp_consume: 0
+		description: A soldier of the Convict Mercenaries, who were famous for their bravery during the Aden-Gracia War. Currently, he is the Commander of the Gracian Convict Mercenaries, the surviving remnants of the company left in Aden Kingdom. His soldiers are based in 
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4790" levels="1" name="Raid Boss (Lv. 23)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 30) - The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness.
+
+		name: Raid Boss (Lv. 30)
+		level: 1
+		mp_consume: 0
+		description: The commander of the Katu Mercenaries. Prone to violent outbursts at any cause, he takes special joy in battling both elves and dark elves. He has no care for personal appearance or common courtesies, and some claim him touched by madness.
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4791" levels="1" name="Raid Boss (Lv. 30)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 42) - A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by M. Atk. of the Wastelands. The Spider was forced to retreat to this place. It swears that
+
+		name: Raid Boss (Lv. 42)
+		level: 1
+		mp_consume: 0
+		description: A wicked Spider that once lived in the Wastelands while Beleth was free. After Beleth was sealed away, the Spider was chased away by a colony of Ants, empowered by M. Atk. of the Wastelands. The Spider was forced to retreat to this place. It swears that
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4792" levels="1" name="Raid Boss (Lv. 42)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 55) - A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, 
+
+		name: Raid Boss (Lv. 55)
+		level: 1
+		mp_consume: 0
+		description: A Treant who used to live south of Gludio, he loved trees and nature. After the war with Beleth, his beautiful forest home was destroyed, and his friends were slain. Deeply affected by that traumatic loss he is now trapped in a haze of hatred, madness, 
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4793" levels="1" name="Raid Boss (Lv. 55)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 50) - One of the leaders of the peasants who resisted the merciless rule of Lord Ashton. He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came
+
+		name: Raid Boss (Lv. 50)
+		level: 1
+		mp_consume: 0
+		description: One of the leaders of the peasants who resisted the merciless rule of Lord Ashton. He was ultimately captured and brutally executed by Ashton's cruel soldiers. Yet even that did not stop him. To overthrow Ashton, he made a contract with a devil and came
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4794" levels="1" name="Raid Boss (Lv. 50)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 60) - A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations. This golem was created to protect the Garden of Ev made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafur
+
+		name: Raid Boss (Lv. 60)
+		level: 1
+		mp_consume: 0
+		description: A mechanical golem owned by the Lord of Innadril Castle. The lord's family has been protected by Eva for generations. This golem was created to protect the Garden of Ev made by a dwarven master artisan. It is a guard to fend off the Water Dragon Fafur
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4795" levels="1" name="Raid Boss (Lv. 60)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 25) - A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after 
+
+		name: Raid Boss (Lv. 25)
+		level: 1
+		mp_consume: 0
+		description: A Pan who was once a long-time friend of the Elves, and guarded the ancient Elven Forest. The Pans stayed neutral during the tragic war between the Elves and the Dark Elves, and both sides turned against them. The other Pans retreated into hiding after 
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4796" levels="1" name="Raid Boss (Lv. 25)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 34) - An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He gro
+
+		name: Raid Boss (Lv. 34)
+		level: 1
+		mp_consume: 0
+		description: An Orc Dark Mage with superior talent. He was once known as "the Hope of the Breka Orc tribe," but he was tricked into plotting against his leader, and exiled. Now, he dreams of the day he will take vengeance on those who betrayed and exiled him. He gro
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4797" levels="1" name="Raid Boss (Lv. 34)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 34) - She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mercilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates an
+
+		name: Raid Boss (Lv. 34)
+		level: 1
+		mp_consume: 0
+		description: She is the Ruthless Queen of Marsh Stakatos, deep in the Cruma Marshlands. The Queen is notorious for mercilessness and cruelty to both her own forces and enemies alike. She has ordered the deaths of any and all who oppose her, including subordinates an
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4798" levels="1" name="Raid Boss (Lv. 34)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Raid Boss (Lv. 49) - He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He g
+
+		name: Raid Boss (Lv. 49)
+		level: 1
+		mp_consume: 0
+		description: He is the Commander of the advance forces of the powerful Ketra Orc tribe, who hail from the Goddard Territory of Elmore Kingdom. He believes completely in the superiority of his tribe. He was dispatched to expand their influence upon Aden Kingdom. He g
+		icon_name: icon.skillraid
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="4799" levels="1" name="Raid Boss (Lv. 49)">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skillraid"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HARDCODED"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+</list>

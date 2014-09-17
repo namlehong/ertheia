@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
 <list>
-	<skill id="10244" levels="1" name="True Vanguard">
+    <!--
+		True Vanguard - Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%.
+
+		LvL.1	description: Damage inflicted on monsters + 50%, and M Skill MP Consumption + 30%.
+		LvL.2	description: Damage inflicted on monsters + 55%, and M Skill MP Consumption + 30%.
+		LvL.3	description: Damage inflicted on monsters + 60%, and M Skill MP Consumption + 30%.
+		name: True Vanguard
+		level: 1
+		mp_consume: 0
+		description: Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%.
+		icon_name: icon.skill0810
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10244" levels="1" name="True Vanguard">
 		<set name="icon" value="icon.skill0810"/>
 		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_TOGGLE"/>
@@ -15,7 +39,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10245" levels="1" name="Wizard - Individual Passive">
+    <!--
+		Wizard - Individual Passive - 
+
+		name: Wizard - Individual Passive
+		level: 1
+		mp_consume: 0
+		description: 
+		icon_name: icon.skill0217
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 6
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10245" levels="1" name="Wizard - Individual Passive">
 		<table name="#power">438</table>
 		<table name="#spd">1.03</table>
 		<set name="icon" value="icon.skill0217"/>
@@ -28,7 +72,27 @@
 			<mul order="0x30" stat="runSpd" value="#spd"/>
 		</for>
 	</skill>
-	<skill id="10246" levels="1" name="Wizard - Individual">
+    <!--
+		Wizard - Individual - Atk. Spd. + 30% for 5 seconds.
+
+		name: Wizard - Individual
+		level: 1
+		mp_consume: 0
+		description: Atk. Spd. + 30% for 5 seconds.
+		icon_name: icon.skill1543
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 4
+		oper_type: 2
+		element_guess: 6
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 11011
+	-->
+    <skill id="10246" levels="1" name="Wizard - Individual">
 		<table name="#spd">1.3</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="5"/>
@@ -47,7 +111,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10247" levels="1" name="Heavy Hit">
+    <!--
+		Knight - Individual Passive - 
+
+		name: Knight - Individual Passive
+		level: 1
+		mp_consume: 0
+		description: 
+		icon_name: icon.skill0217
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 6
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10247" levels="1" name="Knight - Individual Passive">
 		<table name="#spd">1.03</table>
 		<table name="#power">438</table>
 		<set name="castRange" value="900"/>
@@ -61,7 +145,27 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
 	</skill>
-	<skill id="10248" levels="1" name="Heavy Hit">
+    <!--
+		Knight - Individual - Atk. Spd. + 30% for 5 seconds.
+
+		name: Knight - Individual
+		level: 1
+		mp_consume: 0
+		description: Atk. Spd. + 30% for 5 seconds.
+		icon_name: icon.skill1543
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 6
+		is_magic: 4
+		oper_type: 2
+		element_guess: 6
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10248" levels="1" name="Knight - Individual">
 		<table name="#power">438</table>
 		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
@@ -74,7 +178,27 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
 	</skill>
-	<skill id="10249" levels="1" name="Heavy Hit">
+    <!--
+		Heavy Hit - Inflicts a powerful blow on target.
+
+		name: Heavy Hit
+		level: 1
+		mp_consume: 0
+		description: Inflicts a powerful blow on target.
+		icon_name: icon.skill10317
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 3
+		element_guess: 6
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10249" levels="1" name="Heavy Hit">
 		<table name="#power">15000</table>
 		<set name="castRange" value="900"/>
 		<set name="coolTime" value="300"/>
@@ -87,7 +211,27 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
 	</skill>
-	<skill id="10250" levels="1" name="Heavy Hit">
+    <!--
+		Heavy Hit - Inflicts a powerful blow on target.
+
+		name: Heavy Hit
+		level: 1
+		mp_consume: 0
+		description: Inflicts a powerful blow on target.
+		icon_name: icon.skill10317
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 3
+		element_guess: 6
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10250" levels="1" name="Heavy Hit">
 		<table name="#power">15000</table>
 		<set name="castRange" value="900"/>
 		<set name="coolTime" value="300"/>
@@ -100,7 +244,40 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
 	</skill>
-	<skill id="10251" levels="1" name="Superior Weapon Mastery">
+    <!--
+		Superior Weapon Mastery - STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1252 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. D
+
+
+		Enchant Route: 1 - 	STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1502 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. D
+
+		LvL.101	description: + 1502 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.102	description: + 1613 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.103	description: + 1724 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.104	description: + 1835 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.105	description: + 1946 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.106	description: + 2057 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.107	description: + 2168 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.108	description: + 2279 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.109	description: + 2390 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		LvL.110	description: + 2501 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		name: Superior Weapon Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1252 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. D
+		icon_name: icon.skill10251
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10251" levels="1" name="Superior Weapon Mastery">
 		<table name="#magicLevel">85</table>
 		<table name="#pAtk">1252</table>
 		<set name="analog_skills" value="216;472;210;257;330;331;421;422;168"/>
@@ -138,7 +315,40 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
+    <!--
+		Superior Dual Weapon Mastery - STR + 2. P. Atk. + 1252 and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+
+
+		Enchant Route: 1 - 	STR + 2. P. Atk. + 1502 and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon. Enchant Power: Increases Effect.
+
+		LvL.101	description: + 1502 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.102	description: + 1613 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.103	description: + 1724 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.104	description: + 1835 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.105	description: + 1946 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.106	description: + 2057 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.107	description: + 2168 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.108	description: + 2279 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.109	description: + 2390 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		LvL.110	description: + 2501 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		name: Superior Dual Weapon Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2. P. Atk. + 1252 and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		icon_name: icon.skill10252
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
 		<table name="#magicLevel">85</table>
 		<table name="#pAtk">1252</table>
 		<set name="analog_skills" value="293;144"/>
@@ -163,7 +373,40 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
+    <!--
+		Superior Heavy Armor Mastery - STR + 2. Max HP + 5368 and P. Def. + 1327 when equipped with Heavy Armor.
+
+
+		Enchant Route: 1 - 	STR + 2. Max HP + 5368 and P. Def. + 1366 when equipped with Heavy Armor. Enchant Power: Increases Effect.
+
+		LvL.101	description: + 1366 when equipped with Heavy Armor.
+		LvL.102	description: + 1405 when equipped with Heavy Armor.
+		LvL.103	description: + 1444 when equipped with Heavy Armor.
+		LvL.104	description: + 1483 when equipped with Heavy Armor.
+		LvL.105	description: + 1522 when equipped with Heavy Armor.
+		LvL.106	description: + 1561 when equipped with Heavy Armor.
+		LvL.107	description: + 1600 when equipped with Heavy Armor.
+		LvL.108	description: + 1639 when equipped with Heavy Armor.
+		LvL.109	description: + 1678 when equipped with Heavy Armor.
+		LvL.110	description: + 1717 when equipped with Heavy Armor.
+		name: Superior Heavy Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2. Max HP + 5368 and P. Def. + 1327 when equipped with Heavy Armor.
+		icon_name: icon.skill10253
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
 		<table name="#magicLevel">85</table>
 		<table name="#pDef">1327</table>
 		<set name="analog_skills" value="231;232;253;259"/>
@@ -186,7 +429,40 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10254" levels="1" name="Superior Light Armor Mastery">
+    <!--
+		Superior Light Armor Mastery - STR + 2. Max HP + 5368, P. Def. + 1271, P. Accuracy + 3, P. Evasion + 6, Spd. + 10, and Atk. Spd. + 10% when equipped with Light Armor. Chance of receiving a critical attack - 35%.
+
+
+		Enchant Route: 1 - 	STR + 2. Max HP + 5368, P. Def. + 1308, P. Accuracy + 3, P. Evasion + 6, Spd. + 10, and Atk. Spd. + 10% when equipped with Light Armor. Chance of receiving a critical attack - 35%. Enchant Power: Increases Effect.
+
+		LvL.101	description: + 1308, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.102	description: + 1345, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.103	description: + 1382, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.104	description: + 1419, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.105	description: + 1456, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.106	description: + 1493, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.107	description: + 1530, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.108	description: + 1567, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.109	description: + 1604, P Accuracy + 3, P Evasion + 6, Spd.
+		LvL.110	description: + 1643, P Accuracy + 3, P Evasion + 6, Spd.
+		name: Superior Light Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2. Max HP + 5368, P. Def. + 1271, P. Accuracy + 3, P. Evasion + 6, Spd. + 10, and Atk. Spd. + 10% when equipped with Light Armor. Chance of receiving a critical attack - 35%.
+		icon_name: icon.skill10254
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10254" levels="1" name="Superior Light Armor Mastery">
 		<table name="#magicLevel">85</table>
 		<table name="#pDef">1271</table>
 		<set name="analog_skills" value="832;319;227;233;236;252;258;465"/>
@@ -224,7 +500,40 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="10255" levels="1" name="Superior Momentum Mastery">
+    <!--
+		Superior Momentum Mastery - Absorbs Momentum by 20% during a normal physical attack and 40% during a critical attack. Can absorb up to 10 Momentum levels.
+
+
+		Enchant Route: 1 - 	Absorbs Momentum by 21% during a normal physical attack and 40% during a critical attack. Can absorb up to 10 Momentum levels. Enchant Power: Increases the effect.
+
+		LvL.101	description: Absorbs Momentum by 21% during a normal physical attack and 40% during a critical attack.
+		LvL.102	description: Absorbs Momentum by 22% during a normal physical attack and 40% during a critical attack.
+		LvL.103	description: Absorbs Momentum by 23% during a normal physical attack and 40% during a critical attack.
+		LvL.104	description: Absorbs Momentum by 24% during a normal physical attack and 40% during a critical attack.
+		LvL.105	description: Absorbs Momentum by 25% during a normal physical attack and 40% during a critical attack.
+		LvL.106	description: Absorbs Momentum by 26% during a normal physical attack and 40% during a critical attack.
+		LvL.107	description: Absorbs Momentum by 27% during a normal physical attack and 40% during a critical attack.
+		LvL.108	description: Absorbs Momentum by 28% during a normal physical attack and 40% during a critical attack.
+		LvL.109	description: Absorbs Momentum by 29% during a normal physical attack and 40% during a critical attack.
+		LvL.110	description: Absorbs Momentum by 30% during a normal physical attack and 40% during a critical attack.
+		name: Superior Momentum Mastery
+		level: 1
+		mp_consume: 0
+		description: Absorbs Momentum by 20% during a normal physical attack and 40% during a critical attack. Can absorb up to 10 Momentum levels.
+		icon_name: icon.skill10255
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10255" levels="1" name="Superior Momentum Mastery">
 		<table name="#chance1">40</table>
 		<table name="#chance2">20</table>
 		<table name="#magicLevel">85</table>
@@ -243,7 +552,40 @@
 				<trigger id="6813" level="1" type="CRIT" chance="#chance1"/>
 		</triggers>
 	</skill>
-	<skill id="10256" levels="1" name="Superior HP Mastery">
+    <!--
+		Superior HP Mastery - STR + 2, Max HP + 606, Max CP + 296 and HP Recovery Bonus + 7.3. While sitting, HP Recovery Bonus + 7 and MP recovery bonus + 3.7. When HP falls below 60%, P. Atk. + 629. When damaged to a point, has a chance of recovering 10% of Max HP.
+
+
+		Enchant Route: 1 - 	STR + 2, Max HP + 645, Max CP + 315 and HP Recovery Bonus + 7.8. While sitting, HP Recovery Bonus + 7.5 and MP recovery bonus + 3.9. When HP falls below 60%, P. Atk. + 754. When damaged to a point, has a chance of recovering 10% of Max HP. Enchant Power
+
+		LvL.101	description: STR + 2, Max HP + 645, Max CP + 315 and HP Recovery Bonus + 7.8. While sitting, HP Recovery Bonus + 7.5 and MP recovery bonus + 3.9. When HP falls below 60%, P Atk. +  + 754. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Power
+		LvL.102	description: STR + 2, Max HP + 685, Max CP + 334 and HP Recovery Bonus + 8.2. While sitting, HP Recovery Bonus + 7.9 and MP recovery bonus + 4.2. When HP falls below 60%, P Atk. +  + 809. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Power
+		LvL.103	description: STR + 2, Max HP + 724, Max CP + 353 and HP Recovery Bonus + 8.7. While sitting, HP Recovery Bonus + 8.4 and MP recovery bonus + 4.4. When HP falls below 60%, P Atk. +  + 864.
+		LvL.104	description: STR + 2, Max HP + 764, Max CP + 373 and HP Recovery Bonus + 9.2. While sitting, HP Recovery Bonus + 8.8 and MP recovery bonus + 4.6. When HP falls below 60%, P Atk. +  + 919. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Power
+		LvL.105	description: STR + 2, Max HP + 804, Max CP + 392 and HP Recovery Bonus + 9.7. While sitting, HP Recovery Bonus + 9.3 and MP recovery bonus + 4.9. When HP falls below 60%, P Atk. +  + 974.
+		LvL.106	description: STR + 2, Max HP + 843, Max CP + 411 and HP Recovery Bonus + 10.1. While sitting, HP Recovery Bonus + 9.8 and MP recovery bonus + 5.1. When HP falls below 60%, P Atk. +  + 1029. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Pow
+		LvL.107	description: STR + 2, Max HP + 883, Max CP + 431 and HP Recovery Bonus + 10.6. While sitting, HP Recovery Bonus + 10.2 and MP recovery bonus + 5.3. When HP falls below 60%, P Atk. +  + 1084. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Po
+		LvL.108	description: STR + 2, Max HP + 922, Max CP + 450 and HP Recovery Bonus + 11.1. While sitting, HP Recovery Bonus + 10.7 and MP recovery bonus + 5.5. When HP falls below 60%, P Atk. +  + 1139. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Po
+		LvL.109	description: STR + 2, Max HP + 962, Max CP + 469 and HP Recovery Bonus + 11.5. While sitting, HP Recovery Bonus + 11.1 and MP recovery bonus + 5.8. When HP falls below 60%, P Atk. +  + 1194 When damaged to a point, has a chance of recovering 10% of Max HP Enchant Pow
+		LvL.110	description: STR + 2, Max HP + 1002, Max CP + 489 and HP Recovery Bonus + 12. While sitting, HP Recovery Bonus + 11.6 and MP recovery bonus + 6.0. When HP falls below 60%, P Atk. +  + 1249. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Pow
+		name: Superior HP Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2, Max HP + 606, Max CP + 296 and HP Recovery Bonus + 7.3. While sitting, HP Recovery Bonus + 7 and MP recovery bonus + 3.7. When HP falls below 60%, P. Atk. + 629. When damaged to a point, has a chance of recovering 10% of Max HP.
+		icon_name: icon.skill10256
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10256" levels="1" name="Superior HP Mastery">
 		<table name="#magicLevel">85</table>
 		<table name="#maxCp">296</table>
 		<table name="#maxHp">606</table>
@@ -282,7 +624,27 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="10257" levels="1" name="Superior Spirit Mastery">
+    <!--
+		Superior Spirit Mastery - STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30.
+
+		name: Superior Spirit Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30.
+		icon_name: icon.skill10257
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10257" levels="1" name="Superior Spirit Mastery">
 		<set name="analog_skills" value="329;328"/>
 		<set name="icon" value="icon.skill10257"/>
 		<set name="magicLevel" value="85"/>
@@ -298,7 +660,152 @@
 			<add order="0x40" stat="poisonResist" value="30"/>
 		</for>
 	</skill>
-	<skill id="10258" levels="8" name="Armor Destruction">
+    <!--
+		Armor Destruction - Attacks target with 11159 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical.
+
+		LvL.1	description: Attacks target with 11159 Power added to P Atk.	mp_consume: 50
+		LvL.2	description: Attacks target with 11936 Power added to P Atk.	mp_consume: 52
+		LvL.3	description: Attacks target with 12714 Power added to P Atk.	mp_consume: 53
+		LvL.4	description: Attacks target with 13491 Power added to P Atk.	mp_consume: 54
+		LvL.5	description: Attacks target with 14269 Power added to P Atk.	mp_consume: 57
+		LvL.6	description: Attacks target with 15046 Power added to P Atk.	mp_consume: 59
+		LvL.7	description: Attacks target with 15824 Power added to P Atk.	mp_consume: 60
+		LvL.8	description: Attacks target with 16601 Power added to P Atk.	mp_consume: 62
+
+		Enchant Route: 1 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks target with 16990 Power added to P Atk.	mp_consume: 59
+		LvL.102	description: Attacks target with 17379 Power added to P Atk.	mp_consume: 57
+		LvL.103	description: Attacks target with 17767 Power added to P Atk.	mp_consume: 54
+		LvL.104	description: Attacks target with 18156 Power added to P Atk.	mp_consume: 52
+		LvL.105	description: Attacks target with 18545 Power added to P Atk.	mp_consume: 49
+		LvL.106	description: Attacks target with 18934 Power added to P Atk.	mp_consume: 47
+		LvL.107	description: Attacks target with 19322 Power added to P Atk.	mp_consume: 44
+		LvL.108	description: Attacks target with 19711 Power added to P Atk.	mp_consume: 42
+		LvL.109	description: Attacks target with 20100 Power added to P Atk.	mp_consume: 39
+		LvL.110	description: Attacks target with 20489 Power added to P Atk.	mp_consume: 37
+
+		Enchant Route: 2 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Attacks target with 16990 Power added to P Atk.
+		LvL.202	description: Attacks target with 17379 Power added to P Atk.
+		LvL.203	description: Attacks target with 17767 Power added to P Atk.
+		LvL.204	description: Attacks target with 18156 Power added to P Atk.
+		LvL.205	description: Attacks target with 18545 Power added to P Atk.
+		LvL.206	description: Attacks target with 18934 Power added to P Atk.
+		LvL.207	description: Attacks target with 19322 Power added to P Atk.
+		LvL.208	description: Attacks target with 19711 Power added to P Atk.
+		LvL.209	description: Attacks target with 20100 Power added to P Atk.
+		LvL.210	description: Attacks target with 20489 Power added to P Atk.
+
+		Enchant Route: 3 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Attacks target with 16990 Power added to P Atk.
+		LvL.302	description: Attacks target with 17379 Power added to P Atk.
+		LvL.303	description: Attacks target with 17767 Power added to P Atk.
+		LvL.304	description: Attacks target with 18156 Power added to P Atk.
+		LvL.305	description: Attacks target with 18545 Power added to P Atk.
+		LvL.306	description: Attacks target with 18934 Power added to P Atk.
+		LvL.307	description: Attacks target with 19322 Power added to P Atk.
+		LvL.308	description: Attacks target with 19711 Power added to P Atk.
+		LvL.309	description: Attacks target with 20100 Power added to P Atk.
+		LvL.310	description: Attacks target with 20489 Power added to P Atk.
+
+		Enchant Route: 4 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Attacks target with 16990 Power added to P Atk.
+		LvL.402	description: Attacks target with 17379 Power added to P Atk.
+		LvL.403	description: Attacks target with 17767 Power added to P Atk.
+		LvL.404	description: Attacks target with 18156 Power added to P Atk.
+		LvL.405	description: Attacks target with 18545 Power added to P Atk.
+		LvL.406	description: Attacks target with 18934 Power added to P Atk.
+		LvL.407	description: Attacks target with 19322 Power added to P Atk.
+		LvL.408	description: Attacks target with 19711 Power added to P Atk.
+		LvL.409	description: Attacks target with 20100 Power added to P Atk.
+		LvL.410	description: Attacks target with 20489 Power added to P Atk.
+
+		Enchant Route: 5 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Attacks target with 16990 Power added to P Atk.
+		LvL.502	description: Attacks target with 17379 Power added to P Atk.
+		LvL.503	description: Attacks target with 17767 Power added to P Atk.
+		LvL.504	description: Attacks target with 18156 Power added to P Atk.
+		LvL.505	description: Attacks target with 18545 Power added to P Atk.
+		LvL.506	description: Attacks target with 18934 Power added to P Atk.
+		LvL.507	description: Attacks target with 19322 Power added to P Atk.
+		LvL.508	description: Attacks target with 19711 Power added to P Atk.
+		LvL.509	description: Attacks target with 20100 Power added to P Atk.
+		LvL.510	description: Attacks target with 20489 Power added to P Atk.
+
+		Enchant Route: 6 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Attacks target with 16990 Power added to P Atk.
+		LvL.602	description: Attacks target with 17379 Power added to P Atk.
+		LvL.603	description: Attacks target with 17767 Power added to P Atk.
+		LvL.604	description: Attacks target with 18156 Power added to P Atk.
+		LvL.605	description: Attacks target with 18545 Power added to P Atk.
+		LvL.606	description: Attacks target with 18934 Power added to P Atk.
+		LvL.607	description: Attacks target with 19322 Power added to P Atk.
+		LvL.608	description: Attacks target with 19711 Power added to P Atk.
+		LvL.609	description: Attacks target with 20100 Power added to P Atk.
+		LvL.610	description: Attacks target with 20489 Power added to P Atk.
+
+		Enchant Route: 7 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Attacks target with 16990 Power added to P Atk.
+		LvL.702	description: Attacks target with 17379 Power added to P Atk.
+		LvL.703	description: Attacks target with 17767 Power added to P Atk.
+		LvL.704	description: Attacks target with 18156 Power added to P Atk.
+		LvL.705	description: Attacks target with 18545 Power added to P Atk.
+		LvL.706	description: Attacks target with 18934 Power added to P Atk.
+		LvL.707	description: Attacks target with 19322 Power added to P Atk.
+		LvL.708	description: Attacks target with 19711 Power added to P Atk.
+		LvL.709	description: Attacks target with 20100 Power added to P Atk.
+		LvL.710	description: Attacks target with 20489 Power added to P Atk.
+
+		Enchant Route: 8 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Attacks target with 16990 Power added to P Atk.
+		LvL.802	description: Attacks target with 17379 Power added to P Atk.
+		LvL.803	description: Attacks target with 17767 Power added to P Atk.
+		LvL.804	description: Attacks target with 18156 Power added to P Atk.
+		LvL.805	description: Attacks target with 18545 Power added to P Atk.
+		LvL.806	description: Attacks target with 18934 Power added to P Atk.
+		LvL.807	description: Attacks target with 19322 Power added to P Atk.
+		LvL.808	description: Attacks target with 19711 Power added to P Atk.
+		LvL.809	description: Attacks target with 20100 Power added to P Atk.
+		LvL.810	description: Attacks target with 20489 Power added to P Atk.
+
+		Enchant Route: 9 - 	Attacks target with 16990 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. Enchant Recovery: Decreases Cooldown.
+
+		LvL.901	description: Attacks target with 16990 Power added to P Atk.
+		LvL.902	description: Attacks target with 17379 Power added to P Atk.
+		LvL.903	description: Attacks target with 17767 Power added to P Atk.
+		LvL.904	description: Attacks target with 18156 Power added to P Atk.
+		LvL.905	description: Attacks target with 18545 Power added to P Atk.
+		LvL.906	description: Attacks target with 18934 Power added to P Atk.
+		LvL.907	description: Attacks target with 19322 Power added to P Atk.
+		LvL.908	description: Attacks target with 19711 Power added to P Atk.
+		LvL.909	description: Attacks target with 20100 Power added to P Atk.
+		LvL.910	description: Attacks target with 20489 Power added to P Atk.
+		name: Armor Destruction
+		level: 1
+		mp_consume: 50
+		description: Attacks target with 11159 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10258
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.09
+		cool_time: 0.2
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10258" levels="8" name="Armor Destruction">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
@@ -378,7 +885,152 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10260" levels="8" name="Mega Strike">
+    <!--
+		Mega Strike - Attacks target with 19893 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense.
+
+		LvL.1	description: Attacks target with 19893 added to P Atk.	mp_consume: 65
+		LvL.2	description: Attacks target with 20581 added to P Atk.	mp_consume: 66
+		LvL.3	description: Attacks target with 21956 added to P Atk.	mp_consume: 69
+		LvL.4	description: Attacks target with 23332 added to P Atk.	mp_consume: 71
+		LvL.5	description: Attacks target with 24707 added to P Atk.	mp_consume: 73
+		LvL.6	description: Attacks target with 26082 added to P Atk.	mp_consume: 76
+		LvL.7	description: Attacks target with 27458 added to P Atk.	mp_consume: 78
+		LvL.8	description: Attacks target with 28833 added to P Atk.	mp_consume: 80
+
+		Enchant Route: 1 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.101	description: Attacks target with 30209 added to P Atk.	mp_consume: 76
+		LvL.102	description: Attacks target with 30896 added to P Atk.	mp_consume: 73
+		LvL.103	description: Attacks target with 31584 added to P Atk.	mp_consume: 70
+		LvL.104	description: Attacks target with 32272 added to P Atk.	mp_consume: 67
+		LvL.105	description: Attacks target with 32959 added to P Atk.	mp_consume: 64
+		LvL.106	description: Attacks target with 33647 added to P Atk.	mp_consume: 60
+		LvL.107	description: Attacks target with 34334 added to P Atk.	mp_consume: 57
+		LvL.108	description: Attacks target with 35022 added to P Atk.	mp_consume: 54
+		LvL.109	description: Attacks target with 35710 added to P Atk.	mp_consume: 51
+		LvL.110	description: Attacks target with 36397 added to P Atk.	mp_consume: 48
+
+		Enchant Route: 2 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.201	description: Attacks target with 30209 added to P Atk.
+		LvL.202	description: Attacks target with 30896 added to P Atk.
+		LvL.203	description: Attacks target with 31584 added to P Atk.
+		LvL.204	description: Attacks target with 32272 added to P Atk.
+		LvL.205	description: Attacks target with 32959 added to P Atk.
+		LvL.206	description: Attacks target with 33647 added to P Atk.
+		LvL.207	description: Attacks target with 34334 added to P Atk.
+		LvL.208	description: Attacks target with 35022 added to P Atk.
+		LvL.209	description: Attacks target with 35710 added to P Atk.
+		LvL.210	description: Attacks target with 36397 added to P Atk.
+
+		Enchant Route: 3 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.301	description: Attacks target with 30209 added to P Atk.
+		LvL.302	description: Attacks target with 30896 added to P Atk.
+		LvL.303	description: Attacks target with 31584 added to P Atk.
+		LvL.304	description: Attacks target with 32272 added to P Atk.
+		LvL.305	description: Attacks target with 32959 added to P Atk.
+		LvL.306	description: Attacks target with 33647 added to P Atk.
+		LvL.307	description: Attacks target with 34334 added to P Atk.
+		LvL.308	description: Attacks target with 35022 added to P Atk.
+		LvL.309	description: Attacks target with 35710 added to P Atk.
+		LvL.310	description: Attacks target with 36397 added to P Atk.
+
+		Enchant Route: 4 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.401	description: Attacks target with 30209 added to P Atk.
+		LvL.402	description: Attacks target with 30896 added to P Atk.
+		LvL.403	description: Attacks target with 31584 added to P Atk.
+		LvL.404	description: Attacks target with 32272 added to P Atk.
+		LvL.405	description: Attacks target with 32959 added to P Atk.
+		LvL.406	description: Attacks target with 33647 added to P Atk.
+		LvL.407	description: Attacks target with 34334 added to P Atk.
+		LvL.408	description: Attacks target with 35022 added to P Atk.
+		LvL.409	description: Attacks target with 35710 added to P Atk.
+		LvL.410	description: Attacks target with 36397 added to P Atk.
+
+		Enchant Route: 5 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.501	description: Attacks target with 30209 added to P Atk.
+		LvL.502	description: Attacks target with 30896 added to P Atk.
+		LvL.503	description: Attacks target with 31584 added to P Atk.
+		LvL.504	description: Attacks target with 32272 added to P Atk.
+		LvL.505	description: Attacks target with 32959 added to P Atk.
+		LvL.506	description: Attacks target with 33647 added to P Atk.
+		LvL.507	description: Attacks target with 34334 added to P Atk.
+		LvL.508	description: Attacks target with 35022 added to P Atk.
+		LvL.509	description: Attacks target with 35710 added to P Atk.
+		LvL.510	description: Attacks target with 36397 added to P Atk.
+
+		Enchant Route: 6 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.601	description: Attacks target with 30209 added to P Atk.
+		LvL.602	description: Attacks target with 30896 added to P Atk.
+		LvL.603	description: Attacks target with 31584 added to P Atk.
+		LvL.604	description: Attacks target with 32272 added to P Atk.
+		LvL.605	description: Attacks target with 32959 added to P Atk.
+		LvL.606	description: Attacks target with 33647 added to P Atk.
+		LvL.607	description: Attacks target with 34334 added to P Atk.
+		LvL.608	description: Attacks target with 35022 added to P Atk.
+		LvL.609	description: Attacks target with 35710 added to P Atk.
+		LvL.610	description: Attacks target with 36397 added to P Atk.
+
+		Enchant Route: 7 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.701	description: Attacks target with 30209 added to P Atk.
+		LvL.702	description: Attacks target with 30896 added to P Atk.
+		LvL.703	description: Attacks target with 31584 added to P Atk.
+		LvL.704	description: Attacks target with 32272 added to P Atk.
+		LvL.705	description: Attacks target with 32959 added to P Atk.
+		LvL.706	description: Attacks target with 33647 added to P Atk.
+		LvL.707	description: Attacks target with 34334 added to P Atk.
+		LvL.708	description: Attacks target with 35022 added to P Atk.
+		LvL.709	description: Attacks target with 35710 added to P Atk.
+		LvL.710	description: Attacks target with 36397 added to P Atk.
+
+		Enchant Route: 8 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.801	description: Attacks target with 30209 added to P Atk.
+		LvL.802	description: Attacks target with 30896 added to P Atk.
+		LvL.803	description: Attacks target with 31584 added to P Atk.
+		LvL.804	description: Attacks target with 32272 added to P Atk.
+		LvL.805	description: Attacks target with 32959 added to P Atk.
+		LvL.806	description: Attacks target with 33647 added to P Atk.
+		LvL.807	description: Attacks target with 34334 added to P Atk.
+		LvL.808	description: Attacks target with 35022 added to P Atk.
+		LvL.809	description: Attacks target with 35710 added to P Atk.
+		LvL.810	description: Attacks target with 36397 added to P Atk.
+
+		Enchant Route: 9 - 	Attacks target with 30209 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense. Ench
+
+		LvL.901	description: Attacks target with 30209 added to P Atk.	reuse_delay: 6
+		LvL.902	description: Attacks target with 30896 added to P Atk.
+		LvL.903	description: Attacks target with 31584 added to P Atk.
+		LvL.904	description: Attacks target with 32272 added to P Atk.
+		LvL.905	description: Attacks target with 32959 added to P Atk.	reuse_delay: 5
+		LvL.906	description: Attacks target with 33647 added to P Atk.	reuse_delay: 5
+		LvL.907	description: Attacks target with 34334 added to P Atk.	reuse_delay: 5
+		LvL.908	description: Attacks target with 35022 added to P Atk.	reuse_delay: 5
+		LvL.909	description: Attacks target with 35710 added to P Atk.	reuse_delay: 5
+		LvL.910	description: Attacks target with 36397 added to P Atk.	reuse_delay: 4
+		name: Mega Strike
+		level: 1
+		mp_consume: 65
+		description: Attacks target with 19893 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense.
+		icon_name: icon.skill10260
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.49
+		cool_time: 0.2
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10260" levels="8" name="Mega Strike">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -462,7 +1114,150 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
-	<skill id="10262" levels="6" name="Power Bomber">
+    <!--
+		Power Bomber - Inflicts a powerful strike on target with 20483 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.1	description: Inflicts a powerful strike on target with 20483 Power added to P Atk.	mp_consume: 84
+		LvL.2	description: Inflicts a powerful strike on target with 22595 Power added to P Atk.	mp_consume: 89
+		LvL.3	description: Inflicts a powerful strike on target with 24708 Power added to P Atk.	mp_consume: 93
+		LvL.4	description: Inflicts a powerful strike on target with 26821 Power added to P Atk.	mp_consume: 98
+		LvL.5	description: Inflicts a powerful strike on target with 28934 Power added to P Atk.	mp_consume: 102
+		LvL.6	description: Inflicts a powerful strike on target with 30343 Power added to P Atk.	mp_consume: 105
+
+		Enchant Route: 1 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.101	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.	mp_consume: 100
+		LvL.102	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.	mp_consume: 96
+		LvL.103	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.	mp_consume: 92
+		LvL.104	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.	mp_consume: 88
+		LvL.105	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.	mp_consume: 84
+		LvL.106	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.	mp_consume: 79
+		LvL.107	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.	mp_consume: 75
+		LvL.108	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.	mp_consume: 71
+		LvL.109	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.	mp_consume: 67
+		LvL.110	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.	mp_consume: 63
+
+		Enchant Route: 2 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.201	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.
+		LvL.202	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.
+		LvL.203	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.
+		LvL.204	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.
+		LvL.205	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.
+		LvL.206	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.
+		LvL.207	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.
+		LvL.208	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.
+		LvL.209	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.
+		LvL.210	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.
+
+		Enchant Route: 3 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.301	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.
+		LvL.302	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.
+		LvL.303	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.
+		LvL.304	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.
+		LvL.305	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.
+		LvL.306	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.
+		LvL.307	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.
+		LvL.308	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.
+		LvL.309	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.
+		LvL.310	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.
+
+		Enchant Route: 4 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.401	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.
+		LvL.402	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.
+		LvL.403	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.
+		LvL.404	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.
+		LvL.405	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.
+		LvL.406	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.
+		LvL.407	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.
+		LvL.408	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.
+		LvL.409	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.
+		LvL.410	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.
+
+		Enchant Route: 5 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.501	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.
+		LvL.502	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.
+		LvL.503	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.
+		LvL.504	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.
+		LvL.505	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.
+		LvL.506	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.
+		LvL.507	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.
+		LvL.508	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.
+		LvL.509	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.
+		LvL.510	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.
+
+		Enchant Route: 6 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk, knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or
+
+		LvL.601	description: Inflicts a powerful strike on target with 31047 Power added to P Atk, knocking them down for 3 sec.
+		LvL.602	description: Inflicts a powerful strike on target with 31751 Power added to P Atk, knocking them down for 3 sec.
+		LvL.603	description: Inflicts a powerful strike on target with 32455 Power added to P Atk, knocking them down for 3 sec.
+		LvL.604	description: Inflicts a powerful strike on target with 33160 Power added to P Atk, knocking them down for 3 sec.
+		LvL.605	description: Inflicts a powerful strike on target with 33864 Power added to P Atk, knocking them down for 3 sec.
+		LvL.606	description: Inflicts a powerful strike on target with 34568 Power added to P Atk, knocking them down for 3 sec.
+		LvL.607	description: Inflicts a powerful strike on target with 35273 Power added to P Atk, knocking them down for 3 sec.
+		LvL.608	description: Inflicts a powerful strike on target with 35977 Power added to P Atk, knocking them down for 3 sec.
+		LvL.609	description: Inflicts a powerful strike on target with 36681 Power added to P Atk, knocking them down for 3 sec.
+		LvL.610	description: Inflicts a powerful strike on target with 37386 Power added to P Atk, knocking them down for 3 sec.
+
+		Enchant Route: 7 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.701	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.
+		LvL.702	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.
+		LvL.703	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.
+		LvL.704	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.
+		LvL.705	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.
+		LvL.706	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.
+		LvL.707	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.
+		LvL.708	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.
+		LvL.709	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.
+		LvL.710	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.
+
+		Enchant Route: 8 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.801	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.
+		LvL.802	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.
+		LvL.803	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.
+		LvL.804	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.
+		LvL.805	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.
+		LvL.806	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.
+		LvL.807	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.
+		LvL.808	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.
+		LvL.809	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.
+		LvL.810	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.
+
+		Enchant Route: 9 - 	Inflicts a powerful strike on target with 31047 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+
+		LvL.901	description: Inflicts a powerful strike on target with 31047 Power added to P Atk.	reuse_delay: 29
+		LvL.902	description: Inflicts a powerful strike on target with 31751 Power added to P Atk.	reuse_delay: 28
+		LvL.903	description: Inflicts a powerful strike on target with 32455 Power added to P Atk.	reuse_delay: 27
+		LvL.904	description: Inflicts a powerful strike on target with 33160 Power added to P Atk.	reuse_delay: 26
+		LvL.905	description: Inflicts a powerful strike on target with 33864 Power added to P Atk.	reuse_delay: 25
+		LvL.906	description: Inflicts a powerful strike on target with 34568 Power added to P Atk.	reuse_delay: 24
+		LvL.907	description: Inflicts a powerful strike on target with 35273 Power added to P Atk.	reuse_delay: 23
+		LvL.908	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.	reuse_delay: 22
+		LvL.909	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.	reuse_delay: 21
+		LvL.910	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.	reuse_delay: 21
+		name: Power Bomber
+		level: 1
+		mp_consume: 84
+		description: Inflicts a powerful strike on target with 20483 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+		icon_name: icon.skill10262
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.69
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10262" levels="6" name="Power Bomber">
 		<table name="#activateRate">50</table>
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
@@ -553,7 +1348,152 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10263" levels="8" name="Hurricane Blaster">
+    <!--
+		Hurricane Blaster - Attacks target with 551 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword.
+
+		LvL.1	description: Attacks target with 551 power, lowers P Def.	mp_consume: 58
+		LvL.2	description: Attacks target with 566 power, lowers P Def.	mp_consume: 59
+		LvL.3	description: Attacks target with 598 power, lowers P Def.	mp_consume: 61
+		LvL.4	description: Attacks target with 630 power, lowers P Def.	mp_consume: 63
+		LvL.5	description: Attacks target with 662 power, lowers P Def.	mp_consume: 65
+		LvL.6	description: Attacks target with 693 power, lowers P Def.	mp_consume: 67
+		LvL.7	description: Attacks target with 725 power, lowers P Def.	mp_consume: 69
+		LvL.8	description: Attacks target with 757 power, lowers P Def.	mp_consume: 71
+
+		Enchant Route: 1 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks target with 789 power, lowers P Def.	mp_consume: 68
+		LvL.102	description: Attacks target with 805 power, lowers P Def.	mp_consume: 65
+		LvL.103	description: Attacks target with 820 power, lowers P Def.	mp_consume: 62
+		LvL.104	description: Attacks target with 836 power, lowers P Def.	mp_consume: 59
+		LvL.105	description: Attacks target with 852 power, lowers P Def.	mp_consume: 56
+		LvL.106	description: Attacks target with 868 power, lowers P Def.	mp_consume: 53
+		LvL.107	description: Attacks target with 884 power, lowers P Def.	mp_consume: 51
+		LvL.108	description: Attacks target with 900 power, lowers P Def.	mp_consume: 48
+		LvL.109	description: Attacks target with 916 power, lowers P Def.	mp_consume: 45
+		LvL.110	description: Attacks target with 932 power, lowers P Def.	mp_consume: 42
+
+		Enchant Route: 2 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Attacks target with 789 power, lowers P Def.
+		LvL.202	description: Attacks target with 805 power, lowers P Def.
+		LvL.203	description: Attacks target with 820 power, lowers P Def.
+		LvL.204	description: Attacks target with 836 power, lowers P Def.
+		LvL.205	description: Attacks target with 852 power, lowers P Def.
+		LvL.206	description: Attacks target with 868 power, lowers P Def.
+		LvL.207	description: Attacks target with 884 power, lowers P Def.
+		LvL.208	description: Attacks target with 900 power, lowers P Def.
+		LvL.209	description: Attacks target with 916 power, lowers P Def.
+		LvL.210	description: Attacks target with 932 power, lowers P Def.
+
+		Enchant Route: 3 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Attacks target with 789 power, lowers P Def.
+		LvL.302	description: Attacks target with 805 power, lowers P Def.
+		LvL.303	description: Attacks target with 820 power, lowers P Def.
+		LvL.304	description: Attacks target with 836 power, lowers P Def.
+		LvL.305	description: Attacks target with 852 power, lowers P Def.
+		LvL.306	description: Attacks target with 868 power, lowers P Def.
+		LvL.307	description: Attacks target with 884 power, lowers P Def.
+		LvL.308	description: Attacks target with 900 power, lowers P Def.
+		LvL.309	description: Attacks target with 916 power, lowers P Def.
+		LvL.310	description: Attacks target with 932 power, lowers P Def.
+
+		Enchant Route: 4 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Attacks target with 789 power, lowers P Def.
+		LvL.402	description: Attacks target with 805 power, lowers P Def.
+		LvL.403	description: Attacks target with 820 power, lowers P Def.
+		LvL.404	description: Attacks target with 836 power, lowers P Def.
+		LvL.405	description: Attacks target with 852 power, lowers P Def.
+		LvL.406	description: Attacks target with 868 power, lowers P Def.
+		LvL.407	description: Attacks target with 884 power, lowers P Def.
+		LvL.408	description: Attacks target with 900 power, lowers P Def.
+		LvL.409	description: Attacks target with 916 power, lowers P Def.
+		LvL.410	description: Attacks target with 932 power, lowers P Def.
+
+		Enchant Route: 5 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Attacks target with 789 power, lowers P Def.
+		LvL.502	description: Attacks target with 805 power, lowers P Def.
+		LvL.503	description: Attacks target with 820 power, lowers P Def.
+		LvL.504	description: Attacks target with 836 power, lowers P Def.
+		LvL.505	description: Attacks target with 852 power, lowers P Def.
+		LvL.506	description: Attacks target with 868 power, lowers P Def.
+		LvL.507	description: Attacks target with 884 power, lowers P Def.
+		LvL.508	description: Attacks target with 900 power, lowers P Def.
+		LvL.509	description: Attacks target with 916 power, lowers P Def.
+		LvL.510	description: Attacks target with 932 power, lowers P Def.
+
+		Enchant Route: 6 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Attacks target with 789 power, lowers P Def.
+		LvL.602	description: Attacks target with 805 power, lowers P Def.
+		LvL.603	description: Attacks target with 820 power, lowers P Def.
+		LvL.604	description: Attacks target with 836 power, lowers P Def.
+		LvL.605	description: Attacks target with 852 power, lowers P Def.
+		LvL.606	description: Attacks target with 868 power, lowers P Def.
+		LvL.607	description: Attacks target with 884 power, lowers P Def.
+		LvL.608	description: Attacks target with 900 power, lowers P Def.
+		LvL.609	description: Attacks target with 916 power, lowers P Def.
+		LvL.610	description: Attacks target with 932 power, lowers P Def.
+
+		Enchant Route: 7 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Attacks target with 789 power, lowers P Def.
+		LvL.702	description: Attacks target with 805 power, lowers P Def.
+		LvL.703	description: Attacks target with 820 power, lowers P Def.
+		LvL.704	description: Attacks target with 836 power, lowers P Def.
+		LvL.705	description: Attacks target with 852 power, lowers P Def.
+		LvL.706	description: Attacks target with 868 power, lowers P Def.
+		LvL.707	description: Attacks target with 884 power, lowers P Def.
+		LvL.708	description: Attacks target with 900 power, lowers P Def.
+		LvL.709	description: Attacks target with 916 power, lowers P Def.
+		LvL.710	description: Attacks target with 932 power, lowers P Def.
+
+		Enchant Route: 8 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Enchant Dark Attack: Bestows Dark attribute.
+
+		LvL.801	description: Attacks target with 789 power, lowers P Def.
+		LvL.802	description: Attacks target with 805 power, lowers P Def.
+		LvL.803	description: Attacks target with 820 power, lowers P Def.
+		LvL.804	description: Attacks target with 836 power, lowers P Def.
+		LvL.805	description: Attacks target with 852 power, lowers P Def.
+		LvL.806	description: Attacks target with 868 power, lowers P Def.
+		LvL.807	description: Attacks target with 884 power, lowers P Def.
+		LvL.808	description: Attacks target with 900 power, lowers P Def.
+		LvL.809	description: Attacks target with 916 power, lowers P Def.
+		LvL.810	description: Attacks target with 932 power, lowers P Def.
+
+		Enchant Route: 9 - 	Attacks target with 789 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword.
+
+		LvL.901	description: Attacks target with 789 power, lowers P Def.
+		LvL.902	description: Attacks target with 805 power, lowers P Def.
+		LvL.903	description: Attacks target with 820 power, lowers P Def.
+		LvL.904	description: Attacks target with 836 power, lowers P Def.
+		LvL.905	description: Attacks target with 852 power, lowers P Def.
+		LvL.906	description: Attacks target with 868 power, lowers P Def.
+		LvL.907	description: Attacks target with 884 power, lowers P Def.
+		LvL.908	description: Attacks target with 900 power, lowers P Def.
+		LvL.909	description: Attacks target with 916 power, lowers P Def.
+		LvL.910	description: Attacks target with 932 power, lowers P Def.
+		name: Hurricane Blaster
+		level: 1
+		mp_consume: 58
+		description: Attacks target with 551 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword.
+		icon_name: icon.skill10263
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 7
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10263" levels="8" name="Hurricane Blaster">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -644,7 +1584,152 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10265" levels="8" name="Eruption">
+    <!--
+		Eruption - Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.1	description: Attacks nearby enemies with 11557 Power added to P Atk.	mp_consume: 122
+		LvL.2	description: Attacks nearby enemies with 11956 Power added to P Atk.	mp_consume: 124
+		LvL.3	description: Attacks nearby enemies with 12754 Power added to P Atk.	mp_consume: 129
+		LvL.4	description: Attacks nearby enemies with 13553 Power added to P Atk.	mp_consume: 133
+		LvL.5	description: Attacks nearby enemies with 14351 Power added to P Atk.	mp_consume: 137
+		LvL.6	description: Attacks nearby enemies with 15150 Power added to P Atk.	mp_consume: 142
+		LvL.7	description: Attacks nearby enemies with 15948 Power added to P Atk.	mp_consume: 146
+		LvL.8	description: Attacks nearby enemies with 16747 Power added to P Atk.	mp_consume: 151
+
+		Enchant Route: 1 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.101	description: Attacks nearby enemies with 17545 Power added to P Atk.	mp_consume: 144
+		LvL.102	description: Attacks nearby enemies with 17945 Power added to P Atk.	mp_consume: 138
+		LvL.103	description: Attacks nearby enemies with 18344 Power added to P Atk.	mp_consume: 132
+		LvL.104	description: Attacks nearby enemies with 18743 Power added to P Atk.	mp_consume: 126
+		LvL.105	description: Attacks nearby enemies with 19142 Power added to P Atk.	mp_consume: 120
+		LvL.106	description: Attacks nearby enemies with 19542 Power added to P Atk.	mp_consume: 114
+		LvL.107	description: Attacks nearby enemies with 19941 Power added to P Atk.	mp_consume: 108
+		LvL.108	description: Attacks nearby enemies with 20340 Power added to P Atk.	mp_consume: 102
+		LvL.109	description: Attacks nearby enemies with 20739 Power added to P Atk.	mp_consume: 96
+		LvL.110	description: Attacks nearby enemies with 21139 Power added to P Atk.	mp_consume: 90
+
+		Enchant Route: 2 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.201	description: Attacks nearby enemies with 17545 Power added to P Atk.
+		LvL.202	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.203	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.204	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.205	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.206	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.207	description: Attacks nearby enemies with 19941 Power added to P Atk.
+		LvL.208	description: Attacks nearby enemies with 20340 Power added to P Atk.
+		LvL.209	description: Attacks nearby enemies with 20739 Power added to P Atk.
+		LvL.210	description: Attacks nearby enemies with 21139 Power added to P Atk.
+
+		Enchant Route: 3 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.301	description: Attacks nearby enemies with 17545 Power added to P Atk.
+		LvL.302	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.303	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.304	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.305	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.306	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.307	description: Attacks nearby enemies with 19941 Power added to P Atk.
+		LvL.308	description: Attacks nearby enemies with 20340 Power added to P Atk.
+		LvL.309	description: Attacks nearby enemies with 20739 Power added to P Atk.
+		LvL.310	description: Attacks nearby enemies with 21139 Power added to P Atk.
+
+		Enchant Route: 4 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.401	description: Attacks nearby enemies with 17545 Power added to P Atk.
+		LvL.402	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.403	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.404	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.405	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.406	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.407	description: Attacks nearby enemies with 19941 Power added to P Atk.
+		LvL.408	description: Attacks nearby enemies with 20340 Power added to P Atk.
+		LvL.409	description: Attacks nearby enemies with 20739 Power added to P Atk.
+		LvL.410	description: Attacks nearby enemies with 21139 Power added to P Atk.
+
+		Enchant Route: 5 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.501	description: Attacks nearby enemies with 17545 Power added to P Atk.
+		LvL.502	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.503	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.504	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.505	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.506	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.507	description: Attacks nearby enemies with 19941 Power added to P Atk.
+		LvL.508	description: Attacks nearby enemies with 20340 Power added to P Atk.
+		LvL.509	description: Attacks nearby enemies with 20739 Power added to P Atk.
+		LvL.510	description: Attacks nearby enemies with 21139 Power added to P Atk.
+
+		Enchant Route: 6 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.601	description: Attacks nearby enemies with 17545 Power added to P Atk.
+		LvL.602	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.603	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.604	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.605	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.606	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.607	description: Attacks nearby enemies with 19941 Power added to P Atk.
+		LvL.608	description: Attacks nearby enemies with 20340 Power added to P Atk.
+		LvL.609	description: Attacks nearby enemies with 20739 Power added to P Atk.
+		LvL.610	description: Attacks nearby enemies with 21139 Power added to P Atk.
+
+		Enchant Route: 7 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.701	description: Attacks nearby enemies with 17545 Power added to P Atk.
+		LvL.702	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.703	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.704	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.705	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.706	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.707	description: Attacks nearby enemies with 19941 Power added to P Atk.
+		LvL.708	description: Attacks nearby enemies with 20340 Power added to P Atk.
+		LvL.709	description: Attacks nearby enemies with 20739 Power added to P Atk.
+		LvL.710	description: Attacks nearby enemies with 21139 Power added to P Atk.
+
+		Enchant Route: 8 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.801	description: Attacks nearby enemies with 17545 Power added to P Atk.
+		LvL.802	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.803	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.804	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.805	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.806	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.807	description: Attacks nearby enemies with 19941 Power added to P Atk.
+		LvL.808	description: Attacks nearby enemies with 20340 Power added to P Atk.
+		LvL.809	description: Attacks nearby enemies with 20739 Power added to P Atk.
+		LvL.810	description: Attacks nearby enemies with 21139 Power added to P Atk.
+
+		Enchant Route: 9 - 	Attacks nearby enemies with 17545 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+
+		LvL.901	description: Attacks nearby enemies with 17545 Power added to P Atk.	reuse_delay: 4
+		LvL.902	description: Attacks nearby enemies with 17945 Power added to P Atk.
+		LvL.903	description: Attacks nearby enemies with 18344 Power added to P Atk.
+		LvL.904	description: Attacks nearby enemies with 18743 Power added to P Atk.
+		LvL.905	description: Attacks nearby enemies with 19142 Power added to P Atk.
+		LvL.906	description: Attacks nearby enemies with 19542 Power added to P Atk.
+		LvL.907	description: Attacks nearby enemies with 19941 Power added to P Atk.	reuse_delay: 3
+		LvL.908	description: Attacks nearby enemies with 20340 Power added to P Atk.	reuse_delay: 3
+		LvL.909	description: Attacks nearby enemies with 20739 Power added to P Atk.	reuse_delay: 3
+		LvL.910	description: Attacks nearby enemies with 21139 Power added to P Atk.	reuse_delay: 3
+		name: Eruption
+		level: 1
+		mp_consume: 122
+		description: Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+		icon_name: icon.skill10265
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.39
+		cool_time: 0.2
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 10
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10265" levels="8" name="Eruption">
 		<table name="#activateRate">40 42 44 46 48 50 52 54</table>
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
@@ -741,7 +1826,80 @@
 			<effect name="RandomHate" time="0" chance="80"/>
 		</for>
 	</skill>
-	<skill id="10266" levels="8" name="Giant Punch">
+    <!--
+		Giant Punch - Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+
+		LvL.1	mp_consume: 76
+		LvL.2	mp_consume: 79
+		LvL.3	mp_consume: 81
+		LvL.4	mp_consume: 84
+		LvL.5	mp_consume: 87
+		LvL.6	mp_consume: 90
+		LvL.7	mp_consume: 92
+		LvL.8	mp_consume: 95
+
+		Enchant Route: 1 - 	Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 91
+		LvL.102	mp_consume: 87
+		LvL.103	mp_consume: 83
+		LvL.104	mp_consume: 79
+		LvL.105	mp_consume: 76
+		LvL.106	mp_consume: 72
+		LvL.107	mp_consume: 68
+		LvL.108	mp_consume: 64
+		LvL.109	mp_consume: 60
+		LvL.110	mp_consume: 57
+
+		Enchant Route: 2 - 	Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Enchant Chance: Increases success rate.
+
+
+		Enchant Route: 3 - 	Strike the ground powerfully with your fists to knock down your enemies for 5 sec. Requires Sword/Blunt/Spear/Fist/Dual Blunt/Dualsword. Enchant Attack: Inflicts Physical Damage.
+
+
+		Enchant Route: 4 - 	Strike the ground powerfully with your fists to knock down your enemies for 5 sec. Requires Sword/Blunt/Spear/Fist/Dual Blunt/Dualsword. Enchant Hex: Decreases target's P. Def. by 1%.
+
+		LvL.401	description: by 1%.
+		LvL.402	description: by 2%.
+		LvL.403	description: by 3%.
+		LvL.404	description: by 4%.
+		LvL.405	description: by 5%.
+		LvL.406	description: by 6%.
+		LvL.407	description: by 7%.
+		LvL.408	description: by 8%.
+		LvL.409	description: by 9%.
+		LvL.410	description: by 10%.
+
+		Enchant Route: 9 - 	Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+
+		LvL.901	reuse_delay: 59
+		LvL.902	reuse_delay: 58
+		LvL.903	reuse_delay: 56
+		LvL.904	reuse_delay: 54
+		LvL.905	reuse_delay: 52
+		LvL.906	reuse_delay: 50
+		LvL.907	reuse_delay: 48
+		LvL.908	reuse_delay: 46
+		LvL.909	reuse_delay: 44
+		LvL.910	reuse_delay: 42
+		name: Giant Punch
+		level: 1
+		mp_consume: 76
+		description: Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+		icon_name: icon.skill10266
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.3
+		reuse_delay: 60
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10266" levels="8" name="Giant Punch">
 		<table name="#ench4Hex">1</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">76 79 81 84 87 90 92 95</table>
@@ -799,7 +1957,77 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10267" levels="6" name="Hurricane Rush">
+    <!--
+		Hurricane Rush - Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+
+		LvL.1	mp_consume: 38
+		LvL.2	mp_consume: 39
+		LvL.3	mp_consume: 41
+		LvL.4	mp_consume: 43
+		LvL.5	mp_consume: 44
+		LvL.6	mp_consume: 47
+
+		Enchant Route: 1 - 	Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 45
+		LvL.102	mp_consume: 43
+		LvL.103	mp_consume: 41
+		LvL.104	mp_consume: 39
+		LvL.105	mp_consume: 37
+		LvL.106	mp_consume: 35
+		LvL.107	mp_consume: 33
+		LvL.108	mp_consume: 31
+		LvL.109	mp_consume: 30
+		LvL.110	mp_consume: 28
+
+		Enchant Route: 2 - 	Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Enchant Chance: Increases success rate.
+
+
+		Enchant Route: 3 - 	Rush into your enemies with your shoulder to knock them down for 3 seconds. Requires Sword/Blunt/Spear/Fist/Dual Blunt/Dualsword. Enchant Attack: Inflicts Physical Damage.
+
+
+		Enchant Route: 4 - 	Rush into your enemies with your shoulder to knock them down for 3 seconds. Requires Sword/Blunt/Spear/Fist/Dual Blunt/Dualsword. Enchant Hex: Decreases target's P. Def. by 1%.
+
+		LvL.401	description: Rush into your enemies with your shoulder to knock them down for 3 seconds. by 1%.
+		LvL.402	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 2%.
+		LvL.403	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 3%.
+		LvL.404	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 4%.
+		LvL.405	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 5%.
+		LvL.406	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 6%.
+		LvL.407	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 7%.
+		LvL.408	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 8%.
+		LvL.409	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 9%.
+		LvL.410	description: Rush into your enemies with your shoulder to Stun them for 3 seconds. by 10%.
+
+		Enchant Route: 9 - 	Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+
+		LvL.901	reuse_delay: 14
+		LvL.903	reuse_delay: 13
+		LvL.904	reuse_delay: 13
+		LvL.905	reuse_delay: 12
+		LvL.906	reuse_delay: 12
+		LvL.907	reuse_delay: 11
+		LvL.908	reuse_delay: 11
+		LvL.909	reuse_delay: 10
+		LvL.910	reuse_delay: 10
+		name: Hurricane Rush
+		level: 1
+		mp_consume: 38
+		description: Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+		icon_name: icon.skill10267
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0.5
+		cool_time: 0.1
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10267" levels="6" name="Hurricane Rush">
 		<table name="#chance"> 61 62 63 64 65 66 67 68 69 70 </table>
 		<table name="#ench4Hex">1</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
@@ -857,7 +2085,33 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10268" levels="6" name="Rolling Thunder">
+    <!--
+		Rolling Thunder - Becomes enveloped with the energy of a whirlwind. Continuously decreases nearby enemies' HP. Continuously decreases your MP.
+
+		LvL.1	description: Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 40
+		LvL.2	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 42
+		LvL.3	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 43
+		LvL.4	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 45
+		LvL.5	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 46
+		LvL.6	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 47
+		name: Rolling Thunder
+		level: 1
+		mp_consume: 40
+		description: Becomes enveloped with the energy of a whirlwind. Continuously decreases nearby enemies' HP. Continuously decreases your MP.
+		icon_name: icon.skill10268
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10268" levels="6" name="Rolling Thunder">
 		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<table name="#mpConsume2">40 42 43 45 46 47</table>
 		<table name="#power">225 226 227 228 229 242</table>
@@ -883,7 +2137,151 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10269" levels="7" name="Jump Attack">
+    <!--
+		Jump Attack - Jumps to attack frontal enemies with 10508 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. The more Momentum used the more damage inflicted, up to a maximum of 5 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt we
+
+		LvL.1	description: Jumps to attack frontal enemies with 10508 Power added to P Atk. The more Momentum used the more damage inflicted, up to a maximum of 5 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt we	mp_consume: 111
+		LvL.2	description: Jumps to attack frontal enemies with 11190 Power added to P Atk. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic	mp_consume: 114
+		LvL.3	description: Jumps to attack frontal enemies with 11872 Power added to P Atk. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic	mp_consume: 118
+		LvL.4	description: Jumps to attack frontal enemies with 12554 Power added to P Atk. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic	mp_consume: 122
+		LvL.5	description: Jumps to attack frontal enemies with 13236 Power added to P Atk. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic	mp_consume: 126
+		LvL.6	description: Jumps to attack frontal enemies with 13918 Power added to P Atk. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic	mp_consume: 130
+		LvL.7	description: Jumps to attack frontal enemies with 14600 Power added to P Atk. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic	mp_consume: 134
+
+		Enchant Route: 1 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.101	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.	mp_consume: 128
+		LvL.102	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.	mp_consume: 123
+		LvL.103	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.	mp_consume: 117
+		LvL.104	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.	mp_consume: 112
+		LvL.105	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.	mp_consume: 107
+		LvL.106	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.	mp_consume: 101
+		LvL.107	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.	mp_consume: 96
+		LvL.108	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.	mp_consume: 91
+		LvL.109	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.	mp_consume: 85
+		LvL.110	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.	mp_consume: 80
+
+		Enchant Route: 2 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.201	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.
+		LvL.202	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.203	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.204	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.205	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.206	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.207	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.
+		LvL.208	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.
+		LvL.209	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.
+		LvL.210	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.
+
+		Enchant Route: 3 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.301	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.
+		LvL.302	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.303	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.304	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.305	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.306	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.307	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.
+		LvL.308	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.
+		LvL.309	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.
+		LvL.310	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.
+
+		Enchant Route: 4 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.401	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.
+		LvL.402	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.403	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.404	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.405	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.406	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.407	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.
+		LvL.408	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.
+		LvL.409	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.
+		LvL.410	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.
+
+		Enchant Route: 5 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.501	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.
+		LvL.502	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.503	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.504	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.505	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.506	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.507	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.
+		LvL.508	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.
+		LvL.509	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.
+		LvL.510	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.
+
+		Enchant Route: 6 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.601	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.
+		LvL.602	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.603	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.604	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.605	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.606	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.607	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.
+		LvL.608	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.
+		LvL.609	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.
+		LvL.610	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.
+
+		Enchant Route: 7 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.701	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.
+		LvL.702	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.703	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.704	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.705	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.706	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.707	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.
+		LvL.708	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.
+		LvL.709	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.
+		LvL.710	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.
+
+		Enchant Route: 8 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.801	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.
+		LvL.802	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.803	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.804	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.805	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.806	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.807	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.
+		LvL.808	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.
+		LvL.809	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.
+		LvL.810	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.
+
+		Enchant Route: 9 - 	Jumps to attack frontal enemies with 14941 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. Damage increases with Momentum, which can be used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Over-hit. Critic
+
+		LvL.901	description: Jumps to attack frontal enemies with 14941 Power added to P Atk.	reuse_delay: 4
+		LvL.902	description: Jumps to attack frontal enemies with 15282 Power added to P Atk.
+		LvL.903	description: Jumps to attack frontal enemies with 15623 Power added to P Atk.
+		LvL.904	description: Jumps to attack frontal enemies with 15964 Power added to P Atk.
+		LvL.905	description: Jumps to attack frontal enemies with 16305 Power added to P Atk.
+		LvL.906	description: Jumps to attack frontal enemies with 16646 Power added to P Atk.
+		LvL.907	description: Jumps to attack frontal enemies with 16987 Power added to P Atk.	reuse_delay: 3
+		LvL.908	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.	reuse_delay: 3
+		LvL.909	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.	reuse_delay: 3
+		LvL.910	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.	reuse_delay: 3
+		name: Jump Attack
+		level: 1
+		mp_consume: 111
+		description: Jumps to attack frontal enemies with 10508 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. The more Momentum used the more damage inflicted, up to a maximum of 5 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt we
+		icon_name: icon.skill10269
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0.89
+		cool_time: 0.5
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10269" levels="7" name="Jump Attack">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">87 89 91 93 95 97 99</table>
@@ -970,7 +2368,40 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10270" levels="1" name="Second Wind">
+    <!--
+		Second Wind - Instantly recovers 35% of Max HP and 15% of Max CP. For 2 minutes, Max HP + 35% and Max CP + 15%.
+
+
+		Enchant Route: 1 - 	Instantly recovers 35% of Max HP and 15% of Max CP. For 2 minutes 12 seconds, Max HP + 35% and Max CP + 15%. Enchant Time: Increases Duration.
+
+		LvL.101	description: Instantly recovers 35% of Max HP and 15% of Max CP For 2 minutes 12 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.102	description: Instantly recovers 35% of Max HP and 15% of Max CP For 2 minutes 24 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.103	description: Instantly recovers 35% of Max HP and 15% of Max CP For 2 minutes 36 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.104	description: Instantly recovers 35% of Max HP and 15% of Max CP For 2 minutes 48 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.105	description: Instantly recovers 35% of Max HP and 15% of Max CP For 3 minutes, Max HP + 35% and Max CP + 15%.
+		LvL.106	description: Instantly recovers 35% of Max HP and 15% of Max CP For 3 minutes 12 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.107	description: Instantly recovers 35% of Max HP and 15% of Max CP For 3 minutes 24 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.108	description: Instantly recovers 35% of Max HP and 15% of Max CP For 3 minutes 36 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.109	description: Instantly recovers 35% of Max HP and 15% of Max CP For 3 minutes 48 seconds, Max HP + 35% and Max CP + 15%.
+		LvL.110	description: Instantly recovers 35% of Max HP and 15% of Max CP For 4 minutes, Max HP + 35% and Max CP + 15%.
+		name: Second Wind
+		level: 1
+		mp_consume: 43
+		description: Instantly recovers 35% of Max HP and 15% of Max CP. For 2 minutes, Max HP + 35% and Max CP + 15%.
+		icon_name: icon.skill10270
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10270" levels="1" name="Second Wind">
 		<table name="#time">120</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="#time"/>
@@ -998,7 +2429,80 @@
 			<effect name="HealCPPercent" value="15"/>
 		</for>
 	</skill>
-	<skill id="10271" levels="2" name="Power Provoke">
+    <!--
+		Power Provoke - Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def.
+
+		LvL.1	mp_consume: 76
+		LvL.2	mp_consume: 83
+
+		Enchant Route: 1 - 	Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 79
+		LvL.102	mp_consume: 76
+		LvL.103	mp_consume: 73
+		LvL.104	mp_consume: 69
+		LvL.105	mp_consume: 66
+		LvL.106	mp_consume: 63
+		LvL.107	mp_consume: 59
+		LvL.108	mp_consume: 56
+		LvL.109	mp_consume: 53
+		LvL.110	mp_consume: 49
+
+		Enchant Route: 2 - 	Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def. Enchant Chance: Increases success rate.
+
+
+		Enchant Route: 3 - 	Enrages nearby target. Pulls them in by increasing their P. Atk. And Atk. Spd. And decreasing their P. Def. for 10 seconds. Enchant Distance: Increases Effect Range.
+
+
+		Enchant Route: 4 - 	Enrages nearby target. Pulls them in by increasing their P. Atk. And Atk. Spd. And decreasing their P. Def. for 10 seconds. Enchant Break Knockdown: Decreases target's Knockdown Resistance by 1.
+
+		LvL.401	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 1.
+		LvL.402	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 2.
+		LvL.403	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 3.
+		LvL.404	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 4.
+		LvL.405	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 5.
+		LvL.406	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 6.
+		LvL.407	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 7.
+		LvL.408	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 8.
+		LvL.409	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 9.
+		LvL.410	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 10.
+
+		Enchant Route: 5 - 	Enrages nearby target. Pulls them in by increasing their P. Atk. And Atk. Spd. And decreasing their P. Def. for 10 seconds. Enchant Break Shock: Decreases target's Stun Resistance by 1.
+
+		LvL.501	description: Enchant Break Shock: Decreases target's Stun Resistance by 1.
+		LvL.502	description: Enchant Break Shock: Decreases target's Stun Resistance by 2.
+		LvL.503	description: Enchant Break Shock: Decreases target's Stun Resistance by 3.
+		LvL.504	description: Enchant Break Shock: Decreases target's Stun Resistance by 4.
+		LvL.505	description: Enchant Break Shock: Decreases target's Stun Resistance by 5.
+		LvL.506	description: Enchant Break Shock: Decreases target's Stun Resistance by 6.
+		LvL.507	description: Enchant Break Shock: Decreases target's Stun Resistance by 7.
+		LvL.508	description: Enchant Break Shock: Decreases target's Stun Resistance by 8.
+		LvL.509	description: Enchant Break Shock: Decreases target's Stun Resistance by 9.
+		LvL.510	description: Enchant Break Shock: Decreases target's Stun Resistance by 10.
+
+		Enchant Route: 9 - 	Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def.
+
+		LvL.901	reuse_delay: 3
+		LvL.909	reuse_delay: 2
+		LvL.910	reuse_delay: 2
+		name: Power Provoke
+		level: 1
+		mp_consume: 76
+		description: Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def.
+		icon_name: icon.skill10271
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 4
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10271" levels="2" name="Power Provoke">
 		<table name="#abnormal_time">10</table>
 		<table name="#activateRate">75</table>
 		<table name="#dec">0.76 0.76</table>
@@ -1058,7 +2562,89 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10273" levels="4" name="Lightning Disarm">
+    <!--
+		Lightning Disarm - Disarms nearby enemies for 5 seconds. Lowers P. Atk. and M. Atk. by 10%.
+
+		LvL.1	description: by 10%.
+		LvL.2	description: by 15%.
+		LvL.3	description: by 20%.
+		LvL.4	description: by 25%.
+
+		Enchant Route: 1 - 	Disarms nearby enemies for 5 sec, and lowers P. Atk. and M. Atk. by 25%. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 88
+		LvL.102	mp_consume: 84
+		LvL.103	mp_consume: 80
+		LvL.104	mp_consume: 77
+		LvL.105	mp_consume: 73
+		LvL.106	mp_consume: 69
+		LvL.107	mp_consume: 66
+		LvL.108	mp_consume: 62
+		LvL.109	mp_consume: 58
+		LvL.110	mp_consume: 55
+
+		Enchant Route: 2 - 	Disarms nearby enemies for 5 sec, and lowers P. Atk. and M. Atk. by 25%. Enchant Chance: Increases Success Rate.
+
+
+		Enchant Route: 3 - 	Disarms nearby enemies and decreases their P. Atk. And M. Atk. By 25% for 5 seconds. Enchant Distance: Increases Effect.
+
+
+		Enchant Route: 4 - 	Disarms nearby enemies and decreases their P. Atk. And M. Atk. By 25% for 5 seconds. Enchant Break Knockdown: Decreases target's Knockdown Resistance by 1.
+
+		LvL.401	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 1.
+		LvL.402	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 2.
+		LvL.403	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 3.
+		LvL.404	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 4.
+		LvL.405	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 5.
+		LvL.406	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 6.
+		LvL.407	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 7.
+		LvL.408	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 8.
+		LvL.409	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 9.
+		LvL.410	description: Enchant Break Knockdown: Decreases target's Knockdown Resistance by 10.
+
+		Enchant Route: 5 - 	Disarms nearby enemies and decreases their P. Atk. And M. Atk. By 25% for 5 seconds. Enchant Break Shock: Decreases target's Stun Resistance by 1.
+
+		LvL.501	description: Enchant Break Shock: Decreases target's Stun Resistance by 1.
+		LvL.502	description: Enchant Break Shock: Decreases target's Stun Resistance by 2.
+		LvL.503	description: Enchant Break Shock: Decreases target's Stun Resistance by 3.
+		LvL.504	description: Enchant Break Shock: Decreases target's Stun Resistance by 4.
+		LvL.505	description: Enchant Break Shock: Decreases target's Stun Resistance by 5.
+		LvL.506	description: Enchant Break Shock: Decreases target's Stun Resistance by 6.
+		LvL.507	description: Enchant Break Shock: Decreases target's Stun Resistance by 7.
+		LvL.508	description: Enchant Break Shock: Decreases target's Stun Resistance by 8.
+		LvL.509	description: Enchant Break Shock: Decreases target's Stun Resistance by 9.
+		LvL.510	description: Enchant Break Shock: Decreases target's Stun Resistance by 10.
+
+		Enchant Route: 9 - 	Disarms nearby enemies for 5 sec, and lowers P. Atk. and M. Atk. by 25%.
+
+		LvL.901	reuse_delay: 116
+		LvL.902	reuse_delay: 112
+		LvL.903	reuse_delay: 109
+		LvL.904	reuse_delay: 105
+		LvL.905	reuse_delay: 102
+		LvL.906	reuse_delay: 98
+		LvL.907	reuse_delay: 94
+		LvL.908	reuse_delay: 91
+		LvL.909	reuse_delay: 87
+		LvL.910	reuse_delay: 84
+		name: Lightning Disarm
+		level: 1
+		mp_consume: 92
+		description: Disarms nearby enemies for 5 seconds. Lowers P. Atk. and M. Atk. by 10%.
+		icon_name: icon.skill10273
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10273" levels="4" name="Lightning Disarm">
 		<table name="#abnormal_time">5</table>
 		<table name="#atk">0.9 0.85 0.8 0.75</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -1114,7 +2700,66 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10274" levels="4" name="Berserk">
+    <!--
+		Berserker - You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. 
+
+		LvL.1	mp_consume: 38
+		LvL.2	mp_consume: 41
+		LvL.3	mp_consume: 45
+		LvL.4	mp_consume: 47
+
+		Enchant Route: 1 - 	You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. 
+
+		LvL.101	mp_consume: 45
+		LvL.102	mp_consume: 43
+		LvL.103	mp_consume: 41
+		LvL.104	mp_consume: 39
+		LvL.105	mp_consume: 37
+		LvL.106	mp_consume: 35
+		LvL.107	mp_consume: 33
+		LvL.108	mp_consume: 31
+		LvL.109	mp_consume: 30
+		LvL.110	mp_consume: 28
+
+		Enchant Route: 2 - 	You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. 
+
+
+		Enchant Route: 3 - 	In an extreme physical limit, Debuff Resistance, Speed, P. Atk., P. Accuracy, P. Def., Atk. Spd. and Critical Damage increase, and your HP is restored by 20% if you kill target. Increases P. Atk. by 10% and Critical Rate by 100 when HP drops to 60% or b
+
+
+		Enchant Route: 4 - 	In an extreme physical limit, Debuff Resistance, Speed, P. Atk., P. Accuracy, P. Def., Atk. Spd. and Critical Damage increase, and your HP is restored by 20% if you kill target. Increases P. Atk. by 10% and Critical Rate by 100 when HP drops to 60% or b
+
+
+		Enchant Route: 9 - 	You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. 
+
+		LvL.901	reuse_delay: 291
+		LvL.902	reuse_delay: 282
+		LvL.903	reuse_delay: 273
+		LvL.904	reuse_delay: 264
+		LvL.905	reuse_delay: 255
+		LvL.906	reuse_delay: 246
+		LvL.907	reuse_delay: 237
+		LvL.908	reuse_delay: 228
+		LvL.909	reuse_delay: 219
+		LvL.910	reuse_delay: 210
+		name: Berserker
+		level: 1
+		mp_consume: 38
+		description: You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. 
+		icon_name: icon.skill10274
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0.5
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10274" levels="4" name="Berserker">
 		<table name="#abnormal_level">1 2 3 4</table>
 		<table name="#abnormal_time">60</table>
 		<table name="#accPhysical"> 10 15 20 25 </table>
@@ -1148,7 +2793,7 @@
 			<player percentHP="#hp_penalty"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>>
+			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>&gt;
 		</enchant>
 		<enchant type="2" name="Time">
 			<table name="#abnormal_time">62 64 66 68 70 72 74 76 78 80</table>
@@ -1189,7 +2834,66 @@
 			 -->
 		</for>
 	</skill>
-	<skill id="10275" levels="1" name="Infinity Strike">
+    <!--
+		Infinity Strike - Inflicts a powerful attack on target with 65085 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical.
+
+
+		Enchant Route: 1 - 	Inflicts a powerful attack on target with 66456 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical. Enchant Cost : Decreases MP Consumption.
+
+		LvL.101	description: Inflicts a powerful attack on target with 66456 Power added to P Atk.	mp_consume: 1131
+		LvL.102	description: Inflicts a powerful attack on target with 67827 Power added to P Atk.	mp_consume: 1083
+		LvL.103	description: Inflicts a powerful attack on target with 69198 Power added to P Atk.	mp_consume: 1037
+		LvL.104	description: Inflicts a powerful attack on target with 70569 Power added to P Atk.	mp_consume: 989
+		LvL.105	description: Inflicts a powerful attack on target with 71940 Power added to P Atk.	mp_consume: 942
+		LvL.106	description: Inflicts a powerful attack on target with 73311 Power added to P Atk.	mp_consume: 896
+		LvL.107	description: Inflicts a powerful attack on target with 74682 Power added to P Atk.	mp_consume: 848
+		LvL.108	description: Inflicts a powerful attack on target with 76053 Power added to P Atk.	mp_consume: 801
+		LvL.109	description: Inflicts a powerful attack on target with 77424 Power added to P Atk.	mp_consume: 753
+		LvL.110	description: Inflicts a powerful attack on target with 78795 Power added to P Atk.	mp_consume: 707
+
+		Enchant Route: 2 - 	Inflicts a powerful attack on target with 66456 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical. Enchant Duel : Increases PvP Power.
+
+		LvL.201	description: Inflicts a powerful attack on target with 66456 Power added to P Atk.
+		LvL.202	description: Inflicts a powerful attack on target with 67827 Power added to P Atk.
+		LvL.203	description: Inflicts a powerful attack on target with 69198 Power added to P Atk.
+		LvL.204	description: Inflicts a powerful attack on target with 70569 Power added to P Atk.
+		LvL.205	description: Inflicts a powerful attack on target with 71940 Power added to P Atk.
+		LvL.206	description: Inflicts a powerful attack on target with 73311 Power added to P Atk.
+		LvL.207	description: Inflicts a powerful attack on target with 74682 Power added to P Atk.
+		LvL.208	description: Inflicts a powerful attack on target with 76053 Power added to P Atk.
+		LvL.209	description: Inflicts a powerful attack on target with 77424 Power added to P Atk.
+		LvL.210	description: Inflicts a powerful attack on target with 78795 Power added to P Atk.
+
+		Enchant Route: 9 - 	Inflicts a powerful attack on target with 66456 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical.
+
+		LvL.901	description: Inflicts a powerful attack on target with 66456 Power added to P Atk.	reuse_delay: 29
+		LvL.902	description: Inflicts a powerful attack on target with 67827 Power added to P Atk.	reuse_delay: 28
+		LvL.903	description: Inflicts a powerful attack on target with 69198 Power added to P Atk.	reuse_delay: 27
+		LvL.904	description: Inflicts a powerful attack on target with 70569 Power added to P Atk.	reuse_delay: 26
+		LvL.905	description: Inflicts a powerful attack on target with 71940 Power added to P Atk.	reuse_delay: 25
+		LvL.906	description: Inflicts a powerful attack on target with 73311 Power added to P Atk.	reuse_delay: 24
+		LvL.907	description: Inflicts a powerful attack on target with 74682 Power added to P Atk.	reuse_delay: 23
+		LvL.908	description: Inflicts a powerful attack on target with 76053 Power added to P Atk.	reuse_delay: 22
+		LvL.909	description: Inflicts a powerful attack on target with 77424 Power added to P Atk.	reuse_delay: 21
+		LvL.910	description: Inflicts a powerful attack on target with 78795 Power added to P Atk.	reuse_delay: 20
+		name: Infinity Strike
+		level: 1
+		mp_consume: 1178
+		description: Inflicts a powerful attack on target with 65085 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10275
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10275" levels="1" name="Infinity Strike">
 		<table name="#mpConsume2">1178</table>
 		<table name="#power">65085</table>
 		<table name="#powerPvP">0</table>
@@ -1228,7 +2932,53 @@
 			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 20000</table>
 		</enchant>
 	</skill>
-	<skill id="10276" levels="1" name="Force of Nature">
+    <!--
+		Force of Nature - Immediately increases Momentum to its maximum level.
+
+
+		Enchant Route: 1 - 	Energy is boosted to maximum.  Enchant Power HP: Recovers 1% HP.
+
+		LvL.101	description: Enchant Power HP: Recovers 1% HP
+		LvL.102	description: Enchant Power HP: Recovers 2% HP
+		LvL.103	description: Enchant Power HP: Recovers 3% HP
+		LvL.104	description: Enchant Power HP: Recovers 4% HP
+		LvL.105	description: Enchant Power HP: Recovers 5% HP
+		LvL.106	description: Enchant Power HP: Recovers 6% HP
+		LvL.107	description: Enchant Power HP: Recovers 7% HP
+		LvL.108	description: Enchant Power HP: Recovers 8% HP
+		LvL.109	description: Enchant Power HP: Recovers 9% HP
+		LvL.110	description: Enchant Power HP: Recovers 10% HP
+
+		Enchant Route: 2 - 	Energy is boosted to maximum.  Enchant Power CP: Recovers 1% CP.
+
+		LvL.201	description: Enchant Power CP: Recovers 1% CP
+		LvL.202	description: Enchant Power CP: Recovers 2% CP
+		LvL.203	description: Enchant Power CP: Recovers 3% CP
+		LvL.204	description: Enchant Power CP: Recovers 4% CP
+		LvL.205	description: Enchant Power CP: Recovers 5% CP
+		LvL.206	description: Enchant Power CP: Recovers 6% CP
+		LvL.207	description: Enchant Power CP: Recovers 7% CP
+		LvL.208	description: Enchant Power CP: Recovers 8% CP
+		LvL.209	description: Enchant Power CP: Recovers 9% CP
+		LvL.210	description: Enchant Power CP: Recovers 10% CP
+		name: Force of Nature
+		level: 1
+		mp_consume: 38
+		description: Immediately increases Momentum to its maximum level.
+		icon_name: icon.skill10276
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 60
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10276" levels="1" name="Force of Nature">
 		<table name="#cpHealCount">0</table>
 		<table name="#cpHealPower">0</table>
 		<table name="#hpHealCount">0</table>
@@ -1259,7 +3009,60 @@
 			<effect name="HealCPPercent" time="0" count="#cpHealCount" value="#cpHealPower"/>
 		</for>
 	</skill>
-	<skill id="10277" levels="4" name="Final Cry">
+    <!--
+		Final Cry - Increases P. Atk. + 20% and skill damage + 10% for 2 minutes. Increases general/skill attack damage + 5% during PvP.
+
+		LvL.1	description: + 20% and skill damage + 10% for 2 minutes.	mp_consume: 38
+		LvL.2	description: + 22% and skill damage + 11% for 2 minutes.	mp_consume: 41
+		LvL.3	description: + 26% and skill damage + 13% for 2 minutes.	mp_consume: 45
+		LvL.4	description: + 33% and skill damage + 16% for 2 minutes.	mp_consume: 47
+
+		Enchant Route: 1 - 	Increases P. Atk. + 33% and skill damage + 16% for 2 minutes. Increases general/skill attack damage + 5% during PvP. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 45
+		LvL.102	mp_consume: 43
+		LvL.103	mp_consume: 41
+		LvL.104	mp_consume: 39
+		LvL.105	mp_consume: 37
+		LvL.106	mp_consume: 35
+		LvL.107	mp_consume: 33
+		LvL.108	mp_consume: 31
+		LvL.109	mp_consume: 30
+		LvL.110	mp_consume: 28
+
+		Enchant Route: 2 - 	Increases P. Atk. + 33% and skill damage + 16% for 2 minutes. Increases general/skill attack damage + 5% during PvP. Enchant Time: Increases duration.
+
+
+		Enchant Route: 9 - 	Increases P. Atk. + 33% and skill damage + 16% for 2 minutes. Increases general/skill attack damage + 5% during PvP.
+
+		LvL.901	reuse_delay: 174
+		LvL.902	reuse_delay: 169
+		LvL.903	reuse_delay: 163
+		LvL.904	reuse_delay: 158
+		LvL.905	reuse_delay: 153
+		LvL.906	reuse_delay: 147
+		LvL.907	reuse_delay: 142
+		LvL.908	reuse_delay: 136
+		LvL.909	reuse_delay: 131
+		LvL.910	reuse_delay: 126
+		name: Final Cry
+		level: 1
+		mp_consume: 38
+		description: Increases P. Atk. + 20% and skill damage + 10% for 2 minutes. Increases general/skill attack damage + 5% during PvP.
+		icon_name: icon.skill10277
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 180
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10277" levels="4" name="Final Cry">
 		<table name="#pAtk">1.2 1.22 1.26 1.33</table>
 		<table name="#pvePhysSkillDmgBonus">1.1 1.11 1.13 1.16</table> 
 		<table name="#mpConsume"> 38 41 45 47 </table>
@@ -1301,7 +3104,64 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10278" levels="8" name="Reduce Anger">
+    <!--
+		Reduce Anger - Decreases the aggression of nearby enemies toward the caster.
+
+		LvL.1	mp_consume: 76
+		LvL.2	mp_consume: 77
+		LvL.3	mp_consume: 80
+		LvL.4	mp_consume: 83
+		LvL.5	mp_consume: 86
+		LvL.6	mp_consume: 88
+		LvL.7	mp_consume: 91
+		LvL.8	mp_consume: 94
+
+		Enchant Route: 1 - 	Decreases the aggression of nearby enemies toward the caster. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 90
+		LvL.102	mp_consume: 86
+		LvL.103	mp_consume: 82
+		LvL.104	mp_consume: 78
+		LvL.105	mp_consume: 75
+		LvL.106	mp_consume: 71
+		LvL.107	mp_consume: 67
+		LvL.108	mp_consume: 63
+		LvL.109	mp_consume: 60
+		LvL.110	mp_consume: 56
+
+		Enchant Route: 2 - 	Decreases nearby enemies' enmity toward you. Enchant Power: Increases Effect.
+
+
+		Enchant Route: 9 - 	Decreases the aggression of nearby enemies toward the caster.
+
+		LvL.901	reuse_delay: 29
+		LvL.902	reuse_delay: 28
+		LvL.903	reuse_delay: 27
+		LvL.904	reuse_delay: 26
+		LvL.905	reuse_delay: 25
+		LvL.906	reuse_delay: 24
+		LvL.907	reuse_delay: 23
+		LvL.908	reuse_delay: 22
+		LvL.909	reuse_delay: 21
+		LvL.910	reuse_delay: 21
+		name: Reduce Anger
+		level: 1
+		mp_consume: 76
+		description: Decreases the aggression of nearby enemies toward the caster.
+		icon_name: icon.skill10278
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10278" levels="8" name="Reduce Anger">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#mpConsume2">76 77 80 83 86 88 91 94</table>
 		<table name="#reuseDelay">30000</table>
@@ -1329,7 +3189,92 @@
 			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 21000</table>
 		</enchant>
 	</skill>
-	<skill id="10279" levels="1" name="Giant Barrier">
+    <!--
+		Giant Barrier - Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower.
+
+
+		Enchant Route: 1 - 	Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 40
+		LvL.102	mp_consume: 38
+		LvL.103	mp_consume: 36
+		LvL.104	mp_consume: 35
+		LvL.105	mp_consume: 33
+		LvL.106	mp_consume: 31
+		LvL.107	mp_consume: 30
+		LvL.108	mp_consume: 28
+		LvL.109	mp_consume: 26
+		LvL.110	mp_consume: 25
+
+		Enchant Route: 2 - 	Removes all debuffs and for 11 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower. Enchant Time: Increases duration.
+
+		LvL.201	description: Removes all debuffs and for 11 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.202	description: Removes all debuffs and for 12 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.203	description: Removes all debuffs and for 13 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.204	description: Removes all debuffs and for 14 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.205	description: Removes all debuffs and for 15 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.206	description: Removes all debuffs and for 16 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.207	description: Removes all debuffs and for 17 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.208	description: Removes all debuffs and for 18 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.209	description: Removes all debuffs and for 19 seconds, becomes invincible against normal attacks, skills, and debuffs.
+		LvL.210	description: Removes all debuffs and for 20 seconds, becomes invincible against normal attacks, skills, and debuffs.
+
+		Enchant Route: 3 - 	Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 71% or lower. Enchant Decrease Penalty: Decreases Penalty.
+
+		LvL.301	description: Available when HP is 71% or lower.
+		LvL.302	description: Available when HP is 72% or lower.
+		LvL.303	description: Available when HP is 73% or lower.
+		LvL.304	description: Available when HP is 74% or lower.
+		LvL.305	description: Available when HP is 75% or lower.
+		LvL.306	description: Available when HP is 76% or lower.
+		LvL.307	description: Available when HP is 77% or lower.
+		LvL.308	description: Available when HP is 78% or lower.
+		LvL.309	description: Available when HP is 79% or lower.
+		LvL.310	description: Available when HP is 80% or lower.
+
+		Enchant Route: 4 - 	Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower. Enchant Chance Stun: Increases Stun Rate + 1.
+
+		LvL.401	description: Enchant Chance Stun: Increases Stun Rate + 1.
+		LvL.402	description: Enchant Chance Stun: Increases Stun Rate + 2.
+		LvL.403	description: Enchant Chance Stun: Increases Stun Rate + 3.
+		LvL.404	description: Enchant Chance Stun: Increases Stun Rate + 4.
+		LvL.405	description: Enchant Chance Stun: Increases Stun Rate + 5.
+		LvL.406	description: Enchant Chance Stun: Increases Stun Rate + 6.
+		LvL.407	description: Enchant Chance Stun: Increases Stun Rate + 7.
+		LvL.408	description: Enchant Chance Stun: Increases Stun Rate + 8.
+		LvL.409	description: Enchant Chance Stun: Increases Stun Rate + 9.
+		LvL.410	description: Enchant Chance Stun: Increases Stun Rate + 10.
+
+		Enchant Route: 9 - 	Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower.
+
+		LvL.901	reuse_delay: 291
+		LvL.902	reuse_delay: 282
+		LvL.903	reuse_delay: 273
+		LvL.904	reuse_delay: 264
+		LvL.905	reuse_delay: 255
+		LvL.906	reuse_delay: 246
+		LvL.907	reuse_delay: 237
+		LvL.908	reuse_delay: 228
+		LvL.909	reuse_delay: 219
+		LvL.910	reuse_delay: 210
+		name: Giant Barrier
+		level: 1
+		mp_consume: 42
+		description: Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower.
+		icon_name: icon.skill10279
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10279" levels="1" name="Giant Barrier">
 		<table name="#abnormal_time">10</table>
 		<table name="#magicLevel">91</table>
 		<table name="#mpConsume2">42</table>
@@ -1385,7 +3330,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10280" levels="1" name="Momentum Charge">
+    <!--
+		Momentum Charge - Continuously consumes HP to produce Momentum.
+
+		name: Momentum Charge
+		level: 1
+		mp_consume: 58
+		description: Continuously consumes HP to produce Momentum.
+		icon_name: icon.skill10283
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10280" levels="1" name="Momentum Charge">
 		<set name="analog_skills" value="8;50"/>
 		<set name="hpConsume" value="58"/>
 		<set name="icon" value="icon.skill10283"/>
@@ -1402,7 +3367,68 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10281" levels="2" name="Sonic Star">
+    <!--
+		Sonic Star - Attacks and knocks down nearby enemies at the speed of light with 44711 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical.
+
+		LvL.1	description: Attacks and knocks down nearby enemies at the speed of light with 44711 Power added to P Atk.	mp_consume: 1103
+		LvL.2	description: Attacks and knocks down nearby enemies at the speed of light with 46723 Power added to P Atk.	mp_consume: 1158
+
+		Enchant Route: 1 - 	Attacks and knocks down nearby enemies at the speed of light with 48735 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical. Enchant Cost : Decreases MP Consumption.
+
+		LvL.101	description: Attacks and knocks down nearby enemies at the speed of light with 48735 Power added to P Atk.	mp_consume: 1131
+		LvL.102	description: Attacks and knocks down nearby enemies at the speed of light with 49741 Power added to P Atk.	mp_consume: 1083
+		LvL.103	description: Attacks and knocks down nearby enemies at the speed of light with 50747 Power added to P Atk.	mp_consume: 1037
+		LvL.104	description: Attacks and knocks down nearby enemies at the speed of light with 51753 Power added to P Atk.	mp_consume: 989
+		LvL.105	description: Attacks and knocks down nearby enemies at the speed of light with 52759 Power added to P Atk.	mp_consume: 942
+		LvL.106	description: Attacks and knocks down nearby enemies at the speed of light with 53765 Power added to P Atk.	mp_consume: 896
+		LvL.107	description: Attacks and knocks down nearby enemies at the speed of light with 54771 Power added to P Atk.	mp_consume: 848
+		LvL.108	description: Attacks and knocks down nearby enemies at the speed of light with 55777 Power added to P Atk.	mp_consume: 801
+		LvL.109	description: Attacks and knocks down nearby enemies at the speed of light with 56783 Power added to P Atk.	mp_consume: 753
+		LvL.110	description: Attacks and knocks down nearby enemies at the speed of light with 57789 Power added to P Atk.	mp_consume: 707
+
+		Enchant Route: 2 - 	Attacks and knocks down nearby enemies at the speed of light with 48735 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical. Enchant Duel : Increases PvP Power.
+
+		LvL.201	description: Attacks and knocks down nearby enemies at the speed of light with 48735 Power added to P Atk.
+		LvL.202	description: Attacks and knocks down nearby enemies at the speed of light with 49741 Power added to P Atk.
+		LvL.203	description: Attacks and knocks down nearby enemies at the speed of light with 50747 Power added to P Atk.
+		LvL.204	description: Attacks and knocks down nearby enemies at the speed of light with 51753 Power added to P Atk.
+		LvL.205	description: Attacks and knocks down nearby enemies at the speed of light with 52759 Power added to P Atk.
+		LvL.206	description: Attacks and knocks down nearby enemies at the speed of light with 53765 Power added to P Atk.
+		LvL.207	description: Attacks and knocks down nearby enemies at the speed of light with 54771 Power added to P Atk.
+		LvL.208	description: Attacks and knocks down nearby enemies at the speed of light with 55777 Power added to P Atk.
+		LvL.209	description: Attacks and knocks down nearby enemies at the speed of light with 56783 Power added to P Atk.
+		LvL.210	description: Attacks and knocks down nearby enemies at the speed of light with 57789 Power added to P Atk.
+
+		Enchant Route: 9 - 	Attacks and knocks down nearby enemies at the speed of light with 48735 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical.
+
+		LvL.901	description: Attacks and knocks down nearby enemies at the speed of light with 48735 Power added to P Atk.	reuse_delay: 29
+		LvL.902	description: Attacks and knocks down nearby enemies at the speed of light with 49741 Power added to P Atk.	reuse_delay: 28
+		LvL.903	description: Attacks and knocks down nearby enemies at the speed of light with 50747 Power added to P Atk.	reuse_delay: 27
+		LvL.904	description: Attacks and knocks down nearby enemies at the speed of light with 51753 Power added to P Atk.	reuse_delay: 26
+		LvL.905	description: Attacks and knocks down nearby enemies at the speed of light with 52759 Power added to P Atk.	reuse_delay: 25
+		LvL.906	description: Attacks and knocks down nearby enemies at the speed of light with 53765 Power added to P Atk.	reuse_delay: 24
+		LvL.907	description: Attacks and knocks down nearby enemies at the speed of light with 54771 Power added to P Atk.	reuse_delay: 23
+		LvL.908	description: Attacks and knocks down nearby enemies at the speed of light with 55777 Power added to P Atk.	reuse_delay: 22
+		LvL.909	description: Attacks and knocks down nearby enemies at the speed of light with 56783 Power added to P Atk.	reuse_delay: 21
+		LvL.910	description: Attacks and knocks down nearby enemies at the speed of light with 57789 Power added to P Atk.	reuse_delay: 20
+		name: Sonic Star
+		level: 1
+		mp_consume: 1103
+		description: Attacks and knocks down nearby enemies at the speed of light with 44711 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical.
+		icon_name: icon.skill10281
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 7.5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 10
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10281" levels="2" name="Sonic Star">
 		<table name="#magicLevel">95 98</table>
 		<table name="#mpConsume2">1103 1158</table>
 		<table name="#power">44711 46723</table>
@@ -1445,7 +3471,27 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
-	<skill id="10283" levels="1" name="Increase Momentum">
+    <!--
+		Increase Momentum - none
+
+		name: Increase Momentum
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill10283
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10283" levels="1" name="Increase Momentum">
 		<set name="charges" value="10"/>
 		<set name="icon" value="icon.skill10283"/>
 		<set name="magicLevel" value="97"/>
@@ -1456,7 +3502,30 @@
 		<for>
 		</for>
 	</skill>
-	<skill id="10284" levels="3" name="Lightning Force">
+    <!--
+		Lightning Force - You are imbued with Rage. P. Atk. + 10% and Speed + 5 when equipped with a fist weapon/sword/blunt/dualsword/spear. 20% chance of raising Lightning Force to level 2 during a critical attack.
+
+		LvL.1	icon_name: icon.skill10284	description: You are imbued with Rage. P Atk. +  + 10% and Speed + 5 when equipped with a fist weapon/sword/blunt/dualsword/spear. 20% chance of raising Lightning Force to level 2 during a critical attack.
+		LvL.2	icon_name: icon.skill10284_2	description: You are further imbued with Rage. + 15% and Speed + 7 when equipped with a fist weapon/sword/blunt/dualsword/spear. 10% chance of raising Lightning Force to level 3 during a critical attack.
+		LvL.3	icon_name: icon.skill10284_3	description: You feel Enraged. P Atk. +  + 30% and Speed + 10 when equipped with a fist weapon/sword/blunt/dualsword/spear. Has a 10% chance of becoming Enraged during a critical attack.
+		name: Lightning Force
+		level: 1
+		mp_consume: 0
+		description: You are imbued with Rage. P. Atk. + 10% and Speed + 5 when equipped with a fist weapon/sword/blunt/dualsword/spear. 20% chance of raising Lightning Force to level 2 during a critical attack.
+		icon_name: icon.skill10284
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10284" levels="3" name="Lightning Force">
 		<table name="#abnormal_level">1 2 3</table>
 		<table name="#abnormal_time">30 20 15</table>
 		<table name="#chance">20 10 10</table>
@@ -1489,7 +3558,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10285" levels="1" name="HP Drain">
+    <!--
+		HP Drain - Recovers HP by 20%.
+
+		name: HP Drain
+		level: 1
+		mp_consume: 0
+		description: Recovers HP by 20%.
+		icon_name: icon.skill10285
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 4
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10285" levels="1" name="HP Drain">
 		<table name="#heal">20</table>
 		<table name="#power">313</table>
 		<set name="icon" value="icon.skill10285"/>
@@ -1504,7 +3593,40 @@
 			<effect name="HealPercent" time="0" value="#heal"/>
 		</for>
 	</skill>
-	<skill id="10286" levels="1" name="Superior Resistance">
+    <!--
+		Superior Resistance - STR + 2, M. Def. + 199, and Fire/Water/Wind/Earth Resistance + 20. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily.
+
+
+		Enchant Route: 1 - 	STR + 2, M. Def. + 206, and Fire/Water/Wind/Earth Resistance + 21. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+
+		LvL.101	description: + 206, and Fire/Water/Wind/Earth Resistance + 21. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.102	description: + 213, and Fire/Water/Wind/Earth Resistance + 22. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.103	description: + 220, and Fire/Water/Wind/Earth Resistance + 23. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.104	description: + 227, and Fire/Water/Wind/Earth Resistance + 24. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.105	description: + 234, and Fire/Water/Wind/Earth Resistance + 25. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.106	description: + 241, and Fire/Water/Wind/Earth Resistance + 26. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.107	description: + 248, and Fire/Water/Wind/Earth Resistance + 27. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.108	description: + 255, and Fire/Water/Wind/Earth Resistance + 28. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.109	description: + 262, and Fire/Water/Wind/Earth Resistance + 29. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.110	description: + 270, and Fire/Water/Wind/Earth Resistance + 30. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		name: Superior Resistance
+		level: 1
+		mp_consume: 0
+		description: STR + 2, M. Def. + 199, and Fire/Water/Wind/Earth Resistance + 20. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily.
+		icon_name: icon.skill10005
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10286" levels="1" name="Superior Resistance">
 		<table name="#mDef">199</table>
 		<table name="#vuln">20</table>
 		<table name="#magicLevel">85</table>
@@ -1528,7 +3650,33 @@
 			<add order="0x40" stat="defenceEarth" value="#vuln"/>
 		</for>
 	</skill>
-	<skill id="10287" levels="6" name="Rolling Thunder">
+    <!--
+		Rolling Thunder - HP decreases by 225 per second.
+
+		LvL.1	description: HP decreases by 225 per second.
+		LvL.2	description: HP decreases by 228 per second.
+		LvL.3	description: HP decreases by 232 per second.
+		LvL.4	description: HP decreases by 235 per second.
+		LvL.5	description: HP decreases by 238 per second.
+		LvL.6	description: HP decreases by 242 per second.
+		name: Rolling Thunder
+		level: 1
+		mp_consume: 0
+		description: HP decreases by 225 per second.
+		icon_name: icon.skill0494
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10287" levels="6" name="Rolling Thunder">
 		<table name="#abnormal_level">1 2 3 4 5 6</table>
 		<table name="#activateRate">35 36 37 38 39 40</table>
 		<table name="#magicLevel">89 91 93 95 97 99</table>
@@ -1554,7 +3702,139 @@
 			<effect count="3" name="DamOverTime" time="1" value="#power"/>
 		</for>
 	</skill>
-	<skill id="10288" levels="8" name="Hurricane Storm">
+    <!--
+		Hurricane Storm - Attacks near the enemy with 11557 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit.
+
+		LvL.1	description: Attacks near the enemy with 11557 Power added to P Atk.	mp_consume: 161
+		LvL.2	description: Attacks near the enemy with 11956 Power added to P Atk.	mp_consume: 163
+		LvL.3	description: Attacks near the enemy with 12754 Power added to P Atk.	mp_consume: 169
+		LvL.4	description: Attacks near the enemy with 13553 Power added to P Atk.	mp_consume: 175
+		LvL.5	description: Attacks near the enemy with 14351 Power added to P Atk.	mp_consume: 180
+		LvL.6	description: Attacks near the enemy with 15150 Power added to P Atk.	mp_consume: 186
+		LvL.7	description: Attacks near the enemy with 15948 Power added to P Atk.	mp_consume: 192
+		LvL.8	description: Attacks near the enemy with 16747 Power added to P Atk.	mp_consume: 198
+
+		Enchant Route: 1 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.101	description: Attacks near the enemy with 17546 Power added to P Atk.	mp_consume: 190
+		LvL.102	description: Attacks near the enemy with 17945 Power added to P Atk.	mp_consume: 182
+		LvL.103	description: Attacks near the enemy with 18344 Power added to P Atk.	mp_consume: 174
+		LvL.104	description: Attacks near the enemy with 18744 Power added to P Atk.	mp_consume: 166
+		LvL.105	description: Attacks near the enemy with 19143 Power added to P Atk.	mp_consume: 158
+		LvL.106	description: Attacks near the enemy with 19542 Power added to P Atk.	mp_consume: 150
+		LvL.107	description: Attacks near the enemy with 19941 Power added to P Atk.	mp_consume: 142
+		LvL.108	description: Attacks near the enemy with 20341 Power added to P Atk.	mp_consume: 134
+		LvL.109	description: Attacks near the enemy with 20740 Power added to P Atk.	mp_consume: 126
+		LvL.110	description: Attacks near the enemy with 21139 Power added to P Atk.	mp_consume: 118
+
+		Enchant Route: 2 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.201	description: Attacks near the enemy with 17546 Power added to P Atk.
+		LvL.202	description: Attacks near the enemy with 17945 Power added to P Atk.
+		LvL.203	description: Attacks near the enemy with 18344 Power added to P Atk.
+		LvL.204	description: Attacks near the enemy with 18744 Power added to P Atk.
+		LvL.205	description: Attacks near the enemy with 19143 Power added to P Atk.
+		LvL.206	description: Attacks near the enemy with 19542 Power added to P Atk.
+		LvL.207	description: Attacks near the enemy with 19941 Power added to P Atk.
+		LvL.208	description: Attacks near the enemy with 20341 Power added to P Atk.
+		LvL.209	description: Attacks near the enemy with 20740 Power added to P Atk.
+		LvL.210	description: Attacks near the enemy with 21139 Power added to P Atk.
+
+		Enchant Route: 3 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.301	description: Attacks near the enemy with 17546 Power added to P Atk.
+		LvL.302	description: Attacks near the enemy with 17945 Power added to P Atk.
+		LvL.303	description: Attacks near the enemy with 18344 Power added to P Atk.
+		LvL.304	description: Attacks near the enemy with 18744 Power added to P Atk.
+		LvL.305	description: Attacks near the enemy with 19143 Power added to P Atk.
+		LvL.306	description: Attacks near the enemy with 19542 Power added to P Atk.
+		LvL.307	description: Attacks near the enemy with 19941 Power added to P Atk.
+		LvL.308	description: Attacks near the enemy with 20341 Power added to P Atk.
+		LvL.309	description: Attacks near the enemy with 20740 Power added to P Atk.
+		LvL.310	description: Attacks near the enemy with 21139 Power added to P Atk.
+
+		Enchant Route: 4 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.401	description: Attacks near the enemy with 17546 Power added to P Atk.
+		LvL.402	description: Attacks near the enemy with 17945 Power added to P Atk.
+		LvL.403	description: Attacks near the enemy with 18344 Power added to P Atk.
+		LvL.404	description: Attacks near the enemy with 18744 Power added to P Atk.
+		LvL.405	description: Attacks near the enemy with 19143 Power added to P Atk.
+		LvL.406	description: Attacks near the enemy with 19542 Power added to P Atk.
+		LvL.407	description: Attacks near the enemy with 19941 Power added to P Atk.
+		LvL.408	description: Attacks near the enemy with 20341 Power added to P Atk.
+		LvL.409	description: Attacks near the enemy with 20740 Power added to P Atk.
+		LvL.410	description: Attacks near the enemy with 21139 Power added to P Atk.
+
+		Enchant Route: 5 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.501	description: Attacks near the enemy with 17546 Power added to P Atk.
+		LvL.502	description: Attacks near the enemy with 17945 Power added to P Atk.
+		LvL.503	description: Attacks near the enemy with 18344 Power added to P Atk.
+		LvL.504	description: Attacks near the enemy with 18744 Power added to P Atk.
+		LvL.505	description: Attacks near the enemy with 19143 Power added to P Atk.
+		LvL.506	description: Attacks near the enemy with 19542 Power added to P Atk.
+		LvL.507	description: Attacks near the enemy with 19941 Power added to P Atk.
+		LvL.508	description: Attacks near the enemy with 20341 Power added to P Atk.
+		LvL.509	description: Attacks near the enemy with 20740 Power added to P Atk.
+		LvL.510	description: Attacks near the enemy with 21139 Power added to P Atk.
+
+		Enchant Route: 6 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.601	description: Attacks near the enemy with 17546 Power added to P Atk.
+		LvL.602	description: Attacks near the enemy with 17945 Power added to P Atk.
+		LvL.603	description: Attacks near the enemy with 18344 Power added to P Atk.
+		LvL.604	description: Attacks near the enemy with 18744 Power added to P Atk.
+		LvL.605	description: Attacks near the enemy with 19143 Power added to P Atk.
+		LvL.606	description: Attacks near the enemy with 19542 Power added to P Atk.
+		LvL.607	description: Attacks near the enemy with 19941 Power added to P Atk.
+		LvL.608	description: Attacks near the enemy with 20341 Power added to P Atk.
+		LvL.609	description: Attacks near the enemy with 20740 Power added to P Atk.
+		LvL.610	description: Attacks near the enemy with 21139 Power added to P Atk.
+
+		Enchant Route: 7 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.701	description: Attacks near the enemy with 17546 Power added to P Atk.
+		LvL.702	description: Attacks near the enemy with 17945 Power added to P Atk.
+		LvL.703	description: Attacks near the enemy with 18344 Power added to P Atk.
+		LvL.704	description: Attacks near the enemy with 18744 Power added to P Atk.
+		LvL.705	description: Attacks near the enemy with 19143 Power added to P Atk.
+		LvL.706	description: Attacks near the enemy with 19542 Power added to P Atk.
+		LvL.707	description: Attacks near the enemy with 19941 Power added to P Atk.
+		LvL.708	description: Attacks near the enemy with 20341 Power added to P Atk.
+		LvL.709	description: Attacks near the enemy with 20740 Power added to P Atk.
+		LvL.710	description: Attacks near the enemy with 21139 Power added to P Atk.
+
+		Enchant Route: 8 - 	Attacks near the enemy with 17546 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit. Enc
+
+		LvL.801	description: Attacks near the enemy with 17546 Power added to P Atk.
+		LvL.802	description: Attacks near the enemy with 17945 Power added to P Atk.
+		LvL.803	description: Attacks near the enemy with 18344 Power added to P Atk.
+		LvL.804	description: Attacks near the enemy with 18744 Power added to P Atk.
+		LvL.805	description: Attacks near the enemy with 19143 Power added to P Atk.
+		LvL.806	description: Attacks near the enemy with 19542 Power added to P Atk.
+		LvL.807	description: Attacks near the enemy with 19941 Power added to P Atk.
+		LvL.808	description: Attacks near the enemy with 20341 Power added to P Atk.
+		LvL.809	description: Attacks near the enemy with 20740 Power added to P Atk.
+		LvL.810	description: Attacks near the enemy with 21139 Power added to P Atk.
+		name: Hurricane Storm
+		level: 1
+		mp_consume: 161
+		description: Attacks near the enemy with 11557 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit.
+		icon_name: icon.skill10288
+		hp_consume: 0
+		cast_range: 500
+		hit_time: 1.79
+		cool_time: 0.3
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10288" levels="8" name="Hurricane Storm">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1650,7 +3930,83 @@
 			-->
 		</for>
 	</skill>
-	<skill id="10289" levels="4" name="Boost">
+    <!--
+		Boost - Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PvP.
+
+		LvL.1	description: Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PvP
+		LvL.2	description: Increases skills' effect by 35% for 60 seconds and normal/skill attack damage by 10% during PvP
+		LvL.3	description: Increases skills' effect by 40% for 60 seconds and normal/skill attack damage by 15% during PvP
+		LvL.4	description: Increases skills' effect by 45% for 60 seconds and normal/skill attack damage by 20% during PvP
+
+		Enchant Route: 1 - 	Increases Skill Power by 45% and damage inflicted during PvP by 20% for 60 seconds. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 137
+		LvL.102	mp_consume: 131
+		LvL.103	mp_consume: 125
+		LvL.104	mp_consume: 120
+		LvL.105	mp_consume: 114
+		LvL.106	mp_consume: 108
+		LvL.107	mp_consume: 102
+		LvL.108	mp_consume: 97
+		LvL.109	mp_consume: 91
+		LvL.110	mp_consume: 85
+
+		Enchant Route: 2 - 	Increases Skill Power by 45% and damage inflicted during PvP by 20% for 61 seconds. Enchant Time: Increases Duration.
+
+		LvL.201	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 61 seconds.
+		LvL.202	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 62 seconds.
+		LvL.203	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 63 seconds.
+		LvL.204	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 64 seconds.
+		LvL.205	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 65 seconds.
+		LvL.206	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 66 seconds.
+		LvL.207	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 67 seconds.
+		LvL.208	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 68 seconds.
+		LvL.209	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 69 seconds.
+		LvL.210	description: Increases Skill Power by 45% and damage inflicted during PvP by 20% for 70 seconds.
+
+		Enchant Route: 3 - 	Increases Skill Power by 45% and damage inflicted during PvP by 20% for 60 seconds. Enchant Chance Stun: Increases Stun Rate by 1.
+
+		LvL.301	description: Enchant Chance Stun: Increases Stun Rate by 1.
+		LvL.302	description: Enchant Chance Stun: Increases Stun Rate by 2.
+		LvL.303	description: Enchant Chance Stun: Increases Stun Rate by 3.
+		LvL.304	description: Enchant Chance Stun: Increases Stun Rate by 4.
+		LvL.305	description: Enchant Chance Stun: Increases Stun Rate by 5.
+		LvL.306	description: Enchant Chance Stun: Increases Stun Rate by 6.
+		LvL.307	description: Enchant Chance Stun: Increases Stun Rate by 7.
+		LvL.308	description: Enchant Chance Stun: Increases Stun Rate by 8.
+		LvL.309	description: Enchant Chance Stun: Increases Stun Rate by 9.
+		LvL.310	description: Enchant Chance Stun: Increases Stun Rate by 10.
+
+		Enchant Route: 4 - 	Increases Skill Power by 45% and damage inflicted during PvP by 20% for 60 seconds. Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+
+		LvL.401	description: Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+		LvL.402	description: Enchant Chance Knockdown: Increases Knockdown Rate by 2.
+		LvL.403	description: Enchant Chance Knockdown: Increases Knockdown Rate by 3.
+		LvL.404	description: Enchant Chance Knockdown: Increases Knockdown Rate by 4.
+		LvL.405	description: Enchant Chance Knockdown: Increases Knockdown Rate by 5.
+		LvL.406	description: Enchant Chance Knockdown: Increases Knockdown Rate by 6.
+		LvL.407	description: Enchant Chance Knockdown: Increases Knockdown Rate by 7.
+		LvL.408	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
+		LvL.409	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
+		LvL.410	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Boost
+		level: 1
+		mp_consume: 143
+		description: Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PvP.
+		icon_name: icon.skill10289
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0.2
+		reuse_delay: 180
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10289" levels="4" name="Boost">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">143 143 143 143</table>
 		<table name="#physDamage">1.3 1.35 1.4 1.45</table>
@@ -1694,7 +4050,35 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10290" levels="8" name="Hurricane Slasher">
+    <!--
+		Hurricane Slasher - Attacks around the enemy with 11557 Power added to P. Atk. Decreases power - 10% when equipped with a sword/blunt/fist weapon. Increases power + 50% when equipped with a spear. Requires a dagger, blunt, spear, fist weapon, dual blunt weapon, or dualswor
+
+		LvL.1	description: Attacks around the enemy with 11557 Power added to P Atk.	mp_consume: 138
+		LvL.2	description: Attacks around the enemy with 11956 Power added to P Atk.	mp_consume: 141
+		LvL.3	description: Attacks around the enemy with 12754 Power added to P Atk.	mp_consume: 146
+		LvL.4	description: Attacks around the enemy with 13553 Power added to P Atk.	mp_consume: 150
+		LvL.5	description: Attacks around the enemy with 14351 Power added to P Atk.	mp_consume: 155
+		LvL.6	description: Attacks around the enemy with 15150 Power added to P Atk.	mp_consume: 160
+		LvL.7	description: Attacks around the enemy with 15948 Power added to P Atk.	mp_consume: 165
+		LvL.8	description: Attacks around the enemy with 16747 Power added to P Atk.	mp_consume: 170
+		name: Hurricane Slasher
+		level: 1
+		mp_consume: 138
+		description: Attacks around the enemy with 11557 Power added to P. Atk. Decreases power - 10% when equipped with a sword/blunt/fist weapon. Increases power + 50% when equipped with a spear. Requires a dagger, blunt, spear, fist weapon, dual blunt weapon, or dualswor
+		icon_name: icon.skill0007
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.8
+		cool_time: 0
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10290" levels="8" name="Hurricane Slasher">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#mpConsume2">138 141 146 150 155 160 165 170</table>
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
@@ -1719,7 +4103,43 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10291" levels="1" name="Feral Bear Cry">
+    <!--
+		Feral Bear Cry - Shouts loudly to invoke the power of the Bear. For 5 minutes, increases your P. Atk. and P. Critical Damage by 30%.
+
+
+		Enchant Route: 1 - 	Shouts loudly to invoke the power of the Bear. Increases P. Atk. And Critical Damage by 30% for 5 minutes. Enchant Time: Increases Duration.
+
+
+		Enchant Route: 2 - 	Shouts loudly to invoke the power of the Bear. Increases P. Atk. And Critical Damage by 30% for 5 minutes. Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+
+		LvL.201	description: Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+		LvL.202	description: Enchant Chance Knockdown: Increases Knockdown Rate by 2.
+		LvL.203	description: Enchant Chance Knockdown: Increases Knockdown Rate by 3.
+		LvL.204	description: Enchant Chance Knockdown: Increases Knockdown Rate by 4.
+		LvL.205	description: Enchant Chance Knockdown: Increases Knockdown Rate by 5.
+		LvL.206	description: Enchant Chance Knockdown: Increases Knockdown Rate by 6.
+		LvL.207	description: Enchant Chance Knockdown: Increases Knockdown Rate by 7.
+		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
+		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
+		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Bear Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Bear. For 5 minutes, increases your P. Atk. and P. Critical Damage by 30%.
+		icon_name: icon.skill10291
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10291" levels="1" name="Feral Bear Cry">
 		<table name="#abnormal_time">300</table>
 		<table name="#knockdown">0</table>
 		<set name="abnormal_level" value="1"/>
@@ -1749,7 +4169,43 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10292" levels="1" name="Feral Ogre Cry">
+    <!--
+		Feral Ogre Cry - Shouts loudly to invoke the power of the Ogre. For 5 minutes, increases your P. Atk., P. Def. And M. Def. by 35% and P. Critical Damage and Max HP by 10%.
+
+
+		Enchant Route: 1 - 	Shouts loudly to invoke the power of the Ogre. Increases P. Atk./P. Def./ M. Def. by  35%, and Critical Damage and Max HP by 10% for 5 minutes. Enchant Time: Increases Duration.
+
+
+		Enchant Route: 2 - 	Shouts loudly to invoke the power of the Ogre. Increases P. Atk./P. Def./ M. Def. by  35%, and Critical Damage and Max HP by 10% for 5 minutes. Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+
+		LvL.201	description: Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+		LvL.202	description: Enchant Chance Knockdown: Increases Knockdown Rate by 2.
+		LvL.203	description: Enchant Chance Knockdown: Increases Knockdown Rate by 3.
+		LvL.204	description: Enchant Chance Knockdown: Increases Knockdown Rate by 4.
+		LvL.205	description: Enchant Chance Knockdown: Increases Knockdown Rate by 5.
+		LvL.206	description: Enchant Chance Knockdown: Increases Knockdown Rate by 6.
+		LvL.207	description: Enchant Chance Knockdown: Increases Knockdown Rate by 7.
+		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
+		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
+		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Ogre Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Ogre. For 5 minutes, increases your P. Atk., P. Def. And M. Def. by 35% and P. Critical Damage and Max HP by 10%.
+		icon_name: icon.skill10292
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10292" levels="1" name="Feral Ogre Cry">
 		<table name="#abnormal_time">300</table>
 		<table name="#knockdown">0</table>
 		<set name="abnormal_level" value="1"/>
@@ -1784,7 +4240,43 @@
 			<effect name="HealPercent" time="0" value="10"/>
 		</for>
 	</skill>
-	<skill id="10293" levels="1" name="Feral Puma Cry">
+    <!--
+		Feral Puma Cry - Shouts loudly to invoke the power of the Puma. For 5 minutes, increases your P. Accuracy by 10 and Atk. Spd. by 20%, and decreases Critical Damage received by 40%.
+
+
+		Enchant Route: 1 - 	Shouts loudly to invoke the power of the Puma. For 5 minutes, increases P. Accuracy by 10 and Atk. Spd. by 20%, and decreases damage received from Critical Attack by 40%. Enchant Time: Increases Duration.
+
+
+		Enchant Route: 2 - 	Shouts loudly to invoke the power of the Puma. For 5 minutes, increases P. Accuracy by 10 and Atk. Spd. by 20%, and decreases damage received from Critical Attack by 40%. Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+
+		LvL.201	description: Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+		LvL.202	description: Enchant Chance Knockdown: Increases Knockdown Rate by 2.
+		LvL.203	description: Enchant Chance Knockdown: Increases Knockdown Rate by 3.
+		LvL.204	description: Enchant Chance Knockdown: Increases Knockdown Rate by 4.
+		LvL.205	description: Enchant Chance Knockdown: Increases Knockdown Rate by 5.
+		LvL.206	description: Enchant Chance Knockdown: Increases Knockdown Rate by 6.
+		LvL.207	description: Enchant Chance Knockdown: Increases Knockdown Rate by 7.
+		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
+		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
+		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Puma Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Puma. For 5 minutes, increases your P. Accuracy by 10 and Atk. Spd. by 20%, and decreases Critical Damage received by 40%.
+		icon_name: icon.skill10293
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10293" levels="1" name="Feral Puma Cry">
 		<table name="#abnormal_time">300</table>
 		<table name="#knockdown">0</table>
 		<set name="abnormal_level" value="1"/>
@@ -1816,7 +4308,43 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10294" levels="1" name="Feral Rabbit Cry">	 
+    <!--
+		Feral Rabbit Cry - Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases your Atk. Spd. by 30%, Speed by 35% and P. Evasion by 15.
+
+
+		Enchant Route: 1 - 	Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases Atk. Spd. by 30%, Spd. By 35%, and P. Evasion by 15. Enchant Time: Increases Duration.
+
+
+		Enchant Route: 2 - 	Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases Atk. Spd. by 30%, Spd. By 35%, and P. Evasion by 15. Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+
+		LvL.201	description: Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+		LvL.202	description: Enchant Chance Knockdown: Increases Knockdown Rate by 2.
+		LvL.203	description: Enchant Chance Knockdown: Increases Knockdown Rate by 3.
+		LvL.204	description: Enchant Chance Knockdown: Increases Knockdown Rate by 4.
+		LvL.205	description: Enchant Chance Knockdown: Increases Knockdown Rate by 5.
+		LvL.206	description: Enchant Chance Knockdown: Increases Knockdown Rate by 6.
+		LvL.207	description: Enchant Chance Knockdown: Increases Knockdown Rate by 7.
+		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
+		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
+		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Rabbit Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases your Atk. Spd. by 30%, Speed by 35% and P. Evasion by 15.
+		icon_name: icon.skill10294
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10294" levels="1" name="Feral Rabbit Cry">	 
 		<table name="#abnormal_time">300</table>
 		<table name="#knockdown">0</table>
 		<set name="abnormal_level" value="1"/>
@@ -1848,7 +4376,43 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10295" levels="1" name="Hawk Cry">
+    <!--
+		Hawk Cry - Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases your P. Accuracy by 8, Critical Rate by 120 and Critical Damage by 30%.
+
+
+		Enchant Route: 1 - 	Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases P. Accuracy by 8, Critical Atk. Rate by 120, and Critical Damage by 30%. Enchant Time: Increases Duration.
+
+
+		Enchant Route: 2 - 	Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases P. Accuracy by 8, Critical Atk. Rate by 120, and Critical Damage by 30%. Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+
+		LvL.201	description: Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+		LvL.202	description: Enchant Chance Knockdown: Increases Knockdown Rate by 2.
+		LvL.203	description: Enchant Chance Knockdown: Increases Knockdown Rate by 3.
+		LvL.204	description: Enchant Chance Knockdown: Increases Knockdown Rate by 4.
+		LvL.205	description: Enchant Chance Knockdown: Increases Knockdown Rate by 5.
+		LvL.206	description: Enchant Chance Knockdown: Increases Knockdown Rate by 6.
+		LvL.207	description: Enchant Chance Knockdown: Increases Knockdown Rate by 7.
+		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
+		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
+		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Hawk Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases your P. Accuracy by 8, Critical Rate by 120 and Critical Damage by 30%.
+		icon_name: icon.skill10295
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10295" levels="1" name="Hawk Cry">
 		<table name="#abnormal_time">300</table>
 		<table name="#knockdown">0</table>
 		<set name="abnormal_level" value="1"/>
@@ -1878,7 +4442,40 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10296" levels="1" name="Spirit of the Hunter">
+    <!--
+		Spirit of the Hunter - For 30 minutes, increases damage against insects/plants/animals + 10%.
+
+
+		Enchant Route: 1 - 	For 32 minutes, increases damage against insects/plants/animals + 10%. Enchant Time: Increases duration.
+
+		LvL.101	description: For 32 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.102	description: For 34 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.103	description: For 36 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.104	description: For 38 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.105	description: For 40 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.106	description: For 42 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.107	description: For 44 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.108	description: For 46 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.109	description: For 48 minutes, increases damage against insects/plants/animals + 10%.
+		LvL.110	description: For 50 minutes, increases damage against insects/plants/animals + 10%.
+		name: Spirit of the Hunter
+		level: 1
+		mp_consume: 38
+		description: For 30 minutes, increases damage against insects/plants/animals + 10%.
+		icon_name: icon.skill0359
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10296" levels="1" name="Spirit of the Hunter">
 		<table name="#power">1.45</table>
 		<table name="#time">1800</table>
 		<set name="abnormal_level" value="2"/>
@@ -1908,7 +4505,40 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10297" levels="1" name="Spirit of the Slayer">
+    <!--
+		Spirit of the Slayer - For 30 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+
+
+		Enchant Route: 1 - 	For 32 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%. Enchant Time: Increases duration.
+
+		LvL.101	description: For 32 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.102	description: For 34 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.103	description: For 36 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.104	description: For 38 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.105	description: For 40 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.106	description: For 42 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.107	description: For 44 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.108	description: For 46 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.109	description: For 48 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		LvL.110	description: For 50 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		name: Spirit of the Slayer
+		level: 1
+		mp_consume: 38
+		description: For 30 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		icon_name: icon.skill0360
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10297" levels="1" name="Spirit of the Slayer">
 		<table name="#time">1800</table>
 		<set name="abnormal_level" value="2"/>
 		<set name="abnormal_time" value="#time"/>
@@ -1940,7 +4570,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10298" levels="1" name="Power Revival">
+    <!--
+		Power Revival - Recovers all of your HP.
+
+		name: Power Revival
+		level: 1
+		mp_consume: 38
+		description: Recovers all of your HP.
+		icon_name: icon.skill10298
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10298" levels="1" name="Power Revival">
 		<set name="analog_skills" value="181;833"/>
 		<set name="effectPoint" value="100"/>
 		<set name="hitTime" value="1500"/>
@@ -1953,7 +4603,27 @@
 		<set name="skillType" value="HEAL_PERCENT"/>
 		<set name="target" value="TARGET_SELF"/>
 	</skill>
-	<skill id="10299" levels="1" name="Stun Spear">
+    <!--
+		Stun Spear - Inflicted with stun and unable to move for 3 seconds.
+
+		name: Stun Spear
+		level: 1
+		mp_consume: 0
+		description: Inflicted with stun and unable to move for 3 seconds.
+		icon_name: icon.skill10299
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10299" levels="1" name="Stun Spear">
 		<table name="#mpConsume2">40</table>
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_level" value="4"/>

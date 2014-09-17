@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
 <list>
-	<skill id="19001" levels="1" name="Проверка - Кровопускание">
+    <!--
+		Test Bleed - Race confirm
+
+		name: Test Bleed
+		level: 1
+		mp_consume: 0
+		description: Race confirm
+		icon_name: icon.skill0010509
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.08
+		cool_time: 0.72
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19001" levels="1" name="Test Bleed">
 		<set name="reuseDelay" value="3000"/>
 		<set name="coolTime" value="720"/>
 		<set name="hitTime" value="1080"/>
@@ -14,7 +35,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19002" levels="1" name="Якорь">
+    <!--
+		Anchor - Action prevent item skill confirm
+
+		name: Anchor
+		level: 1
+		mp_consume: 0
+		description: Action prevent item skill confirm
+		icon_name: icon.skill10510
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19002" levels="1" name="Anchor">
 		<set name="reuseDelay" value="3000"/>
 		<set name="hitTime" value="3000"/>
 		<set name="abnormal_time" value="40"/>
@@ -27,7 +68,32 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19003" levels="5" name="Жезл Сопротивления Клана">
+    <!--
+		Clan Resistance Hall - Increases clan members' Holy/Dark Attack Resistance by 3. Applies after the elder stage.
+
+		LvL.1	description: Increases clan members' Holy/Dark Attack Resistance by 3. Applies after the elder stage.
+		LvL.2	description: Increases clan members' Holy/Dark Attack Resistance by 4. Applies after the elder stage.
+		LvL.3	description: Increases clan members' Holy/Dark Attack Resistance by 5. Applies after the elder stage.
+		LvL.4	description: Increases clan members' Holy/Dark Attack Resistance by 6. Applies after the elder stage.
+		LvL.5	description: Increases clan members' Holy/Dark Attack Resistance by 7. Applies after the elder stage.
+		name: Clan Resistance Hall
+		level: 1
+		mp_consume: 0
+		description: Increases clan members' Holy/Dark Attack Resistance by 3. Applies after the elder stage.
+		icon_name: icon.skill19003
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 15
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19003" levels="5" name="Clan Resistance Hall">
 		<set name="magicLevel" value="1"/>
 		<set name="icon" value="icon.skill19003"/>
 		<table name="#Def">3 4 5 6 7</table>
@@ -40,7 +106,32 @@
 			<add order="0x40" stat="defenceUnholy" value="#Def"/>
 		</for>
 	</skill>
-	<skill id="19004" levels="5" name="Контроль над Негативными Эффектами Клана">
+    <!--
+		Clan De-Buff Control - Increases clan members' Debuff Resistance by 3%. Applies after the elder stage.
+
+		LvL.1	description: Increases clan members' Debuff Resistance by 3%.
+		LvL.2	description: Increases clan members' Debuff Resistance by 4%.
+		LvL.3	description: Increases clan members' Debuff Resistance by 5%.
+		LvL.4	description: Increases clan members' Debuff Resistance by 6%.
+		LvL.5	description: Increases clan members' Debuff Resistance by 7%.
+		name: Clan De-Buff Control
+		level: 1
+		mp_consume: 0
+		description: Increases clan members' Debuff Resistance by 3%. Applies after the elder stage.
+		icon_name: icon.skill19004
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 15
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19004" levels="5" name="Clan De-Buff Control">
 		<set name="magicLevel" value="1"/>
 		<set name="icon" value="icon.skill19004"/>
 		<table name="#Def">3 4 5 6 7</table>
@@ -52,7 +143,32 @@
 			<add order="0x40" stat="debuffResist" value="#Def"/>
 		</for>
 	</skill>
-	<skill id="19005" levels="5" name="Контроль над Устойчивостью Клана">
+    <!--
+		Clan Muzzle Control - Increases clan members' Paralysis Resistance by 12. Applies after the elder stage.
+
+		LvL.1	description: Increases clan members' Paralysis Resistance by 12. Applies after the elder stage.
+		LvL.2	description: Increases clan members' Paralysis Resistance by 13. Applies after the elder stage.
+		LvL.3	description: Increases clan members' Paralysis Resistance by 14. Applies after the elder stage.
+		LvL.4	description: Increases clan members' Paralysis Resistance by 15. Applies after the elder stage.
+		LvL.5	description: Increases clan members' Paralysis Resistance by 16. Applies after the elder stage.
+		name: Clan Muzzle Control
+		level: 1
+		mp_consume: 0
+		description: Increases clan members' Paralysis Resistance by 12. Applies after the elder stage.
+		icon_name: icon.skill19005
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 15
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19005" levels="5" name="Clan Muzzle Control">
 		<set name="magicLevel" value="1"/>
 		<set name="icon" value="icon.skill19005"/>
 		<table name="#Def">12 13 14 15 16</table>
@@ -64,7 +180,32 @@
 			<add order="0x40" stat="paralyzeResist" value="#Def"/>
 		</for>
 	</skill>
-	<skill id="19006" levels="5" name="Контроль над Психикой Клана">
+    <!--
+		Clan Mental Control - Increases clan members' Mental Attack Resistance by 12. Applies after the elder stage.
+
+		LvL.1	description: Increases clan members' Mental Attack Resistance by 12. Applies after the elder stage.
+		LvL.2	description: Increases clan members' Mental Attack Resistance by 13. Applies after the elder stage.
+		LvL.3	description: Increases clan members' Mental Attack Resistance by 14. Applies after the elder stage.
+		LvL.4	description: Increases clan members' Mental Attack Resistance by 15. Applies after the elder stage.
+		LvL.5	description: Increases clan members' Mental Attack Resistance by 16. Applies after the elder stage.
+		name: Clan Mental Control
+		level: 1
+		mp_consume: 0
+		description: Increases clan members' Mental Attack Resistance by 12. Applies after the elder stage.
+		icon_name: icon.skill19006
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 15
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19006" levels="5" name="Clan Mental Control">
 		<set name="magicLevel" value="1"/>
 		<set name="icon" value="icon.skill19006"/>
 		<table name="#Def">12 13 14 15 16</table>
@@ -76,7 +217,27 @@
 			<add order="0x40" stat="mentalResist" value="#Def"/>
 		</for>
 	</skill>
-	<skill id="19007" levels="1" name="Призыв Клана">
+    <!--
+		Clan Summon - Summons a clan member. Consumes 5 Spirit Ores. Consumes 900 Individual Fame. Applies after the viscount stage.
+
+		name: Clan Summon
+		level: 1
+		mp_consume: 0
+		description: Summons a clan member. Consumes 5 Spirit Ores. Consumes 900 Individual Fame. Applies after the viscount stage.
+		icon_name: icon.skill19007
+		hp_consume: 0
+		cast_range: -2
+		hit_time: 15
+		cool_time: 0
+		reuse_delay: 1800
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 11
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19007" levels="1" name="Clan Summon">
 		<set name="reuseDelay" value="1800000"/>
 		<set name="hitTime" value="15000"/>
 		<set name="magicLevel" value="85"/>
@@ -94,7 +255,27 @@
 		<set name="itemConsumeCount" value="10"/>
 		<set name="fameConsume" value="900"/>
 	</skill>
-	<skill id="19008" levels="1" name="Защитник Клана">
+    <!--
+		Clan Guardian - Uses the clan guardian's power to restore nearby clan members' HP/MP/CP. Consumes 100 Spirit Ores. Consumes 1000 Clan Reputation. Distinguished King or above only.
+
+		name: Clan Guardian
+		level: 1
+		mp_consume: 0
+		description: Uses the clan guardian's power to restore nearby clan members' HP/MP/CP. Consumes 100 Spirit Ores. Consumes 1000 Clan Reputation. Distinguished King or above only.
+		icon_name: icon.skill19008
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19008" levels="1" name="Clan Guardian">
 		<set name="reuseDelay" value="43200000"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1500"/>
@@ -106,7 +287,27 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<!-- Missing Npc?Summon?Or just skill? TODO [iqman/bonux] -->
 	</skill>
-	<skill id="19009" levels="1" name="Рождение Клана">
+    <!--
+		Clan Advent - When the clan leader logs in, clan members' P. Atk., P. Def., and M. Def. + 5%, M. Atk. + 6%, and HP/MP recovery bonus + 5.
+
+		name: Clan Advent
+		level: 1
+		mp_consume: 0
+		description: When the clan leader logs in, clan members' P. Atk., P. Def., and M. Def. + 5%, M. Atk. + 6%, and HP/MP recovery bonus + 5.
+		icon_name: icon.skill19009
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 4
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19009" levels="1" name="Clan Advent">
 		<set name="reuseDelay" value="2000"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_type" value="clan_advent"/>
@@ -131,7 +332,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19010" levels="1" name="Копия Клана">
+    <!--
+		Clan Copy - Summons a copy of yourself to cause confusion among the enemy. Consumes 50 Spirit Ores. Consumes 1500 Individual Fame. Marquis or above only.
+
+		name: Clan Copy
+		level: 1
+		mp_consume: 0
+		description: Summons a copy of yourself to cause confusion among the enemy. Consumes 50 Spirit Ores. Consumes 1500 Individual Fame. Marquis or above only.
+		icon_name: icon.skill19010
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19010" levels="1" name="Clan Copy">
 		<set name="reuseDelay" value="43200000"/>
 		<set name="hitTime" value="2000"/>
 		<set name="magicLevel" value="85"/>
@@ -147,7 +368,27 @@
 		<set name="fameConsume" value="1500"/>
 		<set name="min_pledge_rank" value="MARQUIS"/> <!-- Маркиз -->
 	</skill>
-	<skill id="19011" levels="1" name="Легенда Клана">
+    <!--
+		Clan Legend - Increases P. Atk. and P. Def. when HP is below 30%. Applies after the lord stage.
+
+		name: Clan Legend
+		level: 1
+		mp_consume: 0
+		description: Increases P. Atk. and P. Def. when HP is below 30%. Applies after the lord stage.
+		icon_name: icon.skill19011
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19011" levels="1" name="Clan Legend">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill19011"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -163,7 +404,27 @@
 			</add>
 		</for>
 	</skill>
-	<skill id="19012" levels="1" name="Скрыть Клан">
+    <!--
+		Clan Hide - Hides nearby clan members. Decreases Speed by 50% when hidden. Consumes 150 Soulstones. Consumes 1000 Clan Reputation. Applies after the lord stage.
+
+		name: Clan Hide
+		level: 1
+		mp_consume: 0
+		description: Hides nearby clan members. Decreases Speed by 50% when hidden. Consumes 150 Soulstones. Consumes 1000 Clan Reputation. Applies after the lord stage.
+		icon_name: icon.skill19012
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 14400
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19012" levels="1" name="Clan Hide">
 		<set name="reuseDelay" value="14400000"/>
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_effect" value="STEALTH"/>
@@ -187,7 +448,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19013" levels="1" name="Снятие Негативных Эффектов Клана">
+    <!--
+		Clan Un-debuff - Cancels all debuffs of nearby clan members. Consumes 30 Spirit Ore. Consumes 1500 Individual Fame. Applies after the marquis stage.
+
+		name: Clan Un-debuff
+		level: 1
+		mp_consume: 0
+		description: Cancels all debuffs of nearby clan members. Consumes 30 Spirit Ore. Consumes 1500 Individual Fame. Applies after the marquis stage.
+		icon_name: icon.skill19013
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19013" levels="1" name="Clan Un-debuff">
 		<set name="reuseDelay" value="3600000"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1500"/>
@@ -210,7 +491,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19014" levels="1" name="Защита Клана">
+    <!--
+		Clan Defense - Makes nearby clan members invincible. Consumes 30 Spirit Ore. Consumes 1000 Clan Reputation. Applies after the distinguished king stage.
+
+		name: Clan Defense
+		level: 1
+		mp_consume: 0
+		description: Makes nearby clan members invincible. Consumes 30 Spirit Ore. Consumes 1000 Clan Reputation. Applies after the distinguished king stage.
+		icon_name: icon.skill19014
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19014" levels="1" name="Clan Defense">
 		<set name="reuseDelay" value="14400000"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1500"/>
@@ -233,7 +534,27 @@
 			<effect name="Invulnerable"/>
 		</for>
 	</skill>
-	<skill id="19015" levels="1" name="Дружба Клана">
+    <!--
+		Clan Friendly - Increases nearby clan members' P. Critical Rate by 3% and M. Critical Rate by 20. Consumes 50 Spirit Ore. Consumes 3500 Individual Fame. Applies after the marquis stage.
+
+		name: Clan Friendly
+		level: 1
+		mp_consume: 0
+		description: Increases nearby clan members' P. Critical Rate by 3% and M. Critical Rate by 20. Consumes 50 Spirit Ore. Consumes 3500 Individual Fame. Applies after the marquis stage.
+		icon_name: icon.skill19015
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19015" levels="1" name="Clan Friendly">
 		<set name="reuseDelay" value="3600000"/>
 		<set name="hitTime" value="2500"/>
 		<set name="abnormal_time" value="600"/>
@@ -257,7 +578,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19016" levels="1" name="Граница Клана">
+    <!--
+		Clan Boundary - Increases nearby clan members' P. Atk. by 3% and P. Def. by 3%. Consumes 50 Spirit Ore. Consumes 3000 Individual Fame. Applies after the count stage.
+
+		name: Clan Boundary
+		level: 1
+		mp_consume: 0
+		description: Increases nearby clan members' P. Atk. by 3% and P. Def. by 3%. Consumes 50 Spirit Ore. Consumes 3000 Individual Fame. Applies after the count stage.
+		icon_name: icon.skill19016
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19016" levels="1" name="Clan Boundary">
 		<set name="reuseDelay" value="3600000"/>
 		<set name="hitTime" value="2500"/>
 		<set name="abnormal_time" value="600"/>
@@ -281,7 +622,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19017" levels="1" name="Тюрьма Клана">
+    <!--
+		Clan Prison - For 60 sec., Speed of nearby enemies - 23% and stops them from escaping. Consumes 30 Spirit Ore. Consumes 3000 Individual Fame. Applies after the duke stage.
+
+		name: Clan Prison
+		level: 1
+		mp_consume: 0
+		description: For 60 sec., Speed of nearby enemies - 23% and stops them from escaping. Consumes 30 Spirit Ore. Consumes 3000 Individual Fame. Applies after the duke stage.
+		icon_name: icon.skill19017
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19017" levels="1" name="Clan Prison">
 		<set name="reuseDelay" value="3600000"/>
 		<set name="hitTime" value="1500"/>
 		<set name="abnormal_time" value="60"/>
@@ -304,7 +665,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19018" levels="1" name="Восстановление Защитника Клана">
+    <!--
+		Clan Guardian Recovery - Restores HP/MP/CP.
+
+		name: Clan Guardian Recovery
+		level: 1
+		mp_consume: 0
+		description: Restores HP/MP/CP.
+		icon_name: icon.skill19008
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19018" levels="1" name="Clan Guardian Recovery">
 		<set name="reuseDelay" value="5000"/>
 		<set name="hitTime" value="1500"/>
 		<set name="magicLevel" value="85"/>
@@ -314,7 +695,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19019" levels="1" name="Клинок Революции">
+    <!--
+		Revolution Blade - Inflicts physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Blade
+		level: 1
+		mp_consume: 0
+		description: Inflicts physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill10013
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19019" levels="1" name="Revolution Blade">
 		<set name="reuseDelay" value="3000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -323,7 +724,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19020" levels="1" name="Огненный Дождь Революции">
+    <!--
+		Revolution Eruption - Attacks frontal targets to inflict physical damage. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Eruption
+		level: 1
+		mp_consume: 0
+		description: Attacks frontal targets to inflict physical damage. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill10265
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 6
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19020" levels="1" name="Revolution Eruption">
 		<set name="reuseDelay" value="6000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -332,7 +753,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19021" levels="1" name="Удар Революции">
+    <!--
+		Revolution Strike - Inflicts powerful physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Strike
+		level: 1
+		mp_consume: 0
+		description: Inflicts powerful physical damage on target. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill10260
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19021" levels="1" name="Revolution Strike">
 		<set name="reuseDelay" value="30000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -341,7 +782,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19022" levels="1" name="Выстрел Революции">
+    <!--
+		Revolution Shot - Attacks distant enemies. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Shot
+		level: 1
+		mp_consume: 0
+		description: Attacks distant enemies. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill10762
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19022" levels="1" name="Revolution Shot">
 		<set name="reuseDelay" value="3000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -350,7 +811,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19023" levels="1" name="Мультиудар Революции">
+    <!--
+		Revolution Multi-Shot - Does ranged attacks centered on frontal target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Multi-Shot
+		level: 1
+		mp_consume: 0
+		description: Does ranged attacks centered on frontal target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill10771
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 6
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 8
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19023" levels="1" name="Revolution Multi-Shot">
 		<set name="reuseDelay" value="6000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -359,7 +840,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19024" levels="1" name="Выстрел Торнадо Революции">
+    <!--
+		Revolution Tornado Shot - Inflicts a penetrating attack on enemies at the front. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Tornado Shot
+		level: 1
+		mp_consume: 0
+		description: Inflicts a penetrating attack on enemies at the front. Requires a bow or crossbow to be equipped. Over-hit. Critical. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill10760
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19024" levels="1" name="Revolution Tornado Shot">
 		<set name="reuseDelay" value="30000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -368,7 +869,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19025" levels="1" name="Шип Революции">
+    <!--
+		Revolution Spike - Inflicts a magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Spike
+		level: 1
+		mp_consume: 0
+		description: Inflicts a magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill11011
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19025" levels="1" name="Revolution Spike">
 		<set name="reuseDelay" value="3000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -377,7 +898,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19026" levels="1" name="Взрыв Революции">
+    <!--
+		Revolution Blast - Inflicts a magic attack on target and enemies near target. Over-hit.  Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Blast
+		level: 1
+		mp_consume: 0
+		description: Inflicts a magic attack on target and enemies near target. Over-hit.  Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill11034
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 6
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19026" levels="1" name="Revolution Blast">
 		<set name="reuseDelay" value="6000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -386,7 +927,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19027" levels="1" name="Разрушения Революции">
+    <!--
+		Revolution Destruction - Inflicts a powerful magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Destruction
+		level: 1
+		mp_consume: 0
+		description: Inflicts a powerful magic attack on target. Over-hit. Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill11023
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19027" levels="1" name="Revolution Destruction">
 		<set name="reuseDelay" value="30000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -395,7 +956,29 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19028" levels="2" name="Дух Революции">
+    <!--
+		Revolution Spirit - Increases Max CP by 10000, P. Def. by 1000, and M. Def. by 1000 for 5 minutes.  Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+
+		LvL.1	description: Increases Max CP by 10000, P Def.
+		LvL.2	description: Increases Max CP by 15000, P Def.
+		name: Revolution Spirit
+		level: 1
+		mp_consume: 0
+		description: Increases Max CP by 10000, P. Def. by 1000, and M. Def. by 1000 for 5 minutes.  Can only be used in a castle siege area by characters between lv 40 - 84. Soulshots and Spiritshots are not consumed.
+		icon_name: BranchSys2.icon.skill20006
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19028" levels="2" name="Revolution Spirit">
 		<set name="reuseDelay" value="3000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -404,7 +987,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19029" levels="1" name="Самолечение Революции">
+    <!--
+		Revolution Self CP Recovery - Increases combat spirit to recover your own CP by 2000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Self CP Recovery
+		level: 1
+		mp_consume: 0
+		description: Increases combat spirit to recover your own CP by 2000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill0440
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19029" levels="1" name="Revolution Self CP Recovery">
 		<set name="reuseDelay" value="3000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -413,7 +1016,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19030" levels="1" name="Лечение Революции">
+    <!--
+		Revolution CP Recovery - Increases combat spirit to recover target's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution CP Recovery
+		level: 1
+		mp_consume: 0
+		description: Increases combat spirit to recover target's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill11755
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 6
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19030" levels="1" name="Revolution CP Recovery">
 		<set name="reuseDelay" value="6000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -422,7 +1045,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19031" levels="1" name="Групповое Лечение Революции">
+    <!--
+		Revolution Party CP Recovery - Increases combat spirit to recover a party member's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed.
+
+		name: Revolution Party CP Recovery
+		level: 1
+		mp_consume: 0
+		description: Increases combat spirit to recover a party member's CP by 1000. Can only be used by characters between lv 40-84 within the castle siege area. Soulshots and Spiritshots are not consumed.
+		icon_name: icon.skill11757
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 6
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19031" levels="1" name="Revolution Party CP Recovery">
 		<set name="reuseDelay" value="6000"/>
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="1000"/>
@@ -431,7 +1074,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19032" levels="1" name="Способности Света">
+    <!--
+		Ability of Light - Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher.
+
+		name: Ability of Light
+		level: 1
+		mp_consume: 0
+		description: Imbued with the Ability of Light. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Effects do not apply when in Chaotic state. Can be used by a Marquis or higher.
+		icon_name: icon.skill19008
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 15
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19032" levels="1" name="Ability of Light">
 		<set name="magicLevel" value="1"/>
 		<set name="icon" value="icon.skill19008"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -446,7 +1109,27 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="1.1"/>
 		</for>
 	</skill>
-	<skill id="19033" levels="1" name="Способности Тьмы">
+    <!--
+		Ability of Darkness - Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher.
+
+		name: Ability of Darkness
+		level: 1
+		mp_consume: 0
+		description: Imbued with the Ability of Darkness. Increases Max CP by 3000 and damage inflicted during PvP by 10%. Can be used by a Marquis or higher.
+		icon_name: icon.skill19008
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 15
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19033" levels="1" name="Ability of Darkness">
 		<set name="magicLevel" value="1"/>
 		<set name="icon" value="icon.skill19008"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -460,7 +1143,27 @@
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="1.1"/>
 		</for>
 	</skill>
-	<skill id="19034" levels="1" name="Печать Света">
+    <!--
+		Imprint of Light - Engraves the Imprint of Light on the ancient relic that guards the castle.
+
+		name: Imprint of Light
+		level: 1
+		mp_consume: 50
+		description: Engraves the Imprint of Light on the ancient relic that guards the castle.
+		icon_name: icon.skill0246
+		hp_consume: 0
+		cast_range: 85
+		hit_time: 120
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 6
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19034" levels="1" name="Imprint of Light">
 		<set name="reuseDelay" value="5000"/>
 		<set name="hitTime" value="180000"/>
 		<set name="magicLevel" value="30"/>
@@ -476,7 +1179,27 @@
 		<set name="isReuseDelayPermanent" value="true"/>
 		<set name="castle_side" value="LIGHT"/>
 	</skill>
-	<skill id="19035" levels="1" name="Печать Тьмы">
+    <!--
+		Imprint of Darkness - Engraves the Imprint of Darkness on the ancient relic that guards the castle.
+
+		name: Imprint of Darkness
+		level: 1
+		mp_consume: 50
+		description: Engraves the Imprint of Darkness on the ancient relic that guards the castle.
+		icon_name: icon.skill0246
+		hp_consume: 0
+		cast_range: 85
+		hit_time: 120
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 6
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19035" levels="1" name="Imprint of Darkness">
 		<set name="reuseDelay" value="5000"/>
 		<set name="hitTime" value="180000"/>
 		<set name="magicLevel" value="30"/>
@@ -492,7 +1215,27 @@
 		<set name="isReuseDelayPermanent" value="true"/>
 		<set name="castle_side" value="DARK"/>
 	</skill>
-	<skill id="19036" levels="1" name="Благословение Света">
+    <!--
+		Blessing of Light - Acquires 3% additional XP and SP through the blessing of the Guardian of Light.
+
+		name: Blessing of Light
+		level: 1
+		mp_consume: 0
+		description: Acquires 3% additional XP and SP through the blessing of the Guardian of Light.
+		icon_name: icon.etc_pi_gift_box_i04
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 4
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19036" levels="1" name="Blessing of Light">
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_type" value="gerold_buff"/>
 		<set name="abnormal_level" value="1"/>
@@ -507,7 +1250,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19037" levels="1" name="Плащ Ослепительного Света">
+    <!--
+		Cloak of Radiant Light - STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. Ineffective in Chaotic state.
+
+		name: Cloak of Radiant Light
+		level: 1
+		mp_consume: 0
+		description: STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%. Ineffective in Chaotic state.
+		icon_name: icon.vesper_cloack_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19037" levels="1" name="Cloak of Radiant Light">
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
@@ -525,7 +1288,27 @@
 			<add order="0x10" stat="STR" value="3"/>
 		</for>
 	</skill>
-	<skill id="19038" levels="1" name="Плащ Холодной Тьмы">
+    <!--
+		Cold Cloak of Darkness - STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%.
+
+		name: Cold Cloak of Darkness
+		level: 1
+		mp_consume: 0
+		description: STR/MEN/DEX/CON/INT/WIT + 3, decreased damage received during PvP by 15%.
+		icon_name: icon.vesper_cloack_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19038" levels="1" name="Cold Cloak of Darkness">
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
@@ -542,7 +1325,27 @@
 			<add order="0x10" stat="STR" value="3"/>
 		</for>
 	</skill>
-	<skill id="19039" levels="1" name="Плащ Света">
+    <!--
+		Cloak of Light - STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. Ineffective in Chaotic state.
+
+		name: Cloak of Light
+		level: 1
+		mp_consume: 0
+		description: STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%. Ineffective in Chaotic state.
+		icon_name: icon.vesper_cloack_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19039" levels="1" name="Cloak of Light">
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
@@ -560,7 +1363,27 @@
 			<add order="0x10" stat="STR" value="2"/>
 		</for>
 	</skill>
-	<skill id="19040" levels="1" name="Плащ Тьмы">
+    <!--
+		Cloak of Darkness - STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%.
+
+		name: Cloak of Darkness
+		level: 1
+		mp_consume: 0
+		description: STR/MEN/DEX/CON/INT/WIT + 2, decreased damage received during PvP by 5%.
+		icon_name: icon.vesper_cloack_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19040" levels="1" name="Cloak of Darkness">
 		<set name="icon" value="icon.vesper_cloack_i00"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
@@ -577,7 +1400,27 @@
 			<add order="0x10" stat="STR" value="2"/>
 		</for>
 	</skill>
-	<skill id="19041" levels="1" name="Возвращение в Замок">
+    <!--
+		Escape: Castle - Return to Castle.
+
+		name: Escape: Castle
+		level: 1
+		mp_consume: 0
+		description: Return to Castle.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 20
+		cool_time: 0
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19041" levels="1" name="Escape: Castle">
 		<set name="reuseDelay" value="3600000"/>
 		<set name="hitTime" value="20000"/>
 		<set name="icon" value="icon.skill0000"/>
@@ -589,7 +1432,27 @@
 		<set name="skillType" value="RECALL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19042" levels="1" name="Благ. Свиток Возвращения в Замок">
+    <!--
+		Blessed Scroll of Escape: Castle - Return to Castle.
+
+		name: Blessed Scroll of Escape: Castle
+		level: 1
+		mp_consume: 0
+		description: Return to Castle.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 3600
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19042" levels="1" name="Blessed Scroll of Escape: Castle">
 		<set name="reuseDelay" value="3600000"/>
 		<set name="hitTime" value="200"/>
 		<set name="icon" value="icon.skill0000"/>
@@ -601,7 +1464,29 @@
 		<set name="skillType" value="RECALL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19074" levels="2" name="Правила Академии">
+    <!--
+		Academy Precept - For 60 minutes, increases academy members' P. Atk. by 10%, M. Atk. by 10%, Critical Rate by 10%, and M. Critical Rate by 10%.
+
+		LvL.1	description: by 10%, M Atk. by 10%, Critical Rate by 10%, and M Critical Rate by 10%.	reuse_delay: 43200
+		LvL.2	description: by 20%, M Atk. by 20%, Critical Rate by 10%, and M Critical Rate by 10%.	reuse_delay: 21600
+		name: Academy Precept
+		level: 1
+		mp_consume: 100
+		description: For 60 minutes, increases academy members' P. Atk. by 10%, M. Atk. by 10%, Critical Rate by 10%, and M. Critical Rate by 10%.
+		icon_name: icon.skill19008
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 43200
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19074" levels="2" name="Academy Precept">
 		<table name="#magicLevel">85 90</table>
 		<table name="#abnormal_level">1 2</table>
 		<table name="#reuseDelay">43200000 21600000</table>
@@ -628,14 +1513,54 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19075" levels="1" name="Отношения Клана">
+    <!--
+		Clan Relation - none
+
+		name: Clan Relation
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill19008
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 15
+		element_guess: 6
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19075" levels="1" name="Clan Relation">
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill19008"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19076" levels="1" name="Награда Академии Клана">
+    <!--
+		Clan Academy Reward - none
+
+		name: Clan Academy Reward
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 4
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19076" levels="1" name="Clan Academy Reward">
 		<set name="magicLevel" value="1"/>
 		<set name="magicType" value="SPECIAL"/>
 		<set name="icon" value="icon.skill0000"/>
@@ -643,7 +1568,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19080" levels="1" name="Сигель Иксион">
+    <!--
+		Sigel Ixion - Transforms into Ixion.
+
+		name: Sigel Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19080" levels="1" name="Sigel Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -679,7 +1624,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19081" levels="1" name="Иксион Тира">
+    <!--
+		Tyrr Ixion - Transforms into Ixion.
+
+		name: Tyrr Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19081" levels="1" name="Tyrr Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -715,7 +1680,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19082" levels="1" name="Иксион Одала">
+    <!--
+		Othell Ixion - Transforms into Ixion.
+
+		name: Othell Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19082" levels="1" name="Othell Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -751,7 +1736,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19083" levels="1" name="Иксион Эура">
+    <!--
+		Yul Ixion - Transforms into Ixion.
+
+		name: Yul Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19083" levels="1" name="Yul Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -787,7 +1792,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19084" levels="1" name="Иксион Фео">
+    <!--
+		Feoh Ixion - Transforms into Ixion.
+
+		name: Feoh Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19084" levels="1" name="Feoh Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -823,7 +1848,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19085" levels="1" name="Иксион Иса">
+    <!--
+		Iss Ixion - Transforms into Ixion.
+
+		name: Iss Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19085" levels="1" name="Iss Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -859,7 +1904,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19086" levels="1" name="Иксион Веньо">
+    <!--
+		Wynn Ixion - Transforms into Ixion.
+
+		name: Wynn Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19086" levels="1" name="Wynn Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -895,7 +1960,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19087" levels="1" name="Альгиз Иксион">
+    <!--
+		Aeore Ixion - Transforms into Ixion.
+
+		name: Aeore Ixion
+		level: 1
+		mp_consume: 0
+		description: Transforms into Ixion.
+		icon_name: icon.skilltransform3
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19087" levels="1" name="Aeore Ixion">
 		<set name="hitTime" value="1000"/>
 		<set name="abnormal_time" value="3600"/>
 		<set name="abnormal_level" value="1"/>
@@ -931,7 +2016,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="19088" levels="4" name="Призвать Осадного Голема">
+    <!--
+		Summon Siege Golem - Summons a siege weapon. Requires 400 R-grade Crystals. Automatically acquired by dwarves at level 85.
+
+		LvL.1	description: Automatically acquired by dwarves at level 85.
+		LvL.2	description: Automatically acquired by dwarves at level 90.
+		LvL.3	description: Automatically acquired by dwarves at level 95.
+		LvL.4	description: Automatically acquired by dwarves at level 99.
+		name: Summon Siege Golem
+		level: 1
+		mp_consume: 530
+		description: Summons a siege weapon. Requires 400 R-grade Crystals. Automatically acquired by dwarves at level 85.
+		icon_name: icon.skill0013
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 180
+		cool_time: 0
+		reuse_delay: 7200
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19088" levels="4" name="Summon Siege Golem">
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="reuseDelay" value="7200000"/>
 		<set name="hitTime" value="180000"/>
@@ -955,7 +2064,31 @@
 			<player summon_siege_golem=""/>
 		</cond>
 	</skill>
-	<skill id="19089" levels="4" name="Призвать Стального Вепря">
+    <!--
+		Summon Wild Hog Cannon - Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 seconds. Requires 100 R-grade Crystals. Automatically acquired by Maestro class at level 85.
+
+		LvL.1	description: Automatically acquired by Maestro class at level 85.
+		LvL.2	description: Automatically acquired by Maestro class at level 90.
+		LvL.3	description: Automatically acquired by Maestro class at level 95.
+		LvL.4	description: Automatically acquired by Maestro class at level 99.
+		name: Summon Wild Hog Cannon
+		level: 1
+		mp_consume: 530
+		description: Summons a siege weapon. Can only move in normal mode. During siege mode, it cannot move, and it can inflict ranged attacks. Switching modes takes 30 seconds. Requires 100 R-grade Crystals. Automatically acquired by Maestro class at level 85.
+		icon_name: icon.skill0299
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 30
+		cool_time: 0
+		reuse_delay: 1200
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19089" levels="4" name="Summon Wild Hog Cannon">
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="reuseDelay" value="7200000"/>
 		<set name="hitTime" value="180000"/>
@@ -978,7 +2111,31 @@
 			<player summon_siege_golem=""/>
 		</cond>
 	</skill>
-	<skill id="19090" levels="4" name="Призвать Штурмовое Орудие">
+    <!--
+		Summon Swoop Cannon - Summons a Swoop Cannon. Requires 500 R-grade Crystals. Automatically acquired by dwarves at level 85.
+
+		LvL.1	description: Automatically acquired by dwarves at level 85.
+		LvL.2	description: Automatically acquired by dwarves at level 90.
+		LvL.3	description: Automatically acquired by dwarves at level 95.
+		LvL.4	description: Automatically acquired by dwarves at level 99.
+		name: Summon Swoop Cannon
+		level: 1
+		mp_consume: 530
+		description: Summons a Swoop Cannon. Requires 500 R-grade Crystals. Automatically acquired by dwarves at level 85.
+		icon_name: icon.skill0448
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 10
+		cool_time: 0
+		reuse_delay: 7200
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19090" levels="4" name="Summon Swoop Cannon">
 		<set name="reuseDelay" value="7200000"/>
 		<set name="hitTime" value="10000"/>
 		<set name="icon" value="icon.skill0448"/>
@@ -998,7 +2155,27 @@
 			<player summon_siege_golem=""/>
 		</cond>
 	</skill>
-	<skill id="19091" levels="1" name="Увеличение Шанса Выпадения Трофеев">
+    <!--
+		Increase Item Drop Rate - Increases Item Drop Rate upon PK.
+
+		name: Increase Item Drop Rate
+		level: 1
+		mp_consume: 1
+		description: Increases Item Drop Rate upon PK.
+		icon_name: icon.skill1170
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19091" levels="1" name="Increase Item Drop Rate">
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="2000"/>
 		<set name="icon" value="icon.skill1170"/>
@@ -1006,7 +2183,29 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19092" levels="2" name="Массовое Возвращение">
+    <!--
+		Chat Prohibited - Chatting is restricted.
+
+		LvL.1	cool_time: 0.5	icon_name: icon.skill1170	description: Chatting is restricted.	name: Chat Prohibited	oper_type: 3	cast_style_guess: 1	hit_time: 2	reuse_delay: 0	is_magic: 0	cast_range: 900	mp_consume: 1
+		LvL.2	cool_time: 0	icon_name: icon.skill10313	description: Teleports party members to a nearby village to safe area.	name: Mass Return	oper_type: 1	cast_style_guess: 0	hit_time: 1.5	reuse_delay: 150	is_magic: 1	cast_range: -1	mp_consume: 2
+		name: Chat Prohibited
+		level: 1
+		mp_consume: 1
+		description: Chatting is restricted.
+		icon_name: icon.skill1170
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19092" levels="2" name="Chat Prohibited">
 		<set name="reuseDelay" value="150000"/>
 		<set name="hitTime" value="1500"/>
 		<set name="magicLevel" value="85"/>
@@ -1016,7 +2215,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19093" levels="1" name="Колчан Стрел с Дополнительным  Зарядом">
+    <!--
+		Added Blow Quiver - Chance of inflicting damage again upon shooting.
+
+		name: Added Blow Quiver
+		level: 1
+		mp_consume: 1
+		description: Chance of inflicting damage again upon shooting.
+		icon_name: icon.skill0256
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19093" levels="1" name="Added Blow Quiver">
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="500"/>
 		<set name="magicLevel" value="97"/>
@@ -1025,7 +2244,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19094" levels="1" name="Колчан Стрел с Усиленной Разрушительной Силой">
+    <!--
+		Increased Damage Quiver - Great damage occurs if critical occurs while shooting.
+
+		name: Increased Damage Quiver
+		level: 1
+		mp_consume: 1
+		description: Great damage occurs if critical occurs while shooting.
+		icon_name: icon.skill0256
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19094" levels="1" name="Increased Damage Quiver">
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="500"/>
 		<set name="magicLevel" value="97"/>
@@ -1034,7 +2273,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19095" levels="1" name="Колчан Стрел с Увеличенной Вредоносностью">
+    <!--
+		Added Bleed Quiver - Chance of inflicting bleed if critical occurs while shooting.
+
+		name: Added Bleed Quiver
+		level: 1
+		mp_consume: 1
+		description: Chance of inflicting bleed if critical occurs while shooting.
+		icon_name: icon.skill0256
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19095" levels="1" name="Added Bleed Quiver">
 		<set name="reuseDelay" value="30000"/>
 		<set name="hitTime" value="500"/>
 		<set name="magicLevel" value="97"/>
@@ -1043,14 +2302,54 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19096" levels="1" name="Дополнительный Удар">
+    <!--
+		Added Blow - none
+
+		name: Added Blow
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0056
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19096" levels="1" name="Added Blow">
 		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0056"/>
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19097" levels="1" name="Высший Критический Удар">
+    <!--
+		Critical Target - none
+
+		name: Critical Target
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0056
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19097" levels="1" name="Critical Target">
 		<set name="reuseDelay" value="10000"/>
 		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0056"/>
@@ -1058,7 +2357,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19098" levels="1" name="Пускание Крови">
+    <!--
+		Bleed Target - Consumes 100 HP per second for 15 seconds.
+
+		name: Bleed Target
+		level: 1
+		mp_consume: 0
+		description: Consumes 100 HP per second for 15 seconds.
+		icon_name: icon.skill0096
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19098" levels="1" name="Bleed Target">
 		<set name="reuseDelay" value="10000"/>
 		<set name="abnormal_effect" value="DOT_BLEEDING"/>
 		<set name="abnormal_time" value="20"/>
@@ -1070,7 +2389,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="19099" levels="1" name="Власть GM">
+    <!--
+		GM's Authority - Inflicts petrification on target for 60 minutes.
+
+		name: GM's Authority
+		level: 1
+		mp_consume: 0
+		description: Inflicts petrification on target for 60 minutes.
+		icon_name: icon.skill0367
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="19099" levels="1" name="GM's Authority">
 		<set name="hitTime" value="500"/>
 		<set name="icon" value="icon.skill0367"/>
 		<set name="target" value="TARGET_NONE"/>

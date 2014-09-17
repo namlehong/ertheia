@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
 <list>
-	<skill id="10700" levels="4" name="Mug">
+    <!--
+		Mug - Inflicts 11903 damage onto nearby enemies and steals their item. Requires a dagger or dual dagger.
+
+		LvL.1	description: Inflicts 11903 damage onto nearby enemies and steals their item.	mp_consume: 18
+		LvL.2	description: Inflicts 13957 damage onto nearby enemies and steals their item.	mp_consume: 21
+		LvL.3	description: Inflicts 15601 damage onto nearby enemies and steals their item.	mp_consume: 24
+		LvL.4	description: Inflicts 17244 damage onto nearby enemies and steals their item.	mp_consume: 27
+		name: Mug
+		level: 1
+		mp_consume: 18
+		description: Inflicts 11903 damage onto nearby enemies and steals their item. Requires a dagger or dual dagger.
+		icon_name: icon.skill10700
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.03
+		cool_time: 0.5
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10700" levels="4" name="Mug">
 		<table name="#activateRate">20 30 40 50</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">18 21 24 27</table>
@@ -25,7 +50,31 @@
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 	</skill>
-	<skill id="10701" levels="4" name="Superior Vitality">
+    <!--
+		Superior Vitality - Max HP and CP + 5%. P. Atk. + 5%. Increases damage inflicted on an NPC by 30%.
+
+		LvL.1	description: Max HP and CP + 5%. + 5%.
+		LvL.2	description: Max HP and CP + 7%. + 7%.
+		LvL.3	description: Max HP and CP + 10%. + 10%.
+		LvL.4	description: Max HP and CP + 15%. + 15%.
+		name: Superior Vitality
+		level: 1
+		mp_consume: 0
+		description: Max HP and CP + 5%. P. Atk. + 5%. Increases damage inflicted on an NPC by 30%.
+		icon_name: icon.skill0211
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10701" levels="4" name="Superior Vitality">
 		<set name="icon" value="icon.skill0211"/>
 		<table name="#hpcpatt">1.05 1.07 1.1 1.15</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -39,7 +88,31 @@
 			<mul order="0x30" stat="pAtk" value="#hpcpatt"/>
 		</for>
 	</skill>
-	<skill id="10702" levels="4" name="Plunder">
+    <!--
+		Plunder - Inflicts 13580 damage onto target and steals their item. Requires a dagger or dual dagger.
+
+		LvL.1	description: Inflicts 13580 damage onto target and steals their item.	mp_consume: 12
+		LvL.2	description: Inflicts 15946 damage onto target and steals their item.	mp_consume: 14
+		LvL.3	description: Inflicts 18311 damage onto target and steals their item.	mp_consume: 16
+		LvL.4	description: Inflicts 20204 damage onto target and steals their item.	mp_consume: 18
+		name: Plunder
+		level: 1
+		mp_consume: 12
+		description: Inflicts 13580 damage onto target and steals their item. Requires a dagger or dual dagger.
+		icon_name: icon.skill10548
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.83
+		cool_time: 0.5
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10702" levels="4" name="Plunder">
 		<table name="#activateRate">40 45 50 55</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">12 14 16 18</table>
@@ -64,7 +137,27 @@
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 	</skill>
-	<skill id="10747" levels="1" name="Rogue - Individual Passive">
+    <!--
+		Rogue - Individual Passive - 
+
+		name: Rogue - Individual Passive
+		level: 1
+		mp_consume: 0
+		description: 
+		icon_name: icon.skill0217
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 6
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10747" levels="1" name="Rogue - Individual Passive">
 		<set name="icon" value="icon.skill0217"/>
 		<set name="isTrigger" value="true"/>
 		<set name="magicLevel" value="85"/>
@@ -78,7 +171,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10748" levels="1" name="Rogue - Individual">
+    <!--
+		Rogue - Individual - Pierce through target to inflict a fatal blow. Attacks with 8875 Power added to P. Atk. Over-hit. Half-kill.
+
+		name: Rogue - Individual
+		level: 1
+		mp_consume: 0
+		description: Pierce through target to inflict a fatal blow. Attacks with 8875 Power added to P. Atk. Over-hit. Half-kill.
+		icon_name: icon.skill1543
+		hp_consume: 0
+		cast_range: 50
+		hit_time: 1.2
+		cool_time: 0.4
+		reuse_delay: 5
+		is_magic: 4
+		oper_type: 2
+		element_guess: 6
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10748" levels="1" name="Rogue - Individual">
 		<table name="#mpConsume2">60</table>
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_level" value="1"/>
@@ -109,7 +222,27 @@
 			</trigger>
 		</triggers>
 	</skill>
-	<skill id="10749" levels="1" name="Heavy Hit">
+    <!--
+		Heavy Hit - Inflicts a powerful blow on target.
+
+		name: Heavy Hit
+		level: 1
+		mp_consume: 0
+		description: Inflicts a powerful blow on target.
+		icon_name: icon.skill10317
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 3
+		element_guess: 6
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10749" levels="1" name="Heavy Hit">
 		<set name="reuseDelay" value="7000"/>
 		<set name="coolTime" value="296"/>
 		<set name="hitTime" value="1600"/>
@@ -122,7 +255,27 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10750" levels="1" name="Heavy Hit">
+    <!--
+		Heavy Hit - Inflicts a powerful blow on target.
+
+		name: Heavy Hit
+		level: 1
+		mp_consume: 0
+		description: Inflicts a powerful blow on target.
+		icon_name: icon.skill10317
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 3
+		element_guess: 6
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10750" levels="1" name="Heavy Hit">
 		<set name="reuseDelay" value="7000"/>
 		<set name="coolTime" value="296"/>
 		<set name="hitTime" value="1600"/>
@@ -137,7 +290,40 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10751" levels="1" name="Superior Bow/Crossbow Mastery">
+    <!--
+		Superior Bow/Crossbow Mastery - STR + 2 and P. Accuracy + 8. P. Atk. + 1316 and Atk. Spd. + 12% when using a bow or crossbow. Depending on your STR, the Cooldown resets or the abnormal status duration increases + 2 times.
+
+
+		Enchant Route: 1 - 	STR + 2 and P. Accuracy + 8. P. Atk. + 1402 and Atk. Spd. + 12% when using a bow or crossbow. Depending on your STR, the Cooldown resets or the abnormal status duration increases + 2 times. Enchant Power: Increases Effect.
+
+		LvL.101	description: + 1402 and Atk.
+		LvL.102	description: + 1488 and Atk.
+		LvL.103	description: + 1574 and Atk.
+		LvL.104	description: + 1660 and Atk.
+		LvL.105	description: + 1746 and Atk.
+		LvL.106	description: + 1832 and Atk.
+		LvL.107	description: + 1918 and Atk.
+		LvL.108	description: + 2004 and Atk.
+		LvL.109	description: + 2090 and Atk.
+		LvL.110	description: + 2176 and Atk.
+		name: Superior Bow/Crossbow Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and P. Accuracy + 8. P. Atk. + 1316 and Atk. Spd. + 12% when using a bow or crossbow. Depending on your STR, the Cooldown resets or the abnormal status duration increases + 2 times.
+		icon_name: icon.skill10751
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10751" levels="1" name="Superior Bow/Crossbow Mastery">
 		<table name="#pAtk">1316</table>
 		<table name="#magicLevel">85</table>
 		<set name="analog_skills" value="473;208;330;331"/>
@@ -162,7 +348,40 @@
 			<set order="0x100" stat="activateSkillMasterySTR" value="1"/>
 		</for>
 	</skill>
-	<skill id="10752" levels="1" name="Superior Light Armor Mastery">
+    <!--
+		Superior Light Armor Mastery - STR + 2. Max HP + 4783, P. Def. + 1386, P. Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor. Spd. and P. Skill Critical Rate change depending on DEX.
+
+
+		Enchant Route: 1 - 	STR + 2. Max HP + 4783, P. Def. + 1426, P. Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor. Spd. and P. Skill Critical Rate change depending on DEX. Enchant Power: Increases Effect.
+
+		LvL.101	description: + 1426, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.102	description: + 1466, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.103	description: + 1506, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.104	description: + 1546, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.105	description: + 1586, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.106	description: + 1626, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.107	description: + 1666, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.108	description: + 1706, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.109	description: + 1746, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		LvL.110	description: + 1792, P Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor.
+		name: Superior Light Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2. Max HP + 4783, P. Def. + 1386, P. Evasion + 7, MP recovery bonus + 10%, and chance of receiving critical attacks - 35% when equipped with Light Armor. Spd. and P. Skill Critical Rate change depending on DEX.
+		icon_name: icon.skill10752
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10752" levels="1" name="Superior Light Armor Mastery">
 		<table name="#pDef">89</table>
 		<set name="analog_skills" value="173;171;832;227;233;236;252;258;465;148"/>
 		<set name="icon" value="icon.skill10752"/>
@@ -192,7 +411,27 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="10753" levels="1" name="Superior Hawkeye Mastery">
+    <!--
+		Superior Hawkeye Mastery - When using a bow/crossbow, increases range by 500 and Max MP by 25%, and decreases MP consumption upon skill use by 30%.
+
+		name: Superior Hawkeye Mastery
+		level: 1
+		mp_consume: 0
+		description: When using a bow/crossbow, increases range by 500 and Max MP by 25%, and decreases MP consumption upon skill use by 30%.
+		icon_name: icon.skill0113
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10753" levels="1" name="Superior Hawkeye Mastery">
 		<set name="analog_skills" value="113;415;303;486"/>
 		<set name="icon" value="icon.skill0113"/>
 		<set name="magicLevel" value="85"/>
@@ -211,7 +450,40 @@
 			</mul>
 		</for>
 	</skill>
-	<skill id="10754" levels="1" name="Superior Survival Ability">
+    <!--
+		Superior Survival Ability - STR + 2, speed + 17, terrain damage - 30% and weight limit + 50%. When inflicting a critical during a normal Bow/Crossbow attack, Survival Movement is triggered. Once Survival Movement is triggered, it will not trigger again for 30 seconds.
+
+
+		Enchant Route: 1 - 	STR + 2, speed + 17, terrain damage - 31% and weight limit + 51%. When inflicting a critical during a normal Bow/Crossbow attack, Survival Movement is triggered. Once Survival Movement is triggered, it will not trigger again for 30 seconds. Enchant Powe
+
+		LvL.101	description: STR + 2, speed + 17, terrain damage - 31% and weight limit + 51%.
+		LvL.102	description: STR + 2, speed + 17, terrain damage - 32% and weight limit + 52%.
+		LvL.103	description: STR + 2, speed + 17, terrain damage - 33% and weight limit + 53%.
+		LvL.104	description: STR + 2, speed + 17, terrain damage - 34% and weight limit + 54%.
+		LvL.105	description: STR + 2, speed + 17, terrain damage - 35% and weight limit + 55%.
+		LvL.106	description: STR + 2, speed + 17, terrain damage - 36% and weight limit + 56%.
+		LvL.107	description: STR + 2, speed + 17, terrain damage - 37% and weight limit + 57%.
+		LvL.108	description: STR + 2, speed + 17, terrain damage - 38% and weight limit + 58%.
+		LvL.109	description: STR + 2, speed + 17, terrain damage - 39% and weight limit + 59%.
+		LvL.110	description: STR + 2, speed + 17, terrain damage - 40% and weight limit + 60%.
+		name: Superior Survival Ability
+		level: 1
+		mp_consume: 0
+		description: STR + 2, speed + 17, terrain damage - 30% and weight limit + 50%. When inflicting a critical during a normal Bow/Crossbow attack, Survival Movement is triggered. Once Survival Movement is triggered, it will not trigger again for 30 seconds.
+		icon_name: icon.skill0295
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10754" levels="1" name="Superior Survival Ability">
 		<table name="#magicLevel">85</table>
 		<table name="#maxLoad">1.5</table>
 		<set name="analog_skills" value="169;418"/>
@@ -235,7 +507,40 @@
 			<mul order="0x30" stat="maxLoad" value="#maxLoad"/>
 		</for>
 	</skill>
-	<skill id="10755" levels="1" name="ВSuperior Mental Attack Resistance">
+    <!--
+		Superior Mental Attack Resistance - STR + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker.
+
+
+		Enchant Route: 1 - 	STR + 2. Resistance + 21 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker. Enchant Power: Increases the effect.
+
+		LvL.101	description: Resistance + 21 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.102	description: Resistance + 22 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.103	description: Resistance + 23 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.104	description: Resistance + 24 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.105	description: Resistance + 25 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.106	description: Resistance + 26 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.107	description: Resistance + 27 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.108	description: Resistance + 28 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.109	description: Resistance + 29 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		LvL.110	description: Resistance + 30 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun.
+		name: Superior Mental Attack Resistance
+		level: 1
+		mp_consume: 0
+		description: STR + 2. Resistance + 20 to Hold, Sleep, Paralysis, Mental attack, Poison, Bleed, and Stun. In addition, has a chance of reflecting debuffs back to the attacker.
+		icon_name: icon.skill10005
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10755" levels="1" name="Superior Mental Attack Resistance">
 		<table name="#magicLevel">85</table>
 		<table name="#power">20</table>
 		<set name="analog_skills" value="329;328"/>
@@ -257,7 +562,40 @@
 			<add order="0x40" stat="reflectMagicDebuff" value="30"/>
 		</for>
 	</skill>
-	<skill id="10756" levels="1" name="Superior Critical Arrow">
+    <!--
+		Superior Critical Arrow - STR + 2, Critical Rate + 25%, and Critical Damage + 774. Increases Skill Mastery rate + 1000%.
+
+
+		Enchant Route: 1 - 	STR + 2, Critical Rate + 25%, and Critical Damage + 808. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+
+		LvL.101	description: STR + 2, Critical Rate + 25%, and Critical Damage + 808. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.102	description: STR + 2, Critical Rate + 25%, and Critical Damage + 841. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.103	description: STR + 2, Critical Rate + 25%, and Critical Damage + 875. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.104	description: STR + 2, Critical Rate + 25%, and Critical Damage + 910. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.105	description: STR + 2, Critical Rate + 25%, and Critical Damage + 946. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.106	description: STR + 2, Critical Rate + 25%, and Critical Damage + 983. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.107	description: STR + 2, Critical Rate + 25%, and Critical Damage + 1022. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.108	description: STR + 2, Critical Rate + 25%, and Critical Damage + 1062. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.109	description: STR + 2, Critical Rate + 25%, and Critical Damage + 1104. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		LvL.110	description: STR + 2, Critical Rate + 25%, and Critical Damage + 1147. Increases Skill Mastery rate + 1000%. Enchant Power: Increases Effect.
+		name: Superior Critical Arrow
+		level: 1
+		mp_consume: 0
+		description: STR + 2, Critical Rate + 25%, and Critical Damage + 774. Increases Skill Mastery rate + 1000%.
+		icon_name: icon.skill10756
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10756" levels="1" name="Superior Critical Arrow">
 		<table name="#magicLevel">85</table>
 		<table name="#pCritDamage">774</table>
 		<set name="analog_skills" value="312;626;334"/>
@@ -278,7 +616,31 @@
 			<!--<mul order="0x30" stat="skillMastery" value="11"/> until better days :) -->
 		</for>
 	</skill>
-	<skill id="10757" levels="4" name="Dead Eye Stance">
+    <!--
+		Dead Eye Stance - For 30 min., P. Atk. + 10%, and skill power + 5% when equipped with a bow or crossbow.
+
+		LvL.1	description: + 10%, and skill power + 5% when equipped with a bow or crossbow.
+		LvL.2	description: + 12%, and skill power + 6% when equipped with a bow or crossbow.
+		LvL.3	description: + 15%, and skill power + 7% when equipped with a bow or crossbow.
+		LvL.4	description: + 20%, and skill power + 10% when equipped with a bow or crossbow.
+		name: Dead Eye Stance
+		level: 1
+		mp_consume: 10
+		description: For 30 min., P. Atk. + 10%, and skill power + 5% when equipped with a bow or crossbow.
+		icon_name: icon.skill10757
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10757" levels="4" name="Dead Eye Stance">
 		<set name="abnormal_type" value="stance"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume">10 10 10 10</table>
@@ -305,7 +667,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10758" levels="4" name="Rapid Fire Stance">
+    <!--
+		Rapid Fire Stance - For 30 min., P. Atk. + 10% and P. Skill Cooldown - 5% when a bow or crossbow is equipped.
+
+		LvL.1	description: + 10% and P Skill Cooldown - 5% when a bow or crossbow is equipped.
+		LvL.2	description: + 12% and P Skill Cooldown - 6% when a bow or crossbow is equipped.
+		LvL.3	description: + 15% and P Skill Cooldown - 7% when a bow or crossbow is equipped.
+		LvL.4	description: + 20% and P Skill Cooldown - 10% when a bow or crossbow is equipped.
+		name: Rapid Fire Stance
+		level: 1
+		mp_consume: 10
+		description: For 30 min., P. Atk. + 10% and P. Skill Cooldown - 5% when a bow or crossbow is equipped.
+		icon_name: icon.skill10758
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10758" levels="4" name="Rapid Fire Stance">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume">10 10 10 10</table>
 		<table name="#patk">1.1 1.12 1.15 1.2</table>
@@ -332,7 +718,31 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10759" levels="4" name="Sniper Stance">
+    <!--
+		Sniper Stance - For 30 min., P. Atk. + 10% and Atk. Spd. + 5% when a bow or crossbow is equipped.
+
+		LvL.1	description: + 10% and Atk. + 5% when a bow or crossbow is equipped.
+		LvL.2	description: + 12% and Atk. + 6% when a bow or crossbow is equipped.
+		LvL.3	description: + 15% and Atk. + 7% when a bow or crossbow is equipped.
+		LvL.4	description: + 20% and Atk. + 10% when a bow or crossbow is equipped.
+		name: Sniper Stance
+		level: 1
+		mp_consume: 10
+		description: For 30 min., P. Atk. + 10% and Atk. Spd. + 5% when a bow or crossbow is equipped.
+		icon_name: icon.skill10759
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10759" levels="4" name="Sniper Stance">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume">10 10 10 10</table>
 		<table name="#patk">1.1 1.12 1.15 1.2</table>
@@ -359,7 +769,152 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10760" levels="8" name="Tornado Shot">
+    <!--
+		Tornado Shot - Attacks target with 20814 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.1	description: Attacks target with 20814 Power added to P Atk.	mp_consume: 98
+		LvL.2	description: Attacks target with 21546 Power added to P Atk.	mp_consume: 100
+		LvL.3	description: Attacks target with 23011 Power added to P Atk.	mp_consume: 103
+		LvL.4	description: Attacks target with 24476 Power added to P Atk.	mp_consume: 107
+		LvL.5	description: Attacks target with 25941 Power added to P Atk.	mp_consume: 110
+		LvL.6	description: Attacks target with 27406 Power added to P Atk.	mp_consume: 114
+		LvL.7	description: Attacks target with 28871 Power added to P Atk.	mp_consume: 117
+		LvL.8	description: Attacks target with 30336 Power added to P Atk.	mp_consume: 121
+
+		Enchant Route: 1 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks target with 31801 Power added to P Atk.	mp_consume: 113
+		LvL.102	description: Attacks target with 32534 Power added to P Atk.	mp_consume: 106
+		LvL.103	description: Attacks target with 33266 Power added to P Atk.	mp_consume: 99
+		LvL.104	description: Attacks target with 33998 Power added to P Atk.	mp_consume: 91
+		LvL.105	description: Attacks target with 34731 Power added to P Atk.	mp_consume: 84
+		LvL.106	description: Attacks target with 35463 Power added to P Atk.	mp_consume: 77
+		LvL.107	description: Attacks target with 36196 Power added to P Atk.	mp_consume: 70
+		LvL.108	description: Attacks target with 36928 Power added to P Atk.	mp_consume: 62
+		LvL.109	description: Attacks target with 37661 Power added to P Atk.	mp_consume: 55
+		LvL.110	description: Attacks target with 38393 Power added to P Atk.	mp_consume: 48
+
+		Enchant Route: 2 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Attacks target with 31801 Power added to P Atk.
+		LvL.202	description: Attacks target with 32534 Power added to P Atk.
+		LvL.203	description: Attacks target with 33266 Power added to P Atk.
+		LvL.204	description: Attacks target with 33998 Power added to P Atk.
+		LvL.205	description: Attacks target with 34731 Power added to P Atk.
+		LvL.206	description: Attacks target with 35463 Power added to P Atk.
+		LvL.207	description: Attacks target with 36196 Power added to P Atk.
+		LvL.208	description: Attacks target with 36928 Power added to P Atk.
+		LvL.209	description: Attacks target with 37661 Power added to P Atk.
+		LvL.210	description: Attacks target with 38393 Power added to P Atk.
+
+		Enchant Route: 3 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Attacks target with 31801 Power added to P Atk.
+		LvL.302	description: Attacks target with 32534 Power added to P Atk.
+		LvL.303	description: Attacks target with 33266 Power added to P Atk.
+		LvL.304	description: Attacks target with 33998 Power added to P Atk.
+		LvL.305	description: Attacks target with 34731 Power added to P Atk.
+		LvL.306	description: Attacks target with 35463 Power added to P Atk.
+		LvL.307	description: Attacks target with 36196 Power added to P Atk.
+		LvL.308	description: Attacks target with 36928 Power added to P Atk.
+		LvL.309	description: Attacks target with 37661 Power added to P Atk.
+		LvL.310	description: Attacks target with 38393 Power added to P Atk.
+
+		Enchant Route: 4 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Attacks target with 31801 Power added to P Atk.
+		LvL.402	description: Attacks target with 32534 Power added to P Atk.
+		LvL.403	description: Attacks target with 33266 Power added to P Atk.
+		LvL.404	description: Attacks target with 33998 Power added to P Atk.
+		LvL.405	description: Attacks target with 34731 Power added to P Atk.
+		LvL.406	description: Attacks target with 35463 Power added to P Atk.
+		LvL.407	description: Attacks target with 36196 Power added to P Atk.
+		LvL.408	description: Attacks target with 36928 Power added to P Atk.
+		LvL.409	description: Attacks target with 37661 Power added to P Atk.
+		LvL.410	description: Attacks target with 38393 Power added to P Atk.
+
+		Enchant Route: 5 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Attacks target with 31801 Power added to P Atk.
+		LvL.502	description: Attacks target with 32534 Power added to P Atk.
+		LvL.503	description: Attacks target with 33266 Power added to P Atk.
+		LvL.504	description: Attacks target with 33998 Power added to P Atk.
+		LvL.505	description: Attacks target with 34731 Power added to P Atk.
+		LvL.506	description: Attacks target with 35463 Power added to P Atk.
+		LvL.507	description: Attacks target with 36196 Power added to P Atk.
+		LvL.508	description: Attacks target with 36928 Power added to P Atk.
+		LvL.509	description: Attacks target with 37661 Power added to P Atk.
+		LvL.510	description: Attacks target with 38393 Power added to P Atk.
+
+		Enchant Route: 6 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Attacks target with 31801 Power added to P Atk.
+		LvL.602	description: Attacks target with 32534 Power added to P Atk.
+		LvL.603	description: Attacks target with 33266 Power added to P Atk.
+		LvL.604	description: Attacks target with 33998 Power added to P Atk.
+		LvL.605	description: Attacks target with 34731 Power added to P Atk.
+		LvL.606	description: Attacks target with 35463 Power added to P Atk.
+		LvL.607	description: Attacks target with 36196 Power added to P Atk.
+		LvL.608	description: Attacks target with 36928 Power added to P Atk.
+		LvL.609	description: Attacks target with 37661 Power added to P Atk.
+		LvL.610	description: Attacks target with 38393 Power added to P Atk.
+
+		Enchant Route: 7 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Attacks target with 31801 Power added to P Atk.
+		LvL.702	description: Attacks target with 32534 Power added to P Atk.
+		LvL.703	description: Attacks target with 33266 Power added to P Atk.
+		LvL.704	description: Attacks target with 33998 Power added to P Atk.
+		LvL.705	description: Attacks target with 34731 Power added to P Atk.
+		LvL.706	description: Attacks target with 35463 Power added to P Atk.
+		LvL.707	description: Attacks target with 36196 Power added to P Atk.
+		LvL.708	description: Attacks target with 36928 Power added to P Atk.
+		LvL.709	description: Attacks target with 37661 Power added to P Atk.
+		LvL.710	description: Attacks target with 38393 Power added to P Atk.
+
+		Enchant Route: 8 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Attacks target with 31801 Power added to P Atk.
+		LvL.802	description: Attacks target with 32534 Power added to P Atk.
+		LvL.803	description: Attacks target with 33266 Power added to P Atk.
+		LvL.804	description: Attacks target with 33998 Power added to P Atk.
+		LvL.805	description: Attacks target with 34731 Power added to P Atk.
+		LvL.806	description: Attacks target with 35463 Power added to P Atk.
+		LvL.807	description: Attacks target with 36196 Power added to P Atk.
+		LvL.808	description: Attacks target with 36928 Power added to P Atk.
+		LvL.809	description: Attacks target with 37661 Power added to P Atk.
+		LvL.810	description: Attacks target with 38393 Power added to P Atk.
+
+		Enchant Route: 9 - 	Attacks target with 31801 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.901	description: Attacks target with 31801 Power added to P Atk.
+		LvL.902	description: Attacks target with 32534 Power added to P Atk.
+		LvL.903	description: Attacks target with 33266 Power added to P Atk.
+		LvL.904	description: Attacks target with 33998 Power added to P Atk.
+		LvL.905	description: Attacks target with 34731 Power added to P Atk.
+		LvL.906	description: Attacks target with 35463 Power added to P Atk.
+		LvL.907	description: Attacks target with 36196 Power added to P Atk.
+		LvL.908	description: Attacks target with 36928 Power added to P Atk.
+		LvL.909	description: Attacks target with 37661 Power added to P Atk.
+		LvL.910	description: Attacks target with 38393 Power added to P Atk.
+		name: Tornado Shot
+		level: 1
+		mp_consume: 98
+		description: Attacks target with 20814 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10760
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 2.2
+		cool_time: 0.35
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10760" levels="8" name="Tornado Shot">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -436,7 +991,152 @@
 			<effect hasCombo="true"/>
 		</for>
 	</skill>
-	<skill id="10761" levels="8" name="Bow Strike">
+    <!--
+		Bow Strike - Knocks back frontal enemies. Attacks target with 2681 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.1	description: Attacks target with 2681 Power added to P Atk.	mp_consume: 60
+		LvL.2	description: Attacks target with 2771 Power added to P Atk.	mp_consume: 61
+		LvL.3	description: Attacks target with 2952 Power added to P Atk.	mp_consume: 63
+		LvL.4	description: Attacks target with 3133 Power added to P Atk.	mp_consume: 65
+		LvL.5	description: Attacks target with 3313 Power added to P Atk.	mp_consume: 67
+		LvL.6	description: Attacks target with 3494 Power added to P Atk.	mp_consume: 69
+		LvL.7	description: Attacks target with 3675 Power added to P Atk.	mp_consume: 71
+		LvL.8	description: Attacks target with 3855 Power added to P Atk.	mp_consume: 74
+
+		Enchant Route: 1 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks target with 4036 Power added to P Atk.	mp_consume: 69
+		LvL.102	description: Attacks target with 4126 Power added to P Atk.	mp_consume: 65
+		LvL.103	description: Attacks target with 4216 Power added to P Atk.	mp_consume: 60
+		LvL.104	description: Attacks target with 4307 Power added to P Atk.	mp_consume: 56
+		LvL.105	description: Attacks target with 4397 Power added to P Atk.	mp_consume: 51
+		LvL.106	description: Attacks target with 4487 Power added to P Atk.	mp_consume: 47
+		LvL.107	description: Attacks target with 4578 Power added to P Atk.	mp_consume: 42
+		LvL.108	description: Attacks target with 4668 Power added to P Atk.	mp_consume: 38
+		LvL.109	description: Attacks target with 4758 Power added to P Atk.	mp_consume: 34
+		LvL.110	description: Attacks target with 4848 Power added to P Atk.	mp_consume: 29
+
+		Enchant Route: 2 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Attacks target with 4036 Power added to P Atk.
+		LvL.202	description: Attacks target with 4126 Power added to P Atk.
+		LvL.203	description: Attacks target with 4216 Power added to P Atk.
+		LvL.204	description: Attacks target with 4307 Power added to P Atk.
+		LvL.205	description: Attacks target with 4397 Power added to P Atk.
+		LvL.206	description: Attacks target with 4487 Power added to P Atk.
+		LvL.207	description: Attacks target with 4578 Power added to P Atk.
+		LvL.208	description: Attacks target with 4668 Power added to P Atk.
+		LvL.209	description: Attacks target with 4758 Power added to P Atk.
+		LvL.210	description: Attacks target with 4848 Power added to P Atk.
+
+		Enchant Route: 3 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Attacks target with 4036 Power added to P Atk.
+		LvL.302	description: Attacks target with 4126 Power added to P Atk.
+		LvL.303	description: Attacks target with 4216 Power added to P Atk.
+		LvL.304	description: Attacks target with 4307 Power added to P Atk.
+		LvL.305	description: Attacks target with 4397 Power added to P Atk.
+		LvL.306	description: Attacks target with 4487 Power added to P Atk.
+		LvL.307	description: Attacks target with 4578 Power added to P Atk.
+		LvL.308	description: Attacks target with 4668 Power added to P Atk.
+		LvL.309	description: Attacks target with 4758 Power added to P Atk.
+		LvL.310	description: Attacks target with 4848 Power added to P Atk.
+
+		Enchant Route: 4 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Attacks target with 4036 Power added to P Atk.
+		LvL.402	description: Attacks target with 4126 Power added to P Atk.
+		LvL.403	description: Attacks target with 4216 Power added to P Atk.
+		LvL.404	description: Attacks target with 4307 Power added to P Atk.
+		LvL.405	description: Attacks target with 4397 Power added to P Atk.
+		LvL.406	description: Attacks target with 4487 Power added to P Atk.
+		LvL.407	description: Attacks target with 4578 Power added to P Atk.
+		LvL.408	description: Attacks target with 4668 Power added to P Atk.
+		LvL.409	description: Attacks target with 4758 Power added to P Atk.
+		LvL.410	description: Attacks target with 4848 Power added to P Atk.
+
+		Enchant Route: 5 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Attacks target with 4036 Power added to P Atk.
+		LvL.502	description: Attacks target with 4126 Power added to P Atk.
+		LvL.503	description: Attacks target with 4216 Power added to P Atk.
+		LvL.504	description: Attacks target with 4307 Power added to P Atk.
+		LvL.505	description: Attacks target with 4397 Power added to P Atk.
+		LvL.506	description: Attacks target with 4487 Power added to P Atk.
+		LvL.507	description: Attacks target with 4578 Power added to P Atk.
+		LvL.508	description: Attacks target with 4668 Power added to P Atk.
+		LvL.509	description: Attacks target with 4758 Power added to P Atk.
+		LvL.510	description: Attacks target with 4848 Power added to P Atk.
+
+		Enchant Route: 6 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Attacks target with 4036 Power added to P Atk.
+		LvL.602	description: Attacks target with 4126 Power added to P Atk.
+		LvL.603	description: Attacks target with 4216 Power added to P Atk.
+		LvL.604	description: Attacks target with 4307 Power added to P Atk.
+		LvL.605	description: Attacks target with 4397 Power added to P Atk.
+		LvL.606	description: Attacks target with 4487 Power added to P Atk.
+		LvL.607	description: Attacks target with 4578 Power added to P Atk.
+		LvL.608	description: Attacks target with 4668 Power added to P Atk.
+		LvL.609	description: Attacks target with 4758 Power added to P Atk.
+		LvL.610	description: Attacks target with 4848 Power added to P Atk.
+
+		Enchant Route: 7 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Attacks target with 4036 Power added to P Atk.
+		LvL.702	description: Attacks target with 4126 Power added to P Atk.
+		LvL.703	description: Attacks target with 4216 Power added to P Atk.
+		LvL.704	description: Attacks target with 4307 Power added to P Atk.
+		LvL.705	description: Attacks target with 4397 Power added to P Atk.
+		LvL.706	description: Attacks target with 4487 Power added to P Atk.
+		LvL.707	description: Attacks target with 4578 Power added to P Atk.
+		LvL.708	description: Attacks target with 4668 Power added to P Atk.
+		LvL.709	description: Attacks target with 4758 Power added to P Atk.
+		LvL.710	description: Attacks target with 4848 Power added to P Atk.
+
+		Enchant Route: 8 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Attacks target with 4036 Power added to P Atk.
+		LvL.802	description: Attacks target with 4126 Power added to P Atk.
+		LvL.803	description: Attacks target with 4216 Power added to P Atk.
+		LvL.804	description: Attacks target with 4307 Power added to P Atk.
+		LvL.805	description: Attacks target with 4397 Power added to P Atk.
+		LvL.806	description: Attacks target with 4487 Power added to P Atk.
+		LvL.807	description: Attacks target with 4578 Power added to P Atk.
+		LvL.808	description: Attacks target with 4668 Power added to P Atk.
+		LvL.809	description: Attacks target with 4758 Power added to P Atk.
+		LvL.810	description: Attacks target with 4848 Power added to P Atk.
+
+		Enchant Route: 9 - 	Knocks back frontal enemies. Attacks target with 4036 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.901	description: Attacks target with 4036 Power added to P Atk.
+		LvL.902	description: Attacks target with 4126 Power added to P Atk.
+		LvL.903	description: Attacks target with 4216 Power added to P Atk.
+		LvL.904	description: Attacks target with 4307 Power added to P Atk.
+		LvL.905	description: Attacks target with 4397 Power added to P Atk.
+		LvL.906	description: Attacks target with 4487 Power added to P Atk.
+		LvL.907	description: Attacks target with 4578 Power added to P Atk.
+		LvL.908	description: Attacks target with 4668 Power added to P Atk.
+		LvL.909	description: Attacks target with 4758 Power added to P Atk.
+		LvL.910	description: Attacks target with 4848 Power added to P Atk.
+		name: Bow Strike
+		level: 1
+		mp_consume: 60
+		description: Knocks back frontal enemies. Attacks target with 2681 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10761
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.2
+		cool_time: 0.35
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10761" levels="8" name="Bow Strike">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<set name="reuseDelay" value="5000"/>
 		<set name="coolTime" value="349"/>
@@ -514,7 +1214,152 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10762" levels="8" name="Quick Shot">
+    <!--
+		Quick Shot - Attacks target with 19477 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.1	description: Attacks target with 19477 Power added to P Atk.	mp_consume: 79
+		LvL.2	description: Attacks target with 21035 Power added to P Atk.	mp_consume: 82
+		LvL.3	description: Attacks target with 22593 Power added to P Atk.	mp_consume: 84
+		LvL.4	description: Attacks target with 24151 Power added to P Atk.	mp_consume: 87
+		LvL.5	description: Attacks target with 25709 Power added to P Atk.	mp_consume: 90
+		LvL.6	description: Attacks target with 27267 Power added to P Atk.	mp_consume: 93
+		LvL.7	description: Attacks target with 28825 Power added to P Atk.	mp_consume: 96
+		LvL.8	description: Attacks target with 30383 Power added to P Atk.	mp_consume: 99
+
+		Enchant Route: 1 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks target with 31162 Power added to P Atk.	mp_consume: 93
+		LvL.102	description: Attacks target with 31941 Power added to P Atk.	mp_consume: 87
+		LvL.103	description: Attacks target with 32720 Power added to P Atk.	mp_consume: 81
+		LvL.104	description: Attacks target with 33499 Power added to P Atk.	mp_consume: 75
+		LvL.105	description: Attacks target with 34278 Power added to P Atk.	mp_consume: 69
+		LvL.106	description: Attacks target with 35057 Power added to P Atk.	mp_consume: 63
+		LvL.107	description: Attacks target with 35836 Power added to P Atk.	mp_consume: 57
+		LvL.108	description: Attacks target with 36615 Power added to P Atk.	mp_consume: 51
+		LvL.109	description: Attacks target with 37394 Power added to P Atk.	mp_consume: 45
+		LvL.110	description: Attacks target with 38173 Power added to P Atk.	mp_consume: 39
+
+		Enchant Route: 2 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Attacks target with 31162 Power added to P Atk.
+		LvL.202	description: Attacks target with 31941 Power added to P Atk.
+		LvL.203	description: Attacks target with 32720 Power added to P Atk.
+		LvL.204	description: Attacks target with 33499 Power added to P Atk.
+		LvL.205	description: Attacks target with 34278 Power added to P Atk.
+		LvL.206	description: Attacks target with 35057 Power added to P Atk.
+		LvL.207	description: Attacks target with 35836 Power added to P Atk.
+		LvL.208	description: Attacks target with 36615 Power added to P Atk.
+		LvL.209	description: Attacks target with 37394 Power added to P Atk.
+		LvL.210	description: Attacks target with 38173 Power added to P Atk.
+
+		Enchant Route: 3 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Attacks target with 31162 Power added to P Atk.
+		LvL.302	description: Attacks target with 31941 Power added to P Atk.
+		LvL.303	description: Attacks target with 32720 Power added to P Atk.
+		LvL.304	description: Attacks target with 33499 Power added to P Atk.
+		LvL.305	description: Attacks target with 34278 Power added to P Atk.
+		LvL.306	description: Attacks target with 35057 Power added to P Atk.
+		LvL.307	description: Attacks target with 35836 Power added to P Atk.
+		LvL.308	description: Attacks target with 36615 Power added to P Atk.
+		LvL.309	description: Attacks target with 37394 Power added to P Atk.
+		LvL.310	description: Attacks target with 38173 Power added to P Atk.
+
+		Enchant Route: 4 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Attacks target with 31162 Power added to P Atk.
+		LvL.402	description: Attacks target with 31941 Power added to P Atk.
+		LvL.403	description: Attacks target with 32720 Power added to P Atk.
+		LvL.404	description: Attacks target with 33499 Power added to P Atk.
+		LvL.405	description: Attacks target with 34278 Power added to P Atk.
+		LvL.406	description: Attacks target with 35057 Power added to P Atk.
+		LvL.407	description: Attacks target with 35836 Power added to P Atk.
+		LvL.408	description: Attacks target with 36615 Power added to P Atk.
+		LvL.409	description: Attacks target with 37394 Power added to P Atk.
+		LvL.410	description: Attacks target with 38173 Power added to P Atk.
+
+		Enchant Route: 5 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Attacks target with 31162 Power added to P Atk.
+		LvL.502	description: Attacks target with 31941 Power added to P Atk.
+		LvL.503	description: Attacks target with 32720 Power added to P Atk.
+		LvL.504	description: Attacks target with 33499 Power added to P Atk.
+		LvL.505	description: Attacks target with 34278 Power added to P Atk.
+		LvL.506	description: Attacks target with 35057 Power added to P Atk.
+		LvL.507	description: Attacks target with 35836 Power added to P Atk.
+		LvL.508	description: Attacks target with 36615 Power added to P Atk.
+		LvL.509	description: Attacks target with 37394 Power added to P Atk.
+		LvL.510	description: Attacks target with 38173 Power added to P Atk.
+
+		Enchant Route: 6 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Attacks target with 31162 Power added to P Atk.
+		LvL.602	description: Attacks target with 31941 Power added to P Atk.
+		LvL.603	description: Attacks target with 32720 Power added to P Atk.
+		LvL.604	description: Attacks target with 33499 Power added to P Atk.
+		LvL.605	description: Attacks target with 34278 Power added to P Atk.
+		LvL.606	description: Attacks target with 35057 Power added to P Atk.
+		LvL.607	description: Attacks target with 35836 Power added to P Atk.
+		LvL.608	description: Attacks target with 36615 Power added to P Atk.
+		LvL.609	description: Attacks target with 37394 Power added to P Atk.
+		LvL.610	description: Attacks target with 38173 Power added to P Atk.
+
+		Enchant Route: 7 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Attacks target with 31162 Power added to P Atk.
+		LvL.702	description: Attacks target with 31941 Power added to P Atk.
+		LvL.703	description: Attacks target with 32720 Power added to P Atk.
+		LvL.704	description: Attacks target with 33499 Power added to P Atk.
+		LvL.705	description: Attacks target with 34278 Power added to P Atk.
+		LvL.706	description: Attacks target with 35057 Power added to P Atk.
+		LvL.707	description: Attacks target with 35836 Power added to P Atk.
+		LvL.708	description: Attacks target with 36615 Power added to P Atk.
+		LvL.709	description: Attacks target with 37394 Power added to P Atk.
+		LvL.710	description: Attacks target with 38173 Power added to P Atk.
+
+		Enchant Route: 8 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Attacks target with 31162 Power added to P Atk.
+		LvL.802	description: Attacks target with 31941 Power added to P Atk.
+		LvL.803	description: Attacks target with 32720 Power added to P Atk.
+		LvL.804	description: Attacks target with 33499 Power added to P Atk.
+		LvL.805	description: Attacks target with 34278 Power added to P Atk.
+		LvL.806	description: Attacks target with 35057 Power added to P Atk.
+		LvL.807	description: Attacks target with 35836 Power added to P Atk.
+		LvL.808	description: Attacks target with 36615 Power added to P Atk.
+		LvL.809	description: Attacks target with 37394 Power added to P Atk.
+		LvL.810	description: Attacks target with 38173 Power added to P Atk.
+
+		Enchant Route: 9 - 	Attacks target with 31162 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.901	description: Attacks target with 31162 Power added to P Atk.
+		LvL.902	description: Attacks target with 31941 Power added to P Atk.
+		LvL.903	description: Attacks target with 32720 Power added to P Atk.
+		LvL.904	description: Attacks target with 33499 Power added to P Atk.
+		LvL.905	description: Attacks target with 34278 Power added to P Atk.
+		LvL.906	description: Attacks target with 35057 Power added to P Atk.
+		LvL.907	description: Attacks target with 35836 Power added to P Atk.
+		LvL.908	description: Attacks target with 36615 Power added to P Atk.
+		LvL.909	description: Attacks target with 37394 Power added to P Atk.
+		LvL.910	description: Attacks target with 38173 Power added to P Atk.
+		name: Quick Shot
+		level: 1
+		mp_consume: 79
+		description: Attacks target with 19477 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10762
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 1.8
+		cool_time: 0.25
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10762" levels="8" name="Quick Shot">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
@@ -587,7 +1432,152 @@
 			<table name="#reuseDelay">6900 6800 6700 6600 6500 6400 6300 6200 6100 6000</table>
 		</enchant>
 	</skill>
-	<skill id="10763" levels="8" name="Pinpoint Shot">
+    <!--
+		Pinpoint Shot - Aims for target's weak points to attack with 22198 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill.
+
+		LvL.1	description: Aims for target's weak points to attack with 22198 Power added to P Atk.	mp_consume: 117
+		LvL.2	description: Aims for target's weak points to attack with 22974 Power added to P Atk.	mp_consume: 119
+		LvL.3	description: Aims for target's weak points to attack with 24524 Power added to P Atk.	mp_consume: 123
+		LvL.4	description: Aims for target's weak points to attack with 26075 Power added to P Atk.	mp_consume: 128
+		LvL.5	description: Aims for target's weak points to attack with 27625 Power added to P Atk.	mp_consume: 132
+		LvL.6	description: Aims for target's weak points to attack with 29176 Power added to P Atk.	mp_consume: 136
+		LvL.7	description: Aims for target's weak points to attack with 30726 Power added to P Atk.	mp_consume: 140
+		LvL.8	description: Aims for target's weak points to attack with 32277 Power added to P Atk.	mp_consume: 144
+
+		Enchant Route: 1 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Aims for target's weak points to attack with 33827 Power added to P Atk.	mp_consume: 135
+		LvL.102	description: Aims for target's weak points to attack with 34602 Power added to P Atk.	mp_consume: 126
+		LvL.103	description: Aims for target's weak points to attack with 35378 Power added to P Atk.	mp_consume: 118
+		LvL.104	description: Aims for target's weak points to attack with 36153 Power added to P Atk.	mp_consume: 109
+		LvL.105	description: Aims for target's weak points to attack with 36928 Power added to P Atk.	mp_consume: 100
+		LvL.106	description: Aims for target's weak points to attack with 37703 Power added to P Atk.	mp_consume: 92
+		LvL.107	description: Aims for target's weak points to attack with 38479 Power added to P Atk.	mp_consume: 83
+		LvL.108	description: Aims for target's weak points to attack with 39254 Power added to P Atk.	mp_consume: 74
+		LvL.109	description: Aims for target's weak points to attack with 40029 Power added to P Atk.	mp_consume: 66
+		LvL.110	description: Aims for target's weak points to attack with 40804 Power added to P Atk.	mp_consume: 57
+
+		Enchant Route: 2 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.202	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.203	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.204	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.205	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.206	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.207	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.208	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.209	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.210	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+
+		Enchant Route: 3 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.302	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.303	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.304	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.305	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.306	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.307	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.308	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.309	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.310	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+
+		Enchant Route: 4 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.402	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.403	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.404	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.405	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.406	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.407	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.408	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.409	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.410	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+
+		Enchant Route: 5 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.502	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.503	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.504	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.505	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.506	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.507	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.508	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.509	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.510	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+
+		Enchant Route: 6 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.602	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.603	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.604	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.605	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.606	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.607	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.608	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.609	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.610	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+
+		Enchant Route: 7 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.702	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.703	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.704	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.705	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.706	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.707	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.708	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.709	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.710	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+
+		Enchant Route: 8 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.802	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.803	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.804	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.805	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.806	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.807	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.808	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.809	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.810	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+
+		Enchant Route: 9 - 	Aims for target's weak points to attack with 33827 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill.
+
+		LvL.901	description: Aims for target's weak points to attack with 33827 Power added to P Atk.
+		LvL.902	description: Aims for target's weak points to attack with 34602 Power added to P Atk.
+		LvL.903	description: Aims for target's weak points to attack with 35378 Power added to P Atk.
+		LvL.904	description: Aims for target's weak points to attack with 36153 Power added to P Atk.
+		LvL.905	description: Aims for target's weak points to attack with 36928 Power added to P Atk.
+		LvL.906	description: Aims for target's weak points to attack with 37703 Power added to P Atk.
+		LvL.907	description: Aims for target's weak points to attack with 38479 Power added to P Atk.
+		LvL.908	description: Aims for target's weak points to attack with 39254 Power added to P Atk.
+		LvL.909	description: Aims for target's weak points to attack with 40029 Power added to P Atk.
+		LvL.910	description: Aims for target's weak points to attack with 40804 Power added to P Atk.
+		name: Pinpoint Shot
+		level: 1
+		mp_consume: 117
+		description: Aims for target's weak points to attack with 22198 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill.
+		icon_name: icon.skill10763
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 2.2
+		cool_time: 0.85
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10763" levels="8" name="Pinpoint Shot">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -660,7 +1650,27 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
-	<skill id="10764" levels="1" name="Knock Back">
+    <!--
+		Knock Back - Knock Back
+
+		name: Knock Back
+		level: 1
+		mp_consume: 0
+		description: Knock Back
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10764" levels="1" name="Knock Back">
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="1"/>
@@ -671,7 +1681,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10765" levels="1" name="Knock Back">
+    <!--
+		Knock Back - Knock Back
+
+		name: Knock Back
+		level: 1
+		mp_consume: 0
+		description: Knock Back
+		icon_name: icon.skill0101
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10765" levels="1" name="Knock Back">
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="1"/>
@@ -682,7 +1712,27 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10766" levels="1" name="Additional Effect">
+    <!--
+		Additional Effect - Critical Exposure
+
+		name: Additional Effect
+		level: 1
+		mp_consume: 0
+		description: Critical Exposure
+		icon_name: icon.skill0522
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10766" levels="1" name="Additional Effect">
 		<set name="abnormal_effect" value="REAL_TARGET"/>
 		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_level" value="1"/>
@@ -696,14 +1746,54 @@
 			<sub order="0x40" stat="critDamRcpt" value="100"/>
 		</for>
 	</skill>
-	<skill id="10767" levels="1" name="Half-kill">
+    <!--
+		Half-kill - Half-kill.
+
+		name: Half-kill
+		level: 1
+		mp_consume: 0
+		description: Half-kill.
+		icon_name: icon.skill0056
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10767" levels="1" name="Half-kill">
 		<set name="icon" value="icon.skill0056"/>
 		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="target" value="TARGET_NONE"/>
 	</skill>
-	<skill id="10768" levels="1" name="Blink">
+    <!--
+		Blink - Evasion
+
+		name: Blink
+		level: 1
+		mp_consume: 0
+		description: Evasion
+		icon_name: icon.skill10768
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.3
+		cool_time: 0.2
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10768" levels="1" name="Blink">
 		<!--
 			Уровень: 1; Описание: Повышает Уклонение.
 		-->
@@ -716,7 +1806,149 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="target" value="TARGET_NONE"/>
 	</skill>
-	<skill id="10769" levels="5" name="Impact Shot">
+    <!--
+		Impact Shot - Fires an arrow at the enemy with 19867 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit.
+
+		LvL.1	description: Fires an arrow at the enemy with 19867 Power added to P Atk.	mp_consume: 98
+		LvL.2	description: Fires an arrow at the enemy with 22249 Power added to P Atk.	mp_consume: 103
+		LvL.3	description: Fires an arrow at the enemy with 24631 Power added to P Atk.	mp_consume: 108
+		LvL.4	description: Fires an arrow at the enemy with 27013 Power added to P Atk.	mp_consume: 114
+		LvL.5	description: Fires an arrow at the enemy with 29395 Power added to P Atk.	mp_consume: 119
+
+		Enchant Route: 1 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Fires an arrow at the enemy with 31777 Power added to P Atk.	mp_consume: 111
+		LvL.102	description: Fires an arrow at the enemy with 32571 Power added to P Atk.	mp_consume: 104
+		LvL.103	description: Fires an arrow at the enemy with 33365 Power added to P Atk.	mp_consume: 97
+		LvL.104	description: Fires an arrow at the enemy with 34159 Power added to P Atk.	mp_consume: 90
+		LvL.105	description: Fires an arrow at the enemy with 34953 Power added to P Atk.	mp_consume: 83
+		LvL.106	description: Fires an arrow at the enemy with 35747 Power added to P Atk.	mp_consume: 76
+		LvL.107	description: Fires an arrow at the enemy with 36541 Power added to P Atk.	mp_consume: 69
+		LvL.108	description: Fires an arrow at the enemy with 37335 Power added to P Atk.	mp_consume: 61
+		LvL.109	description: Fires an arrow at the enemy with 38129 Power added to P Atk.	mp_consume: 54
+		LvL.110	description: Fires an arrow at the enemy with 38923 Power added to P Atk.	mp_consume: 47
+
+		Enchant Route: 2 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Chance: Increases success rate.
+
+		LvL.201	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.202	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.203	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.204	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.205	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.206	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.207	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.208	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.209	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.210	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+
+		Enchant Route: 3 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.302	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.303	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.304	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.305	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.306	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.307	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.308	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.309	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.310	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+
+		Enchant Route: 4 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.402	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.403	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.404	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.405	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.406	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.407	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.408	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.409	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.410	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+
+		Enchant Route: 5 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Water Attack: Endowed with Water.
+
+		LvL.501	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.502	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.503	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.504	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.505	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.506	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.507	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.508	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.509	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.510	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+
+		Enchant Route: 6 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.602	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.603	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.604	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.605	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.606	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.607	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.608	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.609	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.610	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+
+		Enchant Route: 7 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.702	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.703	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.704	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.705	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.706	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.707	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.708	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.709	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.710	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+
+		Enchant Route: 8 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.802	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.803	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.804	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.805	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.806	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.807	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.808	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.809	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.810	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+
+		Enchant Route: 9 - 	Fires an arrow at the enemy with 31777 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit.
+
+		LvL.901	description: Fires an arrow at the enemy with 31777 Power added to P Atk.
+		LvL.902	description: Fires an arrow at the enemy with 32571 Power added to P Atk.
+		LvL.903	description: Fires an arrow at the enemy with 33365 Power added to P Atk.
+		LvL.904	description: Fires an arrow at the enemy with 34159 Power added to P Atk.
+		LvL.905	description: Fires an arrow at the enemy with 34953 Power added to P Atk.
+		LvL.906	description: Fires an arrow at the enemy with 35747 Power added to P Atk.
+		LvL.907	description: Fires an arrow at the enemy with 36541 Power added to P Atk.
+		LvL.908	description: Fires an arrow at the enemy with 37335 Power added to P Atk.
+		LvL.909	description: Fires an arrow at the enemy with 38129 Power added to P Atk.
+		LvL.910	description: Fires an arrow at the enemy with 38923 Power added to P Atk.
+		name: Impact Shot
+		level: 1
+		mp_consume: 98
+		description: Fires an arrow at the enemy with 19867 Power added to P. Atk. Stuns the enemy for 9 seconds. Requires a bow or crossbow to be equipped. Over-hit.
+		icon_name: icon.skill10769
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 2.2
+		cool_time: 0.35
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10769" levels="5" name="Impact Shot">
 		<table name="#activateRate">83</table>
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
@@ -806,7 +2038,152 @@
 			<effect name="Stun"/>
 		</for>
 	</skill>
-	<skill id="10770" levels="8" name="Recoil Shot">
+    <!--
+		Recoil Shot - Shoots an arrow with 24888 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target.
+
+		LvL.1	description: Shoots an arrow with 24888 Power added to P Atk.	mp_consume: 102
+		LvL.2	description: Shoots an arrow with 25558 Power added to P Atk.	mp_consume: 106
+		LvL.3	description: Shoots an arrow with 26229 Power added to P Atk.	mp_consume: 109
+		LvL.4	description: Shoots an arrow with 26900 Power added to P Atk.	mp_consume: 113
+		LvL.5	description: Shoots an arrow with 27571 Power added to P Atk.	mp_consume: 116
+		LvL.6	description: Shoots an arrow with 28242 Power added to P Atk.	mp_consume: 120
+		LvL.7	description: Shoots an arrow with 28912 Power added to P Atk.	mp_consume: 124
+		LvL.8	description: Shoots an arrow with 29583 Power added to P Atk.	mp_consume: 127
+
+		Enchant Route: 1 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Shoots an arrow with 29918 Power added to P Atk.	mp_consume: 119
+		LvL.102	description: Shoots an arrow with 30254 Power added to P Atk.	mp_consume: 111
+		LvL.103	description: Shoots an arrow with 30589 Power added to P Atk.	mp_consume: 104
+		LvL.104	description: Shoots an arrow with 30925 Power added to P Atk.	mp_consume: 96
+		LvL.105	description: Shoots an arrow with 31260 Power added to P Atk.	mp_consume: 88
+		LvL.106	description: Shoots an arrow with 31595 Power added to P Atk.	mp_consume: 81
+		LvL.107	description: Shoots an arrow with 31931 Power added to P Atk.	mp_consume: 73
+		LvL.108	description: Shoots an arrow with 32266 Power added to P Atk.	mp_consume: 66
+		LvL.109	description: Shoots an arrow with 32601 Power added to P Atk.	mp_consume: 58
+		LvL.110	description: Shoots an arrow with 32937 Power added to P Atk.	mp_consume: 50
+
+		Enchant Route: 2 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Chance: Increases success rate.
+
+		LvL.201	description: Shoots an arrow with 29918 Power added to P Atk.
+		LvL.202	description: Shoots an arrow with 30254 Power added to P Atk.
+		LvL.203	description: Shoots an arrow with 30589 Power added to P Atk.
+		LvL.204	description: Shoots an arrow with 30925 Power added to P Atk.
+		LvL.205	description: Shoots an arrow with 31260 Power added to P Atk.
+		LvL.206	description: Shoots an arrow with 31595 Power added to P Atk.
+		LvL.207	description: Shoots an arrow with 31931 Power added to P Atk.
+		LvL.208	description: Shoots an arrow with 32266 Power added to P Atk.
+		LvL.209	description: Shoots an arrow with 32601 Power added to P Atk.
+		LvL.210	description: Shoots an arrow with 32937 Power added to P Atk.
+
+		Enchant Route: 3 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Shoots an arrow with 29918 Power added to P Atk.
+		LvL.302	description: Shoots an arrow with 30254 Power added to P Atk.
+		LvL.303	description: Shoots an arrow with 30589 Power added to P Atk.
+		LvL.304	description: Shoots an arrow with 30925 Power added to P Atk.
+		LvL.305	description: Shoots an arrow with 31260 Power added to P Atk.
+		LvL.306	description: Shoots an arrow with 31595 Power added to P Atk.
+		LvL.307	description: Shoots an arrow with 31931 Power added to P Atk.
+		LvL.308	description: Shoots an arrow with 32266 Power added to P Atk.
+		LvL.309	description: Shoots an arrow with 32601 Power added to P Atk.
+		LvL.310	description: Shoots an arrow with 32937 Power added to P Atk.
+
+		Enchant Route: 4 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Shoots an arrow with 29918 Power added to P Atk.
+		LvL.402	description: Shoots an arrow with 30254 Power added to P Atk.
+		LvL.403	description: Shoots an arrow with 30589 Power added to P Atk.
+		LvL.404	description: Shoots an arrow with 30925 Power added to P Atk.
+		LvL.405	description: Shoots an arrow with 31260 Power added to P Atk.
+		LvL.406	description: Shoots an arrow with 31595 Power added to P Atk.
+		LvL.407	description: Shoots an arrow with 31931 Power added to P Atk.
+		LvL.408	description: Shoots an arrow with 32266 Power added to P Atk.
+		LvL.409	description: Shoots an arrow with 32601 Power added to P Atk.
+		LvL.410	description: Shoots an arrow with 32937 Power added to P Atk.
+
+		Enchant Route: 5 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Shoots an arrow with 29918 Power added to P Atk.
+		LvL.502	description: Shoots an arrow with 30254 Power added to P Atk.
+		LvL.503	description: Shoots an arrow with 30589 Power added to P Atk.
+		LvL.504	description: Shoots an arrow with 30925 Power added to P Atk.
+		LvL.505	description: Shoots an arrow with 31260 Power added to P Atk.
+		LvL.506	description: Shoots an arrow with 31595 Power added to P Atk.
+		LvL.507	description: Shoots an arrow with 31931 Power added to P Atk.
+		LvL.508	description: Shoots an arrow with 32266 Power added to P Atk.
+		LvL.509	description: Shoots an arrow with 32601 Power added to P Atk.
+		LvL.510	description: Shoots an arrow with 32937 Power added to P Atk.
+
+		Enchant Route: 6 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Shoots an arrow with 29918 Power added to P Atk.
+		LvL.602	description: Shoots an arrow with 30254 Power added to P Atk.
+		LvL.603	description: Shoots an arrow with 30589 Power added to P Atk.
+		LvL.604	description: Shoots an arrow with 30925 Power added to P Atk.
+		LvL.605	description: Shoots an arrow with 31260 Power added to P Atk.
+		LvL.606	description: Shoots an arrow with 31595 Power added to P Atk.
+		LvL.607	description: Shoots an arrow with 31931 Power added to P Atk.
+		LvL.608	description: Shoots an arrow with 32266 Power added to P Atk.
+		LvL.609	description: Shoots an arrow with 32601 Power added to P Atk.
+		LvL.610	description: Shoots an arrow with 32937 Power added to P Atk.
+
+		Enchant Route: 7 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Shoots an arrow with 29918 Power added to P Atk.
+		LvL.702	description: Shoots an arrow with 30254 Power added to P Atk.
+		LvL.703	description: Shoots an arrow with 30589 Power added to P Atk.
+		LvL.704	description: Shoots an arrow with 30925 Power added to P Atk.
+		LvL.705	description: Shoots an arrow with 31260 Power added to P Atk.
+		LvL.706	description: Shoots an arrow with 31595 Power added to P Atk.
+		LvL.707	description: Shoots an arrow with 31931 Power added to P Atk.
+		LvL.708	description: Shoots an arrow with 32266 Power added to P Atk.
+		LvL.709	description: Shoots an arrow with 32601 Power added to P Atk.
+		LvL.710	description: Shoots an arrow with 32937 Power added to P Atk.
+
+		Enchant Route: 8 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Shoots an arrow with 29918 Power added to P Atk.
+		LvL.802	description: Shoots an arrow with 30254 Power added to P Atk.
+		LvL.803	description: Shoots an arrow with 30589 Power added to P Atk.
+		LvL.804	description: Shoots an arrow with 30925 Power added to P Atk.
+		LvL.805	description: Shoots an arrow with 31260 Power added to P Atk.
+		LvL.806	description: Shoots an arrow with 31595 Power added to P Atk.
+		LvL.807	description: Shoots an arrow with 31931 Power added to P Atk.
+		LvL.808	description: Shoots an arrow with 32266 Power added to P Atk.
+		LvL.809	description: Shoots an arrow with 32601 Power added to P Atk.
+		LvL.810	description: Shoots an arrow with 32937 Power added to P Atk.
+
+		Enchant Route: 9 - 	Shoots an arrow with 29918 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target.
+
+		LvL.901	description: Shoots an arrow with 29918 Power added to P Atk.	reuse_delay: 29
+		LvL.902	description: Shoots an arrow with 30254 Power added to P Atk.	reuse_delay: 28
+		LvL.903	description: Shoots an arrow with 30589 Power added to P Atk.	reuse_delay: 27
+		LvL.904	description: Shoots an arrow with 30925 Power added to P Atk.	reuse_delay: 26
+		LvL.905	description: Shoots an arrow with 31260 Power added to P Atk.	reuse_delay: 25
+		LvL.906	description: Shoots an arrow with 31595 Power added to P Atk.	reuse_delay: 24
+		LvL.907	description: Shoots an arrow with 31931 Power added to P Atk.	reuse_delay: 23
+		LvL.908	description: Shoots an arrow with 32266 Power added to P Atk.	reuse_delay: 22
+		LvL.909	description: Shoots an arrow with 32601 Power added to P Atk.	reuse_delay: 21
+		LvL.910	description: Shoots an arrow with 32937 Power added to P Atk.	reuse_delay: 20
+		name: Recoil Shot
+		level: 1
+		mp_consume: 102
+		description: Shoots an arrow with 24888 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target.
+		icon_name: icon.skill10770
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 2.2
+		cool_time: 0.45
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10770" levels="8" name="Recoil Shot">
 		<table name="#activateRate">50</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">102 106 109 113 116 120 124 127</table>
@@ -886,7 +2263,152 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10771" levels="8" name="Multiple Arrow">
+    <!--
+		Multiple Arrow - Attacks frontal enemies with 23391 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.1	description: Attacks frontal enemies with 23391 Power added to P Atk.	mp_consume: 124
+		LvL.2	description: Attacks frontal enemies with 25018 Power added to P Atk.	mp_consume: 128
+		LvL.3	description: Attacks frontal enemies with 26645 Power added to P Atk.	mp_consume: 133
+		LvL.4	description: Attacks frontal enemies with 28272 Power added to P Atk.	mp_consume: 137
+		LvL.5	description: Attacks frontal enemies with 29900 Power added to P Atk.	mp_consume: 142
+		LvL.6	description: Attacks frontal enemies with 31527 Power added to P Atk.	mp_consume: 146
+		LvL.7	description: Attacks frontal enemies with 33154 Power added to P Atk.	mp_consume: 151
+		LvL.8	description: Attacks frontal enemies with 34781 Power added to P Atk.	mp_consume: 155
+
+		Enchant Route: 1 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks frontal enemies with 35595 Power added to P Atk.	mp_consume: 145
+		LvL.102	description: Attacks frontal enemies with 36408 Power added to P Atk.	mp_consume: 136
+		LvL.103	description: Attacks frontal enemies with 37222 Power added to P Atk.	mp_consume: 127
+		LvL.104	description: Attacks frontal enemies with 38035 Power added to P Atk.	mp_consume: 117
+		LvL.105	description: Attacks frontal enemies with 38849 Power added to P Atk.	mp_consume: 108
+		LvL.106	description: Attacks frontal enemies with 39662 Power added to P Atk.	mp_consume: 99
+		LvL.107	description: Attacks frontal enemies with 40476 Power added to P Atk.	mp_consume: 89
+		LvL.108	description: Attacks frontal enemies with 41290 Power added to P Atk.	mp_consume: 80
+		LvL.109	description: Attacks frontal enemies with 42103 Power added to P Atk.	mp_consume: 71
+		LvL.110	description: Attacks frontal enemies with 42917 Power added to P Atk.	mp_consume: 62
+
+		Enchant Route: 2 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.202	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.203	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.204	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.205	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.206	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.207	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.208	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.209	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.210	description: Attacks frontal enemies with 42917 Power added to P Atk.
+
+		Enchant Route: 3 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.302	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.303	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.304	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.305	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.306	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.307	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.308	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.309	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.310	description: Attacks frontal enemies with 42917 Power added to P Atk.
+
+		Enchant Route: 4 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.402	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.403	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.404	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.405	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.406	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.407	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.408	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.409	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.410	description: Attacks frontal enemies with 42917 Power added to P Atk.
+
+		Enchant Route: 5 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.502	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.503	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.504	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.505	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.506	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.507	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.508	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.509	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.510	description: Attacks frontal enemies with 42917 Power added to P Atk.
+
+		Enchant Route: 6 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.602	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.603	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.604	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.605	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.606	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.607	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.608	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.609	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.610	description: Attacks frontal enemies with 42917 Power added to P Atk.
+
+		Enchant Route: 7 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.702	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.703	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.704	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.705	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.706	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.707	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.708	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.709	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.710	description: Attacks frontal enemies with 42917 Power added to P Atk.
+
+		Enchant Route: 8 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.802	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.803	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.804	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.805	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.806	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.807	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.808	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.809	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.810	description: Attacks frontal enemies with 42917 Power added to P Atk.
+
+		Enchant Route: 9 - 	Attacks frontal enemies with 35595 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.901	description: Attacks frontal enemies with 35595 Power added to P Atk.
+		LvL.902	description: Attacks frontal enemies with 36408 Power added to P Atk.
+		LvL.903	description: Attacks frontal enemies with 37222 Power added to P Atk.
+		LvL.904	description: Attacks frontal enemies with 38035 Power added to P Atk.
+		LvL.905	description: Attacks frontal enemies with 38849 Power added to P Atk.
+		LvL.906	description: Attacks frontal enemies with 39662 Power added to P Atk.
+		LvL.907	description: Attacks frontal enemies with 40476 Power added to P Atk.
+		LvL.908	description: Attacks frontal enemies with 41290 Power added to P Atk.
+		LvL.909	description: Attacks frontal enemies with 42103 Power added to P Atk.
+		LvL.910	description: Attacks frontal enemies with 42917 Power added to P Atk.
+		name: Multiple Arrow
+		level: 1
+		mp_consume: 124
+		description: Attacks frontal enemies with 23391 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10771
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 2.9
+		cool_time: 0.35
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 8
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10771" levels="8" name="Multiple Arrow">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
@@ -950,7 +2472,152 @@
 			<table name="#reuseDelay">6900 6800 6700 6600 6500 6400 6300 6200 6100 6000</table>
 		</enchant>
 	</skill>
-	<skill id="10772" levels="8" name="Heavy Arrow Rain">
+    <!--
+		Heavy Arrow Rain - Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 22526 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.1	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 22526 damage added to P Atk.	mp_consume: 125
+		LvL.2	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 23310 damage added to P Atk.	mp_consume: 127
+		LvL.3	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 24879 damage added to P Atk.	mp_consume: 131
+		LvL.4	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 26448 damage added to P Atk.	mp_consume: 136
+		LvL.5	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 28017 damage added to P Atk.	mp_consume: 140
+		LvL.6	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 29586 damage added to P Atk.	mp_consume: 145
+		LvL.7	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 31155 damage added to P Atk.	mp_consume: 149
+		LvL.8	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 32724 damage added to P Atk.	mp_consume: 154
+
+		Enchant Route: 1 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.	mp_consume: 144
+		LvL.102	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.	mp_consume: 135
+		LvL.103	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.	mp_consume: 126
+		LvL.104	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.	mp_consume: 117
+		LvL.105	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.	mp_consume: 107
+		LvL.106	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.	mp_consume: 98
+		LvL.107	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.	mp_consume: 89
+		LvL.108	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.	mp_consume: 80
+		LvL.109	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.	mp_consume: 70
+		LvL.110	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.	mp_consume: 61
+
+		Enchant Route: 2 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Duel: Increases PvP Power.
+
+		LvL.201	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.
+		LvL.202	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.203	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.
+		LvL.204	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.
+		LvL.205	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.
+		LvL.206	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.
+		LvL.207	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.
+		LvL.208	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.
+		LvL.209	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.
+		LvL.210	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.
+
+		Enchant Route: 3 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Fire Attack: Endowed with Fire.
+
+		LvL.301	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.
+		LvL.302	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.303	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.
+		LvL.304	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.
+		LvL.305	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.
+		LvL.306	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.
+		LvL.307	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.
+		LvL.308	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.
+		LvL.309	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.
+		LvL.310	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.
+
+		Enchant Route: 4 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Water Attack: Endowed with Water.
+
+		LvL.401	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.
+		LvL.402	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.403	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.
+		LvL.404	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.
+		LvL.405	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.
+		LvL.406	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.
+		LvL.407	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.
+		LvL.408	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.
+		LvL.409	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.
+		LvL.410	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.
+
+		Enchant Route: 5 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Wind Attack: Endowed with Wind.
+
+		LvL.501	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.
+		LvL.502	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.503	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.
+		LvL.504	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.
+		LvL.505	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.
+		LvL.506	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.
+		LvL.507	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.
+		LvL.508	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.
+		LvL.509	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.
+		LvL.510	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.
+
+		Enchant Route: 6 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Earth Attack: Endowed with Earth.
+
+		LvL.601	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.
+		LvL.602	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.603	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.
+		LvL.604	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.
+		LvL.605	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.
+		LvL.606	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.
+		LvL.607	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.
+		LvL.608	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.
+		LvL.609	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.
+		LvL.610	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.
+
+		Enchant Route: 7 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Holy Attack: Endowed with Holy.
+
+		LvL.701	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.
+		LvL.702	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.703	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.
+		LvL.704	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.
+		LvL.705	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.
+		LvL.706	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.
+		LvL.707	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.
+		LvL.708	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.
+		LvL.709	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.
+		LvL.710	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.
+
+		Enchant Route: 8 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. Enchant Dark Attack: Endowed with Dark.
+
+		LvL.801	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.
+		LvL.802	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.803	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.
+		LvL.804	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.
+		LvL.805	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.
+		LvL.806	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.
+		LvL.807	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.
+		LvL.808	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.
+		LvL.809	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.
+		LvL.810	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.
+
+		Enchant Route: 9 - 	Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+
+		LvL.901	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 34292 damage added to P Atk.	reuse_delay: 14
+		LvL.902	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35077 damage added to P Atk.
+		LvL.903	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 35861 damage added to P Atk.	reuse_delay: 13
+		LvL.904	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 36646 damage added to P Atk.	reuse_delay: 13
+		LvL.905	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 37430 damage added to P Atk.	reuse_delay: 12
+		LvL.906	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38215 damage added to P Atk.	reuse_delay: 12
+		LvL.907	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 38999 damage added to P Atk.	reuse_delay: 11
+		LvL.908	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 39784 damage added to P Atk.	reuse_delay: 11
+		LvL.909	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 40568 damage added to P Atk.	reuse_delay: 10
+		LvL.910	description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 41353 damage added to P Atk.	reuse_delay: 10
+		name: Heavy Arrow Rain
+		level: 1
+		mp_consume: 125
+		description: Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 22526 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10772
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 2.9
+		cool_time: 0.35
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 8
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10772" levels="8" name="Heavy Arrow Rain">
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1025,7 +2692,27 @@
 			<table name="#reuseDelay">14000 14000 13000 13000 12000 12000 11000 11000 10000 10000</table>
 		</enchant>
 	</skill>
-	<skill id="10773" levels="1" name="Not in Use">
+    <!--
+		Not in Use - Not in use
+
+		name: Not in Use
+		level: 1
+		mp_consume: 1
+		description: Not in use
+		icon_name: icon.skill0773
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 2.2
+		cool_time: 0.3
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 8
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10773" levels="1" name="Not in Use">
 		<!--
 			Уровень: 1; Описание: Не используется.
 		-->
@@ -1038,7 +2725,44 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10774" levels="4" name="Quick Evasion">
+    <!--
+		Quick Evasion - Momentarily teleports 300 backward.
+
+		LvL.1	description: Momentarily teleports 300 backward.	cast_range: 300	mp_consume: 27
+		LvL.2	description: Momentarily teleports 350 backward.	cast_range: 350	mp_consume: 32
+		LvL.3	description: Momentarily teleports 400 backward.	cast_range: 400	mp_consume: 33
+		LvL.4	description: Momentarily teleports 450 backward.	cast_range: 450	mp_consume: 33
+
+		Enchant Route: 1 - 	Momentarily teleports 460 backward. Enchant Distance: Increases Movement Range.
+
+		LvL.101	description: Momentarily teleports 460 backward.	cast_range: 460
+		LvL.102	description: Momentarily teleports 470 backward.	cast_range: 470
+		LvL.103	description: Momentarily teleports 480 backward.	cast_range: 480
+		LvL.104	description: Momentarily teleports 490 backward.	cast_range: 490
+		LvL.105	description: Momentarily teleports 500 backward.	cast_range: 500
+		LvL.106	description: Momentarily teleports 510 backward.	cast_range: 510
+		LvL.107	description: Momentarily teleports 520 backward.	cast_range: 520
+		LvL.108	description: Momentarily teleports 530 backward.	cast_range: 530
+		LvL.109	description: Momentarily teleports 540 backward.	cast_range: 540
+		LvL.110	description: Momentarily teleports 550 backward.	cast_range: 550
+		name: Quick Evasion
+		level: 1
+		mp_consume: 27
+		description: Momentarily teleports 300 backward.
+		icon_name: icon.skill10774
+		hp_consume: 0
+		cast_range: 300
+		hit_time: 0.7
+		cool_time: 0
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 24
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10774" levels="4" name="Quick Evasion">
 		<table name="#mpConsume2">27 32 33 33</table>
 		<table name="#flyRadius">-300 -350 -400 -450</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -1059,7 +2783,43 @@
 			<table name="#flyRadius">-460 -470 -480 -490 -500 -510 -520 -530 -540 -550</table>
 		</enchant>
 	</skill>
-	<skill id="10775" levels="3" name="Confusion Decoy">
+    <!--
+		Confusion Decoy - Summons a decoy that receives attacks for you.
+
+		LvL.1	mp_consume: 60
+		LvL.2	mp_consume: 66
+		LvL.3	mp_consume: 72
+
+		Enchant Route: 1 - 	summons a decoy that receives attacks for you. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 69
+		LvL.102	mp_consume: 66
+		LvL.103	mp_consume: 63
+		LvL.104	mp_consume: 60
+		LvL.105	mp_consume: 57
+		LvL.106	mp_consume: 54
+		LvL.107	mp_consume: 51
+		LvL.108	mp_consume: 48
+		LvL.109	mp_consume: 46
+		LvL.110	mp_consume: 43
+		name: Confusion Decoy
+		level: 1
+		mp_consume: 60
+		description: Summons a decoy that receives attacks for you.
+		icon_name: icon.skill10775
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10775" levels="3" name="Confusion Decoy">
 		<table name="#magicLevel">87 93 99</table>
 		<table name="#mpConsume2">60 75 88</table>
 		<table name="#npcId">13074 13075 13076</table>
@@ -1079,7 +2839,96 @@
 			<table name="#mpConsume2">69 66 63 60 57 54 51 48 46 43</table>
 		</enchant>
 	</skill>
-	<skill id="10776" levels="4" name="Final Ultimate Escape">
+    <!--
+		Final Ultimate Escape - For 30 sec., P. Evasion + 60, M. Evasion + 60, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 80%.
+
+		LvL.1	description: , P Evasion + 60, M Evasion + 60, M Def. + 20%, Debuff Resistance + 95%, and P Skill Evasion Rate + 80%.	mp_consume: 58
+		LvL.2	description: , P Evasion + 70, M Evasion + 70, M Def. + 20%, Debuff Resistance + 95%, and P Skill Evasion Rate + 85%.	mp_consume: 63
+		LvL.3	description: , P Evasion + 80, M Evasion + 80, M Def. + 20%, Debuff Resistance + 95%, and P Skill Evasion Rate + 90%.	mp_consume: 68
+		LvL.4	description: , P Evasion + 90, M Evasion + 90, M Def. + 20%, Debuff Resistance + 95%, and P Skill Evasion Rate + 95%.	mp_consume: 72
+
+		Enchant Route: 1 - 	For 30 sec., P. Evasion + 90, M. Evasion + 90, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 95%. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 67
+		LvL.102	mp_consume: 63
+		LvL.103	mp_consume: 59
+		LvL.104	mp_consume: 54
+		LvL.105	mp_consume: 50
+		LvL.106	mp_consume: 46
+		LvL.107	mp_consume: 41
+		LvL.108	mp_consume: 37
+		LvL.109	mp_consume: 33
+		LvL.110	mp_consume: 28
+
+		Enchant Route: 2 - 	For 31 seconds, P. Evasion + 90, M. Evasion + 90, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 95%. Enchant Time: duration.
+
+		LvL.201	description: For 31 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.202	description: For 32 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.203	description: For 33 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.204	description: For 34 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.205	description: For 35 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.206	description: For 36 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.207	description: For 37 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.208	description: For 38 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.209	description: For 39 seconds, P Evasion + 90, M Evasion + 90, M Def.
+		LvL.210	description: For 40 seconds, P Evasion + 90, M Evasion + 90, M Def.
+
+		Enchant Route: 3 - 	For 30 sec., P. Evasion + 90, M. Evasion + 90, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 95%. Enchant Wind Walk: Speed + 1.
+
+		LvL.301	description: Enchant Wind Walk: Speed + 1.
+		LvL.302	description: Enchant Wind Walk: Speed + 2.
+		LvL.303	description: Enchant Wind Walk: Speed + 3.
+		LvL.304	description: Enchant Wind Walk: Speed + 4.
+		LvL.305	description: Enchant Wind Walk: Speed + 5.
+		LvL.306	description: Enchant Wind Walk: Speed + 6.
+		LvL.307	description: Enchant Wind Walk: Speed + 7.
+		LvL.308	description: Enchant Wind Walk: Speed + 8.
+		LvL.309	description: Enchant Wind Walk: Speed + 9.
+		LvL.310	description: Enchant Wind Walk: Speed + 10.
+
+		Enchant Route: 4 - 	For 30 sec., P. Evasion + 90, M. Evasion + 90, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 95%. Enchant Chance Stun: Stun Rate + 1.
+
+		LvL.401	description: Enchant Chance Stun: Stun Rate + 1.
+		LvL.402	description: Enchant Chance Stun: Stun Rate + 2.
+		LvL.403	description: Enchant Chance Stun: Stun Rate + 3.
+		LvL.404	description: Enchant Chance Stun: Stun Rate + 4.
+		LvL.405	description: Enchant Chance Stun: Stun Rate + 5.
+		LvL.406	description: Enchant Chance Stun: Stun Rate + 6.
+		LvL.407	description: Enchant Chance Stun: Stun Rate + 7.
+		LvL.408	description: Enchant Chance Stun: Stun Rate + 8.
+		LvL.409	description: Enchant Chance Stun: Stun Rate + 9.
+		LvL.410	description: Enchant Chance Stun: Stun Rate + 10.
+
+		Enchant Route: 9 - 	For 30 sec., P. Evasion + 30, M. Evasion + 90, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 95%.
+
+		LvL.901	reuse_delay: 873
+		LvL.902	reuse_delay: 846
+		LvL.903	reuse_delay: 819
+		LvL.904	reuse_delay: 792
+		LvL.905	reuse_delay: 765
+		LvL.906	reuse_delay: 738
+		LvL.907	reuse_delay: 711
+		LvL.908	reuse_delay: 684
+		LvL.909	reuse_delay: 657
+		LvL.910	reuse_delay: 630
+		name: Final Ultimate Escape
+		level: 1
+		mp_consume: 58
+		description: For 30 sec., P. Evasion + 60, M. Evasion + 60, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 80%.
+		icon_name: icon.skill10776
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 900
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10776" levels="4" name="Final Ultimate Escape">
 		<table name="#abnormal_time">30</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mEvasRate">60 70 80 90</table>
@@ -1122,7 +2971,40 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10777" levels="1" name="Lure Shot">
+    <!--
+		Lure Shot - Draws in the enemy's attention.
+
+
+		Enchant Route: 1 - 	Grabs enemy's attention. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 73
+		LvL.102	mp_consume: 70
+		LvL.103	mp_consume: 67
+		LvL.104	mp_consume: 64
+		LvL.105	mp_consume: 61
+		LvL.106	mp_consume: 58
+		LvL.107	mp_consume: 55
+		LvL.108	mp_consume: 52
+		LvL.109	mp_consume: 49
+		LvL.110	mp_consume: 46
+		name: Lure Shot
+		level: 1
+		mp_consume: 77
+		description: Draws in the enemy's attention.
+		icon_name: icon.skill10777
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10777" levels="1" name="Lure Shot">
 		<table name="#mpConsume2">77</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="3"/>
@@ -1149,7 +3031,40 @@
 			<effect name="Aggression"/>
 		</for>
 	</skill>
-	<skill id="10778" levels="1" name="Diversion">
+    <!--
+		Diversion - Transfer the aggression of nearby enemies around target to another party member.
+
+
+		Enchant Route: 1 - 	Transfers nearby enemies' enmity on yourself to a selected party member. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 81
+		LvL.102	mp_consume: 78
+		LvL.103	mp_consume: 74
+		LvL.104	mp_consume: 71
+		LvL.105	mp_consume: 68
+		LvL.106	mp_consume: 64
+		LvL.107	mp_consume: 61
+		LvL.108	mp_consume: 57
+		LvL.109	mp_consume: 54
+		LvL.110	mp_consume: 51
+		name: Diversion
+		level: 1
+		mp_consume: 85
+		description: Transfer the aggression of nearby enemies around target to another party member.
+		icon_name: icon.skill10778
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 60
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10778" levels="1" name="Diversion">
 		<table name="#mpConsume2">85</table>
 		<set name="analog_skills" value="2;15;489"/>
 		<set name="castRange" value="900"/>
@@ -1171,7 +3086,96 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 	</skill>
-	<skill id="10779" levels="4" name="Quick Fire">
+    <!--
+		Quick Fire - For 30 sec., Atk. Spd. + 20% when equipped with a bow/crossbow.
+
+		LvL.1	description: + 20% when equipped with a bow/crossbow.	mp_consume: 39
+		LvL.2	description: + 30% when equipped with a bow/crossbow.	mp_consume: 42
+		LvL.3	description: + 40% when equipped with a bow/crossbow.	mp_consume: 46
+		LvL.4	description: + 50% when equipped with a bow/crossbow.	mp_consume: 48
+
+		Enchant Route: 1 - 	For 30 sec., Atk. Spd. + 50% when equipped with a bow/crossbow. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 45
+		LvL.102	mp_consume: 42
+		LvL.103	mp_consume: 39
+		LvL.104	mp_consume: 36
+		LvL.105	mp_consume: 33
+		LvL.106	mp_consume: 30
+		LvL.107	mp_consume: 27
+		LvL.108	mp_consume: 24
+		LvL.109	mp_consume: 22
+		LvL.110	mp_consume: 19
+
+		Enchant Route: 2 - 	For 31 sec., Atk. Spd. + 50% when equipped with a bow/crossbow. Enchant Time: duration.
+
+		LvL.201	description: For 31 sec.
+		LvL.202	description: For 32 sec.
+		LvL.203	description: For 33 sec.
+		LvL.204	description: For 34 sec.
+		LvL.205	description: For 35 sec.
+		LvL.206	description: For 36 sec.
+		LvL.207	description: For 37 sec.
+		LvL.208	description: For 38 sec.
+		LvL.209	description: For 39 sec.
+		LvL.210	description: For 40 sec.
+
+		Enchant Route: 3 - 	For 30 sec., Atk. Spd. + 50% when equipped with a bow/crossbow. Enchant Chance Stun: Stun Rate + 1.
+
+		LvL.301	description: Enchant Chance Stun: Stun Rate + 1.
+		LvL.302	description: Enchant Chance Stun: Stun Rate + 2.
+		LvL.303	description: Enchant Chance Stun: Stun Rate + 3.
+		LvL.304	description: Enchant Chance Stun: Stun Rate + 4.
+		LvL.305	description: Enchant Chance Stun: Stun Rate + 5.
+		LvL.306	description: Enchant Chance Stun: Stun Rate + 6.
+		LvL.307	description: Enchant Chance Stun: Stun Rate + 7.
+		LvL.308	description: Enchant Chance Stun: Stun Rate + 8.
+		LvL.309	description: Enchant Chance Stun: Stun Rate + 9.
+		LvL.310	description: Enchant Chance Stun: Stun Rate + 10.
+
+		Enchant Route: 4 - 	For 30 sec., Atk. Spd. + 50% when equipped with a bow/crossbow. Enchant Chance Hold: Hold Rate + 1.
+
+		LvL.401	description: Enchant Chance Hold: Hold Rate + 1.
+		LvL.402	description: Enchant Chance Hold: Hold Rate + 2.
+		LvL.403	description: Enchant Chance Hold: Hold Rate + 3.
+		LvL.404	description: Enchant Chance Hold: Hold Rate + 4.
+		LvL.405	description: Enchant Chance Hold: Hold Rate + 5.
+		LvL.406	description: Enchant Chance Hold: Hold Rate + 6.
+		LvL.407	description: Enchant Chance Hold: Hold Rate + 7.
+		LvL.408	description: Enchant Chance Hold: Hold Rate + 8.
+		LvL.409	description: Enchant Chance Hold: Hold Rate + 9.
+		LvL.410	description: Enchant Chance Hold: Hold Rate + 10.
+
+		Enchant Route: 9 - 	For 30 sec., Atk. Spd. + 50% when equipped with a bow/crossbow.
+
+		LvL.901	reuse_delay: 116
+		LvL.902	reuse_delay: 112
+		LvL.903	reuse_delay: 109
+		LvL.904	reuse_delay: 105
+		LvL.905	reuse_delay: 102
+		LvL.906	reuse_delay: 98
+		LvL.907	reuse_delay: 94
+		LvL.908	reuse_delay: 91
+		LvL.909	reuse_delay: 87
+		LvL.910	reuse_delay: 84
+		name: Quick Fire
+		level: 1
+		mp_consume: 39
+		description: For 30 sec., Atk. Spd. + 20% when equipped with a bow/crossbow.
+		icon_name: icon.skill10779
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10779" levels="4" name="Quick Fire">
 		<table name="#abnormal_time">30</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">39 42 46 48</table>
@@ -1211,7 +3215,150 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10780" levels="6" name="Slow Shot">
+    <!--
+		Slow Shot - Attacks target with 9338 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped.
+
+		LvL.1	description: Attacks target with 9338 Power added to P Atk.	mp_consume: 94
+		LvL.2	description: Attacks target with 9670 Power added to P Atk.	mp_consume: 96
+		LvL.3	description: Attacks target with 10669 Power added to P Atk.	mp_consume: 101
+		LvL.4	description: Attacks target with 11667 Power added to P Atk.	mp_consume: 106
+		LvL.5	description: Attacks target with 12666 Power added to P Atk.	mp_consume: 111
+		LvL.6	description: Attacks target with 13664 Power added to P Atk.	mp_consume: 116
+
+		Enchant Route: 1 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks target with 14330 Power added to P Atk.	mp_consume: 109
+		LvL.102	description: Attacks target with 14663 Power added to P Atk.	mp_consume: 102
+		LvL.103	description: Attacks target with 14996 Power added to P Atk.	mp_consume: 95
+		LvL.104	description: Attacks target with 15328 Power added to P Atk.	mp_consume: 88
+		LvL.105	description: Attacks target with 15661 Power added to P Atk.	mp_consume: 81
+		LvL.106	description: Attacks target with 15994 Power added to P Atk.	mp_consume: 74
+		LvL.107	description: Attacks target with 16327 Power added to P Atk.	mp_consume: 67
+		LvL.108	description: Attacks target with 16660 Power added to P Atk.	mp_consume: 60
+		LvL.109	description: Attacks target with 16992 Power added to P Atk.	mp_consume: 53
+		LvL.110	description: Attacks target with 17325 Power added to P Atk.	mp_consume: 46
+
+		Enchant Route: 2 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Chance: Increases success rate.
+
+		LvL.201	description: Attacks target with 14330 Power added to P Atk.
+		LvL.202	description: Attacks target with 14663 Power added to P Atk.
+		LvL.203	description: Attacks target with 14996 Power added to P Atk.
+		LvL.204	description: Attacks target with 15328 Power added to P Atk.
+		LvL.205	description: Attacks target with 15661 Power added to P Atk.
+		LvL.206	description: Attacks target with 15994 Power added to P Atk.
+		LvL.207	description: Attacks target with 16327 Power added to P Atk.
+		LvL.208	description: Attacks target with 16660 Power added to P Atk.
+		LvL.209	description: Attacks target with 16992 Power added to P Atk.
+		LvL.210	description: Attacks target with 17325 Power added to P Atk.
+
+		Enchant Route: 3 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Fire Attack: Increases Fire Attribute.
+
+		LvL.301	description: Attacks target with 14330 Power added to P Atk.
+		LvL.302	description: Attacks target with 14663 Power added to P Atk.
+		LvL.303	description: Attacks target with 14996 Power added to P Atk.
+		LvL.304	description: Attacks target with 15328 Power added to P Atk.
+		LvL.305	description: Attacks target with 15661 Power added to P Atk.
+		LvL.306	description: Attacks target with 15994 Power added to P Atk.
+		LvL.307	description: Attacks target with 16327 Power added to P Atk.
+		LvL.308	description: Attacks target with 16660 Power added to P Atk.
+		LvL.309	description: Attacks target with 16992 Power added to P Atk.
+		LvL.310	description: Attacks target with 17325 Power added to P Atk.
+
+		Enchant Route: 4 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Water Attack: Increases Water Attribute.
+
+		LvL.401	description: Attacks target with 14330 Power added to P Atk.
+		LvL.402	description: Attacks target with 14663 Power added to P Atk.
+		LvL.403	description: Attacks target with 14996 Power added to P Atk.
+		LvL.404	description: Attacks target with 15328 Power added to P Atk.
+		LvL.405	description: Attacks target with 15661 Power added to P Atk.
+		LvL.406	description: Attacks target with 15994 Power added to P Atk.
+		LvL.407	description: Attacks target with 16327 Power added to P Atk.
+		LvL.408	description: Attacks target with 16660 Power added to P Atk.
+		LvL.409	description: Attacks target with 16992 Power added to P Atk.
+		LvL.410	description: Attacks target with 17325 Power added to P Atk.
+
+		Enchant Route: 5 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Wind Attack: Increases Wind Attribute.
+
+		LvL.501	description: Attacks target with 14330 Power added to P Atk.
+		LvL.502	description: Attacks target with 14663 Power added to P Atk.
+		LvL.503	description: Attacks target with 14996 Power added to P Atk.
+		LvL.504	description: Attacks target with 15328 Power added to P Atk.
+		LvL.505	description: Attacks target with 15661 Power added to P Atk.
+		LvL.506	description: Attacks target with 15994 Power added to P Atk.
+		LvL.507	description: Attacks target with 16327 Power added to P Atk.
+		LvL.508	description: Attacks target with 16660 Power added to P Atk.
+		LvL.509	description: Attacks target with 16992 Power added to P Atk.
+		LvL.510	description: Attacks target with 17325 Power added to P Atk.
+
+		Enchant Route: 6 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Earth Attack: Increases Earth Attribute.
+
+		LvL.601	description: Attacks target with 14330 Power added to P Atk.
+		LvL.602	description: Attacks target with 14663 Power added to P Atk.
+		LvL.603	description: Attacks target with 14996 Power added to P Atk.
+		LvL.604	description: Attacks target with 15328 Power added to P Atk.
+		LvL.605	description: Attacks target with 15661 Power added to P Atk.
+		LvL.606	description: Attacks target with 15994 Power added to P Atk.
+		LvL.607	description: Attacks target with 16327 Power added to P Atk.
+		LvL.608	description: Attacks target with 16660 Power added to P Atk.
+		LvL.609	description: Attacks target with 16992 Power added to P Atk.
+		LvL.610	description: Attacks target with 17325 Power added to P Atk.
+
+		Enchant Route: 7 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Holy Attack: Increases Holy Attribute.
+
+		LvL.701	description: Attacks target with 14330 Power added to P Atk.
+		LvL.702	description: Attacks target with 14663 Power added to P Atk.
+		LvL.703	description: Attacks target with 14996 Power added to P Atk.
+		LvL.704	description: Attacks target with 15328 Power added to P Atk.
+		LvL.705	description: Attacks target with 15661 Power added to P Atk.
+		LvL.706	description: Attacks target with 15994 Power added to P Atk.
+		LvL.707	description: Attacks target with 16327 Power added to P Atk.
+		LvL.708	description: Attacks target with 16660 Power added to P Atk.
+		LvL.709	description: Attacks target with 16992 Power added to P Atk.
+		LvL.710	description: Attacks target with 17325 Power added to P Atk.
+
+		Enchant Route: 8 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. Enchant Dark Attack: Increases Dark Attribute.
+
+		LvL.801	description: Attacks target with 14330 Power added to P Atk.
+		LvL.802	description: Attacks target with 14663 Power added to P Atk.
+		LvL.803	description: Attacks target with 14996 Power added to P Atk.
+		LvL.804	description: Attacks target with 15328 Power added to P Atk.
+		LvL.805	description: Attacks target with 15661 Power added to P Atk.
+		LvL.806	description: Attacks target with 15994 Power added to P Atk.
+		LvL.807	description: Attacks target with 16327 Power added to P Atk.
+		LvL.808	description: Attacks target with 16660 Power added to P Atk.
+		LvL.809	description: Attacks target with 16992 Power added to P Atk.
+		LvL.810	description: Attacks target with 17325 Power added to P Atk.
+
+		Enchant Route: 9 - 	Attacks target with 14330 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped.
+
+		LvL.901	description: Attacks target with 14330 Power added to P Atk.	reuse_delay: 29
+		LvL.902	description: Attacks target with 14663 Power added to P Atk.	reuse_delay: 28
+		LvL.903	description: Attacks target with 14996 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 27
+		LvL.904	description: Attacks target with 15328 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 26
+		LvL.905	description: Attacks target with 15661 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 25
+		LvL.906	description: Attacks target with 15994 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 24
+		LvL.907	description: Attacks target with 16327 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 23
+		LvL.908	description: Attacks target with 16660 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 22
+		LvL.909	description: Attacks target with 16992 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 21
+		LvL.910	description: Attacks target with 17325 Power added to P Atk. and decreases Speed by 30%. Requires a bow or crossbow to be equipped.	reuse_delay: 21
+		name: Slow Shot
+		level: 1
+		mp_consume: 94
+		description: Attacks target with 9338 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped.
+		icon_name: icon.skill10780
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 2.1
+		cool_time: 0.35
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10780" levels="6" name="Slow Shot">
 		<table name="#activateRate">77</table> 
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#mpConsume2">94 96 101 106 111 116</table>
@@ -1256,7 +3403,53 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10781" levels="1" name="Phoenix Arrow">
+    <!--
+		Phoenix Arrow - Shoots a magical arrow to obliterate an area. Attacks targets within the skill's range with 45215 power.
+
+
+		Enchant Route: 1 - 	Attacks a target within a designated area with 46273 Power. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	description: Attacks a target within a designated area with 46273 Power.	mp_consume: 1178
+		LvL.102	description: Attacks a target within a designated area with 47330 Power.	mp_consume: 1131
+		LvL.103	description: Attacks a target within a designated area with 48388 Power.	mp_consume: 1083
+		LvL.104	description: Attacks a target within a designated area with 49445 Power.	mp_consume: 1037
+		LvL.105	description: Attacks a target within a designated area with 50503 Power.	mp_consume: 989
+		LvL.106	description: Attacks a target within a designated area with 51560 Power.	mp_consume: 942
+		LvL.107	description: Attacks a target within a designated area with 52618 Power.	mp_consume: 896
+		LvL.108	description: Attacks a target within a designated area with 53677 Power.	mp_consume: 848
+		LvL.109	description: Attacks a target within a designated area with 54733 Power.	mp_consume: 801
+		LvL.110	description: Attacks a target within a designated area with 55792 Power.	mp_consume: 753
+
+		Enchant Route: 9 - 	Attacks a target within a designated area with 46273 Power. Enchant Cost: Decreases MP Consumption.
+
+		LvL.901	description: Attacks a target within a designated area with 46273 Power.
+		LvL.902	description: Attacks a target within a designated area with 47330 Power.
+		LvL.903	description: Attacks a target within a designated area with 48388 Power.
+		LvL.904	description: Attacks a target within a designated area with 49445 Power.
+		LvL.905	description: Attacks a target within a designated area with 50503 Power.
+		LvL.906	description: Attacks a target within a designated area with 51560 Power.
+		LvL.907	description: Attacks a target within a designated area with 52618 Power.
+		LvL.908	description: Attacks a target within a designated area with 53677 Power.
+		LvL.909	description: Attacks a target within a designated area with 54733 Power.
+		LvL.910	description: Attacks a target within a designated area with 55792 Power.
+		name: Phoenix Arrow
+		level: 1
+		mp_consume: 1067
+		description: Shoots a magical arrow to obliterate an area. Attacks targets within the skill's range with 45215 power.
+		icon_name: icon.skill10781
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 7.5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 23
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10781" levels="1" name="Phoenix Arrow">
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="300"/>
 		<set name="elements" value="fire"/>
@@ -1275,7 +3468,27 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 	</skill>
-	<skill id="10782" levels="1" name="Deadly Move 2">
+    <!--
+		Deadly Move 2 - Death blow! Please do not use.
+
+		name: Deadly Move 2
+		level: 1
+		mp_consume: 226
+		description: Death blow! Please do not use.
+		icon_name: icon.skill10782
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 2.2
+		cool_time: 0.3
+		reuse_delay: 3600
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10782" levels="1" name="Deadly Move 2">
 		<set name="reuseDelay" value="3600000"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="2200"/>
@@ -1286,7 +3499,96 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10783" levels="4" name="Mind's Eye">
+    <!--
+		Mind's Eye - For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%.
+
+		LvL.1	description: For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%.	mp_consume: 54
+		LvL.2	description: For 1 minute, opens the eye of infinity to increase Accuracy + 30, Critical Rate + 220, and Critical Damage + 90%.	mp_consume: 59
+		LvL.3	description: For 1 minute, opens the eye of infinity to increase Accuracy + 35, Critical Rate + 240, and Critical Damage + 110%.	mp_consume: 64
+		LvL.4	description: For 1 minute, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.	mp_consume: 64
+
+		Enchant Route: 1 - 	For 1 minute, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 60
+		LvL.102	mp_consume: 56
+		LvL.103	mp_consume: 52
+		LvL.104	mp_consume: 48
+		LvL.105	mp_consume: 44
+		LvL.106	mp_consume: 40
+		LvL.107	mp_consume: 37
+		LvL.108	mp_consume: 33
+		LvL.109	mp_consume: 29
+		LvL.110	mp_consume: 25
+
+		Enchant Route: 2 - 	For 1 minute and 2 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%. Enchant Time: Increases Duration.
+
+		LvL.201	description: For 1 minute and 2 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.202	description: For 1 minute and 4 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.203	description: For 1 minute and 6 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.204	description: For 1 minute and 8 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.205	description: For 1 minute and 10 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.206	description: For 1 minute and 12 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.207	description: For 1 minute and 14 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.208	description: For 1 minute and 16 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.209	description: For 1 minute and 18 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+		LvL.210	description: For 1 minute and 20 seconds, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+
+		Enchant Route: 3 - 	For 1 minute, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%. Enchant Chance Stun: Increases Stun Rate by 1.
+
+		LvL.301	description: Enchant Chance Stun: Increases Stun Rate by 1.
+		LvL.302	description: Enchant Chance Stun: Increases Stun Rate by 2.
+		LvL.303	description: Enchant Chance Stun: Increases Stun Rate by 3.
+		LvL.304	description: Enchant Chance Stun: Increases Stun Rate by 4.
+		LvL.305	description: Enchant Chance Stun: Increases Stun Rate by 5.
+		LvL.306	description: Enchant Chance Stun: Increases Stun Rate by 6.
+		LvL.307	description: Enchant Chance Stun: Increases Stun Rate by 7.
+		LvL.308	description: Enchant Chance Stun: Increases Stun Rate by 8.
+		LvL.309	description: Enchant Chance Stun: Increases Stun Rate by 9.
+		LvL.310	description: Enchant Chance Stun: Increases Stun Rate by 10.
+
+		Enchant Route: 4 - 	For 1 minute, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%. Enchant Chance Hold: Increases Hold Rate by 1.
+
+		LvL.401	description: Enchant Chance Hold: Increases Hold Rate by 1.
+		LvL.402	description: Enchant Chance Hold: Increases Hold Rate by 2.
+		LvL.403	description: Enchant Chance Hold: Increases Hold Rate by 3.
+		LvL.404	description: Enchant Chance Hold: Increases Hold Rate by 4.
+		LvL.405	description: Enchant Chance Hold: Increases Hold Rate by 5.
+		LvL.406	description: Enchant Chance Hold: Increases Hold Rate by 6.
+		LvL.407	description: Enchant Chance Hold: Increases Hold Rate by 7.
+		LvL.408	description: Enchant Chance Hold: Increases Hold Rate by 8.
+		LvL.409	description: Enchant Chance Hold: Increases Hold Rate by 9.
+		LvL.410	description: Enchant Chance Hold: Increases Hold Rate by 10.
+
+		Enchant Route: 9 - 	For 1 minute, opens the eye of infinity to increase Accuracy + 40, Critical Rate + 250, and Critical Damage + 130%.
+
+		LvL.901	reuse_delay: 582
+		LvL.902	reuse_delay: 564
+		LvL.903	reuse_delay: 546
+		LvL.904	reuse_delay: 528
+		LvL.905	reuse_delay: 510
+		LvL.906	reuse_delay: 492
+		LvL.907	reuse_delay: 474
+		LvL.908	reuse_delay: 456
+		LvL.909	reuse_delay: 438
+		LvL.910	reuse_delay: 420
+		name: Mind's Eye
+		level: 1
+		mp_consume: 54
+		description: For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%.
+		icon_name: icon.skill10783
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0.5
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10783" levels="4" name="Mind's Eye">
 		<table name="#abnormal_time">60</table>
 		<table name="#basePCritRate">200 220 240 250</table>
 		<table name="#magicLevel">85 90 95 99</table>
@@ -1337,7 +3639,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10784" levels="2" name="Camouflage">
+    <!--
+		Camouflage - For 30 sec., blends into the environment and hides. Decreases Speed by 30%.
+
+		name: Camouflage
+		level: 1
+		mp_consume: 9
+		description: For 30 sec., blends into the environment and hides. Decreases Speed by 30%.
+		icon_name: icon.skill10784
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10784" levels="2" name="Camouflage">
 		<table name="#magicLevel">93 95</table>
 		<set name="abnormal_effect" value="STEALTH"/>
 		<set name="abnormal_level" value="1"/>
@@ -1360,7 +3682,43 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10785" levels="1" name="Flare">
+    <!--
+		Flare - Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped.
+
+
+		Enchant Route: 1 - 	Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 67
+		LvL.102	mp_consume: 64
+		LvL.103	mp_consume: 61
+		LvL.104	mp_consume: 58
+		LvL.105	mp_consume: 56
+		LvL.106	mp_consume: 53
+		LvL.107	mp_consume: 50
+		LvL.108	mp_consume: 47
+		LvL.109	mp_consume: 44
+		LvL.110	mp_consume: 42
+
+		Enchant Route: 2 - 	Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped. Enchant Distance: Increases Effect Range.
+
+		name: Flare
+		level: 1
+		mp_consume: 70
+		description: Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped.
+		icon_name: icon.skill10785
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 20
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10785" levels="1" name="Flare">
 		<table name="#mpConsume2">70</table>
 		<table name="#skillRadius">300</table>
 		<set name="analog_skills" value="933"/>
@@ -1391,7 +3749,71 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10786" levels="3" name="Time Bomb">
+    <!--
+		Time Bomb - Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10.
+
+		LvL.1	mp_consume: 66
+		LvL.2	mp_consume: 69
+		LvL.3	mp_consume: 72
+
+		Enchant Route: 1 - 	Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 69
+		LvL.102	mp_consume: 66
+		LvL.103	mp_consume: 63
+		LvL.104	mp_consume: 60
+		LvL.105	mp_consume: 57
+		LvL.106	mp_consume: 54
+		LvL.107	mp_consume: 51
+		LvL.108	mp_consume: 48
+		LvL.109	mp_consume: 46
+		LvL.110	mp_consume: 43
+
+		Enchant Route: 2 - 	Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10. Enchant Chance: Increases success rate.
+
+
+		Enchant Route: 3 - 	Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10. Enchant Entangle: Decreases Spd. By 1%.
+
+		LvL.301	description: By 1%.
+		LvL.302	description: By 2%.
+		LvL.303	description: By 3%.
+		LvL.304	description: By 4%.
+		LvL.305	description: By 5%.
+		LvL.306	description: By 6%.
+		LvL.307	description: By 7%.
+		LvL.308	description: By 8%.
+		LvL.309	description: Enchant Entangle: Decreases Speed by 9%.
+		LvL.310	description: Enchant Entangle: Decreases Speed by 10%.
+
+		Enchant Route: 9 - 	Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10.
+
+		LvL.901	reuse_delay: 14
+		LvL.903	reuse_delay: 13
+		LvL.904	reuse_delay: 13
+		LvL.905	reuse_delay: 12
+		LvL.906	reuse_delay: 12
+		LvL.907	reuse_delay: 11
+		LvL.908	reuse_delay: 11
+		LvL.909	reuse_delay: 10
+		LvL.910	reuse_delay: 10
+		name: Time Bomb
+		level: 1
+		mp_consume: 66
+		description: Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10.
+		icon_name: icon.skill10786
+		hp_consume: 0
+		cast_range: 1100
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10786" levels="3" name="Time Bomb">
 		<table name="#magicLevel">93 96 99</table>
 		<table name="#mpConsume2">66 69 72</table>
 		<table name="#power">80</table>
@@ -1429,7 +3851,38 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10787" levels="8" name="Summon Thunder Hawk">
+    <!--
+		Summon Thunder Hawk - Summons a Thunder Hawk.
+
+		LvL.1	mp_consume: 123
+		LvL.2	mp_consume: 127
+		LvL.3	mp_consume: 132
+		LvL.4	mp_consume: 136
+		LvL.5	mp_consume: 140
+		LvL.6	mp_consume: 145
+		LvL.7	mp_consume: 149
+		LvL.8	mp_consume: 154
+
+		Enchant Route: 1 - 	Summons a Thunder Hawk. Enchant Power: Increases the effect.
+
+		name: Summon Thunder Hawk
+		level: 1
+		mp_consume: 123
+		description: Summons a Thunder Hawk.
+		icon_name: icon.skill10787
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0.2
+		reuse_delay: 60
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10787" levels="8" name="Summon Thunder Hawk">
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">123 127 132 136 140 145 149 154</table>
 		<table name="#npcId">14932 14940 14941 14942 14986 14987 14988 14989</table>
@@ -1449,7 +3902,27 @@
 			<table name="#npcId">14990 14991 14992 14993 14994 14995 14996 14997 14998 14999</table>
 		</enchant>
 	</skill>
-	<skill id="10788" levels="1" name="Remote Control">
+    <!--
+		Remote Control - Remotely controls a trap to set it off.
+
+		name: Remote Control
+		level: 1
+		mp_consume: 10
+		description: Remotely controls a trap to set it off.
+		icon_name: icon.skill10788
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10788" levels="1" name="Remote Control">
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="800"/>
 		<set name="icon" value="icon.skill10788"/>
@@ -1461,7 +3934,27 @@
 		<set name="target" value="TARGET_SELF"/>
 		<set name="trapRange" value="600"/>
 	</skill>
-	<skill id="10789" levels="1" name="Flash Trap">
+    <!--
+		Flash Trap - Flash Trap
+
+		name: Flash Trap
+		level: 1
+		mp_consume: 47
+		description: Flash Trap
+		icon_name: icon.skill0517
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 45
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10789" levels="1" name="Flash Trap">
 		<table name="#skill">17</table>
 		<set name="addSkills" value="5270;#skill"/>
 		<set name="coolTime" value="200"/>
@@ -1476,7 +3969,27 @@
 		<set name="summonType" value="trap"/>
 		<set name="target" value="TARGET_SELF"/>
 	</skill>
-	<skill id="10790" levels="1" name="Explosion Trap">
+    <!--
+		Explosion Trap - Damage Trap
+
+		name: Explosion Trap
+		level: 1
+		mp_consume: 39
+		description: Damage Trap
+		icon_name: icon.skill0514
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 45
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10790" levels="1" name="Explosion Trap">
 		<table name="#mpConsume2">10</table>
 		<table name="#skill">21</table>
 		<set name="addSkills" value="5267;#skill"/>
@@ -1494,7 +4007,30 @@
 		<set name="summonType" value="trap"/>
 		<set name="target" value="TARGET_SELF"/>
 	</skill>
-	<skill id="10791" levels="1" name="Frost Trap">
+    <!--
+		Frost Trap - Plants a Frost Trap, decreasing the enemy's Speed, Atk. Spd. and Casting Spd.
+
+
+		Enchant Route: 1 - 	Plants a Frost Trap, decreasing the enemy's Speed, Atk. Spd. and Casting Spd. Enchant Chance: Increases Success Rate.
+
+		name: Frost Trap
+		level: 1
+		mp_consume: 39
+		description: Plants a Frost Trap, decreasing the enemy's Speed, Atk. Spd. and Casting Spd.
+		icon_name: icon.skill10791
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 45
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10791" levels="1" name="Frost Trap">
 		<table name="#triggerLvl">1</table>
 		<set name="addSkills" value="10806;#triggerLvl"/>
 		<set name="analog_skills" value="516"/>
@@ -1515,7 +4051,30 @@
 			<table name="#triggerLvl">1 1 1 1 1 1 1 1 1 1</table> <!-- NOT DONE ; cannot cast enchant skill to the forein skill? -->
 		</enchant>
 	</skill>
-	<skill id="10792" levels="1" name="Gravity Trap">
+    <!--
+		Gravity Trap - Plants a Gravity Trap, immobilizing the enemy.
+
+
+		Enchant Route: 1 - 	Plants a Gravity Trap, immobilizing the enemy. Enchant Chance: Increases Success Rate.
+
+		name: Gravity Trap
+		level: 1
+		mp_consume: 39
+		description: Plants a Gravity Trap, immobilizing the enemy.
+		icon_name: icon.skill10792
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 45
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10792" levels="1" name="Gravity Trap">
 		<set name="addSkills" value="10807;1"/>
 		<set name="analog_skills" value="518"/>
 		<set name="coolTime" value="200"/>
@@ -1532,7 +4091,79 @@
 		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Chance"/>	<!--TODO-->
 	</skill>
-	<skill id="10793" levels="1" name="Flash">
+    <!--
+		Flash - Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you.
+
+
+		Enchant Route: 1 - 	Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. Enchant Cost: Decreases MP Consumption.
+
+		LvL.101	mp_consume: 73
+		LvL.102	mp_consume: 70
+		LvL.103	mp_consume: 67
+		LvL.104	mp_consume: 64
+		LvL.105	mp_consume: 61
+		LvL.106	mp_consume: 58
+		LvL.107	mp_consume: 55
+		LvL.108	mp_consume: 52
+		LvL.109	mp_consume: 49
+		LvL.110	mp_consume: 46
+
+		Enchant Route: 2 - 	Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. Enchant Chance Stun: Increases Stun Rate by 1.
+
+		LvL.201	description: Enchant Chance Stun: Increases Stun Rate by 1.
+		LvL.202	description: Enchant Chance Stun: Increases Stun Rate by 2.
+		LvL.203	description: Enchant Chance Stun: Increases Stun Rate by 3.
+		LvL.204	description: Enchant Chance Stun: Increases Stun Rate by 4.
+		LvL.205	description: Enchant Chance Stun: Increases Stun Rate by 5.
+		LvL.206	description: Enchant Chance Stun: Increases Stun Rate by 6.
+		LvL.207	description: Enchant Chance Stun: Increases Stun Rate by 7.
+		LvL.208	description: Enchant Chance Stun: Increases Stun Rate by 8.
+		LvL.209	description: Enchant Chance Stun: Increases Stun Rate by 9.
+		LvL.210	description: Enchant Chance Stun: Increases Stun Rate by 10.
+
+		Enchant Route: 3 - 	Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+
+		LvL.301	description: Enchant Chance Knockdown: Increases Knockdown Rate by 1.
+		LvL.302	description: Enchant Chance Knockdown: Increases Knockdown Rate by 2.
+		LvL.303	description: Enchant Chance Knockdown: Increases Knockdown Rate by 3.
+		LvL.304	description: Enchant Chance Knockdown: Increases Knockdown Rate by 4.
+		LvL.305	description: Enchant Chance Knockdown: Increases Knockdown Rate by 5.
+		LvL.306	description: Enchant Chance Knockdown: Increases Knockdown Rate by 6.
+		LvL.307	description: Enchant Chance Knockdown: Increases Knockdown Rate by 7.
+		LvL.308	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
+		LvL.309	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
+		LvL.310	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+
+		Enchant Route: 4 - 	Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you. Enchant Chance Hold: Increases Hold Rate by 1.
+
+		LvL.401	description: Enchant Chance Hold: Increases Hold Rate by 1.
+		LvL.402	description: Enchant Chance Hold: Increases Hold Rate by 2.
+		LvL.403	description: Enchant Chance Hold: Increases Hold Rate by 3.
+		LvL.404	description: Enchant Chance Hold: Increases Hold Rate by 4.
+		LvL.405	description: Enchant Chance Hold: Increases Hold Rate by 5.
+		LvL.406	description: Enchant Chance Hold: Increases Hold Rate by 6.
+		LvL.407	description: Enchant Chance Hold: Increases Hold Rate by 7.
+		LvL.408	description: Enchant Chance Hold: Increases Hold Rate by 8.
+		LvL.409	description: Enchant Chance Hold: Increases Hold Rate by 9.
+		LvL.410	description: Enchant Chance Hold: Increases Hold Rate by 10.
+		name: Flash
+		level: 1
+		mp_consume: 77
+		description: Cancels targets of nearby enemies. Increases Speed + 50 for 5 seconds and prevents enemies from targeting you.
+		icon_name: icon.skill10793
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 60
+		is_magic: 1
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10793" levels="1" name="Flash">
 		<table name="#mpConsume2">77</table>
 		<table name="#rootPower">0</table>
 		<table name="#stunPower">0</table>
@@ -1573,7 +4204,45 @@
 			</self_effect>
 		</for>
 	</skill>
-	<skill id="10794" levels="8" name="Thunder Flight">
+    <!--
+		Thunder Flight - Flies straight into the enemy.
+
+		LvL.1	cast_style_guess: 1
+		LvL.2	cast_style_guess: 0
+		LvL.3	cast_style_guess: 0
+		LvL.4	cast_style_guess: 0
+		LvL.5	cast_style_guess: 0
+		LvL.6	cast_style_guess: 0
+		LvL.7	cast_style_guess: 0
+		LvL.8	cast_style_guess: 0
+		LvL.101	cast_style_guess: 0
+		LvL.102	cast_style_guess: 0
+		LvL.103	cast_style_guess: 0
+		LvL.104	cast_style_guess: 0
+		LvL.105	cast_style_guess: 0
+		LvL.106	cast_style_guess: 0
+		LvL.107	cast_style_guess: 0
+		LvL.108	cast_style_guess: 0
+		LvL.109	cast_style_guess: 0
+		LvL.110	cast_style_guess: 0
+		name: Thunder Flight
+		level: 1
+		mp_consume: 0
+		description: Flies straight into the enemy.
+		icon_name: icon.skill6041
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0.8
+		cool_time: 0.75
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10794" levels="8" name="Thunder Flight">
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">71 78 84 86 86 86 86 86</table>
 		<table name="#power">2065 2135 2206 2277 2347 2417 2488 2557</table>
@@ -1598,7 +4267,27 @@
 			<table name="#power">2626 2695 2764 2833 2902 2971 3040 3109 3178 3247</table>
 		</enchant>
 	</skill>
-	<skill id="10795" levels="1" name="Thunder Purity">
+    <!--
+		Thunder Purity - Purifies the master.
+
+		name: Thunder Purity
+		level: 1
+		mp_consume: 96
+		description: Purifies the master.
+		icon_name: icon.skill6042
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 180
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10795" levels="1" name="Thunder Purity">
 		<set name="castRange" value="600"/>
 		<set name="hitTime" value="2500"/>
 		<set name="icon" value="icon.skill6042"/>
@@ -1617,7 +4306,27 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10796" levels="1" name="Hawk Gust">
+    <!--
+		Hawk Gust - Pushes the enemies around the master.
+
+		name: Hawk Gust
+		level: 1
+		mp_consume: 46
+		description: Pushes the enemies around the master.
+		icon_name: icon.skill0092
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0.5
+		cool_time: 0.1
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10796" levels="1" name="Hawk Gust">
 		<set name="reuseDelay" value="120000"/>
 		<set name="coolTime" value="100"/>
 		<set name="hitTime" value="500"/>
@@ -1631,7 +4340,45 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-	<skill id="10797" levels="1" name="Thunder Feather Blast">
+    <!--
+		Thunder Feather Blast - Hurls feathers toward the enemy.
+
+		LvL.1	skill_spec_type_guess: 3	mp_consume: 71
+		LvL.2	skill_spec_type_guess: 2	mp_consume: 78
+		LvL.3	skill_spec_type_guess: 2	mp_consume: 84
+		LvL.4	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.5	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.6	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.7	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.8	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.101	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.102	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.103	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.104	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.105	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.106	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.107	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.108	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.109	skill_spec_type_guess: 2	mp_consume: 86
+		LvL.110	skill_spec_type_guess: 2	mp_consume: 86
+		name: Thunder Feather Blast
+		level: 1
+		mp_consume: 71
+		description: Hurls feathers toward the enemy.
+		icon_name: icon.skill6044
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.08
+		cool_time: 0.77
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10797" levels="1" name="Thunder Feather Blast">
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">71 78 84 86 86 86 86 86</table>
 		<table name="#power">2065 2135 2206 2277 2347 2417 2488 2557</table>
@@ -1653,7 +4400,45 @@
 			<table name="#power">2626 2695 2764 2833 2902 2971 3040 3109 3178 3247</table>
 		</enchant>
 	</skill>
-	<skill id="10798" levels="1" name="Thunder Sharp Claw">
+    <!--
+		Thunder Sharp Claw - Attacks the enemy with sharp talon to inflict bleed.
+
+		LvL.1	mp_consume: 71
+		LvL.2	mp_consume: 78
+		LvL.3	mp_consume: 84
+		LvL.4	mp_consume: 86
+		LvL.5	mp_consume: 86
+		LvL.6	mp_consume: 86
+		LvL.7	mp_consume: 86
+		LvL.8	mp_consume: 86
+		LvL.101	mp_consume: 86
+		LvL.102	mp_consume: 86
+		LvL.103	mp_consume: 86
+		LvL.104	mp_consume: 86
+		LvL.105	mp_consume: 86
+		LvL.106	mp_consume: 86
+		LvL.107	mp_consume: 86
+		LvL.108	mp_consume: 86
+		LvL.109	mp_consume: 86
+		LvL.110	mp_consume: 86
+		name: Thunder Sharp Claw
+		level: 1
+		mp_consume: 71
+		description: Attacks the enemy with sharp talon to inflict bleed.
+		icon_name: icon.skill0096
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.08
+		cool_time: 0.77
+		reuse_delay: 25
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10798" levels="1" name="Thunder Sharp Claw">
 		<table name="#dot">102 132 162 192 222 252 282 312</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">71 78 84 86 86 86 86 86</table>
@@ -1685,7 +4470,40 @@
 			<table name="#power">2626 2695 2764 2833 2902 2971 3040 3109 3178 3247</table>
 		</enchant>
 	</skill>
-	<skill id="10799" levels="1" name="Superior M. Def.">
+    <!--
+		Superior M. Def. - STR + 2 and M. Def. + 199. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily.
+
+
+		Enchant Route: 1 - 	STR + 2 and M. Def. + 206. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+
+		LvL.101	description: + 206. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.102	description: + 213. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.103	description: + 220. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.104	description: + 227. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.105	description: + 234. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.106	description: + 241. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.107	description: + 248. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.108	description: + 255. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.109	description: + 262. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		LvL.110	description: + 270. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		name: Superior M. Def.
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and M. Def. + 199. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily.
+		icon_name: icon.skill10004
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+	-->
+    <skill id="10799" levels="1" name="Superior M. Def.">
 		<table name="#magicLevel">85</table>
 		<table name="#mDef">199</table>
 		<set name="analog_skills" value="466"/>
