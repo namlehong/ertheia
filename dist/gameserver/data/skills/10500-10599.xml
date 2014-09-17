@@ -2994,6 +2994,9 @@
 		<set name="skillType" value="AIEFFECTS"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="trait" value="DERANGEMENT"/>
+		<cond msgId="113">
+			<using kind="Dagger,Dual Dagger"/>
+		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>
 		</enchant>
@@ -3146,32 +3149,52 @@
 	-->
     <skill id="10527" levels="1" name="Mass Trick">
 		<table name="#magicLevel">97</table>
+		<table name="#mpConsume2">92</table>
+		<table name="#paralyzeResist">0</table>
+		<table name="#poisonResist">0</table>
 		<table name="#reuseDelay">60000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<table name="#stunResist">0</table>
+    	<table name="#bleedResist">0</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="confusion"/>
+		<set name="activateRate" value="85"/>
+		<set name="analog_skills" value="11"/>
+		<set name="castRange" value="400"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1200"/>
-		<set name="abnormal_time" value="3"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="confusion"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10527"/>
-		<table name="#mpConsume2">92</table>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="activateRate" value="85"/>
-		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reflectable" value="false"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="400"/>
-		<set name="castRange" value="400"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
 		<set name="trait" value="DERANGEMENT"/>
-		<set name="analog_skills" value="11"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">88 84 80 77 73 69 66 62 58 55</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Chance">
 			<table name="#activateRate">86 87 88 89 90 92 93 94 95 96</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="3" name="Break Paralysis">
+			<table name="#paralyzeResist">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Break Bleed">
+			<table name="#bleedResist">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="5" name="Break Poison">
+			<table name="#poisonResist">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="6" name="Break Shock">
+			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
@@ -3182,6 +3205,10 @@
 			<effect name="RemoveTarget" time="0" chance="85"/>
 			<self_effect name="TargetableDisable"/>
 			<effect name="TargetLock"/>
+			<sub order="0x40" stat="paralyzeResist" value="#paralyzeResist"/>
+			<sub order="0x40" stat="bleedResist" value="#bleedResist"/>
+			<sub order="0x40" stat="poisonResist" value="#poisonResist"/>
+			<sub order="0x40" stat="stunResist" value="#stunResist"/>
 		</for>
 		<cond msgId="113" addName="1">
 			<using kind="Dagger,Dual Dagger"/>
