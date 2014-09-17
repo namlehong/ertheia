@@ -1754,35 +1754,35 @@
 		desc_add2: none
 	-->
     <skill id="10513" levels="7" name="Razor Rain">
+		<table name="#DOT">55 65 75 85 105 115 130</table>
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<table name="#magicLevel">87 89 91 93 95 97 99</table>
-		<table name="#reuseDelay">10000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="1529"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10513"/>
 		<table name="#mpConsume2">138 142 147 152 156 161 166</table>
 		<table name="#power">13649 14529 15409 16289 17169 18049 18929</table>
 		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<table name="#DOT">55 65 75 85 105 115 130</table>
-		<set name="elementsPower" value="#elementPower"/>
+		<table name="#reuseDelay">10000</table>
+		<set name="activateRate" value="70"/>
+		<set name="analog_skills" value="105;347"/>
+		<set name="coolTime" value="200"/>
 		<set name="criticalRate" value="10"/>
 		<set name="elements" value="#element"/>
-		<set name="SSBoost" value="2.0"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1529"/>
+		<set name="icon" value="icon.skill10513"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="power" value="#power"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="skillRadius" value="300"/>
-		<set name="activateRate" value="70"/>
-		<set name="trait" value="BLEED"/>
-		<set name="saveVs" value="CON"/>
-		<set name="overHit" value="true"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="105;347"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="BLEED"/>
 		<cond msgId="113" addName="1">
 			<using kind="Dagger,Dual Dagger"/>
 		</cond>
@@ -1899,29 +1899,29 @@
 		desc_add2: none
 	-->
     <skill id="10514" levels="5" name="Dark Paralysis">
-		<table name="#magicLevel">85 88 91 94 97</table>
 		<table name="#abnormal_level">1 2 3 4 5</table>
-		<table name="#reuseDelay">120000</table>
-		<table name="#mpConsume2">38 40 42 44 46</table>
 		<table name="#activateRate">50 55 60 65 70</table>
+		<table name="#magicLevel">85 88 91 94 97</table>
+		<table name="#mpConsume2">38 40 42 44 46</table>
+		<table name="#reuseDelay">120000</table>
 		<table name="#triggerLevel">1 2 3 4 5</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="122"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1000"/>
-		<set name="abnormal_time" value="10"/>
-		<set name="abnormal_level" value="#abnormal_level"/>
-		<set name="abnormal_type" value="paralyze"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10514"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="#activateRate"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="MEN"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="saveVs" value="MEN"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="levelModifier" value="1"/>
 		<set name="trait" value="PARALYZE"/>
-		<set name="analog_skills" value="122"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">44 42 40 38 36 34 33 31 29 27</table>
 			<table name="#triggerLevel">6</table>
@@ -1969,19 +1969,19 @@
 		desc_add2: none
 	-->
     <skill id="10515" levels="6" name="Paralyzed">
-		<table name="#magicLevel">85 88 91 94 97 99</table>
 		<table name="#abnormal_level">1 2 3 4 5 6</table>
-		<set name="hitTime" value="1200"/>
+		<table name="#magicLevel">85 88 91 94 97 99</table>
 		<set name="abnormal_effect" value="PARALYZE"/>
-		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_type" value="paralyze"/>
+		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill1170"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="SPECIAL"/>
-		<set name="icon" value="icon.skill1170"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect name="Paralyze"/>
 		</for>
@@ -2068,29 +2068,29 @@
 		desc_add2: none
 	-->
     <skill id="10516" levels="6" name="Shadow Chase">
-		<table name="#stunChance">80</table>
-		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#abnormal_level">1 2 3 4 5 6</table>
-		<table name="#reuseDelay">7000</table>
 		<table name="#castRange">600</table>
+		<table name="#magicLevel">85 87 90 93 96 99</table>
 		<table name="#mpConsume2">38 39 41 43 45 47</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<table name="#reuseDelay">7000</table>
+		<table name="#stunChance">80</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="analog_skills" value="998;821"/>
+		<set name="castRange" value="#castRange"/>
 		<set name="coolTime" value="100"/>
 		<set name="hitTime" value="800"/>
-		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="3"/>
-		<set name="abnormal_level" value="#abnormal_level"/>
-		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10516"/>
-		<set name="castRange" value="#castRange"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="isOffensive" value="true"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="none"/>
-		<set name="analog_skills" value="998;821"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>
 		</enchant>
@@ -2187,30 +2187,30 @@
 		desc_add2: none
 	-->
     <skill id="10517" levels="1" name="Shadow Hide">
-		<table name="#runSpd">0</table>
-		<table name="#magicLevel">85</table>
 		<table name="#abnormal_time">50</table>
-		<table name="#reuseDelay">180000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="400"/>
-		<set name="hitTime" value="1000"/>
-		<set name="abnormal_effect" value="STEALTH"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="hide"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10517"/>
+		<table name="#magicLevel">85</table>
 		<table name="#mpConsume2">38</table>
-		<set name="mpConsume2" value="38"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="isReuseDelayPermanent" value="true"/>
-		<set name="doNotDispelOnSelfBuff" value="true"/>
-		<set name="effectPoint" value="679"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<table name="#reuseDelay">180000</table>
+		<table name="#runSpd">0</table>
+		<set name="abnormal_effect" value="STEALTH"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="hide"/>
 		<set name="analog_skills" value="411;922"/>
 		<set name="apply_effects_on_pet" value="true"/>
+		<set name="coolTime" value="400"/>
+		<set name="doNotDispelOnSelfBuff" value="true"/>
+		<set name="effectPoint" value="679"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10517"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">36 34 33 31 30 28 27 25 24 22</table>
 			<table name="#magicLevel">99</table>
@@ -2267,21 +2267,20 @@
 		desc_add2: none
 	-->
     <skill id="10518" levels="1" name="Assassin's Reflex">
-		<set name="reuseDelay" value="8000"/>
-		<set name="hitTime" value="699"/>
-		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="might_mortal"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill10518"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10518"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect value="1">
 				<mul order="0x30" stat="pAtkSpd" value="1.20"/>
-				<mul order="0x30" stat="blowRate" value="1.10"/>
 			</effect>
 		</for>
 	</skill>
