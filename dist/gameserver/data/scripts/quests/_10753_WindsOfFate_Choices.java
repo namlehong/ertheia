@@ -543,32 +543,22 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		
 		if(event.equalsIgnoreCase("33980-6.htm"))
 		{
-			Reflection prophecies_chamber = player.getReflection();
-			
-			mysterious_wizard_instance.deleteMe();
 			
 			st.set("choice", "patriot");
-			//spawn Kain & Ferin NPC
-			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88408, 173224, -10476), 0);
-			prophecies_chamber.addSpawnWithoutRespawn(FERIN_NPC, new Location(-88424, 173304, -10476), 0);
+			
+			endInstance(st);
 
 		}
 
 		if(event.equalsIgnoreCase("33980-7.htm"))
 		{
-			Reflection prophecies_chamber = player.getReflection();
-			
-			mysterious_wizard_instance.deleteMe();
-			
 			st.takeItems(ATELIA1, 1);
 			st.giveItems(ATELIA2, 1);
 			st.playSound(SOUND_ITEMGET);
 			
 			st.set("choice", "traitor");
-			
-			//spawn Kain & Ferin NPC
-			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88408, 173224, -10476), 0);
-			prophecies_chamber.addSpawnWithoutRespawn(FERIN_NPC, new Location(-88424, 173304, -10476), 0);
+
+			endInstance(st);
 		}
 		
 		if(event.equalsIgnoreCase("leave_instance"))
@@ -612,6 +602,31 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		return htmltext;
 	}
 	
+	private void endInstance(QuestState st) 
+	{
+		Player player = st.getPlayer();
+		
+		if(player == null) return;
+		
+		Reflection prophecies_chamber = player.getReflection();
+		
+		if(mysterious_wizard_instance != null)
+			mysterious_wizard_instance.deleteMe();
+		
+		if(ferin_healer_instance != null)
+			ferin_healer_instance.deleteMe();
+		
+		if(kain_fighter_instance != null)
+			kain_fighter_instance.deleteMe();
+
+		if(makkum_instance != null)
+			makkum_instance.deleteMe();
+		
+		//spawn Kain & Ferin NPC
+		prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88408, 173224, -10476), 0);
+		prophecies_chamber.addSpawnWithoutRespawn(FERIN_NPC, new Location(-88424, 173304, -10476), 0);
+	}
+
 	private void spawnMakkum(QuestState st) 
 	{
 		Player player = st.getPlayer();
@@ -774,7 +789,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			{
 				//if the player has Atelia (the real one or the fake one that scumbag Mysterious Wizard gave)
 				//meaning the player has finish the instance or not
-				if(getItemCountById(player, ATELIA1) == 0 && getItemCountById(player, ATELIA1) == 0)
+				if(getItemCountById(player, ATELIA1) == 0 && getItemCountById(player, ATELIA2) == 0)
 					htmltext = "33979-1.htm";
 				else
 					htmltext = "33979-2.htm";
