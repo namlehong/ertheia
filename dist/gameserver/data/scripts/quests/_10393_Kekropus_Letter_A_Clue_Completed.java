@@ -102,6 +102,7 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
                         {
                             if(player.getRace() != Race.ERTHEIA)
                             {
+                                qs.giveItems(SOE_OREN, 1);
                                 qs.showQuestHTML(qs.getQuest(),"00-letter.htm");
                                 qs.setState(STARTED);
                                 qs.setCond(1);
@@ -126,7 +127,6 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
                 }
                 else if(event.equalsIgnoreCase("Quest _10393_Kekropus_Letter_A_Clue_Completed close_window"))
                 {
-                    qs.giveItems(SOE_OREN,1);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     htmlText = null;
                 }
@@ -220,7 +220,7 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
     {
         if(player != null && checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10393_Kekropus_Letter_A_Clue_Completed.class);
+            Quest quest = QuestManager.getQuest(this.getClass());
             player.processQuestEvent(quest.getName(),"start_quest",null);
         }
     }
@@ -230,7 +230,7 @@ public class _10393_Kekropus_Letter_A_Clue_Completed extends Quest implements Sc
     {
         if (player != null && this.checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10393_Kekropus_Letter_A_Clue_Completed.class);
+            Quest quest = QuestManager.getQuest(this.getClass());
             player.processQuestEvent(quest.getName(),"start_quest_delay",null);
         }
     }

@@ -56,7 +56,6 @@ import l2s.gameserver.scripts.ScriptFile;
             Player player = qs.getPlayer();
             qs.showQuestionMark(_questId);
             qs.playSound(SOUND_TUTORIAL);
-            qs.giveItems(SOE_RUNE,1);
             if (player != null)
             {
                 player.sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
@@ -102,6 +101,7 @@ import l2s.gameserver.scripts.ScriptFile;
                         {
                             if(player.getRace() != Race.ERTHEIA)
                             {
+                                qs.giveItems(SOE_RUNE,1);
                                 qs.showQuestHTML(qs.getQuest(),"00.htm");
                                 qs.setState(STARTED);
                                 qs.setCond(1);
