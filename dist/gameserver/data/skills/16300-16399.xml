@@ -1489,92 +1489,85 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
-    <!--
-		Kain's Sonic Star - none
-
-	
-		name: Kain's Sonic Star
-		level: 1
-		mp_consume: 50
-		description: none
-		icon_name: icon.skill10281
-		hp_consume: 0
-		cast_range: -1
-		hit_time: 5
-		cool_time: 0.5
-		reuse_delay: 10
-		is_magic: 0
-		oper_type: 0
-		element_guess: 0
-		cast_style_guess: 1
-		skill_spec_type_guess: 10
-		base_elemental_skill_id: 0
-		desc_add1: none
-		desc_add2: none
-	-->
-    <skill id="16351" levels="1" name="Kain's Sonic Star">
-		<set name="icon" value="icon.skill10281"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+	<skill id="16351" levels="1" name="Kain's Sonic Star">
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="1389"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill10265"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="nextAction" value="attack"/>
+		<set name="power" value="8553"/>
+		<set name="activateRate" value="50"/>
+		<set name="powerPvP" value="0"/>
+		<set name="elementsPower" value="0"/>
+		<set name="elements" value="none"/>
+		<set name="target" value="TARGET_AURA_EXCLUDE_PLAYER"/>
+		<set name="overHit" value="true"/>
+		<set name="criticalRate" value="15"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="decreaseOnNoPole" value="0.9"/>
+		<set name="increaseOnPole" value="1.5"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="analog_skills" value="17;36;9;496"/>
+		<for>
+			<effect name="Stun"/>
+			<effect name="RemoveTarget" time="0" chance="80"/>
+			<effect name="RandomHate" time="0" chance="80"/>
+		</for>
 	</skill>
-    <!--
-		Kain's Sonic Storm - none
-
-	
-		name: Kain's Sonic Storm
-		level: 1
-		mp_consume: 50
-		description: none
-		icon_name: icon.skill0007
-		hp_consume: 0
-		cast_range: 500
-		hit_time: 1.79
-		cool_time: 0.3
-		reuse_delay: 10
-		is_magic: 0
-		oper_type: 0
-		element_guess: 0
-		cast_style_guess: 0
-		skill_spec_type_guess: 10
-		base_elemental_skill_id: 0
-		desc_add1: none
-		desc_add2: none
-	-->
-    <skill id="16352" levels="1" name="Kain's Sonic Storm">
-		<set name="icon" value="icon.skill0007"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+	<skill id="16352" levels="1" name="Kain's Sonic Storm">
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="activateRate" value="70"/>
+		<set name="coolTime" value="300"/>
+		<set name="elements" value="3"/> <!-- Earth -->
+		<set name="elementsPower" value="30"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10266"/>
+		<set name="magicLevel" value="99"/>
+		<set name="mpConsume2" value="5"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="0"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA_EXCLUDE_PLAYER"/>
+		<set name="trait" value="KNOCKDOWN"/>
+		<for>
+			<effect name="KnockDown" chance="65">
+				<def name="fly_radius" value="55"/>
+				<mul order="0x30" stat="pDef" value="1"/>
+			</effect>
+		</for>
 	</skill>
-    <!--
-		Kain's Triple Sonic Slash - none
-
-	
-		name: Kain's Triple Sonic Slash
-		level: 1
-		mp_consume: 25
-		description: none
-		icon_name: icon.skill0261
-		hp_consume: 0
-		cast_range: 40
-		hit_time: 1.667
-		cool_time: 0.5
-		reuse_delay: 10
-		is_magic: 0
-		oper_type: 0
-		element_guess: 0
-		cast_style_guess: 0
-		skill_spec_type_guess: 9
-		base_elemental_skill_id: 0
-		desc_add1: none
-		desc_add2: none
-	-->
-    <skill id="16353" levels="1" name="Kain's Triple Sonic Slash">
-		<set name="icon" value="icon.skill0261"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+	<skill id="16353" levels="1" name="Kain's Triple Sonic Slash">
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1799"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="power" value="6095"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="20"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="criticalRate" value="10"/>
+		<set name="shieldignore" value="true"/>
 	</skill>
     <!--
 		Sacred Assault - none
@@ -2884,10 +2877,9 @@
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
+	<skill id="16399" levels="1" name="Ferin's Cure">
     <!--
 		Ferin's Cure - Heals the target with 1488 power. If HP is full, CP is restored with the remaining power.
-
-	
 		name: Ferin's Cure
 		level: 1
 		mp_consume: 0
@@ -2907,10 +2899,19 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="16399" levels="1" name="Ferin's Cure">
 		<set name="icon" value="icon.skill11756"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="power" value="1708"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="20"/>
+		<set name="mpConsume2" value="30"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="HEAL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
 </list>

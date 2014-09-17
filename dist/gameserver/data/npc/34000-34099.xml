@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
-	<npc id="34000" name="에피르 데칸" title="">
+	<npc id="34000" name="Ferin" title="">
 		<set name="baseRandDam" value="30"/>
 		<set name="baseAttackType" value="SWORD"/>
 		<set name="basePHitModify" value="5"/>
@@ -9,25 +9,25 @@
 		<set name="baseHitTimeFactor" value="0.6"/>
 		<set name="baseReuseDelay" value="0"/>
 		<set name="baseSafeHeight" value="100"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="NpcAI"/>
+		<set name="aggroRange" value="500"/>
+		<set name="ai_type" value="chamber_of_prophecies.NpcHealerAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="82"/>
 		<set name="basePCritRate" value="40"/>
 		<set name="baseMCritRate" value="50"/>
 		<set name="baseDEX" value="55"/>
-		<set name="baseHpMax" value="2444"/>
+		<set name="baseHpMax" value="900444"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="7.5"/>
 		<set name="baseINT" value="79"/>
-		<set name="baseMAtk" value="470.40463"/>
+		<set name="baseMAtk" value="3470"/>
 		<set name="baseMDef" value="216.53847"/>
 		<set name="baseMEN" value="78"/>
 		<set name="baseMpMax" value="1345"/>
 		<set name="baseMpReg" value="2.7"/>
-		<set name="basePAtk" value="688.86373"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="295.91597"/>
+		<set name="basePAtk" value="6000"/>
+		<set name="basePAtkSpd" value="553"/>
+		<set name="basePDef" value="1295.91597"/>
 		<set name="baseRunSpd" value="120"/>
 		<set name="baseSTR" value="89"/>
 		<set name="baseShldDef" value="0"/>
@@ -36,15 +36,18 @@
 		<set name="baseWalkSpd" value="70"/>
 		<set name="collision_height" value="0.1"/>
 		<set name="collision_radius" value="0.1"/>
-		<set name="level" value="70"/>
+		<set name="level" value="90"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="shots" value="NONE"/>
+		<set name="shots" value="SOUL_BSPIRIT"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="FightingSupportNPC"/>
+		<faction names="halfblood_prince" range="5000"/>
 		<skills>
 			<skill id="4416" level="26" />	<!--아르테이아-->
+			<skill id="16399" level="1" />	<!--Ferin's Cure-->
+			<skill id="16400" level="1" />	<!--Ferin's Recharge-->
 		</skills>
 		<attributes>
 			<defence attribute="fire" value="20" />
@@ -97,6 +100,7 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<faction names="halfblood_prince" range="5000"/>
 		<skills>
 			<skill id="4416" level="26" />	<!--아르테이아-->
 		</skills>

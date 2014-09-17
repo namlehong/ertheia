@@ -3,22 +3,32 @@ package quests;
 import java.util.ArrayList;
 import java.util.List;
 
+import ai.chamber_of_prophecies.NpcHealerAI;
+import ai.chamber_of_prophecies.NpcWarriorAI;
+import l2s.commons.util.Rnd;
+import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
+import l2s.gameserver.model.instances.DoorInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.items.PcInventory;
 import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
 import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.World;
+import l2s.gameserver.model.WorldRegion;
 import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.Race;
+import l2s.gameserver.model.entity.Reflection;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
+import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
+import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.scripts.ScriptFile;
 import l2s.gameserver.utils.Location;
 
@@ -37,14 +47,15 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int LICH_KING_ICARUS = 30835;
 	private static final int ATHREA = 30758;
 	private static final int ATHREA_BOX = 33997;
-	private static final int FERIN_NPC = 34000;
+	private static final int FERIN_NPC = 34001;
 	private static final int KAIN_VAN_HALTER_NPC = 33979;
 	private static final int MYSTERIOUS_WIZARD = 33980;
 	private static final int GRAIL = 33996;
 	private static final int NAVARI = 33931;
+	private static final int DECOY = 13436;
 	
 	private static final int KAIN_VAN_HALTER_FIGHTER = 33999;
-	private static final int FERIN_HEALER = 34001;
+	private static final int FERIN_HEALER = 34000;
 	
 	private static final int ERTHEIA_PROPHECY_MACHINE1 = 39539;
 	private static final int ERTHEIA_PROPHECY_MACHINE2 = 39540;
@@ -75,6 +86,8 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int ABBYSAL_SHADOW = 19572;
 	private static final int SECLUDED_SHADOW = 19573;
 	
+	private static final int door_check_interval = 3000;
+	
 	private static final int minLevel = 85;
 	private static final int maxLevel = 99;
 	
@@ -83,10 +96,14 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
 	private static final String CHOICE_NOT_REVERSABLE = "Hãy chọn kỹ, lựa chọn này không thể thay đổi";
 	
-	NpcInstance giselle_instance = null;
-	NpcInstance kain_npc_instance = null;
+	NpcInstance ferin_healer_instance = null;
+	NpcInstance kain_fighter_instance = null;
+	NpcInstance makkum_instance = null;
 	NpcInstance mysterious_wizard_instance = null;
 	List<NpcInstance> athrea_boxes = new ArrayList<NpcInstance>();
+	NpcInstance decoy_instance_1 = null;
+	NpcInstance decoy_instance_2 = null;
+	NpcInstance decoy_instance_3 = null;
 	
 	@Override
 	public void onLoad()
@@ -412,6 +429,138 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			return null;
 		}
 		
+		if(event.equalsIgnoreCase("start_fighting"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			
+			prophecies_chamber.getDoor(17230101).openMe();
+			
+			//spawn support
+			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, npc.getLoc(), 0);
+			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88328, 186648, -10476), 0);
+			
+			NpcHealerAI ferin_ai = (NpcHealerAI)ferin_healer_instance.getAI();
+			NpcWarriorAI kain_ai = (NpcWarriorAI)kain_fighter_instance.getAI();
+			
+			ferin_ai.setTargetPlayer(player);
+			ferin_ai.setFollow(1);
+			
+			kain_ai.setTargetPlayer(player);
+			kain_ai.setFollow(1);
+			
+			npc.deleteMe();
+			
+			//spawn door listener
+			decoy_instance_1 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 183736, -10469), 0);
+			decoy_instance_2 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 179976, -10469), 0);
+			decoy_instance_3 = prophecies_chamber.addSpawnWithoutRespawn(DECOY, new Location(-88504, 176184, -10469), 0);
+			
+			/*
+			decoy_instance_1.toggleVisible();
+			decoy_instance_2.toggleVisible();
+			decoy_instance_3.toggleVisible();
+			*/
+			st.startQuestTimer("check_open_door", door_check_interval);
+			
+			return null;
+		}
+		
+		if(event.equalsIgnoreCase("check_open_door"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			DoorInstance door_room_1 = prophecies_chamber.getDoor(17230102);
+			DoorInstance door_room_2 = prophecies_chamber.getDoor(17230103);
+			DoorInstance door_room_3 = prophecies_chamber.getDoor(17230104);
+			
+			if(decoy_instance_1 != null && !door_room_1.isOpen())
+			{
+				List<NpcInstance> npcs_room_1 = World.getAroundNpc(decoy_instance_1.getLoc(), decoy_instance_1.getCurrentRegion(), decoy_instance_1.getReflectionId(), 1800, 200);
+				
+				if(isAllDead(npcs_room_1))
+				{
+					//System.out.println("monster room 1 all dead " + npcs_room_1.size());
+					door_room_1.openMe();
+				}
+			}
+			
+			if(decoy_instance_2 != null && !door_room_2.isOpen())
+			{
+				List<NpcInstance> npcs_room_2 = World.getAroundNpc(decoy_instance_2.getLoc(), decoy_instance_2.getCurrentRegion(), decoy_instance_2.getReflectionId(), 1800, 200);
+				
+				if(isAllDead(npcs_room_2))
+				{
+					//System.out.println("monster room 2 all dead " + npcs_room_2.size());
+					door_room_2.openMe();
+				}
+			}
+			
+			if(decoy_instance_3 != null && !door_room_3.isOpen())
+			{
+				List<NpcInstance> npcs_room_3 = World.getAroundNpc(decoy_instance_3.getLoc(), decoy_instance_3.getCurrentRegion(), decoy_instance_3.getReflectionId(), 1800, 200);
+				
+				if(isAllDead(npcs_room_3))
+				{
+					//System.out.println("monster room 3 all dead " + npcs_room_3.size());
+					door_room_3.openMe();
+					
+					//let Ferin & Kain stop following
+					NpcHealerAI ferin_ai = (NpcHealerAI)ferin_healer_instance.getAI();
+					NpcWarriorAI kain_ai = (NpcWarriorAI)kain_fighter_instance.getAI();
+					
+					ferin_ai.setFollow(-1);
+					kain_ai.setFollow(-1);
+					
+					spawnMakkum(st);
+					
+					Functions.npcSay(kain_fighter_instance, "Cửa mở rồi, đi lấy chiếc Chén Thánh đi!");
+					Functions.npcSay(ferin_healer_instance, "Kain đủ sức tiêu diệt Makkum, ngươi cứ đi đi");
+				}	
+			}
+			
+			if(!door_room_3.isOpen())
+				st.startQuestTimer("check_open_door", door_check_interval);
+			
+			return null;
+		}
+		
+		if(event.equalsIgnoreCase("33996-2.htm"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			
+			st.giveItems(ATELIA1, 1);
+			st.playSound(SOUND_ITEMGET);
+			player.sendPacket(new ExShowScreenMessage(TALK_TO_WIZARD, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			npc.deleteMe();
+			mysterious_wizard_instance = prophecies_chamber.addSpawnWithoutRespawn(MYSTERIOUS_WIZARD, new Location(-88552, 173336, -10476), 0);
+			
+		}
+		
+		if(event.equalsIgnoreCase("33980-4.htm"))
+		{
+			player.sendPacket(new ExShowScreenMessage(CHOICE_NOT_REVERSABLE, 20000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			
+		}
+		
+		if(event.equalsIgnoreCase("33980-6.htm"))
+		{
+			
+			st.set("choice", "patriot");
+			
+			endInstance(st);
+
+		}
+
+		if(event.equalsIgnoreCase("33980-7.htm"))
+		{
+			st.takeItems(ATELIA1, 1);
+			st.giveItems(ATELIA2, 1);
+			st.playSound(SOUND_ITEMGET);
+			
+			st.set("choice", "traitor");
+
+			endInstance(st);
+		}
+		
 		if(event.equalsIgnoreCase("leave_instance"))
 		{
 			st.setCond(17);
@@ -419,7 +568,20 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			return null;
 		}
 		
-		if(event.equalsIgnoreCase("33943-10.htm") || event.equalsIgnoreCase("33942-10.htm"))
+		if(event.equalsIgnoreCase("33932-8.htm"))
+		{
+			st.setCond(18);
+		}
+		
+		if(event.equalsIgnoreCase("33931-3.htm"))
+		{
+			if(player.isMageClass())
+			{
+				htmltext = "33931-5.htm";
+			}
+		}
+		
+		if(event.equalsIgnoreCase("33931-4.htm") || event.equalsIgnoreCase("33931-6.htm"))
 		{
 			ClassId newClassId;
 			
@@ -452,6 +614,54 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		
 		return htmltext;
 	}
+	
+	private void endInstance(QuestState st) 
+	{
+		Player player = st.getPlayer();
+		
+		if(player == null) return;
+		
+		Reflection prophecies_chamber = player.getReflection();
+		
+		if(mysterious_wizard_instance != null)
+			mysterious_wizard_instance.deleteMe();
+		
+		if(ferin_healer_instance != null)
+			ferin_healer_instance.deleteMe();
+		
+		if(kain_fighter_instance != null)
+			kain_fighter_instance.deleteMe();
+
+		if(makkum_instance != null)
+			makkum_instance.deleteMe();
+		
+		//spawn Kain & Ferin NPC
+		prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88408, 173224, -10476), 0);
+		prophecies_chamber.addSpawnWithoutRespawn(FERIN_NPC, new Location(-88424, 173304, -10476), 0);
+	}
+
+	private void spawnMakkum(QuestState st) 
+	{
+		Player player = st.getPlayer();
+		
+		if(player == null) return;
+		
+		Reflection prophecies_chamber = player.getReflection();
+		makkum_instance = prophecies_chamber.addSpawnWithoutRespawn(MAKKUM, new Location(-88504, 176184, -10469), 0);
+		
+	}
+
+	private boolean isAllDead(List<NpcInstance> npcs)
+	{
+		for(NpcInstance npc : npcs)
+		{
+			if(npc.isMonster() && !npc.isDead())
+				return false;
+		}
+		
+		return true;
+	}
+	
 
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
@@ -592,7 +802,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			{
 				//if the player has Atelia (the real one or the fake one that scumbag Mysterious Wizard gave)
 				//meaning the player has finish the instance or not
-				if(getItemCountById(player, ATELIA1) == 0 && getItemCountById(player, ATELIA1) == 0)
+				if(getItemCountById(player, ATELIA1) == 0 && getItemCountById(player, ATELIA2) == 0)
 					htmltext = "33979-1.htm";
 				else
 					htmltext = "33979-2.htm";
@@ -607,14 +817,14 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		}
 		else if(npcId == MYSTERIOUS_WIZARD)
 		{
-			if(cond == 18)
+			if(cond == 16)
 			{
 				htmltext = "33980-1.htm";
 			}
 		}
 		else if(npcId == NAVARI)
 		{
-			if(cond == 8)
+			if(cond == 18)
 			{
 				htmltext = "33931-1.htm";
 			}
