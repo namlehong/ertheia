@@ -55,9 +55,11 @@
 	-->
     <skill id="10300" levels="3" name="Last Attack">
 		<table name="#magicLevel">90 95 99</table>
-		<table name="#power">24004 27526 30343</table>
-		<table name="#targetHp">20</table>
+		<table name="#power">52746 59601 65085</table>
+		<table name="#targetHp">10</table>
+		<table name="#mpConsume">276 297 315</table>
 		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
 		<set name="skillType" value="PDAM"/>
@@ -69,6 +71,16 @@
 			</and>
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#mpConsume">310 306 301 297 292 288 283 279 275 270</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" levels="10" group="7" name="Decrease Penalty">
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#targetHp">11 12 13 14 15 16 17 18 19 20</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
 		<for>
 			<effect name="HpToOne"/>
 		</for>
