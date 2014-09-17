@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import l2s.gameserver.skills.skillclasses.*;
+
 import org.apache.commons.lang3.math.NumberUtils;
+
 import l2s.commons.collections.LazyArrayList;
 import l2s.commons.geometry.Polygon;
 import l2s.commons.lang.ArrayUtils;
@@ -35,6 +37,7 @@ import l2s.gameserver.model.entity.events.GlobalEvent;
 import l2s.gameserver.model.instances.ChestInstance;
 import l2s.gameserver.model.instances.DecoyInstance;
 import l2s.gameserver.model.instances.FeedableBeastInstance;
+import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.Inventory;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.network.l2.components.SystemMsg;
@@ -58,6 +61,7 @@ import l2s.gameserver.templates.StatsSet;
 import l2s.gameserver.templates.skill.EffectTemplate;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.PositionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -132,6 +136,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		TARGET_AREA,
 		TARGET_AREA_AIM_CORPSE,
 		TARGET_AURA,
+		TARGET_AURA_EXCLUDE_PLAYER,
 		TARGET_SERVITOR_AURA,
 		TARGET_CHEST,
 		TARGET_FEEDABLE_BEAST,
@@ -1301,6 +1306,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_SELF:
 				return activeChar;
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_COMMCHANNEL:
 			case TARGET_MULTIFACE_AURA:
 			case TARGET_GROUND:
@@ -1475,6 +1481,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				break;
 			}
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_GROUND:
 			case TARGET_MULTIFACE_AURA:
 			{
@@ -1609,7 +1616,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 
 	private void addTargetsToList(List<Creature> targets, Creature aimingTarget, Creature activeChar, boolean forceUse)
 	{
-		List<Creature> arround = aimingTarget.getAroundCharacters(_skillRadius, 300);
+		List<Creature> around = aimingTarget.getAroundCharacters(_skillRadius, 300);
 
 		int count = 0;
 		Polygon terr = null;
@@ -1638,10 +1645,28 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			if(loc == null)
 				return;
 
-			arround = World.getAroundCharacters(loc, aimingTarget.getObjectId(), aimingTarget.getReflectionId(), _skillRadius, 300);
+			around = World.getAroundCharacters(loc, aimingTarget.getObjectId(), aimingTarget.getReflectionId(), _skillRadius, 300);
+		}
+		else if(_targetType == SkillTargetType.TARGET_AURA_EXCLUDE_PLAYER)
+		{
+			//System.out.println("Creature list size before " + around.size());
+			for(Creature creature : around)
+			{
+				if(creature.isPlayable())
+				{
+					//System.out.println("Remove player " + creature.getName() + " from target list");
+					around.remove(creature);
+				}
+				else if(activeChar.isNpc() && ((NpcInstance) creature).isInFaction((NpcInstance)activeChar))
+				{
+					//System.out.println("Remove NPC " + creature.getName() + " from target list");
+					around.remove(creature);
+				}
+			}
+			//System.out.println("Creature list size after " + around.size());
 		}
 
-		for(Creature target : arround)
+		for(Creature target : around)
 		{
 			if(terr != null && !terr.isInside(target.getX(), target.getY(), target.getZ()))
 				continue;
@@ -2827,6 +2852,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			case TARGET_AREA:
 			case TARGET_AREA_AIM_CORPSE:
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_SERVITOR_AURA:
 			case TARGET_MULTIFACE:
 			case TARGET_MULTIFACE_AURA:
@@ -2843,6 +2869,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		switch(_targetType)
 		{
 			case TARGET_AURA:
+			case TARGET_AURA_EXCLUDE_PLAYER:
 			case TARGET_MULTIFACE_AURA:
 			case TARGET_ALLY:
 			case TARGET_CLAN:

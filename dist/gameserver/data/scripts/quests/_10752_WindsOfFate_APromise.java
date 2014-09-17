@@ -227,6 +227,8 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		if(event.equalsIgnoreCase("31524-3.htm"))
 		{
 			st.setCond(7);
+			player.sendPacket(new ExShowScreenMessage(MOVE_TO_NEXT_PLACE, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			
 		}
 		
 		if(event.equalsIgnoreCase("enter_instance"))

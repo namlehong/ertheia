@@ -84,6 +84,9 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("free_tree") || event.equalsIgnoreCase("free_sylph"))
 		{
+			QuestState qs = player.getQuestState(_10764_FreeSpirit.class);
+			if(qs == null) return null;
+			
 			npc.toggleVisible();
 			
 			ThreadPoolManager.getInstance().schedule(new VisibilityScheduleTimerTask(npc), 30000);
