@@ -23,10 +23,12 @@ import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.entity.Reflection;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
+import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
+import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.scripts.ScriptFile;
 import l2s.gameserver.utils.Location;
 
@@ -435,7 +437,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			
 			//spawn support
 			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, new Location(-88408, 186824, -10476), 0);
-			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88552, 186840, -10476), 0);
+			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88344, 176712, -10476), 0);
 			
 			NpcHealerAI ferin_ai = (NpcHealerAI)ferin_healer_instance.getAI();
 			NpcWarriorAI kain_ai = (NpcWarriorAI)kain_fighter_instance.getAI();
@@ -510,8 +512,8 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 					
 					spawnMakkum(st);
 					
-					kain_fighter_instance.sendMessage("Cửa mở rồi, đi lấy chiếc Chén Thánh đi!");
-					ferin_healer_instance.sendMessage("Con Makkum này Kain dư sức lo được, ngươi cứ đi đi");
+					Functions.npcSay(kain_fighter_instance, "Cửa mở rồi, đi lấy chiếc Chén Thánh đi!");
+					Functions.npcSay(ferin_healer_instance, "Kain đủ sức tiêu diệt Makkum, ngươi cứ đi đi");
 				}	
 			}
 			
@@ -519,6 +521,47 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 				st.startQuestTimer("check_open_door", door_check_interval);
 			
 			return null;
+		}
+		
+		if(event.equalsIgnoreCase("33996-2.htm"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			
+			st.giveItems(ATELIA1, 1);
+			st.playSound(SOUND_ITEMGET);
+			player.sendPacket(new ExShowScreenMessage(TALK_TO_WIZARD, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			
+			mysterious_wizard_instance = prophecies_chamber.addSpawnWithoutRespawn(MYSTERIOUS_WIZARD, new Location(-88568, 173320, -10476), 0);
+			
+		}
+		
+		if(event.equalsIgnoreCase("33996-4.htm"))
+		{
+			player.sendPacket(new ExShowScreenMessage(CHOICE_NOT_REVERSABLE, 20000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+		}
+		
+		if(event.equalsIgnoreCase("33980-6.htm"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			
+			st.set("choice", "patriot");
+			//spawn Kain & Ferin NPC
+			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88568, 173320, -10476), 0);
+			prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88472, 173256, -10476), 0);
+		}
+
+		if(event.equalsIgnoreCase("33980-7.htm"))
+		{
+			Reflection prophecies_chamber = player.getReflection();
+			
+			st.takeItems(ATELIA1, 1);
+			st.giveItems(ATELIA2, 1);
+			st.playSound(SOUND_ITEMGET);
+			st.set("choice", "traitor");
+			//spawn Kain & Ferin NPC
+			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88568, 173320, -10476), 0);
+			prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88472, 173256, -10476), 0);
+			
 		}
 		
 		if(event.equalsIgnoreCase("leave_instance"))
