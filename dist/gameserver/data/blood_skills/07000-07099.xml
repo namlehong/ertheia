@@ -1,0 +1,4207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		NPC Default - none
+
+	
+		name: NPC Default
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 0
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7000" levels="1" name="NPC Default">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dispel Buff - none
+
+	
+		name: Dispel Buff
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7001" levels="1" name="Dispel Buff">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_buff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Dispel Debuff - none
+
+	
+		name: Dispel Debuff
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7002" levels="1" name="Dispel Debuff">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Dispel All - none
+
+	
+		name: Dispel All
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7003" levels="1" name="Dispel All">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_buff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="20"/>
+			</effect>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Dispel Petrification - Cures petrification with the effect of 2 or less.
+
+	
+		name: Dispel Petrification
+		level: 2
+		mp_consume: 0
+		description: Cures petrification with the effect of 2 or less.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7004" levels="2" name="Dispel Petrification">
+		<!--
+			Description: Cures petrification with the effect of 2 or less.
+		-->
+		<table name="#ride_state">NONE;STRIDER;WYVERN;WOLF</table>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="magicLevel" value="60"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="turn_stone"/>
+				<def name="max_abnormal_level" value="2"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Greater Chant of Vampire - Momentarily allows party members to partially restore HP using damage inflicted upon the enemy with a certain probability. Effect 4.
+
+	
+		name: Greater Chant of Vampire
+		level: 4
+		mp_consume: 272
+		description: Momentarily allows party members to partially restore HP using damage inflicted upon the enemy with a certain probability. Effect 4.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 20
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7005" levels="4" name="Greater Chant of Vampire">
+		<!--
+			Description: Temporarily allows party members to partially restore HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Effect 4.
+		-->
+		<table name="#ride_state">NONE;STRIDER;WYVERN;WOLF</table>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="reuseDelay" value="20000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="vampiric_attack"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="55"/>
+		<set name="mpConsume2" value="217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		The Love of Pa'agrio - Momentarily increases target's allies HP recovery bonus. Effect 6.
+
+	
+		name: The Love of Pa'agrio
+		level: 13
+		mp_consume: 265
+		description: Momentarily increases target's allies HP recovery bonus. Effect 6.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 20
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7006" levels="13" name="The Love of Pa'agrio">
+		<!--
+			Description: Greatly enhances alliance members' HP restoration.  Effect 6.
+		-->
+		<table name="#ride_state">NONE;STRIDER;WYVERN;WOLF</table>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="reuseDelay" value="20000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="6"/>
+		<set name="abnormal_type" value="life_force_others"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="48"/>
+		<set name="mpConsume2" value="217"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Greater Seal of Flame - Sets the target's allies on fire. Momentarily and continuously decreases the enemies' HP. Effect 8.
+
+	
+		name: Greater Seal of Flame
+		level: 4
+		mp_consume: 153
+		description: Sets the target's allies on fire. Momentarily and continuously decreases the enemies' HP. Effect 8.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 20
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7007" levels="4" name="Greater Seal of Flame">
+		<!--
+			Description: A protective ring of fire that continuously reduces HP of surrounding enemies and their alliance members. Effect 8.
+		-->
+		<table name="#ride_state">NONE;STRIDER;WYVERN;WOLF</table>
+		<set name="ride_state" value="#ride_state"/>
+		<set name="reuseDelay" value="20000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_level" value="8"/>
+		<set name="abnormal_type" value="dot_attr"/>
+		<set name="magicLevel" value="74"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="31"/>
+		<set name="mpConsume2" value="122"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="MEN"/>
+	</skill>
+    <!--
+		Feather of Blessing - Once used, the Feather of Blessing cannot be reused for another 5 minutes.
+
+	
+		name: Feather of Blessing
+		level: 1
+		mp_consume: 0
+		description: Once used, the Feather of Blessing cannot be reused for another 5 minutes.
+		icon_name: icon.blessed_feather_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7008" levels="1" name="Feather of Blessing">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.blessed_feather_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7009" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7010" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7011" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7012" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7013" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Damage Up - Increases received Critical Damage
+
+	
+		name: Test - Critical Damage Up
+		level: 1
+		mp_consume: 0
+		description: Increases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7014" levels="1" name="Test - Critical Damage Up">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Damage Down - Decreases received Critical Damage
+
+	
+		name: Test - Critical Damage Down
+		level: 1
+		mp_consume: 0
+		description: Decreases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7015" levels="1" name="Test - Critical Damage Down">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Damage Up - Increases received Critical Damage
+
+	
+		name: Test - Critical Damage Up
+		level: 1
+		mp_consume: 0
+		description: Increases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7016" levels="1" name="Test - Critical Damage Up">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Damage Down - Decreases received Critical Damage
+
+	
+		name: Test - Critical Damage Down
+		level: 1
+		mp_consume: 0
+		description: Decreases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7017" levels="1" name="Test - Critical Damage Down">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Rate Up - Increases received Critical Damage
+
+	
+		name: Test - Critical Rate Up
+		level: 1
+		mp_consume: 0
+		description: Increases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7018" levels="1" name="Test - Critical Rate Up">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Rate Down - Decreases received Critical Damage
+
+	
+		name: Test - Critical Rate Down
+		level: 1
+		mp_consume: 0
+		description: Decreases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7019" levels="1" name="Test - Critical Rate Down">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Rate Up - Increases received Critical Damage
+
+	
+		name: Test - Critical Rate Up
+		level: 1
+		mp_consume: 0
+		description: Increases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7020" levels="1" name="Test - Critical Rate Up">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Critical Rate Down - Decreases received Critical Damage
+
+	
+		name: Test - Critical Rate Down
+		level: 1
+		mp_consume: 0
+		description: Decreases received Critical Damage
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7021" levels="1" name="Test - Critical Rate Down">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Find Hidden Door - Look for hidden door.
+
+	
+		name: Test - Find Hidden Door
+		level: 1
+		mp_consume: 0
+		description: Look for hidden door.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7022" levels="1" name="Test - Find Hidden Door">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7023" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7024" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7025" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7026" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7027" levels="1" name="not_used">
+		<!--  Automatically generated from The High Five: Part 4.5 client files.
+		  Description: none
+		  Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		  created 07-7-2011  19:19
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Stationary NPCs - none
+
+	
+		name: Stationary NPCs
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7028" levels="1" name="Stationary NPCs">
+		<set name="magicLevel" value="99"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Super Haste - Speed is increased.
+
+		LvL.1	description: Speed is increased.
+		LvL.2	description: speed is increased significantly.
+		LvL.3	description: Speed is increased dramatically.
+		LvL.4	description: Grants the combined power of two warriors.
+	
+		name: Super Haste
+		level: 1
+		mp_consume: 0
+		description: Speed is increased.
+		icon_name: icon.skill7029
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7029" levels="4" name="Super Haste">
+		<table name="#Tab-runSpd">2 3 3 3.5</table>
+		<table name="#Tab-pAtk">1 1 1 2</table>
+		<table name="#Tab-mAtkSpd">2 3 3 3.2</table>
+		<table name="#Tab-pAtkSpd">2 3 3 3.4</table>
+		<table name="#Tab-mReuse">1 1 0.01 0.01</table>
+		<!--<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="attack_time_down"/>-->
+		<set name="icon" value="icon.skill7029"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="CONT"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="isSaveable" value="false"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect time="-1">
+				<mul order="0x30" stat="runSpd" value="#Tab-runSpd"/>
+				<mul order="0x30" stat="pAtk" value="#Tab-pAtk"/>
+				<mul order="0x30" stat="mAtkSpd" value="#Tab-mAtkSpd"/>
+				<mul order="0x30" stat="pAtkSpd" value="#Tab-pAtkSpd"/>
+				<mul order="0x30" stat="mReuse" value="#Tab-mReuse"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Summon King Bugbear - none
+
+	
+		name: Summon King Bugbear
+		level: 1
+		mp_consume: 3
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 4.5
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7030" levels="1" name="Summon King Bugbear">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="4500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<!-- Summon-specific -->
+		<table name="#npcIds">20150</table>
+		<set name="npcId" value="#npcIds"/>
+		<set name="expPenalty" value="0.3"/>
+	</skill>
+    <!--
+		Summon Skeleton Royal Guard - none
+
+	
+		name: Summon Skeleton Royal Guard
+		level: 1
+		mp_consume: 3
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 4.5
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="4500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<!-- Summon-specific -->
+		<table name="#npcIds">20622</table>
+		<set name="npcId" value="#npcIds"/>
+		<set name="expPenalty" value="0.3"/>
+	</skill>
+    <!--
+		Summon Hunter Gargoyle - none
+
+	
+		name: Summon Hunter Gargoyle
+		level: 1
+		mp_consume: 3
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 4.5
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7032" levels="1" name="Summon Hunter Gargoyle">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="4500"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="2"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<!-- Summon-specific -->
+		<table name="#npcIds">20241</table>
+		<set name="npcId" value="#npcIds"/>
+		<set name="expPenalty" value="0.3"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7033" levels="1" name="not_used">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7034" levels="1" name="not_used">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7035" levels="1" name="not_used">
+		<!--
+			Description:
+			This aerial attack inflicts damage on a target inside the Outer Castle.
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7036" levels="1" name="not_used">
+		<!--
+			Description:
+			Valakas Use Skill
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7037" levels="1" name="not_used">
+		<!--
+			Description:
+			Tyrannosaurus Use Skill
+		-->
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7038" levels="1" name="not_used">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7039" levels="1" name="not_used">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		not_used - none
+
+	
+		name: not_used
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7040" levels="1" name="not_used">
+		<set name="magicLevel" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+    <!--
+		Master's Blessing - Focus - The GM is always by your side. Increases Critical attack rate by 30% for 1 hour.
+
+	
+		name: Master's Blessing - Focus
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Critical attack rate by 30% for 1 hour.
+		icon_name: icon.skill1077
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7041" levels="1" name="Master's Blessing - Focus">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="critical_prob_up"/>
+		<set name="magicLevel" value="52"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1077"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="pCritRate" value="30"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Death Whisper - The GM is always by your side. Increases Critical P. Atk. by 35% for 1 hour.
+
+	
+		name: Master's Blessing - Death Whisper
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Critical P. Atk. by 35% for 1 hour.
+		icon_name: icon.skill1242
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="critical_dmg_up"/>
+		<set name="magicLevel" value="56"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1242"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pCritDamage" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Haste - The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour.
+
+	
+		name: Master's Blessing - Haste
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour.
+		icon_name: icon.skill1086
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7043" levels="1" name="Master's Blessing - Haste">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="attack_time_down"/>
+		<set name="magicLevel" value="52"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1086"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtkSpd" value="1.33"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Guidance - The GM is always by your side. Increases Accuracy by 4 for 1 hour.
+
+	
+		name: Master's Blessing - Guidance
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Accuracy by 4 for 1 hour.
+		icon_name: icon.skill1240
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7044" levels="1" name="Master's Blessing - Guidance">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="hit_up"/>
+		<set name="magicLevel" value="56"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1240"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="pAccCombat" value="4"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Blessed Body - The GM is always by your side. Increases Max HP by 35% for 1 hour.
+
+	
+		name: Master's Blessing - Blessed Body
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Max HP by 35% for 1 hour.
+		icon_name: icon.skill1045
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="max_hp_up"/>
+		<set name="magicLevel" value="72"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1045"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.35"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Blessed Soul - The GM is always by your side. Increases Max MP by 35% for 1 hour.
+
+	
+		name: Master's Blessing - Blessed Soul
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Max MP by 35% for 1 hour.
+		icon_name: icon.skill1048
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="7"/>
+		<set name="abnormal_type" value="max_mp_up"/>
+		<set name="magicLevel" value="70"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1048"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxMp" value="1.35"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Agility - The GM is always by your side. Increase Evasion by 4 for 1 hour.
+
+	
+		name: Master's Blessing - Agility
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increase Evasion by 4 for 1 hour.
+		icon_name: icon.skill1087
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7047" levels="1" name="Master's Blessing - Agility">
+		<table name="#Tab-pEvasRate">4</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="avoid_up"/>
+		<set name="magicLevel" value="52"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1087"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="pEvasRate" value="4"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Acumen - The GM is always by your side. Increases Casting Spd. by 30% for 1 hour.
+
+	
+		name: Master's Blessing - Acumen
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Casting Spd. by 30% for 1 hour.
+		icon_name: icon.skill1085
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7048" levels="1" name="Master's Blessing - Acumen">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="casting_time_down"/>
+		<set name="magicLevel" value="48"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1085"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtkSpd" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Decrease Weight - The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour.
+
+	
+		name: Master's Blessing - Decrease Weight
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour.
+		icon_name: icon.skill1257
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="decrease_weight_penalty"/>
+		<set name="magicLevel" value="52"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1257"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="maxNoPenaltyLoad" value="9000"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Might - The GM is always by your side. Increases P. Atk. by 15% for 1 hour.
+
+	
+		name: Master's Blessing - Might
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases P. Atk. by 15% for 1 hour.
+		icon_name: icon.skill1068
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7050" levels="1" name="Master's Blessing - Might">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pa_up"/>
+		<set name="magicLevel" value="40"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1068"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Shield - The GM is always by your side. Increases P. Def. by 15% for 1 hour.
+
+	
+		name: Master's Blessing - Shield
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases P. Def. by 15% for 1 hour.
+		icon_name: icon.skill1040
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7051" levels="1" name="Master's Blessing - Shield">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pd_up"/>
+		<set name="magicLevel" value="44"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1040"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pDef" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Magic Barrier - The GM is always by your side. Increases M. Def. by 30% for 1 hour.
+
+	
+		name: Master's Blessing - Magic Barrier
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases M. Def. by 30% for 1 hour.
+		icon_name: icon.skill1036
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="md_up"/>
+		<set name="magicLevel" value="52"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1036"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mDef" value="1.3"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Vampiric Rage - The GM is always by your side. For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability.
+
+	
+		name: Master's Blessing - Vampiric Rage
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability.
+		icon_name: icon.skill1268
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
+		<table name="#Tab-absorbDam">9</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="vampiric_attack"/>
+		<set name="magicLevel" value="72"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1268"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="absorbDam" value="#Tab-absorbDam"/>
+				<add order="0x40" stat="absorbBowDam" value="#Tab-absorbDam"/>
+				<add order="0x40" stat="absorbPSkillDam" value="#Tab-absorbDam"/>
+				<add order="0x40" stat="absorbMSkillDam" value="#Tab-absorbDam"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Empower - The GM is always by your side. Increases M. Atk. by 75% for 1 hour.
+
+	
+		name: Master's Blessing - Empower
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases M. Atk. by 75% for 1 hour.
+		icon_name: icon.skill1059
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7054" levels="1" name="Master's Blessing - Empower">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="ma_up"/>
+		<set name="magicLevel" value="52"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1059"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtk" value="1.75"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Wind Walk - The GM is always by your side. Increases Speed by 33 for 1 hour.
+
+	
+		name: Master's Blessing - Wind Walk
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases Speed by 33 for 1 hour.
+		icon_name: icon.skill1204
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="speed_up"/>
+		<set name="magicLevel" value="30"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1204"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="runSpd" value="33"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Berserker Spirit - The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8.
+
+	
+		name: Master's Blessing - Berserker Spirit
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8.
+		icon_name: icon.skill1062
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="berserker"/>
+		<set name="magicLevel" value="52"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1062"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mAtk" value="1.16"/>
+				<mul order="0x30" stat="pAtk" value="1.08"/>
+				<mul order="0x30" stat="mDef" value="0.84"/>
+				<mul order="0x30" stat="pDef" value="0.92"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.08"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.08"/>
+				<add order="0x40" stat="runSpd" value="8"/>
+				<sub order="0x40" stat="pEvasRate" value="4"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Greater Might - The GM is always by your side. Increases P. Atk. by 10% for 1 hour.
+
+	
+		name: Master's Blessing - Greater Might
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases P. Atk. by 10% for 1 hour.
+		icon_name: icon.skill1388
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7057" levels="1" name="Master's Blessing - Greater Might">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pa_pd_up"/>
+		<set name="magicLevel" value="74"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1388"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.10"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Greater Shield - The GM is always by your side. Increases P. Def. by 15% for 1 hour.
+
+	
+		name: Master's Blessing - Greater Shield
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Increases P. Def. by 15% for 1 hour.
+		icon_name: icon.skill1389
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="pa_pd_up"/>
+		<set name="magicLevel" value="74"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1389"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pDef" value="1.15"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Wild Magic - The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage.
+
+	
+		name: Master's Blessing - Wild Magic
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage.
+		icon_name: icon.skill1303
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_type" value="magic_critical_up"/>
+		<set name="magicLevel" value="70"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1303"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="baseMCritRate" value="20"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Clarity - The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%.
+
+	
+		name: Master's Blessing - Clarity
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%.
+		icon_name: icon.skill1397
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7060" levels="1" name="Master's Blessing - Clarity">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="cheap_magic"/>
+		<set name="magicLevel" value="74"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1397"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mpConsum" value="0.9"/>
+				<mul order="0x30" stat="mpConsumePhysical" value="0.8"/>
+				<mul order="0x30" stat="mpDanceConsume" value="0.8"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Prophecy of Water - The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. D
+
+	
+		name: Master's Blessing - Prophecy of Water
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. D
+		icon_name: icon.skill1355
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicLevel" value="78"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1355"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="baseMCritRate" value="10"/>
+				<mul order="0x30" stat="regMp" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+				<mul order="0x30" stat="runSpd" value="0.8"/>
+				<mul order="0x30" stat="mpConsum" value="0.95"/>
+				<mul order="0x30" stat="mpConsumePhysical" value="0.95"/>
+				<mul order="0x30" stat="mpDanceConsume" value="0.95"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Prophecy of Fire - The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P
+
+	
+		name: Master's Blessing - Prophecy of Fire
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P
+		icon_name: icon.skill1356
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicLevel" value="78"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1356"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxMp" value="1.2"/>
+				<mul order="0x30" stat="regHp" value="1.2"/>
+				<add order="0x40" stat="baseMCritRate" value="10"/>
+				<mul order="0x30" stat="pCritDamage" value="1.2"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+				<mul order="0x30" stat="runSpd" value="0.8"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Prophecy of Wind - The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20
+
+	
+		name: Master's Blessing - Prophecy of Wind
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20
+		icon_name: icon.skill1357
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicLevel" value="78"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1357"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<add order="0x40" stat="pCritRate" value="20"/>
+				<add order="0x40" stat="baseMCritRate" value="10"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+				<mul order="0x30" stat="runSpd" value="0.8"/>
+				<add order="0x40" stat="absorbDam" value="5"/>
+				<add order="0x40" stat="absorbBowDam" value="5"/>
+				<add order="0x40" stat="absorbPSkillDam" value="5"/>
+				<add order="0x40" stat="absorbMSkillDam" value="5"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Chant of Victory - The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. De
+
+	
+		name: Master's Blessing - Chant of Victory
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. De
+		icon_name: icon.skill1363
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="multi_buff"/>
+		<set name="magicLevel" value="78"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1363"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect time="3600">
+				<mul order="0x30" stat="maxHp" value="1.2"/>
+				<add order="0x40" stat="baseMCritRate" value="10"/>
+				<add order="0x40" stat="pCritRate" value="20"/>
+				<mul order="0x30" stat="pAtk" value="1.1"/>
+				<mul order="0x30" stat="pDef" value="1.2"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.2"/>
+				<mul order="0x30" stat="mAtk" value="1.2"/>
+				<mul order="0x30" stat="mDef" value="1.2"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.2"/>
+				<add order="0x40" stat="debuffResist" value="10"/>
+				<add order="0x40" stat="pAccCombat" value="4"/>
+				<mul order="0x30" stat="runSpd" value="0.8"/>
+			</effect>
+			<effect name="HealPercent" time="0" value="20"/>
+		</for>
+	</skill>
+    <!--
+		Test - Charge - Charges into the enemy.
+
+	
+		name: Test - Charge
+		level: 1
+		mp_consume: 50
+		description: Charges into the enemy.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7065" levels="1" name="Test - Charge">
+		<!--
+			Description: Charges into an enemy.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="800"/>
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<target min_distance="200"/>
+		</cond>
+	</skill>
+    <!--
+		Test Stun Charge - Charges into enemy and Stuns.
+
+	
+		name: Test Stun Charge
+		level: 1
+		mp_consume: 50
+		description: Charges into enemy and Stuns.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7066" levels="1" name="Test Stun Charge">
+		<!--
+			Description: Charges into enemy and stuns.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="800"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="75"/>
+		<set name="levelModifier" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<target min_distance="200"/>
+		</cond>
+	</skill>
+    <!--
+		Test Range Charge - Charges into enemy and causes bleeding
+
+	
+		name: Test Range Charge
+		level: 1
+		mp_consume: 50
+		description: Charges into enemy and causes bleeding
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7067" levels="1" name="Test Range Charge">
+		<!--
+			Description: Charges into enemy and causes bleeding
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="800"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="75"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="BLEED"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<target min_distance="200"/>
+		</cond>
+	</skill>
+    <!--
+		Test Steal Abnormal State - Steals enemy's abnormal state.
+
+	
+		name: Test Steal Abnormal State
+		level: 1
+		mp_consume: 100
+		description: Steals enemy's abnormal state.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 2
+		cool_time: 0.2
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7068" levels="1" name="Test Steal Abnormal State">
+		<!--
+			Description: Steals enemy's abnormal state.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="50"/>
+		<set name="mpConsume2" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<target min_distance="200"/>
+		</cond>
+	</skill>
+    <!--
+		Test Abnormal State DD - Inflicts damage according to the enemy's number of abnormal states.
+
+	
+		name: Test Abnormal State DD
+		level: 1
+		mp_consume: 100
+		description: Inflicts damage according to the enemy's number of abnormal states.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 2
+		cool_time: 0.2
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7069" levels="1" name="Test Abnormal State DD">
+		<!--
+			Description: Inflicts damage according to the enemy's number of abnormal states.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="2000"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="50"/>
+		<set name="mpConsume2" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<target min_distance="200"/>
+		</cond>
+	</skill>
+    <!--
+		Test - Soul Eating Passive - Absorbs soul.
+
+	
+		name: Test - Soul Eating Passive
+		level: 1
+		mp_consume: 0
+		description: Absorbs soul.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 12
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7070" levels="1" name="Test - Soul Eating Passive">
+		<!--
+			Description: Absorbs soul.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="1509">
+			<player olympiad="false"/>
+		</cond>
+	</skill>
+    <!--
+		Test - Soul Transfer - Transfers soul to party member.
+
+	
+		name: Test - Soul Transfer
+		level: 1
+		mp_consume: 5
+		description: Transfers soul to party member.
+		icon_name: icon.skill0000
+		hp_consume: 20
+		cast_range: -1
+		hit_time: 0.9
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7071" levels="1" name="Test - Soul Transfer">
+		<!--
+			Description: Transfers soul to party member.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="899"/>
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hpConsume" value="20"/>
+		<set name="mpConsume2" value="5"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Basic Trap - Summons trap.
+
+	
+		name: Test - Basic Trap
+		level: 1
+		mp_consume: 50
+		description: Summons trap.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7072" levels="1" name="Test - Basic Trap">
+		<!--
+			Description: Summons trap.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="20"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="40"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Find Trap - Locates trap.
+
+	
+		name: Test - Find Trap
+		level: 1
+		mp_consume: 50
+		description: Locates trap.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7073" levels="1" name="Test - Find Trap">
+		<!--
+			Description: Locates trap.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="20"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="40"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Cancel Trap - Cancels trap.
+
+	
+		name: Test - Cancel Trap
+		level: 1
+		mp_consume: 50
+		description: Cancels trap.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7074" levels="1" name="Test - Cancel Trap">
+		<!--
+			Description: Cancels trap.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="20"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="40"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Distance DD - Magic damage changes by distance.
+
+	
+		name: Test - Distance DD
+		level: 1
+		mp_consume: 50
+		description: Magic damage changes by distance.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 6
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7075" levels="1" name="Test - Distance DD">
+		<!--
+			Description: DD damage changes by distance.
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="6000"/>
+		<set name="hitTime" value="4000"/>
+		<set name="magicLevel" value="17"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="10"/>
+		<set name="mpConsume2" value="40"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Delay Debuff - Bleeds for 20 seconds and Stuns.
+
+	
+		name: Test - Delay Debuff
+		level: 1
+		mp_consume: 30
+		description: Bleeds for 20 seconds and Stuns.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.08
+		cool_time: 0.72
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7076" levels="1" name="Test - Delay Debuff">
+		<!--
+			Description: Bleeds for 20 seconds and stuns.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="coolTime" value="720"/>
+		<set name="hitTime" value="1080"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="8"/>
+		<set name="abnormal_type" value="bleeding"/>
+		<set name="magicLevel" value="70"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="30"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="BLEED"/>
+		<set name="saveVs" value="CON"/>
+	</skill>
+    <!--
+		Test - Delay Debuff - Call - Currently stunned.
+
+	
+		name: Test - Delay Debuff - Call
+		level: 1
+		mp_consume: 0
+		description: Currently stunned.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7077" levels="1" name="Test - Delay Debuff - Call">
+		<!--
+			Description: Currently stunned.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="70"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+	</skill>
+    <!--
+		Test - Blink - Stun
+
+	
+		name: Test - Blink
+		level: 1
+		mp_consume: 100
+		description: Stun
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.3
+		cool_time: 0.2
+		reuse_delay: 5
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7078" levels="1" name="Test - Blink">
+		<!--
+			Description: Stuns
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="200"/>
+		<set name="hitTime" value="300"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="levelModifier" value="1"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="50"/>
+		<set name="mpConsume2" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+	</skill>
+    <!--
+		Test - Party Damage Absorb - Transfers party damage to tanker.
+
+	
+		name: Test - Party Damage Absorb
+		level: 1
+		mp_consume: 100
+		description: Transfers party damage to tanker.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7079" levels="1" name="Test - Party Damage Absorb">
+		<!--
+			Description: Transfers party damage to tanker.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_time" value="1200"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - General Attack Prohibited - Cannot perform general attack.
+
+	
+		name: Test - General Attack Prohibited
+		level: 1
+		mp_consume: 30
+		description: Cannot perform general attack.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7080" levels="1" name="Test - General Attack Prohibited">
+		<!--
+			Description: Cannot perform general attack.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="hitTime" value="2500"/>
+		<set name="abnormal_time" value="40"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="magicLevel" value="70"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="600"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="30"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="CON"/>
+	</skill>
+    <!--
+		Effect Test - Land Shot - Shoots toward ground.
+
+	
+		name: Effect Test - Land Shot
+		level: 1
+		mp_consume: 30
+		description: Shoots toward ground.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 500
+		hit_time: 3.2
+		cool_time: 0.8
+		reuse_delay: 25
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 5
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7081" levels="1" name="Effect Test - Land Shot">
+		<!--
+			Description: Shoots toward ground.
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="25000"/>
+		<set name="coolTime" value="800"/>
+		<set name="hitTime" value="3200"/>
+		<set name="magicLevel" value="75"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="30"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Effect Test - Chain Lightning - Chain Lightning
+
+	
+		name: Effect Test - Chain Lightning
+		level: 1
+		mp_consume: 100
+		description: Chain Lightning
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 500
+		hit_time: 5
+		cool_time: 0
+		reuse_delay: 20
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7082" levels="1" name="Effect Test - Chain Lightning">
+		<!--
+			Description: Chain Lightning
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="20000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="5;12"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="50"/>
+		<set name="mpConsume2" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Trap Skill - Trap Range Skill
+
+	
+		name: Test - Trap Skill
+		level: 1
+		mp_consume: 0
+		description: Trap Range Skill
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7083" levels="1" name="Test - Trap Skill">
+		<!--
+			Description: Trap Range Skill
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="38"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Test - Trap Skill - Trap Range Skill
+
+	
+		name: Test - Trap Skill
+		level: 1
+		mp_consume: 0
+		description: Trap Range Skill
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7084" levels="1" name="Test - Trap Skill">
+		<!--
+			Description: Trap Range Skill
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="38"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="affectLimit" value="6;12"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="hpEff" value="0"/>
+		</for>
+	</skill>
+    <!--
+		Self-Destruct Explosion - none
+
+	
+		name: Self-Destruct Explosion
+		level: 1
+		mp_consume: 85
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7085" levels="1" name="Self-Destruct Explosion">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="17"/>
+		<set name="mpConsume2" value="68"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<set order="0x40" stat="stunResist" value="200"/>
+			<set order="0x40" stat="rootResist" value="200"/>
+			<set order="0x40" stat="sleepResist" value="200"/>
+			<set order="0x40" stat="debuffResist" value="200"/>
+			<set order="0x40" stat="mentalResist" value="200"/>
+		</for>
+	</skill>
+    <!--
+		Last Stand_test - none
+
+	
+		name: Last Stand_test
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7086" levels="1" name="Last Stand_test">
+		<set name="ride_state" value="NONE"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Chain Magic - Dark Explosion_test - none
+
+	
+		name: Chain Magic - Dark Explosion_test
+		level: 1
+		mp_consume: 85
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 500
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7087" levels="1" name="Chain Magic - Dark Explosion_test">
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="hitTime" value="1000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="castRange" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="17"/>
+		<set name="mpConsume2" value="68"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Master's Blessing - Improve Combat - The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15% and P. Def. by 15%.
+
+	
+		name: Master's Blessing - Improve Combat
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15% and P. Def. by 15%.
+		icon_name: icon.skill1499
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7088" levels="1" name="Master's Blessing - Improve Combat">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="improve_pa_pd_up"/>
+		<set name="magicLevel" value="70"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1499"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="pa_up;pd_up"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="pa_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="pd_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Improve Magic - The GM is always by your side. Combine M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%.
+
+	
+		name: Master's Blessing - Improve Magic
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Combine M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%.
+		icon_name: icon.skill1500
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7089" levels="1" name="Master's Blessing - Improve Magic">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "The GM is always by your side. Combine magic power increase and magic resistance increase to have more advanced magic ability increase effect. For 40 minutes, increases M. Atk. by 75% and M. Def. by 30%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="improve_ma_md_up"/>
+		<set name="magicLevel" value="74"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="ma_up;md_up"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="ma_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="md_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Improve Condition - The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35% and Max MP by 35%.
+
+	
+		name: Master's Blessing - Improve Condition
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35% and Max MP by 35%.
+		icon_name: icon.skill1501
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7090" levels="1" name="Master's Blessing - Improve Condition">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 40 minutes, increases Max HP by 35% and Max MP by 35%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="improve_hp_mp_up"/>
+		<set name="magicLevel" value="72"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1501"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="max_hp_up;max_mp_up"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="max_hp_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="max_mp_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Improve Critical Attack - The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%.
+
+	
+		name: Master's Blessing - Improve Critical Attack
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%.
+		icon_name: icon.skill1502
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7091" levels="1" name="Master's Blessing - Improve Critical Attack">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "The GM is always by your side. Combine critical rate increase and critical power increase to have more advanced critical increase effect. For 40 minutes, increases critical rate by 30% and critical power by 35%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="improve_crt_rate_dmg_up"/>
+		<set name="magicLevel" value="74"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1502"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="critical_prob_up;critical_dmg_up"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="critical_prob_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="critical_dmg_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Improve Shield Defense - The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30% and Shield Defense by 50%.
+
+	
+		name: Master's Blessing - Improve Shield Defense
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30% and Shield Defense by 50%.
+		icon_name: icon.skill1503
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7092" levels="1" name="Master's Blessing - Improve Shield Defense">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "The GM is always by your side. Combine shield Def. rate increase and shield P. Def. increase to have more advanced shield ability increase effect. For 40 minutes, increases shield defense rate by 30% and shield P. Def. by 50%."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="improve_shield_rate_defence_up"/>
+		<set name="magicLevel" value="70"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1503"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="shield_prob_up;shield_defence_up"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="shield_prob_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="shield_defence_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Improve Movement - The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour, increases Speed by 33 and evasion by 4.
+
+	
+		name: Master's Blessing - Improve Movement
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour, increases Speed by 33 and evasion by 4.
+		icon_name: icon.skill1504
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7093" levels="1" name="Master's Blessing - Improve Movement">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: "The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 40 minutes, increases moving speed by 33 and evasion by 4."
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="improve_speed_avoid_up"/>
+		<set name="magicLevel" value="72"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1504"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="speed_up;avoid_up"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="speed_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="avoid_up"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Master's Blessing - Sharpen Edge - The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour.
+
+	
+		name: Master's Blessing - Sharpen Edge
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour.
+		icon_name: icon.skill0825
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7094" levels="1" name="Master's Blessing - Sharpen Edge">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and critical rate by 20% for 10 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="dwarf_attack_buff"/>
+		<set name="magicLevel" value="49"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0825"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Master's Blessing - Encase Armor - The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10% for 1 hour.
+
+	
+		name: Master's Blessing - Encase Armor
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10% for 1 hour.
+		icon_name: icon.skill0828
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7095" levels="1" name="Master's Blessing - Encase Armor">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: The GM is always by your side. Enhances the armor surface to increase P. Def. by 10% for 10 minutes.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="dwarf_defence_buff"/>
+		<set name="magicLevel" value="46"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0828"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Master's Blessing - Noblesse Blessing - The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear.
+
+	
+		name: Master's Blessing - Noblesse Blessing
+		level: 1
+		mp_consume: 1
+		description: The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear.
+		icon_name: icon.skill1323
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 1
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7096" levels="1" name="Master's Blessing - Noblesse Blessing">
+		<!--  Automatically generated from The Gracia Epilogue client files.
+		      Description: The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Blessing of Noblesse and the Amulet of Luck disappear.
+		      Target is set to TARGET_NONE, skillType  to NOTDONE for server compatability.
+		      created 15-2-2010  12:29
+		-->
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="hitTime" value="500"/>
+		<set name="abnormal_time" value="3600"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_type" value="preserve_abnormal"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1323"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="1"/>
+		<set name="mpConsume2" value="1"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Cancel Shadow Move - none
+
+	
+		name: Cancel Shadow Move
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill01702
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7097" levels="1" name="Cancel Shadow Move">
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill01702"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_shadow"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Clan-exclusive Pet Heal - Recovers all of your HP. Power 3000
+
+	
+		name: Clan-exclusive Pet Heal
+		level: 1
+		mp_consume: 5
+		description: Recovers all of your HP. Power 3000
+		icon_name: icon.skill1401
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7098" levels="1" name="Clan-exclusive Pet Heal">
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill1401"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Clan-exclusive Pet Fear - Inflicts fear on the target for 3 seconds.
+
+	
+		name: Clan-exclusive Pet Fear
+		level: 1
+		mp_consume: 5
+		description: Inflicts fear on the target for 3 seconds.
+		icon_name: icon.skill4108
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 1
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="7099" levels="1" name="Clan-exclusive Pet Fear">
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill4108"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

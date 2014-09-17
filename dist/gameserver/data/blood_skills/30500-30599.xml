@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Lateral Hit - Attacks target with 22 Power added to P. Atk., and decreases their P. Def. by 10% for 10 sec. 20% more damage if target is Stunned. Requires a fist weapon.
+
+		LvL.1	description: Attacks target with 22 Power added to P Atk. by 10% for 10 sec.	mp_consume: 8
+		LvL.2	description: Attacks target with 77 Power added to P Atk.	mp_consume: 17
+		LvL.3	description: Attacks target with 141 Power added to P Atk.	mp_consume: 23
+		LvL.4	description: Attacks target with 221 Power added to P Atk.	mp_consume: 29
+		LvL.5	description: Attacks target with 669 Power added to P Atk.	mp_consume: 35
+		LvL.6	description: Attacks target with 856 Power added to P Atk.	mp_consume: 39
+		LvL.7	description: Attacks target with 1073 Power added to P Atk.	mp_consume: 44
+		LvL.8	description: Attacks target with 1323 Power added to P Atk.	mp_consume: 47
+		LvL.9	description: Attacks target with 1602 Power added to P Atk.	mp_consume: 52
+		LvL.10	description: Attacks target with 1913 Power added to P Atk.	mp_consume: 55
+		LvL.11	description: Attacks target with 2256 Power added to P Atk.	mp_consume: 59
+		LvL.12	description: Attacks target with 2629 Power added to P Atk.	mp_consume: 63
+		LvL.13	description: Attacks target with 3034 Power added to P Atk.	mp_consume: 67
+		LvL.14	description: Attacks target with 3879 Power added to P Atk.	mp_consume: 69
+		LvL.15	description: Attacks target with 4149 Power added to P Atk.	mp_consume: 70
+		LvL.16	description: Attacks target with 4434 Power added to P Atk.	mp_consume: 71
+		LvL.17	description: Attacks target with 4733 Power added to P Atk.	mp_consume: 73
+		LvL.18	description: Attacks target with 18990 Power added to P Atk. by 30% for 10 sec.	mp_consume: 73
+		LvL.19	description: Attacks target with 20811 Power added to P Atk. by 30% for 10 sec.	mp_consume: 74
+		LvL.20	description: Attacks target with 23098 Power added to P Atk. by 30% for 10 sec.	mp_consume: 75
+		LvL.21	description: Attacks target with 25950 Power added to P Atk. by 30% for 10 sec.	mp_consume: 75
+		LvL.22	description: Attacks target with 29500 Power added to P Atk. by 30% for 10 sec.	mp_consume: 75
+		LvL.23	description: Attacks target with 33928 Power added to P Atk. by 30% for 10 sec.	mp_consume: 76
+		LvL.24	description: Attacks target with 39478 Power added to P Atk. by 30% for 10 sec.	mp_consume: 76
+		LvL.25	description: Attacks target with 46478 Power added to P Atk. by 30% for 10 sec.	mp_consume: 77
+	
+		name: Lateral Hit
+		level: 1
+		mp_consume: 8
+		description: Attacks target with 22 Power added to P. Atk., and decreases their P. Def. by 10% for 10 sec. 20% more damage if target is Stunned. Requires a fist weapon.
+		icon_name: icon.skill30500
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30500" levels="25" name="Lateral Hit">
+		<table name="#effectPoint">96 100 104 111 115 119 128 132 136 145 150 154 164 169 173 182 194 205 217 226 237 246 1071 1168 1247 1344 1465 1575 1684 1773</table>
+		<table name="#mpConsume2">8 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77</table>
+		<table name="#power">22 77 141 221 669 856 1073 1323 1602 1913 2256 2629 3034 3879 4149 4434 4733 18990 20811 23098 25950 29500 33928 39478 46478</table>
+		<table name="#magicLevel">5 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 86 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30500"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="effectPoint" value="#effectPoint"/>
+		<set name="activateRate" value="50"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="pDef" value="0.9"/>
+				<!--TODO: Дополнительно урон +20%, если противник оглушен.-->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Backspin Blow - Attacks target with 129 Power added to P. Atk. Requires a fist weapon.
+
+		LvL.1	description: Attacks target with 129 Power added to P Atk.	mp_consume: 17
+		LvL.2	description: Attacks target with 235 Power added to P Atk.	mp_consume: 23
+		LvL.3	description: Attacks target with 369 Power added to P Atk.	mp_consume: 29
+		LvL.4	description: Attacks target with 1116 Power added to P Atk.	mp_consume: 35
+		LvL.5	description: Attacks target with 1428 Power added to P Atk.	mp_consume: 39
+		LvL.6	description: Attacks target with 1789 Power added to P Atk.	mp_consume: 44
+		LvL.7	description: Attacks target with 2205 Power added to P Atk.	mp_consume: 47
+		LvL.8	description: Attacks target with 2671 Power added to P Atk.	mp_consume: 52
+		LvL.9	description: Attacks target with 3189 Power added to P Atk.	mp_consume: 55
+		LvL.10	description: Attacks target with 3760 Power added to P Atk.	mp_consume: 59
+		LvL.11	description: Attacks target with 4383 Power added to P Atk.	mp_consume: 63
+		LvL.12	description: Attacks target with 5058 Power added to P Atk.	mp_consume: 67
+		LvL.13	description: Attacks target with 6466 Power added to P Atk.	mp_consume: 69
+		LvL.14	description: Attacks target with 6916 Power added to P Atk.	mp_consume: 70
+		LvL.15	description: Attacks target with 7390 Power added to P Atk.	mp_consume: 71
+		LvL.16	description: Attacks target with 7888 Power added to P Atk.	mp_consume: 73
+		LvL.17	description: Attacks target with 28134 Power added to P Atk.	mp_consume: 73
+		LvL.18	description: Attacks target with 30832 Power added to P Atk.	mp_consume: 74
+		LvL.19	description: Attacks target with 34221 Power added to P Atk.	mp_consume: 75
+		LvL.20	description: Attacks target with 38446 Power added to P Atk.	mp_consume: 75
+		LvL.21	description: Attacks target with 43706 Power added to P Atk.	mp_consume: 75
+		LvL.22	description: Attacks target with 50268 Power added to P Atk.	mp_consume: 76
+		LvL.23	description: Attacks target with 58492 Power added to P Atk.	mp_consume: 76
+		LvL.24	description: Attacks target with 68865 Power added to P Atk.	mp_consume: 77
+	
+		name: Backspin Blow
+		level: 1
+		mp_consume: 17
+		description: Attacks target with 129 Power added to P. Atk. Requires a fist weapon.
+		icon_name: icon.skill30501
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30501" levels="24" name="Backspin Blow">
+		<table name="#mpConsume2">17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77</table>
+		<table name="#power">129 235 369 1116 1428 1789 2205 2671 3189 3760 4383 5058 6466 6916 7390 7888 28134 30832 34221 38446 43706 50268 58492 68865</table>
+		<table name="#magicLevel">20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30501"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+	</skill>
+    <!--
+		Chin Strike - Knocks down target for 3 sec. Requires a fist weapon.
+
+		LvL.1	mp_consume: 34
+		LvL.2	mp_consume: 37
+		LvL.3	mp_consume: 41
+		LvL.4	mp_consume: 45
+		LvL.5	mp_consume: 49
+		LvL.6	mp_consume: 54
+		LvL.7	mp_consume: 57
+		LvL.8	mp_consume: 61
+		LvL.9	mp_consume: 65
+		LvL.10	mp_consume: 68
+		LvL.11	mp_consume: 70
+		LvL.12	mp_consume: 71
+		LvL.13	mp_consume: 72
+		LvL.14	mp_consume: 73
+		LvL.15	mp_consume: 74
+		LvL.16	mp_consume: 75
+		LvL.17	mp_consume: 75
+		LvL.18	mp_consume: 75
+		LvL.19	mp_consume: 76
+		LvL.20	mp_consume: 76
+		LvL.21	mp_consume: 77
+	
+		name: Chin Strike
+		level: 1
+		mp_consume: 34
+		description: Knocks down target for 3 sec. Requires a fist weapon.
+		icon_name: icon.skill30502
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30502" levels="21" name="Chin Strike">
+		<table name="#mpConsume2">34 37 41 45 49 54 57 61 65 68 70 71 72 73 74 75 75 75 76 76 77</table>
+		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<table name="#activateRate">30 31 32 33 34 35 36 37 38 39 40 43 46 49 60 62 64 66 68 70 75</table>	<!--TODO: Check.-->
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="icon" value="icon.skill30502"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="KNOCKDOWN"/>
+		<set name="saveVs" value="CON"/>
+		<set name="nextAction" value="attack"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="KnockDown"/>
+		</for>
+	</skill>
+    <!--
+		Spinning Kick - Attacks target with 35167 Power added to P. Atk. Ignores Shield Defense. Requires a fist weapon.
+
+		LvL.1	description: Attacks target with 35167 Power added to P Atk.	mp_consume: 81
+		LvL.2	description: Attacks target with 36755 Power added to P Atk.
+		LvL.3	description: Attacks target with 40540 Power added to P Atk.	mp_consume: 82
+		LvL.4	description: Attacks target with 45273 Power added to P Atk.	mp_consume: 83
+		LvL.5	description: Attacks target with 51165 Power added to P Atk.	mp_consume: 83
+		LvL.6	description: Attacks target with 58506 Power added to P Atk.	mp_consume: 83
+		LvL.7	description: Attacks target with 67683 Power added to P Atk.	mp_consume: 84
+		LvL.8	description: Attacks target with 79217 Power added to P Atk.	mp_consume: 84
+	
+		name: Spinning Kick
+		level: 1
+		mp_consume: 81
+		description: Attacks target with 35167 Power added to P. Atk. Ignores Shield Defense. Requires a fist weapon.
+		icon_name: icon.skill30503
+		hp_consume: 0
+		cast_range: 60
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30503" levels="8" name="Spinning Kick">
+		<table name="#mpConsume2">81 81 82 83 83 83 84 84</table>
+		<table name="#power">35167 36755 40540 45273 51165 58506 67683 79217</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="60"/>
+		<set name="hitTime" value="2000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30503"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<set name="shieldignore" value="true"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+	</skill>
+    <!--
+		Gravity Hit - Attacks target with 10417 Power added to P. Atk. Ignores 50% of target's P. Def. Requires a fist weapon.
+
+		LvL.1	description: Attacks target with 10417 Power added to P Atk.	mp_consume: 75
+		LvL.2	description: Attacks target with 11147 Power added to P Atk.	mp_consume: 77
+		LvL.3	description: Attacks target with 11917 Power added to P Atk.	mp_consume: 78
+		LvL.4	description: Attacks target with 12727 Power added to P Atk.	mp_consume: 79
+		LvL.5	description: Attacks target with 13577 Power added to P Atk.	mp_consume: 80
+		LvL.6	description: Attacks target with 35167 Power added to P Atk.	mp_consume: 81
+		LvL.7	description: Attacks target with 38540 Power added to P Atk.	mp_consume: 82
+		LvL.8	description: Attacks target with 42776 Power added to P Atk.	mp_consume: 82
+		LvL.9	description: Attacks target with 48058 Power added to P Atk.	mp_consume: 83
+		LvL.10	description: Attacks target with 54633 Power added to P Atk.	mp_consume: 83
+		LvL.11	description: Attacks target with 62836 Power added to P Atk.	mp_consume: 84
+		LvL.12	description: Attacks target with 73116 Power added to P Atk.	mp_consume: 84
+		LvL.13	description: Attacks target with 86081 Power added to P Atk.	mp_consume: 85
+	
+		name: Gravity Hit
+		level: 1
+		mp_consume: 75
+		description: Attacks target with 10417 Power added to P. Atk. Ignores 50% of target's P. Def. Requires a fist weapon.
+		icon_name: icon.skill30504
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 2.5
+		cool_time: 0.5
+		reuse_delay: 9
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30504" levels="13" name="Gravity Hit">
+		<table name="#mpConsume2">75 77 78 79 80 81 82 82 83 83 84 84 85</table>
+		<table name="#power">10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 86081</table>
+		<table name="#magicLevel">76 78 80 82 84 85 87 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="9000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30504"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<set name="shield_ignore_procent" value="50"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<!--TODO: Поднимает в воздух.-->
+	</skill>
+    <!--
+		Pressure Punch - Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon.
+
+		LvL.1	description: Attacks target with 17266 Power added to P Atk, causing target to tumble toward you.	mp_consume: 149
+		LvL.2	description: Attacks target with 19164 Power added to P Atk, causing target to tumble toward you.	mp_consume: 150
+		LvL.3	description: Attacks target with 21530 Power added to P Atk, causing target to tumble toward you.	mp_consume: 151
+		LvL.4	description: Attacks target with 24475 Power added to P Atk, causing target to tumble toward you.	mp_consume: 151
+		LvL.5	description: Attacks target with 28150 Power added to P Atk, causing target to tumble toward you.	mp_consume: 152
+		LvL.6	description: Attacks target with 32755 Power added to P Atk, causing target to tumble toward you.	mp_consume: 153
+		LvL.7	description: Attacks target with 38563 Power added to P Atk, causing target to tumble toward you.	mp_consume: 155
+	
+		name: Pressure Punch
+		level: 1
+		mp_consume: 149
+		description: Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon.
+		icon_name: icon.skill30505
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30505" levels="7" name="Pressure Punch">
+		<table name="#mpConsume2">149 150 151 151 152 153 155</table>
+		<table name="#power">17266 19164 21530 24475 28150 32755 38563</table>
+		<table name="#magicLevel">87 89 91 93 95 97 99</table>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30505"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<!--TODO: Ударная волна швыряет цель к персонажу.-->
+	</skill>
+    <!--
+		Distant Kick - Attacks frontal target with 5164 Power added to P. Atk. and blows them away. Requires a fist weapon.
+
+		LvL.1	description: Attacks frontal target with 5164 Power added to P Atk.	mp_consume: 141
+		LvL.2	description: Attacks frontal target with 5518 Power added to P Atk.	mp_consume: 143
+		LvL.3	description: Attacks frontal target with 5890 Power added to P Atk.	mp_consume: 146
+		LvL.4	description: Attacks frontal target with 19693 Power added to P Atk.	mp_consume: 147
+		LvL.5	description: Attacks frontal target with 21581 Power added to P Atk.	mp_consume: 149
+		LvL.6	description: Attacks frontal target with 23953 Power added to P Atk.	mp_consume: 150
+		LvL.7	description: Attacks frontal target with 26909 Power added to P Atk.	mp_consume: 151
+		LvL.8	description: Attacks frontal target with 30589 Power added to P Atk.	mp_consume: 151
+		LvL.9	description: Attacks frontal target with 35181 Power added to P Atk.	mp_consume: 152
+		LvL.10	description: Attacks frontal target with 40936 Power added to P Atk.	mp_consume: 153
+		LvL.11	description: Attacks frontal target with 48195 Power added to P Atk.	mp_consume: 155
+	
+		name: Distant Kick
+		level: 1
+		mp_consume: 141
+		description: Attacks frontal target with 5164 Power added to P. Atk. and blows them away. Requires a fist weapon.
+		icon_name: icon.skill30506
+		hp_consume: 0
+		cast_range: 80
+		hit_time: 2
+		cool_time: 1
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30506" levels="11" name="Distant Kick">
+		<table name="#mpConsume2">141 143 146 147 149 150 151 151 152 153 155</table>
+		<table name="#power">5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48195</table>
+		<table name="#magicLevel">79 81 81 85 87 89 91 93 95 97 99</table>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="1000"/>
+		<set name="castRange" value="80"/>
+		<set name="hitTime" value="2000"/>
+		<set name="levelModifier" value="2"/>
+		<set name="icon" value="icon.skill30506"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="saveVs" value="CON"/>
+		<set name="trait" value="KNOCKDOWN"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="KnockDown">
+				<def name="fly_radius" value="200"/>	<!--TODO: Check.-->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Left Sidestep - Disables targeting and finds weakness to the enemy's left. Enemy is stunned for 5 sec. Requires a fist weapon.
+
+		LvL.1	mp_consume: 13
+		LvL.2	mp_consume: 14
+		LvL.3	mp_consume: 16
+		LvL.4	mp_consume: 18
+		LvL.5	mp_consume: 19
+		LvL.6	mp_consume: 21
+		LvL.7	mp_consume: 23
+		LvL.8	mp_consume: 24
+		LvL.9	mp_consume: 26
+		LvL.10	mp_consume: 27
+		LvL.11	mp_consume: 28
+		LvL.12	mp_consume: 28
+		LvL.13	mp_consume: 29
+		LvL.14	mp_consume: 29
+		LvL.15	mp_consume: 29
+		LvL.16	mp_consume: 30
+		LvL.17	mp_consume: 30
+		LvL.18	mp_consume: 30
+		LvL.19	mp_consume: 30
+		LvL.20	mp_consume: 30
+		LvL.21	mp_consume: 30
+	
+		name: Left Sidestep
+		level: 1
+		mp_consume: 13
+		description: Disables targeting and finds weakness to the enemy's left. Enemy is stunned for 5 sec. Requires a fist weapon.
+		icon_name: icon.skill30507
+		hp_consume: 0
+		cast_range: 300
+		hit_time: 0.1
+		cool_time: 0.3
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30507" levels="21" name="Left Sidestep">
+		<table name="#mpConsume2">13 14 16 18 19 21 23 24 26 27 28 28 29 29 29 30 30 30 30 30 30</table>
+		<table name="#magicLevel">40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="100"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30508"/>
+		<set name="castRange" value="300"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="60"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="trait" value="SHOCK"/>
+		<set name="saveVs" value="CON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="fly_radius" value="300"/>
+		<set name="fly_animation_speed" value="333"/>
+		<set name="fly_position_degree" value="90"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Dual Fist"/>
+				<target min_distance="150"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="RemoveTarget" time="0"/>
+			<effect name="Stun"/>
+		</for>
+	</skill>
+    <!--
+		Right Sidestep - Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon.
+
+		LvL.1	description: Decreases enemy's resistance to Fist Weapons by 10%.	mp_consume: 7
+		LvL.2	mp_consume: 9
+		LvL.3	mp_consume: 11
+		LvL.4	mp_consume: 14
+		LvL.5	mp_consume: 15
+		LvL.6	mp_consume: 17
+		LvL.7	mp_consume: 19
+		LvL.8	mp_consume: 20
+		LvL.9	mp_consume: 22
+		LvL.10	mp_consume: 23
+		LvL.11	mp_consume: 25
+		LvL.12	mp_consume: 26
+		LvL.13	mp_consume: 27
+		LvL.14	mp_consume: 28
+		LvL.15	mp_consume: 28
+		LvL.16	mp_consume: 29
+		LvL.17	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 29
+		LvL.18	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 29
+		LvL.19	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 30
+		LvL.20	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 30
+		LvL.21	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 30
+		LvL.22	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 30
+		LvL.23	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 30
+		LvL.24	description: Decreases enemy's resistance to Fist Weapons by 30%.	mp_consume: 31
+	
+		name: Right Sidestep
+		level: 1
+		mp_consume: 7
+		description: Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by 10%. Requires a fist weapon.
+		icon_name: icon.skill30508
+		hp_consume: 0
+		cast_range: 300
+		hit_time: 0.1
+		cool_time: 0.3
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30508" levels="24" name="Right Sidestep">
+		<table name="#mpConsume2">7 9 11 14 15 17 19 20 22 23 25 26 27 28 28 29 29 29 30 30 30 30 30 31</table>
+		<table name="#magicLevel">20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99</table>
+		<set name="reuseDelay" value="7000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="100"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30508"/>
+		<set name="castRange" value="300"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="activateRate" value="60"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="CON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="nextAction" value="attack"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="fly_radius" value="300"/>
+		<set name="fly_animation_speed" value="333"/>
+		<set name="fly_position_degree" value="270"/>
+		<cond msgId="113">
+			<and>
+				<using kind="Dual Fist"/>
+				<target min_distance="150"/>
+			</and>
+		</cond>
+		<for>
+			<effect name="RemoveTarget" time="0"/>
+			<effect name="Debuff">
+				<mul order="0x30" stat="fistWpnVuln" value="1.1"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Back Step - Disables targeting and retreats backwards, recovering 10% HP. Requires a Fist Weapon.
+
+		LvL.1	description: Disables targeting and retreats backwards, recovering 10% HP Requires a Fist Weapon.	mp_consume: 27
+		LvL.2	description: Disables targeting and retreats backwards, recovering 20% HP Requires a Fist Weapon.	mp_consume: 30
+	
+		name: Back Step
+		level: 1
+		mp_consume: 27
+		description: Disables targeting and retreats backwards, recovering 10% HP. Requires a Fist Weapon.
+		icon_name: icon.skill30509
+		hp_consume: 0
+		cast_range: 280
+		hit_time: 0.1
+		cool_time: 0
+		reuse_delay: 60
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 24
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30509" levels="4" name="Back Step">
+		<set name="icon" value="icon.skill30509"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Air Light - For 10 min., you're less bound by gravity and P. Atk. + 10%.
+
+		LvL.1	description: + 10%.	mp_consume: 20
+		LvL.2	description: + 15%, Knock Back / Knock Down / Pull / Aerial Yoke Resistance + 15.	mp_consume: 44
+		LvL.3	description: + 20%, Knock Back / Knock Down / Pull / Aerial Yoke Resistance + 20.	mp_consume: 45
+	
+		name: Air Light
+		level: 1
+		mp_consume: 20
+		description: For 10 min., you're less bound by gravity and P. Atk. + 10%.
+		icon_name: icon.skill30511
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30511" levels="3" name="Air Light">
+		<table name="#mpConsume2">20 44 45</table>
+		<table name="#magicLevel">40 85 95</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<table name="#pDef">1.1 1.15 1.2</table>
+		<table name="#resist">0 15 20</table>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30511"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pDef" value="#pDef"/>
+				<add order="0x40" stat="knockDownPower" value="#resist"/>
+				<add order="0x40" stat="knockBackPower" value="#resist"/>
+				<add order="0x40" stat="pullPower" value="#resist"/>
+				<add order="0x40" stat="airjokePower" value="#resist"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Distortion - For 60 sec., distorts space to attack from behind. Requires a fist weapon.
+
+	
+		name: Distortion
+		level: 1
+		mp_consume: 41
+		description: For 60 sec., distorts space to attack from behind. Requires a fist weapon.
+		icon_name: icon.skill30512
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 180
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30512" levels="1" name="Distortion">
+		<set name="icon" value="icon.skill30512"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Fluid Weave - For 3 sec., P. Skill Evasion + 50%, P. Evasion + 50, M. Evasion + 50. Requires a fist weapon.
+
+		LvL.1	description: , P Skill Evasion + 50%, P Evasion + 50, M Evasion + 50. Requires a fist weapon.	mp_consume: 13
+		LvL.2	description: , P Skill Evasion + 70%, P Evasion + 70, M Evasion + 70, and blocks a debuff attack once. Requires a fist weapon.	mp_consume: 29
+	
+		name: Fluid Weave
+		level: 1
+		mp_consume: 13
+		description: For 3 sec., P. Skill Evasion + 50%, P. Evasion + 50, M. Evasion + 50. Requires a fist weapon.
+		icon_name: icon.skill30514
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30514" levels="2" name="Fluid Weave">
+		<table name="#mpConsume2">13 29</table>
+		<table name="#magicLevel">40 85</table>
+		<table name="#abnormal_level">1 2</table>
+		<table name="#pSkillEvasion">1.5 1.7</table>
+		<table name="#pEvasRate">50 70</table>
+		<table name="#mEvasRate">50 70</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill30514"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pSkillEvasion" value="#pSkillEvasion"/>
+				<add order="0x40" stat="pEvasRate" value="#pEvasRate"/>
+				<add order="0x40" stat="mEvasRate" value="#mEvasRate"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Spallation - Creates a protective sphere that diffuses all ranged attacks for 30 sec. Damaged if attacked within the sphere. Requires a fist weapon.
+
+	
+		name: Spallation
+		level: 1
+		mp_consume: 31
+		description: Creates a protective sphere that diffuses all ranged attacks for 30 sec. Damaged if attacked within the sphere. Requires a fist weapon.
+		icon_name: icon.skill30515
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30515" levels="1" name="Spallation">
+		<set name="icon" value="icon.skill30515"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Gravity Barrier - Cancels all debuffs and becomes invincible against all debuffs and damage.
+
+	
+		name: Gravity Barrier
+		level: 1
+		mp_consume: 30
+		description: Cancels all debuffs and becomes invincible against all debuffs and damage.
+		icon_name: icon.skill30516
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30516" levels="1" name="Gravity Barrier">
+		<set name="icon" value="icon.skill30516"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Heavy Hand - Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon.
+
+		LvL.1	mp_consume: 73
+		LvL.2	mp_consume: 74
+		LvL.3	mp_consume: 75
+		LvL.4	mp_consume: 75
+		LvL.5	mp_consume: 75
+		LvL.6	mp_consume: 76
+		LvL.7	mp_consume: 76
+		LvL.8	mp_consume: 77
+	
+		name: Heavy Hand
+		level: 1
+		mp_consume: 73
+		description: Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon.
+		icon_name: icon.skill30517
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 60
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30517" levels="8" name="Heavy Hand">
+		<table name="#mpConsume2">73 74 75 75 75 76 76 77</table>
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#activateRate">50 52 54 56 58 60 62 65</table>	<!--TODO: Check.-->
+		<set name="reuseDelay" value="60000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="GREAT_GRAVITY"/>
+		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="root_physically"/>
+		<set name="icon" value="icon.skill30517"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="HOLD"/>
+		<set name="saveVs" value="CON"/>
+		<set name="levelModifier" value="2"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="Root"/>
+		</for>
+	</skill>
+    <!--
+		Reverse Weight - Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon.
+
+		LvL.1	description: Attacks nearby enemies with 19693 Power added to P Atk.	mp_consume: 1479
+		LvL.2	description: Attacks nearby enemies with 20582 Power added to P Atk.	mp_consume: 1487
+		LvL.3	description: Attacks nearby enemies with 22701 Power added to P Atk.	mp_consume: 1500
+		LvL.4	description: Attacks nearby enemies with 25350 Power added to P Atk.	mp_consume: 1510
+		LvL.5	description: Attacks nearby enemies with 28648 Power added to P Atk.	mp_consume: 1516
+		LvL.6	description: Attacks nearby enemies with 32757 Power added to P Atk.	mp_consume: 1523
+		LvL.7	description: Attacks nearby enemies with 37894 Power added to P Atk.	mp_consume: 1532
+		LvL.8	description: Attacks nearby enemies with 44352 Power added to P Atk.	mp_consume: 1544
+	
+		name: Reverse Weight
+		level: 1
+		mp_consume: 1479
+		description: Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon.
+		icon_name: icon.skill30518
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 6
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30518" levels="8" name="Reverse Weight">
+		<table name="#mpConsume2">1479 1487 1500 1510 1516 1523 1532 1544</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#activateRate">50 52 54 56 58 60 62 65</table>	<!--TODO: Check.-->
+		<table name="#power">19693 20582 22701 25350 28648 32757 37894 44352</table>
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="icon" value="icon.skill30518"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="power" value="#power"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="KNOCKDOWN"/>
+		<set name="saveVs" value="CON"/>
+		<set name="nextAction" value="attack"/>
+		<set name="levelModifier" value="2"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="KnockDown">
+				<def name="fly_radius" value="75"/>	<!--TODO: Check.-->
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Warped Space - Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon.
+
+	
+		name: Warped Space
+		level: 1
+		mp_consume: 772
+		description: Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon.
+		icon_name: icon.skill30519
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0.5
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30519" levels="1" name="Warped Space">
+		<set name="icon" value="icon.skill30519"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Steel Mind - For 30 sec., HP stays at 1. Speed + 50, P. Atk. + 15%, P. Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90. Normal attacks have normal damage x 5. When duration ends, 30% o
+
+		LvL.1	description: Speed + 50, P Atk. + 15%, P Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90.	mp_consume: 221
+		LvL.2	description: Speed + 70, P Atk. + 30%, P Critical Damage + 15%, Skill Critical Damage + 15%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90.	mp_consume: 232
+	
+		name: Steel Mind
+		level: 1
+		mp_consume: 221
+		description: For 30 sec., HP stays at 1. Speed + 50, P. Atk. + 15%, P. Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90. Normal attacks have normal damage x 5. When duration ends, 30% o
+		icon_name: icon.skill30520
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30520" levels="2" name="Steel Mind">
+		<set name="icon" value="icon.skill30520"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Damage Up - Inflicts normal damage x 4.
+
+	
+		name: Damage Up
+		level: 1
+		mp_consume: 1
+		description: Inflicts normal damage x 4.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30521" levels="1" name="Damage Up">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eminent Attack Movement - Speed increases every time you receive damage.
+
+	
+		name: Eminent Attack Movement
+		level: 1
+		mp_consume: 0
+		description: Speed increases every time you receive damage.
+		icon_name: icon.skill30522
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30522" levels="1" name="Eminent Attack Movement">
+		<set name="icon" value="icon.skill30522"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<triggers>
+			<trigger id="30523" level="1" type="RECEIVE_DAMAGE" chance="5" increasing="true">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
+	</skill>
+    <!--
+		Battle Dash - Speed + 10.
+
+		LvL.1	description: Speed + 10.
+		LvL.2	description: Speed + 20.
+		LvL.3	description: Speed + 50.
+	
+		name: Battle Dash
+		level: 1
+		mp_consume: 0
+		description: Speed + 10.
+		icon_name: icon.skill30523
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30523" levels="3" name="Battle Dash">
+		<table name="#runSpd">10 20 50</table>
+		<table name="#abnormal_level">1 2 3</table>
+		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill30523"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<set order="0x40" stat="runSpd" value="#runSpd"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Reliable Hit - Fixed damage.
+
+	
+		name: Reliable Hit
+		level: 1
+		mp_consume: 1
+		description: Fixed damage.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30524" levels="1" name="Reliable Hit">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Heavy Punch - Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate.
+
+	
+		name: Heavy Punch
+		level: 1
+		mp_consume: 0
+		description: Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate.
+		icon_name: icon.skill30526
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30526" levels="1" name="Heavy Punch">
+		<set name="icon" value="icon.skill30526"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<!--TODO: При увеличении силы удара урон от каждой атаки возрастает в 4 раза. Дополнительно восстанавливает 30% HP, если эффект Силы Воли заканчивается. Требуются Кастеты.-->
+		</for>
+	</skill>
+    <!--
+		Twisted Space - NPC - none
+
+	
+		name: Twisted Space - NPC
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill1042
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30527" levels="1" name="Twisted Space - NPC">
+		<set name="icon" value="icon.skill1042"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Spatial Trap - Trapped in some space, your battle strength is weakened.
+
+	
+		name: Spatial Trap
+		level: 1
+		mp_consume: 0
+		description: Trapped in some space, your battle strength is weakened.
+		icon_name: icon.skill30525
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30528" levels="1" name="Spatial Trap">
+		<set name="icon" value="icon.skill30525"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Crushing Air - Crushes the air to decrease target's battle strength. Requires a fist weapon.
+
+		LvL.1	mp_consume: 34
+		LvL.2	mp_consume: 35
+		LvL.3	mp_consume: 35
+		LvL.4	mp_consume: 36
+		LvL.5	mp_consume: 36
+		LvL.6	mp_consume: 37
+		LvL.7	mp_consume: 37
+		LvL.8	mp_consume: 37
+		LvL.9	mp_consume: 37
+		LvL.10	mp_consume: 38
+		LvL.11	mp_consume: 38
+		LvL.12	mp_consume: 38
+	
+		name: Crushing Air
+		level: 1
+		mp_consume: 34
+		description: Crushes the air to decrease target's battle strength. Requires a fist weapon.
+		icon_name: icon.skill30530
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 1
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30530" levels="12" name="Crushing Air">
+		<table name="#mpConsume2">34 35 35 36 36 37 37 37 37 38 38 38</table>
+		<table name="#magicLevel">76 78 80 82 84 86 88 90 92 94 96 98</table>
+		<table name="#activateRate">40 40 43 46 49 60 62 64 66 68 70 75</table>	<!--TODO: Check.-->
+		<set name="reuseDelay" value="30000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="abnormal_effect" value="OBLATE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="icon" value="icon.skill30530"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="CON"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="Immobilize"/>
+		</for>
+	</skill>
+    <!--
+		Eminent Fist Weapon Mastery - When equipped with a fist weapon, P. Atk. + 10% and + 4.
+
+		LvL.1	description: + 10% and + 4.
+		LvL.2	description: + 10% and + 13, and P Accuracy + 2.
+		LvL.3	description: + 10% and + 63, P Accuracy + 3, Critical Rate + 10.
+		LvL.4	description: + 10% and + 124, P Accuracy + 3, Critical Rate + 10.
+		LvL.5	description: + 10% and + 208, P Accuracy + 3, Critical Rate + 10.
+		LvL.6	description: + 10% and + 306, P Accuracy + 4, Critical Rate + 20, Critical Damage + 10%.
+		LvL.7	description: + 10% and + 471, P Accuracy + 4, Critical Rate + 20, Critical Damage + 10%.
+		LvL.8	description: + 45% and + 2156, P Accuracy + 8, Atk. Spd. + 10%, Critical Rate + 60, Critical Damage + 45%.
+		LvL.9	description: + 45% and + 2803, P Accuracy + 8, Atk. Spd. + 10%, Critical Rate + 60, Critical Damage + 45%.
+		LvL.10	description: + 45% and + 3342, P Accuracy + 8, Atk. Spd. + 10%, Critical Rate + 60, Critical Damage + 45%.
+		LvL.11	description: + 45% and + 4060, P Accuracy + 8, Atk. Spd. + 10%, Critical Rate + 60, Critical Damage + 45%.
+	
+		name: Eminent Fist Weapon Mastery
+		level: 1
+		mp_consume: 0
+		description: When equipped with a fist weapon, P. Atk. + 10% and + 4.
+		icon_name: icon.skill30524
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30540" levels="11" name="Eminent Fist Weapon Mastery">
+		<table name="#pAtk">1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.45 1.45 1.45 1.45</table>
+		<table name="#pAtkAdd">4 13 63 124 208 306 471 2156 2803 3342 4060</table>
+		<table name="#pAccCombat">0 2 3 3 3 4 4 8 8 8 8</table>
+		<table name="#pAtkSpd">1 1 1 1 1 1 1 1.1 1.1 1.1 1.1</table>
+		<table name="#basePCritRate">0 0 10 10 10 20 20 60 60 60 60</table>
+		<table name="#pCritDamage">1 1 1 1 1 1.1 1.1 1.45 1.45 1.45 1.45</table>
+		<set name="icon" value="icon.skill30524"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="#pAtk">
+				<using kind="Dual Fist"/>
+			</mul>
+			<add order="0x80" stat="pAtk" value="#pAtkAdd">
+				<using kind="Dual Fist"/>
+			</add>
+			<add order="0x40" stat="pAccCombat" value="#pAccCombat">
+				<using kind="Dual Fist"/>
+			</add>
+			<mul order="0x30" stat="pAtkSpd" value="#pAtkSpd">
+				<using kind="Dual Fist"/>
+			</mul>
+			<add order="0x40" stat="basePCritRate" value="#basePCritRate">
+				<using kind="Dual Fist"/>
+			</add>
+			<mul order="0x30" stat="pCritDamage" value="#pCritDamage">
+				<using kind="Dual Fist"/>
+			</mul>
+		</for>
+	</skill>
+    <!--
+		Eminent Light Armor Mastery - When equipped with light armor, P. Def. + 14.
+
+		LvL.1	description: + 14.
+		LvL.2	description: + 17, P Evasion + 2, and Received P/M Critical Rate - 15%.
+		LvL.3	description: + 34, P Evasion + 3, and Received P/M Critical Rate - 20%.
+		LvL.4	description: + 51, P Evasion + 3, and Received P/M Critical Rate - 20%.
+		LvL.5	description: + 69, P Evasion + 3, and Received P/M Critical Rate - 20%.
+		LvL.6	description: + 91, P Evasion + 4, and Received P/M Critical Rate - 25%.
+		LvL.7	description: + 99, P Evasion + 4, M Def. + 3%, M Def. + 276, and Received P/M Critical Rate - 25%.
+		LvL.8	description: + 1398, P Evasion + 8, M Def. + 5%, M Def. + 552, and Received P/M Critical Rate - 35%.
+		LvL.9	description: + 1520, P Evasion + 8, M Def. + 5%, M Def. + 575, and Received P/M Critical Rate - 35%.
+		LvL.10	description: + 1642, P Evasion + 8, M Def. + 5%, M Def. + 598, and Received P/M Critical Rate - 35%.
+		LvL.11	description: + 1807, P Evasion + 8, M Def. + 5%, M Def. + 630, and Received P/M Critical Rate - 35%.
+	
+		name: Eminent Light Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: When equipped with light armor, P. Def. + 14.
+		icon_name: icon.skill10254
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30541" levels="11" name="Eminent Light Armor Mastery">
+		<table name="#pDef">14 17 34 51 69 91 99 1398 1520 1642 1807</table>
+		<table name="#pEvasRate">0 2 3 3 3 4 4 8 8 8 8</table>
+		<table name="#mDef">0 0 0 0 0 0 276 552 575 598 630</table>
+		<table name="#critChanceRcpt">1 0.85 0.8 0.8 0.8 0.75 0.75 0.65 0.65 0.65 0.65</table>
+		<set name="icon" value="icon.skill10254"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pDef" value="#pDef">
+				<using armor="Light"/>
+			</add>
+			<add order="0x40" stat="pEvasRate" value="#pEvasRate">
+				<using armor="Light"/>
+			</add>
+			<add order="0x40" stat="mDef" value="#mDef">
+				<using armor="Light"/>
+			</add>
+			<mul order="0x30" stat="critChanceRcpt" value="#critChanceRcpt">
+				<using armor="Light"/>
+			</mul>
+		</for>
+	</skill>
+    <!--
+		Eminent Stability - Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2.
+
+		LvL.1	description: Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2.
+		LvL.2	description: Max HP + 196, HP Recovery Bonus + 4.5, MP Recovery Bonus + 1.8.
+		LvL.3	description: Max HP + 473, Max CP 231, HP Recovery Bonus + 6.5, MP Recovery Bonus + 2.4, CP Recovery Bonus + 2.4, Speed + 10.
+		LvL.4	description: Max HP + 5961, Max CP 291, HP Recovery Bonus + 9, MP Recovery Bonus + 3, CP Recovery Bonus + 3, Speed + 14.
+		LvL.5	description: Max HP + 6077, Max CP 347, HP Recovery Bonus + 10, MP Recovery Bonus + 4, CP Recovery Bonus + 4, Speed + 14.
+		LvL.6	description: Max HP + 6194, Max CP 404, HP Recovery Bonus + 11, MP Recovery Bonus + 5, CP Recovery Bonus + 5, Speed + 14.
+		LvL.7	description: Max HP + 6349, Max CP 481, HP Recovery Bonus + 12, MP Recovery Bonus + 6, CP Recovery Bonus + 6, Speed + 14.
+	
+		name: Eminent Stability
+		level: 1
+		mp_consume: 0
+		description: Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2.
+		icon_name: icon.skill11506
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30542" levels="7" name="Eminent Stability">
+		<table name="#maxHp">58 196 473 5961 6077 6194 6349</table>
+		<table name="#maxCp">0 0 231 291 347 404 481</table>
+		<table name="#regHp">2.5 4.5 6.5 9 10 11 12</table>
+		<table name="#regMp">1.2 1.8 2.4 3 4 5 6</table>
+		<table name="#regCp">0 0 2.4 3 4 5 6</table>
+		<table name="#runSpd">0 0 10 14 14 14 14</table>
+		<set name="icon" value="icon.skill11506"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxHp" value="#maxHp"/>
+			<add order="0x40" stat="maxCp" value="#maxCp"/>
+			<add order="0x40" stat="regHp" value="#regHp"/>
+			<add order="0x40" stat="regMp" value="#regMp"/>
+			<add order="0x40" stat="regCp" value="#regCp"/>
+			<add order="0x40" stat="runSpd" value="#runSpd"/>
+		</for>
+	</skill>
+    <!--
+		Eminent Attribute Resistance - Wind Resistance + 30.
+
+		LvL.1	description: Wind Resistance + 30.
+		LvL.2	description: Wind/Holy Resistance + 30.
+	
+		name: Eminent Attribute Resistance
+		level: 1
+		mp_consume: 0
+		description: Wind Resistance + 30.
+		icon_name: icon.skill11006
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: Increases the effect.
+	-->
+    <skill id="30543" levels="2" name="Eminent Attribute Resistance">
+		<set name="icon" value="icon.skill11006"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eminent Trait Resistance - Hold/Mental Resistance + 30.
+
+		LvL.1	description: Hold/Mental Resistance + 30.
+		LvL.2	description: Hold / Mental / Pull / Knock Back / Knock Down Resistance + 30.
+	
+		name: Eminent Trait Resistance
+		level: 1
+		mp_consume: 0
+		description: Hold/Mental Resistance + 30.
+		icon_name: icon.skill10005
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: Increases the effect.
+	-->
+    <skill id="30544" levels="2" name="Eminent Trait Resistance">
+		<set name="icon" value="icon.skill10005"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Eminent Ability - STR + 2.
+
+		LvL.1	description: STR + 2.
+		LvL.2	description: STR + 4. Your STR can reset cooldown or double skill effect duration.
+		LvL.3	description: STR + 14. Your STR can reset cooldown or double skill effect duration.
+	
+		name: Eminent Ability
+		level: 1
+		mp_consume: 0
+		description: STR + 2.
+		icon_name: icon.skill0430
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="30545" levels="3" name="Eminent Ability">
+		<table name="#STR">2 4 14</table>
+		<table name="#activateSkillMasterySTR">0 1 1</table>
+		<set name="icon" value="icon.skill0430"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="STR" value="#STR"/>
+			<set order="0x100" stat="activateSkillMasterySTR" value="#activateSkillMasterySTR"/>
+		</for>
+	</skill>
+</list>

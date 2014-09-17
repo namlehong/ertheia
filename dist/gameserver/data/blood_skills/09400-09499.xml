@@ -1,0 +1,2942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Squash Ring Pack - none
+
+	
+		name: Squash Ring Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9400" levels="1" name="Squash Ring Pack">
+		<set name="reuseDelay" value="2000"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Squash Earring Pack - none
+
+	
+		name: Squash Earring Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9401" levels="1" name="Squash Earring Pack">
+		<set name="reuseDelay" value="2000"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Squash Necklace Pack - none
+
+	
+		name: Squash Necklace Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9402" levels="1" name="Squash Necklace Pack">
+		<set name="reuseDelay" value="2000"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Pirate Elixir - For 2 hr., Vitality replenished if XP is gained through hunting. Buff remains even after death.
+
+	
+		name: Pirate Elixir
+		level: 1
+		mp_consume: 0
+		description: For 2 hr., Vitality replenished if XP is gained through hunting. Buff remains even after death.
+		icon_name: icon.etc_hot_spring_nectar_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 3600
+		is_magic: 4
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9403" levels="1" name="Pirate Elixir">
+		<set name="reuseDelay" value="3600000"/>
+		<set name="icon" value="icon.etc_hot_spring_nectar_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Wondrous Herb of Power - For 1 min. 30 sec., P. Atk. + 100%.
+
+	
+		name: Wondrous Herb of Power
+		level: 1
+		mp_consume: 0
+		description: For 1 min. 30 sec., P. Atk. + 100%.
+		icon_name: icon.etc_warrior_set_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.1
+		cool_time: 0
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9404" levels="1" name="Wondrous Herb of Power">
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.etc_warrior_set_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isHandler" value="true"/>
+		<set name="isHideUseMessage" value="true"/>
+		<for>
+			<effect time="90">
+				<mul order="0x30" stat="pAtk" value="2.0"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Wondrous Herb of Magic - For 1 min. 30 sec., M. Atk. + 400%.
+
+	
+		name: Wondrous Herb of Magic
+		level: 1
+		mp_consume: 0
+		description: For 1 min. 30 sec., M. Atk. + 400%.
+		icon_name: icon.etc_magic_set_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.1
+		cool_time: 0
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9405" levels="1" name="Wondrous Herb of Magic">
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.etc_magic_set_i00"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isHandler" value="true"/>
+		<set name="isHideUseMessage" value="true"/>
+		<for>
+			<effect time="90">
+				<mul order="0x30" stat="mAtk" value="5.0"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Ingredient and Hardener Pouch (R-grade) - none
+
+	
+		name: Ingredient and Hardener Pouch (R-grade)
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9406" levels="1" name="Ingredient and Hardener Pouch (R-grade)">
+		<set name="reuseDelay" value="2000"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Jang Heejin - Releases Agathion's seal.
+
+	
+		name: Release Agathion's Seal - Jang Heejin
+		level: 1
+		mp_consume: 0
+		description: Releases Agathion's seal.
+		icon_name: icon.etc_summon_aga_agit_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9407" levels="1" name="Release Agathion's Seal - Jang Heejin">
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Jang Hyuk - Releases Agathion's seal.
+
+	
+		name: Release Agathion's Seal - Jang Hyuk
+		level: 1
+		mp_consume: 0
+		description: Releases Agathion's seal.
+		icon_name: icon.etc_summon_aga_agit_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9408" levels="1" name="Release Agathion's Seal - Jang Hyuk">
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Kim Sooro - Releases Agathion's seal.
+
+	
+		name: Release Agathion's Seal - Kim Sooro
+		level: 1
+		mp_consume: 0
+		description: Releases Agathion's seal.
+		icon_name: icon.etc_summon_aga_agit_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9409" levels="1" name="Release Agathion's Seal - Kim Sooro">
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Park Jaebum - Releases Agathion's seal.
+
+	
+		name: Release Agathion's Seal - Park Jaebum
+		level: 1
+		mp_consume: 0
+		description: Releases Agathion's seal.
+		icon_name: icon.etc_summon_aga_agit_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9410" levels="1" name="Release Agathion's Seal - Park Jaebum">
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Kim Shinyoung - Releases Agathion's seal.
+
+	
+		name: Release Agathion's Seal - Kim Shinyoung
+		level: 1
+		mp_consume: 0
+		description: Releases Agathion's seal.
+		icon_name: icon.etc_summon_aga_agit_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9411" levels="1" name="Release Agathion's Seal - Kim Shinyoung">
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Jang Heejin - See Agathion's cute trick.
+
+	
+		name: Agathion Cute Trick - Jang Heejin
+		level: 1
+		mp_consume: 0
+		description: See Agathion's cute trick.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 18
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9412" levels="1" name="Agathion Cute Trick - Jang Heejin">
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Jang Hyuk - See Agathion's cute trick.
+
+	
+		name: Agathion Cute Trick - Jang Hyuk
+		level: 1
+		mp_consume: 0
+		description: See Agathion's cute trick.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3.8
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 18
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9413" levels="1" name="Agathion Cute Trick - Jang Hyuk">
+		<set name="hitTime" value="3799"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Kim Sooro - See Agathion's cute trick.
+
+	
+		name: Agathion Cute Trick - Kim Sooro
+		level: 1
+		mp_consume: 0
+		description: See Agathion's cute trick.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3.4
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 18
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9414" levels="1" name="Agathion Cute Trick - Kim Sooro">
+		<set name="hitTime" value="3400"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Park Jaebum - See Agathion's cute trick.
+
+	
+		name: Agathion Cute Trick - Park Jaebum
+		level: 1
+		mp_consume: 0
+		description: See Agathion's cute trick.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 6.2
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 18
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9415" levels="1" name="Agathion Cute Trick - Park Jaebum">
+		<set name="hitTime" value="6199"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Agathion Cute Trick - Kim Shinyoung - See Agathion's cute trick.
+
+	
+		name: Agathion Cute Trick - Kim Shinyoung
+		level: 1
+		mp_consume: 0
+		description: See Agathion's cute trick.
+		icon_name: icon.skill_agathion_cute
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3.7
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 18
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9416" levels="1" name="Agathion Cute Trick - Kim Shinyoung">
+		<set name="hitTime" value="3700"/>
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimension Keeper's Blue Box - none
+
+	
+		name: Dimension Keeper's Blue Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9417" levels="1" name="Dimension Keeper's Blue Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimension Keeper's Red Box - none
+
+	
+		name: Dimension Keeper's Red Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9418" levels="1" name="Dimension Keeper's Red Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimension Keeper's Golden Box - none
+
+	
+		name: Dimension Keeper's Golden Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9419" levels="1" name="Dimension Keeper's Golden Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimension Traveler's Blue Box - none
+
+	
+		name: Dimension Traveler's Blue Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9420" levels="1" name="Dimension Traveler's Blue Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimension Traveler's Red Box - none
+
+	
+		name: Dimension Traveler's Red Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9421" levels="1" name="Dimension Traveler's Red Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Dimension Traveler's Golden Box - none
+
+	
+		name: Dimension Traveler's Golden Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9422" levels="1" name="Dimension Traveler's Golden Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Campaign Reward Pouch - none
+
+	
+		name: Campaign Reward Pouch
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9423" levels="1" name="Campaign Reward Pouch">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Campaign Reward Pouch - none
+
+	
+		name: Campaign Reward Pouch
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9424" levels="1" name="Campaign Reward Pouch">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 2 Giant Dye Pack - none
+
+	
+		name: Lv. 2 Giant Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9425" levels="1" name="Lv. 2 Giant Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 2 Legendary Dye Pack - none
+
+	
+		name: Lv. 2 Legendary Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9426" levels="1" name="Lv. 2 Legendary Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 2 Ancient Dye Pack - none
+
+	
+		name: Lv. 2 Ancient Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9427" levels="1" name="Lv. 2 Ancient Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 3 Giant Dye Pack - none
+
+	
+		name: Lv. 3 Giant Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9428" levels="1" name="Lv. 3 Giant Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 3 Legendary Dye Pack - none
+
+	
+		name: Lv. 3 Legendary Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9429" levels="1" name="Lv. 3 Legendary Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 3 Ancient Dye Pack - none
+
+	
+		name: Lv. 3 Ancient Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9430" levels="1" name="Lv. 3 Ancient Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 4 Giant Dye Pack - none
+
+	
+		name: Lv. 4 Giant Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9431" levels="1" name="Lv. 4 Giant Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 4 Legendary Dye Pack - none
+
+	
+		name: Lv. 4 Legendary Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9432" levels="1" name="Lv. 4 Legendary Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 4 Ancient Dye Pack - none
+
+	
+		name: Lv. 4 Ancient Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9433" levels="1" name="Lv. 4 Ancient Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 5 Giant Dye Pack - none
+
+	
+		name: Lv. 5 Giant Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9434" levels="1" name="Lv. 5 Giant Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 5 Legendary Dye Pack - none
+
+	
+		name: Lv. 5 Legendary Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9435" levels="1" name="Lv. 5 Legendary Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lv. 5 Ancient Dye Pack - none
+
+	
+		name: Lv. 5 Ancient Dye Pack
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9436" levels="1" name="Lv. 5 Ancient Dye Pack">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll of Escape Pack: Village - none
+
+	
+		name: Scroll of Escape Pack: Village
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9437" levels="1" name="Scroll of Escape Pack: Village">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Letter Collector's Gift (9th Anniversary) - For 1 hr., Atk. Spd. + 10%, Casting Spd. + 10%, Max HP/MP + 10%, and Speed + 10.
+
+	
+		name: Letter Collector's Gift (9th Anniversary)
+		level: 1
+		mp_consume: 0
+		description: For 1 hr., Atk. Spd. + 10%, Casting Spd. + 10%, Max HP/MP + 10%, and Speed + 10.
+		icon_name: icon.shield_bread_i02
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 1800
+		is_magic: 4
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9438" levels="1" name="Letter Collector's Gift (9th Anniversary)">
+		<set name="reuseDelay" value="1800000"/>
+		<set name="icon" value="icon.shield_bread_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: 10,000 Individual Fame - Restores 10,000 Individual Fame.
+
+	
+		name: Scroll: 10,000 Individual Fame
+		level: 1
+		mp_consume: 0
+		description: Restores 10,000 Individual Fame.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9439" levels="1" name="Scroll: 10,000 Individual Fame">
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="200"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: 50,000 Individual Fame - Restores 50,000 Individual Fame.
+
+	
+		name: Scroll: 50,000 Individual Fame
+		level: 1
+		mp_consume: 0
+		description: Restores 50,000 Individual Fame.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9440" levels="1" name="Scroll: 50,000 Individual Fame">
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="200"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll: 100,000 Individual Fame - Restores 100,000 Individual Fame.
+
+	
+		name: Scroll: 100,000 Individual Fame
+		level: 1
+		mp_consume: 0
+		description: Restores 100,000 Individual Fame.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9441" levels="1" name="Scroll: 100,000 Individual Fame">
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="200"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Trowel - Gathers the Flame Flower.
+
+	
+		name: Trowel
+		level: 1
+		mp_consume: 0
+		description: Gathers the Flame Flower.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 6
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9442" levels="1" name="Trowel">
+		<set name="reuseDelay" value="6000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isHandler" value="true"/>
+		<cond msgId="113">
+			<target mobId="33735"/>
+		</cond>
+	</skill>
+    <!--
+		Empty Hot Spring Water Bottle - Gathers Water from the Hot Springs.
+
+	
+		name: Empty Hot Spring Water Bottle
+		level: 1
+		mp_consume: 0
+		description: Gathers Water from the Hot Springs.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 5
+		cool_time: 0
+		reuse_delay: 6
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9443" levels="1" name="Empty Hot Spring Water Bottle">
+		<set name="reuseDelay" value="6000"/>
+		<set name="hitTime" value="5000"/>
+		<set name="magicLevel" value="75"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+    <!--
+		Helping Seed - Summons the Helping Tree.
+
+	
+		name: Helping Seed
+		level: 1
+		mp_consume: 0
+		description: Summons the Helping Tree.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: 230
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9444" levels="1" name="Helping Seed">
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="npcId" value="27486"/>
+		<set name="lifeTime" value="90"/>
+		<set name="summonType" value="NPC"/>
+		<set name="isHandler" value="true"/>
+		<set name="is_abortable" value="false"/>
+	</skill>
+    <!--
+		Summoning Stone - Summons Lanya.
+
+	
+		name: Summoning Stone
+		level: 1
+		mp_consume: 0
+		description: Summons Lanya.
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9445" levels="1" name="Summoning Stone">
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="npcId" value="33696"/>
+		<set name="lifeTime" value="90"/>
+		<set name="summonType" value="NPC"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+    <!--
+		Scroll of Escape: Hot Springs - none
+
+	
+		name: Scroll of Escape: Hot Springs
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9446" levels="1" name="Scroll of Escape: Hot Springs">
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="34978"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="144812;-113531;-2560"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll of Escape: Forge of the Gods - none
+
+	
+		name: Scroll of Escape: Forge of the Gods
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9447" levels="1" name="Scroll of Escape: Forge of the Gods">
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="34978"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="169020;-116211;-2432"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll of Escape: Isle of Prayer - none
+
+	
+		name: Scroll of Escape: Isle of Prayer
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9448" levels="1" name="Scroll of Escape: Isle of Prayer">
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="34978"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="149475;195367;-3736"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll of Escape: Aden Battlefield - none
+
+	
+		name: Scroll of Escape: Aden Battlefield
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9449" levels="1" name="Scroll of Escape: Aden Battlefield">
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="34978"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="147448;15368;-1409"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll of Escape: Rune Battlefield - none
+
+	
+		name: Scroll of Escape: Rune Battlefield
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9450" levels="1" name="Scroll of Escape: Rune Battlefield">
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="34978"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="21944;-49112;-1326"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Item Skill: Warp - Stuns and removes the targeting of nearby enemies and teleport forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade).
+
+	
+		name: Item Skill: Warp
+		level: 1
+		mp_consume: 0
+		description: Stuns and removes the targeting of nearby enemies and teleport forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade).
+		icon_name: icon.wizard_danger_warppow
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 24
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9451" levels="1" name="Item Skill: Warp">
+		<set name="reuseDelay" value="24000"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.wizard_danger_warppow"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Item Skill: Dash - For 10 sec., Speed + 30, P. Evasion + 7, and HP Recovery Bonus + 7. Consumes 10 Gemstones (B-grade).
+
+	
+		name: Item Skill: Dash
+		level: 1
+		mp_consume: 0
+		description: For 10 sec., Speed + 30, P. Evasion + 7, and HP Recovery Bonus + 7. Consumes 10 Gemstones (B-grade).
+		icon_name: icon.rogue_shadow_dash
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 90
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9452" levels="1" name="Item Skill: Dash">
+		<set name="reuseDelay" value="90000"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.rogue_shadow_dash"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Item Skill: Undying Will - Invincible for 5 sec. Can only be used when HP is 20% or below. Consumes 20 Gemstones (B-grade).
+
+	
+		name: Item Skill: Undying Will
+		level: 1
+		mp_consume: 0
+		description: Invincible for 5 sec. Can only be used when HP is 20% or below. Consumes 20 Gemstones (B-grade).
+		icon_name: icon.race_orc_immortality
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 480
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9453" levels="1" name="Item Skill: Undying Will">
+		<set name="reuseDelay" value="480000"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.race_orc_immortality"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Item Skill: Silence - For 5 sec., cannot use P. Atk./M. Atk. Consumes 30 Gemstones (B-grade).
+
+	
+		name: Item Skill: Silence
+		level: 1
+		mp_consume: 0
+		description: For 5 sec., cannot use P. Atk./M. Atk. Consumes 30 Gemstones (B-grade).
+		icon_name: icon.song_of_silence
+		hp_consume: 0
+		cast_range: 1000
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 240
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9454" levels="1" name="Item Skill: Silence">
+		<set name="reuseDelay" value="240000"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.song_of_silence"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Item Skill: Disable Target - For 5 sec., enemy cannot target you. Consumes 10 Gemstones (B-grade).
+
+	
+		name: Item Skill: Disable Target
+		level: 1
+		mp_consume: 0
+		description: For 5 sec., enemy cannot target you. Consumes 10 Gemstones (B-grade).
+		icon_name: icon.notargetting
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.8
+		cool_time: 0
+		reuse_delay: 480
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9455" levels="1" name="Item Skill: Disable Target">
+		<set name="reuseDelay" value="28800"/>
+		<set name="hitTime" value="800"/>
+		<set name="icon" value="icon.notargetting"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Item Skill: Damage Reflect Resistance - For 5 sec., Damage Reflect Resistance + 10%.
+
+		LvL.1	description: , Damage Reflect Resistance + 10%.
+		LvL.2	description: , Damage Reflect Resistance + 15%.
+		LvL.3	description: , Damage Reflect Resistance + 20%.
+	
+		name: Item Skill: Damage Reflect Resistance
+		level: 1
+		mp_consume: 0
+		description: For 5 sec., Damage Reflect Resistance + 10%.
+		icon_name: icon.active_damage_shield1
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 4
+		cool_time: 0
+		reuse_delay: 4
+		is_magic: 1
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9456" levels="3" name="Item Skill: Damage Reflect Resistance">
+		<table name="#resistReflect">10 12 20</table>
+		<set name="reuseDelay" value="4000"/>
+		<set name="hitTime" value="400"/>
+		<set name="icon" value="icon.active_damage_shield1"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<add order="0x40" stat="resistRelectDam" value="#resistReflect"/>
+			</effect>
+		</for>
+	</skill>
+    <!--
+		Tauti's Wrath - Tauti's Wrath. Inflicts 27557 damage and Knocks Down nearby enemies.
+
+	
+		name: Tauti's Wrath
+		level: 1
+		mp_consume: 191
+		description: Tauti's Wrath. Inflicts 27557 damage and Knocks Down nearby enemies.
+		icon_name: icon.weapon_tauti_one_hand_axe_i01
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.3
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9459" levels="1" name="Tauti's Wrath">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.weapon_tauti_one_hand_axe_i01"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="27552"/>
+		<set name="elements" value="unholy"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+    <!--
+		Tauti's Authority - Tauti's Authority. Inflicts 371 damage and Knocks Down nearby enemies.
+
+	
+		name: Tauti's Authority
+		level: 1
+		mp_consume: 279
+		description: Tauti's Authority. Inflicts 371 damage and Knocks Down nearby enemies.
+		icon_name: icon.skill1181
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.3
+		reuse_delay: 15
+		is_magic: 1
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9460" levels="1" name="Tauti's Authority">
+		<set name="reuseDelay" value="15000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill1181"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Scroll of Escape: Guillotine Fortress - none
+
+	
+		name: Scroll of Escape: Guillotine Fortress
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 20
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9461" levels="1" name="Scroll of Escape: Guillotine Fortress">
+		<set name="hitTime" value="20000"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="34978"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="loc" value="54556;139159;-2591"/>	<!--TODO: Check.-->
+		<set name="isHandler" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Treasure Chest of the King of Aden - none
+
+	
+		name: Treasure Chest of the King of Aden
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9464" levels="1" name="Treasure Chest of the King of Aden">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Bundle - none
+
+	
+		name: Bundle
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9465" levels="1" name="Bundle">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Treasure Chest of the King of Rune - none
+
+	
+		name: Treasure Chest of the King of Rune
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9466" levels="1" name="Treasure Chest of the King of Rune">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Contaminated Draco Egg - none
+
+	
+		name: Contaminated Draco Egg
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9467" levels="1" name="Contaminated Draco Egg">
+		<set name="reuseDelay" value="10000"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Small Draco Egg - none
+
+	
+		name: Small Draco Egg
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9468" levels="1" name="Small Draco Egg">
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Large Draco Egg - none
+
+	
+		name: Large Draco Egg
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9469" levels="1" name="Large Draco Egg">
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Draco's Gift - none
+
+	
+		name: Draco's Gift
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9470" levels="1" name="Draco's Gift">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Draco's Shiny Gift - none
+
+	
+		name: Draco's Shiny Gift
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9471" levels="1" name="Draco's Shiny Gift">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Release Agathion's Seal - Flame Spirit - Releases Agathion's seal.
+
+	
+		name: Release Agathion's Seal - Flame Spirit
+		level: 1
+		mp_consume: 0
+		description: Releases Agathion's seal.
+		icon_name: icon.etc_summon_aga_agit_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9472" levels="1" name="Release Agathion's Seal - Flame Spirit">
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Deadman's Chest - none
+
+	
+		name: Deadman's Chest
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9473" levels="1" name="Deadman's Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Deadman's Chest - none
+
+	
+		name: Deadman's Chest
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9474" levels="1" name="Deadman's Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Engineer Zofan's Supply Box - none
+
+	
+		name: Engineer Zofan's Supply Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9475" levels="1" name="Engineer Zofan's Supply Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Rebel's Supply Box - none
+
+	
+		name: Rebel's Supply Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9476" levels="1" name="Rebel's Supply Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Aku's Supply Box - none
+
+	
+		name: Aku's Supply Box
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9477" levels="1" name="Aku's Supply Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Chat Prohibition Active - Blocks chat for a certain time.
+
+	
+		name: Chat Prohibition Active
+		level: 1
+		mp_consume: 1
+		description: Blocks chat for a certain time.
+		icon_name: icon.shutup
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 180
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9478" levels="1" name="Chat Prohibition Active">
+		<set name="reuseDelay" value="180000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.shutup"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Extra Pass - none
+
+	
+		name: Extra Pass
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9479" levels="1" name="Extra Pass">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Extra Pass - none
+
+	
+		name: Extra Pass
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9480" levels="1" name="Extra Pass">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Extra Pass - none
+
+	
+		name: Extra Pass
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9481" levels="1" name="Extra Pass">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Extra Pass - none
+
+	
+		name: Extra Pass
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9482" levels="1" name="Extra Pass">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Extra Pass - none
+
+	
+		name: Extra Pass
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9483" levels="1" name="Extra Pass">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Extra Pass - none
+
+	
+		name: Extra Pass
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9484" levels="1" name="Extra Pass">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Contaminated Draco Egg - Item Obtained - none
+
+	
+		name: Contaminated Draco Egg - Item Obtained
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9485" levels="1" name="Contaminated Draco Egg - Item Obtained">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Chat Prohibited - When standard attack results in a Critical, has a 10% chance of blocking the target's chat for a certain time.
+
+	
+		name: Chat Prohibited
+		level: 1
+		mp_consume: 0
+		description: When standard attack results in a Critical, has a 10% chance of blocking the target's chat for a certain time.
+		icon_name: icon.shutup
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9486" levels="1" name="Chat Prohibited">
+		<set name="icon" value="icon.shutup"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Angel Cat's Blessing - For 60 min., P. Atk. + 5%, M. Atk. + 20%, P. Def./M. Def. + 5%, Atk. Spd./Casting Spd. + 5%, Max HP/MP + 5%, and XP/SP gained through hunting + 30%.
+
+	
+		name: Angel Cat's Blessing
+		level: 1
+		mp_consume: 0
+		description: For 60 min., P. Atk. + 5%, M. Atk. + 20%, P. Def./M. Def. + 5%, Atk. Spd./Casting Spd. + 5%, Max HP/MP + 5%, and XP/SP gained through hunting + 30%.
+		icon_name: icon.skilltransform4
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 1800
+		is_magic: 4
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9487" levels="1" name="Angel Cat's Blessing">
+		<set name="reuseDelay" value="1800000"/>
+		<set name="icon" value="icon.skilltransform4"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Holiday Blessing Stage 1 - Holiday Blessing. For 10 min., P. Atk. + 1%, M. Atk. + 2%, and Vitality is replenished when XP is gained through hunting.
+
+	
+		name: Holiday Blessing Stage 1
+		level: 1
+		mp_consume: 0
+		description: Holiday Blessing. For 10 min., P. Atk. + 1%, M. Atk. + 2%, and Vitality is replenished when XP is gained through hunting.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9488" levels="1" name="Holiday Blessing Stage 1">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Holiday Blessing Stage 2 - Holiday Blessing. For 10 min., P. Atk. + 2%, M. Atk. + 4%, and Vitality is replenished when XP is gained through hunting.
+
+	
+		name: Holiday Blessing Stage 2
+		level: 1
+		mp_consume: 0
+		description: Holiday Blessing. For 10 min., P. Atk. + 2%, M. Atk. + 4%, and Vitality is replenished when XP is gained through hunting.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9489" levels="1" name="Holiday Blessing Stage 2">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Holiday Blessing Stage 3 - Holiday Blessing. For 10 min., P. Atk. + 3%, M. Atk. + 6%, and Vitality is replenished when XP is gained through hunting.
+
+	
+		name: Holiday Blessing Stage 3
+		level: 1
+		mp_consume: 0
+		description: Holiday Blessing. For 10 min., P. Atk. + 3%, M. Atk. + 6%, and Vitality is replenished when XP is gained through hunting.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9490" levels="1" name="Holiday Blessing Stage 3">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Holiday Blessing Stage 4 - Holiday Blessing. For 10 min., P. Atk. + 4%, M. Atk. + 8%, and Vitality is replenished when XP is gained through hunting.
+
+	
+		name: Holiday Blessing Stage 4
+		level: 1
+		mp_consume: 0
+		description: Holiday Blessing. For 10 min., P. Atk. + 4%, M. Atk. + 8%, and Vitality is replenished when XP is gained through hunting.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9491" levels="1" name="Holiday Blessing Stage 4">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Holiday Blessing Stage 5 - Holiday Blessing. For 10 min., P. Atk. + 5%, M. Atk. + 10%, and Vitality is replenished when XP is gained through hunting.
+
+	
+		name: Holiday Blessing Stage 5
+		level: 1
+		mp_consume: 0
+		description: Holiday Blessing. For 10 min., P. Atk. + 5%, M. Atk. + 10%, and Vitality is replenished when XP is gained through hunting.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9492" levels="1" name="Holiday Blessing Stage 5">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lingering Holiday Blessing Stage 1 - Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 1 again.
+
+	
+		name: Lingering Holiday Blessing Stage 1
+		level: 1
+		mp_consume: 0
+		description: Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 1 again.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9493" levels="1" name="Lingering Holiday Blessing Stage 1">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lingering Holiday Blessing Stage 2 - Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 2 again.
+
+	
+		name: Lingering Holiday Blessing Stage 2
+		level: 1
+		mp_consume: 0
+		description: Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 2 again.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9494" levels="1" name="Lingering Holiday Blessing Stage 2">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lingering Holiday Blessing Stage 3 - Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 3 again.
+
+	
+		name: Lingering Holiday Blessing Stage 3
+		level: 1
+		mp_consume: 0
+		description: Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 3 again.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9495" levels="1" name="Lingering Holiday Blessing Stage 3">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lingering Holiday Blessing Stage 4 - Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 4 again.
+
+	
+		name: Lingering Holiday Blessing Stage 4
+		level: 1
+		mp_consume: 0
+		description: Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 4 again.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9496" levels="1" name="Lingering Holiday Blessing Stage 4">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Lingering Holiday Blessing Stage 5 - Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 5 again.
+
+	
+		name: Lingering Holiday Blessing Stage 5
+		level: 1
+		mp_consume: 0
+		description: Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 5 again.
+		icon_name: BranchSys.icon.br_xmas_reward_buff_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9497" levels="1" name="Lingering Holiday Blessing Stage 5">
+		<set name="icon" value="BranchSys.icon.br_xmas_reward_buff_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Santa Girl's Cloak - P. Def. + 50, and M. Def. + 40.
+
+	
+		name: Santa Girl's Cloak
+		level: 1
+		mp_consume: 0
+		description: P. Def. + 50, and M. Def. + 40.
+		icon_name: icon.vesper_cloack_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9498" levels="1" name="Santa Girl's Cloak">
+		<set name="icon" value="icon.vesper_cloack_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+    <!--
+		Antharas Pocket - none
+
+	
+		name: Antharas Pocket
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill0000
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 5
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="9499" levels="1" name="Antharas Pocket">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

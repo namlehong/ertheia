@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="11100" levels="1" name="Elemental Destruction: Double Casting">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11101" levels="1" name="Elemental Destruction: Fire">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="11102" levels="1" name="Elemental Destruction: Water">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="11103" levels="1" name="Elemental Destruction: Wind">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="11104" levels="1" name="Elemental Destruction: Earth">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="11105" levels="1" name="Elemental Destruction: 4 Attributes">
+		<set name="icon" value="icon.skill11866"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff"/>
+		</for>
+	</skill>
+	<skill id="11106" levels="4" name="Elemental Mass Burst">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="fire_skill_id" value="11107"/>
+		<set name="water_skill_id" value="11108"/>
+		<set name="wind_skill_id" value="11109"/>
+		<set name="earth_skill_id" value="11110"/>
+		<set name="multi_elemental_skill_id" value="11111"/>
+	</skill>
+	<skill id="11107" levels="4" name="Elemental Mass Burst: Fire">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="fire"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11101"/>
+		</cond>
+	</skill>
+	<skill id="11108" levels="4" name="Elemental Mass Burst: Water">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="water"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11102"/>
+		</cond>
+	</skill>
+	<skill id="11109" levels="4" name="Elemental Mass Burst: Wind">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="wind"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11103"/>
+		</cond>
+	</skill>
+	<skill id="11110" levels="4" name="Elemental Mass Burst: Earth">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="earth"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11104"/>
+		</cond>
+	</skill>
+	<skill id="11111" levels="4" name="Elemental Mass Burst: 4 Attributes">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="elements" value="fire;water;wind;earth"/>
+		<set name="elementsPower" value="100"/>
+		<set name="reuse_skill_id" value="11106"/>
+		<cond msgId="113">
+			<target hasBuffId="11105"/>
+		</cond>
+	</skill>
+	<skill id="11112" levels="4" name="Elemental Speed Burst">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">517 562 591 622</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ELEMENTAL_DES"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11113" levels="4" name="Elemental Speed Burst: Fire">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11114" levels="4" name="Elemental Speed Burst: Water">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11115" levels="4" name="Elemental Speed Burst: Wind">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11116" levels="4" name="Elemental Speed Burst: Earth">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11117" levels="4" name="Elemental Speed Burst: 4 Attributes">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11118" levels="4" name="Elemental Power Burst">
+		<set name="icon" value="icon.skill11865"/>
+		<table name="#mpConsume2">137 154 166 179</table>
+		<table name="#power">470 511 537 565</table>
+		<table name="#magicLevel">99</table>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="hitTime" value="6008"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="power" value="#power"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="target" value="TARGET_ELEMENTAL_DES"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11119" levels="4" name="Elemental Power Burst: Fire">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11120" levels="4" name="Elemental Power Burst: Water">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11121" levels="4" name="lemental Power Burst: Wind">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11122" levels="4" name="Elemental Power Burst: Earth">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11123" levels="4" name="Elemental Power Burst: 4 Attributes">
+		<set name="icon" value="icon.skill11865"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11124" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#attr1">1.05 1.06 1.07 1.1</table>
+		<table name="#attr2">1.05 1.06 1.07 1.1</table>
+		<table name="#attr3">1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#attr1"/>
+			<mul order="0x30" stat="maxMp" value="#attr2"/>
+			<mul order="0x30" stat="regMp" value="#attr3"/>
+		</for>
+	</skill>
+	<skill id="11125" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#mAtk">1.1 1.12 1.15 1.2</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#mAtk"/>
+		</for>
+	</skill>
+	<skill id="11126" levels="3" name="Fire Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11127" levels="3" name="Dark Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11128" levels="3" name="Water Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11129" levels="3" name="Wind Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11130" levels="3" name="Soul Destruction">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11131" levels="3" name="Life Straw">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11132" levels="3" name="Lightning Shield">
+		<set name="icon" value="icon.skill1515"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11133" levels="3" name="Lightning Shield: Paralyze">
+		<set name="icon" value="icon.skill1515"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11142" levels="3" name="Damaged Area">
+		<table name="#abnormal_time">3 3 5</table>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="90"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11032"/>
+		<table name="#power">126 130 140 146</table>
+		<table name="#mpConsume2">61 63 65</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="800"/>
+		<set name="levelModifier" value="1"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="saveVs" value="CON"/>
+		<set name="target" value="TARGET_AURA"/>
+	</skill>
+	<skill id="11143" levels="3" name="Damaged Area">
+		<table name="#abnormal_time">3 3 5</table>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="magicLevel" value="95"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill11032"/>
+		<table name="#power">126 130 140 146</table>
+		<table name="#mpConsume2">61 63 65</table>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="castRange" value="800"/>
+		<set name="levelModifier" value="1"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="skillRadius" value="350"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="saveVs" value="CON"/>
+		<set name="target" value="TARGET_AURA"/>
+	</skill>
+	<skill id="11150" levels="1" name="Dark Curse">
+		<set name="icon" value="icon.skill11867"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="magicLevel" value="99"/>
+		<set name="castRange" value="1100"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="activateRate" value="60"/>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x30" stat="mDef" value="0.5"/>
+				<sub order="0x40" stat="defenceWater" value="50"/>
+				<sub order="0x40" stat="defenceFire" value="50"/>
+				<sub order="0x40" stat="defenceWind" value="50"/>
+				<sub order="0x40" stat="defenceEarth" value="50"/>
+				<sub order="0x40" stat="defenceHoly" value="50"/>
+				<sub order="0x40" stat="defenceUnholy" value="50"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="11151" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#attr1">1.05 1.06 1.07 1.1</table>
+		<table name="#attr2">1.05 1.06 1.07 1.1</table>
+		<table name="#attr3">1.05 1.05 1.05 1.05</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="#attr1"/>
+			<mul order="0x30" stat="maxMp" value="#attr2"/>
+			<mul order="0x30" stat="regMp" value="#attr3"/>
+		</for>
+	</skill>
+	<skill id="11152" levels="1" name="Sacrificial Soul">
+		<set name="icon" value="icon.skill1395"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11174" levels="1" name="Shadow Snare Zone">
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1469"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="activateRate" value="100"/>
+		<set name="skillRadius" value="280"/>
+		<for>
+			<effect name="ThrowHorizontal"/>
+		</for>
+	</skill>
+	<skill id="11175" levels="1" name="Shadow Snare Zone">
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill1469"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="activateRate" value="100"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="skillRadius" value="280"/>
+		<for>
+			<effect name="ThrowHorizontal"/>
+		</for>
+	</skill>
+	<skill id="11176" levels="4" name="Superior Wizardry">
+		<set name="icon" value="icon.skill0945"/>
+		<table name="#reuse">0.95 0.94 0.93 0.9</table>
+		<table name="#magicLevel">99</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mReuse" value="#reuse"/>
+			<mul order="0x30" stat="pReuse" value="#reuse"/>
+		</for>
+	</skill>
+	<skill id="11177" levels="4" name="Aqua Crash">
+		<set name="icon" value="icon.skill10879"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11178" levels="1" name="Aqua Crash - Speed Decrease">
+		<set name="icon" value="icon.skill11011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11179" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="89"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+	<skill id="11180" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="93"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+	<skill id="11181" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="97"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+	<skill id="11182" levels="1" name="Yoke Status">
+		<set name="abnormal_effect" value="AIRBIND"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="airbind"/>
+		<set name="magicLevel" value="95"/>
+		<set name="icon" value="icon.skill1042"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="activateRate" value="80"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="900"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="PARALYZE"/>	<!--TODO: Check.-->
+		<for>
+			<effect name="FlyUp"/>
+			<effect count="9" name="DamOverTime" value="100" time="1"/>
+		</for>
+	</skill>
+	<skill id="11183" levels="1" name="Superior Quick Recovery">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill11004"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="analog_skills" value="164"/>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<mul order="0x30" stat="mReuse" value="0.75"/>
+			<mul order="0x30" stat="pReuse" value="0.75"/>
+		</for>
+	</skill>
+	<skill id="11184" levels="1" name="Superior Arcane Lore">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.skill10044"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="analog_skills" value="481;1442;433"/>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="defenceFire" value="20"/>
+			<add order="0x40" stat="defenceWater" value="20"/>
+			<add order="0x40" stat="defenceWind" value="20"/>
+			<add order="0x40" stat="defenceEarth" value="20"/>
+			<mul order="0x30" stat="mDef" value="1.05"/>
+		</for>
+	</skill>
+	<skill id="11185" levels="1" name="Superior MP Boost">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0213"/>
+		<table name="#maxMp">313</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="analog_skills" value="1565;213"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#maxMp">333 354 374 395 415 435 456 476 497 517</table>
+		</enchant>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="maxMp" value="#maxMp"/>
+		</for>
+	</skill>
+	<skill id="11186" levels="1" name="Superior Fast MP Recovery">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill0229"/>
+		<table name="#regMp">3.6</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="analog_skills" value="229"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#regMp">3.8 4 4.2 4.4 4.7 4.9 5.1 5.3 5.5 5.7</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="regMp" value="#regMp"/>
+		</for>
+	</skill>
+	<skill id="11187" levels="1" name="Superior Clear Mind">
+		<table name="#magicLevel">85</table>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="icon" value="icon.skill11187"/>
+		<table name="#regMp">5.1</table>
+		<table name="#regMp2">6.5</table>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="analog_skills" value="1297"/>
+		<enchant type="1" levels="10" group="7" name="Power">
+			<table name="#regMp">6.1 7.1 8.1 9.1 10.1 11.1 12.1 13.1 14.1 15.1</table>
+			<table name="#regMp2">7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="regMp" value="#regMp">
+				<player resting="true"/>
+			</add>
+			<add order="0x40" stat="regMp" value="#regMp2">
+				<player running="true"/>
+			</add>
+		</for>
+	</skill>
+	<skill id="11188" levels="5" name="Frozen">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11189" levels="4" name="Aqua Crash">
+		<set name="icon" value="icon.skill10879"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11190" levels="1" name="Elemental Destruction: Fire">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11191" levels="1" name="Elemental Destruction: Water">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11192" levels="1" name="Elemental Destruction: Wind">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11193" levels="1" name="Elemental Destruction: Earth">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11194" levels="1" name="Elemental Destruction: Double Casting">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11195" levels="1" name="Aqua Crash - Freeze">
+		<set name="icon" value="icon.skill11011"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11196" levels="1" name="Frozen">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="11199" levels="1" name="Elemental Destruction: Fire">
+		<set name="icon" value="icon.skill11017"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>

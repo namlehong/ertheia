@@ -1,0 +1,3884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+    <!--
+		Doom Shield - Increases M. Def.
+
+	
+		name: Doom Shield
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def.
+		icon_name: icon.shield_doom_shield_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3700" levels="1" name="Doom Shield">
+		<!--
+		      Description: M. Def. is increased.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.shield_doom_shield_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mDef" value="1.04"/>
+		</for>
+	</skill>
+    <!--
+		Leather Armor of Doom - Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+
+	
+		name: Leather Armor of Doom
+		level: 1
+		mp_consume: 0
+		description: Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+		icon_name: icon.armor_t72_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3701" levels="1" name="Leather Armor of Doom">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., MP Recovery Rate, resistance to poison attacks, and Breath Gauge.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t72_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="breath" value="100"/>
+			<mul order="0x30" stat="pAtk" value="1.0135"/>
+			<mul order="0x30" stat="regMp" value="1.01"/>
+			<add order="0x40" stat="poisonResist" value="10"/>
+		</for>
+	</skill>
+    <!--
+		Doom Gloves - Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+
+	
+		name: Doom Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+		icon_name: icon.armor_t72_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3702" levels="1" name="Doom Gloves">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., MP Recovery Rate, resistance to poison attacks, and Breath Gauge.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t72_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="pAtk" value="1.00675"/>
+			<mul order="0x30" stat="regMp" value="1.005"/>
+			<add order="0x40" stat="poisonResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Doom Boots - Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+
+	
+		name: Doom Boots
+		level: 1
+		mp_consume: 0
+		description: Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+		icon_name: icon.armor_t72_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3703" levels="1" name="Doom Boots">
+		<!--
+		      Description: A Masterwork Item increases P. Atk., MP Recovery rate, resistance to poison attacks, and Breath Gauge.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t72_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="pAtk" value="1.00675"/>
+			<mul order="0x30" stat="regMp" value="1.005"/>
+			<add order="0x40" stat="poisonResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Doom Helmet - Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+
+	
+		name: Doom Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases lung capacity/P. Atk./MP Recovery Bonus, and increases Poison Resistance.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3704" levels="1" name="Doom Helmet">
+		<!--
+		      Description: A Masterwork Item that increases Max HP. and increased Breath Gauge.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="pAtk" value="1.00675"/>
+			<mul order="0x30" stat="regMp" value="1.005"/>
+			<add order="0x40" stat="poisonResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Doom Gloves - Increases Speed/lung capacity/MP Recovery Bonus.
+
+	
+		name: Doom Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Speed/lung capacity/MP Recovery Bonus.
+		icon_name: icon.armor_t73_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3705" levels="1" name="Doom Gloves">
+		<!--
+		      Description: A Masterwork Item that increases Speed, breath gauge and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t73_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Doom Boots - Increases Speed/lung capacity/MP Recovery Bonus.
+
+	
+		name: Doom Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Speed/lung capacity/MP Recovery Bonus.
+		icon_name: icon.armor_t73_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3706" levels="1" name="Doom Boots">
+		<!--
+		      Description: A Masterwork Item that increases Speed, breath gauge and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t73_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Tunic of Doom - Increases Speed/lung capacity/MP Recovery Bonus.
+
+	
+		name: Tunic of Doom
+		level: 1
+		mp_consume: 0
+		description: Increases Speed/lung capacity/MP Recovery Bonus.
+		icon_name: icon.armor_t73_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3707" levels="1" name="Tunic of Doom">
+		<!--
+		      Description: A Masterwork Item that increases Speed, breath gauge and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t73_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Stockings of Doom - Increases Speed/lung capacity/MP Recovery Bonus.
+
+	
+		name: Stockings of Doom
+		level: 1
+		mp_consume: 0
+		description: Increases Speed/lung capacity/MP Recovery Bonus.
+		icon_name: icon.armor_t73_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3708" levels="1" name="Stockings of Doom">
+		<!--
+		      Description: A Masterwork Item that increases Speed, breath gauge and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t73_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Doom Helmet - Increases Speed/lung capacity/MP Recovery Bonus.
+
+	
+		name: Doom Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Speed/lung capacity/MP Recovery Bonus.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3709" levels="1" name="Doom Helmet">
+		<!--
+		      Description: Speed/lung capacity/MP regeneration is increased.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<add order="0x40" stat="breath" value="50"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Breastplate - Increases Speed and HP Recovery Bonus.
+
+	
+		name: Blue Wolf Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases Speed and HP Recovery Bonus.
+		icon_name: icon.armor_t68_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3710" levels="1" name="Blue Wolf Breastplate">
+		<!--
+		      Description: A Masterwork Item that increases Speed and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t68_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Gaiters - Increases Speed and HP Recovery Bonus.
+
+	
+		name: Blue Wolf Gaiters
+		level: 1
+		mp_consume: 0
+		description: Increases Speed and HP Recovery Bonus.
+		icon_name: icon.armor_t68_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3711" levels="1" name="Blue Wolf Gaiters">
+		<!--
+		      Description: A Masterwork Item that increases Speed and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t68_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Boots - Increases Speed and HP Recovery Bonus.
+
+	
+		name: Blue Wolf Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Speed and HP Recovery Bonus.
+		icon_name: icon.armor_t68_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3712" levels="1" name="Blue Wolf Boots">
+		<!--
+		      Description: A Masterwork Item that increases Speed and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t68_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Gloves - Increases Speed and HP Recovery Bonus.
+
+	
+		name: Blue Wolf Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Speed and HP Recovery Bonus.
+		icon_name: icon.armor_t68_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3713" levels="1" name="Blue Wolf Gloves">
+		<!--
+		      Description: A Masterwork Item that increases Speed and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t68_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Helmet - Increases Speed and HP Recovery Bonus.
+
+	
+		name: Blue Wolf Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Speed and HP Recovery Bonus.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3714" levels="1" name="Blue Wolf Helmet">
+		<!--
+		      Description: A Masterwork Item that increases Speed and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Leather Armor - Increases P. Def. and Casting Spd.
+
+	
+		name: Blue Wolf Leather Armor
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def. and Casting Spd.
+		icon_name: icon.armor_t69_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3715" levels="1" name="Blue Wolf Leather Armor">
+		<!--
+		      Description: A Masterwork Item that increases P. Def. and Casting Spd.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t69_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.0263"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.03"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Boots - Increases P. Def.
+
+	
+		name: Blue Wolf Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def.
+		icon_name: icon.armor_t69_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3716" levels="1" name="Blue Wolf Boots">
+		<!--
+		      Description: A Masterwork Item that increases physical defense.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t69_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.01315"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Gloves - Increases P. Def.
+
+	
+		name: Blue Wolf Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def.
+		icon_name: icon.armor_t69_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3717" levels="1" name="Blue Wolf Gloves">
+		<!--
+		      Description: A Masterwork Item that increases P. Def.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t69_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.01315"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Helmet - Increases P. Def.
+
+	
+		name: Blue Wolf Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3718" levels="1" name="Blue Wolf Helmet">
+		<!--
+		      Description: A Masterwork Item that increases P. Def. and increases Casting Spd.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.01315"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Boots - Increases Max MP and MP Recovery Bonus.
+
+	
+		name: Blue Wolf Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP and MP Recovery Bonus.
+		icon_name: icon.armor_t70_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3719" levels="1" name="Blue Wolf Boots">
+		<!--
+		      Description: A Masterwork Item that increases Max MP and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t70_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="51"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Gloves - Increases Max MP and MP Recovery Bonus.
+
+	
+		name: Blue Wolf Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP and MP Recovery Bonus.
+		icon_name: icon.armor_t70_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3720" levels="1" name="Blue Wolf Gloves">
+		<!--
+		      Description: A Masterwork Item that increases Max MP and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t70_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="51"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Tunic - Increases Max MP and MP Recovery Bonus.
+
+	
+		name: Blue Wolf Tunic
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP and MP Recovery Bonus.
+		icon_name: icon.armor_t70_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3721" levels="1" name="Blue Wolf Tunic">
+		<!--
+		      Description: A Masterwork Item that increases Max MP and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t70_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="51"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Stockings - Increases Max MP and MP Recovery Bonus.
+
+	
+		name: Blue Wolf Stockings
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP and MP Recovery Bonus.
+		icon_name: icon.armor_t70_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3722" levels="1" name="Blue Wolf Stockings">
+		<!--
+		      Description: A Masterwork Item that increases Max MP and MP regeneration rate.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_t70_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" value="51"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Blue Wolf Helmet - Increases Max MP and MP Recovery Bonus.
+
+	
+		name: Blue Wolf Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP and MP Recovery Bonus.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3723" levels="1" name="Blue Wolf Helmet">
+		<!--
+		      Description: Increases maximum MP/MP regeneration.
+		-->
+		<set name="magicLevel" value="61"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="51"/>
+			<mul order="0x30" stat="regMp" value="1.01315"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Helmet - Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+
+	
+		name: Dark Crystal Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3724" levels="1" name="Dark Crystal Helmet">
+		<!--
+		      Description: A Masterwork Item that increases heal power and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="hpEff" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Breastplate - Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+
+	
+		name: Dark Crystal Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+		icon_name: icon.armor_t74_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3725" levels="1" name="Dark Crystal Breastplate">
+		<!--
+		      Description: A Masterwork Item that increases heal power and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t74_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="hpEff" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Gaiters - Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+
+	
+		name: Dark Crystal Gaiters
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+		icon_name: icon.armor_t74_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3726" levels="1" name="Dark Crystal Gaiters">
+		<!--
+		      Description: A Masterwork Item that increases heal power and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t74_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="hpEff" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Gloves - Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+
+	
+		name: Dark Crystal Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+		icon_name: icon.armor_t15_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3727" levels="1" name="Dark Crystal Gloves">
+		<!--
+		      Description: A Masterwork Item that increases heal power and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t15_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="hpEff" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Boots - Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+
+	
+		name: Dark Crystal Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance and the effect of HP recovery magic to oneself.
+		icon_name: icon.armor_t74_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3728" levels="1" name="Dark Crystal Boots">
+		<!--
+		      Description: A Masterwork Item that increases heal power and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t74_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="hpEff" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Shield - Increases M. Def.
+
+	
+		name: Dark Crystal Shield
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def.
+		icon_name: icon.shield_dark_crystal_shield_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3729" levels="1" name="Dark Crystal Shield">
+		<!--
+		      Description: M. Def. is increased.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.shield_dark_crystal_shield_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="magicResist" value="1.02"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Leather Armor - Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+
+	
+		name: Dark Crystal Leather Armor
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+		icon_name: icon.armor_t75_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3730" levels="1" name="Dark Crystal Leather Armor">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., Atk. Spd. and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t75_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Gloves - Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+
+	
+		name: Dark Crystal Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+		icon_name: icon.armor_t15_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3731" levels="1" name="Dark Crystal Gloves">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., Atk. Spd. and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t15_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Boots - Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+
+	
+		name: Dark Crystal Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+		icon_name: icon.armor_t75_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3732" levels="1" name="Dark Crystal Boots">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., Atk. Spd. and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t75_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Helmet - Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+
+	
+		name: Dark Crystal Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3733" levels="1" name="Dark Crystal Helmet">
+		<!--
+		      Description: Increases resistance to paralysis attacks and Atk. Spd./P. Atk.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Leggings - Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+
+	
+		name: Dark Crystal Leggings
+		level: 1
+		mp_consume: 0
+		description: Increases Paralysis Resistance, Atk. Spd., and P. Atk.
+		icon_name: icon.armor_t75_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3734" levels="1" name="Dark Crystal Leggings">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., Atk. Spd. and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t75_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="paralyzeResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Gloves - Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., and Speed.
+
+	
+		name: Dark Crystal Gloves
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., and Speed.
+		icon_name: icon.armor_t15_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3735" levels="1" name="Dark Crystal Gloves">
+		<!--
+		      Description: A Masterwork Item that increases P. Def. and Moving Speed and decreases Magic Cancel Rate and resistance to paralysis.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t15_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.015"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="runSpd" value="1.55"/>
+			<mul order="0x30" stat="concentration" value="0.92"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Robe - Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., Casting Spd. and Speed.
+
+	
+		name: Dark Crystal Robe
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., Casting Spd. and Speed.
+		icon_name: icon.armor_t76_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3736" levels="1" name="Dark Crystal Robe">
+		<!--
+		      Description: A Masterwork Item that increases P. Def., Casting Spd. and Speed, and decreases casting interrupt and paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t76_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.03"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.04"/>
+			<add order="0x40" stat="runSpd" value="3"/>
+			<mul order="0x30" stat="concentration" value="0.84"/>
+			<add order="0x40" stat="paralyzeResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Boots - Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., and Speed.
+
+	
+		name: Dark Crystal Boots
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., and Speed.
+		icon_name: icon.armor_t76_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3737" levels="1" name="Dark Crystal Boots">
+		<!--
+		      Description: A Masterwork Item that increases physical P. Def. and Moving Speed and decreases Magic Cancel Rate and resistance to paralysis.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t76_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.015"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="concentration" value="0.92"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Dark Crystal Helmet - Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., and Speed.
+
+	
+		name: Dark Crystal Helmet
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Paralysis Resistance, P. Def., and Speed.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3738" levels="1" name="Dark Crystal Helmet">
+		<!--
+		      Description: A Masterwork Item that increases P. Def., Casting Spd. and Speed, and decreases Casting Interrupt, and increases paralysis resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.015"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="concentration" value="0.92"/>
+			<add order="0x40" stat="paralyzeResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Gloves - Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+
+	
+		name: Tallum Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+		icon_name: icon.armor_t77_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3739" levels="1" name="Tallum Gloves">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., weight limit, poison resistance and bleed resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t77_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Boots - Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+
+	
+		name: Tallum Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+		icon_name: icon.armor_t77_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3740" levels="1" name="Tallum Boots">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., weight limit, poison resistance and bleed resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t77_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Plate Armor - Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+
+	
+		name: Tallum Plate Armor
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+		icon_name: icon.armor_t77_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3741" levels="1" name="Tallum Plate Armor">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., weight limit, poison resistance and bleed resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t77_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.03"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="2880"/>
+			<add order="0x40" stat="poisonResist" value="16"/>
+			<add order="0x40" stat="bleedResist" value="16"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Helmet - Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+
+	
+		name: Tallum Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, Atk. Spd., and weight limit.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3742" levels="1" name="Tallum Helmet">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., weight limit, poison resistance and bleed resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Leather Armor - Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+
+	
+		name: Tallum Leather Armor
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+		icon_name: icon.armor_t78_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3743" levels="1" name="Tallum Leather Armor">
+		<!--
+		      Description: A Masterwork Item that increases MP regeneration rate, Max MP, poison resistance and bleed resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t78_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="100"/>
+			<mul order="0x30" stat="regMp" value="1.04"/>
+			<add order="0x40" stat="poisonResist" value="16"/>
+			<add order="0x40" stat="bleedResist" value="16"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Gloves - Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+
+	
+		name: Tallum Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+		icon_name: icon.armor_t78_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3744" levels="1" name="Tallum Gloves">
+		<!--
+		      Description: A Masterwork Item that increases MP regeneration rate, Max MP, poison resistance and bleed resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t78_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="55"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Boots - Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+
+	
+		name: Tallum Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+		icon_name: icon.armor_t78_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3745" levels="1" name="Tallum Boots">
+		<!--
+		      Description: A Masterwork Item that increases MP regeneration rate, Max MP, poison resistance and bleed resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t78_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="55"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Helmet - Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+
+	
+		name: Tallum Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance, MP Recovery Rate, and Max MP.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3746" levels="1" name="Tallum Helmet">
+		<!--
+		      Description: Increases resistance to poison/bleed attacks and MP regeneration/maximum MP.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" value="55"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Gloves - Increases Poison/Bleed Resistance and M. Def.
+
+	
+		name: Tallum Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance and M. Def.
+		icon_name: icon.armor_t79_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3747" levels="1" name="Tallum Gloves">
+		<!--
+		      Description: A Masterwork Item that increases M. Def. and resistance to poison/bleed.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t79_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mDef" value="1.02"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Boots - Increases Poison/Bleed Resistance and M. Def.
+
+	
+		name: Tallum Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance and M. Def.
+		icon_name: icon.armor_t79_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3748" levels="1" name="Tallum Boots">
+		<!--
+		      Description: A Masterwork Item that increases M. Def. and resistance to poison/bleed.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t79_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mDef" value="1.02"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Tunic - Increases Casting Spd.
+
+	
+		name: Tallum Tunic
+		level: 1
+		mp_consume: 0
+		description: Increases Casting Spd.
+		icon_name: icon.armor_t79_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3749" levels="1" name="Tallum Tunic">
+		<!--
+		      Description: A Masterwork Item increases Casting Spd.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t79_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mDef" value="1.02"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Stockings - Increases Poison/Bleed Resistance and M. Def.
+
+	
+		name: Tallum Stockings
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance and M. Def.
+		icon_name: icon.armor_t79_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3750" levels="1" name="Tallum Stockings">
+		<!--
+		      Description: A Masterwork Item that increases M. Def. and resistance to poison/bleed.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_t79_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mDef" value="1.02"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Tallum Helmet - Increases Poison/Bleed Resistance and M. Def.
+
+	
+		name: Tallum Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Poison/Bleed Resistance and M. Def.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3751" levels="1" name="Tallum Helmet">
+		<!--
+		      Description: A Masterwork Item that increases Casting Spd., M. Def., poison resistance and bleeding resistance.
+		-->
+		<set name="magicLevel" value="64"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mDef" value="1.02"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.025"/>
+			<add order="0x40" stat="poisonResist" value="8"/>
+			<add order="0x40" stat="bleedResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Gauntlets - Increases Stun Resistance, P. Atk. and Accuracy.
+
+	
+		name: Majestic Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. and Accuracy.
+		icon_name: icon.armor_t83_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3752" levels="1" name="Majestic Gauntlets">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., Accuracy and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t83_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="pAccCombat" value="0.75"/>
+			<add order="0x40" stat="stunResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Circlet - Increases Stun Resistance, P. Atk. and Accuracy.
+
+	
+		name: Majestic Circlet
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. and Accuracy.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3753" levels="1" name="Majestic Circlet">
+		<!--
+		      Description: Increases resistance to shock attacks and P. Atk./accuracy.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="pAccCombat" value="0.75"/>
+			<add order="0x40" stat="stunResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Plate Armor - Increases Stun Resistance, P. Atk. and Accuracy.
+
+	
+		name: Majestic Plate Armor
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. and Accuracy.
+		icon_name: icon.armor_t83_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3754" levels="1" name="Majestic Plate Armor">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., Accuracy and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t83_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.02"/>
+			<add order="0x40" stat="pAccCombat" value="1.5"/>
+			<add order="0x40" stat="stunResist" value="8"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Boots - Increases Stun Resistance, P. Atk. and Accuracy.
+
+	
+		name: Majestic Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. and Accuracy.
+		icon_name: icon.armor_t83_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3755" levels="1" name="Majestic Boots">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., Accuracy and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t83_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="pAccCombat" value="0.75"/>
+			<add order="0x40" stat="stunResist" value="4"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Gauntlets - Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+
+	
+		name: Majestic Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+		icon_name: icon.armor_t84_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3756" levels="1" name="Majestic Gauntlets">
+		<!--
+		      Description: A Masterwork Item that increases Bow/Crossbow P. Atk. and Max MP, and decreases weight limit and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t84_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.02">
+				<or>
+					<using kind="Bow"/>
+					<using kind="Crossbow"/>
+				</or>
+			</mul>
+			<add order="0x60" stat="maxMp" value="60"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Leather Armor - Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+
+	
+		name: Majestic Leather Armor
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+		icon_name: icon.armor_t84_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3757" levels="1" name="Majestic Leather Armor">
+		<!--
+		      Description: A Masterwork Item that increases Bow/Crossbow P. Atk. and Max MP, and decreases weight limit and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t84_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.04">
+				<or>
+					<using kind="Bow"/>
+					<using kind="Crossbow"/>
+				</or>
+			</mul>
+			<add order="0x60" stat="maxMp" value="120"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="2880"/>
+			<add order="0x40" stat="stunResist" value="10"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Boots - Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+
+	
+		name: Majestic Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+		icon_name: icon.armor_t84_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3758" levels="1" name="Majestic Boots">
+		<!--
+		      Description: A Masterwork Item that increases Bow/Crossbow P. Atk. and Max MP, and decreases weight limit and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t84_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.02">
+				<or>
+					<using kind="Bow"/>
+					<using kind="Crossbow"/>
+				</or>
+			</mul>
+			<add order="0x60" stat="maxMp" value="60"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Circlet - Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+
+	
+		name: Majestic Circlet
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, P. Atk. of bows and crossbows, Max MP, and weight limit.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3759" levels="1" name="Majestic Circlet">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk. for bows and crossbows, increases Max MP, Weight Limit, and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.02">
+				<or>
+					<using kind="Bow"/>
+					<using kind="Crossbow"/>
+				</or>
+			</mul>
+			<add order="0x60" stat="maxMp" value="60"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Gauntlets - Increases Stun Resistance, Max MP, and MP Recovery Bonus.
+
+	
+		name: Majestic Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, Max MP, and MP Recovery Bonus.
+		icon_name: icon.armor_t85_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3760" levels="1" name="Majestic Gauntlets">
+		<!--
+		      Description: A Masterwork Item that increases Maximum MP, MP Recovery Rate, and resistance to stun.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t85_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="60"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.0375"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Robe - Increases Stun Resistance, Max MP, MP Recovery Bonus and Casting Spd.
+
+	
+		name: Majestic Robe
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, Max MP, MP Recovery Bonus and Casting Spd.
+		icon_name: icon.armor_t85_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3761" levels="1" name="Majestic Robe">
+		<!--
+		      Description: A Masterwork Item that increases Max MP, Casting Spd., MP regeneration rate and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t85_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="120"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.075"/>
+			<mul order="0x30" stat="regMp" value="1.04"/>
+			<add order="0x40" stat="stunResist" value="10"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Boots - Increases Stun Resistance, Max MP and MP recovery Bouns.
+
+	
+		name: Majestic Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, Max MP and MP recovery Bouns.
+		icon_name: icon.armor_t85_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3762" levels="1" name="Majestic Boots">
+		<!--
+		      Description: A Masterwork Item that increases Maximum MP, MP Recovery Rate, and resistance to stun.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t85_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="60"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.0375"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Majestic Circlet - Increases Stun Resistance, Max MP, and MP Recovery Bonus.
+
+	
+		name: Majestic Circlet
+		level: 1
+		mp_consume: 0
+		description: Increases Stun Resistance, Max MP, and MP Recovery Bonus.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3763" levels="1" name="Majestic Circlet">
+		<!--
+		      Description: A Masterwork Item that increases Max MP, Casting Spd., MP regeneration rate, and stun resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="maxMp" value="60"/>
+			<mul order="0x30" stat="mAtkSpd" value="1.0375"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Armor of Nightmare - Increases Sleep/Hold Resistance and P. Atk.
+
+	
+		name: Armor of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and P. Atk.
+		icon_name: icon.armor_t80_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3764" levels="1" name="Armor of Nightmare">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t80_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.02"/>
+			<add order="0x40" stat="rootResist" value="14"/>
+			<add order="0x40" stat="sleepResist" value="14"/>
+			<add order="0x40" stat="reflectDam" value="1.025"/>
+			<add order="0x40" stat="reflectBowDam" value="1.025"/>
+			<add order="0x40" stat="reflectPSkillDam" value="1.025"/>
+			<add order="0x40" stat="reflectMSkillDam" value="1.025"/>
+		</for>
+	</skill>
+    <!--
+		Gauntlets of Nightmare - Increases Sleep/Hold Resistance and P. Atk.
+
+	
+		name: Gauntlets of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and P. Atk.
+		icon_name: icon.armor_t80_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3765" levels="1" name="Gauntlets of Nightmare">
+		<!--
+		      Description: Increases M. Def, resistance to sleep/hold attacks, and P. Atk.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t80_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="reflectDam" value="1.0125"/>
+			<add order="0x40" stat="reflectBowDam" value="1.0125"/>
+			<add order="0x40" stat="reflectPSkillDam" value="1.0125"/>
+			<add order="0x40" stat="reflectMSkillDam" value="1.0125"/>
+		</for>
+	</skill>
+    <!--
+		Boots of Nightmare - Increases Sleep/Hold Resistance and P. Atk.
+
+	
+		name: Boots of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and P. Atk.
+		icon_name: icon.armor_t80_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3766" levels="1" name="Boots of Nightmare">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t80_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="reflectDam" value="1.0125"/>
+			<add order="0x40" stat="reflectBowDam" value="1.0125"/>
+			<add order="0x40" stat="reflectPSkillDam" value="1.0125"/>
+			<add order="0x40" stat="reflectMSkillDam" value="1.0125"/>
+		</for>
+	</skill>
+    <!--
+		Helm of Nightmare - Increases Sleep/Hold Resistance and P. Atk.
+
+	
+		name: Helm of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and P. Atk.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3767" levels="1" name="Helm of Nightmare">
+		<!--
+		      Description: Increases resistance to sleep/hold attacks and physical P. Atk.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="reflectDam" value="1.0125"/>
+			<add order="0x40" stat="reflectBowDam" value="1.0125"/>
+			<add order="0x40" stat="reflectPSkillDam" value="1.0125"/>
+			<add order="0x40" stat="reflectMSkillDam" value="1.0125"/>
+		</for>
+	</skill>
+    <!--
+		Leather Armor of Nightmare - Increases Sleep/Hold Resistance and M. Def. Restores HP by using some of the damage inflicted upon the enemy with a certain probability.
+
+	
+		name: Leather Armor of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and M. Def. Restores HP by using some of the damage inflicted upon the enemy with a certain probability.
+		icon_name: icon.armor_t81_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3768" levels="1" name="Leather Armor of Nightmare">
+		<!--
+		      Description: Increases resistance to sleep/hold attacks and resistance to magic. A portion of the damage inflicted on the enemy is used to recover one's own HP. Excludes damage caused by skills and long-range attacks.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t81_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.02"/>
+			<add order="0x40" stat="rootResist" value="14"/>
+			<add order="0x40" stat="sleepResist" value="14"/>
+			<add order="0x40" stat="absorbDam" value="1.5"/>
+			<add order="0x40" stat="absorbBowDam" value="1.5"/>
+			<add order="0x40" stat="absorbPSkillDam" value="1.5"/>
+			<add order="0x40" stat="absorbMSkillDam" value="1.5"/>
+		</for>
+	</skill>
+    <!--
+		Gauntlets of Nightmare - Increases Sleep/Hold Resistance and M. Def.
+
+	
+		name: Gauntlets of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and M. Def.
+		icon_name: icon.armor_t81_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3769" levels="1" name="Gauntlets of Nightmare">
+		<!--
+		      Description: A Masterwork Item that increases P. Atk., sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t81_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.01"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="absorbDam" value="0.75"/>
+			<add order="0x40" stat="absorbBowDam" value="0.75"/>
+			<add order="0x40" stat="absorbPSkillDam" value="0.75"/>
+			<add order="0x40" stat="absorbMSkillDam" value="0.75"/>
+		</for>
+	</skill>
+    <!--
+		Boots of Nightmare - Increases Sleep/Hold Resistance and M. Def.
+
+	
+		name: Boots of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and M. Def.
+		icon_name: icon.armor_t81_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3770" levels="1" name="Boots of Nightmare">
+		<!--
+		      Description: Increases resistance to sleep/hold attacks and resistance to magic.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t81_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.01"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="absorbDam" value="0.75"/>
+			<add order="0x40" stat="absorbBowDam" value="0.75"/>
+			<add order="0x40" stat="absorbPSkillDam" value="0.75"/>
+			<add order="0x40" stat="absorbMSkillDam" value="0.75"/>
+		</for>
+	</skill>
+    <!--
+		Gauntlets of Nightmare - Increases Sleep/Hold Resistance and MP regeneration/M. Atk.
+
+	
+		name: Gauntlets of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and MP regeneration/M. Atk.
+		icon_name: icon.armor_t82_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3771" levels="1" name="Gauntlets of Nightmare">
+		<!--
+		      Description: A Masterwork Item that increases MP regeneration rate, M. Atk., sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t82_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.01"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Robe of Nightmare - Increases Sleep/Hold Resistance and MP regeneration/M. Atk.
+
+	
+		name: Robe of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and MP regeneration/M. Atk.
+		icon_name: icon.armor_t82_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3772" levels="1" name="Robe of Nightmare">
+		<!--
+		      Description: A Masterwork Item that increases MP regeneration rate, M. Atk., sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t82_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.02"/>
+			<mul order="0x30" stat="regMp" value="1.04"/>
+			<add order="0x40" stat="rootResist" value="14"/>
+			<add order="0x40" stat="sleepResist" value="14"/>
+		</for>
+	</skill>
+    <!--
+		Boots of Nightmare - Increases Sleep/Hold Resistance and MP regeneration/M. Atk.
+
+	
+		name: Boots of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance and MP regeneration/M. Atk.
+		icon_name: icon.armor_t82_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3773" levels="1" name="Boots of Nightmare">
+		<!--
+		      Description: A Masterwork Item that increases MP regeneration rate, M. Atk., sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.armor_t82_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.01"/>
+			<mul order="0x30" stat="regMp" value="1.02"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Shield of Nightmare - Increases M. Def.
+
+	
+		name: Shield of Nightmare
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def.
+		icon_name: icon.shield_shield_of_nightmare_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3774" levels="1" name="Shield of Nightmare">
+		<!--
+		      Description: M. Def. is increased.
+		-->
+		<set name="magicLevel" value="67"/>
+		<set name="icon" value="icon.shield_shield_of_nightmare_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="magicResist" value="1.02"/>
+		</for>
+	</skill>
+    <!--
+		Draconic Leather Gloves - Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+
+	
+		name: Draconic Leather Gloves
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+		icon_name: icon.armor_t89_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3775" levels="1" name="Draconic Leather Gloves">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., P. Atk. and Max MP, and decreases weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t89_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x60" stat="maxMp" value="72"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+		</for>
+	</skill>
+    <!--
+		Draconic Leather Boots - Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+
+	
+		name: Draconic Leather Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+		icon_name: icon.armor_t89_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3776" levels="1" name="Draconic Leather Boots">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., P. Atk. and Max MP, and decreases weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t89_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x60" stat="maxMp" value="72"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+		</for>
+	</skill>
+    <!--
+		Draconic Leather Armor - Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+
+	
+		name: Draconic Leather Armor
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+		icon_name: icon.armor_t89_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3777" levels="1" name="Draconic Leather Armor">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., P. Atk. and Max MP, and decreases weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t89_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.02"/>
+			<mul order="0x30" stat="pAtk" value="1.02"/>
+			<add order="0x60" stat="maxMp" value="144"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="2880"/>
+		</for>
+	</skill>
+    <!--
+		Draconic Leather Helmet - Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+
+	
+		name: Draconic Leather Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Max MP, Atk. Spd., P. Atk., and weight limit.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3778" levels="1" name="Draconic Leather Helmet">
+		<!--
+		      Description: A Masterwork Item that increases Atk. Spd., P. Atk. and Max MP, and decreases weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<mul order="0x30" stat="pAtk" value="1.01"/>
+			<add order="0x60" stat="maxMp" value="72"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+		</for>
+	</skill>
+    <!--
+		Major Arcana Gloves - Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+
+	
+		name: Major Arcana Gloves
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+		icon_name: icon.armor_t90_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3779" levels="1" name="Major Arcana Gloves">
+		<!--
+		      Description: A Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, stun resistance and weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t90_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.025"/>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="concentration" value="0.9"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+		</for>
+	</skill>
+    <!--
+		Major Arcana Robe - Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+
+	
+		name: Major Arcana Robe
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+		icon_name: icon.armor_t90_ul_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3780" levels="1" name="Major Arcana Robe">
+		<!--
+		      Description: A Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, stun resistance and weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t90_ul_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.035"/>
+			<add order="0x40" stat="runSpd" value="3.5"/>
+			<mul order="0x30" stat="concentration" value="0.8"/>
+			<add order="0x40" stat="stunResist" value="10"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="2880"/>
+		</for>
+	</skill>
+    <!--
+		Major Arcana Boots - Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+
+	
+		name: Major Arcana Boots
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+		icon_name: icon.armor_t90_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3781" levels="1" name="Major Arcana Boots">
+		<!--
+		      Description: A Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, stun resistance and weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t90_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.025"/>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="concentration" value="0.9"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+		</for>
+	</skill>
+    <!--
+		Major Arcana Circlet - Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+
+	
+		name: Major Arcana Circlet
+		level: 1
+		mp_consume: 0
+		description: Decreases magic cancel rate, and increases Stun Resistance, M. Atk., Speed and weight limit.
+		icon_name: icon.armor_leather_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3782" levels="1" name="Major Arcana Circlet">
+		<!--
+		      Description: A Masterwork Item that increases M. Atk. and Speed, and decreases casting interrupt, stun resistance and weight limit.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_leather_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtk" value="1.025"/>
+			<add order="0x40" stat="runSpd" value="1.75"/>
+			<mul order="0x30" stat="concentration" value="0.9"/>
+			<add order="0x40" stat="stunResist" value="5"/>
+			<add order="0x40" stat="maxNoPenaltyLoad" value="1440"/>
+		</for>
+	</skill>
+    <!--
+		Imperial Crusader Gaiters - Increases Sleep/Hold Resistance, Max HP, and P. Def.
+
+	
+		name: Imperial Crusader Gaiters
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance, Max HP, and P. Def.
+		icon_name: icon.armor_t88_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3783" levels="1" name="Imperial Crusader Gaiters">
+		<!--
+		      Description: A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t88_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.02"/>
+			<add order="0x60" stat="maxHp" value="111"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Imperial Crusader Gauntlets - Increases Sleep/Hold Resistance, Max HP, and P. Def.
+
+	
+		name: Imperial Crusader Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance, Max HP, and P. Def.
+		icon_name: icon.armor_t88_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3784" levels="1" name="Imperial Crusader Gauntlets">
+		<!--
+		      Description: A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t88_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.02"/>
+			<add order="0x60" stat="maxHp" value="111"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Imperial Crusader Boots - Increases Sleep/Hold Resistance, Max HP, and P. Def.
+
+	
+		name: Imperial Crusader Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance, Max HP, and P. Def.
+		icon_name: icon.armor_t88_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3785" levels="1" name="Imperial Crusader Boots">
+		<!--
+		      Description: A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t88_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.02"/>
+			<add order="0x60" stat="maxHp" value="111"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Imperial Crusader Shield - Increases M. Def.
+
+	
+		name: Imperial Crusader Shield
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def.
+		icon_name: icon.shield_imperial_crusader_shield_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3786" levels="1" name="Imperial Crusader Shield">
+		<!--
+		      Description: M. Def. is increased.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.shield_imperial_crusader_shield_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="magicResist" value="1.02"/>
+		</for>
+	</skill>
+    <!--
+		Imperial Crusader Helmet - Increases Sleep/Hold Resistance, Max HP, and P. Def.
+
+	
+		name: Imperial Crusader Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance, Max HP, and P. Def.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3787" levels="1" name="Imperial Crusader Helmet">
+		<!--
+		      Description: A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.02"/>
+			<add order="0x60" stat="maxHp" value="111"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Imperial Crusader Breastplate - Increases Sleep/Hold Resistance, Max HP, and P. Def.
+
+	
+		name: Imperial Crusader Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases Sleep/Hold Resistance, Max HP, and P. Def.
+		icon_name: icon.armor_t88_u_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3788" levels="1" name="Imperial Crusader Breastplate">
+		<!--
+		      Description: A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance.
+		-->
+		<set name="magicLevel" value="75"/>
+		<set name="icon" value="icon.armor_t88_u_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.02"/>
+			<add order="0x60" stat="maxHp" value="111"/>
+			<add order="0x40" stat="sleepResist" value="7"/>
+			<add order="0x40" stat="rootResist" value="7"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Breastplate - Increases P. Def., Max HP, and Dark Resistance.
+
+	
+		name: Dynasty Breastplate
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def., Max HP, and Dark Resistance.
+		icon_name: icon.armor_t91_uf_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3789" levels="1" name="Dynasty Breastplate">
+		<!--
+		      Description: A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t91_uf_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.012"/>
+			<add order="0x60" stat="maxHp" value="104"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Gaiters - Increases P. Def., Max HP, and Dark Resistance.
+
+	
+		name: Dynasty Gaiters
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def., Max HP, and Dark Resistance.
+		icon_name: icon.armor_t91_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3790" levels="1" name="Dynasty Gaiters">
+		<!--
+		      Description: A Masterwork Item that increases P. Def./Max HP/resistance to darkness.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t91_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.012"/>
+			<add order="0x60" stat="maxHp" value="104"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Gauntlets - Increases P. Def., Max HP, and Dark Resistance.
+
+	
+		name: Dynasty Gauntlets
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def., Max HP, and Dark Resistance.
+		icon_name: icon.armor_t91_g_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3791" levels="1" name="Dynasty Gauntlets">
+		<!--
+		      Description: A Masterwork Item that increases P. Def./Max HP/resistance to darkness.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t91_g_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.012"/>
+			<add order="0x60" stat="maxHp" value="82"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Boots - Increases P. Def., Max HP, and Dark Resistance.
+
+	
+		name: Dynasty Boots
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def., Max HP, and Dark Resistance.
+		icon_name: icon.armor_t91_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3792" levels="1" name="Dynasty Boots">
+		<!--
+		      Description: A Masterwork Item that increases P. Def./Max HP/resistance to darkness.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t91_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="pDef" value="1.012"/>
+			<add order="0x60" stat="maxHp" value="82"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Shield - Increases M. Def.
+
+	
+		name: Dynasty Shield
+		level: 1
+		mp_consume: 0
+		description: Increases M. Def.
+		icon_name: icon.shield_dynasty_shield_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3793" levels="1" name="Dynasty Shield">
+		<!--
+		      Description: M. Def. is increased.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.shield_dynasty_shield_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="magicResist" value="5"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Helmet - Increases P. Def., Max HP, and Dark Resistance.
+
+	
+		name: Dynasty Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases P. Def., Max HP, and Dark Resistance.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3794" levels="1" name="Dynasty Helmet">
+		<!--
+		      Description: A Masterwork Item that increases P. Def./Max HP/resistance to darkness.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x60" stat="pDef" value="19"/>
+			<add order="0x60" stat="maxHp" value="123"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Leather Armor - Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+
+	
+		name: Dynasty Leather Armor
+		level: 1
+		mp_consume: 0
+		description: Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+		icon_name: icon.armor_t92_ud_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3795" levels="1" name="Dynasty Leather Armor">
+		<!--
+		      Description: A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t92_ud_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAccCombat" value="0.43"/>
+			<add order="0x40" stat="pEvasRate" value="0.43"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.02"/>
+			<add order="0x60" stat="maxHp" value="104"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Leather Leggings - Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+
+	
+		name: Dynasty Leather Leggings
+		level: 1
+		mp_consume: 0
+		description: Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+		icon_name: icon.armor_t92_l_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3796" levels="1" name="Dynasty Leather Leggings">
+		<!--
+		      Description: A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t92_l_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAccCombat" value="0.43"/>
+			<add order="0x40" stat="pEvasRate" value="0.43"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.02"/>
+			<add order="0x60" stat="maxHp" value="104"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Leather Boots - Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+
+	
+		name: Dynasty Leather Boots
+		level: 1
+		mp_consume: 0
+		description: Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+		icon_name: icon.armor_t92_b_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3797" levels="1" name="Dynasty Leather Boots">
+		<!--
+		      Description: A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t92_b_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAccCombat" value="0.43"/>
+			<add order="0x40" stat="pEvasRate" value="0.43"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<add order="0x60" stat="maxHp" value="104"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Leather Helmet - Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+
+	
+		name: Dynasty Leather Helmet
+		level: 1
+		mp_consume: 0
+		description: Increases Accuracy/Evasion/Max HP/Atk. Spd./Dark Resistance.
+		icon_name: icon.armor_helmet_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3798" levels="1" name="Dynasty Leather Helmet">
+		<!--
+		      Description: A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_helmet_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pAccCombat" value="0.43"/>
+			<add order="0x40" stat="pEvasRate" value="0.43"/>
+			<mul order="0x30" stat="pAtkSpd" value="1.01"/>
+			<add order="0x60" stat="maxHp" value="104"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+    <!--
+		Dynasty Tunic - Increases Casting Spd.
+
+	
+		name: Dynasty Tunic
+		level: 1
+		mp_consume: 0
+		description: Increases Casting Spd.
+		icon_name: icon.armor_t93_uw_i00
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 16
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
+		desc_add1: none
+		desc_add2: none
+	-->
+    <skill id="3799" levels="1" name="Dynasty Tunic">
+		<!--
+		      Description: A Masterwork Item that has increased Casting Spd. effect.
+		-->
+		<set name="magicLevel" value="80"/>
+		<set name="icon" value="icon.armor_t93_uw_i00"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mAtkSpd" value="1.02"/>
+			<add order="0x60" stat="maxMp" value="64"/>
+			<add order="0x40" stat="defenceUnholy" value="1"/>
+		</for>
+	</skill>
+</list>

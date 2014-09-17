@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="30600" levels="1" name="에디셔널 히트">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30601" levels="1" name="에디셔널 히트">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	<skill id="30602" levels="1" name="렝커 오라">
+		<set name="reuseDelay" value="5000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.icon_lender"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect time="-1">
+				<triggers>
+					<trigger id="30603" level="1" type="ADD"/>
+					<trigger id="30603" level="1" type="IDLE"/>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30603" levels="1" name="렝커 포스">
+		<set name="reuseDelay" value="5000"/>
+		<set name="abnormal_time" value="6"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="synergy_ranger"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MUSIC"/>
+		<set name="icon" value="icon.icon_lender_01"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="isHideStartMessage" value="true"/>
+		<set name="isHideUseMessage" value="true"/>
+		<set name="skillRadius" value="200"/>
+		<set name="useSS" value="false"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect name="AwakenForce" hide_time="true">
+				<add order="0x40" stat="pCritRate" value="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30604" levels="1" name="블록 랭커 포스">
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.icon_lender"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+	</skill>
+	<skill id="30605" levels="1" name="시어 오라">
+		<set name="reuseDelay" value="5000"/>
+		<set name="magicLevel" value="85"/>
+		<set name="icon" value="icon.icon_Er_wizard"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect time="-1">
+				<triggers>
+					<trigger id="30606" level="1" type="ADD"/>
+					<trigger id="30606" level="1" type="IDLE"/>
+				</triggers>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30606" levels="1" name="시어 포스">
+		<set name="reuseDelay" value="5000"/>
+		<set name="abnormal_time" value="6"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="synergy_ruler"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MUSIC"/>
+		<set name="icon" value="icon.icon_Er_wizard_01"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="isHideStartMessage" value="true"/>
+		<set name="isHideUseMessage" value="true"/>
+		<set name="skillRadius" value="200"/>
+		<set name="useSS" value="false"/>
+		<set name="cancelable" value="false"/>
+		<for>
+			<effect name="AwakenForce" hide_time="true">
+				<add order="0x40" stat="mCritRate" value="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30607" levels="1" name="블록 시어 포스">
+		<set name="icon" value="icon.icon_Er_wizard"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+</list>
