@@ -739,7 +739,7 @@
     <!--
 		Superior Polearm Mastery - When a spear is equipped, P. Atk. + 2 % and additional P. Atk. + 583.
 
-		LvL.1	description: + 2 % and additional P Atk. + 583.
+		LvL.1	description: + 2% and additional P Atk. + 583.
 		LvL.2	description: + 3% and additional P Atk. + 678.
 	
 		name: Superior Polearm Mastery
@@ -764,6 +764,7 @@
     <skill id="10315" levels="2" name="Superior Polearm Mastery">
 		<table name="#magicLevel">85 90</table>
 		<table name="#pAtkMul">1.02 1.03</table>
+		<table name="#pAtk">583 678</table>
 		<set name="icon" value="icon.skill11836"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -773,7 +774,7 @@
 			<mul order="0x40" stat="pAtk" value="#pAtkMul">
 				<using kind="Pole"/>
 			</mul>
-			<add order="0x40" stat="poleTargetCount" value="1">
+			<add order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Pole"/>
 			</add>
 		</for>
