@@ -51,7 +51,8 @@ public class SkillBuilder {
 		
 		String[] _keywords = {
 				"name", "level", "mp_consume", "description", "icon_name", "hp_consume", 
-				"cast_range", "hit_time", "cool_time", "reuse_delay", "is_magic"
+				"cast_range", "hit_time", "cool_time", "reuse_delay", "is_magic", "oper_type",
+				"element_guess", "cast_style_guess", "skill_spec_type_guess", "base_elemental_skill_id"
 				};
 		
 		public L2SkillInfo(ResultSet rset){
@@ -78,7 +79,6 @@ public class SkillBuilder {
 				
 				if(!rset.getBoolean("is_enchant") || level < 100)
 				{
-//					_levels++;
 					_lastLevel = Math.max(_lastLevel, level);
 					_levelHolder.put(level, levelInfo);
 				}
@@ -122,17 +122,17 @@ public class SkillBuilder {
 				.addAttribute("name", "icon")
 				.addAttribute("value", _baseLevel.get("icon_name"));
 				
-				_element.addElement("set")
-				.addAttribute("name", "reuseDelay")
-				.addAttribute("value", _baseLevel.get("reuse_delay"));
-				
-				_element.addElement("set")
-				.addAttribute("name", "coolTime")
-				.addAttribute("value", _baseLevel.get("cool_time"));
-				
-				_element.addElement("set")
-				.addAttribute("name", "hitTime")
-				.addAttribute("value", _baseLevel.get("hit_time"));
+//				_element.addElement("set")
+//				.addAttribute("name", "reuseDelay")
+//				.addAttribute("value", _baseLevel.get("reuse_delay"));
+//				
+//				_element.addElement("set")
+//				.addAttribute("name", "coolTime")
+//				.addAttribute("value", _baseLevel.get("cool_time"));
+//				
+//				_element.addElement("set")
+//				.addAttribute("name", "hitTime")
+//				.addAttribute("value", _baseLevel.get("hit_time"));
 				
 				_element.addElement("set")
 				.addAttribute("name", "target")
@@ -184,7 +184,8 @@ public class SkillBuilder {
 					for(String keyword: _keywords){
 						if(keyword.equalsIgnoreCase("level"))
 							continue;
-						if((map.equals(_baseLevel) && !lastLevel.get(keyword).equalsIgnoreCase(map.get(keyword))) || !_baseLevel.get(keyword).equalsIgnoreCase(map.get(keyword)))
+						if((map.equals(_baseLevel) && !lastLevel.get(keyword).equalsIgnoreCase(map.get(keyword))) 
+								|| !_baseLevel.get(keyword).equalsIgnoreCase(map.get(keyword)))
 							changedKeyword.add(keyword);
 					}
 					
@@ -237,6 +238,10 @@ public class SkillBuilder {
 							sb.append(String.format("\t%s: %s", keyword, enchantMap.get(keyword)));
 					}
 				}
+			}
+			
+			for(String keyword: _keywords){
+				sb.append(String.format("\n\t\t%s: %s", keyword, _baseLevel.get(keyword)));
 			}
 			
 			if(sb.length() > 0){

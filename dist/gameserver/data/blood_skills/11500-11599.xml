@@ -4,6 +4,22 @@
     <!--
 		Heavy Hit - Inflicts a powerful blow on target.
 
+		name: Heavy Hit
+		level: 1
+		mp_consume: 71
+		description: Inflicts a powerful blow on target.
+		icon_name: icon.skill10317
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1
+		cool_time: 0.3
+		reuse_delay: 10
+		is_magic: 1
+		oper_type: 1
+		element_guess: 6
+		cast_style_guess: 0
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
 	-->
     <skill id="11500" levels="1" name="Heavy Hit">
 		<set name="reuseDelay" value="10000"/>
@@ -35,33 +51,56 @@
 		LvL.108	description: + 28%, Atk.
 		LvL.109	description: + 29%, Atk.
 		LvL.110	description: + 30%, Atk.
+		name: Superior Dual Weapon Mastery
+		level: 1
+		mp_consume: 0
+		description: When a dualsword/blunt is equipped, P. Atk. + 20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, Speed + 13, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, Your STR can reset
+		icon_name: icon.skill10252
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11501" levels="1" name="Superior Dual Weapon Mastery">
-		<table name="#pAtk">235</table>
-		<table name="#mAtk">104</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#pAtk">1.2</table>
+		<set name="analog_skills" value="832;257;141;144;474;925;330;331;626"/>
 		<set name="icon" value="icon.skill10252"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="saveVs" value="STR"/>
-		<set name="analog_skills" value="832;257;141;144;474;925;330;331;626"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">250 266 281 297 312 327 343 358 374 389</table>
-			<table name="#mAtk">111 118 124 131 138 145 152 158 165 172</table>
+			<table name="#pAtk">1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
-			<add order="0x40" stat="pAtk" value="#pAtk">
-				<using kind="Dual Sword, Dual Blunt"/>
-			</add>
-			<add order="0x40" stat="mAtk" value="#mAtk">
-				<using kind="Dual Sword, Dual Blunt"/>
-			</add>
-			<mul order="0x30" stat="pAtkSpd" value="1.1">
+			<mul order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Dual Sword, Dual Blunt"/>
 			</mul>
+			<mul order="0x30" stat="pAtkSpd" value="1.2">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pCritRate" value="1.15">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pvePhysDmgBonus" value="1.2">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</mul>
+			<add order="0x40" stat="pAccCombat" value="4">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</add>
+			<add order="0x40" stat="runSpd" value="13">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</add>
 			<set order="0x100" stat="activateSkillMasterySTR" value="1"/>
 		</for>
 	</skill>
@@ -81,6 +120,22 @@
 		LvL.108	description: + 1273 when equipped with a Robe.
 		LvL.109	description: + 1303 when equipped with a Robe.
 		LvL.110	description: + 1335 when equipped with a Robe.
+		name: Superior Robe Mastery
+		level: 1
+		mp_consume: 0
+		description: Max HP + 4636 and P. Def. + 1033 when equipped with a Robe.
+		icon_name: icon.skill11252
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11502" levels="1" name="Superior Robe Mastery">
 		<table name="#pDef">91</table>
@@ -120,6 +175,22 @@
 		LvL.108	description: + 1280 and MP Recovery Bonus + 25% when equipped with Light Armor.
 		LvL.109	description: + 1310 and MP Recovery Bonus + 25% when equipped with Light Armor.
 		LvL.110	description: + 1344 and MP Recovery Bonus + 25% when equipped with Light Armor.
+		name: Superior Light Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: Max HP + 4636, P. Def. + 1040 and MP Recovery Bonus + 25% when equipped with Light Armor.
+		icon_name: icon.skill10254
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11503" levels="1" name="Superior Light Armor Mastery">
 		<table name="#pDef">73</table>
@@ -162,6 +233,22 @@
 		LvL.108	description: + 1474 when equipped with Heavy Armor.
 		LvL.109	description: + 1509 when equipped with Heavy Armor.
 		LvL.110	description: + 1545 when equipped with Heavy Armor.
+		name: Superior Heavy Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: Max HP + 4636 and P. Def. + 1194 when equipped with Heavy Armor.
+		icon_name: icon.skill10002
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11504" levels="1" name="Superior Heavy Armor Mastery">
 		<table name="#pDef">73</table>
@@ -201,6 +288,22 @@
 		LvL.108	description: + 202 and Magic Attack Resistance + 35%.
 		LvL.109	description: + 210 and Magic Attack Resistance + 35%.
 		LvL.110	description: + 218 and Magic Attack Resistance + 35%.
+		name: Superior Anti Magic
+		level: 1
+		mp_consume: 0
+		description: M. Def. + 139 and Magic Attack Resistance + 35%. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily.
+		icon_name: icon.skill10004
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11505" levels="1" name="Superior Anti Magic">
 		<table name="#mDef">139</table>
@@ -241,6 +344,22 @@
 		LvL.108	description: STR + 2 and Max HP + 557. Enchant Power: Increases the effect.
 		LvL.109	description: STR + 2 and Max HP + 581. Enchant Power: Increases the effect.
 		LvL.110	description: STR + 2 and Max HP + 605. Enchant Power: Increases the effect.
+		name: Superior HP Boost
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and Max HP + 366.
+		icon_name: icon.skill0211
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11506" levels="1" name="Superior HP Boost">
 		<table name="#hp">366</table>
@@ -276,6 +395,22 @@
 		LvL.108	description: STR + 2 and Max MP + 476. Enchant Power: Increases the effect.
 		LvL.109	description: STR + 2 and Max MP + 497. Enchant Power: Increases the effect.
 		LvL.110	description: STR + 2 and Max MP + 517. Enchant Power: Increases the effect.
+		name: Superior MP Boost
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and Max MP + 313.
+		icon_name: icon.skill0213
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11507" levels="1" name="Superior MP Boost">
 		<table name="#mp">313</table>
@@ -307,6 +442,22 @@
 
 		Enchant Route: 1 - 	Rushes the enemy to inflict Stun for 1 second. Can be used while a sword, dualsword, blunt, or dual blunt weapon is equipped. Enchant Attack: Inflicts attack damage.
 
+		name: Assault Rush
+		level: 1
+		mp_consume: 38
+		description: Rushes the enemy to inflict Stun for 1 second. Requires a sword, dualsword or dual blunt to be equipped.
+		icon_name: icon.skill11508
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0.8
+		cool_time: 0.2
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
 	-->
     <skill id="11508" levels="6" name="Assault Rush">
 		<table name="#magicLevel">85 87 90 93 96 99</table>
@@ -475,88 +626,104 @@
 		LvL.908	description: Attacks target with 27456 Power added to P Atk.	reuse_delay: 5.3
 		LvL.909	description: Attacks target with 28040 Power added to P Atk.	reuse_delay: 5.1
 		LvL.910	description: Attacks target with 28624 Power added to P Atk.	reuse_delay: 4.9
+		name: Crippling Attack
+		level: 1
+		mp_consume: 46
+		description: Attacks target with 14608 Power added to P. Atk. For 20 seconds, P. Def. and M. Def. - 40% and P. Evasion - 15. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical.
+		icon_name: icon.skill11509
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0.91
+		cool_time: 0.3
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11509" levels="8" name="Crippling Attack">
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#reuseDelay">7000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="910"/>
-		<set name="abnormal_time" value="20"/>
-		<set name="abnormal_level" value="5"/>
-		<set name="abnormal_type" value="ultimate_debuff"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11509"/>
-		<table name="#power">8268 8556 9134 9711 10288 10866 11443 12020</table>
-		<table name="#powerPvP">0</table>
-		<table name="#mpConsume2">46 47 48 50 52 53 55 57</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">46 47 48 50 52 53 55 57</table>
+		<table name="#power">14608 15192 16360 17528 18696 19864 21032 22200</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">7000</table>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="ultimate_debuff"/>
+		<set name="activateRate" value="70"/>
+		<set name="coolTime" value="300"/>
+		<set name="criticalRate" value="15"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="910"/>
+		<set name="icon" value="icon.skill11509"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="activateRate" value="70"/>
-		<set name="nextAction" value="attack"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="criticalRate" value="15"/>
-		<set name="overHit" value="true"/>
+		<set name="target" value="TARGET_ONE"/>
 		<set name="analog_skills" value="939;1244;105;1245;1484;102;1209;1564;122;98"/>
 		<cond msgId="113">
 			<using kind="Dual Sword, Sword, Blunt, Dual Blunt"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#mpConsume2">54 52 50 47 45 43 41 38 36 34</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
-			<table name="#powerPvP">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
+			<table name="#powerPvP">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#power">12597 12886 13175 13463 13752 14041 14329 14618 14907 15195</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">6699 6500 6300 6099 5900 5699 5500 5300 5099 4900</table>
 		</enchant>
@@ -696,80 +863,97 @@
 		LvL.908	description: Attacks target with 27456 Power added to P Atk.	reuse_delay: 5.3
 		LvL.909	description: Attacks target with 28040 Power added to P Atk.	reuse_delay: 5.1
 		LvL.910	description: Attacks target with 28624 Power added to P Atk.	reuse_delay: 4.9
+		name: Shadow Blade
+		level: 1
+		mp_consume: 50
+		description: Attacks target with 14608 Power added to P. Atk. For 20 seconds, P. Atk. and M. Atk. - 40%. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical.
+		icon_name: icon.skill11510
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.01
+		cool_time: 0.3
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11510" levels="8" name="Shadow Blade">
-		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
-		<table name="#reuseDelay">7000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1009"/>
-		<set name="abnormal_time" value="20"/>
-		<set name="abnormal_level" value="5"/>
-		<set name="abnormal_type" value="critical_prob_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11510"/>
-		<table name="#power">9133 9769 10404 11040 11675 12311 12946 13582</table>
-		<table name="#powerPvP">0</table>
-		<table name="#mpConsume2">50 51 53 55 57 59 60 62</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#mpConsume2">50 51 53 55 57 59 60 62</table>
+		<table name="#power">14608 15776 16944 18112 19280 20448 21616 22784</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">7000</table>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="critical_prob_down"/>
+		<set name="activateRate" value="70"/>
+		<set name="analog_skills" value="70;1102;1104;927;115;504"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="300"/>
+		<set name="criticalRate" value="15"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1009"/>
+		<set name="icon" value="icon.skill11510"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="activateRate" value="70"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="nextAction" value="attack"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="criticalRate" value="15"/>
-		<set name="overHit" value="true"/>
-		<set name="analog_skills" value="70;1102;1104;927;115;504"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dual Sword, Sword, Blunt, Dual Blunt"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#mpConsume2">59 57 54 52 49 47 44 42 39 37</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
-			<table name="#powerPvP">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
+			<table name="#powerPvP">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#power">13900 14217 14535 14853 15171 15488 15806 16124 16442 16759</table>
+			<table name="#power">23368 23952 24536 25120 25704 26288 26872 27456 28040 28624</table>
 			<table name="#reuseDelay">6699 6500 6300 6099 5900 5699 5500 5300 5099 4900</table>
 		</enchant>
 		<for>
@@ -907,82 +1091,99 @@
 		LvL.908	description: Attacks target with 40672 Power added to P Atk.	reuse_delay: 5.3
 		LvL.909	description: Attacks target with 41537 Power added to P Atk.	reuse_delay: 5.1
 		LvL.910	description: Attacks target with 42402 Power added to P Atk.	reuse_delay: 4.9
+		name: Death Strike
+		level: 1
+		mp_consume: 73
+		description: Attacks target with 21642 Power added to P. Atk. Requires a sword, blunt, dualsword, or dual blunt weapon. Over-hit. Critical.
+		icon_name: icon.skill11511
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.41
+		cool_time: 0.5
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
 	-->
     <skill id="11511" levels="8" name="Death Strike">
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#reuseDelay">7000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1409"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11511"/>
-		<table name="#mpConsume2">73 74 76 79 82 84 87 90</table>
-		<table name="#power">14326 14819 15803 16788 17773 18758 19743 20727</table>
-		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
-		<set name="power" value="#power"/>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">73 74 76 79 82 84 87 90</table>
+		<table name="#power">21642 22507 24237 25967 27697 29427 31157 32887</table>
+		<table name="#powerPvP">0</table>
+		<table name="#reuseDelay">7000</table>
+		<set name="analog_skills" value="1099;1096;505;986"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="500"/>
 		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1409"/>
+		<set name="icon" value="icon.skill11511"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
 		<set name="nextAction" value="attack"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="analog_skills" value="1099;1096;505;986"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dual Sword, Sword, Blunt, Dual Blunt"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#mpConsume2">86 82 79 75 72 68 64 61 57 54</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
-			<table name="#powerPvP">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
+			<table name="#powerPvP">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#elementPower">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#power">21712 22205 22697 23189 23682 24174 24667 25159 25652 26144</table>
+			<table name="#power">34617 35482 36347 37212 38077 38942 39807 40672 41537 42402</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">6699 6500 6300 6099 5900 5699 5500 5300 5099 4900</table>
 		</enchant>
@@ -1115,6 +1316,22 @@
 		LvL.908	description: Attacks target and nearby enemies with 18024 Power added to P Atk.	reuse_delay: 7.6
 		LvL.909	description: Attacks target and nearby enemies with 18377 Power added to P Atk.	reuse_delay: 7.3
 		LvL.910	description: Attacks target and nearby enemies with 18730 Power added to P Atk.	reuse_delay: 7
+		name: Mass Crippling Attack
+		level: 1
+		mp_consume: 130
+		description: Attacks target and nearby enemies with 10263 Power added to P. Atk. For 20 seconds, decreases target's P. Def. and M. Def. by 40% and P. Evasion by 15. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical.
+		icon_name: icon.skill11513
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.21
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
 	-->
     <skill id="11513" levels="8" name="Mass Crippling Attack">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
@@ -1336,6 +1553,22 @@
 		LvL.908	description: Attacks target and nearby enemies with 20554 Power added to P Atk.	reuse_delay: 11.4
 		LvL.909	description: Attacks target and nearby enemies with 20955 Power added to P Atk.	reuse_delay: 10.9
 		LvL.910	description: Attacks target and nearby enemies with 21356 Power added to P Atk.	reuse_delay: 10.5
+		name: Mass Shadow Blade
+		level: 1
+		mp_consume: 146
+		description: Attacks target and nearby enemies with 11722 Power added to P. Atk. For 20 seconds, decreases P. Atk. and M. Atk. by 40%. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical.
+		icon_name: icon.skill11514
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.41
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
 	-->
     <skill id="11514" levels="8" name="Mass Shadow Blade">
 		<table name="#element">none</table>
@@ -1457,6 +1690,22 @@
 		LvL.908	reuse_delay: 136.8
 		LvL.909	reuse_delay: 131.4
 		LvL.910	reuse_delay: 126
+		name: Confusion Bomber
+		level: 1
+		mp_consume: 76
+		description: Curses target with darkness. For 5 seconds, decreases Speed and Atk. Spd. by 5%. After 5 seconds, detonates target to inflict damage nearby. Requires a sword, dualsword or dual blunt to be equipped.
+		icon_name: icon.skill11515
+		hp_consume: 0
+		cast_range: 200
+		hit_time: 1.21
+		cool_time: 0.3
+		reuse_delay: 180
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11515" levels="1" name="Confusion Bomber">
 		<table name="#magicLevel">85 88 91 94 97</table>
@@ -1476,6 +1725,22 @@
     <!--
 		Curse Explosion - 
 
+		name: Curse Explosion
+		level: 1
+		mp_consume: 0
+		description: 
+		icon_name: icon.skill1170
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11516" levels="15" name="Curse Explosion">
 		<table name="#magicLevel">85 88 91 94 97 99 99 99 99 99 99 99 99 99 99</table>
@@ -1531,6 +1796,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Horn Melody
+		level: 1
+		mp_consume: 140
+		description: For 20 minutes, all party members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%.
+		icon_name: icon.skill11517
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11517" levels="4" name="Horn Melody">
 		<table name="#pAtk">1.17 1.19 1.21 1.23</table>
@@ -1649,6 +1930,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Drum Melody
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, party members' Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, Critical Damage during a normal attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance
+		icon_name: icon.skill11522
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11518" levels="4" name="Drum Melody">
 		<table name="#spd">0.85 0.9 0.95 1.0</table>
@@ -1759,6 +2056,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Pipe Organ Melody
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, party members' Max HP + 37%, Max MP + 37%, Max CP + 37%, and HP Recovery Bonus + 20%.
+		icon_name: icon.skill11519
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11519" levels="4" name="Pipe Organ Melody">
 		<table name="#vuln">1.37 1.39 1.41 1.43</table>
@@ -1864,6 +2177,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Guitar Melody
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, party members' P. Critical Rate + 32%, P. Critical Damage + 35%, M. Critical Rate + 20 , and MP Consumption - 20% for physical skills and - 10% for magic skills. Iss Enchanter's Enchant Skill MP Consumption - 20%.
+		icon_name: icon.skill11520
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11520" levels="4" name="Guitar Melody">
 		<table name="#pCritRate">32 34 36 38</table>
@@ -1974,6 +2303,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Harp Melody
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, party members' P. Accuracy + 5, P. and M. Evasion + 5, Speed + 34 and received Critical Damage - 30%.
+		icon_name: icon.skill11521
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11521" levels="4" name="Harp Melody">
 		<table name="#vuln">5 6 7 8</table>
@@ -2089,6 +2434,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Lute Melody
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, party members' Atk. Spd. + 34% and Casting Spd. + 31%. Also has a chance of triggering a 9% Vampiric Rage effect during a normal attack.
+		icon_name: icon.skill11518
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11522" levels="4" name="Lute Melody">
 		<table name="#vuln1">1.34 1.35 1.36 1.37</table>
@@ -2206,6 +2567,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Knight's Harmony
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, the selected party member's P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30% and Shield Defense + 50%.
+		icon_name: icon.skill11523
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11523" levels="1" name="Knight's Harmony">
 		<table name="#mpConsume2">140</table>
@@ -2459,6 +2836,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Warrior's Harmony
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, the selected party member's P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8% and Speed + 8.
+		icon_name: icon.skill11524
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11524" levels="1" name="Warrior's Harmony">
 		<table name="#abnormal_time">1800</table>
@@ -2683,6 +3076,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Wizard's Harmony
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, the selected party member's M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Speed + 8, M. Def. + 14%, MP Recovery Bonus + 20%, MP Consumption for magic skills - 15% and physical skills -5%, and Co
+		icon_name: icon.skill11525
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11525" levels="1" name="Wizard's Harmony">
 		<table name="#mpConsume2">140</table>
@@ -2881,36 +3290,56 @@
 		LvL.108	description: +28%, Atk.
 		LvL.109	description: +29%, Atk.
 		LvL.110	description: +30%, Atk.
+		name: Superior Sword/Blunt Weapon Mastery
+		level: 1
+		mp_consume: 0
+		description: When a sword or blunt weapon is equipped, P. Atk. +20%, Atk. Spd. + 20%, P. Critical Damage + 15%, P. Accuracy + 4, Speed + 13, normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on STR, Your STR can 
+		icon_name: icon.skill10001
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11526" levels="110" name="Superior Sword/Blunt Weapon Mastery">
-		<table name="#pAtk">235</table>
-		<table name="#mAtk">104</table>
+		<table name="#pAtk">1.2</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="analog_skills" value="934;935;330;331"/>
 		<set name="icon" value="icon.skill10001"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="saveVs" value="STR"/>
-		<set name="analog_skills" value="934;935;330;331"/>
-		<!--TODO: <triggers>
-			<trigger id="" level="1" type="ATTACK" chance="#triggerChance">
-				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
-			</trigger>
-		</triggers>-->
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pAtk">250 266 281 297 312 327 343 358 374 389</table>
-			<table name="#mAtk">111 118 124 131 138 145 152 158 165 172</table>
+			<table name="#pAtk">1.21 1.22 1.23 1.24 1.25 1.26 1.27 1.28 1.29 1.3</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
-			<add order="0x40" stat="pAtk" value="#pAtk">
+			<mul order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pAtkSpd" value="1.2">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pCritRate" value="1.15">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<mul order="0x30" stat="pvePhysDmgBonus" value="1.2">
+				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
+			</mul>
+			<add order="0x40" stat="pAccCombat" value="4">
 				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
 			</add>
-			<add order="0x40" stat="mAtk" value="#mAtk">
+			<add order="0x40" stat="runSpd" value="13">
 				<using kind="Sword, Big Sword, Blunt, Big Blunt"/>
 			</add>
-			<mul order="0x30" stat="pAtkSpd" value="1.10"/>
 		</for>
 	</skill>
     <!--
@@ -2945,6 +3374,22 @@
 
 		Enchant Route: 9 - 	Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes.
 
+		name: Prevailing Sonata
+		level: 1
+		mp_consume: 140
+		description: Increases party members' Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate for 5 minutes.
+		icon_name: icon.skill11529
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11529" levels="1" name="Prevailing Sonata">
 		<table name="#mpConsume2">140</table>
@@ -3133,6 +3578,22 @@
 
 		Enchant Route: 9 - 	Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage 
 
+		name: Daring Sonata
+		level: 1
+		mp_consume: 140
+		description: Increases party members' P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4 for 5 minutes. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage 
+		icon_name: icon.skill11530
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11530" levels="1" name="Daring Sonata">
 		<table name="#mpConsume2">140</table>
@@ -3330,6 +3791,22 @@
 
 		Enchant Route: 9 - 	Increases party members' HP Recovery Bonus by 20%, P. Accuracy by 4, P. Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes.
 
+		name: Refreshing Sonata
+		level: 1
+		mp_consume: 140
+		description: Increases party members' HP Recovery Bonus by 20%, P. Accuracy by 4, P. Evasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10% for 5 minutes.
+		icon_name: icon.skill11532
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11532" levels="1" name="Refreshing Sonata">
 		<table name="#mpConsume2">140</table>
@@ -3506,6 +3983,22 @@
 
 		Enchant Route: 2 - 	Party members receives 80% Vampiric Rage effect for 15 seconds. Enchant Chance: Increases Success Rate.
 
+		name: Blood Requiem
+		level: 1
+		mp_consume: 342
+		description: Party members receives 80% Vampiric Rage effect for 15 seconds.
+		icon_name: icon.skill11546
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0.5
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11533" levels="1" name="Blood Requiem">
 		<set name="reuseDelay" value="600000"/>
@@ -3597,6 +4090,22 @@
 		LvL.308	description: by 8%
 		LvL.309	description: by 9%
 		LvL.310	description: by 10%
+		name: Angel's Touch
+		level: 1
+		mp_consume: 70
+		description: For 7 seconds, renders target immune to debuffs.
+		icon_name: icon.skill11534
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 60
+		is_magic: 1
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11534" levels="5" name="Angel's Touch">
 		<table name="#magicLevel">87 90 93 96 99</table>
@@ -3678,6 +4187,22 @@
 		LvL.908	reuse_delay: 228
 		LvL.909	reuse_delay: 219
 		LvL.910	reuse_delay: 210
+		name: Divine Cancel
+		level: 1
+		mp_consume: 70
+		description: Has a chance of canceling up to 2 of the buff effects on target.
+		icon_name: icon.skill11536
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 300
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11536" levels="6" name="Divine Cancel">
 		<table name="#dispel_chance">35 40 45 50 55 60</table>
@@ -3756,6 +4281,22 @@
 		LvL.908	reuse_delay: 45.6
 		LvL.909	reuse_delay: 43.8
 		LvL.910	reuse_delay: 42
+		name: Transform
+		level: 1
+		mp_consume: 126
+		description: Transforms target into a harmless creature and decrease its Speed by 20% for 15 seconds. The effect is canceled if the transformed target is attacked.
+		icon_name: icon.skill11537
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 60
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11537" levels="7" name="Transform">
 		<table name="#magicLevel">85 86 88 91 94 97 99</table>
@@ -3864,6 +4405,22 @@
 		LvL.908	reuse_delay: 91.2
 		LvL.909	reuse_delay: 87.6
 		LvL.910	reuse_delay: 84
+		name: Mass Giant Root
+		level: 1
+		mp_consume: 252
+		description: Inflicts Hold on nearby enemies for 15 seconds.
+		icon_name: icon.skill11538
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 120
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11538" levels="4" name="Mass Giant Root">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -3953,6 +4510,22 @@
 		LvL.908	reuse_delay: 91.2
 		LvL.909	reuse_delay: 87.6
 		LvL.910	reuse_delay: 84
+		name: Petrify
+		level: 1
+		mp_consume: 70
+		description: Petrifies target for 15 seconds.
+		icon_name: icon.skill11539
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1.7
+		cool_time: 0.3
+		reuse_delay: 120
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11539" levels="8" name="Petrify">
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
@@ -4083,6 +4656,22 @@
 		LvL.908	reuse_delay: 45.6
 		LvL.909	reuse_delay: 43.8
 		LvL.910	reuse_delay: 42
+		name: Quick Escape
+		level: 1
+		mp_consume: 70
+		description: Transforms yourself into a cute pig for 15 seconds. P. Def. and M. Def. + 3000, and Speed + 30%.
+		icon_name: icon.skill11540
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 60
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11540" levels="4" name="Quick Escape">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -4174,6 +4763,22 @@
 
 		Enchant Route: 3 - 	Transforms yourself into a stone for 15 seconds to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. Enchant Decrease Penalty: Decreases Penalty. Cannot be used while Disparition is active.
 
+		name: Polymorph
+		level: 1
+		mp_consume: 70
+		description: Transforms yourself into a stone for 15 seconds to eliminate nearby enemies' aggression and keep them from targeting you. Greatly decreases Speed while transformed. Cannot be used while Disparition is active.
+		icon_name: icon.skill11541
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 60
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11541" levels="1" name="Polymorph">
 		<table name="#mpConsume2">70</table>
@@ -4308,6 +4913,22 @@
 		LvL.908	reuse_delay: 684
 		LvL.909	reuse_delay: 657
 		LvL.910	reuse_delay: 630
+		name: Disperse
+		level: 1
+		mp_consume: 330
+		description: For 30 sec., transforms yourself and nearby party members to increase P. Def. and M. Def. + 2000 and Speed + 44. Decreases P. Atk. and M. Atk. + 80%.
+		icon_name: icon.skill11543
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 900
+		is_magic: 1
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11543" levels="3" name="Disperse">
 		<table name="#magicLevel">93 96 99</table>
@@ -4399,6 +5020,22 @@
 		LvL.208	description: By 8.
 		LvL.209	description: By 9.
 		LvL.210	description: By 10.
+		name: Battle Rhapsody
+		level: 1
+		mp_consume: 916
+		description: For 30 sec., doubles all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd.
+		icon_name: icon.skill11544
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0.5
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
 	-->
     <skill id="11544" levels="1" name="Battle Rhapsody">
 		<set name="reuseDelay" value="600000"/>
@@ -4443,6 +5080,22 @@
     <!--
 		Crazy Nocturne - For 15 sec., decreases standard attack and M. Skill's Critical Rate targeting party members by 50%.
 
+		name: Crazy Nocturne
+		level: 1
+		mp_consume: 1032
+		description: For 15 sec., decreases standard attack and M. Skill's Critical Rate targeting party members by 50%.
+		icon_name: icon.skill11545
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0.5
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11545" levels="1" name="Crazy Nocturne">
 		<set name="reuseDelay" value="600000"/>
@@ -4575,6 +5228,22 @@
 		LvL.808	description: Inflicts 46033 damage on target and nearby enemies.
 		LvL.809	description: Inflicts 46934 damage on target and nearby enemies.
 		LvL.810	description: Inflicts 47835 damage on target and nearby enemies.
+		name: Chaos Symphony
+		level: 1
+		mp_consume: 1767
+		description: Inflicts 38826 damage on target and nearby enemies. Decreases nearby enemies' P. Atk., P. Def., M. Atk., M. Def. and Speed by 50% for 10 seconds. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical.
+		icon_name: icon.skill11533
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
 	-->
     <skill id="11546" levels="1" name="Chaos Symphony">
 		<table name="#elementPower">0</table>
@@ -4669,6 +5338,22 @@
 		LvL.108	description: STR + 2 and HP Recovery Bonus + 4.3.
 		LvL.109	description: STR + 2 and HP Recovery Bonus + 4.5. Enchant Power: Increases the effect.
 		LvL.110	description: STR + 2 and HP Recovery Bonus + 4.7. Enchant Power: Increases the effect.
+		name: Superior HP Recovery
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and HP Recovery Bonus + 2.8.
+		icon_name: icon.skill0212
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11547" levels="1" name="Superior HP Recovery">
 		<table name="#hp">2.8</table>
@@ -4691,6 +5376,22 @@
     <!--
 		Superior Quick Recovery - STR + 2 and Cooldown for magic skills - 25%.
 
+		name: Superior Quick Recovery
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and Cooldown for magic skills - 25%.
+		icon_name: icon.skill11004
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11548" levels="1" name="Superior Quick Recovery">
 		<set name="magicLevel" value="85"/>
@@ -4708,6 +5409,22 @@
     <!--
 		Superior Mana Steal - Has a chance of recovering MP during a normal attack when equipped with a sword, blunt, dualsword, or dual blunt weapon.
 
+		name: Superior Mana Steal
+		level: 1
+		mp_consume: 0
+		description: Has a chance of recovering MP during a normal attack when equipped with a sword, blunt, dualsword, or dual blunt weapon.
+		icon_name: icon.skill11505
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11549" levels="1" name="Superior Mana Steal">
 		<set name="magicLevel" value="85"/>
@@ -4725,6 +5442,22 @@
     <!--
 		Superior Mana Steal - none
 
+		name: Superior Mana Steal
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill11505
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11550" levels="1" name="Superior Mana Steal">
 		<set name="reuseDelay" value="3000"/>
@@ -4739,6 +5472,22 @@
     <!--
 		Superior Mental Attack Resistance - STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30.
 
+		name: Superior Mental Attack Resistance
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30.
+		icon_name: icon.skill10257
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11551" levels="1" name="Superior Mental Attack Resistance">
 		<set name="magicLevel" value="85"/>
@@ -4763,6 +5512,22 @@
 		LvL.2	description: Decreases MP Consumption during skill usage by 9%.
 		LvL.3	description: Decreases MP Consumption during skill usage by 12%.
 		LvL.4	description: Decreases MP Consumption during skill usage by 15%.
+		name: Superior Divine Lore
+		level: 1
+		mp_consume: 0
+		description: MP Consumption for skills is decreased by 6%.
+		icon_name: icon.skill11506
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11552" levels="1" name="Superior Divine Lore">
 		<set name="magicLevel" value="85"/>
@@ -4778,6 +5543,22 @@
     <!--
 		Superior Focus Mind - STR + 2 and increases MP recovery bonus by 8.4.
 
+		name: Superior Focus Mind
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and increases MP recovery bonus by 8.4.
+		icon_name: icon.skill11187
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11553" levels="1" name="Superior Focus Mind">
 		<set name="magicLevel" value="85"/>
@@ -4794,6 +5575,22 @@
     <!--
 		Superior Sixth Sense - STR + 2 and when HP is below 30%, increases P. Evasion by 17.
 
+		name: Superior Sixth Sense
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and when HP is below 30%, increases P. Evasion by 17.
+		icon_name: icon.skill11504
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11554" levels="1" name="Superior Sixth Sense">
 		<set name="magicLevel" value="85"/>
@@ -4811,6 +5608,22 @@
     <!--
 		Superior Fast Spell Casting - Increases Casting Spd. by 15%.
 
+		name: Superior Fast Spell Casting
+		level: 1
+		mp_consume: 0
+		description: Increases Casting Spd. by 15%.
+		icon_name: icon.skill11788
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11555" levels="1" name="Superior Fast Spell Casting">
 		<set name="magicLevel" value="85"/>
@@ -4826,6 +5639,22 @@
     <!--
 		Cancel Transform - none
 
+		name: Cancel Transform
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill01703
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11556" levels="1" name="Cancel Transform">
 		<set name="magicLevel" value="99"/>
@@ -4886,6 +5715,22 @@
 		LvL.408	description: Enchant Slow CP: Decreases CP Recovery by 15.
 		LvL.409	description: Enchant Slow CP: Decreases CP Recovery by 17.
 		LvL.410	description: Enchant Slow CP: Decreases CP Recovery by 19.
+		name: Ultimate Scourge
+		level: 1
+		mp_consume: 423
+		description: Disables nearby enemies' natural HP Recovery for 2 minutes.
+		icon_name: icon.skill11557
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0.2
+		reuse_delay: 120
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11557" levels="1" name="Ultimate Scourge">
 		<table name="#magicLevel">85</table>
@@ -4952,6 +5797,22 @@
 
 		Enchant Route: 2 - 	Cancels nearby enemies' targets. Enchant Distance: Increases effect.
 
+		name: Ultimate Oblivion
+		level: 1
+		mp_consume: 423
+		description: Cancels nearby enemies' targets.
+		icon_name: icon.skill11558
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0.2
+		reuse_delay: 120
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11558" levels="1" name="Ultimate Oblivion">
 		<table name="#magicLevel">85</table>
@@ -5005,6 +5866,22 @@
 
 		Enchant Route: 2 - 	Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes. Enchant Chance: Increases success rate.
 
+		name: Ultimate Suspension
+		level: 1
+		mp_consume: 423
+		description: Increases nearby enemies' physical/magic skill Cooldown by 200% for 2 minutes.
+		icon_name: icon.skill11559
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0.2
+		reuse_delay: 120
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11559" levels="1" name="Ultimate Suspension">
 		<table name="#magicLevel">85</table>
@@ -5114,6 +5991,22 @@
 		LvL.508	description: Enchant Power CP: Recovers 8% CP
 		LvL.509	description: Enchant Power CP: Recovers 9% CP
 		LvL.510	description: Enchant Power CP: Recovers 10% CP
+		name: Celestial Aegis
+		level: 1
+		mp_consume: 423
+		description: Makes all party members invincible for 30 seconds.
+		icon_name: icon.skill11560
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.2
+		reuse_delay: 1800
+		is_magic: 1
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11560" levels="2" name="Celestial Aegis">
 		<table name="#magicLevel">85 99</table>
@@ -5219,6 +6112,22 @@
 		LvL.408	description: by 8%.
 		LvL.409	description: by 9%.
 		LvL.410	description: by 10%.
+		name: Giant Root
+		level: 1
+		mp_consume: 126
+		description: Inflicts Hold on the enemy for 15 seconds.
+		icon_name: icon.skill11561
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1.5
+		cool_time: 0.5
+		reuse_delay: 60
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11561" levels="4" name="Giant Root">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -5306,6 +6215,22 @@
 		LvL.308	description: By 8.
 		LvL.309	description: By 9.
 		LvL.310	description: By 10.
+		name: Devil's Movement
+		level: 1
+		mp_consume: 60
+		description: Prevents all party members from being attacked preemptively by monsters for 2 minutes. But if any party member initiates an attack, the effect will be canceled.
+		icon_name: icon.skill11562
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11562" levels="1" name="Devil's Movement">
 		<table name="#runSpd">0</table>
@@ -5345,6 +6270,22 @@
     <!--
 		Quick Return - Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service.
 
+		name: Quick Return
+		level: 1
+		mp_consume: 60
+		description: Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service.
+		icon_name: icon.skill11819
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2.5
+		cool_time: 0
+		reuse_delay: 75
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11563" levels="1" name="Quick Return">
 		<set name="reuseDelay" value="75000"/>
@@ -5393,6 +6334,22 @@
 		LvL.208	description: Resurrects a dead target and restores 68% of the XP lost.
 		LvL.209	description: Resurrects a dead target and restores 69% of the XP lost.
 		LvL.210	description: Resurrects a dead target and restores 70% of the XP lost.
+		name: Angel's Resurrection
+		level: 1
+		mp_consume: 60
+		description: Resurrects a dead target and restores 40% of the XP lost.
+		icon_name: icon.skill1016
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 4
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11564" levels="3" name="Angel's Resurrection">
 		<table name="#power">40 50 60</table>
@@ -5457,6 +6414,22 @@
 		LvL.208	description: Increases party members' Fire/Water/Wind/Earth Resistance by 30 for 54 minutes.
 		LvL.209	description: Increases party members' Fire/Water/Wind/Earth Resistance by 30 for 57 minutes.
 		LvL.210	description: Increases party members' Fire/Water/Wind/Earth Resistance by 30 for 60 minutes.
+		name: Elemental Resistance
+		level: 1
+		mp_consume: 140
+		description: Increases party members' Fire/Water/Wind/Earth Resistance by 30 for 30 minutes.
+		icon_name: icon.skill11565
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11565" levels="1" name="Elemental Resistance">
 		<table name="#magicLevel">85</table>
@@ -5570,6 +6543,22 @@
 		LvL.208	description: Increases party members' Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50% for 54 minutes.
 		LvL.209	description: Increases party members' Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50% for 57 minutes.
 		LvL.210	description: Increases party members' Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50% for 60 minutes.
+		name: Holy Attack Resistance
+		level: 1
+		mp_consume: 140
+		description: Increases party members' Holy/Dark Attack Resistance by 30, and Poison/Bleed Resistance by 50% for 30 minutes.
+		icon_name: icon.skill11567
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11566" levels="1" name="Holy Attack Resistance">
 		<table name="#magicLevel">85</table>
@@ -5659,6 +6648,22 @@
 		LvL.208	description: Increases party members' Hold/Sleep/Mental Attack Resistance by 50, Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20 for 54 minutes.
 		LvL.209	description: Increases party members' Hold/Sleep/Mental Attack Resistance by 50, Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20 for 57 minutes.
 		LvL.210	description: Increases party members' Hold/Sleep/Mental Attack Resistance by 50, Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20 for 60 minutes.
+		name: Mental Attack Resistance
+		level: 1
+		mp_consume: 140
+		description: Increases party members' Hold/Sleep/Mental Attack Resistance by 50, Buff-canceling Attack Resistance by 30 and Debuff Resistance by 20 for 30 minutes.
+		icon_name: icon.skill11824
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11567" levels="1" name="Mental Attack Resistance">
 		<table name="#magicLevel">85</table>
@@ -5711,6 +6716,22 @@
     <!--
 		Critical Damage Increase - Critical Damage is greatly increased through Poem of Drum.
 
+		name: Critical Damage Increase
+		level: 1
+		mp_consume: 0
+		description: Critical Damage is greatly increased through Poem of Drum.
+		icon_name: icon.skill1542
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 15
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11569" levels="1" name="Critical Damage Increase">
 		<set name="reuseDelay" value="15000"/>
@@ -5747,6 +6768,22 @@
 		LvL.108	mp_consume: 432
 		LvL.109	mp_consume: 414
 		LvL.110	mp_consume: 396
+		name: Healing Melody
+		level: 1
+		mp_consume: 582
+		description: Heals target and the 10 most injured allies around target by up to 35% of their Max HP. The recovery amount decreases starting from the most injured person.
+		icon_name: icon.skill11570
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 16
+		base_elemental_skill_id: 0
 	-->
     <skill id="11570" levels="1" name="Healing Melody">
 		<table name="#mpConsume2">582</table>
@@ -5802,6 +6839,22 @@
 		LvL.208	description: Restores target's CP by 1080.
 		LvL.209	description: Restores target's CP by 1090.
 		LvL.210	description: Restores target's CP by 1100.
+		name: Recovery Melody
+		level: 1
+		mp_consume: 120
+		description: Restores target's CP by 1000.
+		icon_name: icon.skill11571
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 5
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 1
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11571" levels="1" name="Recovery Melody">
 		<set name="reuseDelay" value="5000"/>
@@ -5837,6 +6890,22 @@
 		LvL.2	mp_consume: 139
 		LvL.3	mp_consume: 153
 		LvL.4	mp_consume: 166
+		name: Mass Transform
+		level: 1
+		mp_consume: 126
+		description: For 10 sec., mutates enemies to reduce their Speed by 20% and render them unable to attack. Mutated enemies return to normal when inflicted with damage.
+		icon_name: icon.skill11580
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 1.41
+		cool_time: 0.5
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11580" levels="4" name="Mass Transform"> <!-- Check me?-->
 		<set name="icon" value="icon.skill11580"/>
@@ -5881,6 +6950,22 @@
 		LvL.2	description: Skill Cooldown - 6%, Skill Power + 5%, MP Recovery Rate + 6, and Max HP, MP, and CP + 6%. Skill mastery effect + 20%.
 		LvL.3	description: Skill Cooldown - 7%, Skill Power + 5%, MP Recovery Rate + 7, and Max HP, MP, and CP + 7%. Skill mastery effect + 50%.
 		LvL.4	description: Skill Cooldown - 10%, Skill Power + 5%, MP Recovery Rate + 10, and Max HP, MP, and CP + 10%. Skill mastery effect + 100%.
+		name: Superior Advantage
+		level: 1
+		mp_consume: 0
+		description: Skill Cooldown - 5%, Skill Power + 5%, MP Recovery Rate + 5, and Max HP, MP, and CP + 5%. Skill mastery effect + 10%.
+		icon_name: icon.skill11841
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11581" levels="4" name="Superior Advantage">
 		<set name="icon" value="icon.skill11841"/>
@@ -5907,6 +6992,22 @@
 		LvL.2	mp_consume: 139
 		LvL.3	mp_consume: 153
 		LvL.4	mp_consume: 166
+		name: Mass Song of Silence
+		level: 1
+		mp_consume: 126
+		description: Plays the Song of Silence. For 10 sec., enemies' P. Skills and M. Skills are locked.
+		icon_name: icon.skill11839
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.41
+		cool_time: 0.5
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11582" levels="4" name="Mass Song of Silence">
 		<set name="icon" value="icon.skill11839"/>
@@ -5946,6 +7047,22 @@
 		LvL.2	description: + 7%.
 		LvL.3	description: + 10%.
 		LvL.4	description: + 15%.
+		name: Superior Song of Mastery
+		level: 1
+		mp_consume: 0
+		description: P. Def./ M. Def. + 5%. Skill Power + 5%.
+		icon_name: icon.skill0153
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11583" levels="4" name="Superior Song of Mastery">
 		<table name="#add">1.05 1.07 1.1 1.15</table>
@@ -5970,6 +7087,22 @@
 		LvL.2	mp_consume: 139
 		LvL.3	mp_consume: 153
 		LvL.4	mp_consume: 166
+		name: Mass Medusa's Dance
+		level: 1
+		mp_consume: 126
+		description: Performs that evokes the mirage of a Medusa. For 10 sec., Petrifies nearby enemies.
+		icon_name: icon.skill11840
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.41
+		cool_time: 0.5
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11584" levels="4" name="Mass Medusa's Dance">
 		<set name="icon" value="icon.skill11840"/>
@@ -6015,6 +7148,22 @@
 		LvL.2	description: + 7%.
 		LvL.3	description: + 10%.
 		LvL.4	description: + 15%.
+		name: Superior Dance of Mastery
+		level: 1
+		mp_consume: 0
+		description: P. Atk./ M. Atk. + 5%. Skill Power + 5%.
+		icon_name: icon.skill0141
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11585" levels="4" name="Superior Dance of Mastery">
 		<set name="icon" value="icon.skill0141"/>
@@ -6050,6 +7199,22 @@
 		LvL.2	description: , restores clan members' Max CP and increases it by 6%.	mp_consume: 139
 		LvL.3	description: , restores clan members' Max CP and increases it by 7%.	mp_consume: 153
 		LvL.4	description: , restores clan members' Max CP and increases it by 10%.	mp_consume: 166
+		name: Pa'agrio's Bravery
+		level: 1
+		mp_consume: 126
+		description: For 30 sec., restores clan members' Max CP and increases it by 5%.
+		icon_name: icon.skill11843
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.41
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 1
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11586" levels="4" name="Pa'agrio's Bravery">
 		<set name="icon" value="icon.skill11843"/>
@@ -6085,6 +7250,22 @@
 		LvL.2	mp_consume: 278
 		LvL.3	mp_consume: 306
 		LvL.4	mp_consume: 332
+		name: Mass Blockade
+		level: 1
+		mp_consume: 252
+		description: For 10 sec., locks target and nearby enemies' standard attacks during PvP.
+		icon_name: icon.skill11587
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 2.11
+		cool_time: 0.5
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11587" levels="4" name="Mass Blockade">
 		<table name="#mpConsume1">63 69 76 83</table>
@@ -6126,6 +7307,22 @@
 		LvL.2	description: Max MP + 12%.
 		LvL.3	description: Max MP + 15%.
 		LvL.4	description: Max MP + 20%.
+		name: Superior Wizard Mastery
+		level: 1
+		mp_consume: 0
+		description: Max MP + 10%.
+		icon_name: icon.skill0164
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11588" levels="4" name="Superior Wizard Mastery">
 		<set name="icon" value="icon.skill0164"/>
@@ -6185,6 +7382,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Horn Frenzy
+		level: 1
+		mp_consume: 140
+		description: For 30 min., clan members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%.
+		icon_name: icon.skill11589
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11589" levels="4" name="Horn Frenzy">
 		<table name="#pAtk">1.17 1.19 1.21 1.23</table>
@@ -6293,6 +7506,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Drum Frenzy
+		level: 1
+		mp_consume: 140
+		description: For 30 min., clan members' Max MP + 20%, HP Recovery Bonus + 20%, and M. Critical Rate + 20. During a standard attack,  P. Atk. and Debuff Resistance + 10%, and Critical Damage, P. Def., Atk. Spd., M. Atk., M. Def., and Casting Spd. + 20%. When hit with
+		icon_name: icon.skill11590
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11590" levels="4" name="Drum Frenzy">
 		<table name="#spd">0.85 0.9 0.95 1.0</table>
@@ -6393,6 +7622,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Pipe Organ Frenzy
+		level: 1
+		mp_consume: 140
+		description: For 30 min., clan members' Max HP/MP/CP + 37%, and HP Recovery Bonus + 20%.
+		icon_name: icon.skill11591
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11591" levels="4" name="Pipe Organ Frenzy">
 		<table name="#vuln">1.37 1.39 1.41 1.43</table>
@@ -6488,6 +7733,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Guitar Frenzy
+		level: 1
+		mp_consume: 140
+		description: For 30 min., clan members' P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. P. Skill MP Consumption - 20%, M. Skill MP Consumption - 10%, and Iss Enchanter's Enchant Skill MP Consumption - 20%.
+		icon_name: icon.skill11592
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11592" levels="4" name="Guitar Frenzy">
 		<table name="#pCritRate">32 34 36 38</table>
@@ -6588,6 +7849,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Harp Frenzy
+		level: 1
+		mp_consume: 140
+		description: For 30 min., clan members' P. Accuracy and P. Evasion/ M. Evasion + 5, and Speed + 34. Received Critical Damage - 30%.
+		icon_name: icon.skill11593
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11593" levels="4" name="Harp Frenzy">
 		<table name="#vuln">5 6 7 8</table>
@@ -6693,6 +7970,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Lute Frenzy
+		level: 1
+		mp_consume: 140
+		description: For 30 min., clan members' Atk. Spd. + 34% and Casting Spd. + 31%. Has a chance of applying 9% Vampiric Rage effect.
+		icon_name: icon.skill11594
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11594" levels="4" name="Lute Frenzy">
 		<table name="#vuln1">1.34 1.35 1.36 1.37</table>
@@ -6800,6 +8093,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Knight's Frenzied Harmony
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, increases clan members' P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%.
+		icon_name: icon.skill11596
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11595" levels="1" name="Knight's Frenzied Harmony">
 		<set name="reuseDelay" value="2000"/>
@@ -7031,6 +8340,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Warrior's Frenzied Harmony
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, increases clan members' P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Spd. + 8.
+		icon_name: icon.skill11595
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11596" levels="1" name="Warrior's Frenzied Harmony">
 		<set name="reuseDelay" value="2000"/>
@@ -7221,6 +8546,22 @@
 		LvL.908	reuse_delay: 1.5
 		LvL.909	reuse_delay: 1.4
 		LvL.910	reuse_delay: 1.4
+		name: Wizard's Frenzied Harmony
+		level: 1
+		mp_consume: 140
+		description: For 30 minutes, increases clan members' M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Spd. + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. Decreases magic skill MP Consumption - 15%, physical skill MP Consumpt
+		icon_name: icon.skill11597
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.7
+		cool_time: 0.3
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="11597" levels="1" name="Wizard's Frenzied Harmony">
 		<set name="reuseDelay" value="2000"/>
@@ -7382,6 +8723,22 @@
 		LvL.2	description: , decreases enemy's HP by 343.	mp_consume: 79
 		LvL.3	description: , decreases enemy's HP by 359.	mp_consume: 86
 		LvL.4	description: , decreases enemy's HP by 375.	mp_consume: 91
+		name: Greater Freezing Flame
+		level: 1
+		mp_consume: 73
+		description: A powerful cold flame. For 10 sec., decreases enemy's HP by 326.
+		icon_name: icon.skill11598
+		hp_consume: 0
+		cast_range: 900
+		hit_time: 0.91
+		cool_time: 0.5
+		reuse_delay: 5
+		is_magic: 1
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 2
+		base_elemental_skill_id: 0
 	-->
     <skill id="11598" levels="4" name="Greater Freezing Flame">
 		<set name="icon" value="icon.skill11598"/>
@@ -7413,6 +8770,22 @@
 		LvL.2	description: + 7%, and Skill Power + 5%.
 		LvL.3	description: + 10%, and Skill Power + 5%.
 		LvL.4	description: + 15%, and Skill Power + 5%.
+		name: Combat Cry
+		level: 1
+		mp_consume: 1
+		description: P. Atk./P. Def., M. Atk./M. Def. + 5%, and Skill Power + 5%. MP drains consistently depending on level.
+		icon_name: icon.skill1001
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="11599" levels="4" name="Combat Cry">
 		<table name="#mod">1.05 1.07 1.1 1.15</table>

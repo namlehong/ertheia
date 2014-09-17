@@ -7,13 +7,29 @@
 		LvL.1	description: Damage inflicted on monsters + 50%, and M Skill MP Consumption + 30%.
 		LvL.2	description: Damage inflicted on monsters + 55%, and M Skill MP Consumption + 30%.
 		LvL.3	description: Damage inflicted on monsters + 60%, and M Skill MP Consumption + 30%.
+		name: True Vanguard
+		level: 1
+		mp_consume: 0
+		description: Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%.
+		icon_name: icon.skill0810
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10244" levels="1" name="True Vanguard">
-		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill0810"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CONT"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect time="-1">
 				<mul order="0x30" stat="pvePhysDmgBonus" value="1.50"/>
@@ -26,16 +42,32 @@
     <!--
 		Wizard - Individual Passive - 
 
+		name: Wizard - Individual Passive
+		level: 1
+		mp_consume: 0
+		description: 
+		icon_name: icon.skill0217
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 6
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10245" levels="1" name="Wizard - Individual Passive">
-		<table name="#spd">1.03</table>
 		<table name="#power">438</table>
-		<set name="magicLevel" value="85"/>
+		<table name="#spd">1.03</table>
 		<set name="icon" value="icon.skill0217"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="power" value="#power"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="runSpd" value="#spd"/>
 		</for>
@@ -43,103 +75,174 @@
     <!--
 		Wizard - Individual - Atk. Spd. + 30% for 5 seconds.
 
+		name: Wizard - Individual
+		level: 1
+		mp_consume: 0
+		description: Atk. Spd. + 30% for 5 seconds.
+		icon_name: icon.skill1543
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 5
+		is_magic: 4
+		oper_type: 2
+		element_guess: 6
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 11011
 	-->
     <skill id="10246" levels="1" name="Wizard - Individual">
 		<table name="#spd">1.3</table>
-		<table name="#power">438</table>
-		<set name="reuseDelay" value="5000"/>
-		<set name="hitTime" value="500"/>
-		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_type" value="attack_time_down_special"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill1543"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill1543"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="runSpd" value="#spd"/>
+				<mul order="0x30" stat="pAtkSpd" value="#spd"/>
 			</effect>
 		</for>
 	</skill>
     <!--
 		Knight - Individual Passive - 
 
+		name: Knight - Individual Passive
+		level: 1
+		mp_consume: 0
+		description: 
+		icon_name: icon.skill0217
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 6
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10247" levels="1" name="Knight - Individual Passive">
 		<table name="#spd">1.03</table>
 		<table name="#power">438</table>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3380"/>
+		<set name="icon" value="icon.skill10317"/>
 		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill0217"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
-		<for>
-			<mul order="0x30" stat="runSpd" value="#spd"/>
-		</for>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Knight - Individual - Atk. Spd. + 30% for 5 seconds.
 
+		name: Knight - Individual
+		level: 1
+		mp_consume: 0
+		description: Atk. Spd. + 30% for 5 seconds.
+		icon_name: icon.skill1543
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 6
+		is_magic: 4
+		oper_type: 2
+		element_guess: 6
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10248" levels="1" name="Knight - Individual">
-		<table name="#spd">1.3</table>
 		<table name="#power">438</table>
-		<set name="reuseDelay" value="6000"/>
-		<set name="hitTime" value="500"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="attack_time_down_special"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1830"/>
+		<set name="icon" value="icon.skill10317"/>
 		<set name="magicLevel" value="85"/>
-		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill1543"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<for>
-			<effect>
-				<mul order="0x30" stat="runSpd" value="#spd"/>
-			</effect>
-		</for>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Heavy Hit - Inflicts a powerful blow on target.
 
+		name: Heavy Hit
+		level: 1
+		mp_consume: 0
+		description: Inflicts a powerful blow on target.
+		icon_name: icon.skill10317
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 2
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 3
+		element_guess: 6
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
 	-->
     <skill id="10249" levels="1" name="Heavy Hit">
 		<table name="#power">15000</table>
-		<set name="reuseDelay" value="7000"/>
-		<set name="coolTime" value="296"/>
-		<set name="hitTime" value="1500"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="3700"/>
 		<set name="icon" value="icon.skill10317"/>
-		<set name="mpConsume2" value="92"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="100"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Heavy Hit - Inflicts a powerful blow on target.
 
+		name: Heavy Hit
+		level: 1
+		mp_consume: 0
+		description: Inflicts a powerful blow on target.
+		icon_name: icon.skill10317
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0
+		cool_time: 0.5
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 3
+		element_guess: 6
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
 	-->
     <skill id="10250" levels="1" name="Heavy Hit">
 		<table name="#power">15000</table>
-		<table name="#time">10</table>
-		<set name="reuseDelay" value="10000"/>
-		<set name="coolTime" value="500"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="3700"/>
 		<set name="icon" value="icon.skill10317"/>
-		<set name="mpConsume2" value="92"/>
-		<set name="castRange" value="100"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Superior Weapon Mastery - STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1252 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. D
@@ -157,16 +260,32 @@
 		LvL.108	description: + 2279 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
 		LvL.109	description: + 2390 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
 		LvL.110	description: + 2501 and P Accuracy + 8 when a sword, blunt, or spear is equipped.
+		name: Superior Weapon Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2, P. Atk. + 30%, and Atk. Spd. + 25%. P. Atk. + 1252 and P. Accuracy + 8 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. 50% chance of triggering Lightning Force during a normal attack. D
+		icon_name: icon.skill10251
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10251" levels="1" name="Superior Weapon Mastery">
-		<table name="#pAtk">1252</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10251"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pAtk">1252</table>
 		<set name="analog_skills" value="216;472;210;257;330;331;421;422;168"/>
+		<set name="icon" value="icon.skill10251"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<triggers>
 			<trigger id="10284" level="1" type="CRIT" chance="50"/>
 		</triggers>
@@ -176,18 +295,24 @@
 		</enchant>
 		<for>
 			<add order="0x10" stat="STR" value="2">
+				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</add>
+			<mul order="0x30" stat="pAtk" value="1.3">
+				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
+			</mul>
 			<mul order="0x30" stat="pAtkSpd" value="1.25">
 				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</mul>
 			<add order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</add>
-			<add order="0x40" stat="pAccCombat" value="3">
-				<using kind="Sword, Blunt, Big Blunt, Big Sword"/>
+			<add order="0x40" stat="pAccCombat" value="8">
+				<using kind="Sword, Blunt, Big Blunt, Big Sword, Pole"/>
 			</add>
 			<set order="0x100" stat="activateSkillMasterySTR" value="1"/>
-			<add order="0x40" stat="poleTargetCount" value="5"/>
+			<add order="0x40" stat="poleTargetCount" value="5">
+				<using kind="Pole"/>
+			</add>
 		</for>
 	</skill>
     <!--
@@ -206,27 +331,44 @@
 		LvL.108	description: + 2279 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
 		LvL.109	description: + 2390 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
 		LvL.110	description: + 2501 and P Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		name: Superior Dual Weapon Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2. P. Atk. + 1252 and P. Accuracy + 8 when using a dualsword, dual blunt, or fist weapon.
+		icon_name: icon.skill10252
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10252" levels="1" name="Superior Dual Weapon Mastery">
-		<table name="#pAtk">1252</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10251"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pAtk">1252</table>
 		<set name="analog_skills" value="293;144"/>
+		<set name="icon" value="icon.skill10251"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#pAtk">1502 1613 1724 1835 1946 2057 2168 2279 2390 2501</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
 			<add order="0x10" stat="STR" value="2">
+				<using kind="Dual Sword, Dual Blunt, Dual Fist"/>
 			</add>
 			<add order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Dual Sword, Dual Blunt, Dual Fist"/>
 			</add>
-			<add order="0x40" stat="pAccCombat" value="3">
+			<add order="0x40" stat="pAccCombat" value="8">
 				<using kind="Dual Sword, Dual Blunt, Dual Fist"/>
 			</add>
 		</for>
@@ -247,18 +389,34 @@
 		LvL.108	description: + 1639 when equipped with Heavy Armor.
 		LvL.109	description: + 1678 when equipped with Heavy Armor.
 		LvL.110	description: + 1717 when equipped with Heavy Armor.
+		name: Superior Heavy Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2. Max HP + 5368 and P. Def. + 1327 when equipped with Heavy Armor.
+		icon_name: icon.skill10253
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10253" levels="1" name="Superior Heavy Armor Mastery">
-		<table name="#pDef">104</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10253"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pDef">1327</table>
 		<set name="analog_skills" value="231;232;253;259"/>
+		<set name="icon" value="icon.skill10253"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pDef">110 117 124 131 138 145 152 159 166 173</table>
+			<table name="#pDef">1366 1405 1444 1483 1522 1561 1600 1639 1678 1717</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -287,18 +445,34 @@
 		LvL.108	description: + 1567, P Accuracy + 3, P Evasion + 6, Spd.
 		LvL.109	description: + 1604, P Accuracy + 3, P Evasion + 6, Spd.
 		LvL.110	description: + 1643, P Accuracy + 3, P Evasion + 6, Spd.
+		name: Superior Light Armor Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2. Max HP + 5368, P. Def. + 1271, P. Accuracy + 3, P. Evasion + 6, Spd. + 10, and Atk. Spd. + 10% when equipped with Light Armor. Chance of receiving a critical attack - 35%.
+		icon_name: icon.skill10254
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10254" levels="1" name="Superior Light Armor Mastery">
-		<table name="#pDef">89</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10254"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pDef">1271</table>
 		<set name="analog_skills" value="832;319;227;233;236;252;258;465"/>
+		<set name="icon" value="icon.skill10254"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
-			<table name="#pDef">94 100 106 112 118 123 129 135 141 147</table>
+			<table name="#pDef">1308 1345 1382 1419 1456 1493 1530 1567 1604 1643</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -318,10 +492,10 @@
 			<add order="0x40" stat="runSpd" value="10">
 				<using armor="Light"/>
 			</add>
-			<mul order="0x30" stat="critChanceRcpt" value="0.95">
+			<mul order="0x30" stat="critChanceRcpt" value="0.65">
 				<using armor="Light"/>
 			</mul>
-			<mul order="0x30" stat="pAtkSpd" value="1.15">
+			<mul order="0x30" stat="pAtkSpd" value="1.1">
 				<using armor="Light"/>
 			</mul>
 		</for>
@@ -342,17 +516,33 @@
 		LvL.108	description: Absorbs Momentum by 28% during a normal physical attack and 40% during a critical attack.
 		LvL.109	description: Absorbs Momentum by 29% during a normal physical attack and 40% during a critical attack.
 		LvL.110	description: Absorbs Momentum by 30% during a normal physical attack and 40% during a critical attack.
+		name: Superior Momentum Mastery
+		level: 1
+		mp_consume: 0
+		description: Absorbs Momentum by 20% during a normal physical attack and 40% during a critical attack. Can absorb up to 10 Momentum levels.
+		icon_name: icon.skill10255
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10255" levels="1" name="Superior Momentum Mastery">
 		<table name="#chance1">40</table>
 		<table name="#chance2">20</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10255"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="992;993"/>
+		<set name="icon" value="icon.skill10255"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#chance2">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
@@ -378,22 +568,37 @@
 		LvL.108	description: STR + 2, Max HP + 922, Max CP + 450 and HP Recovery Bonus + 11.1. While sitting, HP Recovery Bonus + 10.7 and MP recovery bonus + 5.5. When HP falls below 60%, P Atk. +  + 1139. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Po
 		LvL.109	description: STR + 2, Max HP + 962, Max CP + 469 and HP Recovery Bonus + 11.5. While sitting, HP Recovery Bonus + 11.1 and MP recovery bonus + 5.8. When HP falls below 60%, P Atk. +  + 1194 When damaged to a point, has a chance of recovering 10% of Max HP Enchant Pow
 		LvL.110	description: STR + 2, Max HP + 1002, Max CP + 489 and HP Recovery Bonus + 12. While sitting, HP Recovery Bonus + 11.6 and MP recovery bonus + 6.0. When HP falls below 60%, P Atk. +  + 1249. When damaged to a point, has a chance of recovering 10% of Max HP Enchant Pow
+		name: Superior HP Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2, Max HP + 606, Max CP + 296 and HP Recovery Bonus + 7.3. While sitting, HP Recovery Bonus + 7 and MP recovery bonus + 3.7. When HP falls below 60%, P. Atk. + 629. When damaged to a point, has a chance of recovering 10% of Max HP.
+		icon_name: icon.skill10256
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10256" levels="1" name="Superior HP Mastery">
-		<table name="#maxHp">606</table>
+		<table name="#magicLevel">85</table>
 		<table name="#maxCp">296</table>
+		<table name="#maxHp">606</table>
+		<table name="#pAtk">629</table>
 		<table name="#regHp">7.3</table>
 		<table name="#regHpResting">7</table>
 		<table name="#regMp">3.7</table>
-		<table name="#pAtk">629</table>
-		<table name="#enchantedskillpAtk">0</table>
-		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10256"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="212;148;290;211"/>
+		<set name="icon" value="icon.skill10256"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#maxHp">645 685 724 764 804 843 883 922 962 1002</table>
 			<table name="#maxCp">315 334 353 373 392 411 431 450 469 489</table>
@@ -401,7 +606,6 @@
 			<table name="#regHpResting">7.5 7.9 8.4 8.8 9.3 9.8 10.2 10.7 11.1 11.6</table>
 			<table name="#regMp">3.9 4.2 4.4 4.6 4.9 5.1 5.3 5.5 5.8 6.0</table>
 			<table name="#pAtk">754 809 864 919 974 1029 1084 1139 1194 1249</table>
-			<!--table name="#enchantedskillpAtk">183 194 205 217 228 239 251 262 273 285</table-->
 			<table name="#magicLevel">86 87 88 89 90 91 92 93 94 95</table>
 		</enchant>
 		<for>
@@ -418,22 +622,35 @@
 			<add order="0x40" stat="pAtk" value="#pAtk">
 				<player percentHP="60"/>
 			</add>
-			<add order="0x40" stat="pAtk" value="#enchantedskillpAtk">
-				<player percentHP="30"/>
-			</add>
 		</for>
 	</skill>
     <!--
 		Superior Spirit Mastery - STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30.
 
+		name: Superior Spirit Mastery
+		level: 1
+		mp_consume: 0
+		description: STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30.
+		icon_name: icon.skill10257
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10257" levels="1" name="Superior Spirit Mastery">
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10257"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="329;328"/>
+		<set name="icon" value="icon.skill10257"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<add order="0x10" stat="STR" value="2"/>
 			<add order="0x40" stat="rootResist" value="30"/>
@@ -571,6 +788,22 @@
 		LvL.908	description: Attacks target with 19711 Power added to P Atk.
 		LvL.909	description: Attacks target with 20100 Power added to P Atk.
 		LvL.910	description: Attacks target with 20489 Power added to P Atk.
+		name: Armor Destruction
+		level: 1
+		mp_consume: 50
+		description: Attacks target with 11159 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10258
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.09
+		cool_time: 0.2
+		reuse_delay: 2
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
 	-->
     <skill id="10258" levels="8" name="Armor Destruction">
 		<table name="#element">none</table>
@@ -780,83 +1013,104 @@
 		LvL.908	description: Attacks target with 35022 added to P Atk.	reuse_delay: 5
 		LvL.909	description: Attacks target with 35710 added to P Atk.	reuse_delay: 5
 		LvL.910	description: Attacks target with 36397 added to P Atk.	reuse_delay: 4
+		name: Mega Strike
+		level: 1
+		mp_consume: 65
+		description: Attacks target with 19893 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword Over-hit. Critical. Ignores Shield Defense.
+		icon_name: icon.skill10260
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.49
+		cool_time: 0.2
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
 	-->
     <skill id="10260" levels="8" name="Mega Strike">
-		<table name="#power">15303 15831 16889 17947 19005 20063 21121 22179</table>
-		<table name="#mpConsume2">65 66 69 71 73 76 78 80</table>
-		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">65 66 69 71 73 76 78 80</table>
+		<table name="#power">19893 20581 21956 23332 24707 26082 27458 28833</table>
+		<table name="#powerPvP">0</table>
 		<table name="#reuseDelay">7000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="analog_skills" value="280;5;921;492"/>
+		<set name="chargeBoost" value="true"/>
+		<set name="cond_charges" value="3"/>
 		<set name="coolTime" value="200"/>
+		<set name="critRate" value="10"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
 		<set name="hitTime" value="1490"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10260"/>
+		<set name="ignoreShield" value="true"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="overHit" value="true"/>
-		<set name="critRate" value="10"/>
-		<set name="SSBoost" value="2.0"/>
-		<set name="cond_charges" value="3"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="ignoreShield" value="true"/>
-		<set name="chargeBoost" value="true"/>
-		<set name="analog_skills" value="280;5;921;492"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#mpConsume2">76 73 70 67 64 60 57 54 51 48</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
-			<table name="#powerPvP">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
+			<table name="#powerPvP">20209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
-			<table name="#power">23237 23766 24295 24824 25353 25882 26411 26940 27469 27998</table>
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#power">30209 30896 31584 32272 32959 33647 34334 35022 35710 36397</table>
+			<table name="#reuseDelay">6000 6000 6000 6000 5000 5000 5000 5000 5000 4000</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
@@ -986,6 +1240,22 @@
 		LvL.908	description: Inflicts a powerful strike on target with 35977 Power added to P Atk.	reuse_delay: 22
 		LvL.909	description: Inflicts a powerful strike on target with 36681 Power added to P Atk.	reuse_delay: 21
 		LvL.910	description: Inflicts a powerful strike on target with 37386 Power added to P Atk.	reuse_delay: 21
+		name: Power Bomber
+		level: 1
+		mp_consume: 84
+		description: Inflicts a powerful strike on target with 20483 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, o
+		icon_name: icon.skill10262
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.69
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
 	-->
     <skill id="10262" levels="6" name="Power Bomber">
 		<table name="#activateRate">50</table>
@@ -1002,6 +1272,7 @@
 		<set name="abnormal_type" value="knockdown"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="analog_skills" value="498;315;261;81"/>
+		<set name="castRange" value="40"/>
 		<set name="chainIndex" value="0"/>
 		<set name="chainSkillId" value="10258"/>
 		<set name="cond_charges" value="3"/>
@@ -1066,6 +1337,10 @@
 			<table name="#element">unholy</table>
 			<table name="#power">31047 31751 32455 33160 33864 34568 35273 35977 36681 37386</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#power">31047 31751 32455 33160 33864 34568 35273 35977 36681 37386</table>
+			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 20000</table>
 		</enchant>
 		<for>
 			<effect name="KnockDown">
@@ -1201,39 +1476,55 @@
 		LvL.908	description: Attacks target with 900 power, lowers P Def.
 		LvL.909	description: Attacks target with 916 power, lowers P Def.
 		LvL.910	description: Attacks target with 932 power, lowers P Def.
+		name: Hurricane Blaster
+		level: 1
+		mp_consume: 58
+		description: Attacks target with 551 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dualsword.
+		icon_name: icon.skill10263
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 7
+		base_elemental_skill_id: 0
 	-->
     <skill id="10263" levels="8" name="Hurricane Blaster">
-		<table name="#power">551 566 598 630 662 693 725 757</table>
-		<table name="#pDef"> 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.7</table>
-		<table name="#mpConsume2">58 59 61 63 65 67 69 71</table>
-		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">58 59 61 63 65 67 69 71</table>
+		<table name="#pDef"> 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.7</table>
+		<table name="#power">551 566 598 630 662 693 725 757</table>
+		<table name="#powerPvP">0</table>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="pd_down"/>
 		<set name="activateRate" value="40"/>
-		<set name="reuseDelay" value="1"/>
+		<set name="analog_skills" value="939;345;346"/>
+		<set name="castRange" value="600"/>
+		<set name="charges" value="10"/>
+		<set name="criticalRate" value="15"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
 		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill10263"/>
+		<set name="isOffensive" value="true"/>
 		<set name="isSkillTimePermanent" value="true"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10263"/>
-		<set name="nextAction" value="attack"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="1"/>
 		<set name="skillType" value="CHARGE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="600"/>
-		<set name="isOffensive" value="true"/>
-		<set name="criticalRate" value="15"/>
-		<set name="charges" value="10"/>
-		<set name="analog_skills" value="939;345;346"/>
-		<set name="abnormal_time" value="20"/>
-		<set name="abnormal_level" value="4"/>
-		<set name="abnormal_type" value="pd_down"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -1281,6 +1572,10 @@
 			<table name="#element">unholy</table>
 			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#power">789 805 820 836 852 868 884 900 916 932</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
@@ -1417,43 +1712,60 @@
 		LvL.908	description: Attacks nearby enemies with 20340 Power added to P Atk.	reuse_delay: 3
 		LvL.909	description: Attacks nearby enemies with 20739 Power added to P Atk.	reuse_delay: 3
 		LvL.910	description: Attacks nearby enemies with 21139 Power added to P Atk.	reuse_delay: 3
+		name: Eruption
+		level: 1
+		mp_consume: 122
+		description: Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, 
+		icon_name: icon.skill10265
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 1.39
+		cool_time: 0.2
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 10
+		base_elemental_skill_id: 0
 	-->
     <skill id="10265" levels="8" name="Eruption">
+		<table name="#activateRate">40 42 44 46 48 50 52 54</table>
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">122 124 129 133 137 142 146 151</table>
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<table name="#mpConsume2">122 124 129 133 137 142 146 151</table>
-		<table name="#activateRate">40 42 44 46 48 50 52 54</table>
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#reuseDelay">5000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="1389"/>
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="17;36;9;496"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="200"/>
+		<set name="criticalRate" value="15"/>
+		<set name="decreaseOnNoPole" value="0.9"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1389"/>
 		<set name="icon" value="icon.skill10265"/>
+		<set name="increaseOnPole" value="1.5"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
-		<set name="power" value="#power"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="criticalRate" value="15"/>
-		<set name="trait" value="SHOCK"/>
-		<set name="decreaseOnNoPole" value="0.9"/>
-		<set name="increaseOnPole" value="1.5"/>
-		<set name="SSBoost" value="2.0"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="300"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="17;36;9;496"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="SHOCK"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -1503,11 +1815,11 @@
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<!--<enchant type="9" name="Recycle">
+		<enchant type="9" name="Recycle">
 			<table name="#power">17545 17945 18344 18743 19142 19542 19941 20340 20739 21139</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">4000 4000 4000 4000 4000 4000 3000 3000 3000 3000</table>
-		</enchant>-->
+		</enchant>
 		<for>
 			<effect name="Stun"/>
 			<effect name="RemoveTarget" time="0" chance="80"/>
@@ -1570,13 +1882,29 @@
 		LvL.908	reuse_delay: 46
 		LvL.909	reuse_delay: 44
 		LvL.910	reuse_delay: 42
+		name: Giant Punch
+		level: 1
+		mp_consume: 76
+		description: Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+		icon_name: icon.skill10266
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1
+		cool_time: 0.3
+		reuse_delay: 60
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
 	-->
     <skill id="10266" levels="8" name="Giant Punch">
 		<table name="#ench4Hex">1</table>
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">76 79 81 84 87 90 92 95</table>
 		<table name="#power">0</table>
-		<table name="#reuseDelay">120000</table>
+		<table name="#reuseDelay">60000</table>
 		<table name="#Type">DEBUFF</table>
 		<set name="abnormal_effect" value="KNOCKDOWN"/>
 		<set name="abnormal_level" value="1"/>
@@ -1615,6 +1943,9 @@
 		</enchant>
 		<enchant type="4" name="Chance">
 			<table name="#ench4Hex">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">59000 58000 56000 54000 52000 50000 48000 46000 44000 42000</table>
 		</enchant>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
@@ -1679,34 +2010,50 @@
 		LvL.908	reuse_delay: 11
 		LvL.909	reuse_delay: 10
 		LvL.910	reuse_delay: 10
+		name: Hurricane Rush
+		level: 1
+		mp_consume: 38
+		description: Shoulder charge target to Stun it for 3 seconds. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped.
+		icon_name: icon.skill10267
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0.5
+		cool_time: 0.1
+		reuse_delay: 15
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
 	-->
     <skill id="10267" levels="6" name="Hurricane Rush">
-		<table name="#mpConsume2">38 39 41 43 44 47</table>
 		<table name="#chance"> 61 62 63 64 65 66 67 68 69 70 </table>
-		<table name="#magicLevel">85 87 90 93 96 99</table>
-		<table name="#reuseDelay">15000</table>
 		<table name="#ench4Hex">1</table>
-		<table name="#Type">DEBUFF</table>
+		<table name="#magicLevel">85 87 90 93 96 99</table>
+		<table name="#mpConsume2">38 39 41 43 44 47</table>
 		<table name="#power">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="100"/>
-		<set name="hitTime" value="500"/>
+		<table name="#reuseDelay">15000</table>
+		<table name="#Type">DEBUFF</table>
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10267"/>
-		<set name="castRange" value="600"/>
 		<set name="activateRate" value="#chance"/>
-		<set name="fly_type" value="CHARGE"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="100"/>
 		<set name="fly_radius" value="55"/>
-		<set name="saveVs" value="CON"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill10267"/>
 		<set name="levelModifier" value="2"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="CON"/>
 		<set name="skillType" value="#Type"/>
 		<set name="SSBoost" value="2.0"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -1729,6 +2076,9 @@
 		<enchant type="4" name="Chance">
 			<table name="#ench4Hex">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90</table>
 		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">14000 14000 13000 13000 12000 12000 11000 11000 10000 10000</table>
+		</enchant>
 		<for>
 			<effect name="Stun" chance="60">
 				<mul order="0x30" stat="pDef" value="#ench4Hex"/>
@@ -1744,24 +2094,40 @@
 		LvL.4	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 45
 		LvL.5	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 46
 		LvL.6	description:  Continuously decreases nearby enemies' HP Continuously decreases your MP	mp_consume: 47
+		name: Rolling Thunder
+		level: 1
+		mp_consume: 40
+		description: Becomes enveloped with the energy of a whirlwind. Continuously decreases nearby enemies' HP. Continuously decreases your MP.
+		icon_name: icon.skill10268
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10268" levels="6" name="Rolling Thunder">
+		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<table name="#mpConsume2">40 42 43 45 46 47</table>
 		<table name="#power">225 226 227 228 229 242</table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 </table>
-		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<set name="abnormal_effect" value="HURRICANE_SELF"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10268"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CONT"/>
-		<set name="operateType" value="OP_TOGGLE"/>
 		<set name="analog_skills" value="423"/>
-		<set name="useSS" value="false"/>
+		<set name="icon" value="icon.skill10268"/>
 		<set name="isHideStartMessage" value="true"/>
 		<set name="isHideUseMessage" value="true"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="power" value="#power"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="useSS" value="false"/>
 		<for>
 			<effect count="-1" name="ManaDamOverTime" time="5" value="57" hide_time="true" combine="true">
 				<triggers>
@@ -1898,31 +2264,49 @@
 		LvL.908	description: Jumps to attack frontal enemies with 17328 Power added to P Atk.	reuse_delay: 3
 		LvL.909	description: Jumps to attack frontal enemies with 17669 Power added to P Atk.	reuse_delay: 3
 		LvL.910	description: Jumps to attack frontal enemies with 18011 Power added to P Atk.	reuse_delay: 3
+		name: Jump Attack
+		level: 1
+		mp_consume: 111
+		description: Jumps to attack frontal enemies with 10508 Power added to P. Atk. and decreases their Speed by 180 for 5 seconds. The more Momentum used the more damage inflicted, up to a maximum of 5 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt we
+		icon_name: icon.skill10269
+		hp_consume: 0
+		cast_range: 600
+		hit_time: 0.89
+		cool_time: 0.5
+		reuse_delay: 5
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 15
+		base_elemental_skill_id: 0
 	-->
     <skill id="10269" levels="7" name="Jump Attack">
-		<table name="#pwr">10508 11190 11872 12554 13236 13918 14600</table>
-		<table name="#mpConsume2">111 114 118 122 126 130 134</table>
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<table name="#magicLevel">87 89 91 93 95 97 99</table>
+		<table name="#mpConsume2">111 114 118 122 126 130 134</table>
+		<table name="#pwr">10508 11190 11872 12554 13236 13918 14600</table>
 		<table name="#reuseDelay">5000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="889"/>
-		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_type" value="speed_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10269"/>
+		<set name="analog_skills" value="793;995"/>
 		<set name="castRange" value="600"/>
-		<set name="fly_type" value="CHARGE"/>
 		<set name="cond_charges" value="3"/>
+		<set name="coolTime" value="500"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="hitTime" value="890"/>
+		<set name="icon" value="icon.skill10269"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#pwr"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="200"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_AREA"/>
-		<set name="analog_skills" value="793;995"/>
 		<cond msgId="113">
 			<and>
 				<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
@@ -1936,6 +2320,47 @@
 		<enchant type="2" name="Chance">
 			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
 			<table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
+		</enchant>
+		<enchant type="3" name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Water Attack">
+			<table name="#element">water</table>
+			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="5" name="Wind Attack">
+			<table name="#element">wind</table>
+			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="6" name="Earth Attack">
+			<table name="#element">earth</table>
+			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="7" name="Holy Attack">
+			<table name="#element">Holy</table>
+			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="8" name="Dark Attack">
+			<table name="#element">unholy</table>
+			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#pwr">14941 15282 15623 15964 16305 16646 16987 17328 17669 18011</table>
+			<table name="#magicLevel">99</table>
+			<table name="#reuseDelay">4000 4000 4000 4000 4000 4000 3000 3000 3000 3000</table>
 		</enchant>
 		<for>
 			<effect name="Debuff" chance="80">
@@ -1959,25 +2384,41 @@
 		LvL.108	description: Instantly recovers 35% of Max HP and 15% of Max CP For 3 minutes 36 seconds, Max HP + 35% and Max CP + 15%.
 		LvL.109	description: Instantly recovers 35% of Max HP and 15% of Max CP For 3 minutes 48 seconds, Max HP + 35% and Max CP + 15%.
 		LvL.110	description: Instantly recovers 35% of Max HP and 15% of Max CP For 4 minutes, Max HP + 35% and Max CP + 15%.
+		name: Second Wind
+		level: 1
+		mp_consume: 43
+		description: Instantly recovers 35% of Max HP and 15% of Max CP. For 2 minutes, Max HP + 35% and Max CP + 15%.
+		icon_name: icon.skill10270
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10270" levels="1" name="Second Wind">
 		<table name="#time">120</table>
-		<set name="reuseDelay" value="120000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1200"/>
-		<set name="abnormal_time" value="#time"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#time"/>
 		<set name="abnormal_type" value="force_hp_up"/>
-		<set name="magicLevel" value="93"/>
-		<set name="icon" value="icon.skill10270"/>
+		<set name="analog_skills" value="1561;121;20006;441"/>
+		<set name="coolTime" value="300"/>
 		<set name="effectPoint" value="635"/>
+		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill10270"/>
+		<set name="magicLevel" value="93"/>
 		<set name="mpConsume2" value="43"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<set name="analog_skills" value="1561;121;20006;441"/>
-		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#time">125 130 135 140 145 150 155 160 165 170</table>
+		<enchant type="1" levels="10" group="7" name="Time">
+			<table name="#time">132 144 156 168 180 192 204 216 228 240</table>
 		</enchant>
 		<for>
 			<effect>
@@ -2044,35 +2485,51 @@
 		LvL.901	reuse_delay: 3
 		LvL.909	reuse_delay: 2
 		LvL.910	reuse_delay: 2
+		name: Power Provoke
+		level: 1
+		mp_consume: 76
+		description: Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def.
+		icon_name: icon.skill10271
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 4
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10271" levels="2" name="Power Provoke">
-		<table name="#inc">1.2 1.2</table>
-		<table name="#dec">0.76 0.76</table>
-		<table name="#mpConsume2">76 83</table>
-		<table name="#activateRate">75</table>
-		<table name="#magicLevel">97 99</table>
 		<table name="#abnormal_time">10</table>
+		<table name="#activateRate">75</table>
+		<table name="#dec">0.76 0.76</table>
+		<table name="#stunResist">0</table>
+		<table name="#inc">1.2 1.2</table>
+		<table name="#magicLevel">97 99</table>
+		<table name="#knockDownResist">0</table>
+		<table name="#mpConsume2">76 83</table>
 		<table name="#reuseDelay">4000</table>
 		<table name="#skillRadius">600 700</table>
-		<table name="#mentalResist">0</table>
-		<table name="#fireResist">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1200"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="pd_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10271"/>
 		<set name="activateRate" value="#activateRate"/>
-		<set name="castRange" value="80"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="624"/>
-		<set name="skillRadius" value="#skillRadius"/>
 		<set name="analog_skills" value="503;286"/>
+		<set name="castRange" value="80"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="624"/>
+		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill10271"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillRadius" value="#skillRadius"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
 		<set name="trait" value="DERANGEMENT"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
@@ -2082,29 +2539,26 @@
 		</enchant>
 		<enchant type="2" name="Chance">
 			<table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
-			<table name="#abnormal_time">11 12 13 14 15 16 17 18 19 20</table>
 		</enchant>
-		<enchant type="3" levels="10" name="Radius">
+		<enchant type="3" levels="10" name="Distance">
 			<table name="#skillRadius">720 740 760 780 800 820 840 860 880 900</table>
 		</enchant>
-		<enchant type="4" levels="10" name="Mental">
-			<table name="#mentalResist">1 2 3 4 5 6 7 8 9 10</table>
+		<enchant type="4" levels="10" name="Break Knockdown">
+			<table name="#knockDownResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="5" levels="10" name="Fire">
-			<table name="#fireResist">20</table>
+		<enchant type="5" levels="10" name="Break Shock">
+			<table name="#stunResist">20</table>
 		</enchant>
-		<!--<enchant type="9" name="Recycle">
+		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">3000 3000 3000 3000 3000 3000 3000 3000 2000 2000</table>
-		</enchant>-->
+		</enchant>
 		<for>
 			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" value="#inc"/>
 				<mul order="0x30" stat="pAtkSpd" value="#inc"/>
 				<mul order="0x30" stat="pDef" value="#dec"/>
-				<add order="0x40" stat="rootResist" value="#mentalResist"/>
-				<add order="0x40" stat="sleepResist" value="#mentalResist"/>
-				<add order="0x40" stat="mentalResist" value="#mentalResist"/>
-				<add order="0x40" stat="defenceFire" value="#fireResist"/>
+				<sub order="0x40" stat="knockDownResist" value="#knockDownResist"/>
+				<sub order="0x40" stat="stunResist" value="#stunResist"/>
 			</effect>
 		</for>
 	</skill>
@@ -2173,36 +2627,52 @@
 		LvL.908	reuse_delay: 91
 		LvL.909	reuse_delay: 87
 		LvL.910	reuse_delay: 84
+		name: Lightning Disarm
+		level: 1
+		mp_consume: 92
+		description: Disarms nearby enemies for 5 seconds. Lowers P. Atk. and M. Atk. by 10%.
+		icon_name: icon.skill10273
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 120
+		is_magic: 0
+		oper_type: 3
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10273" levels="4" name="Lightning Disarm">
-		<table name="#atk">0.9 0.85 0.8 0.75</table>
-		<table name="#mpConsume2">92</table>
-		<table name="#skillRadius">200</table>
-		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#reuseDelay">120000</table>
 		<table name="#abnormal_time">5</table>
+		<table name="#atk">0.9 0.85 0.8 0.75</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mentalResist">0</table>
+		<table name="#mpConsume2">92</table>
+		<table name="#reuseDelay">120000</table>
+		<table name="#skillRadius">200</table>
 		<table name="#stunResist">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="abnormal_effect" value="DOT_BLEEDING"/>
+		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="disarm"/>
+		<set name="activateRate" value="80"/>
+		<set name="analog_skills" value="775;794"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1200"/>
-		<set name="abnormal_effect" value="DOT_BLEEDING"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="2"/>
-		<set name="abnormal_type" value="disarm"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="skillRadius" value="#skillRadius"/>
 		<set name="icon" value="icon.skill10273"/>
-		<set name="saveVs" value="STR"/>
 		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="maxChance" value="100"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="activateRate" value="80"/>
-		<set name="maxChance" value="100"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="STR"/>
+		<set name="skillRadius" value="#skillRadius"/>
 		<set name="skillType" value="DEBUFF"/>
-		<set name="trait" value="DISARM"/>
 		<set name="target" value="TARGET_AREA"/>
-		<set name="analog_skills" value="775;794"/>
+		<set name="trait" value="DISARM"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -2272,37 +2742,53 @@
 		LvL.908	reuse_delay: 228
 		LvL.909	reuse_delay: 219
 		LvL.910	reuse_delay: 210
+		name: Berserker
+		level: 1
+		mp_consume: 38
+		description: You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. 
+		icon_name: icon.skill10274
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 3
+		cool_time: 0.5
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10274" levels="4" name="Berserker">
-		<table name="#mpConsume2">38 41 45 47</table>
-		<table name="#derangementVuln"> 40 50 60 70 </table>
-		<table name="#runSpd"> 10 15 20 25 </table>
-		<table name="#pAtk"> 1.05 1.07 1.09 1.11 </table>
-		<table name="#accPhysical"> 10 15 20 25 </table>
-		<table name="#pDef"> 1.05 1.07 1.09 1.11 </table>
-		<table name="#pAtkSpd"> 1.05 1.07 1.09 1.11 </table>
-		<table name="#cAtkAdd"> 200 250 300 350 </table>
-		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3 4</table>
 		<table name="#abnormal_time">60</table>
+		<table name="#accPhysical"> 10 15 20 25 </table>
+		<table name="#cAtkAdd"> 200 250 300 350 </table>
+		<table name="#derangementVuln"> 40 50 60 70 </table>
 		<table name="#hp_penalty">70</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">38 41 45 47</table>
+		<table name="#pAtk"> 1.05 1.07 1.09 1.11 </table>
+		<table name="#pAtkSpd"> 1.05 1.07 1.09 1.11 </table>
+		<table name="#pDef"> 1.05 1.07 1.09 1.11 </table>
 		<table name="#reuseDelay">300000</table>
+		<table name="#runSpd"> 10 15 20 25 </table>
 		<table name="#stunPower">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1200"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="special_berserker"/>
+		<set name="analog_skills" value="176;130;297;1510;301;25;292;317"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="624"/>
+		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill10274"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10274"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="624"/>
-		<set name="analog_skills" value="176;130;297;1510;301;25;292;317"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<cond msgId="113">
 			<player percentHP="#hp_penalty"/>
 		</cond>
@@ -2341,7 +2827,11 @@
 					<player percentHP="30"/>
 				</add>
 			</effect>
-			<!--<effect name="Salvation"/> pay fucking attention to skill description, after the target is dead the caster with this skill will get 20% of his hp restored -->
+			<!-- after the target is dead the caster with this skill will get 20% of his hp restored 
+			<effect name="HealPercent" time="0" value="20">
+				<target percentHP="0"/>
+			</effect>
+			 -->
 		</for>
 	</skill>
     <!--
@@ -2386,38 +2876,60 @@
 		LvL.908	description: Inflicts a powerful attack on target with 76053 Power added to P Atk.	reuse_delay: 22
 		LvL.909	description: Inflicts a powerful attack on target with 77424 Power added to P Atk.	reuse_delay: 21
 		LvL.910	description: Inflicts a powerful attack on target with 78795 Power added to P Atk.	reuse_delay: 20
+		name: Infinity Strike
+		level: 1
+		mp_consume: 1178
+		description: Inflicts a powerful attack on target with 65085 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical.
+		icon_name: icon.skill10275
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 9
+		base_elemental_skill_id: 0
 	-->
     <skill id="10275" levels="1" name="Infinity Strike">
 		<table name="#mpConsume2">1178</table>
-		<table name="#power">53213</table>
+		<table name="#power">65085</table>
 		<table name="#powerPvP">0</table>
 		<table name="#reuseDelay">30000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="10"/>
 		<set name="hitTime" value="5000"/>
+		<set name="icon" value="icon.skill10275"/>
 		<set name="magicLevel" value="99"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10275"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
+		<set name="onCrit" value="true"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="overHit" value="true"/>
-		<set name="onCrit" value="true"/>
-		<set name="criticalRate" value="10"/>
-		<set name="SSBoost" value="2.0"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2">1166 1154 1135 1120 1052 1021 977 955 920 900</table>
-			<table name="#power">54436 55659 56882 58105 59328 60551 61774 62997 64220 65443</table>
+			<table name="#mpConsume2">1131 1083 1037 989 942 896 848 801 753 707</table>
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#powerPvP">54436 55659 56882 58105 59328 60551 61774 62997 64220 65443</table>
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#powerPvP">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 20000</table>
 		</enchant>
 	</skill>
     <!--
@@ -2449,25 +2961,41 @@
 		LvL.208	description: Enchant Power CP: Recovers 8% CP
 		LvL.209	description: Enchant Power CP: Recovers 9% CP
 		LvL.210	description: Enchant Power CP: Recovers 10% CP
+		name: Force of Nature
+		level: 1
+		mp_consume: 38
+		description: Immediately increases Momentum to its maximum level.
+		icon_name: icon.skill10276
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 60
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10276" levels="1" name="Force of Nature">
-		<table name="#hpHealPower">0</table>
-		<table name="#hpHealCount">0</table>
-		<table name="#cpHealPower">0</table>
 		<table name="#cpHealCount">0</table>
-		<set name="reuseDelay" value="60000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="1200"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10276"/>
-		<set name="hpConsume" value="80"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="power" value="200"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CHARGE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="fullCharge" value="true"/>
+		<table name="#cpHealPower">0</table>
+		<table name="#hpHealCount">0</table>
+		<table name="#hpHealPower">0</table>
 		<set name="charges" value="10"/>
+		<set name="coolTime" value="300"/>
+		<set name="fullCharge" value="true"/>
+		<set name="hitTime" value="1200"/>
+		<set name="hpConsume" value="80"/>
+		<set name="icon" value="icon.skill10276"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="200"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="skillType" value="CHARGE"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Hp Heal">
 			<table name="#hpHealPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#hpHealCount">1</table>
@@ -2517,9 +3045,26 @@
 		LvL.908	reuse_delay: 136
 		LvL.909	reuse_delay: 131
 		LvL.910	reuse_delay: 126
+		name: Final Cry
+		level: 1
+		mp_consume: 38
+		description: Increases P. Atk. + 20% and skill damage + 10% for 2 minutes. Increases general/skill attack damage + 5% during PvP.
+		icon_name: icon.skill10277
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 180
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10277" levels="4" name="Final Cry">
-		<table name="#pAtk">1.1 1.11 1.13 1.16</table>
+		<table name="#pAtk">1.2 1.22 1.26 1.33</table>
+		<table name="#pvePhysSkillDmgBonus">1.1 1.11 1.13 1.16</table> 
 		<table name="#mpConsume"> 38 41 45 47 </table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3 4</table>
@@ -2538,9 +3083,22 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="effectPoint" value="408"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#magicLevel">99</table>
+			<table name="#reuseDelay">174000 169000 163000 158000 153000 147000 142000 136000 131000 126000</table>
+		</enchant>
+		<enchant type="9" name="Time">
+			<table name="#magicLevel">99</table>
+			<table name="#abnormal_time">132 144 156 168 180 192 204 216 228 240</table>
+		</enchant>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+				<mul order="0x30" stat="pvePhysSkillDmgBonus" value="#pvePhysSkillDmgBonus"/>
 				<mul order="0x30" stat="pvpPhysDmgBonus" value="1.05"/>
 				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="1.05"/>
 			</effect>
@@ -2586,26 +3144,42 @@
 		LvL.908	reuse_delay: 22
 		LvL.909	reuse_delay: 21
 		LvL.910	reuse_delay: 21
+		name: Reduce Anger
+		level: 1
+		mp_consume: 76
+		description: Decreases the aggression of nearby enemies toward the caster.
+		icon_name: icon.skill10278
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.2
+		cool_time: 0.3
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10278" levels="8" name="Reduce Anger">
-		<table name="#mpConsume2">76 77 80 83 86 88 91 94</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">76 77 80 83 86 88 91 94</table>
 		<table name="#reuseDelay">30000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="analog_skills" value="833;317"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1200"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10278"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="70"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="saveVs" value="MEN"/>
-		<set name="unaggroing" value="true"/>
-		<set name="skillType" value="AGGRESSION"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="trait" value="DERANGEMENT"/>
+		<set name="power" value="70"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="700"/>
-		<set name="analog_skills" value="833;317"/>
+		<set name="skillType" value="AGGRESSION"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="unaggroing" value="true"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">90 86 82 78 75 71 67 63 60 56</table>
 			<table name="#magicLevel">99</table>
@@ -2683,28 +3257,46 @@
 		LvL.908	reuse_delay: 228
 		LvL.909	reuse_delay: 219
 		LvL.910	reuse_delay: 210
+		name: Giant Barrier
+		level: 1
+		mp_consume: 42
+		description: Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower.
+		icon_name: icon.skill10279
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 300
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10279" levels="1" name="Giant Barrier">
-		<table name="#mpConsume2">42</table>
-		<table name="#magicLevel">91</table>
 		<table name="#abnormal_time">10</table>
+		<table name="#magicLevel">91</table>
+		<table name="#mpConsume2">42</table>
 		<table name="#reuseDelay">300000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<table name="#hp">70</table>
+		<table name="#stunPower">0</table>
+		<set name="abnormal_effect" value="INVINCIBILITY"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="abnormal_invincibility"/>
+		<set name="analog_skills" value="442;34;1514;443"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1200"/>
-		<set name="abnormal_effect" value="INVINCIBILITY"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="4"/>
-		<set name="abnormal_type" value="abnormal_invincibility"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10279"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="442;34;1514;443"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<cond msgId="113">
-			<player percentHP="20"/>
+			<player percentHP="#hp"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">40 38 36 35 33 31 30 28 26 25</table>
@@ -2714,10 +3306,21 @@
 			<table name="#magicLevel">99</table>
 			<table name="#abnormal_time">11 12 13 14 15 16 17 18 19 20</table>
 		</enchant>
+		<enchant type="3" name="Decrease Penalty">
+			<table name="#hp">71 72 73 74 75 76 77 78 79 80</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="3" name="Chance Stun">
+			<table name="#stunPower">1 2 3 4 5 6 7 8 9 10</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
 		<for>
+			<effect>
+				<add order="0x04" stat="stunPower" value="#stunPower"/>
+			</effect>
 			<effect name="DebuffImmunity"/>
 			<effect name="Invulnerable">
-				<player percentHP="20"/>
+				<player percentHP="#hp"/>
 				<mul order="0x30" stat="runSpd" value="1.3"/>
 			</effect>
 			<effect name="i_dispel_by_category" time="0">
@@ -2730,15 +3333,31 @@
     <!--
 		Momentum Charge - Continuously consumes HP to produce Momentum.
 
+		name: Momentum Charge
+		level: 1
+		mp_consume: 58
+		description: Continuously consumes HP to produce Momentum.
+		icon_name: icon.skill10283
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 6
+		element_guess: 0
+		cast_style_guess: 3
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10280" levels="1" name="Momentum Charge">
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10283"/>
-		<set name="hpConsume" value="58"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CONT"/>
-		<set name="operateType" value="OP_TOGGLE"/>
 		<set name="analog_skills" value="8;50"/>
+		<set name="hpConsume" value="58"/>
+		<set name="icon" value="icon.skill10283"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect count="-1" name="DamOverTime" time="1" value="58">
 				<triggers>
@@ -2792,58 +3411,94 @@
 		LvL.908	description: Attacks and knocks down nearby enemies at the speed of light with 55777 Power added to P Atk.	reuse_delay: 22
 		LvL.909	description: Attacks and knocks down nearby enemies at the speed of light with 56783 Power added to P Atk.	reuse_delay: 21
 		LvL.910	description: Attacks and knocks down nearby enemies at the speed of light with 57789 Power added to P Atk.	reuse_delay: 20
+		name: Sonic Star
+		level: 1
+		mp_consume: 1103
+		description: Attacks and knocks down nearby enemies at the speed of light with 44711 Power added to P. Atk. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon. Over-hit. Critical.
+		icon_name: icon.skill10281
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 7.5
+		cool_time: 0.5
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 10
+		base_elemental_skill_id: 0
 	-->
     <skill id="10281" levels="2" name="Sonic Star">
-		<table name="#mpConsume2">1103 1558</table>
-		<table name="#power">21958 23344</table>
-		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">95 98</table>
+		<table name="#mpConsume2">1103 1158</table>
+		<table name="#power">44711 46723</table>
+		<table name="#powerPvP">0</table>
 		<table name="#reuseDelay">30000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="10"/>
 		<set name="hitTime" value="7500"/>
+		<set name="icon" value="icon.skill10281"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10281"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="power" value="#power"/>
 		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="CON"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="skillRadius" value="570"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="2.0"/>
 		<set name="target" value="TARGET_AREA"/>
-		<set name="overHit" value="true"/>
-		<set name="criticalRate" value="10"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#power">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
-			<table name="#mpConsume2">385 369 353 337 321 305 289 273 257 241</table>
+			<table name="#power">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#mpConsume2">1131 1083 1037 989 942 896 848 801 753 707</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#power">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
-			<table name="#powerPvP">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
+			<table name="#power">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#powerPvP">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#power">48735 49741 50747 51753 52759 53765 54771 55777 56783 57789</table>
+			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 20000</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
     <!--
 		Increase Momentum - none
 
+		name: Increase Momentum
+		level: 1
+		mp_consume: 0
+		description: none
+		icon_name: icon.skill10283
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10283" levels="1" name="Increase Momentum">
-		<!-- Походу вот этот скилл помоему связан со скилом 10281 -->
-		<set name="reuseDelay" value="4000"/>
-		<set name="magicLevel" value="97"/>
-		<set name="icon" value="icon.skill10283"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CHARGE"/>
 		<set name="charges" value="10"/>
+		<set name="icon" value="icon.skill10283"/>
+		<set name="magicLevel" value="97"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="CHARGE"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 		</for>
 	</skill>
@@ -2853,20 +3508,35 @@
 		LvL.1	icon_name: icon.skill10284	description: You are imbued with Rage. P Atk. +  + 10% and Speed + 5 when equipped with a fist weapon/sword/blunt/dualsword/spear. 20% chance of raising Lightning Force to level 2 during a critical attack.
 		LvL.2	icon_name: icon.skill10284_2	description: You are further imbued with Rage. + 15% and Speed + 7 when equipped with a fist weapon/sword/blunt/dualsword/spear. 10% chance of raising Lightning Force to level 3 during a critical attack.
 		LvL.3	icon_name: icon.skill10284_3	description: You feel Enraged. P Atk. +  + 30% and Speed + 10 when equipped with a fist weapon/sword/blunt/dualsword/spear. Has a 10% chance of becoming Enraged during a critical attack.
+		name: Lightning Force
+		level: 1
+		mp_consume: 0
+		description: You are imbued with Rage. P. Atk. + 10% and Speed + 5 when equipped with a fist weapon/sword/blunt/dualsword/spear. 20% chance of raising Lightning Force to level 2 during a critical attack.
+		icon_name: icon.skill10284
+		hp_consume: 0
+		cast_range: 400
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 4
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10284" levels="3" name="Lightning Force">
-		 <!--  По сути верно но нада проверять! -->
-		<table name="#pAtk">1.10 1.12 1.15</table>
-		<table name="#pAtk2">1.10 1.15 1.20</table>
-		<table name="#chance">20 10 0</table>
-		<table name="#levelfit">1 2 3</table>
 		<table name="#abnormal_level">1 2 3</table>
 		<table name="#abnormal_time">30 20 15</table>
+		<table name="#chance">20 10 10</table>
+		<table name="#levelfit">1 2 3</table>
+		<table name="#pAtk">1.10 1.15 1.30</table>
+		<table name="#speed">5 7 10</table>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="weapon_master_special"/>
+		<set name="castRange" value="400"/>
 		<set name="magicLevel" value="85"/>
-		<set name="magicType" value="ITEM"/>
 		<set name="icon" value="icon.skill0786"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF_CHARGER"/>
@@ -2874,12 +3544,12 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<mul order="0x60" stat="pAtk" value="#pAtk">
-					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword, Dual Blunt, Pole"/>
+				<mul order="0x30" stat="pAtk" value="#pAtk">
+					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword, Dual Blunt, Pole, Dual Fist"/>
 				</mul>
-				<mul order="0x60" stat="pAtk" value="#pAtk2">
-					<using kind="Dual Fist"/>
-				</mul>
+				<add order="0x40" stat="runSpd" value="#speed">
+					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword, Dual Blunt, Pole, Dual Fist"/>
+				</add>
 				<triggers>
 					<trigger id="10284" level="#levelfit" type="CRIT" chance="#chance">
 						<player damage="1;0"/>
@@ -2891,18 +3561,34 @@
     <!--
 		HP Drain - Recovers HP by 20%.
 
+		name: HP Drain
+		level: 1
+		mp_consume: 0
+		description: Recovers HP by 20%.
+		icon_name: icon.skill10285
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 10
+		is_magic: 4
+		oper_type: 1
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10285" levels="1" name="HP Drain">
-		<table name="#power">313</table>
 		<table name="#heal">20</table>
-		<set name="reuseDelay" value="10000"/>
+		<table name="#power">313</table>
+		<set name="icon" value="icon.skill10285"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10285"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="HEAL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect name="HealPercent" time="0" value="#heal"/>
 		</for>
@@ -2923,17 +3609,33 @@
 		LvL.108	description: + 255, and Fire/Water/Wind/Earth Resistance + 28. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
 		LvL.109	description: + 262, and Fire/Water/Wind/Earth Resistance + 29. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
 		LvL.110	description: + 270, and Fire/Water/Wind/Earth Resistance + 30. When receiving damage, has a chance of increasing M Def. and Attribute Resistance momentarily. Enchant Power: Increases the effect.
+		name: Superior Resistance
+		level: 1
+		mp_consume: 0
+		description: STR + 2, M. Def. + 199, and Fire/Water/Wind/Earth Resistance + 20. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance momentarily.
+		icon_name: icon.skill10005
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 14
+		element_guess: 0
+		cast_style_guess: 2
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10286" levels="1" name="Superior Resistance">
 		<table name="#mDef">199</table>
 		<table name="#vuln">20</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10005"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="481"/>
+		<set name="icon" value="icon.skill10005"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#mDef">206 213 220 227 234 241 248 255 262 270</table>
 			<table name="#vuln">21 22 23 24 25 26 27 28 29 30</table>
@@ -2957,29 +3659,45 @@
 		LvL.4	description: HP decreases by 235 per second.
 		LvL.5	description: HP decreases by 238 per second.
 		LvL.6	description: HP decreases by 242 per second.
+		name: Rolling Thunder
+		level: 1
+		mp_consume: 0
+		description: HP decreases by 225 per second.
+		icon_name: icon.skill0494
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.5
+		cool_time: 0
+		reuse_delay: 3
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10287" levels="6" name="Rolling Thunder">
-		<table name="#power">225 228 232 235 238 242</table>
-		<table name="#activateRate">35 36 37 38 39 40</table>
-		<table name="#mpConsume2">22</table>
-		<table name="#magicLevel">89 91 93 95 97 99</table>
 		<table name="#abnormal_level">1 2 3 4 5 6</table>
-		<set name="reuseDelay" value="3000"/>
-		<set name="hitTime" value="500"/>
+		<table name="#activateRate">35 36 37 38 39 40</table>
+		<table name="#magicLevel">89 91 93 95 97 99</table>
+		<table name="#mpConsume2">22</table>
+		<table name="#power">225 228 232 235 238 242</table>
 		<set name="abnormal_effect" value="HURRICANE"/>
-		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="song_of_vengeance"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill0494"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="#power"/>
 		<set name="activateRate" value="#activateRate"/>
+		<set name="hitTime" value="500"/>
+		<set name="icon" value="icon.skill0494"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="3000"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="target" value="TARGET_AURA"/>
 		<set name="skillRadius" value="200"/>
 		<set name="skillType" value="POISON"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_AURA"/>
 		<for>
 			<effect count="3" name="DamOverTime" time="1" value="#power"/>
 		</for>
@@ -3099,36 +3817,52 @@
 		LvL.808	description: Attacks near the enemy with 20341 Power added to P Atk.
 		LvL.809	description: Attacks near the enemy with 20740 Power added to P Atk.
 		LvL.810	description: Attacks near the enemy with 21139 Power added to P Atk.
+		name: Hurricane Storm
+		level: 1
+		mp_consume: 161
+		description: Attacks near the enemy with 11557 Power added to P. Atk. Power - 10% when using a sword, dualsword, blunt, or fist weapon. Power + 50% when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical hit.
+		icon_name: icon.skill10288
+		hp_consume: 0
+		cast_range: 500
+		hit_time: 1.79
+		cool_time: 0.3
+		reuse_delay: 10
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10288" levels="8" name="Hurricane Storm">
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
+		<table name="#mpConsume2">161 163 169 175 180 186 192 198</table>
 		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
 		<table name="#powerPvP">0</table>
-		<table name="#mpConsume2">161 163 169 175 180 186 192 198</table>
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
-		<set name="powerPvP" value="#powerPvP"/>
-		<set name="reuseDelay" value="10000"/>
+		<set name="analog_skills" value="6;7;347;54;35;526"/>
+		<set name="castRange" value="500"/>
 		<set name="coolTime" value="300"/>
+		<set name="criticalRate" value="10"/>
+		<set name="decreaseOnNoPole" value="0.9"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
 		<set name="hitTime" value="1789"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10288"/>
+		<set name="increaseOnPole" value="1.5"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="nextAction" value="attack"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="power" value="#power"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="skillRadius" value="500"/>
-		<set name="overHit" value="true"/>
-		<set name="decreaseOnNoPole" value="0.9"/>
-		<set name="increaseOnPole" value="1.5"/>
-		<set name="SSBoost" value="2.0"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="500"/>
-		<set name="criticalRate" value="10"/>
-		<set name="analog_skills" value="6;7;347;54;35;526"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="500"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AREA"/>
 		<cond msgId="113">
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -3178,12 +3912,22 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
+			<effect>
+				<mul order="0x30" stat="pSkillPower" value="0.9">
+					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Fist"/>
+				</mul>
+				<mul order="0x30" stat="pSkillPower" value="1.5">
+					<using kind="Pole"/>
+				</mul>
+			</effect>
+			<!---
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Fist">
 				<table name="#power">10401 10760 11478 12197 12915 13635 14353 15072</table>
 			</using>
 			<using kind="Pole">
 				<table name="#power">17335 17934 19131 20329 21526 22725 23922 25120</table>
 			</using>
+			-->
 		</for>
 	</skill>
     <!--
@@ -3245,29 +3989,45 @@
 		LvL.408	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
 		LvL.409	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
 		LvL.410	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Boost
+		level: 1
+		mp_consume: 143
+		description: Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PvP.
+		icon_name: icon.skill10289
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0.2
+		reuse_delay: 180
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10289" levels="4" name="Boost">
-		<table name="#pvpPhysDmg">1.05 1.1 1.15 1.2</table>
-		<table name="#physDamage">1.3 1.35 1.4 1.45</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#mpConsume2">143</table>
+		<table name="#mpConsume2">143 143 143 143</table>
+		<table name="#physDamage">1.3 1.35 1.4 1.45</table>
+		<table name="#pvpPhysDmg">1.05 1.1 1.15 1.2</table>
 		<table name="#time">60</table>
-	  	<table name="#Stun">0 0 0 0</table>
 	  	<table name="#Knockdown">0 0 0 0</table>
-		<set name="reuseDelay" value="300000"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="#time"/>
+	  	<table name="#Stun">0 0 0 0</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#time"/>
 		<set name="abnormal_type" value="super_avoid"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10289"/>
+		<set name="analog_skills" value="485;440;536"/>
+		<set name="coolTime" value="200"/>
 		<set name="effectPoint" value="597"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10289"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="180000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<set name="analog_skills" value="485;440;536"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">137 131 125 120 114 108 102 97 91 85</table>
 		</enchant>
@@ -3282,7 +4042,8 @@
 		</enchant>
 		<for>
 			<effect>
-				<mul order="0x30" stat="physDamage" value="#physDamage"/>
+				<mul order="0x30" stat="pSkillPower" value="#physDamage"/>
+				<mul order="0x30" stat="pvpPhysDmgBonus" value="#pvpPhysDmg"/>
 				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#pvpPhysDmg"/>
 				<add order="0x40" stat="knockDownPower" value="#Knockdown"/>
 				<add order="0x40" stat="stunPower" value="#Stun"/>
@@ -3300,16 +4061,47 @@
 		LvL.6	description: Attacks around the enemy with 15150 Power added to P Atk.	mp_consume: 160
 		LvL.7	description: Attacks around the enemy with 15948 Power added to P Atk.	mp_consume: 165
 		LvL.8	description: Attacks around the enemy with 16747 Power added to P Atk.	mp_consume: 170
+		name: Hurricane Slasher
+		level: 1
+		mp_consume: 138
+		description: Attacks around the enemy with 11557 Power added to P. Atk. Decreases power - 10% when equipped with a sword/blunt/fist weapon. Increases power + 50% when equipped with a spear. Requires a dagger, blunt, spear, fist weapon, dual blunt weapon, or dualswor
+		icon_name: icon.skill0007
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 1.8
+		cool_time: 0
+		reuse_delay: 7
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 3
+		base_elemental_skill_id: 0
 	-->
     <skill id="10290" levels="8" name="Hurricane Slasher">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<set name="reuseDelay" value="7000"/>
-		<set name="hitTime" value="1799"/>
-		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#mpConsume2">138 141 146 150 155 160 165 170</table>
+		<table name="#power">11557 11956 12754 13553 14351 15150 15948 16747</table>
+		<set name="hitTime" value="1800"/>
 		<set name="icon" value="icon.skill0007"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="skillRadius" value="500"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AURA"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pSkillPower" value="0.9">
+					<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Fist"/>
+				</mul>
+				<mul order="0x30" stat="pSkillPower" value="1.5">
+					<using kind="Pole"/>
+				</mul>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Feral Bear Cry - Shouts loudly to invoke the power of the Bear. For 5 minutes, increases your P. Atk. and P. Critical Damage by 30%.
@@ -3330,22 +4122,38 @@
 		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
 		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
 		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Bear Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Bear. For 5 minutes, increases your P. Atk. and P. Critical Damage by 30%.
+		icon_name: icon.skill10291
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10291" levels="1" name="Feral Bear Cry">
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<table name="#abnormal_time">300</table>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="possession"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10291"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="438"/>
 		<table name="#knockdown">0</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="effectPoint" value="438"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10291"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Time">
 			<table name="#abnormal_time">310 320 330 340 350 360 370 380 390 400</table>
 			<table name="#magicLevel">99</table>
@@ -3380,23 +4188,39 @@
 		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
 		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
 		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Ogre Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Ogre. For 5 minutes, increases your P. Atk., P. Def. And M. Def. by 35% and P. Critical Damage and Max HP by 10%.
+		icon_name: icon.skill10292
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10292" levels="1" name="Feral Ogre Cry">
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<table name="#abnormal_time">300</table>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="possession"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10292"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="438"/>
-		<set name="analog_skills" value="822;109"/> <!-- ;830;828;829;500;482;94;139;130;78;825;826;827 -->
 		<table name="#knockdown">0</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="analog_skills" value="822;109"/>
+		<set name="effectPoint" value="438"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10292"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Time">
 			<table name="#abnormal_time">310 320 330 340 350 360 370 380 390 400</table>
 			<table name="#magicLevel">99</table>
@@ -3435,23 +4259,39 @@
 		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
 		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
 		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Puma Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Puma. For 5 minutes, increases your P. Accuracy by 10 and Atk. Spd. by 20%, and decreases Critical Damage received by 40%.
+		icon_name: icon.skill10293
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10293" levels="1" name="Feral Puma Cry">
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<table name="#abnormal_time">300</table>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="possession"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10293"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="effectPoint" value="438"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="824;282"/> <!-- ;823;822;500;482;94;139;130;78 -->
 		<table name="#knockdown">0</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="analog_skills" value="824;282"/>
+		<set name="effectPoint" value="438"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10293"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Time">
 			<table name="#abnormal_time">310 320 330 340 350 360 370 380 390 400</table>
 			<table name="#magicLevel">99</table>
@@ -3487,23 +4327,39 @@
 		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
 		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
 		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Feral Rabbit Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Rabbit. For 5 minutes, increases your Atk. Spd. by 30%, Speed by 35% and P. Evasion by 15.
+		icon_name: icon.skill10294
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10294" levels="1" name="Feral Rabbit Cry">	 
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
 		<table name="#abnormal_time">300</table>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<table name="#knockdown">0</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="possession"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10294"/>
+		<set name="analog_skills" value="451;298;823"/>
 		<set name="effectPoint" value="438"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10294"/>
+		<set name="magicLevel" value="85"/>
 		<set name="mpConsume2" value="38"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<set name="analog_skills" value="451;298;823"/>
 		<enchant type="1" levels="10" group="7" name="Time">
 			<table name="#abnormal_time">310 320 330 340 350 360 370 380 390 400</table>
 			<table name="#magicLevel">99</table>
@@ -3539,22 +4395,38 @@
 		LvL.208	description: Enchant Chance Knockdown: Increases Knockdown Rate by 8.
 		LvL.209	description: Enchant Chance Knockdown: Increases Knockdown Rate by 9.
 		LvL.210	description: Enchant Chance Knockdown: Increases Knockdown Rate by 10.
+		name: Hawk Cry
+		level: 1
+		mp_consume: 38
+		description: Shouts loudly to invoke the power of the Hawk. For 5 minutes, increases your P. Accuracy by 8, Critical Rate by 120 and Critical Damage by 30%.
+		icon_name: icon.skill10295
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10295" levels="1" name="Hawk Cry">
 		<table name="#abnormal_time">300</table>
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="possession"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10295"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="438"/>
 		<table name="#knockdown">0</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="analog_skills" value="438"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10295"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" group="7" levels="10" name="time">
 			<table name="#abnormal_time">301 302 303 304 305 306 307 308 309 310</table>
 		</enchant>
@@ -3586,22 +4458,38 @@
 		LvL.108	description: For 46 minutes, increases damage against insects/plants/animals + 10%.
 		LvL.109	description: For 48 minutes, increases damage against insects/plants/animals + 10%.
 		LvL.110	description: For 50 minutes, increases damage against insects/plants/animals + 10%.
+		name: Spirit of the Hunter
+		level: 1
+		mp_consume: 38
+		description: For 30 minutes, increases damage against insects/plants/animals + 10%.
+		icon_name: icon.skill0359
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10296" levels="1" name="Spirit of the Hunter">
-		 <table name="#power">1.45</table>
-		 <table name="#time">1800</table>
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="#time"/>
+		<table name="#power">1.45</table>
+		<table name="#time">1800</table>
 		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="#time"/>
 		<set name="abnormal_type" value="detect_weakness"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill0359"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="analog_skills" value="359;87;104"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill0359"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Time">
 			<table name="#time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
 		</enchant>
@@ -3633,21 +4521,37 @@
 		LvL.108	description: For 46 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
 		LvL.109	description: For 48 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
 		LvL.110	description: For 50 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		name: Spirit of the Slayer
+		level: 1
+		mp_consume: 38
+		description: For 30 minutes, increases damage against monsters/magic creatures/giants/dragons + 10%.
+		icon_name: icon.skill0360
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 2
+		cool_time: 0
+		reuse_delay: 30
+		is_magic: 0
+		oper_type: 2
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10297" levels="1" name="Spirit of the Slayer">
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
 		<table name="#time">1800</table>
-		<set name="abnormal_time" value="#time"/>
 		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_time" value="#time"/>
 		<set name="abnormal_type" value="detect_weakness"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill0360"/>
-		<set name="mpConsume2" value="38"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="analog_skills" value="360;88;80"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill0360"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="38"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Time">
 			<table name="#time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000</table>
 		</enchant>
@@ -3669,32 +4573,64 @@
     <!--
 		Power Revival - Recovers all of your HP.
 
+		name: Power Revival
+		level: 1
+		mp_consume: 38
+		description: Recovers all of your HP.
+		icon_name: icon.skill10298
+		hp_consume: 0
+		cast_range: -1
+		hit_time: 0.2
+		cool_time: 0
+		reuse_delay: 600
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 0
+		skill_spec_type_guess: 1
+		base_elemental_skill_id: 0
 	-->
     <skill id="10298" levels="1" name="Power Revival">
-		<set name="reuseDelay" value="600000"/>
-		<set name="hitTime" value="1500"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10298"/>
+		<set name="analog_skills" value="181;833"/>
 		<set name="effectPoint" value="100"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10298"/>
+		<set name="magicLevel" value="85"/>
 		<set name="mpConsume2" value="38"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="100"/>
+		<set name="reuseDelay" value="600000"/>
 		<set name="skillType" value="HEAL_PERCENT"/>
 		<set name="target" value="TARGET_SELF"/>
-		<set name="analog_skills" value="181;833"/>
 	</skill>
     <!--
 		Stun Spear - Inflicted with stun and unable to move for 3 seconds.
 
+		name: Stun Spear
+		level: 1
+		mp_consume: 0
+		description: Inflicted with stun and unable to move for 3 seconds.
+		icon_name: icon.skill10299
+		hp_consume: 0
+		cast_range: 40
+		hit_time: 0
+		cool_time: 0
+		reuse_delay: 0
+		is_magic: 0
+		oper_type: 0
+		element_guess: 0
+		cast_style_guess: 1
+		skill_spec_type_guess: 0
+		base_elemental_skill_id: 0
 	-->
     <skill id="10299" levels="1" name="Stun Spear">
 		<table name="#mpConsume2">40</table>
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill10299"/>
+		<set name="magicLevel" value="85"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="skillType" value="BUFF"/>
