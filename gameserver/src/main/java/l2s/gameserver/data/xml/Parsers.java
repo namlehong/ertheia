@@ -83,7 +83,7 @@ public abstract class Parsers
 		TransformTemplateParser.getInstance().load();
 		NpcParser.getInstance().load();
 //		NpcBloodParser.getInstance().load(); // GAI
-		DropListDataParser.getInstance().load(); // l2on
+//		DropListDataParser.getInstance().load(); // l2on
 		PetDataParser.getInstance().load();
 
 		DomainParser.getInstance().load();
