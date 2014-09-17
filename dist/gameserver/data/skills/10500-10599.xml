@@ -2970,49 +2970,49 @@
 		desc_add2: none
 	-->
     <skill id="10526" levels="6" name="Mischief">
-		<table name="#magicLevel">85 87 90 93 96 99</table>
-		<table name="#reuseDelay">60000</table>
-		<table name="#earthDef">0</table>
 		<table name="#bleedResist">0</table>
+		<table name="#paralyzeResist">0</table>
+		<table name="#magicLevel">85 87 90 93 96 99</table>
+		<table name="#mpConsume2">38 39 41 43 45 47</table>
 		<table name="#poisonResist">0</table>
+		<table name="#power"> 75 76 77 78 79 80 </table>
+		<table name="#reuseDelay">60000</table>
 		<table name="#stunResist">0</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="speed_down"/>
+		<set name="activateRate" value="#power"/>
+		<set name="analog_skills" value="106;2;15;12"/>
+		<set name="castRange" value="600"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1500"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="3"/>
-		<set name="abnormal_type" value="speed_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10526"/>
-		<table name="#mpConsume2">38 39 41 43 45 47</table>
-		<table name="#power"> 75 76 77 78 79 80 </table>
-		<set name="castRange" value="600"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="#power"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="AIEFFECTS"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="AIEFFECTS"/>
+		<set name="target" value="TARGET_ONE"/>
 		<set name="trait" value="DERANGEMENT"/>
-		<set name="analog_skills" value="106;2;15;12"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>
 		</enchant>
 		<enchant type="2" name="Chance">
 			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90</table>
 		</enchant>
-		<enchant type="3" name="Ressist">
-			<table name="#earthDef">1 2 3 4 5 6 7 8 9 10</table>
+		<enchant type="3" name="Break Paralysis">
+			<table name="#paralyzeResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="4" name="Ressist">
+		<enchant type="4" name="Break Bleed">
 			<table name="#bleedResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="5" name="Ressist">
+		<enchant type="5" name="Break Poison">
 			<table name="#poisonResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="6" name="Ressist">
+		<enchant type="6" name="Break Shock">
 			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
@@ -3022,8 +3022,8 @@
 		<for>
 			<effect name="RandomHate" time="0"/>
 			<effect name="Debuff">
-				<mul order="0x30" stat="runSpd" value="0.7"/>
-				<sub order="0x40" stat="defenceEarth" value="#earthDef"/>
+				<sub order="0x30" stat="runSpd" value="70"/>
+				<sub order="0x40" stat="paralyzeResist" value="#paralyzeResist"/>
 				<sub order="0x40" stat="bleedResist" value="#bleedResist"/>
 				<sub order="0x40" stat="poisonResist" value="#poisonResist"/>
 				<sub order="0x40" stat="stunResist" value="#stunResist"/>
