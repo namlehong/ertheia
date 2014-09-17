@@ -436,8 +436,8 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			prophecies_chamber.getDoor(17230101).openMe();
 			
 			//spawn support
-			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, new Location(-88408, 186824, -10476), 0);
-			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88344, 176712, -10476), 0);
+			kain_fighter_instance = prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_FIGHTER, npc.getLoc(), 0);
+			ferin_healer_instance = prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88328, 186648, -10476), 0);
 			
 			NpcHealerAI ferin_ai = (NpcHealerAI)ferin_healer_instance.getAI();
 			NpcWarriorAI kain_ai = (NpcWarriorAI)kain_fighter_instance.getAI();
@@ -529,39 +529,46 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			
 			st.giveItems(ATELIA1, 1);
 			st.playSound(SOUND_ITEMGET);
-			player.sendPacket(new ExShowScreenMessage(TALK_TO_WIZARD, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(TALK_TO_WIZARD, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
 			
-			mysterious_wizard_instance = prophecies_chamber.addSpawnWithoutRespawn(MYSTERIOUS_WIZARD, new Location(-88568, 173320, -10476), 0);
+			mysterious_wizard_instance = prophecies_chamber.addSpawnWithoutRespawn(MYSTERIOUS_WIZARD, new Location(-88552, 173336, -10476), 0);
 			
 		}
 		
-		if(event.equalsIgnoreCase("33996-4.htm"))
+		if(event.equalsIgnoreCase("33980-4.htm"))
 		{
 			player.sendPacket(new ExShowScreenMessage(CHOICE_NOT_REVERSABLE, 20000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			
 		}
 		
 		if(event.equalsIgnoreCase("33980-6.htm"))
 		{
 			Reflection prophecies_chamber = player.getReflection();
 			
+			mysterious_wizard_instance.deleteMe();
+			
 			st.set("choice", "patriot");
 			//spawn Kain & Ferin NPC
-			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88568, 173320, -10476), 0);
-			prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88472, 173256, -10476), 0);
+			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88408, 173224, -10476), 0);
+			prophecies_chamber.addSpawnWithoutRespawn(FERIN_NPC, new Location(-88424, 173304, -10476), 0);
+
 		}
 
 		if(event.equalsIgnoreCase("33980-7.htm"))
 		{
 			Reflection prophecies_chamber = player.getReflection();
 			
+			mysterious_wizard_instance.deleteMe();
+			
 			st.takeItems(ATELIA1, 1);
 			st.giveItems(ATELIA2, 1);
 			st.playSound(SOUND_ITEMGET);
-			st.set("choice", "traitor");
-			//spawn Kain & Ferin NPC
-			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88568, 173320, -10476), 0);
-			prophecies_chamber.addSpawnWithoutRespawn(FERIN_HEALER, new Location(-88472, 173256, -10476), 0);
 			
+			st.set("choice", "traitor");
+			
+			//spawn Kain & Ferin NPC
+			prophecies_chamber.addSpawnWithoutRespawn(KAIN_VAN_HALTER_NPC, new Location(-88408, 173224, -10476), 0);
+			prophecies_chamber.addSpawnWithoutRespawn(FERIN_NPC, new Location(-88424, 173304, -10476), 0);
 		}
 		
 		if(event.equalsIgnoreCase("leave_instance"))
