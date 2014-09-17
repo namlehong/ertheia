@@ -420,6 +420,7 @@ public class NpcTemplate extends CreatureTemplate
 				break;
 			case MANAHEAL:
 				_manaHealSkills = ArrayUtils.add(_manaHealSkills, skill);
+				break;
 			default:
 
 				break;
