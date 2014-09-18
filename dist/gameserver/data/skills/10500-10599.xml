@@ -4427,7 +4427,6 @@
 		desc_add2: none
 	-->
     <skill id="10544" levels="4" name="Cancel target">
-		<table name="#magicLevel">87 90 95 99</table>
 		<set name="activateRate" value="100"/>
 		<set name="castRange" value="900"/>
 		<set name="hitTime" value="2000"/>
@@ -4437,6 +4436,7 @@
 		<set name="reuseDelay" value="5000"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_ONE"/>
+		<table name="#magicLevel">87 90 95 99</table>
 		<for>
 			<effect name="RemoveTarget" time="0"/>
 		</for>
@@ -4465,21 +4465,21 @@
 		desc_add2: none
 	-->
     <skill id="10545" levels="4" name="Crippling Poison">
-		<table name="#magicLevel">91 94 97 99</table>
 		<table name="#abnormal_level">1 2 3 4</table>
-		<set name="reuseDelay" value="120000"/>
+		<table name="#magicLevel">91 94 97 99</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="4"/>
+		<set name="abnormal_type" value="paralyze"/>
+		<set name="activateRate" value="100"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="4"/>
-		<set name="abnormal_level" value="#abnormal_level"/>
-		<set name="abnormal_type" value="paralyze"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill1170"/>
-		<set name="activateRate" value="100"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="900"/>
 		<for>
 			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" value="0.7"/>
@@ -4569,6 +4569,7 @@
 		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="knockdown"/>
 		<set name="activateRate" value="#chance"/>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1799"/>
 		<set name="icon" value="icon.skill10546"/>
@@ -4623,18 +4624,18 @@
 		desc_add2: none
 	-->
     <skill id="10547" levels="1" name="Shadow Attack">
-		<set name="reuseDelay" value="7000"/>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_type" value="stun"/>
 		<set name="coolTime" value="400"/>
 		<set name="hitTime" value="1200"/>
-		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="1"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="99"/>
 		<set name="icon" value="icon.skill0263"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="99"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="7000"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Plunder - Steals an item from the enemy.
@@ -4701,7 +4702,7 @@
 		<set name="target" value="TARGET_ONE"/>
 		<enchant type="1" levels="10" group="7" name="Attack">
 			<table name="#power">9700 9800 9900 10000 10100 10200 10300 10400</table>
-			<table name="#nextAction">attack</table>	<!--TODO: Check.-->
+			<table name="#nextAction">attack</table>
 		</enchant>
 	</skill>
     <!--
@@ -4843,6 +4844,7 @@
 	-->
     <skill id="10550" levels="4" name="Illusion Strike">
 		<table name="#magicLevel">90 95 97 99</table>
+		<table name="#mpConsume2">106 115 125 129</table>
 		<set name="reuseDelay" value="4000"/>
 		<set name="coolTime" value="720"/>
 		<set name="hitTime" value="1080"/>
@@ -4851,7 +4853,6 @@
 		<set name="abnormal_type" value="speed_down"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10550"/>
-		<table name="#mpConsume2">106 115 125 129</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="overHit" value="true"/>
