@@ -3544,17 +3544,21 @@
 	-->
     <skill id="10780" levels="6" name="Slow Shot">
 		<table name="#activateRate">77</table> 
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#mpConsume2">94 96 101 106 111 116</table>
 		<table name="#pwr">9338 9670 10669 11667 12666 13664</table>
 		<table name="#reuseDelay">30000</table>
 		<set name="abnormal_level" value="3"/>
-		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="speed_down"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="analog_skills" value="354"/>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="349"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
 		<set name="hitTime" value="2099"/>
 		<set name="icon" value="icon.skill10780"/>
 		<set name="levelModifier" value="1"/>
@@ -3570,20 +3574,59 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
 			<table name="#mpConsume2">109 102 95 88 81 74 67 60 53 46</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="2" name="chance">
+		<enchant type="2" name="Chance">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
 			<table name="#activateRate">78 79 80 81 82 83 84 85 86 87</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
+		<enchant type="3" name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Water Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">water</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="5" name="Wind Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">wind</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="6" name="Earth Attack ">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">earth</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="7" name="Holy Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">Holy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="8" name="Dark Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">unholy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
 		<enchant type="9" name="Recycle">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 21000</table>
 		</enchant>
 		<for>
 			<effect time="20">
-				<mul order="0x50" stat="runSpd" value="0.7"/>
+				<add order="0x40" stat="runSpd" value="70"/>
 			</effect>
 		</for>
 	</skill>
