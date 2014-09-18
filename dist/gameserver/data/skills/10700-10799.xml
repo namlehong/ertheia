@@ -2856,14 +2856,15 @@
 		<!--
 			Уровень: 1; Описание: Не используется.
 		-->
-		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="2200"/>
-		<set name="magicLevel" value="98"/>
 		<set name="icon" value="icon.skill0773"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="98"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Quick Evasion - Momentarily teleports 300 backward.
@@ -2909,6 +2910,8 @@
 		<table name="#mpConsume2">27 32 33 33</table>
 		<table name="#flyRadius">-300 -350 -400 -450</table>
 		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#castRange">300 350 400 450</table>
+		<set name="castRange" value="#castRange"/>
 		<set name="fly_animation_speed" value="333"/>
 		<set name="fly_radius" value="#flyRadius"/>
 		<set name="fly_to_back" value="true"/>
@@ -2922,8 +2925,9 @@
 		<set name="reuseDelay" value="15000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<enchant type="1" levels="10" group="7" name="Дистанция">
+		<enchant type="1" levels="10" group="7" name="Distance">
 			<table name="#flyRadius">-460 -470 -480 -490 -500 -510 -520 -530 -540 -550</table>
+			<table name="#castRange">460 470 480 490 500 510 520 530 540 550</table>
 		</enchant>
 	</skill>
     <!--
