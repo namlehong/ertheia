@@ -3525,31 +3525,34 @@
 		desc_add2: none
 	-->
     <skill id="10531" levels="2" name="Angel of Death">
-		<table name="#stunPower">0</table>
-		<table name="#bleedPower">0</table>
-		<table name="#paralyzePower">0</table>
-		<table name="#magicLevel">85 98</table>
 		<table name="#abnormal_level">1 2</table>
 		<table name="#abnormal_time">30</table>
-		<set name="reuseDelay" value="600000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="800"/>
-		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
-		<set name="abnormal_level" value="#abnormal_level"/>
-		<set name="abnormal_type" value="movement"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill10531"/>
+		<table name="#bleedPower">0</table>
+		<table name="#magicLevel">85 98</table>
 		<table name="#mpConsume2">45 47</table>
-		<table name="#runSpd">30 34</table>
-		<table name="#pSkillEvasion">75 80</table>
+		<table name="#paralyzePower">0</table>
 		<table name="#pCritRate">40 45</table>
 		<table name="#poisonLevels">1 2</table>
+		<table name="#pSkillEvasion">75 80</table>
+		<table name="#runSpd">30 34</table>
+		<table name="#stunPower">0</table>
+		<set name="abnormal_effect" value="ULTIMATE_DEFENCE"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="movement"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.skill10531"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="ITEM"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Dagger, Dual Dagger"/>
+		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">45 43 41 39 37 35 33 31 30 28</table>
 			<table name="#magicLevel">99</table>
@@ -3589,9 +3592,6 @@
 				</triggers>
 			</effect>
 		</for>
-		<cond msgId="113">
-			<using kind="Dagger, Dual Dagger"/>
-		</cond>
 	</skill>
     <!--
 		Clone Attack - Melt into a target's shadow and summons clones to attack it. Requires a dagger or dual dagger to be equipped.
