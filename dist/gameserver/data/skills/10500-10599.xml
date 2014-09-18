@@ -4188,34 +4188,34 @@
 		desc_add2: none
 	-->
     <skill id="10540" levels="5" name="Throw Sand">
-		<table name="#magicLevel">85 88 91 94 97</table>
 		<table name="#abnormal_level">1 2 3 4 5</table>
+		<table name="#accPhysical"> 12 13 14 15 16 </table>
+		<table name="#activateRate">50 55 60 65 70 75</table>
+		<table name="#bleedResist">0</table>
+		<table name="#paralyzeResist">0</table>
+		<table name="#magicLevel">85 88 91 94 97</table>
+		<table name="#mpConsume2">38 40 42 44 46</table>
+		<table name="#poisonResist">0</table>
 		<table name="#reuseDelay">60000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<table name="#stunResist">0</table>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="hit_down"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="51"/> 
+		<set name="castRange" value="800"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1500"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="#abnormal_level"/>
-		<set name="abnormal_type" value="hit_down"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10540"/>
-		<table name="#activateRate">50 55 60 65 70 75</table>
-		<table name="#mpConsume2">38 40 42 44 46</table>
-		<table name="#accPhysical"> 12 13 14 15 16 </table>
-		<table name="#earthDef">0</table>
-		<table name="#bleedResist">0</table>
-		<table name="#poisonResist">0</table>
-		<table name="#stunResist">0</table>
-		<set name="levelModifier" value="2"/>
 		<set name="icon" value="icon.skill0412"/>
-		<set name="castRange" value="800"/>
-		<set name="saveVs" value="MEN"/>
+		<set name="icon" value="icon.skill10540"/>
+		<set name="levelModifier" value="2"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="51"/> <!-- ;412 -->
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113" addName="1">
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
@@ -4227,19 +4227,19 @@
 			<table name="#activateRate">76 77 78 79 80 81 82 83 84 85</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="3" name="Ressist">
-			<table name="#earthDef">1 2 3 4 5 6 7 8 9 10</table>
+		<enchant type="3" name="Break Paralysis">
+			<table name="#paralyzeResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="4" name="Ressist">
+		<enchant type="4" name="Break Bleed">
 			<table name="#bleedResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="5" name="Ressist">
+		<enchant type="5" name="Break Poison">
 			<table name="#poisonResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="6" name="Ressist">
+		<enchant type="6" name="Break Shock">
 			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
@@ -4250,7 +4250,7 @@
 		<for>
 			<effect name="Debuff">
 				<sub order="0x40" stat="pAccCombat" value="#accPhysical"/>
-				<sub order="0x40" stat="defenceEarth" value="#earthDef"/>
+				<sub order="0x40" stat="paralyzeResist" value="#paralyzeResist"/>
 				<sub order="0x40" stat="bleedResist" value="#bleedResist"/>
 				<sub order="0x40" stat="poisonResist" value="#poisonResist"/>
 				<sub order="0x40" stat="stunResist" value="#stunResist"/>
@@ -4289,9 +4289,9 @@
     <skill id="10541" levels="6" name="Throw Poison Needle">
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#mpConsume2">38 38 40 43 45 47</table>
-		<table name="#power"> 10 15 18 20 22 24 </table>
+		<table name="#power">10 15 18 20 22 24</table>
 		<set name="activateRate" value="#power"/>
-		<set name="analog_skills" value="129"/> <!-- Вообще надо ли? -->
+		<set name="analog_skills" value="129"/> 
 		<set name="castRange" value="800"/>
 		<set name="coolTime" value="400"/>
 		<set name="hitTime" value="1500"/>
@@ -4306,7 +4306,7 @@
 		<set name="target" value="TARGET_ONE"/>
 		<set name="trait" value="DERANGEMENT"/>
 		<cond msgId="113">
-			<using kind="Dagger,Dual Dagger"/>
+			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 		<for>
 			<effect name="MuteAll" time="15"/>
