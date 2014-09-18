@@ -3680,23 +3680,35 @@
 		desc_add2: none
 	-->
     <skill id="10781" levels="1" name="Phoenix Arrow">
+    	<table name="#activateRate">77</table> 
+		<table name="#mpConsume2">1067</table>
+		<table name="#pwr">45215</table>
+		<table name="#reuseDelay">30000</table>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="300"/>
-		<set name="elements" value="fire"/>
 		<set name="hitTime" value="7500"/>
 		<set name="icon" value="icon.skill10781"/>
 		<set name="magicLevel" value="95"/>
-		<set name="magicType" value="ITEM"/>
-		<set name="mpConsume2" value="1067"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="power" value="45215"/>
-		<set name="reuseDelay" value="30000"/>
+		<set name="power" value="#pwr"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="180"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_AREA"/>
 		<cond msgId="113">
 			<using kind="Crossbow, Bow"/>
 		</cond>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#pwr">46273 47330 48388 49445 50503 51560 52618 53677 54733 55792</table>
+			<table name="#mpConsume2">1178 1131 1083 1037 989 942 896 848 801 753</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#pwr">46273 47330 48388 49445 50503 51560 52618 53677 54733 55792</table>
+			<table name="#magicLevel">99</table>
+			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 21000</table>
+		</enchant>
 	</skill>
     <!--
 		Deadly Move 2 - Death blow! Please do not use.
