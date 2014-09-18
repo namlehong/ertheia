@@ -3734,15 +3734,16 @@
 		desc_add2: none
 	-->
     <skill id="10782" levels="1" name="Deadly Move 2">
-		<set name="reuseDelay" value="3600000"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="2200"/>
-		<set name="magicLevel" value="97"/>
-		<set name="magicType" value="ITEM"/>
 		<set name="icon" value="icon.skill10782"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
+    	<set name="castRange" value="600"/>
+    	<set name="mpConsume2" value="226"/>
 	</skill>
     <!--
 		Mind's Eye - For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%.
@@ -3844,17 +3845,18 @@
 		<table name="#pAccCombat">25 30 35 40</table>
 		<table name="#pCritDamage">1.7 1.9 2.1 2.3</table>
 		<table name="#reuseDelay">600000</table>
+		<table name="#stunPower">0</table>
+		<table name="#rootPower">0</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="possession"/>
 		<set name="analog_skills" value="413;414;521;313"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="1200"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
 		<set name="icon" value="icon.skill10783"/>
 		<set name="icon" value="icon.skill10783"/>
 		<set name="isReuseDelayPermanent" value="true"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="ITEM"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="#reuseDelay"/>
@@ -3864,11 +3866,16 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2">45 42 39 36 33 30 27 24 22 19</table>
+			<table name="#mpConsume2">60 56 52 48 44 40 37 33 29 25</table>
 		</enchant>
 		<enchant type="2" name="Time">
-			<table name="#abnormal_time">61 62 63 64 65 66 67 68 69 70</table>
 			<table name="#abnormal_time">62 64 66 68 70 72 74 76 78 80</table>
+		</enchant>
+		<enchant type="3" name="Chance Stun">
+			<table name="#stunPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Hold">
+			<table name="#rootPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">582000 564000 546000 528000 510000 492000 474000 456000 438000 420000</table>
@@ -3884,6 +3891,12 @@
 				<mul order="0x30" stat="pCritDamage" value="#pCritDamage">
 					<using kind="Crossbow, Bow"/>
 				</mul>
+				<add order="0x40" stat="stunPower" value="#stunPower">
+					<using kind="Crossbow, Bow"/>
+				</add>
+				<add order="0x40" stat="rootPower" value="#rootPower">
+					<using kind="Crossbow, Bow"/>
+				</add>
 			</effect>
 		</for>
 	</skill>
