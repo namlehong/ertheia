@@ -91,7 +91,7 @@ public class MainBuilder
 	
 	public static void buildSkill(){
 		SkillParser.getInstance().load();
-		SkillBuilder.getInstance().buildAndStore();
+//		SkillBuilder.getInstance().buildAndStore();
 	}
 	
 	public static void buildSpawn(){

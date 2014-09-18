@@ -101,6 +101,17 @@ public class SpawnBuilder {
 		
 	}
 	
+	public void dbUpdate(String file_name, int npc_id){
+		try {
+			PreparedStatement statement = MainBuilder.connection().prepareStatement("update npc_data set file_spawn = ? where npc_id = ?");
+			statement.setString(1, file_name);
+			statement.setInt(2, npc_id);
+			statement.execute();
+		}catch (SQLException e) {
+			e.printStackTrace();
+		};
+	}
+	
 	public void dbLoad(){
 		try {
 			PreparedStatement statement = MainBuilder.connection().prepareStatement("SELECT npc_id FROM npc_data");
