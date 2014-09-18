@@ -4902,25 +4902,25 @@
 	-->
     <skill id="10551" levels="4" name="Illusion Trick">
 		<table name="#magicLevel">90 95 97 99</table>
-		<set name="reuseDelay" value="4000"/>
+		<table name="#mpConsume2">58 63 68 71</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_type" value="public_slot"/>
+		<set name="activateRate" value="100"/>
+		<set name="cancelTarget" value="100"/>
+		<set name="castRange" value="600"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1200"/>
-		<set name="abnormal_time" value="1"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="public_slot"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10551"/>
-		<table name="#mpConsume2">58 63 68 71</table>
-		<set name="castRange" value="600"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="activateRate" value="100"/>
-		<set name="trait" value="DERANGEMENT"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="4000"/>
 		<set name="saveVs" value="MEN"/>
 		<set name="skillType" value="AGGRESSION"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="DERANGEMENT"/>
 		<set name="unaggroing" value="true"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="cancelTarget" value="100"/>
 		<for/>
 	</skill>
     <!--
@@ -5015,27 +5015,29 @@
 		desc_add2: none
 	-->
     <skill id="10553" levels="8" name="Dagger Storm">
-		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<set name="reuseDelay" value="10000"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="1529"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill0005"/>
-		<table name="#power">6871 7012 7300 7599 7909 8232 8568 8917</table>
-		<table name="#elementPower">0</table>
 		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
+		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#mpConsume2">130 132 134 136 138 140 142 146</table>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="elementsPower" value="#elementPower"/>
+		<table name="#power">6871 7012 7300 7599 7909 8232 8568 8917</table>
+		<set name="coolTime" value="200"/>
 		<set name="elements" value="#element"/>
-		<set name="power" value="#power"/>
-		<set name="skillRadius" value="200"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="skillType" value="PDAM"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1529"/>
+		<set name="icon" value="icon.skill0005"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PDAM"/>
 		<set name="soulBoost" value="true"/>
-		<for/>
+		<set name="target" value="TARGET_AURA"/>
+		<cond msgId="113">
+			<using kind="Dagger, Dual Dagger"/>
+		</cond>
 	</skill>
     <!--
 		Power Bluff - For 3 sec., turns the enemy's back to you and Stuns them. Requires a dagger or dual dagger.
