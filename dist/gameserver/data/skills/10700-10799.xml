@@ -1456,7 +1456,6 @@
 		<set name="analog_skills" value="369;105"/>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="250"/>
-		<set name="criticalRate" value="10"/>
 		<set name="criticalRate" value="15"/>
 		<set name="elements" value="#element"/>
 		<set name="elementsPower" value="#elementPower"/>
@@ -1673,6 +1672,7 @@
 		<table name="#mpConsume2">117 119 123 128 132 136 140 144</table>
 		<table name="#powerPvP">0</table>
 		<table name="#pwr">22198 22974 24524 26075 27625 29176 30726 32277</table>
+		<table name="#reuseDelay">7000</table>
 		<set name="analog_skills" value="343;627"/>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="850"/>
@@ -1689,7 +1689,7 @@
 		<set name="overHit" value="true"/>
 		<set name="power" value="#pwr"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="reuseDelay" value="7000"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="1.5"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -1764,14 +1764,14 @@
 	-->
     <skill id="10764" levels="1" name="Knock Back">
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0101"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Knock Back - Knock Back
@@ -1798,14 +1798,14 @@
 	-->
     <skill id="10765" levels="1" name="Knock Back">
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0101"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Additional Effect - Critical Exposure
@@ -1832,14 +1832,15 @@
 	-->
     <skill id="10766" levels="1" name="Additional Effect">
 		<set name="abnormal_effect" value="REAL_TARGET"/>
-		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_type" value="public_slot"/>
-		<set name="magicLevel" value="97"/>
+		<set name="castRange" value="600"/>
 		<set name="icon" value="icon.skill0522"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_ONE"/>
 		<for>
 			<sub order="0x40" stat="critDamRcpt" value="100"/>
 		</for>
