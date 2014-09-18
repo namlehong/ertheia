@@ -155,10 +155,28 @@
 		desc_add2: none
 	-->
     <skill id="10609" levels="1" name="Critical Chances">
+		<table name="#time">300</table>
+		<set name="abnormal_time" value="#time"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10878"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="lethal2DepensencyAddon" value="15"/>
+		<set name="lethal2SkillDepencensyAddon" value="10609"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="36"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Dagger, Dual Dagger"/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="pCritDamageStatic" value="304"/>
+				<mul order="0x30" stat="blowRate" value="1.1"/>
+				<mul order="0x30" stat="pCritRate" value="1.4"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Critical Expansions - Max P. Critical increases. Applies when a dagger or dual dagger is equipped.
