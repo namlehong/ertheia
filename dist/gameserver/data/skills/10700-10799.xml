@@ -3082,6 +3082,7 @@
 		desc_add2: none
 	-->
     <skill id="10776" levels="4" name="Final Ultimate Escape">
+		<tabel name="#stunPower">0</table>
 		<table name="#abnormal_time">30</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mEvasRate">60 70 80 90</table>
@@ -3089,6 +3090,7 @@
 		<table name="#pEvasRate">60 70 80 90</table>
 		<table name="#pSkillEvasion">80 85 90 95</table>
 		<table name="#reuseDelay">900000</table>
+		<table name="#runSpd">0</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="avoid_up_special"/>
@@ -3111,6 +3113,12 @@
 		<enchant type="2" name="Time">
 			<table name="#abnormal_time">31 32 33 34 35 36 37 38 39 40</table>
 		</enchant>
+		<enchant type="3" name="Wind Walk">
+			<table name="#runSpd">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Stun">
+			<table name="#stunPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">873000 846000 819000 792000 765000 738000 711000 684000 657000 630000</table>
 		</enchant>
@@ -3121,6 +3129,8 @@
 				<add order="0x40" stat="pEvasRate" value="#pEvasRate"/>
 				<add order="0x40" stat="pSkillEvasion" value="#pSkillEvasion"/>
 				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="runSpd" value="#runSpd"/>
+				<add order="0x40" stat="stunPower" value="#stunPower"/>
 			</effect>
 		</for>
 	</skill>
