@@ -83,13 +83,13 @@
 		desc_add2: none
 	-->
     <skill id="10701" levels="4" name="Superior Vitality">
-		<set name="icon" value="icon.skill0211"/>
 		<table name="#hpcpatt">1.05 1.07 1.1 1.15</table>
 		<table name="#magicLevel">85 90 95 99</table>
+		<set name="icon" value="icon.skill0211"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="maxHp" value="#hpcpatt"/>
 			<mul order="0x30" stat="maxCp" value="#hpcpatt"/>
@@ -265,17 +265,17 @@
 		desc_add2: none
 	-->
     <skill id="10749" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="7000"/>
-		<set name="coolTime" value="296"/>
-		<set name="hitTime" value="1600"/>
-		<set name="power" value="15000"/>
-		<set name="castRange" value="100"/>
-		<set name="icon" value="icon.skill10317"/>
 		<table name="#mpConsume2">65</table>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10317"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="15000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Heavy Hit - Inflicts a powerful blow on target.
