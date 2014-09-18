@@ -4109,11 +4109,12 @@
 		<table name="#mpConsume2">66 69 72</table>
 		<table name="#power">80</table>
 		<table name="#reuseDelay">15000</table>
+		<table name="#runSpd">1.0</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="time_bomb"/>
 		<set name="activateRate" value="#power"/>
-		<set name="castRange" value="900"/>
+		<set name="castRange" value="1100"/>
 		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10786"/>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -4127,15 +4128,19 @@
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">69 66 63 60 57 54 51 48 46 43</table>
 		</enchant>
-		<enchant type="2" name="chance">
+		<enchant type="2" name="Chance">
 			<table name="#power">81 82 82 83 84 84 85 86 86 87</table>
 		</enchant>
-		<enchant type="9" name="reuse">
+		<enchant type="2" name="Entangle">
+			<table name="#runSpd">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">14000 14000 13000 13000 12000 12000 11000 11000 10000 10000</table>
 		</enchant>
 		<for>
 			<effect name="Debuff">
-				<sub order="0x30" stat="pAccCombat" value="10"/>
+				<sub order="0x40" stat="pAccCombat" value="10"/>
+				<mul order="0x30" stat="runSpd" value="#runSpd"/>
 				<triggers>
 					<trigger id="10803" level="1" type="ON_EXIT_EFFECT"/>
 				</triggers>
