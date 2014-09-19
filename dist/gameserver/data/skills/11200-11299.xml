@@ -1190,9 +1190,11 @@
 			<table name="#reuseDelay">4900 4800 4700 4500 4400 4300 4200 4100 4000 3000</table>
 		</enchant>
 		<for>
+			<self_effect>
+				<add order="0x40" stat="airjokePower" value="#airjokePower"/>
+			</self_effect>
 			<effect count="10" time="1" name="DamOverTime" value="#DOT" hasCombo="true">
 				<sub order="0x40" stat="debuffResist" value="30"/>
-				<add order="0x40" stat="airjokePower" value="#airjokePower"/>
 				<mul order="0x30" stat="pDef" value="0.7"/>
 				<mul order="0x30" stat="mDef" value="0.7"/>
 			</effect>
@@ -1280,11 +1282,12 @@
 	-->
     <skill id="11260" levels="5" name="Mark of Void">
 		<table name="#abnormal_level">1 2 3 4 5</table>
-		<table name="#DOT">326 343 350 356 363</table>
+		<table name="#DOT">326 336 346 357 368</table>
 		<table name="#magicLevel">85 88 91 94 97</table>
-		<table name="#mpConsume2">19 21 22 23 24</table>
+		<table name="#mpConsume2">54 60 66 72 78</table>
 		<table name="#power">80 81 82 83 84</table>
 		<table name="#reuseDelay">5000</table>
+		<table name="#airjokePower">0</table>
 		<set name="abnormal_effect" value="DOT_POISON"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="10"/>
@@ -1306,25 +1309,33 @@
 		<set name="skillType" value="POISON"/>
 		<set name="target" value="TARGET_ONE"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#DOT">369 372 374 376 378 381 383 385 387 389</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#mpConsume2">23 22 21 20 19 18 17 16 15 14</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Chance">
-			<table name="#DOT">369 372 374 376 378 381 383 385 387 389</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414/table>
 			<table name="#activateRate">68 69 69 70 70 71 71 72 72 73</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
+		<enchant type="2" name="Chance Exile">
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414/table>
+			<table name="#airjokePower">1 2 3 4 5 6 7 8 9 10/table>
+			<table name="#magicLevel">99</table>
+		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#DOT">369 372 374 376 378 381 383 385 387 389</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">4900 4800 4700 4500 4400 4300 4200 4100 4000 3000</table>
 		</enchant>
 		<for>
+			<self_effect>
+				<add order="0x40" stat="airjokePower" value="#airjokePower"/>
+			</self_effect>
 			<effect count="4" name="DamOverTime" time="1" value="#DOT"/>
 			<effect count="4" time="1" name="DamageHealToEffectorAndPets" value="#DOT">
-				<add order="0x40" stat="damageHealToEffector" value="100"/> <!-- 100% of damage to effector acc to asima.ws -->
-				<add order="0x40" stat="damageHealMpToEffector" value="100"/> <!-- 100% of damage to effector acc to asima.ws -->
+				<add order="0x40" stat="damageHealToEffector" value="100"/>
+				<add order="0x40" stat="damageHealMpToEffector" value="100"/>
 			</effect>
 		</for>
 	</skill>
