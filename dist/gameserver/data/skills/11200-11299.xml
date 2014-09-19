@@ -277,15 +277,15 @@
 	-->
     <skill id="11226" levels="4" name="Superior Wizardry">
 		<set name="icon" value="icon.skill0945"/>
-		<table name="#mag">5 6 7 10</table>
-		<table name="#pvp">1.01 1.02 1.03 1.05</table>
+		<table name="#mag">5 6 7 10/table>
+		<table name="#pvp">1.05 1.06 1.07 1.1</table>
 		<table name="#magicLevel">99</table>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
-			<add order="0x40" stat="mCritRate" value="#mag"/>
+			<add order="0x30" stat="mCritRate" value="#mag"/>
 			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#pvp"/>
 		</for>
 	</skill>
