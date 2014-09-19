@@ -163,6 +163,9 @@
 		<set name="saveVs" value="MEN"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_ONE"/>
+		<cond msgId="113">
+			<using kind="Crossbow, Bow"/>
+		</cond>
 		<enchant type="1" levels="10" group="7" name="Chance">
 			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90</table>
 		</enchant>
@@ -771,6 +774,9 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Crossbow, Bow"/>
+		</cond>
 		<for>
 			<mul order="0x30" stat="pAtk" value="#pAtk">
 				<using kind="Crossbow, Bow"/>
@@ -818,6 +824,9 @@
     	<set name="mpConsume2" value="#mpConsume2"/>
     	<set name="power" value="#power"/>
     	<set name="reuseDelay" value="30000"/>
+    	<cond msgId="113">
+			<using kind="Crossbow, Bow"/>
+		</cond>
 		<for>
 			<effect>
 				<triggers>
@@ -913,6 +922,9 @@
 		<set name="reuseDelay" value="30000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Crossbow, Bow"/>
+		</cond>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pAtk" value="#pAtk">
@@ -1014,6 +1026,9 @@
 		<set name="reuseDelay" value="30000"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
+		<cond msgId="113">
+			<using kind="Crossbow, Bow"/>
+		</cond>
 		<for>
 			<effect name="RemoveTarget" time="0" isReflectable="false">
 				<def name="doStopTarget" value="true"/>
