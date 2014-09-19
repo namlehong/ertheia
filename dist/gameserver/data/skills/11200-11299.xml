@@ -229,9 +229,9 @@
 		desc_add2: none
 	-->
     <skill id="11225" levels="4" name="Physical Soul Barrier">
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">498 498 498 498</table>
 		<table name="#pDef">5000 5300 5600 6000</table>
-		<table name="#magicLevel">85 90 95 99</table>
 		<set name="abnormal_time" value="20"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1000"/>
@@ -276,10 +276,10 @@
 		desc_add2: none
 	-->
     <skill id="11226" levels="4" name="Superior Wizardry">
-		<set name="icon" value="icon.skill0945"/>
-		<table name="#mag">5 6 7 10/table>
-		<table name="#pvp">1.05 1.06 1.07 1.1</table>
+		<table name="#mag">5 6 7 10</table>
 		<table name="#magicLevel">99</table>
+		<table name="#pvp">1.05 1.06 1.07 1.1</table>
+		<set name="icon" value="icon.skill0945"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
@@ -313,20 +313,20 @@
 		desc_add2: none
 	-->
     <skill id="11241" levels="1" name="Shadow Snare">
-		<set name="reuseDelay" value="15000"/>
+		<set name="activateRate" value="50"/>
+		<set name="hitCancelTime" value="500"/>
 		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill1469"/>
 		<set name="magicLevel" value="97"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill1469"/>
-		<set name="power" value="3925"/>
-		<set name="hitCancelTime" value="500"/>
 		<set name="mpConsume2" value="322"/>
-		<set name="activateRate" value="50"/>
-		<set name="target" value="TARGET_AREA"/>
+		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="3925"/>
+		<set name="reuseDelay" value="15000"/>
 		<set name="skillRadius" value="200"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="nextAction" value="attack"/>
+		<set name="target" value="TARGET_AREA"/>
 		<for>
 			<effect name="ThrowHorizontal"/>
 		</for>
@@ -355,22 +355,22 @@
 		desc_add2: none
 	-->
     <skill id="11242" levels="1" name="Shadow Snare Zone">
-		<set name="abnormal_time" value="1"/>
+		<table name="#mpConsume2">61 63 65</table>
+		<table name="#power">126 130 140 146</table>
 		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="1"/>
 		<set name="abnormal_type" value="combination"/>
+		<set name="castRange" value="800"/>
+		<set name="icon" value="icon.skill1469"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="97"/>
 		<set name="magicType" value="SPECIAL"/>
-		<set name="icon" value="icon.skill1469"/>
-		<table name="#power">126 130 140 146</table>
-		<table name="#mpConsume2">61 63 65</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="castRange" value="800"/>
-		<set name="levelModifier" value="1"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
+		<set name="saveVs" value="CON"/>
 		<set name="skillRadius" value="350"/>
 		<set name="skillType" value="MDAM"/>
-		<set name="saveVs" value="CON"/>
 		<set name="target" value="TARGET_AURA"/>
 		<for>
 			<effect name="ThrowHorizontal"/>
@@ -400,22 +400,22 @@
 		desc_add2: none
 	-->
     <skill id="11245" levels="1" name="Sampling">
-		<set name="abnormal_time" value="3"/>
+		<table name="#mpConsume2">52</table>
+		<table name="#power">126</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="speed_down"/>
+		<set name="castRange" value="400"/>
+		<set name="icon" value="icon.skill11032"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="89"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill11032"/>
-		<table name="#power">126</table>
-		<table name="#mpConsume2">52</table>
-		<set name="castRange" value="400"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="levelModifier" value="1"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
+		<set name="saveVs" value="CON"/>
 		<set name="skillRadius" value="350"/>
 		<set name="skillType" value="MDAM"/>
-		<set name="saveVs" value="CON"/>
 		<set name="target" value="TARGET_AURA"/>
 		<for>
 			<effect name="ThrowHorizontal"/>
@@ -445,24 +445,24 @@
 		desc_add2: none
 	-->
     <skill id="11247" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="3000"/>
+		<table name="#effectPoint">655</table>
+		<table name="#mpConsume2">52</table>
+		<table name="#time">9</table>
+		<set name="activateRate" value="80"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
 		<set name="hitTime" value="3380"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill10317"/>
-		<table name="#effectPoint">655</table>
-		<table name="#time">9</table>
-		<table name="#mpConsume2">52</table>
-		<set name="castRange" value="900"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
-		<set name="activateRate" value="80"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="levelModifier" value="1"/>
 		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
 		<for>
 			<effect name="Stun" time="#time"/>
 		</for>
@@ -491,24 +491,24 @@
 		desc_add2: none
 	-->
     <skill id="11248" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="3000"/>
+		<table name="#effectPoint">655</table>
+		<table name="#mpConsume2">52</table>
+		<table name="#time">9</table>
+		<set name="activateRate" value="80"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="#effectPoint"/>
 		<set name="hitTime" value="1830"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill10317"/>
-		<table name="#effectPoint">655</table>
-		<table name="#time">9</table>
-		<table name="#mpConsume2">52</table>
-		<set name="castRange" value="900"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="#effectPoint"/>
-		<set name="activateRate" value="80"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="levelModifier" value="1"/>
 		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
 		<for>
 			<effect name="Stun" time="#time"/>
 		</for>
@@ -537,21 +537,21 @@
 		desc_add2: none
 	-->
     <skill id="11249" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="3000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="3700"/>
-		<set name="magicLevel" value="85"/>
-		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill10317"/>
 		<table name="#mpConsume2">125</table>
 		<set name="castRange" value="900"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="coolTime" value="300"/>
 		<set name="elements" value="water"/>
 		<set name="elementsPower" value="90"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="MDAM"/>
+		<set name="hitTime" value="3700"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="356"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Heavy Hit - Inflicts a powerful blow on target.
@@ -577,21 +577,21 @@
 		desc_add2: none
 	-->
     <skill id="11250" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="3000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="3700"/>
-		<set name="magicLevel" value="85"/>
-		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill10317"/>
 		<table name="#mpConsume2">125</table>
 		<set name="castRange" value="900"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="MDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="coolTime" value="300"/>
 		<set name="elements" value="water"/>
 		<set name="elementsPower" value="90"/>
+		<set name="hitTime" value="3700"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="356"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="skillType" value="MDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Superior Weapon Mastery - Increases INT by 2, P. Atk. by 82.9, M. Atk. by 103.7, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, 
