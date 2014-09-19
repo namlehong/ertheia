@@ -350,13 +350,13 @@
 		desc_add2: none
 	-->
     <skill id="10803" levels="1" name="Time Bomb">
-		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0099"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="isOffensive" value="false"/>
+		<set name="magicLevel" value="97"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="30000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_SELF"/>
 	</skill>
     <!--
 		Bullseye - Boom!
@@ -382,13 +382,13 @@
 		desc_add2: none
 	-->
     <skill id="10804" levels="1" name="Bullseye">
-		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0099"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="isOffensive" value="false"/>
+		<set name="magicLevel" value="97"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="30000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Quick Charge - Momentarily teleport 500 forward.
@@ -431,21 +431,20 @@
 		desc_add2: none
 	-->
     <skill id="10805" levels="4" name="Quick Charge">
-		<table name="#magicLevel">89 92 95 98</table>
-		<set name="reuseDelay" value="30000"/>
-		<set name="coolTime" value="400"/>
-		<set name="hitTime" value="100"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10805"/>
 		<table name="#flyRadius">500 600 700 800</table>
+		<table name="#magicLevel">89 92 95 98</table>
 		<table name="#mpConsume2">41 44 46 48</table>
-		<!-- Teleport to Front -->
+		<set name="castRange" value="#flyRadius"/>
+		<set name="coolTime" value="400"/>
+		<set name="fly_animation_speed" value="333"/>
 		<set name="fly_radius" value="#flyRadius"/>
 		<set name="fly_type" value="DUMMY"/>
-		<set name="fly_animation_speed" value="333"/>
-		 <!-- NOTE: Real hitTime is 0.1 sec, but here is increased to 0.3 sec, to match retail animation -->
+		<set name="hitTime" value="100"/>
+		<set name="icon" value="icon.skill10805"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="skillRadius" value="#flyRadius"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
