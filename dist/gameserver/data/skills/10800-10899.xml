@@ -491,19 +491,19 @@
 	-->
     <skill id="10806" levels="1" name="Frost Trap">
 		<table name="#activateRate">80</table>
-		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_type" value="all_speed_down"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="icon" value="icon.skill0516"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="99"/>
 		<set name="magicType" value="SPECIAL"/>
-		<set name="icon" value="icon.skill0516"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="levelModifier" value="1"/>
-		<set name="saveVs" value="MEN"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
 		<enchant type="1" levels="10" group="7" name="Chance">
 			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90</table>
 		</enchant>
@@ -551,20 +551,20 @@
 	-->
     <skill id="10807" levels="1" name="Gravity Trap">
 		<set name="abnormal_effect" value="ROOT"/>
-		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_type" value="root_magically"/>
+		<set name="activateRate" value="80"/>
+		<set name="icon" value="icon.skill0518"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="99"/>
 		<set name="magicType" value="SPECIAL"/>
-		<set name="icon" value="icon.skill0518"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="skillType" value="ROOT"/>
-		<set name="activateRate" value="80"/>
-		<set name="levelModifier" value="1"/>
-		<set name="trait" value="HOLD"/>
-		<set name="saveVs" value="MEN"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="ROOT"/>
+		<set name="target" value="TARGET_AREA"/>
+		<set name="trait" value="HOLD"/>
 		<for>
 			<effect name="Root"/>
 		</for>
@@ -593,15 +593,15 @@
 		desc_add2: none
 	-->
     <skill id="10808" levels="1" name="Decoy Provocation">
-		<set name="hitTime" value="1000"/>
-		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="target_lock"/>
-		<set name="magicLevel" value="99"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill0000"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="99"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Survival Movement - P. Evasion + 15. Disappears after 4 strikes.
@@ -654,19 +654,26 @@
 	-->
     <skill id="10809" levels="1" name="Survival Movement">
 		<table name="#mpConsume2">54</table>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="reuseDelay" value="30000"/>
-		<set name="abnormal_time" value="1200"/>
+		<table name="#mEvasRate">0</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1200"/>
 		<set name="abnormal_type" value="public_slot"/>
 		<set name="icon" value="icon.skill1087"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<enchant type="1" levels="10" group="7" name="Time">
+		</enchant>
+		<enchant type="2" name="Magic Avoid">
+			<table name="#mEvasRate">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
 		<for>
 			<effect name="DispelOnHit">
 				<def name="max_hits" value="4"/>
 				<add order="0x40" stat="pEvasRate" value="15"/>
+				<add order="0x40" stat="mEvasRate" value="#mEvasRate"/>
 			</effect>
 		</for>
 	</skill>
