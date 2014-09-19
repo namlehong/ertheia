@@ -30,23 +30,31 @@
 	-->
     <skill id="10903" levels="4" name="Hawk Eye">
 		<table name="#abnormal_level">1 2 3 4</table>
+		<table name="#critDamRcpt">0.95 0.93 0.9 0.85</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mod">1.05 1.06 1.07 1.10</table>
-		<set name="abnormal_time" value="1800"/>
+		<table name="#mpConsume2">62 69 76 83</table>
 		<set name="abnormal_level" value="#abnormal_level"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="abnormal_time" value="1800"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11872"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pAtk" value="#mod">
 					<using kind="Crossbow, Bow"/>
 				</mul>
 				<mul order="0x30" stat="pSkillPower" value="#mod">
+					<using kind="Crossbow, Bow"/>
+				</mul>
+				<mul order="0x30" stat="critDamRcpt" value="#critDamRcpt">
 					<using kind="Crossbow, Bow"/>
 				</mul>
 			</effect>
@@ -82,11 +90,11 @@
     <skill id="10904" levels="4" name="Superior Skill Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pSkillPower">1.05 1.06 1.07 1.10</table>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11874"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="pSkillPower" value="#pSkillPower"/>
 		</for>
