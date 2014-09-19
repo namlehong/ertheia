@@ -228,21 +228,23 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="11225" levels="1" name="Physical Soul Barrier">
-		<set name="icon" value="icon.skill11869"/>
-		<set name="reuseDelay" value="200000"/>
-		<set name="coolTime" value="100"/>
-		<set name="hitTime" value="900"/>
+    <skill id="11225" levels="4" name="Physical Soul Barrier">
+		<table name="#mpConsume2">498 498 498 498</table>
+		<table name="#pDef">5000 5300 5600 6000</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<set name="abnormal_time" value="20"/>
-		<set name="magicLevel" value="99"/>
-		<table name="#mpConsume2">498</table>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill11869"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="200000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
-				<add order="0x40" stat="pDef" value="5000"/>
+				<add order="0x40" stat="pDef" value="#pDef"/>
 			</effect>
 		</for>
 	</skill>
