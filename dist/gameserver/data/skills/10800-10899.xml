@@ -996,9 +996,28 @@
 		desc_add2: none
 	-->
     <skill id="10858" levels="3" name="Retreating Shot">
+		<table name="#castRange">400 400 450</table>
+		<table name="#flyRadius">-400 -400 -450</table>
+		<table name="#mpConsume2">32 33 34</table>
+		<table name="#power">29176 30726 32277</table>
+		<set name="castRange" value="#castRange"/>
+		<set name="fly_animation_speed" value="333"/>
+		<set name="fly_radius" value="#flyRadius"/>
+		<set name="fly_to_back" value="true"/>
+		<set name="fly_type" value="DUMMY"/>
+		<set name="flyCourse" value="0"/>
+		<set name="hitTime" value="700"/>
 		<set name="icon" value="icon.skill0000"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="target" value="TARGET_NONE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<for>
+			<effect name="RemoveTarget" time="0" isReflectable="false">
+				<def name="doStopTarget" value="true"/>
+			</effect>
+		</for>
 	</skill>
 </list>
