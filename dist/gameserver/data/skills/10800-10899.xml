@@ -716,6 +716,7 @@
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<for>
@@ -765,11 +766,11 @@
     <skill id="10811" levels="4" name="Superior Hawk Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10811"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="pAtk" value="#pAtk">
 				<using kind="Crossbow, Bow"/>
@@ -803,10 +804,27 @@
 		desc_add2: none
 	-->
     <skill id="10812" levels="3" name="Sneak Shot">
+    	<table name="#magicLevel">85 90 95</table>
+    	<table name="#mpConsume2">93 96 99</table>
+    	<table name="#power">29176 30726 32277</table>
+		<set name="coolTime" value="250"/>
 		<set name="icon" value="icon.skill0000"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+    	<set name="castRange" value="1100"/>
+    	<set name="hitTime" value="1800"/>
+    	<set name="magicLevel" value="#magicLevel"/>
+    	<set name="mpConsume2" value="#mpConsume2"/>
+    	<set name="power" value="#power"/>
+    	<set name="reuseDelay" value="30000"/>
+		<for>
+			<effect>
+				<triggers>
+					<trigger id="10813" level="1" type="ATTACK"/>
+				</triggers>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Sneak Shot: Stun - Stuns the enemy for 5 sec. Has a chance of canceling enemy's targeting. Requires a bow/crossbow. Over-hit.
@@ -832,10 +850,23 @@
 		desc_add2: none
 	-->
     <skill id="10813" levels="3" name="Sneak Shot: Stun">
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="castRange" value="1100"/>
 		<set name="icon" value="icon.skill0000"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
+		<for>
+			<effect>
+				<effect name="Stun" chance="100">
+					<target direction="behind"/>
+				</effect>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Rapid Fire Position - For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, chance of receiving an M. Critical Hit - 5%, and P. Skill Cooldown - 5%.
@@ -869,15 +900,14 @@
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtk">1.05 1.06 1.07 1.10</table>
 		<table name="#reuse">0.95 0.94 0.93 0.90</table>
-		<set name="abnormal_time" value="1800"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="abnormal_time" value="1800"/>
 		<set name="icon" value="icon.skill11871"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pAtk" value="#pAtk">
