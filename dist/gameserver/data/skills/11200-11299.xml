@@ -28,15 +28,15 @@
 		<table name="#mpConsume2">90</table>
 		<table name="#power">77645</table>
 		<set name="icon" value=""/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="#power"/>
-		<set name="nextAction" value="attack"/>
 		<set name="levelModifier" value="1"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="overHit" value="true"/>
-		<set name="skillType" value="PDAM"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
 		<set name="skillRadius" value="450"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AURA"/>
 		<for>
 			<effect name="Stun" time="10"/>
 		</for>
@@ -65,13 +65,13 @@
 		desc_add2: none
 	-->
     <skill id="11201" levels="1" name="Elemental Destruction: Wind">
-		<set name="icon" value=""/>
 		<set name="castRange" value="1290"/>
-		<set name="power" value="89678"/>
+		<set name="icon" value=""/>
 		<set name="levelModifier" value="1"/>
 		<set name="mpConsume2" value="50"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="89678"/>
 		<set name="saveVs" value="CON"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -100,14 +100,14 @@
 		desc_add2: none
 	-->
     <skill id="11202" levels="1" name="Elemental Destruction: Earth">
+		<set name="castRange" value="500"/>
 		<set name="icon" value=""/>
 		<set name="mpConsume2" value="100"/>
+		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="125687"/>
-		<set name="target" value="TARGET_AREA"/>
 		<set name="skillRadius" value="200"/>
 		<set name="skillType" value="MDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="500"/>
+		<set name="target" value="TARGET_AREA"/>
 	</skill>
     <!--
 		Elemental Destruction: Double Casting - 4 Elements
@@ -134,13 +134,13 @@
 	-->
     <skill id="11203" levels="1" name="Elemental Destruction: Double Casting">
 		<set name="icon" value=""/>
-		<set name="nextAction" value="attack"/>
 		<set name="levelModifier" value="1"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="overHit" value="true"/>
-		<set name="skillType" value="DEBUFF"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
 		<set name="skillRadius" value="800"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
 		<for>
 			<effect name="Debuff" time="30"/>
 			<mul order="0x30" stat="pDef" value="0.85"/>
@@ -177,22 +177,24 @@
 		desc_add2: none
 	-->
     <skill id="11224" levels="4" name="Gloomy Soul">
-		<set name="icon" value="icon.skill11868"/>
-		<table name="#mpConsume2">68 77 83 89</table>
+		<table name="#mpConsume2">72 77 83 89</table>
 		<table name="#reg">0.8 0.7 0.6 0.5</table>
-		<set name="reuseDelay" value="5000"/>
-		<set name="hitTime" value="3000"/>
-		<set name="magicLevel" value="99"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="skillRadius" value="200"/>
-		<set name="activateRate" value="40"/>
-		<set name="saveVs" value="MEN"/>
-		<set name="trait" value="PARALYZE"/>
+		<table name="#magicLevel">85 90 95 99</table>
 		<set name="abnormal_effect" value="PARALYZE"/>
 		<set name="abnormal_time" value="3"/>
-		<set name="skillType" value="PARALYZE"/>
+		<set name="activateRate" value="40"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2780"/>
+		<set name="icon" value="icon.skill11868"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="PARALYZE"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="PARALYZE"/>
 		<for>
 			<effect name="Paralyze">
 				<mul order="0x30" stat="regHp" value="#reg"/>
