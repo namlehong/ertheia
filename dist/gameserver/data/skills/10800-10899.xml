@@ -910,6 +910,7 @@
 		<set name="magicType" value="MAGIC"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<for>
@@ -959,11 +960,11 @@
     <skill id="10857" levels="4" name="Superior Speed Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#runSpd">10 12 15 20</table>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10857"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<add order="0x40" stat="runSpd" value="#runSpd"/>
 		</for>
@@ -996,8 +997,8 @@
 	-->
     <skill id="10858" levels="3" name="Retreating Shot">
 		<set name="icon" value="icon.skill0000"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
 </list>
