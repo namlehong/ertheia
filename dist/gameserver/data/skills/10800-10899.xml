@@ -276,39 +276,40 @@
 	-->
     <skill id="10802" levels="1" name="Mass Bullseye">
 		<table name="#activateRate">70</table>
-		<table name="#stunResist">0</table>
-		<table name="#rootResist">0</table>
-		<table name="#knockDownResist">0</table>
-		<set name="reuseDelay" value="180000"/>
-		<set name="hitTime" value="3000"/>
-		<set name="abnormal_effect" value="REAL_TARGET"/>
-		<set name="abnormal_time" value="20"/>
-		<set name="abnormal_level" value="4"/>
-		<set name="abnormal_type" value="real_target"/>
-		<set name="magicLevel" value="99"/>
-		<set name="icon" value="icon.skill10782"/>
-		<table name="#mpConsume2">93</table>
 		<table name="#castRange">1100</table>
+		<table name="#knockDownResist">0</table>
+		<table name="#mpConsume2">93</table>
+		<table name="#rootResist">0</table>
+		<table name="#stunResist">0</table>
+		<set name="abnormal_effect" value="REAL_TARGET"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="real_target"/>
+		<set name="activateRate" value="70"/>
+		<set name="castRange" value="#castRange"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.skill10782"/>
+		<set name="ignoreResists" value="true"/>
+		<set name="magicLevel" value="99"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="ignoreResists" value="true"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="activateRate" value="70"/>
+		<set name="reuseDelay" value="180000"/>
 		<set name="skillType" value="DEBUFF"/>
-		<set name="castRange" value="#castRange"/>
+		<set name="target" value="TARGET_AREA"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">89 85 81 78 74 70 66 63 59 55</table>
 		</enchant>
 		<enchant type="2" name="Chance">
 			<table name="#activateRate">71 72 73 74 75 76 77 78 79 80</table>
 		</enchant>
-		<enchant type="3" name="Stun Resist">
+		<enchant type="3" name="Break Shock">
 			<table name="#stunResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="4" name="Knockdown Resist">
+		<enchant type="4" name="Break Knockdown">
 			<table name="#knockDownResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="5" name="Hold Resist">
+		<enchant type="5" name="Break Hold">
 			<table name="#rootResist">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<for>
