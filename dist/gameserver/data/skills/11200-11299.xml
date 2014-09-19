@@ -1178,15 +1178,15 @@
 			<table name="#mpConsume2">79 76 73 70 67 65 63 61 59 57</table>
 		</enchant>
 		<enchant type="2" name="Chance">
-			<table name="#DOT">379 382 386 391 395 399 403 407 410 414<</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#activateRate">68 69 69 70 70 71 71 72 72 73</table>
 		</enchant>
 		<enchant type="2" name="Chance Exile">
-			<table name="#DOT">379 382 386 391 395 399 403 407 410 414<</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#airjokePower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#DOT">379 382 386 391 395 399 403 407 410 414<</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#reuseDelay">4900 4800 4700 4500 4400 4300 4200 4100 4000 3000</table>
 		</enchant>
 		<for>
@@ -1314,12 +1314,12 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Chance">
-			<table name="#DOT">379 382 386 391 395 399 403 407 410 414/table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#activateRate">68 69 69 70 70 71 71 72 72 73</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Chance Exile">
-			<table name="#DOT">379 382 386 391 395 399 403 407 410 414/table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#airjokePower">1 2 3 4 5 6 7 8 9 10/table>
 			<table name="#magicLevel">99</table>
 		</enchant>
@@ -1423,11 +1423,12 @@
     <skill id="11261" levels="6" name="Mark of Plague">
 		<table name="#abnormal_level">1 2 3 4 5 6</table>
 		<table name="#activateRate">80 81 82 83 84 85 </table>
-		<table name="#DOT">370 375 382 389 397 404</table>
+		<table name="#DOT">326 333 343 353 364 375</table>
 		<table name="#gainHp">0.95 0.90 0.85 0.80 0.75 0.70</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
-		<table name="#mpConsume2">48 50 53 56 59 63</table>
+		<table name="#mpConsume2">54 58 64 70 76 82</table>
 		<table name="#reuseDelay">5000</table>
+		<table name="#airjokePower">0</table>
 		<set name="abnormal_effect" value="DOT_POISON"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="10"/>
@@ -1449,18 +1450,25 @@
 		<set name="skillType" value="POISON"/>
 		<set name="target" value="TARGET_ONE"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#DOT">406 409 411 414 416 419 421 423 426 428</table>
-			<table name="#mpConsume2">60 58 55 53 50 48 45 43 40 38</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
+			<table name="#mpConsume2">79 76 73 70 67 65 63 61 59 57</table>
 		</enchant>
 		<enchant type="2" name="Chance">
-			<table name="#DOT">406 409 411 414 416 419 421 423 426 428</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#activateRate">68 69 69 70 70 71 71 72 72 73</table>
 		</enchant>
+		<enchant type="2" name="Chance Exile">
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
+			<table name="#airjokePower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
 		<enchant type="9" name="Recycle">
-			<table name="#DOT">406 409 411 414 416 419 421 423 426 428</table>
+			<table name="#DOT">379 382 386 391 395 399 403 407 410 414</table>
 			<table name="#reuseDelay">4900 4800 4700 4500 4400 4300 4200 4100 4000 3000</table>
 		</enchant>
 		<for>
+			<self_effect>
+				<add order="0x40" stat="airjokePower" value="#airjokePower"/>
+			</self_effect>
 			<effect count="15" time="1" name="DamOverTime" value="#DOT">
 				<mul order="0x30" stat="hpEff" value="#gainHp"/>
 			</effect>
