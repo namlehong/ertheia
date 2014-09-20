@@ -47,6 +47,7 @@ import databuilder.xml.holder.ItemHolder;
 public class SpawnBuilder {
 	
 	private HashSet<Integer> _npcIds = new HashSet<Integer>(); 
+	private HashMap<String, Element> _terRoot = new HashMap<String, Element>();
 	private HashMap<String, Element> _npcRoot = new HashMap<String, Element>();
 	private HashMap<String, Element> _mobRoot = new HashMap<String, Element>();
 	
@@ -89,6 +90,24 @@ public class SpawnBuilder {
 		return resultElement;
 	}
 	
+	public Element getTerRoot(String file){
+		
+		Element resultElement = _terRoot.get(file);
+		
+		if(resultElement == null)
+		{
+			Document document = DocumentHelper.createDocument();
+			resultElement = document.addElement("list");
+			_terRoot.put(file, resultElement);
+		}
+		
+		return resultElement;
+	}
+	
+	public void addTer(String _currentFile, Element terElement){
+		getTerRoot(_currentFile).add(terElement.detach());
+	}
+	
 	public void addElement(String _currentFile, HashSet<Integer> npcSpawnIds,
 			Element spawnElement) {
 		npcSpawnIds.removeAll(_npcIds);
@@ -121,7 +140,7 @@ public class SpawnBuilder {
 				_npcIds.add(id);
 			}
 		}catch (SQLException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		};
 	}
 	
@@ -130,6 +149,8 @@ public class SpawnBuilder {
 			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), "spawn.dtd", "data/spawn_npc/");
 		for(Map.Entry<String, Element> entry: _mobRoot.entrySet())
 			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), "spawn.dtd", "data/spawn_mob/");
+		for(Map.Entry<String, Element> entry: _terRoot.entrySet())
+			XmlPretty.writeToFile(entry.getKey(), entry.getValue().asXML(), "spawn.dtd", "data/spawn_ter/");
 	}
 	
 	public void build()

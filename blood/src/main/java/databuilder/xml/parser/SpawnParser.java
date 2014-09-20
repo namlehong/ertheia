@@ -42,7 +42,7 @@ public final class SpawnParser extends AbstractDirParser<SpawnHolder>
 	@Override
 	public File getXMLDir()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/spawn_npc/");
+		return new File(Config.DATAPACK_ROOT, "data/spawn/");
 	}
 
 	@Override
@@ -60,6 +60,7 @@ public final class SpawnParser extends AbstractDirParser<SpawnHolder>
 	@Override
 	protected void readData(Element rootElement) throws Exception
 	{
+		System.out.println("load file:"+_currentFile);
 		Map<String, Territory> territories = new HashMap<String, Territory>();
 		for(Iterator<Element> spawnIterator = rootElement.elementIterator(); spawnIterator.hasNext();)
 		{
@@ -70,6 +71,8 @@ public final class SpawnParser extends AbstractDirParser<SpawnHolder>
 				String terName = spawnElement.attributeValue("name");
 				Territory territory = parseTerritory(terName, spawnElement);
 				territories.put(terName, territory);
+				
+				SpawnBuilder.getInstance().addTer(_currentFile, spawnElement);
 			}
 			else if(spawnElement.getName().equalsIgnoreCase("spawn"))
 			{
