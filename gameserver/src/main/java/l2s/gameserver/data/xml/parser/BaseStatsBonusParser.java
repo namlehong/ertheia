@@ -55,8 +55,10 @@ public final class BaseStatsBonusParser extends AbstractFileParser<BaseStatsBonu
 					double wit = (1000. + Integer.parseInt(e.attributeValue("wit"))) / 1000;
 					double con = (1000. + Integer.parseInt(e.attributeValue("con"))) / 1000;
 					double men = (1000. + Integer.parseInt(e.attributeValue("men"))) / 1000;
+					double luc = (1000. + Integer.parseInt(e.attributeValue("luc"))) / 1000;
+					double cha = (1000. + Integer.parseInt(e.attributeValue("cha"))) / 1000;
 
-					getHolder().addBaseStatsBonus(value, new BaseStatsBonus(_int, str, con, men, dex, wit));
+					getHolder().addBaseStatsBonus(value, new BaseStatsBonus(_int, str, con, men, dex, wit, luc, cha));
 				}
 			}
 		}

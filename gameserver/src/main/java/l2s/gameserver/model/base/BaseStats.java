@@ -61,6 +61,22 @@ public enum BaseStats
 			return actor == null ? 1 : actor.getMEN();
 		}
 	},
+	LUC
+	{
+		@Override
+		public final int getStat(Creature actor)
+		{
+			return actor == null ? 1 : actor.getLUC();
+		}
+	},
+	CHA
+	{
+		@Override
+		public final int getStat(Creature actor)
+		{
+			return actor == null ? 1 : actor.getCHA();
+		}
+	},
 	NONE;
 
 	public static final BaseStats[] VALUES = values();

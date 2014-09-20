@@ -87,6 +87,7 @@ public class RewardGroup implements Cloneable
 	 */
 	public List<RewardItem> roll(RewardType type, Player player, double mod, boolean isRaid, boolean isSiegeGuard)
 	{
+		
 		switch(type)
 		{
 			case NOT_RATED_GROUPED:
@@ -150,8 +151,10 @@ public class RewardGroup implements Cloneable
 		List<RewardItem> ret = new ArrayList<RewardItem>(_items.size());
 		rollFinal(_items, ret, rate, Math.max(_chanceSum, RewardList.MAX_CHANCE));
 		for(RewardItem i : ret)
+		{
 			i.isAdena = true;
-
+			i.count = i.count;
+		}
 		return ret;
 	}
 
