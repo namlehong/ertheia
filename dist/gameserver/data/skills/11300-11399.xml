@@ -3061,10 +3061,20 @@
 		desc_add2: none
 	-->
     <skill id="11358" levels="4" name="Spectral Ability">
+		<table name="#magicLevel">85 90 95 99</table>
+    	<table name="#bonus">1.03 1.05 1.07 1.1</table>
+    	<table name="#pvpDamage">0.97 0.95 0.93 0.9</table>
+    	<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11277"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<mul order="0x30" stat="pAtk" value="#bonus"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" value="#pvpDamage"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#pvpDamage"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#pvpDamage"/>
+		</for>
 	</skill>
     <!--
 		Summon Protection Stone - Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores.
