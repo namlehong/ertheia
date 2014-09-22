@@ -2729,16 +2729,16 @@
 		desc_add2: none
 	-->
     <skill id="11351" levels="5" name="Arcane Link">
-    	<table name="#pAtk">1.01 1.03 1.05 1.1 1.15</table>
-    	<table name="#critRate">10 15 20 25</table>
     	<table name="#critDamage">1.01 1.03 1.05 1.1 1.15</table>
-    	<set name="abnormal_time" value="30"/>
-    	<set name="castRange" value="900"/>
-    	<set name="reuseDelay" value="5000"/>
+    	<table name="#critRate">10 15 20 25</table>
+    	<table name="#pAtk">1.01 1.03 1.05 1.1 1.15</table>
 		<set name="icon" value="icon.skill11351"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
+    	<set name="abnormal_time" value="30"/>
+    	<set name="castRange" value="900"/>
+    	<set name="reuseDelay" value="5000"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pAtk" value="#pAtk"/>
@@ -2777,10 +2777,21 @@
 		desc_add2: none
 	-->
     <skill id="11352" levels="4" name="Arcane Ability">
+    	<table name="#magicLevel">85 90 95 99</table>
+    	<table name="#bonus">1.03 1.05 1.07 1.1</table>
+    	<table name="#pvpDamage">0.97 0.95 0.93 0.9</table>
+    	<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11277"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<mul order="0x30" stat="pAtkSpd" value="#bonus"/>
+			<mul order="0x30" stat="pDef" value="#bonus"/>
+			<mul order="0x30" stat="pvpPhysDmgBonus" value="#pvpDamage"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#pvpDamage"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#pvpDamage"/>
+		</for>
 	</skill>
     <!--
 		Elemental Rage - Use Elemental Wrath to inflict severe damage on a target with 188 Power added to M. Atk.
