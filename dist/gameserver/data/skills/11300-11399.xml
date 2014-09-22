@@ -1879,7 +1879,7 @@
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
 		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
-		<set name="castRange" value="50"/>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1490"/>
 		<set name="icon" value="icon.skill0121"/>
@@ -2079,7 +2079,7 @@
     <skill id="11338" levels="8" name="Summon Wynn Nightshade">
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
-		<table name="#npcId">15090 15091 15092 15093 15094 15095 15096 15097</table>	<!--Молох Веньо-->
+		<table name="#npcId">15090 15091 15092 15093 15094 15095 15096 15097</table>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="3500"/>
 		<set name="icon" value="icon.skill11850"/>
@@ -2173,19 +2173,9 @@
 		desc_add2: none
 	-->
     <skill id="11340" levels="8" name="Summon Wynn Soulless">
-		<!--
-			Уровень: 1; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-			Уровень: 2; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-			Уровень: 3; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-			Уровень: 4; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-			Уровень: 5; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-			Уровень: 6; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-			Уровень: 7; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-			Уровень: 8; Описание: Призывает Вин Самаэля. Требуется 2 очка.
-		-->
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#mpConsume2">350 360 375 390 405 420 435 455</table>
-		<table name="#npcId">15106 15107 15108 15109 15110 15111 15112 15113</table>	<!--Самаэль Веньо-->
+		<table name="#npcId">15106 15107 15108 15109 15110 15111 15112 15113</table>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="3500"/>
 		<set name="icon" value="icon.skill11852"/>
@@ -2238,7 +2228,6 @@
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="target_lock"/>
-		<set name="castRange" value="50"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1490"/>
 		<set name="icon" value="icon.skill0028"/>
@@ -2347,7 +2336,7 @@
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
 		<table name="#mpConsume2">48 50 52 54 56 58 60 62</table>
 		<table name="#power">10508 11190 11872 12554 13236 13918 14600 15282</table>
-		<set name="castRange" value="50"/>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1490"/>
 		<set name="icon" value="icon.skill0121"/>
@@ -2596,7 +2585,6 @@
 		<table name="#pCritDamage">1.1 1.12 1.15 1.2</table>
 		<set name="abnormal_time" value="1800"/>
 		<set name="castRange" value="900"/>
-		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="3500"/>
 		<set name="icon" value="icon.skill11348"/>
@@ -2644,7 +2632,6 @@
 		<table name="#mpConsume2">61 67 73 79</table>
 		<table name="#pAtk">1.1 1.12 1.15 1.2</table>
 		<set name="abnormal_time" value="1800"/>
-		<set name="castRange" value="900"/>
 		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="3500"/>
@@ -2694,11 +2681,12 @@
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">53 60 67 70</table>
 		<table name="#power">188 202 215 227</table>
+		<table name="#triggerLevel">1 2 3 4</table>
 		<set name="castRange" value="900"/>
 		<set name="coolTime" value="300"/>
 		<set name="elements" value="#element"/>
 		<set name="elementsPower" value="#elementPower"/>
-		<set name="hitTime" value="2800"/>
+		<set name="hitTime" value="2780"/>
 		<set name="icon" value="icon.skill11350"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
@@ -2708,6 +2696,9 @@
 		<set name="skillType" value="MDAM"/>
 		<set name="soulBoost" value="true"/>
 		<set name="target" value="TARGET_ONE"/>
+		<triggers>
+			<trigger id="11351" level="#triggerLevel" type="ON_SUCCES_FINISH_CAST" chance="3"/>
+		</triggers>
 	</skill>
     <!--
 		Arcane Link - Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%.
@@ -2737,11 +2728,26 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="11351" levels="4" name="Arcane Link">
+    <skill id="11351" levels="5" name="Arcane Link">
+    	<table name="#pAtk">1.01 1.03 1.05 1.1 1.15</table>
+    	<table name="#critRate">10 15 20 25</table>
+    	<table name="#critDamage">1.01 1.03 1.05 1.1 1.15</table>
+    	<set name="abnormal_time" value="30"/>
+    	<set name="castRange" value="900"/>
+    	<set name="reuseDelay" value="5000"/>
 		<set name="icon" value="icon.skill11351"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+				<add order="0x40" stat="pCritRate" value="#critRate"/>
+				<add order="0x40" stat="mCritRate" value="#critRate"/>
+				<mul order="0x30" stat="pCritDamage" value="#critDamage"/>
+				<mul order="0x30" stat="mCritDamage" vallue="#critDamage"/>
+ 			</effect>
+		</for>
 	</skill>
     <!--
 		Arcane Ability - Atk. Spd., P. Def. + 3%, and PvP Damage - 3%.
