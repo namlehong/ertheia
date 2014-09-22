@@ -2921,10 +2921,17 @@
 		desc_add2: none
 	-->
     <skill id="11355" levels="4" name="Elemental Ability">
+		<table name="#magicLevel">85 90 95 99</table>
+    	<table name="#bonus">1.05 1.07 1.1 1.12</table>
+    	<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11277"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<mul order="0x30" stat="pCritDamage" value="#bonus"/>
+			<mul order="0x30" stat="mCritDamage" value="#bonus"/>
+		</for>
 	</skill>
     <!--
 		Spectral Rage - Use Spectral Wrath to inflict severe damage on a target with 188 Power added to M. Atk.
