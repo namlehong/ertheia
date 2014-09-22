@@ -2840,6 +2840,9 @@
 		<set name="skillType" value="MDAM"/>
 		<set name="soulBoost" value="true"/>
 		<set name="target" value="TARGET_ONE"/>
+		<triggers>
+			<trigger id="11354" level="#triggerLevel" type="ON_SUCCES_FINISH_CAST" chance="3"/>
+		</triggers>
 	</skill>
     <!--
 		Elemental Link - Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%.
@@ -2869,11 +2872,26 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="11354" levels="4" name="Elemental Link">
+    <skill id="11354" levels="5" name="Elemental Link">
+		<table name="#critDamage">1.01 1.03 1.05 1.1 1.15</table>
+    	<table name="#critRate">10 15 20 25</table>
+    	<table name="#pAtk">1.01 1.03 1.05 1.1 1.15</table>
 		<set name="icon" value="icon.skill11354"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="abnormal_time" value="30"/>
+    	<set name="castRange" value="900"/>
+    	<set name="reuseDelay" value="5000"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="#pAtk"/>
+				<add order="0x40" stat="pCritRate" value="#critRate"/>
+				<add order="0x40" stat="mCritRate" value="#critRate"/>
+				<mul order="0x30" stat="pCritDamage" value="#critDamage"/>
+				<mul order="0x30" stat="mCritDamage" vallue="#critDamage"/>
+ 			</effect>
+		</for>
 	</skill>
     <!--
 		Elemental Ability - Critical Damage + 5%.
