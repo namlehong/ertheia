@@ -266,14 +266,14 @@
 		desc_add2: none
 	-->
     <skill id="11504" levels="1" name="Superior Heavy Armor Mastery">
-		<table name="#pDef">1194</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10002"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pDef">1194</table>
 		<set name="analog_skills" value="229;231;232;253;259"/>
+		<set name="icon" value="icon.skill10002"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#pDef">1229 1264 1299 1334 1369 1404 1439 1474 1509 1545</table>
 			<table name="#magicLevel">99</table>
@@ -324,14 +324,14 @@
 		desc_add2: none
 	-->
     <skill id="11505" levels="1" name="Superior Anti Magic">
-		<table name="#mDef">139</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10004"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>.
+		<table name="#mDef">139</table>
 		<set name="analog_skills" value="146;466;147"/>
+		<set name="icon" value="icon.skill10004"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>.
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<triggers>
 				<trigger id="5556" level="1" type="RECEIVE_DAMAGE" chance="20">
 					<player damage="100;0"/>
@@ -385,12 +385,12 @@
     <skill id="11506" levels="1" name="Superior HP Boost">
 		<table name="#hp">366</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11506"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="analog_skills" value="211"/>
+		<set name="icon" value="icon.skill11506"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#hp">390 414 438 462 486 509 533 557 581 605</table>
 			<table name="#magicLevel">99</table>
@@ -437,14 +437,14 @@
 		desc_add2: none
 	-->
     <skill id="11507" levels="1" name="Superior MP Boost">
-		<table name="#mp">313</table>
 		<table name="#magicLevel">85</table>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill0213"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#mp">313</table>
 		<set name="analog_skills" value="213"/>
+		<set name="icon" value="icon.skill0213"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#mp">333 354 374 395 415 435 456 476 497 517</table>
 			<table name="#magicLevel">99</table>
@@ -497,31 +497,31 @@
 		desc_add2: none
 	-->
     <skill id="11508" levels="6" name="Assault Rush">
+		<table name="#chance">82 83 84 85 86 87</table>
 		<table name="#magicLevel">85 87 90 93 96 99</table>
+		<table name="#mpConsume2">38 39 41 43 45 47</table>
 		<table name="#power">0</table>
 		<table name="#skillType">DEBUFF</table>
-		<set name="power" value="#power"/>
-		<set name="reuseDelay" value="10000"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="800"/>
-		<set name="abnormal_time" value="1"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill11508"/>
-		<table name="#mpConsume2">38 39 41 43 45 47</table>
-		<table name="#chance"> 82 83 84 85 86 87 </table>
-		<set name="castRange" value="600"/>
-		<set name="fly_type" value="CHARGE"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="activateRate" value="#chance"/>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="200"/>
+		<set name="fly_type" value="CHARGE"/>
+		<set name="hitTime" value="800"/>
+		<set name="icon" value="icon.skill11508"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="neutral" value="true"/>
 		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
 		<set name="skillType" value="#skillType"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="trait" value="SHOCK"/>
-		<enchant type="1" levels="10" group="7" name="Атака">
+		<enchant type="1" levels="10" group="7" name="Attack">
 			<table name="#power">4040 4140 4240 4340 4440 4540 4640 4740 4840 4940 5040</table>
 			<table name="#skillType">PDAM</table>
 		</enchant>
@@ -1772,20 +1772,44 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="11515" levels="1" name="Confusion Bomber">
+    <skill id="11515" levels="5" name="Confusion Bomber">
+		<table name="#activeRate">50</table>
 		<table name="#magicLevel">85 88 91 94 97</table>
+		<table name="#mpConsume2">76 80 84 88 92</table>
 		<table name="#reuseDelay">180000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="speed_down"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1210"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="paralyze"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11515"/>
-		<set name="operateType" value="OP_PASSIVE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="target" value="TARGET_SELF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<cond msgId="113">
+			<using kind="Sword, Dual Blunt, Dual Sword"/>
+		</cond>
+		<enchant type="1" name="Cost">
+			<table name="#mpConsume2">90 86 82 78 75 71 67 63 60 56</table>
+		</enchant>
+		<enchant type="2" name="Chance">
+			<table name="#activeRate">51 52 53 54 55 56 57 58 59 60</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">174600 169200 163800 158400 153000 147600 142200 136800 131400 126000</table>
+		</enchant>
+		<triggers>
+ 			<trigger id="11516" level="1" type="ON_EXIT_EFFECT"/>
+		</triggers>
+		<for>
+			<effect name="Debuff" chance="#activeRate">
+				<mul order="0x30" stat="runSpd" value="0.95"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.95"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Curse Explosion - 
