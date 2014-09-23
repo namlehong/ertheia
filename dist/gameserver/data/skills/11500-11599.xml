@@ -9123,22 +9123,42 @@
 		desc_add2: none
 	-->
     <skill id="11597" levels="1" name="Wizard's Frenzied Harmony">
-		<set name="reuseDelay" value="2000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="699"/>
-		<set name="abnormal_time" value="2520"/>
+    	<table name="#abnormal_time">1800</table>
+    	<table name="#mentalPower">0</table>
+    	<table name="#mpConsume2">140</table>
+    	<table name="#reuseDelay">2000</table>
+    	<table name="#sleepPower">0</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="buff_special_class"/>
+		<set name="analog_skills" value="1078;349;267;337;336;273;365;1587;1588;1595;1596"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="514"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11597"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="UNK_MAG_TYPE_22"/>
-		<set name="mpConsume2" value="140"/>
-		<set name="castRange" value="900"/>
-		<set name="icon" value="icon.skill11597"/>
-		<set name="target" value="TARGET_CLAN_ONE"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="514"/>
-		<set name="analog_skills" value="1078;349;267;337;336;273;365;1587;1588;1595;1596"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_CLAN_ONE"/>
+		<enchant type="1" name="Cost">
+			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
+		</enchant>
+		<enchant type="2" name="Time">
+			<table name="#abnormal_time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<enchant type="3" name="Chance Sleep">
+			<table name="#sleepPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Fear">
+			<table name="#mentalPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">1900 1800 1800 1700 1700 1600 1500 1500 1400 1400</table>
+		</enchant>
 		<for>
 			<effect name="p_block_buff_slot">
 				<def name="abnormal_types" value="song_of_earth;song_of_life;song_of_water;song_of_wind;song_of_hunter;song_of_vitality;song_of_vengeance;song_of_renewal;song_of_champion;song_of_meditation;song_of_warding;song_of_windstorm;song_of_purification;wispering_of_battle;dance_of_berserker;dance_of_bladestorm;dance_of_concentration;dance_of_fire;dance_of_fury;dance_of_inspiration;dance_of_mystic;dance_of_siren;dance_of_vampire;dance_of_warrior;motion_of_defence;pa_pd_up;cancel_prob_down;berserker;ma_up_special"/>
@@ -9150,12 +9170,12 @@
 				<add order="0x40" stat="mCritRate" value="100"/>
 				<mul order="0x30" stat="regMp" value="1.2"/>
 				<add order="0x40" stat="runSpd" value="8"/>
-				<!-- Glory <mul order="0x30" stat="pDef" value="0.92"/>
-				<sub order="0x40" stat="pEvasRate" value="4"/> -->
 				<mul order="0x30" stat="mpConsum" value="0.85"/>
 				<mul order="0x30" stat="mpConsumePhysical" value="0.95"/>
 				<mul order="0x30" stat="mReuse" value="0.8"/>
 				<mul order="0x30" stat="pReuse" value="0.8"/>
+				<add order="0x40" stat="sleepPower" value="#sleepPower"/>
+				<add order="0x40" stat="mentalPower" value="#mentalPower"/>
 			</effect>
 			<effect name="i_dispel_by_slot" time="0">
 				<def name="abnormal_type" value="song_of_earth"/>
