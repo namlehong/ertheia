@@ -7050,26 +7050,26 @@
 		desc_add2: none
 	-->
     <skill id="11567" levels="1" name="Mental Attack Resistance">
-		<table name="#magicLevel">85</table>
 		<table name="#abnormal_time">1800</table>
-		<set name="reuseDelay" value="2000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="699"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
+		<table name="#abnormalLevel">12 13 14 15</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">140</table>
 		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="resist_derangement"/>
+		<set name="analog_skills" value="1035;1362;1415;311"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="660"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11824"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="UNK_MAG_TYPE_22"/>
-		<set name="icon" value="icon.skill11824"/>
-		<table name="#mpConsume2">140</table>
-		<table name="#abnormalLevel">12 13 14 15</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_PARTY"/>
-		<set name="skillRadius" value="1000"/>
-		<set name="effectPoint" value="660"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="1035;1362;1415;311"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
 			<table name="#magicLevel">99</table>
@@ -7121,18 +7121,18 @@
 		desc_add2: none
 	-->
     <skill id="11569" levels="1" name="Critical Damage Increase">
-		<set name="reuseDelay" value="15000"/>
-		<set name="abnormal_time" value="8"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="8"/>
 		<set name="abnormal_type" value="counter_critical_trigger"/>
+		<set name="icon" value="icon.skill11569"/>
+		<set name="isReuseDelayPermanent" value="true"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="ITEM"/>
-		<set name="icon" value="icon.skill11569"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="isReuseDelayPermanent" value="true"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="skillRadius" value="2500"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="skillRadius" value="2500"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect time="10">
 				<mul order="0x30" stat="pCritDamage" value="1.15"/>
@@ -7178,24 +7178,24 @@
     <skill id="11570" levels="1" name="Healing Melody">
 		<table name="#mpConsume2">582</table>
 		<table name="#mpConsume1">39</table>
-		<set name="reuseDelay" value="5000"/>
+		<set name="analog_skills" value="1229;1488;58;1553"/>
+		<set name="castRange" value="900"/>
+		<set name="effectPoint" value="398"/>
+		<set name="healPercents" value="35;27;24;21;18;15;12;10;10;10;10"/>
+		<set name="healRadius" value="300"/>
 		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill11570"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill11570"/>
-		<set name="effectPoint" value="398"/>
-		<set name="castRange" value="900"/>
-		<set name="healRadius" value="300"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="mpConsume1" value="#mpConsume1"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="healPercents" value="35;27;24;21;18;15;12;10;10;10;10"/>
+		<set name="reuseDelay" value="5000"/>
 		<set name="skillRadius" value="600"/>
 		<set name="skillType" value="CHAIN_HEAL"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="analog_skills" value="1229;1488;58;1553"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2"> 187 181 175 169 163 156 150 144 138 132 </table>
+			<table name="#mpConsume2">561 543 525 507 489 468 450 432 414 396</table>
 			<table name="#mpConsume1">0</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
