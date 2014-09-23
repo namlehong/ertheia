@@ -7413,32 +7413,31 @@
 		desc_add2: none
 	-->
     <skill id="11582" levels="4" name="Mass Song of Silence">
-		<set name="icon" value="icon.skill11839"/>
-		<table name="#activateRate">50</table>
-		<table name="#mpConsume2">175</table>
-		<table name="#mpConsume1">14</table>
-		<table name="#magicLevel">99</table>
 		<table name="#abnormal_time">10</table>
-		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="4000"/>
+		<table name="#activateRate">50</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">126 139 153 166</table>
 		<set name="abnormal_effect" value="SILENCE"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="silence_all"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="14100"/>
+		<set name="icon" value="icon.skill11839"/>
+		<set name="levelModifier" value="2"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="levelModifier" value="2"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="#mpConsume1"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="200"/>
 		<set name="skillType" value="MUTE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_AURA"/>
 		<set name="trait" value="DERANGEMENT"/>
-		<set name="saveVs" value="MEN"/>
 		<for>
 			<effect name="MuteAll"/>
 		</for>
