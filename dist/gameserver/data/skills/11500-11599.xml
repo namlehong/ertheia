@@ -7250,29 +7250,29 @@
 		desc_add2: none
 	-->
     <skill id="11571" levels="1" name="Recovery Melody">
-		<set name="reuseDelay" value="5000"/>
+		<table name="#mpConsume1">24</table>
+		<table name="#mpConsume2">96</table>
+		<table name="#power">1000</table>
+		<set name="analog_skills" value="1416;1306;1305"/>
+		<set name="castRange" value="900"/>
 		<set name="hitTime" value="5000"/>
+		<set name="icon" value="icon.skill11571"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill11571"/>
-		<table name="#mpConsume1">24</table>
 		<set name="mpConsume1" value="#mpConsume1"/>
-		<table name="#mpConsume2">96</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="COMBATPOINTHEAL"/>
-		<table name="#power">1000</table>
-		<set name="castRange" value="900"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
-		<set name="analog_skills" value="1416;1306;1305"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="COMBATPOINTHEAL"/>
+		<set name="target" value="TARGET_ONE"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2"> 116 112 108 104 100 96 93 89 85 81 </table>
+			<table name="#mpConsume2">116 112 108 104 100 96 93 89 85 81</table>
 			<table name="#mpConsume1">0</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="power">
-			<table name="#power"> 1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 </table>
+			<table name="#power">1010 1020 1030 1040 1050 1060 1070 1080 1090 1100</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 	</skill>
@@ -7303,35 +7303,34 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="11580" levels="4" name="Mass Transform"> <!-- Check me?-->
-		<set name="icon" value="icon.skill11580"/>
-		<table name="#magicLevel">85 86 88 91 94 97 99</table>
-		<table name="#reuseDelay">60000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1500"/>
+    <skill id="11580" levels="4" name="Mass Transform">
+		<table name="#activateRate">70</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">126 139 153 166</table>
+		<table name="#reuseDelay">120000</table>
+		<table name="#spd">0.8</table>
 		<set name="abnormal_effect" value="CHANGEBODY"/>
-		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_type" value="changebody"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="dispelOnDamage" value="true"/>
+		<set name="hitTime" value="1410"/>
+		<set name="icon" value="icon.skill11580"/>
+		<set name="isOffensive" value="true"/>
+		<set name="levelModifier" value="2"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill11537"/>
-		<table name="#spd">0.2</table>
-		<table name="#activateRate">70</table>
-		<table name="#mpConsume2">200</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="levelModifier" value="2"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="saveVs" value="MEN"/>
-		<set name="dispelOnDamage" value="true"/>
-		<set name="isOffensive" value="true"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="trait" value="MUTATE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="900"/>
 		<set name="npcId" value="13093"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="MUTATE"/>
 		<for>
 			<effect name="VisualTransformation" value="104">
 				<mul order="0x30" stat="runSpd" value="#spd"/>
