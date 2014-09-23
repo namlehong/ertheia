@@ -1773,13 +1773,13 @@
 		desc_add2: none
 	-->
     <skill id="11515" levels="5" name="Confusion Bomber">
-		<table name="#activeRate">50</table>
+		<table name="#activateRate">50</table>
 		<table name="#magicLevel">85 88 91 94 97</table>
 		<table name="#mpConsume2">76 80 84 88 92</table>
 		<table name="#reuseDelay">180000</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_type" value="speed_down"/>
+		<set name="abnormal_type" value="paralyze"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="1210"/>
 		<set name="icon" value="icon.skill11515"/>
@@ -1789,6 +1789,8 @@
 		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_ONE"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="saveVs" value="MEN"/>
 		<cond msgId="113">
 			<using kind="Sword, Dual Blunt, Dual Sword"/>
 		</cond>
@@ -1796,7 +1798,7 @@
 			<table name="#mpConsume2">90 86 82 78 75 71 67 63 60 56</table>
 		</enchant>
 		<enchant type="2" name="Chance">
-			<table name="#activeRate">51 52 53 54 55 56 57 58 59 60</table>
+			<table name="#activateRate">51 52 53 54 55 56 57 58 59 60</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">174600 169200 163800 158400 153000 147600 142200 136800 131400 126000</table>
@@ -1805,7 +1807,7 @@
  			<trigger id="11516" level="1" type="ON_EXIT_EFFECT"/>
 		</triggers>
 		<for>
-			<effect name="Debuff" chance="#activeRate">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" value="0.95"/>
 				<mul order="0x30" stat="pAtkSpd" value="0.95"/>
 			</effect>
@@ -1834,13 +1836,13 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="11516" levels="15" name="Curse Explosion">
-		<table name="#magicLevel">85 88 91 94 97 99 99 99 99 99 99 99 99 99 99</table>
-		<set name="magicLevel" value="#magicLevel"/>
+    <skill id="11516" levels="1" name="Curse Explosion">
+		<set name="magicLevel" value="99"/>
 		<set name="icon" value="icon.skill1170"/>
-		<set name="operateType" value="OP_PASSIVE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="target" value="TARGET_SELF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="5000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
 	</skill>
     <!--
 		Horn Melody - For 20 minutes, all party members' P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%.
