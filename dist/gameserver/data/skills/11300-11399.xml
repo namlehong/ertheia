@@ -3133,22 +3133,22 @@
 		desc_add2: none
 	-->
     <skill id="11360" levels="3" name="Arcane Protection">
+    	<table name="#bonus">1.05 1.07 1.1</table>
     	<table name="#magicLevel">90 95 99</table>
     	<table name="#reduceCritical">0.95 0.93 0.9</table>
     	<table name="#resist">5 7 10</table>
-    	<table name="#bonus">1.05 1.07 1.1</table>
-    	<set name="castRange" value="900"/>
-    	<set name="hitTime" value="1500"/>
-    	<set name="coolTime" value="500"/>
-    	<set name="reuseDelay" value="4000"/>
-		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_type" value="possession"/>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11360"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="castRange" value="900"/>
+    	<set name="coolTime" value="500"/>
+    	<set name="hitTime" value="1500"/>
+    	<set name="reuseDelay" value="4000"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="critChanceRcpt" value="#reduceCritical"/>
@@ -3280,10 +3280,22 @@
 		desc_add2: none
 	-->
     <skill id="11364" levels="3" name="Elemental Dash">
+    	<table name="#magicLevel">90 95 99</table>
+    	<table name="#runSpd">15 20 30</table>
+    	<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill0028"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="coolTime" value="500"/>
+    	<set name="hitTime" value="1500"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="runSpd" value="#runSpd"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Summon Demonic Crucifix - Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. Consumes 3 Spirit Ores.
