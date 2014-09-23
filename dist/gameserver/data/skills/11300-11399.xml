@@ -3471,9 +3471,31 @@
 		desc_add2: none
 	-->
     <skill id="11368" levels="3" name="Arcane Protection">
+		<table name="#bonus">1.15 1.17 1.2</table>
+    	<table name="#magicLevel">90 95 99</table>
+    	<table name="#reduceCritical">0.9 0.88 0.85</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_type" value="possession"/>
 		<set name="icon" value="icon.skill11360"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="castRange" value="900"/>
+    	<set name="coolTime" value="500"/>
+    	<set name="hitTime" value="1500"/>
+    	<set name="reuseDelay" value="4000"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="critChanceRcpt" value="#reduceCritical"/>
+				<mul order="0x40" stat="pullResist" value="#bonus"/>
+				<mul order="0x40" stat="knockBackResist" value="#bonus"/>
+				<mul order="0x40" stat="knockDownResist" value="#bonus"/>
+				<mul order="0x30" stat="debuffResist" value="#bonus"/>
+				<mul order="0x30" stat="regHp" value="#bonus"/>
+				<mul order="0x30" stat="regMp" value="#bonus"/>
+			</effect>
+		</for>
 	</skill>
 </list>
