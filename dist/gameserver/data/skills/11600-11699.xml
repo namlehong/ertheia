@@ -804,9 +804,6 @@
 		desc_add2: none
 	-->
     <skill id="11605" levels="1" name="Shield Song">
-		<!--
-			Уровень: 1; Описание: Увеличивает Физ. Защ. персонажа на 5%, Сопротивление 6 стихиям на 2, устойчивость к атакам из лука/арбалета на 1%, устойчивость к злым чарам на 1%. Время действия: 3 мин.
-		-->
 		<table name="#abnormal_time">1800</table>
 		<table name="#magicLevel">85</table>
 		<set name="abnormal_time" value="#abnormal_time"/>
@@ -862,9 +859,6 @@
 		desc_add2: none
 	-->
     <skill id="11606" levels="1" name="Dance of Might">
-		<!--
-			Уровень: 1; Описание: Физ. Атк. +5%, Скор. Атк. +5%, шанс Физ. Крит. Атк. +1, Скорость +1. Время действия: 3 мин.
-		-->
 		<table name="#abnormal_time">1800</table>
 		<table name="#magicLevel">85</table>
 		<set name="abnormal_time" value="#abnormal_time"/>
@@ -953,10 +947,159 @@
 		desc_add2: none
 	-->
     <skill id="11607" levels="910" name="Prevailing Song">
-		<set name="icon" value="icon.skill11607"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<table name="#abnormal_time">300</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">140</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="buff_special_aura"/>
+		<set name="analog_skills" value="1001;304;363;276;275;1591;1592"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="467"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11529"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="UNK_MAG_TYPE_22"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" name="Time">
+			<table name="#magicLevel">99</table>
+			<table name="#abnormal_time">330 360 390 420 450 480 510 540 570 600</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<for>
+			<effect name="p_block_buff_slot">
+				<def name="abnormal_types" value="song_of_earth;song_of_life;song_of_water;song_of_wind;song_of_hunter;song_of_vitality;song_of_vengeance;song_of_renewal;song_of_champion;song_of_meditation;song_of_warding;song_of_windstorm;song_of_purification;wispering_of_battle;dance_of_berserker;dance_of_bladestorm;dance_of_concentration;dance_of_fire;dance_of_fury;dance_of_inspiration;dance_of_mystic;dance_of_siren;dance_of_vampire;dance_of_warrior;motion_of_defence;buff_unicorn_seraphim;buff_queen_of_cat;knight_aura"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.15"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.3"/>
+				<mul order="0x30" stat="maxHp" value="1.3"/>
+				<mul order="0x30" stat="regMp" value="1.2"/>
+				<mul order="0x30" stat="mpConsum" value="0.90"/>
+				<mul order="0x30" stat="concentration" value="1.1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_earth"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_life"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_water"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_wind"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_hunter"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_vitality"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_vengeance"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_renewal"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_champion"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_meditation"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_warding"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_windstorm"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="song_of_purification"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="wispering_of_battle"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_berserker"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_bladestorm"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_concentration"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_fire"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_fury"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_inspiration"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_mystic"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_siren"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_vampire"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="dance_of_warrior"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="motion_of_defence"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_unicorn_seraphim"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="buff_queen_of_cat"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="knight_aura"/>
+				<def name="max_abnormal_level" value="-1"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Daring Song - For 5 minutes, increases party members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enem
