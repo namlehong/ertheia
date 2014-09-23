@@ -8870,22 +8870,46 @@
 		desc_add2: none
 	-->
     <skill id="11596" levels="1" name="Warrior's Frenzied Harmony">
-		<set name="reuseDelay" value="2000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="699"/>
-		<set name="abnormal_time" value="2520"/>
+    	<table name="#abnormal_time">1800</table>
+    	<table name="#bleedPower">0</table>
+    	<table name="#knockDownPower">0</table>
+    	<table name="#mpConsume2">140</table>
+    	<table name="#poisonPower">0</table>
+    	<table name="#reuseDelay">2000</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="buff_special_class"/>
+		<set name="analog_skills" value="1388;1261;1062;1562;1390;269;274;1585;1586"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="514"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11595"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="UNK_MAG_TYPE_22"/>
-		<set name="mpConsume2" value="140"/>
-		<set name="castRange" value="900"/>
-		<set name="icon" value="icon.skill11595"/>
-		<set name="target" value="TARGET_CLAN_ONE"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="514"/>
-		<set name="analog_skills" value="1388;1261;1062;1562;1390;269;274;1585;1586"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_CLAN_ONE"/>
+		<enchant type="1" name="Cost">
+			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
+		</enchant>
+		<enchant type="2" name="Time">
+			<table name="#abnormal_time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<enchant type="3" name="Chance Knockdown">
+			<table name="#knockDownPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Poison">
+			<table name="#poisonPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="5" name="Chance Bleed">
+			<table name="#bleedPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">1900 1800 1800 1700 1700 1600 1500 1500 1400 1400</table>
+		</enchant>
 		<for>
 			<effect name="p_block_buff_slot">
 				<def name="abnormal_types" value="song_of_earth;song_of_life;song_of_water;song_of_wind;song_of_hunter;song_of_vitality;song_of_vengeance;song_of_renewal;song_of_champion;song_of_meditation;song_of_warding;song_of_windstorm;song_of_purification;wispering_of_battle;dance_of_berserker;dance_of_bladestorm;dance_of_concentration;dance_of_fire;dance_of_fury;dance_of_inspiration;dance_of_mystic;dance_of_siren;dance_of_vampire;dance_of_warrior;motion_of_defence;berserker;pa_pd_up"/>
@@ -8896,9 +8920,9 @@
 				<mul order="0x30" stat="pCritDamage" value="1.35"/>
 				<add order="0x40" stat="pCritRate" value="100"/>
 				<add order="0x40" stat="runSpd" value="8"/>
-				<!-- Glory: <mul order="0x30" stat="pDef" value="0.92"/>
-				<mul order="0x30" stat="mDef" value="0.84"/>
-				<sub order="0x40" stat="pEvasRate" value="4"/> -->
+				<add order="0x40" stat="knockDownPower" value="#knockDownPower"/>
+				<add order="0x40" stat="poisonPower" value="#poisonPower"/>
+				<add order="0x40" stat="bleedPower" value="#bleedPower"/>
 			</effect>
 			<effect name="i_dispel_by_slot" time="0">
 				<def name="abnormal_type" value="song_of_earth"/>
