@@ -7474,9 +7474,9 @@
 		<table name="#magicLevel">85 90 95 99</table>
 		<set name="icon" value="icon.skill0153"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pDef" value="#add"/>
@@ -7513,32 +7513,32 @@
 		desc_add2: none
 	-->
     <skill id="11584" levels="4" name="Mass Medusa's Dance">
-		<set name="icon" value="icon.skill11840"/>
+		<table name="#abnormal_time">10</table>
 		<table name="#activateRate">40 50 60 70</table>
 		<table name="#magicLevel">99</table>
-		<table name="#abnormal_time">10</table>
 		<table name="#mpConsume2">126 139 153 166</table>
-		<set name="reuseDelay" value="120000"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1409"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="ride_state" value="NONE"/>
 		<set name="abnormal_effect" value="FLESH_STONE"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="turn_stone"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="levelModifier" value="1"/>
-		<set name="affectLimit" value="10;10"/>
-		<set name="icon" value="icon.skill0367"/>
-		<set name="hitCancelTime" value="500"/>
 		<set name="activateRate" value="#activateRate"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="coolTime" value="500"/>
 		<set name="effectPoint" value="666"/>
-		<set name="target" value="TARGET_AURA"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1409"/>
+		<set name="icon" value="icon.skill0367"/>
+		<set name="icon" value="icon.skill11840"/>
+		<set name="levelModifier" value="1"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="150"/>
 		<set name="skillType" value="PARALYZE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="saveVs" value="MEN"/>
+		<set name="target" value="TARGET_AURA"/>
 		<cond msgId="113">
 			<using kind="Dual Sword"/>
 		</cond>
@@ -7577,24 +7577,15 @@
 		desc_add2: none
 	-->
     <skill id="11585" levels="4" name="Superior Dance of Mastery">
-		<set name="icon" value="icon.skill0141"/>
+		<table name="#add">1.05 1.07 1.1 1.15</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#abnormal_time">60</table>
-		<table name="#reuseDelay">900000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="hitTime" value="500"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="icon" value="icon.skill0141"/>
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="heal_power_up"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="SPECIAL"/>
-		<table name="#add">1.05 1.07 1.1 1.15</table>
-		<table name="#mpConsume2">170 180 210 220</table>
-		<set name="effectPoint" value="655"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pDef" value="#add"/>
