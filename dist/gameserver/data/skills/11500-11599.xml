@@ -7622,25 +7622,25 @@
 		desc_add2: none
 	-->
     <skill id="11586" levels="4" name="Pa'agrio's Bravery">
-		<set name="icon" value="icon.skill11843"/>
-		<table name="#time">30</table>
-		<table name="#maxCp">1.05 1.06 1.07 1.1</table>
 		<table name="#HealCPPercent">5 6 7 10</table>
+		<table name="#maxCp">1.05 1.06 1.07 1.1</table>
 		<table name="#mpConsume2">126 139 153 166</table>
-		<set name="reuseDelay" value="10000"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1409"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="abnormal_time" value="#time"/>
+		<table name="#time">30</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#time"/>
 		<set name="abnormal_type" value="force_hp_up"/>
-		<set name="magicLevel" value="93"/>
+		<set name="analog_skills" value="1561;121;20006;441"/>
+		<set name="coolTime" value="500"/>
 		<set name="effectPoint" value="635"/>
+		<set name="hitTime" value="1409"/>
+		<set name="icon" value="icon.skill11843"/>
+		<set name="magicLevel" value="93"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillRadius" value="900"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_CLAN"/>
-		<set name="skillRadius" value="900"/>
-		<set name="analog_skills" value="1561;121;20006;441"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="maxCp" value="#maxCp"/>
@@ -7676,32 +7676,32 @@
 		desc_add2: none
 	-->
     <skill id="11587" levels="4" name="Mass Blockade">
-		<table name="#mpConsume1">63 69 76 83</table>
-		<table name="#mpConsume2">189 209 230 249</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="120000"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="2109"/>
-		<set name="abnormal_time" value="10"/>
+		<table name="#mpConsume1">63 69 76 83</table>
+		<table name="#mpConsume2">252 278 306 332</table>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="normal_attack_block"/>
+		<set name="activateRate" value="80"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2109"/>
+		<set name="icon" value="icon.skill11587"/>
+		<set name="isPvpSkill" value="true"/>
+		<set name="levelModifier" value="2"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="levelModifier" value="2"/>
-		<set name="affectLimit" value="10;10"/>
-		<set name="icon" value="icon.skill11587"/>
-		<set name="hitCancelTime" value="500"/>
 		<set name="mpConsume1" value="#mpConsume1"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="80"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="900"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_AURA"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="trait" value="PHYSICAL_BLOCKADE"/>
-		<set name="saveVs" value="MEN"/>
-		<set name="isPvpSkill" value="true"/>
 		<for>
 			<effect name="MuteAttack">
 				<target type="PLAYABLE"/>
