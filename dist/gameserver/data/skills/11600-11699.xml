@@ -64,8 +64,11 @@
 		desc_add2: none
 	-->
     <skill id="11600" levels="1" name="Frenzied Prevailing Sonata">
+    	<set name="#abnormal_time">300</table>
+    	<set name="#mpConsume2">140</table>
+    	<set name="#reuseDelay">2000</table>
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_time" value="420"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="buff_special_aura"/>
 		<set name="analog_skills" value="1001;304;363;276;275;1591;1592"/>
 		<set name="coolTime" value="300"/>
@@ -74,12 +77,23 @@
 		<set name="icon" value="icon.skill11600"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="UNK_MAG_TYPE_22"/>
-		<set name="mpConsume2" value="140"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="reuseDelay" value="2000"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="1000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_CLAN"/>
+		<enchant type="1" name="Cost">
+			<table name="#mpConsume2">133 128 122 117 111 106 100 95 88 83</table>
+		</enchant>
+		<enchant type="2" name="Time">
+			<table name="#abnormal_time">330 360 390 420 450 480 510 540 570 600</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">1900 1800 1800 1700 1700 1600 1500 1500 1400 1400</table>
+		</enchant>
+
+		<table name="#reuseDelay">2000</table>
 		<for>
 			<effect name="p_block_buff_slot">
 				<def name="abnormal_types" value="song_of_earth;song_of_life;song_of_water;song_of_wind;song_of_hunter;song_of_vitality;song_of_vengeance;song_of_renewal;song_of_champion;song_of_meditation;song_of_warding;song_of_windstorm;song_of_purification;wispering_of_battle;dance_of_berserker;dance_of_bladestorm;dance_of_concentration;dance_of_fire;dance_of_fury;dance_of_inspiration;dance_of_mystic;dance_of_siren;dance_of_vampire;dance_of_warrior;motion_of_defence;buff_unicorn_seraphim;buff_queen_of_cat;knight_aura"/>
