@@ -6810,26 +6810,26 @@
 		desc_add2: none
 	-->
     <skill id="11565" levels="1" name="Elemental Resistance">
-		<table name="#magicLevel">85</table>
 		<table name="#abnormal_time">1800</table>
-		<set name="reuseDelay" value="2000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="699"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
+		<table name="#abnormalLevel">12 13 14 15</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">140</table>
 		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="armor_element_all"/>
+		<set name="analog_skills" value="481;1352;1549;306;308;529;1189;1182;1548;1191;307;309"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="514"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11565"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="UNK_MAG_TYPE_22"/>
-		<set name="icon" value="icon.skill11565"/>
-		<table name="#mpConsume2">140</table>
-		<table name="#abnormalLevel">12 13 14 15</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_PARTY"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
 		<set name="skillRadius" value="1000"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="514"/>
-		<set name="analog_skills" value="481;1352;1549;306;308;529;1189;1182;1548;1191;307;309"/>
+		<set name="target" value="TARGET_PARTY"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">133 128 122 117 11 106 100 95 88 83</table>
 			<table name="#magicLevel">99</table>
@@ -6942,26 +6942,26 @@
 		desc_add2: none
 	-->
     <skill id="11566" levels="1" name="Holy Attack Resistance">
-		<table name="#magicLevel">85</table>
 		<table name="#abnormal_time">1800</table>
-		<set name="reuseDelay" value="2000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="699"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
+		<table name="#abnormalLevel">12 13 14 15</table>
+		<table name="#magicLevel">85</table>
+		<table name="#mpConsume2">140</table>
 		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="armor_holy"/>
+		<set name="analog_skills" value="270;196;1392;1393;1033;530;277;1032"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="514"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11567"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="UNK_MAG_TYPE_22"/>
-		<set name="icon" value="icon.skill11567"/>
-		<table name="#mpConsume2">140</table>
-		<table name="#abnormalLevel">12 13 14 15</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="effectPoint" value="514"/>
-		<set name="target" value="TARGET_PARTY"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="2000"/>
 		<set name="skillRadius" value="700"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="analog_skills" value="270;196;1392;1393;1033;530;277;1032"/>
+		<set name="target" value="TARGET_PARTY"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">133 128 122 117 11 106 100 95 88 83</table>
 			<table name="#magicLevel">99</table>
@@ -6973,8 +6973,8 @@
 		<for>
 			<effect name="p_block_buff_slot">
 				<def name="abnormal_types" value="dance_of_alignment;armor_unholy;dance_of_light;song_of_invocation;resist_bleeding"/>
-				<add order="0x40" stat="bleedResist" value="50"/>
-				<add order="0x40" stat="poisonResist" value="50"/>
+				<mul order="0x30" stat="bleedResist" value="1.5"/>
+				<mul order="0x30" stat="poisonResist" value="1.5"/>
 				<add order="0x40" stat="defenceHoly" value="30"/>
 				<add order="0x40" stat="defenceUnholy" value="30"/>
 			</effect>
