@@ -8333,28 +8333,38 @@
 		desc_add2: none
 	-->
     <skill id="11593" levels="4" name="Harp Frenzy">
-		<table name="#vuln">5 6 7 8</table>
-		<table name="#vuln2">34 35 36 37</table>
-		<table name="#mpConsume2">140 151 170 181</table>
-		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#abnormal_level">1 2 3 4</table>
 		<table name="#abnormal_time">1800 1800 2520 3060</table>
-		<set name="reuseDelay" value="2000"/>
-		<set name="coolTime" value="300"/>
-		<set name="hitTime" value="699"/>
-		<set name="abnormal_time" value="#abnormal_time"/>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">140 151 170 181</table>
+		<table name="#reuseDelay">2000</table>
+		<table name="#vuln">5 6 7 8</table>
+		<table name="#vuln2">34 35 36 37</table>
 		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="buff_special_hitavoid"/>
+		<set name="analog_skills" value="1240;1535;1309;1461;1252;230"/>
+		<set name="coolTime" value="300"/>
+		<set name="effectPoint" value="514"/>
+		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11593"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="UNK_MAG_TYPE_22"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="icon" value="icon.skill11593"/>
-		<set name="target" value="TARGET_CLAN"/>
-		<set name="skillType" value="BUFF"/>
-		<set name="skillRadius" value="1000"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="514"/>
-		<set name="analog_skills" value="1240;1535;1309;1461;1252;230"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillRadius" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_CLAN"/>
+		<enchant type="1" name="Cost">
+			<table name="#mpConsume2">173 166 158 151 144 137 129 122 115 108</table>
+		</enchant>
+		<enchant type="2" name="Time">
+			<table name="#abnormal_time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#reuseDelay">1900 1800 1800 1700 1700 1600 1500 1500 1400 1400</table>
+		</enchant>
 		<for>
 			<effect name="p_block_buff_slot">
 				<def name="abnormal_types" value="improve_hit_defence_crt_rate_up;hit_up;t_crt_dmg_down;improve_speed_avoid_up;speed_up;avoid_up"/>
