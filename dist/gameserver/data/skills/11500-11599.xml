@@ -9323,24 +9323,24 @@
 		desc_add2: none
 	-->
     <skill id="11598" levels="4" name="Greater Freezing Flame">
-		<set name="icon" value="icon.skill11598"/>
-		<table name="#power">326 343 359 375</table>
 		<table name="#activateRate">35 36 37 38</table>
-		<table name="#mpConsume2">73 79 86 91</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<set name="reuseDelay" value="5000"/>
-		<set name="hitTime" value="900"/>
+		<table name="#mpConsume2">73 79 86 91</table>
+		<table name="#power">326 343 359 375</table>
 		<set name="abnormal_time" value="10"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill0494"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="#power"/>
 		<set name="activateRate" value="#activateRate"/>
-		<set name="saveVs" value="MEN"/>
-		<set name="target" value="TARGET_ONE"/>
 		<set name="castRange" value="900"/>
-		<set name="skillType" value="POISON"/>
+		<set name="hitTime" value="900"/>
+		<set name="icon" value="icon.skill0494"/>
+		<set name="icon" value="icon.skill11598"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="POISON"/>
+		<set name="target" value="TARGET_ONE"/>
 		<for>
 			<effect count="10" name="DamOverTime" time="1" value="#power"/>
 		</for>
@@ -9373,15 +9373,15 @@
 		desc_add2: none
 	-->
     <skill id="11599" levels="4" name="Combat Cry">
-		<table name="#mod">1.05 1.07 1.1 1.15</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<set name="ride_state" value="NONE"/>
-		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#mod">1.05 1.07 1.1 1.15</table>
 		<set name="icon" value="icon.skill1001"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume1" value="1"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="CONT"/>
 		<set name="operateType" value="OP_TOGGLE"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="CONT"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect count="-1" name="ManaDamOverTime" time="1" value="1">
 				<mul order="0x30" stat="pAtk" value="#mod"/>
