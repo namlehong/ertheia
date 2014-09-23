@@ -7366,18 +7366,20 @@
 		desc_add2: none
 	-->
     <skill id="11581" levels="4" name="Superior Advantage">
-		<set name="icon" value="icon.skill11841"/>
 		<table name="#add">1.05 1.06 1.07 1.1</table>
 		<table name="#magicLevel">99</table>
+		<table name="#mpRecovery">5 6 7 10</table>
+		<tanle name="#cooldown">0.95 0.94 0.93 0.9</table>
+		<set name="icon" value="icon.skill11841"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
-			<mul order="0x30" stat="pReuse" value="#add"/>
-			<mul order="0x30" stat="mReuse" value="#add"/>
+			<mul order="0x30" stat="pReuse" value="#cooldown"/>
+			<mul order="0x30" stat="mReuse" value="#cooldown"/>
 			<mul order="0x30" stat="pSkillPower" value="1.05"/>
-			<add order="0x40" stat="regMp" value="#add"/>
+			<add order="0x40" stat="regMp" value="#mpRecovery"/>
 			<mul order="0x30" stat="maxHp" value="#add"/>
 			<mul order="0x30" stat="maxMp" value="#add"/>
 			<mul order="0x30" stat="maxCp" value="#add"/>
