@@ -5368,22 +5368,22 @@
 		desc_add2: none
 	-->
     <skill id="11545" levels="1" name="Crazy Nocturne">
-		<set name="reuseDelay" value="600000"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="3000"/>
-		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_type" value="instinct"/>
+		<set name="coolTime" value="500"/>
+		<set name="effectPoint" value="467"/>
+		<set name="hitTime" value="3000"/>
+		<set name="icon" value="icon.skill11545"/>
 		<set name="magicLevel" value="95"/>
 		<set name="magicType" value="SPECIAL"/>
-		<set name="icon" value="icon.skill11545"/>
 		<set name="mpConsume1" value="206"/>
 		<set name="mpConsume2" value="826"/>
-		<set name="target" value="TARGET_PARTY"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="600000"/>
 		<set name="skillRadius" value="1000"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="effectPoint" value="467"/>
+		<set name="target" value="TARGET_PARTY"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="critChanceRcpt" value="0.5"/>
@@ -5524,65 +5524,75 @@
 		<table name="#mpConsume1">111</table>
 		<table name="#mpConsume2">1767</table>
 		<table name="#activateRate">80</table>
-		<set name="reuseDelay" value="30000"/>
-		<set name="hitTime" value="2000"/>
-		<set name="abnormal_time" value="10"/>
+		<table name="#power">38826</table>
 		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="multi_debuff"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="1509"/>
+		<set name="castRange" value="900"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill11546"/>
 		<set name="magicLevel" value="99"/>
 		<set name="magicType" value="SPECIAL"/>
-		<set name="icon" value="icon.skill11546"/>
-		<set name="power" value="38826"/>
 		<set name="mpConsume1" value="#mpConsume1"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="saveVs" value="MEN"/>
 		<set name="nextAction" value="attack"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="900"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_AREA"/>
 		<cond msgId="113">
-			<using kind="Dual Sword, Blunt, Dual Blunt, Sword"/>
+			<using kind="Dual Sword, Dual Blunt, Sword"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">967 931 895 860 824 788 753 717 681 646</table>
 			<table name="#mpConsume1">0</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<enchant type="2" name="Chance">
 			<table name="#activateRate">81 82 83 84 85 86 87 88 89 90</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
 			<table name="#elementPower">1 2 3 4 5 6 7 8 9 10</table>
 			<table name="#magicLevel">99</table>
+			<table name="#power">39727 40628 41528 42429 43330 44231 45132 46033 46934 47835</table>
 		</enchant>
 		<for>
 			<effect name="Debuff">
@@ -5593,7 +5603,6 @@
 				<mul order="0x30" stat="runSpd" value="0.5"/>
 			</effect>
 		</for>
-		<set name="analog_skills" value="1509"/>
 	</skill>
     <!--
 		Superior HP Recovery - STR + 2 and HP Recovery Bonus + 2.8.
