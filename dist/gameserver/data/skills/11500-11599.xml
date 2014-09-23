@@ -4413,21 +4413,21 @@
     <skill id="11536" levels="6" name="Divine Cancel">
 		<table name="#dispel_chance">35 40 45 50 55 60</table>
 		<table name="#magicLevel">85 86 89 92 95 98</table>
+		<table name="#mpConsume2">70 70 75 80 85 90</table>
 		<table name="#reuseDelay">300000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="activateRate" value="70"/>
+		<set name="analog_skills" value="1246;455"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="699"/>
+		<set name="icon" value="icon.skill11536"/>
+		<set name="isCancel" value="true"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="isCancel" value="true"/>
-		<set name="icon" value="icon.skill11536"/>
-		<table name="#mpConsume2">70 70 75 80 85 90</table>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="activateRate" value="70"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="900"/>
-		<set name="analog_skills" value="1246;455"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">86 82 78 75 71 67 63 60 57 53</table>
 			<table name="#magicLevel">99</table>
@@ -4518,34 +4518,34 @@
 		desc_add2: none
 	-->
     <skill id="11537" levels="7" name="Transform">
+		<table name="#activateRate">64 65 66 67 68 69 70</table>
 		<table name="#magicLevel">85 86 88 91 94 97 99</table>
+		<table name="#mpConsume2">112 112 120 124 132 140 148</table>
 		<table name="#reuseDelay">60000</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1500"/>
+		<table name="#spd">0.8 0.7 0.6 0.5 0.4 0.3 0.2</table>
 		<set name="abnormal_effect" value="CHANGEBODY"/>
-		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_type" value="changebody"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="2;1395;15;1092"/>
+		<set name="castRange" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="dispelOnDamage" value="true"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11537"/>
+		<set name="isOffensive" value="true"/>
+		<set name="levelModifier" value="2"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill11537"/>
-		<table name="#spd">0.8 0.7 0.6 0.5 0.4 0.3 0.2</table>
-		<table name="#activateRate">64 65 66 67 68 69 70</table>
-		<table name="#mpConsume2">112 112 120 124 132 140 148</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="levelModifier" value="2"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="saveVs" value="MEN"/>
-		<set name="dispelOnDamage" value="true"/>
-		<set name="isOffensive" value="true"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="trait" value="MUTATE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="900"/>
 		<set name="npcId" value="13093"/>
-		<set name="analog_skills" value="2;1395;15;1092"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="MUTATE"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">159 152 145 139 132 125 118 112 105 98</table>
 		</enchant>
@@ -4655,30 +4655,30 @@
 		desc_add2: none
 	-->
     <skill id="11538" levels="4" name="Mass Giant Root">
+		<table name="#activateRate">60</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#reuseDelay">120000</table>
-		<table name="#pDef">1</table>
 		<table name="#mDef">1</table>
-		<set name="reuseDelay" value="#reuseDelay"/>
+		<table name="#mpConsume2">252 558 612 666</table>
+		<table name="#pDef">1</table>
+		<table name="#reuseDelay">120000</table>
+		<set name="abnormal_effect" value="ROOT"/>
+		<set name="abnormal_level" value="5"/>
+		<set name="abnormal_time" value="15"/>
+		<set name="abnormal_type" value="root_magically"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="analog_skills" value="1208;1272;367"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1500"/>
-		<set name="abnormal_effect" value="ROOT"/>
-		<set name="abnormal_time" value="15"/>
-		<set name="abnormal_level" value="5"/>
-		<set name="abnormal_type" value="root_magically"/>
+		<set name="icon" value="icon.skill11538"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill11538"/>
-		<table name="#mpConsume2">252 558 612 666</table>
-		<table name="#activateRate">60</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="target" value="TARGET_AREA"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="MEN"/>
 		<set name="skillType" value="ROOT"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="castRange" value="900"/>
-		<set name="analog_skills" value="1208;1272;367"/>
+		<set name="target" value="TARGET_AREA"/>
 		<set name="trait" value="HOLD"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">639 612 585 559 532 505 479 452 425 399</table>
@@ -4686,10 +4686,10 @@
 		<enchant type="2" name="Chance">
 			<table name="#activateRate">61 62 63 64 65 66 67 68 69 70</table>
 		</enchant>
-		<enchant type="3" name="Сглаз">
+		<enchant type="3" name="Hex">
 			<table name="#pDef">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9</table>
 		</enchant>
-		<enchant type="4" name="Разум">
+		<enchant type="4" name="M. Def.">
 			<table name="#mDef">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
