@@ -2234,10 +2234,31 @@
 		desc_add2: none
 	-->
     <skill id="11613" levels="4" name="Song of Protection">
+		<table name="#abnormal_time">30</table>
+		<table name="#heal">1000 2000 3000 5000</table>
+		<table name="#magicLevel">85 427 95 99</table>
+		<table name="#mpConsume2">319 21 534 640</table>
+		<table name="#reuseDelay">600000</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
 		<set name="icon" value="icon.skill11613"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="ignoreHpEff" value="true"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#heal"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="HEAL"/>
+		<set name="staticPower" value="true"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="mDef" value="5000"/>
+				<mul order="0x30" stat="pDef" value="5000"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Battle Rhapsody Dance - For 30 sec., increases your P. Atk./M. Atk./Atk. Spd./Casting Spd. + 50%.
