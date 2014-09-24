@@ -2106,14 +2106,21 @@
 		desc_add2: none
 	-->
     <skill id="11775" levels="1" name="Return">
-		<set name="reuseDelay" value="60000"/>
+    	<table name="#mpConsume2">60</table>
 		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill11775"/>
 		<set name="magicLevel" value="91"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill11775"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="skillType" value="RECALL"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="mpConsume2" value="#mpConsume2"/>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#npcId">57 55 52 50 48 45 43 40 38 36</table>
+		</enchant>
+		<enchant type="2" levels="10" group="7" name="Distance">
+		</enchant>
 	</skill>
     <!--
 		Summon Lumi - Summons a Spirit of Light.
