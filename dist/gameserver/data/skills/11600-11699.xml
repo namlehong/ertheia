@@ -2236,8 +2236,8 @@
     <skill id="11613" levels="4" name="Song of Protection">
 		<table name="#abnormal_time">30</table>
 		<table name="#heal">1000 2000 3000 5000</table>
-		<table name="#magicLevel">85 427 95 99</table>
-		<table name="#mpConsume2">319 21 534 640</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">319 427 534 640</table>
 		<table name="#reuseDelay">600000</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
@@ -2288,10 +2288,29 @@
 		desc_add2: none
 	-->
     <skill id="11614" levels="4" name="Battle Rhapsody Dance">
+		<table name="#abnormal_time">30</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">319 427 534 640</table>
+		<table name="#reuseDelay">600000</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
 		<set name="icon" value="icon.skill11614"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.5"/>
+				<mul order="0x30" stat="mAtk" value="1.5"/>
+				<mul order="0x30" stat="pAtkSpd" value="1.5"/>
+				<mul order="0x30" stat="mAtkSpd" value="1.5"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Battle Ditty - For 30 min., selected party member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores.
