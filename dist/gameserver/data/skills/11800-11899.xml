@@ -2363,13 +2363,13 @@
 		desc_add2: none
 	-->
     <skill id="11855" levels="4" name="Superior Wizard Combat">
-		<set name="icon" value="icon.skill0945"/>
 		<table name="#mAtk">1.1 1.12 1.15 1.2</table>
-		<table name="#magicLevel">99</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<set name="icon" value="icon.skill0945"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="mAtk" value="#mAtk"/>
 			<mul order="0x30" stat="mReuse" value="0.9"/>
@@ -2399,18 +2399,18 @@
 		desc_add2: none
 	-->
     <skill id="11856" levels="1" name="Mental Recharge">
-		<set name="icon" value="icon.skill11856"/>
-		<set name="reuseDelay" value="600000"/>
+		<table name="#mpConsume2">66</table>
 		<set name="coolTime" value="100"/>
 		<set name="hitTime" value="5500"/>
+		<set name="icon" value="icon.skill11856"/>
 		<set name="magicLevel" value="99"/>
-		<table name="#mpConsume2">66</table>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_PARTY_ONE"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="50000"/> <!--TODO new skilltype that heals everything! !-->
+		<set name="reuseDelay" value="600000"/>
 		<set name="skillRadius" value="1000"/>
 		<set name="skillType" value="MANAHEAL"/>
-		<set name="power" value="50000"/> <!--TODO new skilltype that heals everything! !-->
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="target" value="TARGET_PARTY_ONE"/>
 	</skill>
     <!--
 		Summon Flag of Life - Summons a Flag of Life, which restores the HP of those that click on it.
@@ -2437,9 +2437,9 @@
 	-->
     <skill id="11857" levels="3" name="Summon Flag of Life">
 		<set name="icon" value="icon.skill11774"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Protective Heal - For 1 min., puts a barrier around a party member. The barrier blocks 5 times.
@@ -2469,9 +2469,9 @@
 	-->
     <skill id="11858" levels="3" name="Protective Heal">
 		<set name="icon" value="icon.skill11754"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Dark Vampirism - Attacks target with 198 Power added to M. Atk. and recovers HP equivalent to 50% of damage inflicted. Consumes 1 Spirit Ore.
@@ -2550,9 +2550,9 @@
 	-->
     <skill id="11860" levels="3" name="Healing Flag">
 		<set name="icon" value="icon.skill11755"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Elemental Resistance - For 30 min., increases party member's Elemental Resistance by 30. Consumes 10 Spirit Ores.
