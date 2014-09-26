@@ -1,0 +1,29 @@
+<!ELEMENT list (reward)*>
+<!ELEMENT reward (#PCDATA|reward|classid|classtype|classtype2|item|remove_item)*>
+<!ATTLIST reward
+	name CDATA #REQUIRED
+	parent CDATA #IMPLIED
+	weight CDATA #IMPLIED
+	min_level CDATA #IMPLIED
+	max_level CDATA #IMPLIED>
+
+<!ELEMENT classid (#PCDATA)>
+<!ATTLIST classid
+	value CDATA #REQUIRED>
+	
+<!ELEMENT classtype (#PCDATA)>
+<!ATTLIST classtype
+	value CDATA #REQUIRED>
+	
+<!ELEMENT classtype2 (#PCDATA)>
+<!ATTLIST classtype2
+	value CDATA #REQUIRED>
+		
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item
+	id CDATA #REQUIRED
+	count CDATA #REQUIRED>
+
+<!ELEMENT remove_item (#PCDATA)>
+<!ATTLIST remove_item
+	id CDATA #REQUIRED>

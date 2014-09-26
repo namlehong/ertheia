@@ -1,0 +1,13 @@
+<!ELEMENT list (group)*>
+<!ELEMENT group (loc)*>
+<!ATTLIST group
+	class_ids CDATA #IMPLIED
+	is_party CDATA #IMPLIED
+	min_level CDATA #REQUIRED
+	max_level CDATA #REQUIRED>
+		
+<!ELEMENT loc (#PCDATA)>
+<!ATTLIST loc
+	x CDATA #REQUIRED
+	y CDATA #REQUIRED
+	z CDATA #REQUIRED>
