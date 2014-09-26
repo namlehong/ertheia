@@ -31,8 +31,8 @@ public class MainBuilder
 	
 	public static MainBuilder _instance;
 	public static Connection _conn = null;
-	public static final String _datapack_path = "/Users/mylove1412/Workspace/ertheia/dist/gameserver/";
-	public static String _jdbc_connection = "jdbc:mysql://localhost/pal?user=root&password=";
+	public static final String _datapack_path = "/Users/sontronghien/Workspace/cuuthanh/09_Server/ertheia/dist/gameserver/";
+	public static String _jdbc_connection = "jdbc:mysql://localhost/Ertheia_NPC_Nam?user=root&password=enterpri";
 	
 	private MainBuilder()
 	{
@@ -99,6 +99,10 @@ public class MainBuilder
 		SpawnBuilder.getInstance().buildAndStore();
 	}
 	
+	public static void buildRaidSpawn(){
+		SpawnBuilder.getInstance().buildAndStoreRaidboss();
+	}
+	
 	
 	public static class CustomComparator implements Comparator<ItemTemplate> {
 	    @Override
@@ -123,7 +127,8 @@ public class MainBuilder
 //		buildNpc();
 //		buildSkill();
 //		buildDropList();
-		buildSpawn();
+//		buildSpawn();
+		buildRaidSpawn();
 		
 		
 	}
