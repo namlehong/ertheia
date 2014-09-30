@@ -171,8 +171,10 @@ public final class TransformTemplateParser extends AbstractDirParser<TransformTe
 									int _int = Integer.parseInt(e2.attributeValue("int"));
 									int men = Integer.parseInt(e2.attributeValue("men"));
 									int wit = Integer.parseInt(e2.attributeValue("wit"));
+									int luc = Integer.parseInt(e2.attributeValue("luc"));
+									int cha = Integer.parseInt(e2.attributeValue("cha"));
 
-									template.addBaseStatsBonus(value, new BaseStatsBonus(_int, str, con, men, dex, wit));
+									template.addBaseStatsBonus(value, new BaseStatsBonus(_int, str, con, men, dex, wit, luc, cha));
 								}
 							}
 						}

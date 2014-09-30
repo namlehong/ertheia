@@ -50,6 +50,16 @@ public class CreatureBaseStats
 		return getOwner().getTemplate().getBaseWIT();
 	}
 
+	public int getLUC()
+	{
+		return getOwner().getTemplate().getBaseLUC();
+	}
+
+	public int getCHA()
+	{
+		return getOwner().getTemplate().getBaseCHA();
+	}
+
 	public double getHpMax()
 	{
 		return getOwner().getTemplate().getBaseHpMax(getOwner().getLevel());

@@ -12,6 +12,8 @@ public class CreatureTemplate
 	private int _baseMEN;
 	private int _baseDEX;
 	private int _baseWIT;
+	private int _baseLUC;
+	private int _baseCHA;
 
 	private int _baseAtkRange;
 	private int _baseRandDam;
@@ -62,6 +64,8 @@ public class CreatureTemplate
 		_baseMEN = set.getInteger("baseMEN", 1);
 		_baseDEX = set.getInteger("baseDEX", 1);
 		_baseWIT = set.getInteger("baseWIT", 1);
+		_baseLUC = set.getInteger("baseLUC", 1);
+		_baseCHA = set.getInteger("baseCHA", 1);
 		_baseHpMax = set.getDouble("baseHpMax", 0);
 		_baseCpMax = set.getDouble("baseCpMax", 0);
 		_baseMpMax = set.getDouble("baseMpMax", 0);
@@ -126,6 +130,16 @@ public class CreatureTemplate
 	public int getBaseWIT()
 	{
 		return _baseWIT;
+	}
+
+	public int getBaseLUC()
+	{
+		return _baseLUC;
+	}
+
+	public int getBaseCHA()
+	{
+		return _baseCHA;
 	}
 
 	public double getBaseHpMax(int level)
@@ -290,6 +304,8 @@ public class CreatureTemplate
 		_baseMEN = set.getInteger("baseMEN", _baseMEN);
 		_baseDEX = set.getInteger("baseDEX", _baseDEX);
 		_baseWIT = set.getInteger("baseWIT", _baseWIT);
+		_baseLUC = set.getInteger("baseLUC", _baseLUC);
+		_baseCHA = set.getInteger("baseCHA", _baseCHA);
 		_baseHpMax = set.getDouble("baseHpMax", _baseHpMax);
 		_baseCpMax = set.getDouble("baseCpMax", _baseCpMax);
 		_baseMpMax = set.getDouble("baseMpMax", _baseMpMax);

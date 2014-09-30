@@ -2126,6 +2126,16 @@ public abstract class Creature extends GameObject
 		return (int) calcStat(Stats.STAT_WIT, getBaseStats().getWIT(), null, null);
 	}
 
+	public int getLUC()
+	{
+		return (int) calcStat(Stats.STAT_LUC, getBaseStats().getLUC(), null, null);
+	}
+
+	public int getCHA()
+	{
+		return (int) calcStat(Stats.STAT_CHA, getBaseStats().getCHA(), null, null);
+	}
+
 	public int getPEvasionRate(Creature target)
 	{
 		return (int) Math.round(calcStat(Stats.P_EVASION_RATE, 0, target, null));

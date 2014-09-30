@@ -10,6 +10,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import org.dom4j.tree.LazyList;
+
 import l2s.commons.threading.RunnableImpl;
 import l2s.commons.util.Rnd;
 import l2s.gameserver.Config;
@@ -39,6 +41,7 @@ import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.SystemMessage;
 import l2s.gameserver.scripts.Functions;
+import l2s.gameserver.stats.Formulas;
 import l2s.gameserver.stats.Stats;
 import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.templates.npc.Faction;
@@ -770,11 +773,26 @@ public class MonsterInstance extends NpcInstance
 		double mod = calcStat(Stats.REWARD_MULTIPLIER, 1., activeChar, null);
 		mod *= Experience.penaltyModifier(diff, 9);
 
+		
 		List<RewardItem> rewardItems = list.roll(activePlayer, mod, this instanceof RaidBossInstance);
 		switch(type)
 		{
 			case SWEEP:
-				_sweepItems = rewardItems;
+				int countModifier = 1;
+				if(Formulas.calcDoubleSweepDrop(activeChar, this))
+				{
+					activeChar.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					countModifier = 2;
+				}
+				
+				List<RewardItem> sweepItems = new LazyList<RewardItem>();
+				for(RewardItem rewardItem : rewardItems)
+				{
+					rewardItem.count *= countModifier;
+					
+					sweepItems.add(rewardItem);
+				}
+				_sweepItems = sweepItems;
 				break;
 			default:
 				for(RewardItem drop : rewardItems)
@@ -789,6 +807,12 @@ public class MonsterInstance extends NpcInstance
 							return;
 					}
 					dropItem(activePlayer, drop.itemId, drop.count);
+				}
+				if(Formulas.calcFortunePocketDrop(activeChar, this))
+				{
+					activeChar.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					//Give Fortune Pocket Lv1
+					dropItem(activePlayer, 39629, 1);
 				}
 				break;
 		}
@@ -1029,7 +1053,20 @@ public class MonsterInstance extends NpcInstance
 					List<RewardItem> rewardItems = list.roll(activeChar, mod, this instanceof RaidBossInstance);
 					//System.out.println("rewardItems " + rewardItems.size());
 					
-					return rewardItems;
+					if(Formulas.calcDoubleSweepDrop(activeChar, this))
+					{
+						activeChar.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+						List<RewardItem> sweepItems = new LazyList<RewardItem>();
+						for(RewardItem rewardItem : rewardItems)
+						{
+							rewardItem.count *= 2;
+							
+							sweepItems.add(rewardItem);
+						}
+						return sweepItems;
+					}
+					else
+						return rewardItems;
 				}
 			}
 			return null;
