@@ -31,7 +31,7 @@ public class RequestEnchantItem extends L2GameClientPacket
 
 	private static final Logger _log = LoggerFactory.getLogger(RequestEnchantItem.class);
 
-	private static final int SUCCESS_VISUAL_EFF_ID = 5965;
+	private static final int SUCCESS_VISUAL_EFF_ID = 22008;
 	private static final int FAIL_VISUAL_EFF_ID = 5949;
 
 	private int _objectId, _catalystObjId;
