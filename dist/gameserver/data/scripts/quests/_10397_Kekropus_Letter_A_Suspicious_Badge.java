@@ -57,7 +57,6 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
             Player player = qs.getPlayer();
             qs.showQuestionMark(_questId);
             qs.playSound(SOUND_TUTORIAL);
-            qs.giveItems(SOE_OREN,1);
             if (player != null)
             {
                 player.sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
@@ -103,6 +102,7 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
                         {
                             if(player.getRace() != Race.ERTHEIA)
                             {
+                                qs.giveItems(SOE_OREN,1);
                                 qs.showQuestHTML(qs.getQuest(),"00.htm");
                                 qs.setState(STARTED);
                                 qs.setCond(1);
@@ -217,7 +217,7 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
     {
         if(player != null && checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10397_Kekropus_Letter_A_Suspicious_Badge.class);
+            Quest quest = QuestManager.getQuest(this.getClass());
             player.processQuestEvent(quest.getName(),"start_quest",null);
         }
     }
@@ -227,7 +227,7 @@ public class _10397_Kekropus_Letter_A_Suspicious_Badge extends Quest implements 
     {
         if (player != null && this.checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10397_Kekropus_Letter_A_Suspicious_Badge.class);
+            Quest quest = QuestManager.getQuest(this.getClass());
             player.processQuestEvent(quest.getName(),"start_quest_delay",null);
         }
     }
