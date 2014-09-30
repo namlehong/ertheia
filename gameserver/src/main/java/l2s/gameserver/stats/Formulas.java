@@ -13,13 +13,13 @@ import l2s.gameserver.model.Skill.SkillType;
 import l2s.gameserver.model.SkillLearn;
 import l2s.gameserver.model.base.AcquireType;
 import l2s.gameserver.model.base.BaseStats;
-import l2s.gameserver.model.base.ClassLevel;
 import l2s.gameserver.model.base.Element;
 import l2s.gameserver.model.base.HitCondBonusType;
 import l2s.gameserver.model.base.SkillTrait;
 import l2s.gameserver.model.instances.ReflectionBossInstance;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.network.l2.components.SystemMsg;
+import l2s.gameserver.network.l2.s2c.SystemMessage;
 import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
 import l2s.gameserver.skills.EffectType;
 import l2s.gameserver.templates.item.WeaponTemplate;
@@ -1563,7 +1563,14 @@ public class Formulas
 		env.target = target;
 		env.skill = skill;
 		env.value = activateRate;
-		return calcSkillSuccess(env, null, player.getChargedSpiritShot());
+		
+		if(calcLuckDodgeSkill(player, target, skill))
+		{
+			target.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+			return false;
+		}
+		else
+			return calcSkillSuccess(env, null, player.getChargedSpiritShot());
 	}
 
 	public static void calcSkillMastery(Skill skill, Creature activeChar)
@@ -1699,6 +1706,74 @@ public class Formulas
 		return value * elementModSum;
 	}
 
+
+	public static boolean calcFortunePocketDrop(Creature attacker, Creature target)
+	{
+		if(!attacker.isPlayer())
+			return false;
+		
+		if(attacker.getLevel() - target.getLevel() > 9)
+			return false;
+		
+		double statModifier = BaseStats.LUC.calcBonus(attacker);
+		
+		double rate = 1/3500*statModifier;
+
+		return Rnd.chance(rate);
+	}
+	
+	public static boolean calcDoubleSweepDrop(Creature attacker, Creature target)
+	{
+		if(!attacker.isPlayer())
+			return false;
+
+		if(attacker.getLevel() - target.getLevel() > 9)
+			return false;
+		
+		double statModifier = BaseStats.LUC.calcBonus(attacker);
+		
+		double rate = 1/1500*statModifier;
+		
+		return Rnd.chance(rate);
+	}
+
+	public static boolean calcLuckDodgeSkill(Creature attacker, Creature target, Skill skill)
+	{
+		if(!target.isPlayer())
+			return false;
+		
+		double statModifier = BaseStats.LUC.calcBonus(attacker);
+		
+		double rate = 1/500*statModifier;
+		
+		return Rnd.chance(rate);
+	}
+
+	public static boolean calcLuckEnchant(Player player)
+	{
+		if(!player.isPlayer())
+			return false;
+		
+		double statModifier = BaseStats.LUC.calcBonus(player);
+		
+		double rate = 1/500*statModifier;
+		
+		return Rnd.chance(rate);
+	}
+	
+
+	public static boolean calcLuckCraft(Player player)
+	{
+		if(!player.isPlayer())
+			return false;
+		
+		double statModifier = BaseStats.LUC.calcBonus(player);
+		
+		double rate = 1/500*statModifier;
+		
+		return Rnd.chance(rate);
+	}
+	
 	/**
 	 * Возвращает множитель для атаки из значений атакующего и защитного элемента.
 	 * <br /><br />

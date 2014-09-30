@@ -10717,16 +10717,6 @@ public final class Player extends Playable implements PlayerGroup
 		return Math.max(getTemplate().getMinCHA(), Math.min(getTemplate().getMaxCHA(), cha));
 	}
 	
-	public boolean isLuckTrigger()
-	{
-		double luckTriggerChance = getLUC()*0.00001;
-		
-		if(Math.random() < luckTriggerChance)
-			return true;
-		
-		return false;
-	}
-
 	public void changeClass(final int index)
 	{
 		if(isInDuel()) // На оффе нету сообщения.
