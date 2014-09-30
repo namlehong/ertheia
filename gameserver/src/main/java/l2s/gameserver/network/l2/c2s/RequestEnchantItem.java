@@ -31,10 +31,8 @@ public class RequestEnchantItem extends L2GameClientPacket
 
 	private static final Logger _log = LoggerFactory.getLogger(RequestEnchantItem.class);
 
-	private static final int SUCCESS_VISUAL_EFF_ID = 18103;
+	private static final int SUCCESS_VISUAL_EFF_ID = 5965;
 	private static final int FAIL_VISUAL_EFF_ID = 5949;
-//18103	1	a,Lucky Clover\0	a,none\0	a,none\0	a,none\0
-//	22008	1	a,Lucky Four-leaf Clover\0	a,none\0	a,none\0	a,none\0
 	
 	private int _objectId, _catalystObjId;
 
@@ -218,9 +216,6 @@ public class RequestEnchantItem extends L2GameClientPacket
 			
 			if(Rnd.chance(chance) || isLuckTriggered)
 			{
-				if(isLuckTriggered)
-					player.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
-				
 				item.setEnchantLevel(newEnchantLvl);
 				item.setJdbcState(JdbcEntityState.UPDATED);
 				item.update();
@@ -240,7 +235,13 @@ public class RequestEnchantItem extends L2GameClientPacket
 
 				player.sendPacket(new EnchantResultPacket(0, 0, 0, item.getEnchantLevel()));
 
-				if(enchantLevel.haveSuccessVisualEffect())
+				if(isLuckTriggered)
+				{
+					player.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					player.broadcastPacket(new SystemMessage(SystemMessage.C1_HAS_SUCCESSFULY_ENCHANTED_A__S2_S3).addName(player).addNumber(item.getEnchantLevel()).addItemName(item.getItemId()));
+					player.broadcastPacket(new MagicSkillUse(player, player, 18103, 1, 500, 1500)); //visual effect four-leaves clover
+				}
+				else if(enchantLevel.haveSuccessVisualEffect())
 				{
 					player.broadcastPacket(new SystemMessage(SystemMessage.C1_HAS_SUCCESSFULY_ENCHANTED_A__S2_S3).addName(player).addNumber(item.getEnchantLevel()).addItemName(item.getItemId()));
 					player.broadcastPacket(new MagicSkillUse(player, player, SUCCESS_VISUAL_EFF_ID, 1, 500, 1500));

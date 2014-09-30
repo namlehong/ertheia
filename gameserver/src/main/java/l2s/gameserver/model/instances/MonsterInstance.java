@@ -38,6 +38,7 @@ import l2s.gameserver.model.reward.RewardItem;
 import l2s.gameserver.model.reward.RewardList;
 import l2s.gameserver.model.reward.RewardType;
 import l2s.gameserver.network.l2.components.SystemMsg;
+import l2s.gameserver.network.l2.s2c.MagicSkillUse;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.SystemMessage;
 import l2s.gameserver.scripts.Functions;
@@ -779,9 +780,11 @@ public class MonsterInstance extends NpcInstance
 		{
 			case SWEEP:
 				int countModifier = 1;
-				if(Formulas.calcDoubleSweepDrop(activeChar, this))
+				if(Formulas.calcDoubleSweepDrop(activePlayer, this))
 				{
-					activeChar.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					activePlayer.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					activePlayer.broadcastPacket(new MagicSkillUse(activePlayer, activePlayer, 18103, 1, 500, 1500)); //visual effect four-leaves clover
+					
 					countModifier = 2;
 				}
 				
@@ -810,7 +813,9 @@ public class MonsterInstance extends NpcInstance
 				}
 				if(Formulas.calcFortunePocketDrop(activeChar, this))
 				{
-					activeChar.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					activePlayer.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					activePlayer.broadcastPacket(new MagicSkillUse(activePlayer, activePlayer, 18103, 1, 500, 1500)); //visual effect four-leaves clover
+					
 					//Give Fortune Pocket Lv1
 					dropItem(activePlayer, 39629, 1);
 				}
@@ -1056,6 +1061,8 @@ public class MonsterInstance extends NpcInstance
 					if(Formulas.calcDoubleSweepDrop(activeChar, this))
 					{
 						activeChar.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+						activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, 18103, 1, 500, 1500)); //visual effect four-leaves clover
+						
 						List<RewardItem> sweepItems = new LazyList<RewardItem>();
 						for(RewardItem rewardItem : rewardItems)
 						{
