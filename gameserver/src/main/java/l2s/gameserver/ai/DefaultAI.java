@@ -369,10 +369,10 @@ public class DefaultAI extends CharacterAI
 		
 		if(target.isNpc() && !target.isAutoAttackable(actor))
 			return false;
-		
+		/*
 		if(target.isTransformed() && !target.getTransform().isNormalAttackable())
 			return false;
-
+		*/
 		if(target.isPlayable())
 		{
 			if(!canSeeInSilentMove((Playable) target))

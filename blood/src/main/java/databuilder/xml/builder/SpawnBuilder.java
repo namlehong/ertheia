@@ -198,7 +198,7 @@ public class SpawnBuilder {
 				Element point = spawn.addElement("point");
 				point.addAttribute("x", Integer.toString(loc_x));
 				point.addAttribute("y", Integer.toString(loc_y));
-				point.addAttribute("z", Integer.toString(loc_z));
+				point.addAttribute("z", Integer.toString(loc_z*100));
 				point.addAttribute("h", "0");
 				Element npc = spawn.addElement("npc");
 				npc.addAttribute("id", rset.getString("npc_id"));
