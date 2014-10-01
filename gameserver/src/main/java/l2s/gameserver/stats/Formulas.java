@@ -1732,7 +1732,7 @@ public class Formulas
 		
 		double statModifier = BaseStats.LUC.calcBonus(attacker);
 		
-		double rate = 1/1500*statModifier;
+		double rate = 1/100*statModifier;
 		
 		return Rnd.chance(rate);
 	}
@@ -1744,7 +1744,7 @@ public class Formulas
 		
 		double statModifier = BaseStats.LUC.calcBonus(attacker);
 		
-		double rate = 1/500*statModifier;
+		double rate = 1/30*statModifier;
 		
 		return Rnd.chance(rate);
 	}
@@ -1756,7 +1756,7 @@ public class Formulas
 		
 		double statModifier = BaseStats.LUC.calcBonus(player);
 		
-		double rate = 1/500*statModifier;
+		double rate = 1/20*statModifier;
 		
 		return Rnd.chance(rate);
 	}
@@ -1769,7 +1769,7 @@ public class Formulas
 		
 		double statModifier = BaseStats.LUC.calcBonus(player);
 		
-		double rate = 1/500*statModifier;
+		double rate = 1/20*statModifier;
 		
 		return Rnd.chance(rate);
 	}
