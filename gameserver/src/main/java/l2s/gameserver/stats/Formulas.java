@@ -43,16 +43,16 @@ public class Formulas
 	}
 
 	/**
-	 * Для простых ударов
-	 * patk = patk
-	 * При крите простым ударом:
-	 * patk = patk * (1 + crit_damage_rcpt) * crit_damage_mod + crit_damage_static
-	 * Для blow скиллов
-	 * TODO
-	 * Для скилловых критов, повреждения просто удваиваются, бафы не влияют (кроме blow, для них выше)
-	 * patk = (1 + crit_damage_rcpt) * (patk + skill_power)
-	 * Для обычных атак
-	 * damage = patk * ss_bonus * 70 / pdef
+	* For simple attack
+	* patk = patk
+	* When crit simple attack:
+	* Patk = patk * (1 + crit_damage_rcpt) * crit_damage_mod + crit_damage_static
+	* To blow skills
+	* TODO
+	* For skillovyh crits, just double damage, buffs do not affect (except for blow, for them above)
+	* Patk = (1 + crit_damage_rcpt) * (patk + skill_power)
+	* For normal attacks
+	* Damage = patk * ss_bonus * 70 / pdef
 	 */
 	public static AttackInfo calcPhysDam(Creature attacker, Creature target, Skill skill, boolean dual, boolean blow, boolean ss, boolean onCrit)
 	{
@@ -84,7 +84,7 @@ public class Formulas
 			if (skill.getId() == 10763)
 				info.defence *= 0.7;
 
-			// Уворот от физ скилов уводит атаку в 0
+			// Dodge takes on the physical skills to attack 0
 			if(info.damage > 1 && skill.canBeEvaded() && Rnd.chance(target.calcStat(Stats.P_SKILL_EVASION, 0, attacker, skill)))
 			{
 				attacker.sendPacket(new SystemMessagePacket(SystemMsg.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
@@ -93,22 +93,22 @@ public class Formulas
 				return info;
 			}
 
-			// если скилл не имеет своей силы дальше идти бесполезно, можно сразу вернуть дамаг от летала
+			// if skill does not have his strength to go further is useless, you can immediately return to damage from flying
 			if(skill.getPower(target) == 0)
 			{
-				info.damage = 0; // обычного дамага в этом случае не наносится
+				info.damage = 0; // conventional damage in this case is not applied
 				return info;
 			}
 
-			if(info.blow && !skill.isBehind() && ss) // Для обычных blow не влияет на power
+			if(info.blow && !skill.isBehind() && ss) // For conventional blow does not affect the power
 				info.damage *= 2.04;
 
 			info.damage += Math.max(0., attacker.calcStat(Stats.P_SKILL_POWER, skill.getPower(target)));
 
-			if(info.blow && skill.isBehind() && ss) // Для backstab влияет на power, но меньше множитель
+			if(info.blow && skill.isBehind() && ss) // For backstab affects power, but is less than a factor
 				info.damage *= 1.5;
 
-			//Заряжаемые скилы имеют постоянный урон
+			//Rechargeable skills have permanent damage
 			if(!skill.isChargeBoost())
 				info.damage *= 1 + (Rnd.get() * attacker.getRandomDamage() * 2 - attacker.getRandomDamage()) / 100;
 
@@ -175,7 +175,7 @@ public class Formulas
 
 		if(info.crit)
 		{
-			// шанс абсорбации души (без анимации) при крите, если Soul Mastery 4го уровня или более
+			// chance of showers Absorption (without animation) on crit if Soul Mastery Level 4 or more
 			int chance = attacker.getSkillLevel(Skill.SKILL_SOUL_MASTERY);
 			if(chance > 0)
 			{
@@ -253,7 +253,7 @@ public class Formulas
 		if(!info.crit && !info.blow)
 			info.damage = info.damage * getPDamModifier(attacker);
 
-		// Тут проверяем только если skill != null, т.к. L2Character.onHitTimer не обсчитывает дамаг.
+		// Then check only if the skill! = Null, since L2Character.onHitTimer not cheat damage.
 		if(skill != null)
 		{
 			if(info.damage > 1 && skill.isDeathlink())
@@ -292,7 +292,7 @@ public class Formulas
 		if(target.isLethalImmune())
 			return 0.;
 
-//		final double deathRcpt = 0.01 * target.calcStat(Stats.DEATH_VULNERABILITY, attacker, skill);
+		// final double deathRcpt = 0.01 * target.calcStat(Stats.DEATH_VULNERABILITY, attacker, skill);
 		// TODO : fix that shit to legitimate value
 		final double deathRcpt = target.isMonster() ? 0 : 0.01 * target.calcStat(Stats.DEATH_VULNERABILITY, attacker, skill);		
 		final double lethal1Chance = skill.getLethal1(attacker) * deathRcpt;
@@ -304,7 +304,7 @@ public class Formulas
 		{
 			if(target.isPlayer())
 			{
-				damage = target.getCurrentHp() + target.getCurrentCp() - 1.1; // Oly\Duel хак установки не точно 1 ХП, а чуть больше для предотвращения псевдосмерти
+				damage = target.getCurrentHp() + target.getCurrentCp() - 1.1; // Oly \ Duel hack installation is not exactly 1 HP, and a little more to prevent psevdosmerti
 				target.sendPacket(SystemMsg.LETHAL_STRIKE);
 			}
 			else
@@ -905,7 +905,7 @@ public class Formulas
 	{
 		boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		boolean isPvE = attacker.isPlayable() && target.isNpc();
-		// Параметр ShieldIgnore для магических скиллов инвертирован
+		// ShieldIgnore option for magical skills is inverted
 		boolean shield = skill.getShieldIgnore() && calcShldUse(attacker, target);
 		double crit_static = attacker.calcStat(Stats.M_CRITICAL_DAMAGE_STATIC, target, skill);
 
@@ -934,7 +934,7 @@ public class Formulas
 
 		info.damage = (91 * power * Math.sqrt(mAtk)) / mdef;
 
-		//TODO: [Bonux] Переделать по оффу.
+		//TODO: [Bonux] Transform on offu.
 		if(info.damage > 1 && !skill.hasEffects() && calcMagicHitMiss(attacker, target))
 		{
 			attacker.sendPacket(new SystemMessagePacket(SystemMsg.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
@@ -1142,7 +1142,7 @@ public class Formulas
 	/** Calculate delay (in milliseconds) before next ATTACK */
 	public static int calcPAtkSpd(double rate)
 	{
-		return (int) (500000 / rate); // в миллисекундах поэтому 500*1000
+		return (int) (500000 / rate); // in milliseconds, so 500 * 1000
 	}
 
 	/** Calculate delay (in milliseconds) for skills cast */
@@ -1252,8 +1252,8 @@ public class Formulas
 		if(env.value == -1)
 			return true;
 
-		env.value = Math.max(Math.min(env.value, 100), 1); // На всякий случай
-		final double base = env.value; // Запоминаем базовый шанс (нужен позже)
+		env.value = Math.max(Math.min(env.value, 100), 1); // Just in case
+		final double base = env.value; // Remember the base chance (needed later)
 
 		final Skill skill = env.skill;
 		if(!skill.isOffensive())
@@ -1270,13 +1270,13 @@ public class Formulas
 		boolean debugGlobal = false;
 		if(Config.ALT_DEBUG_ENABLED)
 		{
-			// Включена ли отладка на кастере
+			// Did you turn debugging on caster
 			debugCaster = caster.getPlayer() != null && caster.getPlayer().isDebug();
-			// Включена ли отладка на таргете
+			// Did you turn debugging on Target
 			debugTarget = target.getPlayer() != null && target.getPlayer().isDebug();
-			// Разрешена ли отладка в PvP
+			// Whether to enable debugging in PvP
 			final boolean debugPvP = Config.ALT_DEBUG_PVP_ENABLED && (debugCaster && debugTarget) && (!Config.ALT_DEBUG_PVP_DUEL_ONLY || (caster.getPlayer().isInDuel() && target.getPlayer().isInDuel()));
-			// Включаем отладку в PvP и для PvE если разрешено
+			// Enables debugging in both PvP and PvE if allowed to
 			debugGlobal = debugPvP || (Config.ALT_DEBUG_PVE_ENABLED && ((debugCaster && target.isMonster()) || (debugTarget && caster.isMonster())));
 		}
 
@@ -1284,17 +1284,17 @@ public class Formulas
 		if(skill.getSaveVs() != null)
 		{
 			statMod = skill.getSaveVs().calcChanceMod(target);
-			env.value *= statMod; // Бонус от MEN/CON/etc
+			env.value *= statMod; // Bonus from MEN / CON / etc
 		}
 
 		env.value = Math.max(env.value, 1);
 
 		double mAtkMod = 1.;
 		// @Rivelia. Default value: ENABLE_MATK_SKILL_LANDING_MOD = true.
-		if(skill.isMagic() && Config.ENABLE_MATK_SKILL_LANDING_MOD) // Этот блок только для магических скиллов
+		if(skill.isMagic() && Config.ENABLE_MATK_SKILL_LANDING_MOD) // This unit is only for magic skills
 		{
 			int ssMod = 0;
-			int mdef = Math.max(1, target.getMDef(target, skill)); // Вычисляем mDef цели
+			int mdef = Math.max(1, target.getMDef(target, skill)); // Compute mDef goals
 			double matk = caster.getMAtk(target, skill);
 
 			if(skill.isSSPossible())
@@ -1381,7 +1381,7 @@ public class Formulas
 		{
 			debuffMod = 1. - target.calcStat(Stats.DEBUFF_RESIST, caster, skill) / 120.;
 
-			if(debuffMod != 1) // Внимание, знак был изменен на противоположный !
+			if(debuffMod != 1) // Note the sign was reversed!
 			{
 				if(debuffMod == Double.NEGATIVE_INFINITY)
 				{
@@ -1420,7 +1420,7 @@ public class Formulas
 				resMod = (maxResist - vulnMod) / 60.;
 			}
 
-			if(resMod != 1) // Внимание, знак был изменен на противоположный !
+			if(resMod != 1) // Note the sign was reversed!
 			{
 				if(resMod == Double.NEGATIVE_INFINITY)
 				{
@@ -1474,11 +1474,11 @@ public class Formulas
 
 		env.value += elementModSum;
 
-		//if(skill.isSoulBoost()) // Бонус от душ камаелей
+		//if(skill.isSoulBoost()) // Bonus kamael's souls
 		//	env.value *= 0.85 + 0.06 * Math.min(character.getConsumedSouls(), 5);
 
-		env.value = Math.max(env.value, Math.min(base, Config.SKILLS_CHANCE_MIN)); // Если базовый шанс более Config.SKILLS_CHANCE_MIN, то при небольшой разнице в уровнях, делаем кап снизу.
-		env.value = Math.max(Math.min(env.value, Config.SKILLS_CHANCE_CAP), 1); // Применяем кап
+		env.value = Math.max(env.value, Math.min(base, Config.SKILLS_CHANCE_MIN)); // If the base chance of a Config.SKILLS_CHANCE_MIN, then the small difference in levels, do thorough below.
+		env.value = Math.max(Math.min(env.value, Config.SKILLS_CHANCE_CAP), 1); // apply cap
 		final boolean result = Rnd.chance((int) env.value);
 
 		if(debugGlobal)
@@ -1531,7 +1531,7 @@ public class Formulas
 			if(!result)
 				stat.append(" failed");
 
-			// отсылаем отладочные сообщения
+			// refer the debug messages
 			if(debugCaster)
 				caster.getPlayer().sendMessage(stat.toString());
 			if(debugTarget)
@@ -1618,8 +1618,8 @@ public class Formulas
 
 	public static double calcDamageResists(Skill skill, Creature attacker, Creature defender, double value)
 	{
-		if(attacker == defender) // это дамаг от местности вроде ожога в лаве, наносится от своего имени
-			return value; // TODO: по хорошему надо учитывать защиту, но поскольку эти скиллы немагические то надо делать отдельный механизм
+		if(attacker == defender) // this damage from the terrain like a burn in the lava is applied on its own behalf
+			return value; // TODO: should be considered on a good defense, but because these non-magical skills is necessary to make a separate mechanism
 //DEPRECATED
 		if(attacker.isBoss())
 			value *= Config.RATE_EPIC_ATTACK;
@@ -1633,14 +1633,14 @@ public class Formulas
 
 		Player pAttacker = attacker.getPlayer();
 
-		// если уровень игрока ниже чем на 2 и более уровней моба 78+, то его урон по мобу снижается
+		// if the player's level is lower than 2 or more levels of the mob 78+, its damage is reduced by mob
 		int diff = defender.getLevel() - (pAttacker != null ? pAttacker.getLevel() : attacker.getLevel());
 		if(attacker.isPlayable() && defender.isMonster() && defender.getLevel() >= 78 && diff > 2)
 			value *= .7 / Math.pow(diff - 2, .25);
 
 		double elementModSum = 1.;
 
-		// использует элемент умения
+		// uses the element of skill
 		if(skill != null)
 		{
 			// DEBUG
@@ -1685,7 +1685,7 @@ public class Formulas
 			}
 
 		}
-		else // используем максимально эффективный элемент
+		else // use the most effective element
 		{
 			final Element element = getAttackElement(attacker, defender);
 			if(element == Element.NONE)
@@ -1775,14 +1775,14 @@ public class Formulas
 	}
 	
 	/**
-	 * Возвращает множитель для атаки из значений атакующего и защитного элемента.
-	 * <br /><br />
-	 * Диапазон от 1.0 до 1.7 (Freya)
-	 * <br /><br />
-	 * @param defense значение защиты
-	 * @param attack значение атаки
-	 * @return множитель
-	 */
+		* Returns the multiplier to attack from the values ​​of the attacker and the security element.
+		* <br /> <br />
+		* The range is from 1.0 to 1.7 (Freya)
+		* <br /> <br />
+		*param Defense of the protection of
+		*param Attack attack value
+		*return Factor
+	*/
 	private static double getElementMod(double defense, double attack)
 	{
 		double diff = attack - defense;
@@ -1799,7 +1799,7 @@ public class Formulas
 	}
 
 	/**
-	 * Возвращает максимально эффективный атрибут, при атаке цели
+	 * Returns the most effective attribute when attacking a target
 	 * @param attacker
 	 * @param target
 	 * @return
