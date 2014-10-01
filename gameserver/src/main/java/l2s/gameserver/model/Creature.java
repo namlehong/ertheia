@@ -25,6 +25,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
+
 import l2s.commons.collections.LazyArrayList;
 import l2s.commons.lang.reference.HardReference;
 import l2s.commons.lang.reference.HardReferences;
@@ -58,6 +59,7 @@ import l2s.gameserver.model.actor.instances.creature.Effect;
 import l2s.gameserver.model.actor.instances.creature.EffectList;
 import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.actor.recorder.CharStatsChangeRecorder;
+import l2s.gameserver.model.base.BaseStats;
 import l2s.gameserver.model.base.ClassLevel;
 import l2s.gameserver.model.base.InvisibleType;
 import l2s.gameserver.model.base.Sex;
@@ -128,6 +130,7 @@ import l2s.gameserver.utils.EffectsComparator;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.Log;
 import l2s.gameserver.utils.PositionUtils;
+
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 import org.slf4j.Logger;
@@ -2181,27 +2184,27 @@ public abstract class Creature extends GameObject
 	{
 		if(skill != null && skill.getMatak() > 0)
 			return skill.getMatak();
-		return (int) calcStat(Stats.MAGIC_ATTACK, getBaseStats().getMAtk(), target, skill);
+		return (int) (calcStat(Stats.MAGIC_ATTACK, getBaseStats().getMAtk(), target, skill)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getMAtkSpd()
 	{
-		return (int) (calcStat(Stats.MAGIC_ATTACK_SPEED, getBaseStats().getMAtkSpd(), null, null));
+		return (int) (calcStat(Stats.MAGIC_ATTACK_SPEED, getBaseStats().getMAtkSpd(), null, null)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getMaxCp()
 	{
-		return (int) calcStat(Stats.MAX_CP, getBaseStats().getCpMax(), null, null);
+		return (int) (calcStat(Stats.MAX_CP, getBaseStats().getCpMax(), null, null)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getMaxHp()
 	{
-		return (int) calcStat(Stats.MAX_HP, getBaseStats().getHpMax(), null, null);
+		return (int) (calcStat(Stats.MAX_HP, getBaseStats().getHpMax(), null, null)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getMaxMp()
 	{
-		return (int) calcStat(Stats.MAX_MP, getBaseStats().getMpMax(), null, null);
+		return (int) (calcStat(Stats.MAX_MP, getBaseStats().getMpMax(), null, null)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getMDef(Creature target, Skill skill)
@@ -2227,17 +2230,17 @@ public abstract class Creature extends GameObject
 
 	public int getPAtk(Creature target)
 	{
-		return (int) calcStat(Stats.POWER_ATTACK, getBaseStats().getPAtk(), target, null);
+		return (int) (calcStat(Stats.POWER_ATTACK, getBaseStats().getPAtk(), target, null)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getPAtkSpd()
 	{
-		return (int) calcStat(Stats.POWER_ATTACK_SPEED, getBaseStats().getPAtkSpd(), null, null);
+		return (int) (calcStat(Stats.POWER_ATTACK_SPEED, getBaseStats().getPAtkSpd(), null, null)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getPDef(Creature target)
 	{
-		return (int) calcStat(Stats.POWER_DEFENCE, getBaseStats().getPDef(), target, null);
+		return (int) (calcStat(Stats.POWER_DEFENCE, getBaseStats().getPDef(), target, null)*BaseStats.CHA.calcBonus(this));
 	}
 
 	public int getPhysicalAttackRange()
