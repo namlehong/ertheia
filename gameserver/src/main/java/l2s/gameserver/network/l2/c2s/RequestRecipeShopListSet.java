@@ -77,8 +77,8 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 			//manufacturer.broadcastCharInfo();
 			//manufacturer.setPrivateStoreType(Player.STORE_PRIVATE_MANUFACTURE);
 			manufacturer.broadcastPacket(new RecipeShopMsg(manufacturer));
-			//manufacturer.sitDown(null);
-			
+			manufacturer.sitDown(null);
+			return;
 		}
 
 		manufacturer.sendActionFailed();
