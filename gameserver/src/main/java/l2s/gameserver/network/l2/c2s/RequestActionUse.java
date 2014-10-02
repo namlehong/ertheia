@@ -481,6 +481,9 @@ public class RequestActionUse extends L2GameClientPacket
 						activeChar.sendActionFailed();
 						return;
 					}
+					activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
+					activeChar.standUp();
+					activeChar.broadcastCharInfo();
 					activeChar.sendPacket(new RecipeShopManageListPacket(activeChar, true));
 					break;
 				}
@@ -502,6 +505,9 @@ public class RequestActionUse extends L2GameClientPacket
 						activeChar.sendActionFailed();
 						return;
 					}
+					activeChar.setPrivateStoreType(Player.STORE_PRIVATE_NONE);
+					activeChar.standUp();
+					activeChar.broadcastCharInfo();
 					activeChar.sendPacket(new RecipeShopManageListPacket(activeChar, false));
 					break;
 				}

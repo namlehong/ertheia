@@ -688,7 +688,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 							msg = new RequestRecipeShopListSet();
 							break;
 						case 0xbc:
-							msg = new RequestRecipeShopManageQuit();
+							//msg = new RequestRecipeShopManageQuit();
 							break;
 						case 0xbd:
 							msg = new RequestRecipeShopManageCancel();
