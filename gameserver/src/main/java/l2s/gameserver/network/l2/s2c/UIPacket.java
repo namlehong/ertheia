@@ -289,6 +289,8 @@ public class UIPacket extends L2GameServerPacket
 
 		writeH(6);
 		writeC(mount_type);
+		System.out.println("UIPacket private_store " + private_store);
+		System.out.println("getByteBuffer() " + getByteBuffer());
 		writeC(private_store);
 		writeC(can_crystalize);
 		writeC(0x00);

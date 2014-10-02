@@ -4656,6 +4656,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public void setPrivateStoreType(final int type)
 	{
+		System.out.println("setPrivateStoreType " + type);
 		_privatestore = type;
 		if(type != STORE_PRIVATE_NONE)
 			setVar("storemode", type);
