@@ -8,6 +8,7 @@ import l2s.gameserver.model.Player;
 import l2s.gameserver.model.items.ManufactureItem;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.RecipeShopMsg;
+import l2s.gameserver.network.l2.s2c.RecipeShopStart;
 import l2s.gameserver.utils.TradeHelper;
 
 public class RequestRecipeShopListSet extends L2GameClientPacket
@@ -76,8 +77,9 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 			manufacturer.saveTradeList();
 			manufacturer.setPrivateStoreType(Player.STORE_PRIVATE_MANUFACTURE);
 			manufacturer.sitDown(null);
-			manufacturer.broadcastCharInfo();
+			manufacturer.broadcastPacket(new RecipeShopStart(manufacturer));
 			manufacturer.broadcastPacket(new RecipeShopMsg(manufacturer));
+			manufacturer.broadcastCharInfo();
 			return;
 		}
 
