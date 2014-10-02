@@ -72,12 +72,13 @@ public class RequestRecipeShopListSet extends L2GameClientPacket
 
 		if(!createList.isEmpty())
 		{
-			manufacturer.setCreateList(createList);
-			manufacturer.saveTradeList();
-			manufacturer.setPrivateStoreType(Player.STORE_PRIVATE_MANUFACTURE);
+			//manufacturer.setCreateList(createList);
+			//manufacturer.saveTradeList();
+			//manufacturer.broadcastCharInfo();
+			//manufacturer.setPrivateStoreType(Player.STORE_PRIVATE_MANUFACTURE);
 			manufacturer.broadcastPacket(new RecipeShopMsg(manufacturer));
-			manufacturer.sitDown(null);
-			manufacturer.broadcastCharInfo();
+			//manufacturer.sitDown(null);
+			
 		}
 
 		manufacturer.sendActionFailed();
