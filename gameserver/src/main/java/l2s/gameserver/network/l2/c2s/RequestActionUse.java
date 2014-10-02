@@ -476,14 +476,12 @@ public class RequestActionUse extends L2GameClientPacket
 						activeChar.standUp();
 						activeChar.broadcastCharInfo();
 					}
-					/*
 					else if(!TradeHelper.checksIfCanOpenStore(activeChar, Player.STORE_PRIVATE_MANUFACTURE))
 					{
 						activeChar.sendActionFailed();
 						return;
 					}
 					activeChar.sendPacket(new RecipeShopManageListPacket(activeChar, true));
-					*/
 					break;
 				}
 				case 51: // Создание магазина Common Craft
@@ -499,14 +497,12 @@ public class RequestActionUse extends L2GameClientPacket
 						activeChar.standUp();
 						activeChar.broadcastCharInfo();
 					}
-					/*
 					else if(!TradeHelper.checksIfCanOpenStore(activeChar, Player.STORE_PRIVATE_MANUFACTURE))
 					{
 						activeChar.sendActionFailed();
 						return;
 					}
 					activeChar.sendPacket(new RecipeShopManageListPacket(activeChar, false));
-					*/
 					break;
 				}
 				case 96: // Quit Party Command Channel?
