@@ -14,7 +14,7 @@ public class RecipeShopStart extends L2GameServerPacket
 	@Override
 	protected boolean writeOpcodes()
 	{
-		writeC(225); //0xE1
+		writeC(50); //0x32
 
 		return true;
 	}
@@ -25,9 +25,21 @@ public class RecipeShopStart extends L2GameServerPacket
 		writeD(_objectId);
 		//re-create the raw packet
 		//0B 00 00 00 17 00 01 00 00 06 00 00 05 00 01 
-		writeD(11); 
-		writeD(65559);
-		writeD(1536);
-		writeD(65541);
+		writeB(new byte[]{
+				(byte) 0x0B, 
+				(byte) 0x00, 
+				(byte) 0x00, 
+				(byte) 0x00, 
+				(byte) 0x17, 
+				(byte) 0x00, 
+				(byte) 0x01, 
+				(byte) 0x00, 
+				(byte) 0x00, 
+				(byte) 0x06, 
+				(byte) 0x00, 
+				(byte) 0x00, 
+				(byte) 0x05, 
+				(byte) 0x00, 
+				(byte) 0x01});
 	}
 }
