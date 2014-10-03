@@ -16,6 +16,7 @@ import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.components.UsmVideo;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
+import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.utils.ItemFunctions;
 
 import java.util.Collection;
@@ -154,10 +155,26 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 
                 for (Skill skill : activeChar.getAllSkills())
                 {
-                    if(!cache.containsKey(skill.getId()))
+                    if(cache.containsKey(skill.getId()))
+                    {
+                        SkillLearn skillLearn = cache.get(skill.getId());
+                        if(skill.getMagicLevel() < skillLearn.getLevel())
+                        {
+                            skill.setMagicLevel(skillLearn.getLevel());
+                        }
+                        cache.remove(skill.getId());
+                    }
+                    else
                     {
                         activeChar.removeSkill(skill.getId(),true);
                     }
+                }
+
+                for(Map.Entry<Integer, SkillLearn> entry : cache.entrySet())
+                {
+                    SkillLearn skillLearn = entry.getValue();
+                    Skill skill = SkillTable.getInstance().getInfo(skillLearn.getId(), skillLearn.getLevel());
+                    activeChar.addSkill(skill,true);
                 }
             }
             activeChar.setClassId(requestAwakeningId, false);
