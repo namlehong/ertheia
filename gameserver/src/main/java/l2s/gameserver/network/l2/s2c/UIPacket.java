@@ -304,8 +304,8 @@ public class UIPacket extends L2GameServerPacket
 		writeD(_matk);
 		writeD(_matkspd);
 		writeD(_patkspd);
-		writeD(_mdef);
 		writeD(_mEvasion);
+		writeD(_mdef);
 		writeD(_mAccuracy);
 		writeD(_mCrit);
 
