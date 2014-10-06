@@ -106,7 +106,7 @@ public class Formulas
 			info.damage += Math.max(0., attacker.calcStat(Stats.P_SKILL_POWER, skill.getPower(target)));
 
 			if(info.blow && skill.isBehind() && ss) // For backstab affects power, but is less than a factor
-				info.damage *= 1.5;
+				info.damage *= 3;
 
 			//Rechargeable skills have permanent damage
 			if(!skill.isChargeBoost())
@@ -143,8 +143,8 @@ public class Formulas
 			else if(skill.isSoulBoost())
 				info.damage *= 1.0 + 0.06 * Math.min(attacker.getConsumedSouls(), 5);
 
-			// Gracia Physical Skill Damage Bonus
-			info.damage *= 1.10113;
+			// Ertheia Physical Skill Damage Bonus
+			info.damage *= 1.30113;
 
 			if(info.crit)
 			{
@@ -1079,7 +1079,7 @@ public class Formulas
 		return Rnd.chance(chance);
 	}
 
-	/** Возвращает шанс крита в процентах */
+	/** Returns crit Percentage*/
 	public static boolean calcPCrit(Creature attacker, Creature target, Skill skill, boolean blow)
 	{
 		if(attacker.isPlayer() && attacker.getActiveWeaponTemplate() == null)
@@ -1111,6 +1111,9 @@ public class Formulas
 				break;
 			case SIDE:
 				rate *= 1.2;
+				break;
+			default:
+				rate = 1.0;
 				break;
 		}
 
