@@ -272,7 +272,15 @@ public class NpcHtmlMessagePacket extends L2GameServerPacket
 
 		m = TELEPORT_FREE_LEVEL.matcher(_html);
 		if(m != null)
+		{
+			System.out.println("htm content before replace:\n" + m.toString());
 			_html = m.replaceAll(String.valueOf(Config.GATEKEEPER_FREE));
+			System.out.println("htm content after replace:\n" + _html.toString());
+		}
+		else
+		{
+			System.out.println("m is null");
+		}
 
 		_html = playername.matcher(_html).replaceAll(player.getName());
 
