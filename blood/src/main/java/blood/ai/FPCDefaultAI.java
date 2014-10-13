@@ -46,6 +46,7 @@ import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.TeleportUtils;
 
 import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.ObjectUtils.Null;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -1482,6 +1483,10 @@ public class FPCDefaultAI extends PlayerAI
 		
 		// TODO Auto-generated method stub
 		Player player = getActor();
+		
+		if(player == null)
+			return;
+		
 		Class<?> enclosingClass = getClass().getEnclosingClass();
 		
 		StringBuilder builder = new StringBuilder();

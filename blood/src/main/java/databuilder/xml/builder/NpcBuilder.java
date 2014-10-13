@@ -3,46 +3,26 @@ package databuilder.xml.builder;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import l2s.gameserver.data.xml.holder.BaseStatsBonusHolder;
 import l2s.gameserver.data.xml.holder.LevelBonusHolder;
 import l2s.gameserver.data.xml.holder.NpcHolder;
 import l2s.gameserver.model.Servitor;
 import l2s.gameserver.model.Skill;
-import l2s.gameserver.model.items.ItemInfo;
-import l2s.gameserver.stats.conditions.Condition;
-import l2s.gameserver.stats.conditions.ConditionLogicAnd;
-import l2s.gameserver.stats.conditions.ConditionPlayerMaxLevel;
-import l2s.gameserver.stats.conditions.ConditionPlayerMinLevel;
 import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.templates.StatsSet;
-import l2s.gameserver.templates.item.Bodypart;
-import l2s.gameserver.templates.item.ItemGrade;
-import l2s.gameserver.templates.item.ItemTemplate;
 import l2s.gameserver.templates.npc.NpcTemplate;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
-import apple.laf.JRSUIUtils.Tree;
 import databuilder.MainBuilder;
-import databuilder.MainBuilder.CustomComparator;
-import databuilder.utils.L2String;
 import databuilder.utils.XmlPretty;
-import databuilder.xml.builder.SkillBuilder.L2SkillInfo;
-import databuilder.xml.holder.ItemHolder;
 
 public class NpcBuilder {
 	private HashMap<String, Element> _rootHolder = new HashMap<String, Element>();
