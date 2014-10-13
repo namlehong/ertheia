@@ -143,40 +143,6 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 			else if(activeChar.isDualClassActive())
 				ItemFunctions.addItem(activeChar, AwakeningManagerInstance.CHAOS_POMANDER_DUAL_CLASS, 2, true);
 
-            // KIET: remove skills for awakening
-            Collection<SkillLearn> availableSkills = SkillAcquireHolder.getInstance().getAwakeParentSkillTree(awakedClassId.getBaseAwakedClassId(), classId);
-            if(availableSkills != null)
-            {
-                Map<Integer, SkillLearn> cache = new HashMap<Integer, SkillLearn>();
-                for (SkillLearn availableSkill : availableSkills)
-                {
-                    cache.put(availableSkill.getId(),availableSkill);
-                }
-
-                for (Skill skill : activeChar.getAllSkills())
-                {
-                    if(cache.containsKey(skill.getId()))
-                    {
-                        SkillLearn skillLearn = cache.get(skill.getId());
-                        if(skill.getMagicLevel() < skillLearn.getLevel())
-                        {
-                            skill.setMagicLevel(skillLearn.getLevel());
-                        }
-                        cache.remove(skill.getId());
-                    }
-                    else
-                    {
-                        activeChar.removeSkill(skill.getId(),true);
-                    }
-                }
-
-                for(Map.Entry<Integer, SkillLearn> entry : cache.entrySet())
-                {
-                    SkillLearn skillLearn = entry.getValue();
-                    Skill skill = SkillTable.getInstance().getInfo(skillLearn.getId(), skillLearn.getLevel());
-                    activeChar.addSkill(skill,true);
-                }
-            }
             activeChar.setClassId(requestAwakeningId, false);
             activeChar.broadcastUserInfo(true);
             activeChar.broadcastPacket(new SocialActionPacket(activeChar.getObjectId(), SocialActionPacket.AWAKENING));
