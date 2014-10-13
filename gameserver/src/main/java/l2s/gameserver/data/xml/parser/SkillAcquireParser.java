@@ -9,7 +9,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import l2s.gameserver.model.ParentClass;
 import org.dom4j.Element;
 import l2s.commons.data.xml.AbstractDirParser;
 import l2s.gameserver.Config;
@@ -166,25 +165,6 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 
 			getHolder().addAllAwakeParentSkillLearns(map);
 		}
-
-        // KIET
-        for(Iterator<Element> iterator = rootElement.elementIterator("class_change_skill_tree"); iterator.hasNext();)
-        {
-            TIntObjectMap<ParentClass> map = new TIntObjectHashMap<ParentClass>();
-            Element nxt = iterator.next();
-            for(Iterator<Element> classIterator = nxt.elementIterator("new_class"); classIterator.hasNext();)
-            {
-                TIntObjectMap<List<SkillLearn>> parentsMap = new TIntObjectHashMap<List<SkillLearn>>();
-                Element classElement = classIterator.next();
-                int newClassId = Integer.parseInt(classElement.attributeValue("new_id"));
-                int oldClassId = Integer.parseInt(classElement.attributeValue("old_id"));
-                List<SkillLearn> learns = parseSkillLearn(classElement);
-                parentsMap.put(oldClassId, learns);
-                map.put(newClassId,new ParentClass(oldClassId,learns));
-            }
-
-            getHolder().addAllAwakeParentSkillLearns(map);
-        }
 
 		for(Iterator<Element> iterator = rootElement.elementIterator("chaos_skill_tree"); iterator.hasNext();)
 			getHolder().addAllChaosSkillLearns(parseSkillLearn(iterator.next()));

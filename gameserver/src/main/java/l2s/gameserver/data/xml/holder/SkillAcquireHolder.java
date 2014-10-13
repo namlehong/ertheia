@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import l2s.commons.data.xml.AbstractHolder;
-import l2s.gameserver.model.ParentClass;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.Skill;
 import l2s.gameserver.model.SkillLearn;
@@ -49,7 +48,6 @@ public final class SkillAcquireHolder extends AbstractHolder
 	private TIntObjectMap<List<SkillLearn>> _transferSkillTree = new TIntObjectHashMap<List<SkillLearn>>();
 	private TIntObjectMap<List<SkillLearn>> _dualClassSkillTree = new TIntObjectHashMap<List<SkillLearn>>();
 	private TIntObjectMap<TIntObjectMap<List<SkillLearn>>> _awakeParentSkillTree = new TIntObjectHashMap<TIntObjectMap<List<SkillLearn>>>();
-    private TIntObjectMap<ParentClass> parentClassInfo = new TIntObjectHashMap<ParentClass>();
 	// без зависимостей
 	private List<SkillLearn> _fishingSkillTree = new ArrayList<SkillLearn>();
 	private List<SkillLearn> _transformationSkillTree = new ArrayList<SkillLearn>();
@@ -498,21 +496,6 @@ public final class SkillAcquireHolder extends AbstractHolder
 		ClassId classId = player.getClassId().getBaseAwakedClassId();
 		return getAwakeParentSkillTree(classId, ClassId.VALUES[player.getActiveDefaultClassId()]);
 	}
-
-    // KIET
-    public ParentClass getParentSkillTree(ClassId classId)
-    {
-        if(this.parentClassInfo.containsKey(classId.getId()))
-            return this.parentClassInfo.get(classId.getId());
-        else
-            return null;
-    }
-
-    public void addParentClassInfo(TIntObjectMap<ParentClass> map)
-    {
-        this.parentClassInfo.putAll(map);
-    }
-    // ---
 
 	public Collection<SkillLearn> getAwakeParentSkillTree(ClassId classId, ClassId parentClassId)
 	{
