@@ -177,6 +177,7 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
                     activeChar.addSkill(skill,true);
                 }
             }
+            //---
             activeChar.setClassId(requestAwakeningId, false);
             activeChar.broadcastUserInfo(true);
             activeChar.broadcastPacket(new SocialActionPacket(activeChar.getObjectId(), SocialActionPacket.AWAKENING));

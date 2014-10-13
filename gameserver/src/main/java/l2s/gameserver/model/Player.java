@@ -2181,7 +2181,6 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 
-		//Если новый ID не принадлежит имеющимся классам значит это новая профа
 		if(!_subClassList.containsClassId(id))
 		{
 			final SubClass cclass = getActiveSubClass();
@@ -2250,6 +2249,21 @@ public final class Player extends Playable implements PlayerGroup
 
 			storeCharSubClasses();
 		}
+        // KIET
+        else
+        {
+            ParentClass parentClass = SkillAcquireHolder.getInstance().getParentSkillTree(classId);
+            if(parentClass != null)
+            {
+                removeAllSkills();
+                for(SkillLearn skillLearn : parentClass.getSkills())
+                {
+                    Skill skill = SkillTable.getInstance().getInfo(skillLearn.getId(), skillLearn.getLevel());
+                    this.addSkill(skill,true);
+                }
+            }
+        }
+        // ----
 
 		PlayerTemplate template = PlayerTemplateHolder.getInstance().getPlayerTemplate(getRace(), classId, getSex());
 		if(template == null)

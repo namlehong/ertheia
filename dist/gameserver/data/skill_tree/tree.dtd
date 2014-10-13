@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!ELEMENT list (sub_unit_skill_tree|pledge_skill_tree|collection_skill_tree|certification_skill_tree|dual_certification_skill_tree|transfer_skill_tree|normal_skill_tree|chaos_skill_tree|dual_chaos_skill_tree|dual_class_skill_tree|fishing_skill_tree|transformation_skill_tree|awake_parent_skill_tree|noblesse_skill_tree|hero_skill_tree|gm_skill_tree|forgotten_book_skill_tree|ability_skill_tree|abilities_settings)*>
+<!ELEMENT list (sub_unit_skill_tree|pledge_skill_tree|collection_skill_tree|certification_skill_tree|dual_certification_skill_tree|transfer_skill_tree|normal_skill_tree|chaos_skill_tree|dual_chaos_skill_tree|dual_class_skill_tree|fishing_skill_tree|transformation_skill_tree|awake_parent_skill_tree|noblesse_skill_tree|hero_skill_tree|gm_skill_tree|forgotten_book_skill_tree|ability_skill_tree|abilities_settings|class_change_skill_tree)*>
 <!ELEMENT transfer_skill_tree (class)*>
 <!ELEMENT normal_skill_tree (class)*>
 <!ELEMENT dual_class_skill_tree (class)*>
@@ -45,3 +45,9 @@
 		<!ATTLIST point
 			ordinal CDATA #REQUIRED
 			sp_cost CDATA #REQUIRED>
+<!-- KIET -->
+<!ELEMENT class_change_skill_tree (new_class)*>
+<!ELEMENT new_class (skill)*>
+    <!ATTLIST new_class
+            new_id CDATA #REQUIRED
+            old_id CDATA #REQUIRED>
