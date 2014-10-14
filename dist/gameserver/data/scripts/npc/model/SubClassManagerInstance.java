@@ -508,12 +508,13 @@ public final class SubClassManagerInstance extends NpcInstance
             case 93:
                 return 20000000;
             case 94:
+                return 10000000;
             case 95:
             case 96:
             case 97:
             case 98:
             case 99:
-                return 10000000;
+                return 0;
         }
         return 100000000;
     }
