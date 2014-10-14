@@ -347,7 +347,7 @@ public final class SubClassManagerInstance extends NpcInstance
                     if(cloakId == 0 || ItemFunctions.getItemCount(player, cloakId) == 0)
                     {
                         // [Bonux] На оффе нету отдельного диалога при отсутствии плаща. На оффе выводится диалог отсутствия адены.
-                        showChatWindow(player, "default/" + getNpcId() + "-reawake_no_adena.htm", "<?reawake_price?>", String.valueOf(cost));
+                        showChatWindow(player, "default/" + getNpcId() + "-reawake_no_cloak.htm", "<?reawake_price?>", String.valueOf(cost));
                         return;
                     }
 
