@@ -715,6 +715,8 @@ public final class Player extends Playable implements PlayerGroup
 
 	private final TIntObjectMap<Skill> _transformSkills = new TIntObjectHashMap<Skill>();
 
+	private final TIntObjectMap<Skill> _alchemySkills = new TIntObjectHashMap<Skill>();
+	
 	private long _lastMultisellBuyTime = 0L;
 	private long _lastEnchantItemTime = 0L;
 
@@ -5639,6 +5641,9 @@ public final class Player extends Playable implements PlayerGroup
 
 			// Restore Hero skills at main class only
 			checkHeroSkills();
+			
+			//Restore alchemy skills
+			checkAlchemySkills();
 
 			// Restore clan skills
 			if(_clan != null)
@@ -11788,22 +11793,6 @@ public final class Player extends Playable implements PlayerGroup
 	*** Ablity system.***
 	******* END *******
 	********************/
-	
-	/********************
-	*** Alchemy system.***
-	******* START *******
-	********************/
-	
-	public boolean isAllowAlchemy()
-	{
-		return (getRace() == Race.ERTHEIA)&& getLevel() >= 40;
-	}
-
-	
-	/********************
-	*** Alchemy system.***
-	******* END *******
-	********************/
 
 	public int getWorldChatPoints()
 	{
@@ -11938,4 +11927,35 @@ public final class Player extends Playable implements PlayerGroup
 			onTeleported();
 		}
 	}
+	
+	/********************
+	*** Alchemy system.***
+	******* START *******
+	********************/
+	
+	public boolean isAllowAlchemy()
+	{
+		return (getRace() == Race.ERTHEIA)&& getLevel() >= 40;
+	}
+
+	public void checkAlchemySkills()
+	{
+		for(Skill skill : getAllSkillsArray())
+		{
+			if(!SkillAcquireHolder.getInstance().isSkillPossible(this, skill, AcquireType.ALCHEMY))
+				continue;
+
+			_alchemySkills.put(skill.getId(), skill);
+		}
+	}
+	
+	public Collection<Skill> getAlchemySkills()
+	{
+		return _alchemySkills.valueCollection();
+	}
+	
+	/********************
+	*** Alchemy system.***
+	******* END *******
+	********************/
 }

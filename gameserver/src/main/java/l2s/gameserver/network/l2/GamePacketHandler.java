@@ -1651,13 +1651,13 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									//msg = new ExSendSelectedQuestZoneID();
 									break;
 								case 0xFF:
-									//msg = new RequestAlchemySkillList();
+									msg = new RequestAlchemySkillList();
 									break;
 								case 0x100:
-									//TODO
+									msg = new RequestAlchemyCombine();
 									break;
 								case 0x101:
-									//TODO
+									msg = new RequestAlchemyTransmute();
 									break;
 								case 0x102:
 									//TODO
