@@ -3188,7 +3188,7 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="600000"/>
 		<set name="skillRadius" value="3000"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="trait" value="PULL"/>
 		<set name="target" value="TARGET_PARTY"/>
 		<cond msgId="113">
 			<using kind="Shield"/>
@@ -3206,7 +3206,10 @@
 				<set order="0x30" stat="recieveDamageLimitPSkill" value="10"/>
 				<set order="0x30" stat="recieveDamageLimitMSkill" value="10"/>
 			</effect>
-			<effect name="ThrowHorizontal" time="0"/>
+			<effect name="ThrowHorizontal">
+				<def name="fly_speed" value="600"/>
+				<def name="fly_delay" value="600"/>
+			</effect>
 			<effect name="HealPercent" time="0" value="#heal"/>
 		</for>
 	</skill>
