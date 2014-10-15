@@ -20,12 +20,14 @@ import l2s.gameserver.templates.item.ItemTemplate;
 import databuilder.xml.builder.ItemBuilder;
 import databuilder.xml.builder.NpcBuilder;
 import databuilder.xml.builder.SkillBuilder;
+import databuilder.xml.builder.SkillTest;
 import databuilder.xml.builder.SpawnBuilder;
 import databuilder.xml.parser.L2onDropParser;
 import databuilder.xml.parser.NpcDropParser;
 import databuilder.xml.parser.NpcGaiParser;
 import databuilder.xml.parser.NpcParser;
 import databuilder.xml.parser.SkillParser;
+import databuilder.xml.parser.SkillTestParser;
 import databuilder.xml.parser.SpawnParser;
 
 public class MainBuilder
@@ -34,7 +36,7 @@ public class MainBuilder
 	public static MainBuilder _instance;
 	public static Connection _conn = null;
 	public static final String _datapack_path = "/Users/mylove1412/Workspace/ertheia/dist/gameserver/";
-	public static String _jdbc_connection = "jdbc:mysql://localhost/pal?user=root&password=";
+	public static String _jdbc_connection = "jdbc:mysql://localhost/l2_raw?user=root&password=";
 	
 	private MainBuilder()
 	{
@@ -195,9 +197,9 @@ public class MainBuilder
 //		buildSkill();
 //		buildDropList();
 //		buildSpawn();
-		testLonging();
-		
-		
+//		testLonging();
+//		SkillTest.getInstance();
+		SkillTest.getInstance().testSkill();
 	}
 	
 	

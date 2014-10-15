@@ -28,7 +28,7 @@ public class ErrorHandlerImpl implements ErrorHandler
 	@Override
 	public void error(SAXParseException exception) throws SAXException
 	{
-		_parser.error("File: " + _parser.getCurrentFileName() + ":" + exception.getLineNumber() + " error: " + exception.getMessage());
+//		_parser.error("File: " + _parser.getCurrentFileName() + ":" + exception.getLineNumber() + " error: " + exception.getMessage());
 	}
 
 	@Override
