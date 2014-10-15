@@ -8,7 +8,9 @@ import l2s.gameserver.model.Player;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ActionFailPacket;
+import l2s.gameserver.network.l2.s2c.MagicSkillUse;
 import l2s.gameserver.network.l2.s2c.RecipeItemMakeInfoPacket;
+import l2s.gameserver.network.l2.s2c.SystemMessage;
 import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
 import l2s.gameserver.stats.Formulas;
 import l2s.gameserver.templates.item.EtcItemTemplate.EtcItemType;
@@ -138,8 +140,15 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 			itemsCount *= 2;
 
 		int success = 0;
-		if(Rnd.chance(recipe.getSuccessRate()))
+		boolean isLuckTriggered = Formulas.calcLuckCraft(activeChar);
+		if(Rnd.chance(recipe.getSuccessRate()) || isLuckTriggered)
 		{
+			if(isLuckTriggered)
+			{
+				activeChar.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+				activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, 18103, 1, 500, 1500)); //visual effect four-leaves clover
+			}
+			
 			//TODO [G1ta0] добавить проверку на перевес
 			ItemFunctions.addItem(activeChar, itemId, itemsCount, true);
 			success = 1;

@@ -7,9 +7,9 @@ import l2s.gameserver.model.base.BaseStats;
  */
 public final class BaseStatsBonus
 {
-	private final double _int, _str, _con, _men, _dex, _wit;
+	private final double _int, _str, _con, _men, _dex, _wit, _luc, _cha;
 
-	public BaseStatsBonus(double _int, double str, double con, double men, double dex, double wit)
+	public BaseStatsBonus(double _int, double str, double con, double men, double dex, double wit, double luc, double cha)
 	{
 		this._int = _int;
 		_str = str;
@@ -17,6 +17,8 @@ public final class BaseStatsBonus
 		_men = men;
 		_dex = dex;
 		_wit = wit;
+		_luc = luc;
+		_cha = cha;
 	}
 
 	public double getINT()
@@ -49,6 +51,16 @@ public final class BaseStatsBonus
 		return _wit;
 	}
 
+	public double getLUC()
+	{
+		return _luc;
+	}
+
+	public double getCHA()
+	{
+		return _cha;
+	}
+
 	public double get(BaseStats stat)
 	{
 		switch(stat)
@@ -65,6 +77,10 @@ public final class BaseStatsBonus
 				return _wit;
 			case MEN:
 				return _men;
+			case LUC:
+				return _luc;
+			case CHA:
+				return _cha;
 		}
 		return 1.;
 	}

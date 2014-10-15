@@ -5,6 +5,7 @@ import l2s.gameserver.model.Request;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExMentorList;
 import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
+import l2s.gameserver.utils.ItemFunctions;
 import l2s.gameserver.utils.Mentoring;
 
 /**
@@ -97,6 +98,10 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 			requestor.sendPacket(new SystemMessagePacket(SystemMsg.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addName(activeChar), new ExMentorList(requestor));
 			Mentoring.applyMentoringCond(requestor, true);
 			Mentoring.addMentoringSkills(requestor);
+			
+			//add Mentee Headphone
+			ItemFunctions.addItem(activeChar, 34759, 1, true);
+			
 		}
 		finally
 		{

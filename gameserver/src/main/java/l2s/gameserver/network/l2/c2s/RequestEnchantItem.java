@@ -13,6 +13,7 @@ import l2s.gameserver.network.l2.s2c.EnchantResultPacket;
 import l2s.gameserver.network.l2.s2c.InventoryUpdatePacket;
 import l2s.gameserver.network.l2.s2c.MagicSkillUse;
 import l2s.gameserver.network.l2.s2c.SystemMessage;
+import l2s.gameserver.stats.Formulas;
 import l2s.gameserver.templates.item.ItemGrade;
 import l2s.gameserver.templates.item.ItemTemplate;
 import l2s.gameserver.templates.item.support.EnchantScroll;
@@ -20,6 +21,7 @@ import l2s.gameserver.templates.item.support.EnchantVariation;
 import l2s.gameserver.templates.item.support.EnchantVariation.EnchantLevel;
 import l2s.gameserver.utils.ItemFunctions;
 import l2s.gameserver.utils.Log;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +33,7 @@ public class RequestEnchantItem extends L2GameClientPacket
 
 	private static final int SUCCESS_VISUAL_EFF_ID = 5965;
 	private static final int FAIL_VISUAL_EFF_ID = 5949;
-
+	
 	private int _objectId, _catalystObjId;
 
 	@Override
@@ -210,7 +212,9 @@ public class RequestEnchantItem extends L2GameClientPacket
 			else
 				WorldStatisticsManager.getInstance().updateStat(player, CategoryType.ARMOR_ENCHANT_TRY, item.getGrade().extOrdinal(), item.getEnchantLevel() + 1);
 
-			if(Rnd.chance(chance))
+			boolean isLuckTriggered = Formulas.calcLuckEnchant(player);
+			
+			if(Rnd.chance(chance) || isLuckTriggered)
 			{
 				item.setEnchantLevel(newEnchantLvl);
 				item.setJdbcState(JdbcEntityState.UPDATED);
@@ -231,7 +235,13 @@ public class RequestEnchantItem extends L2GameClientPacket
 
 				player.sendPacket(new EnchantResultPacket(0, 0, 0, item.getEnchantLevel()));
 
-				if(enchantLevel.haveSuccessVisualEffect())
+				if(isLuckTriggered)
+				{
+					player.sendPacket(new SystemMessage(4244)); //Lady Luck smiles on you
+					player.broadcastPacket(new SystemMessage(SystemMessage.C1_HAS_SUCCESSFULY_ENCHANTED_A__S2_S3).addName(player).addNumber(item.getEnchantLevel()).addItemName(item.getItemId()));
+					player.broadcastPacket(new MagicSkillUse(player, player, 18103, 1, 500, 1500)); //visual effect four-leaves clover
+				}
+				else if(enchantLevel.haveSuccessVisualEffect())
 				{
 					player.broadcastPacket(new SystemMessage(SystemMessage.C1_HAS_SUCCESSFULY_ENCHANTED_A__S2_S3).addName(player).addNumber(item.getEnchantLevel()).addItemName(item.getItemId()));
 					player.broadcastPacket(new MagicSkillUse(player, player, SUCCESS_VISUAL_EFF_ID, 1, 500, 1500));

@@ -723,6 +723,9 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		if(!ItemFunctions.checkIfCanDiscard(player, this))
 			return false;
 
+		if(!canBeSold(player))
+			return false;
+		
 		return template.isPrivatestoreable();
 	}
 
@@ -755,6 +758,9 @@ public final class ItemInstance extends GameObject implements JdbcEntity
 		if(!ItemFunctions.checkIfCanDiscard(player, this))
 			return false;
 
+		if(!canBeSold(player))
+			return false;
+		
 		return template.isCommissionable();
 	}
 

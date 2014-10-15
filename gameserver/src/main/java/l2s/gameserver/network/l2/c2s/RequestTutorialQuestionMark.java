@@ -64,27 +64,27 @@ public class RequestTutorialQuestionMark extends L2GameClientPacket
 		else if(q10785 != null && _number == 10785)
 			player.processQuestEvent(q10785.getName(), "QM" + _number, null);
 
-        else if(q10390 != null)
+        else if(q10390 != null && _number == 10390)
         {
             player.processQuestEvent(q10390.getName(), "QM" + _number, null);
         }
-        else if(q10393 != null)
+        else if(q10393 != null && _number == 10393)
         {
             player.processQuestEvent(q10393.getName(), "QM" + _number, null);
         }
-        else if(q10397 != null)
+        else if(q10397 != null && _number == 10397)
         {
             player.processQuestEvent(q10397.getName(), "QM" + _number, null);
         }
-        else if(q10401 != null)
+        else if(q10401 != null && _number == 10401)
         {
             player.processQuestEvent(q10401.getName(), "QM" + _number, null);
         }
-        else if(q10404 != null)
+        else if(q10404 != null && _number == 10404)
         {
             player.processQuestEvent(q10404.getName(), "QM" + _number, null);
         }
-        else if(q10408 != null)
+        else if(q10408 != null && _number == 10408)
         {
             player.processQuestEvent(q10408.getName(), "QM" + _number, null);
         }

@@ -61,10 +61,10 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     {
         if(qs != null)
         {
+            Player player = qs.getPlayer();
             qs.showQuestionMark(_questId);
             qs.playSound(SOUND_TUTORIAL);
-            Player player = qs.getPlayer();
-            if(player != null)
+            if (player != null)
             {
                 player.sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
             }
@@ -89,11 +89,11 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                         {
                             if(player.getRace() != Race.ERTHEIA)
                             {
+                                qs.giveItems(SOE_GLUDIO,1);
                                 qs.showQuestHTML(qs.getQuest(),"0-message.htm");
                                 qs.setState(STARTED);
                                 qs.setCond(1);
                                 qs.playSound(SOUND_ACCEPT);
-                                player.setVar("@received_kekropus_letter_1", true);
                             }
                         }
                     }
@@ -115,7 +115,6 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 else if(event.equalsIgnoreCase("Quest _10390_Kekropus_Letter_1 close_window"))
                 {
                     // 7123	Scroll of Escape: Town of Gludio
-                    qs.giveItems(SOE_GLUDIO,1);
                     player.sendPacket(TutorialCloseHtmlPacket.STATIC);
                     htmlText = null;
                 }
@@ -167,7 +166,7 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
                 }
             }
         }
-        return event;
+        return htmlText;
     }
 
     @Override
@@ -277,9 +276,9 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     @Override
     public void onLevelChange(final Player player, final int oldLvl, final int newLvl)
     {
-        if(player != null && !player.getVarBoolean("@received_kekropus_letter_1") && checkStartCondition(player))
+        if(player != null && checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10390_Kekropus_Letter_1.class);
+            Quest quest = QuestManager.getQuest(this.getClass());
             player.processQuestEvent(quest.getName(),"start_quest",null);
         }
     }
@@ -287,9 +286,9 @@ public class _10390_Kekropus_Letter_1 extends Quest implements ScriptFile, OnPla
     @Override
     public void onPlayerEnter(final Player player)
     {
-        if (player != null && !player.getVarBoolean("@received_kekropus_letter_1") && this.checkStartCondition(player))
+        if (player != null && this.checkStartCondition(player))
         {
-            Quest quest = QuestManager.getQuest(_10390_Kekropus_Letter_1.class);
+            Quest quest = QuestManager.getQuest(this.getClass());
             player.processQuestEvent(quest.getName(),"start_quest_delay",null);
         }
     }

@@ -103,6 +103,10 @@ public class MainBuilder
 		SpawnBuilder.getInstance().buildAndStore();
 	}
 	
+	public static void buildRaidSpawn(){
+		SpawnBuilder.getInstance().buildAndStoreRaidboss();
+	}
+	
 	
 	public static class CustomComparator implements Comparator<ItemTemplate> {
 	    @Override
@@ -200,6 +204,7 @@ public class MainBuilder
 //		testLonging();
 //		SkillTest.getInstance();
 		SkillTest.getInstance().testSkill();
+//		buildRaidSpawn();
 	}
 	
 	

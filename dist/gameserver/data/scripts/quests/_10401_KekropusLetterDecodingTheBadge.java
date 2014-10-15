@@ -57,7 +57,6 @@ public class _10401_KekropusLetterDecodingTheBadge extends Quest implements Scri
             Player player = qs.getPlayer();
             qs.showQuestionMark(_questId);
             qs.playSound(SOUND_TUTORIAL);
-            qs.giveItems(SOE_ADEN,1);
             if (player != null)
             {
                 player.sendPacket(new ExShowScreenMessage(LETTER_ALERT_STRING, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
@@ -103,6 +102,7 @@ public class _10401_KekropusLetterDecodingTheBadge extends Quest implements Scri
                         {
                             if(player.getRace() != Race.ERTHEIA)
                             {
+                                qs.giveItems(SOE_ADEN,1);
                                 qs.showQuestHTML(qs.getQuest(),"00.htm");
                                 qs.setState(STARTED);
                                 qs.setCond(1);
