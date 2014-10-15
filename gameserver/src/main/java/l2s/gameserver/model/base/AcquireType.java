@@ -23,7 +23,8 @@ public enum AcquireType
 	GM,
 	CHAOS,
 	DUAL_CHAOS,
-	ABILITY;
+	ABILITY,
+	ALCHEMY;
 
 	public static final AcquireType[] VALUES = AcquireType.values();
 

@@ -11788,6 +11788,22 @@ public final class Player extends Playable implements PlayerGroup
 	*** Ablity system.***
 	******* END *******
 	********************/
+	
+	/********************
+	*** Alchemy system.***
+	******* START *******
+	********************/
+	
+	public boolean isAllowAlchemy()
+	{
+		return (getRace() == Race.ERTHEIA)&& getLevel() >= 40;
+	}
+
+	
+	/********************
+	*** Alchemy system.***
+	******* END *******
+	********************/
 
 	public int getWorldChatPoints()
 	{
