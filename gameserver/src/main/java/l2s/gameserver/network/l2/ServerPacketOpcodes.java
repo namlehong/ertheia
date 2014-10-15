@@ -634,8 +634,8 @@ public enum ServerPacketOpcodes
 	/*0xFE*/	ExAccountAttendanceInfo(0x172),
 	/*0xFE*/	ExWorldChatCnt(0x173),
 	/*0xFE*/	ExAlchemySkillList(0x174),
-	/*0xFE*/	ExTryMixCube(0x175),
-	/*0xFE*/	ExAlchemyConversion(0x176),
+	/*0xFE*/	ExAlchemyCombinationResult(0x175),
+	/*0xFE*/	ExAlchemyTransmuteResult(0x176),
 	/*0xFE*/	ExBeautyItemList(0x177);
 
 	public static final ServerPacketOpcodes[] VALUES = values();
