@@ -2189,6 +2189,14 @@ public enum SystemMsg implements IStaticPacket
 	TODAY_YOU_REACHED_THE_LIMIT_OF_USE_OF_THE_WORLD_CHAT__RESET_OF_THE_WORLD_USE_CHAT_IS_DONE_DAILY_AT_6_30_AM(4239),
 	// Message: You can use the world chat with $s1 level.
 	YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL(4240),
+	// Message: You cannot proceed with the experiment without the necessary skills.
+	YOU_CANNOT_PROCEED_WITHOUT_THE_NECESSARY_SKILL(4258),
+	// Message: Not enough ingredients.
+	NOT_ENOUGH_INGREDIENTS(4259),
+	// Message: You must learn the necessary skills first.
+	YOU_MUST_LEARN_THE_NECESSARY_SKILL_FIRST(4265),
+	// Message: Experiment failed. Please try again.
+	EXPERIMENT_FAILED_PLEASE_TRY_AGAIN(4266),
 	// Message: The skill has been canceled because you have insufficient Energy.
 	THE_SKILL_HAS_BEEN_CANCELED_BECAUSE_YOU_HAVE_INSUFFICIENT_ENERGY(6042),
 	// Message: Your energy cannot be replenished because conditions are not met.
