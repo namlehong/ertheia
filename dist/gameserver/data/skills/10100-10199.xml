@@ -53,25 +53,25 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="mDef" value="#def"/>
-				<mul order="0x30" stat="pDef" value="#def"/>
-				<add order="0x40" stat="defenceFire" value="#elemental"/>
-				<add order="0x40" stat="defenceWater" value="#elemental"/>
-				<add order="0x40" stat="defenceWind" value="#elemental"/>
-				<add order="0x40" stat="defenceEarth" value="#elemental"/>
-				<add order="0x40" stat="defenceHoly" value="#elemental"/>
-				<add order="0x40" stat="defenceUnholy" value="#elemental"/>
-				<add order="0x40" stat="runSpd" value="#speed"/>
-				<add order="0x40" stat="pAccCombat" value="#acuracy">
+				<mul order="0x50" stat="mDef" value="#def"/>
+				<mul order="0x50" stat="pDef" value="#def"/>
+				<add order="0x60" stat="defenceFire" value="#elemental"/>
+				<add order="0x60" stat="defenceWater" value="#elemental"/>
+				<add order="0x60" stat="defenceWind" value="#elemental"/>
+				<add order="0x60" stat="defenceEarth" value="#elemental"/>
+				<add order="0x60" stat="defenceHoly" value="#elemental"/>
+				<add order="0x60" stat="defenceUnholy" value="#elemental"/>
+				<add order="0x60" stat="runSpd" value="#speed"/>
+				<add order="0x60" stat="pAccCombat" value="#acuracy">
 					<using kind="Sword, Blunt"/>
 				</add>
-				<mul order="0x30" stat="pAtkSpd" value="#atkSpeed">
+				<mul order="0x50" stat="pAtkSpd" value="#atkSpeed">
 					<using kind="Sword, Blunt"/>
 				</mul>
-				<add order="0x40" stat="basePCritRate" value="#criRate">
+				<add order="0x60" stat="basePCritRate" value="#criRate">
 					<using kind="Sword, Big Sword"/>
 				</add>
-				<mul order="0x30" stat="pCritDamage" value="#criDamage">
+				<mul order="0x50" stat="pCritDamage" value="#criDamage">
 					<using kind="Sword, Blunt"/>
 				</mul>
 			</effect>
@@ -248,6 +248,7 @@
 		<set name="abnormal_level" value="2"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="speed_down"/>
+		<set name="abnormal_effect" value="SPEED_DOWN"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="castRange" value="400"/>
 		<set name="coolTime" value="500"/>
