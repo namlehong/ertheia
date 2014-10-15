@@ -197,6 +197,10 @@ public final class SkillAcquireParser extends AbstractDirParser<SkillAcquireHold
 					getHolder().addAbilitiesPointPrice(ordinal, Long.parseLong(secondElement.attributeValue("sp_cost")));
 			}
 		}
+		
+		for(Iterator<Element> iterator = rootElement.elementIterator("alchemy_skill_tree"); iterator.hasNext();)
+			getHolder().addAllAlchemySkillLearns((parseSkillLearn(iterator.next())));
+		
 	}
 
 	@Override
