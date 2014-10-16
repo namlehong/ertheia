@@ -257,7 +257,7 @@ public class OnActionShift extends Functions
 		dialog.append(nameNpc(npc)).append("<br></font></center><br>");
 
 		for(Effect e : npc.getEffectList().getEffects())
-			dialog.append(e.getSkill().getName()).append("<br1>");
+			dialog.append(e.getSkill().getName()).append(" - ID:").append(e.getSkill().getId()).append(" - Lv:").append(e.getSkill().getLevel()).append("<br1>");
 
 		dialog.append("<br><center><button value=\"");
 		dialog.append(player.isLangRus() ? "Обновить" : "Refresh");
