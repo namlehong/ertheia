@@ -682,31 +682,32 @@
 		desc_add2: none
 	-->
     <skill id="30511" levels="3" name="Air Light">
-		<table name="#mpConsume2">20 44 45</table>
-		<table name="#magicLevel">40 85 95</table>
 		<table name="#abnormal_level">1 2 3</table>
+		<table name="#magicLevel">40 85 95</table>
+		<table name="#mpConsume2">20 44 45</table>
+		<table name="#pAtk">1.1 1.15 1.2</table>
 		<table name="#pDef">1.1 1.15 1.2</table>
 		<table name="#resist">0 15 20</table>
-		<set name="reuseDelay" value="30000"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1500"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="abnormal_time" value="600"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill30511"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="pDef" value="#pDef"/>
-				<add order="0x40" stat="knockDownPower" value="#resist"/>
-				<add order="0x40" stat="knockBackPower" value="#resist"/>
-				<add order="0x40" stat="pullPower" value="#resist"/>
-				<add order="0x40" stat="airjokePower" value="#resist"/>
+				<mul order="0x50" stat="pDef" value="#pDef"/>
+				<mul order="0x50" stat="pAtk" value="#pAtk"/>
+				<add order="0x60" stat="knockDownPower" value="#resist"/>
+				<add order="0x60" stat="knockBackPower" value="#resist"/>
+				<add order="0x60" stat="pullPower" value="#resist"/>
+				<add order="0x60" stat="airjokePower" value="#resist"/>
 			</effect>
 		</for>
 	</skill>
