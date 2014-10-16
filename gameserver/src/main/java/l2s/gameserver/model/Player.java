@@ -126,6 +126,7 @@ import l2s.gameserver.model.GameObjectTasks.UnJailTask;
 import l2s.gameserver.model.GameObjectTasks.WaterTask;
 import l2s.gameserver.model.Request.L2RequestType;
 import l2s.gameserver.model.Skill.AddedSkill;
+import l2s.gameserver.model.Skill.SkillType;
 import l2s.gameserver.model.Zone.ZoneType;
 import l2s.gameserver.model.actor.basestats.PlayerBaseStats;
 import l2s.gameserver.model.actor.instances.creature.Effect;
@@ -11940,12 +11941,10 @@ public final class Player extends Playable implements PlayerGroup
 
 	public void checkAlchemySkills()
 	{
-		for(Skill skill : getAllSkillsArray())
+		for(Skill skill : getAllSkills())
 		{
-			if(!SkillAcquireHolder.getInstance().isSkillPossible(this, skill, AcquireType.ALCHEMY))
-				continue;
-
-			_alchemySkills.put(skill.getId(), skill);
+			if(skill.getSkillType() == SkillType.ALCHEMY)
+				_alchemySkills.put(skill.getId(), skill);
 		}
 	}
 	
