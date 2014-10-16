@@ -1050,10 +1050,30 @@
 		desc_add2: none
 	-->
     <skill id="30520" levels="2" name="Steel Mind">
+    	<table name="#runSpd">50 70</table>
+    	<table name="#magicLevel">85 90</table>
+    	<table name="#mpConsume2">221 232</table>
+    	<table name="#pAtk">1.15 1.3</table>
+    	<table name="#pCritDamage">1.1 1.15</table>
 		<set name="icon" value="icon.skill30520"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="DeathImmunity"/>
+			<effect name="HealPercent" time="0" value="30"/>
+			<effect>
+				<add order="0x60" stat="runSpd" value="#runSpd"/>
+				<mul order="0x50" stat="pAtk" value="#pAtk"/>
+				<mul order="0x50" stat="pCritDamage" value="#pCritDamage"/>
+				<add order="0x60" stat="knockBackPower" value="90"/>
+				<add order="0x60" stat="knockDownPower" value="90"/>
+				<add order="0x60" stat="pullPower" value="90"/>
+				<add order="ox60" stat="airjokePower" value="90"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Damage Up - Inflicts normal damage x 4.
