@@ -50,8 +50,7 @@ public class ExEventMatchSpelledInfo extends L2GameServerPacket
 		{
 			writeD(temp.skillId);
 			writeH(temp.dat);
-			writeD(0x00); // UNK Ertheia
-			writeH(temp.duration);
+			writeD(temp.duration);
 		}
 	}
 }
