@@ -1732,7 +1732,7 @@
 		<set name="earth_skill_id" value="11178"/>
 		<set name="multi_elemental_skill_id" value="11189"/>
 		<for>
-			<effect name="Debuff" displayId="11188" displayLevel="1">
+			<effect name="Debuff" displayId="11178" displayLevel="1">
 				<sub order="0x80" stat="runSpd" value="20"/>
 			</effect>
 		</for>
@@ -1761,32 +1761,15 @@
 		desc_add2: none
 	-->
     <skill id="11178" levels="1" name="Aqua Crash - Speed Decrease">
-		<table name="#activateRate">80</table>
-		<table name="#mpConsume">37</table>
-		<table name="#power">193 195 197 199</table>
-		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#abnormal_level">1 2 3 4</table>
-		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="0"/>
-		<set name="hitTime" value="2280"/>
-		<set name="coolTime" value="300"/>
-		<set name="abnormal_time" value="10"/>
-		<set name="abnormal_level" value="#abnormal_level"/>
-		<set name="abnormal_type" value="aqua_crash"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="MAGIC"/>
 		<set name="icon" value="icon.skill11011"/>
-		<set name="power" value="#power"/>
-		<set name="castRange" value="1100"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume" value="#mpConsume"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="aqua_crash"/>
 		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="MDAM"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="activateRate" value="#activateRate"/>
-		<set name="saveVs" value="MEN"/>
 		<for>
-			<effect name="Debuff" displayId="11188" displayLevel="1">
+			<effect name="Debuff">
 				<sub order="0x80" stat="runSpd" value="20"/>
 			</effect>
 		</for>
@@ -2278,7 +2261,7 @@
 		<set name="reuseDelay" value="0"/>
 		<set name="hitTime" value="2280"/>
 		<set name="coolTime" value="300"/>
-		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="aqua_crash"/>
 		<set name="magicLevel" value="#magicLevel"/>
