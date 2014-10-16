@@ -23,7 +23,7 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 		public int requirements;
 		public int subUnit;
 
-		Skill(int id, int nextLevel, int maxLevel, int cost, int requireLevel, int requirements, int subUnit)
+		Skill(int id, int nextLevel, int maxLevel, int requireLevel, int cost, int requirements, int subUnit)
 		{
 			this.id = id;
 			this.nextLevel = nextLevel;

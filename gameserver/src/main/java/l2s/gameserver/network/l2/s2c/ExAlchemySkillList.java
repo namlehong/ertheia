@@ -23,10 +23,7 @@ public class ExAlchemySkillList extends L2GameServerPacket
 		{
 			writeD(skill.getId());
 			writeD(skill.getLevel());
-			writeD(0);
-			writeC(0);
-			writeC(0);
-			writeC(0);
+			writeQ(0);
 			if(skill.getSkillType() == SkillType.COMBINE)
 				writeC(0);
 			else

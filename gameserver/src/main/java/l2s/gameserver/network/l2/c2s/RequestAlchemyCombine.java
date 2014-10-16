@@ -140,7 +140,12 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 	private long getAirtoneAmount(ItemInstance item, long itemCount)
 	{
 		long stoneCount = 0;
-		long itemPrice = item.getReferencePrice();
+		long itemPrice;
+		
+		if(item.getItemId() != 57) 
+			itemPrice = item.getReferencePrice();
+		else 
+			itemPrice = itemCount;
 		
 		long fiftyMul = (long) Math.floor(itemPrice / 50000);
 		long adenaLeft = (long) itemPrice%50000;
