@@ -58,7 +58,7 @@ public class ExAcquirableSkillListAlchemy extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeH(180);
+		writeH(0x8C);
 		writeH(_skills.size());
 
 		for(Skill temp : _skills)
