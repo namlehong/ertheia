@@ -434,8 +434,8 @@ public enum AbnormalType
 	wp_change_event,
 	
 	// new abnormal type
-	skill,
 	spectral_curse, //
+	aqua_crash,
 
 	//custom
 	gerold_buff;
