@@ -1317,7 +1317,7 @@
 		<table name="#reuseDelay">30000</table>
 		<set name="abnormal_effect" value="KNOCKDOWN"/>
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_time" value="2"/>
+		<set name="abnormal_time" value="3"/>
 		<set name="abnormal_type" value="knockdown"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="analog_skills" value="498;315;81"/>
@@ -3405,7 +3405,8 @@
 		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="MEN"/>
 		<set name="skillRadius" value="700"/>
-		<set name="skillType" value="AGGRESSION"/>
+		<!-- <set name="skillType" value="AGGRESSION"/> --> 
+		<set name="skillType" value="DELETE_HATE"/>
 		<set name="target" value="TARGET_AURA"/>
 		<set name="trait" value="DERANGEMENT"/>
 		<set name="unaggroing" value="true"/>
@@ -3417,6 +3418,9 @@
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 21000</table>
 		</enchant>
+		<for>
+			<effect name="UnAggro" time="120"/>
+		</for>
 	</skill>
     <!--
 		Giant Barrier - Removes all debuffs and for 10 seconds, becomes invincible against normal attacks, skills, and debuffs. Spd. + 30%. Available when HP is 70% or lower.
