@@ -1564,12 +1564,12 @@
 		desc_add2: Increases the effect.
 	-->
     <skill id="30544" levels="2" name="Eminent Trait Resistance">
-    	<table name="#rootResist">30 30</table>
-    	<table name="#mentalResist">30 30</table>
-    	<table name="#pullResist">0 30</table>
     	<table name="#knockBackPower">0 30</table>
     	<table name="#knockDownPower">0 30</table>
     	<table name="#magicLevel">85 90</table>
+    	<table name="#mentalResist">30 30</table>
+    	<table name="#pullResist">0 30</table>
+    	<table name="#rootResist">30 30</table>
 		<set name="icon" value="icon.skill10005"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
@@ -1610,12 +1610,14 @@
 		desc_add2: none
 	-->
     <skill id="30545" levels="3" name="Eminent Ability">
-		<table name="#STR">2 4 14</table>
 		<table name="#activateSkillMasterySTR">0 1 1</table>
+		<table name="#STR">2 4 14</table>
+    	<table name="#magicLevel">85 90 95</table>
 		<set name="icon" value="icon.skill0430"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<add order="0x10" stat="STR" value="#STR"/>
 			<set order="0x100" stat="activateSkillMasterySTR" value="#activateSkillMasterySTR"/>
