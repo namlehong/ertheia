@@ -436,6 +436,8 @@ public enum AbnormalType
 	// new abnormal type
 	spectral_curse, //
 	aqua_crash,
+	aqua_crash_frozen,
+	aqua_crash_freeze,
 
 	//custom
 	gerold_buff;
