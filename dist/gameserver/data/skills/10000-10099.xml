@@ -291,18 +291,16 @@
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#mDef">168 178 188 199 209 219 230 240 250 261</table>
 			<table name="#magicLevel">99</table>
-		</enchant>		
+		</enchant>
+		<triggers>
+			<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="50">
+				<player damage="50;0"/>
+			</trigger>
+		</triggers>		
 		<for>
 			<add order="0x10" stat="STR" value="2"/>
 			<add order="0x40" stat="mDef" value="#mDef"/>
 			<mul order="0x30" stat="concentration" value="0.75"/>
-			<effect>
-				<triggers>
-					<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="50">
-						<player damage="50;0"/>
-					</trigger>
-				</triggers>
-			</effect>
 		</for>
 	</skill>
     <!--

@@ -812,11 +812,9 @@
 		<set name="target" value="TARGET_SELF"/>
     	<set name="magicLevel" value="85"/>
 		<for>
-			<effect>
-				<mul order="0x30" stat="pvpPhysDmgBonus" value="#pvpBonus"/>
-				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#pvpBonus"/>
-				<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#pvpBonus"/>
-			</effect>
+			<mul order="0x30" stat="pvpPhysDmgBonus" value="#pvpBonus"/>
+			<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#pvpBonus"/>
+			<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#pvpBonus"/>
 		</for>
 	</skill>
     <!--
@@ -1188,15 +1186,13 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<for>
-			<effect>
-				<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
-					<using skill="10260"/>
-					<using skill="10262"/>
-					<using skill="10269"/>
-					<using skill="10318"/>
-					<using skill="261"/>
-				</mul>
-			</effect>
+			<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
+				<using skill="10260"/>
+				<using skill="10262"/>
+				<using skill="10269"/>
+				<using skill="10318"/>
+				<using skill="261"/>
+			</mul>
 		</for>
 	</skill>
     <!--
@@ -1440,10 +1436,8 @@
 			<using kind="Blunt, Big Blunt"/>
 		</cond>
 		<for>
-			<effect>
-				<mul order="0x30" stat="pAtk" value="1.21"/>
-				<mul order="0x40" stat="basePCritRate" value="60"/>
-			</effect>
+			<mul order="0x30" stat="pAtk" value="1.21"/>
+			<mul order="0x40" stat="basePCritRate" value="60"/>
 		</for>
 	</skill>
     <!--
