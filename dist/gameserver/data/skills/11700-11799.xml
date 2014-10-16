@@ -3037,10 +3037,7 @@
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="target" value="TARGET_ONE"/>
-		<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="20">
-			<player damage="100;0"/>
-		</trigger>
+		<set name="target" value="TARGET_ONE"/>		
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#mDef">146 154 162 170 178 186 194 202 210 218</table>
 			<table name="#magicLevel">99</table>
@@ -3048,6 +3045,9 @@
 		<for>
 			<add order="0x10" stat="INT" value="2"/>
 			<add order="0x40" stat="mDef" value="#mDef"/>
+			<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="20">
+				<player damage="100;0"/>
+			</trigger>
 		</for>
 	</skill>
     <!--
