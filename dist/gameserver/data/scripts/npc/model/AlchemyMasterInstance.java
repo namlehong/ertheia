@@ -51,6 +51,7 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 			return;
 		}
 		
+		System.out.println("cmd " + cmd);
 		if(cmd.equals("learn_skill"))
 		{
 			System.out.println("Learn skill alchemy");
