@@ -157,6 +157,10 @@ public final class SkillTestParser extends StatParser<ItemHolder>
 			for(org.dom4j.Element secondElement: skillElement.elements()){
 				if(secondElement.getName().equalsIgnoreCase("for")){
 					for(org.dom4j.Element forChildElement: secondElement.elements()){
+						if(operate_type.equalsIgnoreCase("OP_PASSIVE") && forChildElement.getName().equalsIgnoreCase("effect")){
+							SkillTest.getInstance().wrongPassiveEffect.add(skill_id);
+						}
+						
 						if(forChildElement.getName().equalsIgnoreCase("effect") || forChildElement.getName().equalsIgnoreCase("self_effect")){
 							for(org.dom4j.Element effectChildElement: forChildElement.elements()){
 								SkillTest.getInstance().validateOrder(effectChildElement, skill_id, skill_type, operate_type);

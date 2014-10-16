@@ -3083,6 +3083,12 @@
 		Summon Protection Stone - Summons a giant shaman stone to temporarily increase party's abilities. Consumes 15 Spirit Ores.
 
 		LvL.2	mp_consume: 132
+		
+		NPC ID
+		13423	Protection Stone		12	20
+		13424	Protection Stone		12	20
+		13425	Protection Stone		12	20
+		
 	
 		name: Summon Protection Stone
 		level: 1
@@ -3104,10 +3110,24 @@
 		desc_add2: none
 	-->
     <skill id="11359" levels="3" name="Summon Protection Stone">
+		<table name="#magicLevel">99</table>
+		<table name="#mpConsume">137</table>
+		<table name="#npcId">13423 13424 13425</table>
+		<set name="castRange" value="600"/>
+		<set name="coolTime" value="2000"/>
+		<set name="hitTime" value="5000"/>
 		<set name="icon" value="icon.skill11359"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="is_saveable_summon" value="false"/>
+		<set name="lifeTime" value="30"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume"/>
+		<set name="npcId" value="#npcId"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summonType" value="TREE"/> <!-- Summon type??? -->
+		<set name="target" value="TARGET_SELF"/>
 	</skill>
     <!--
 		Arcane Protection - For 30 sec., Received P./M. Critical Rate - 5%, Pull Resistance and Knock Back / Knock Down Resistance - 5. Debuff Resistance + 5%, HP/MP Recovery Bonus + 5%.
@@ -3141,26 +3161,26 @@
     	<table name="#reduceCritical">0.95 0.93 0.9</table>
     	<table name="#resist">5 7 10</table>
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_time" value="30"/>
-		<set name="abnormal_type" value="possession"/>
+		<set name="abnormal_time" value="5"/> <!-- FIXME -->
+		<set name="abnormal_type" value="possession"/> <!-- FIXME -->
 		<set name="icon" value="icon.skill11360"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="target" value="TARGET_SELF"/>
+		<set name="target" value="TARGET_PARTY"/>
     	<set name="castRange" value="900"/>
     	<set name="coolTime" value="500"/>
     	<set name="hitTime" value="1500"/>
     	<set name="reuseDelay" value="4000"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="critChanceRcpt" value="#reduceCritical"/>
-				<add order="0x40" stat="pullResist" value="#resist"/>
-				<add order="0x40" stat="knockBackResist" value="#resist"/>
-				<add order="0x40" stat="knockDownResist" value="#resist"/>
-				<mul order="0x30" stat="debuffResist" value="#bonus"/>
-				<mul order="0x30" stat="regHp" value="#bonus"/>
-				<mul order="0x30" stat="regMp" value="#bonus"/>
+				<mul order="0x50" stat="critChanceRcpt" value="#reduceCritical"/>
+				<add order="0x60" stat="pullResist" value="#resist"/>
+				<add order="0x60" stat="knockBackResist" value="#resist"/>
+				<add order="0x60" stat="knockDownResist" value="#resist"/>
+				<mul order="0x50" stat="debuffResist" value="#bonus"/>
+				<mul order="0x50" stat="regHp" value="#bonus"/>
+				<mul order="0x50" stat="regMp" value="#bonus"/>
 			</effect>
 		</for>
 	</skill>
@@ -3328,14 +3348,15 @@
 		desc_add2: none
 	-->
     <skill id="11365" levels="3" name="Summon Demonic Crucifix">
-		<table name="#activateRate">50 55 60</table>
+    	<table name="#abnormal_level">1 2 3</table>
+		<table name="#activateRate">50 60 70</table> <!-- FIXME -->
 		<table name="#itemCount">3 0 0</table>
 		<table name="#magicLevel">97 98 99</table>
 		<table name="#mpConsume2">392 384 392</table>
 		<table name="#power">518 506 518</table>
-		<set name="abnormal_level" value="2"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="60"/>
-		<set name="abnormal_type" value="speed_down"/>
+		<set name="abnormal_type" value="spectral_curse"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="castRange" value="600"/>
 		<set name="elements" value="water"/>
@@ -3356,12 +3377,13 @@
 		<set name="skillType" value="MDAM"/>
 		<set name="target" value="TARGET_ONE"/>
 		<for>
-			<effect>
+			<effect name="Spectral Curse" displayId="11366" displayLevel="#abnormal_level">
 				<sub order="0x40" stat="runSpd" value="180"/>
 				<mul order="0x30" stat="pAtkSpd" value="0.7"/>
 				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
 			</effect>
 		</for>
+		<set name="delayedEffect" value="11366"/>		
 	</skill>
     <!--
 		Spectral Curse - Temporarily renders nearby enemies helpless.
@@ -3388,8 +3410,11 @@
 	-->
     <skill id="11366" levels="3" name="Spectral Curse">
 		<set name="icon" value="icon.skill0028"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_type" value="spectral_curse"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
     <!--

@@ -432,6 +432,10 @@ public enum AbnormalType
 	wind_dot,
 	wispering_of_battle,
 	wp_change_event,
+	
+	// new abnormal type
+	skill,
+	spectral_curse, //
 
 	//custom
 	gerold_buff;

@@ -73,6 +73,11 @@ public class SkillTest {
 			sb.append("Wrong enchant max level: "+skill_id);
 			sb.append("\n");
 		}
+		for(int skill_id: wrongPassiveEffect){
+//			System.out.println("Wrong enchant max level: "+skill_id);
+			sb.append("Wrong passive effect: "+skill_id);
+			sb.append("\n");
+		}
 		for(Map.Entry<String, TreeSet<Integer>> entry: _orderToStats.entrySet()){
 //			System.out.println(entry.getKey()+" ids:"+StringUtils.join(entry.getValue(), ", "));
 			sb.append(entry.getKey()+" ids:"+StringUtils.join(entry.getValue(), ", "));
@@ -86,6 +91,7 @@ public class SkillTest {
 	}
 	
 	public TreeSet<Integer> missMagicLevel = new TreeSet<Integer>();
+	public TreeSet<Integer> wrongPassiveEffect = new TreeSet<Integer>();
 	public TreeSet<Integer> wrongMaxLevel = new TreeSet<Integer>();
 	public TreeSet<Integer> wrongEnchantMaxLevel = new TreeSet<Integer>();
 	

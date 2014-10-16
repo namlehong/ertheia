@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><list>
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="16400" levels="1" name="Ferin's Recharge">
     <!--
 		Ferin's Recharge - Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second.
 
@@ -22,10 +24,20 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="16400" levels="1" name="Ferin's Recharge">
 		<set name="icon" value="icon.skill11760"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="reuseDelay" value="12000"/>
+		<set name="hitTime" value="6000"/>
+		<set name="magicLevel" value="99"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="icon" value="icon.skill1013"/>
+		<set name="power" value="731"/>
+		<set name="castRange" value="400"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="mpConsume1" value="20"/>
+		<set name="mpConsume2" value="20"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="MANAHEAL"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
     <!--
@@ -408,7 +420,6 @@
     <!--
 		Peace Zone Cure - Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec.
 
-	
 		name: Peace Zone Cure
 		level: 1
 		mp_consume: 0

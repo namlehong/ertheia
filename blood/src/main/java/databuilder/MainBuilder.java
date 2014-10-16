@@ -204,9 +204,9 @@ public class MainBuilder
 //		buildSpawn();
 //		testLonging();
 //		SkillTest.getInstance();
-//		SkillTest.getInstance().testSkill();
+		SkillTest.getInstance().testSkill();
 //		buildRaidSpawn();
-		AlchemyRecipeBuilder.getInstance().save();
+//		AlchemyRecipeBuilder.getInstance().save();
 	}
 	
 	

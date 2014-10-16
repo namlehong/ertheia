@@ -291,16 +291,18 @@
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#mDef">168 178 188 199 209 219 230 240 250 261</table>
 			<table name="#magicLevel">99</table>
-		</enchant>
-		<triggers>
-			<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="50">
-				<player damage="50;0"/>
-			</trigger>
-		</triggers>
+		</enchant>		
 		<for>
 			<add order="0x10" stat="STR" value="2"/>
 			<add order="0x40" stat="mDef" value="#mDef"/>
 			<mul order="0x30" stat="concentration" value="0.75"/>
+			<effect>
+				<triggers>
+					<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="50">
+						<player damage="50;0"/>
+					</trigger>
+				</triggers>
+			</effect>
 		</for>
 	</skill>
     <!--
@@ -2189,7 +2191,7 @@
 		<set name="abnormal_type" value="stun"/>
 		<set name="activateRate" value="50"/>
 		<set name="activateRate" value="70"/>
-		<set name="analog_skills" value="404;407"/>
+		<set name="analog_skills" value="407"/>
 		<set name="castRange" value="#castRange"/>
 		<set name="coolTime" value="1000"/>
 		<set name="hitTime" value="500"/>
@@ -3175,8 +3177,10 @@
     <skill id="10024" levels="1" name="Party Rescue">
 		<table name="#heal">0</table>
 		<table name="#mpConsume2">96</table>
-		<set name="abnormal_level" value="2"/>
-		<set name="abnormal_time" value="15"/>
+		<!--
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
+		-->
 		<set name="abnormal_type" value="transfer_damage"/>
 		<set name="castRange" value="900"/>
 		<set name="coolTime" value="500"/>
@@ -3189,7 +3193,8 @@
 		<set name="reuseDelay" value="600000"/>
 		<set name="skillRadius" value="3000"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="target" value="TARGET_PARTY"/>
+		<set name="trait" value="PULL"/>
+		<set name="target" value="TARGET_PARTY_WITHOUT_ME"/>
 		<cond msgId="113">
 			<using kind="Shield"/>
 		</cond>
@@ -3200,13 +3205,16 @@
 			<table name="#heal">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<for>
-			<effect name="AbsorbDamageToEffector">
+			<effect name="AbsorbDamageToEffector" time="15">
 				<add order="0x40" stat="transferToEffectorDam" value="90"/>
 				<set order="0x30" stat="recieveDamageLimit" value="10"/>
 				<set order="0x30" stat="recieveDamageLimitPSkill" value="10"/>
 				<set order="0x30" stat="recieveDamageLimitMSkill" value="10"/>
 			</effect>
-			<effect name="ThrowHorizontal" time="0"/>
+			<effect name="ThrowHorizontal">
+				<def name="fly_speed" value="600"/>
+				<def name="fly_delay" value="600"/>
+			</effect>
 			<effect name="HealPercent" time="0" value="#heal"/>
 		</for>
 	</skill>
@@ -5164,7 +5172,7 @@
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
@@ -5268,7 +5276,7 @@
 		<set name="magicType" value="MAGIC"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
@@ -5653,9 +5661,11 @@
 		desc_add2: none
 	-->
     <skill id="10065" levels="4" name="Fortress Shield">
-		<table name="#sDef">1.05 1.07 1.1 1.15</table>
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#rShld">1.02 1.03 1.04 1.05</table>
+		<table name="#sDef">1.05 1.07 1.1 1.15</table>
 		<set name="icon" value="icon.skill0322"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -5800,7 +5810,7 @@
 		<set name="skillType" value="SUMMON"/>
 		<set name="target" value="TARGET_SELF"/>
 		<triggers>
-			<trigger id="10061" level="1" type="ON_SUCCES_FINISH_CAST"/>
+			<!-- <trigger id="10061" level="1" type="ON_SUCCES_FINISH_CAST"/>-->
 		</triggers>
 	</skill>
     <!--
@@ -6755,7 +6765,7 @@
     <skill id="10089" levels="4" name="Strong Cubic Mind">
 		<set name="icon" value="icon.skill0191"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
@@ -6897,7 +6907,7 @@
 			<effect name="Cubic" time="900">
 				<def name="cubicId" value="22"/>
 				<def name="cubicLevel" value="#cubicLevel"/>
-				<player cubic="21"/>
+				<player cubic="22"/>
 			</effect>
 		</for>
 	</skill>
@@ -6986,7 +6996,7 @@
 		<set name="abnormal_type" value="paralyze"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="castRange" value="400"/>
-		<set name="delayedEffect" value="6090"/>
+		<!-- <set name="delayedEffect" value="6090"/>  -->
 		<set name="hitCancelTime" value="500"/>
 		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skll10094"/>
@@ -7002,7 +7012,12 @@
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_AREA"/>
 		<set name="trait" value="PARALYZE"/>
+		
+		<for>
+			<effect name="Paralyze"/>
+		</for>
 	</skill>
+	
     <!--
 		Blood Panther's Death Touch - When a normal attack or skill attack is successful, casts a de-buff that increases the critical damage received from target with a certain probability.
 
@@ -7184,20 +7199,20 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="mDef" value="#def"/>
-				<mul order="0x30" stat="pDef" value="#def"/>
-				<mul order="0x30" stat="debuffResist" value="#debuffResist"/>
-				<add order="0x40" stat="runSpd" value="#speed"/>
-				<add order="0x40" stat="pAccCombat" value="#acuracy">
+				<mul order="0x50" stat="mDef" value="#def"/>
+				<mul order="0x50" stat="pDef" value="#def"/>
+				<mul order="0x50" stat="debuffResist" value="#debuffResist"/>
+				<add order="0x60" stat="runSpd" value="#speed"/>
+				<add order="0x60" stat="pAccCombat" value="#acuracy">
 					<using kind="Sword, Blunt"/>
 				</add>
-				<mul order="0x30" stat="pAtkSpd" value="#atkSpeed">
+				<mul order="0x50" stat="pAtkSpd" value="#atkSpeed">
 					<using kind="Sword, Blunt"/>
 				</mul>
-				<add order="0x40" stat="basePCritRate" value="#criRate">
+				<add order="0x60" stat="basePCritRate" value="#criRate">
 					<using kind="Sword, Big Sword"/>
 				</add>
-				<mul order="0x30" stat="pCritDamage" value="#criDamage">
+				<mul order="0x50" stat="pCritDamage" value="#criDamage">
 					<using kind="Sword, Blunt"/>
 				</mul>
 			</effect>
@@ -7257,20 +7272,20 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="mDef" value="#def"/>
-				<mul order="0x30" stat="pDef" value="#def"/>
-				<mul order="0x30" stat="pAtk" value="#pAtk"/>
-				<add order="0x40" stat="runSpd" value="#speed"/>
-				<add order="0x40" stat="pAccCombat" value="#acuracy">
+				<mul order="0x50" stat="mDef" value="#def"/>
+				<mul order="0x50" stat="pDef" value="#def"/>
+				<mul order="0x50" stat="pAtk" value="#pAtk"/>
+				<add order="0x60" stat="runSpd" value="#speed"/>
+				<add order="0x60" stat="pAccCombat" value="#acuracy">
 					<using kind="Sword, Blunt"/>
 				</add>
-				<mul order="0x30" stat="pAtkSpd" value="#atkSpeed">
+				<mul order="0x50" stat="pAtkSpd" value="#atkSpeed">
 					<using kind="Sword, Blunt"/>
 				</mul>
-				<add order="0x40" stat="basePCritRate" value="#criRate">
+				<add order="0x60" stat="basePCritRate" value="#criRate">
 					<using kind="Sword, Big Sword"/>
 				</add>
-				<mul order="0x30" stat="pCritDamage" value="#criDamage">
+				<mul order="0x50" stat="pCritDamage" value="#criDamage">
 					<using kind="Sword, Blunt"/>
 				</mul>
 			</effect>
