@@ -1564,10 +1564,24 @@
 		desc_add2: Increases the effect.
 	-->
     <skill id="30544" levels="2" name="Eminent Trait Resistance">
+    	<table name="#rootResist">30 30</table>
+    	<table name="#mentalResist">30 30</table>
+    	<table name="#pullResist">0 30</table>
+    	<table name="#knockBackPower">0 30</table>
+    	<table name="#knockDownPower">0 30</table>
+    	<table name="#magicLevel">85 90</table>
 		<set name="icon" value="icon.skill10005"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="magicLevel" value="#magicLevel"/>
+		<for>
+			<add order="0x40" stat="rootResist" value="#rootResist"/>
+			<add order="0x40" stat="mentalResist" value="#mentalResist"/>
+			<add order="0x40" stat="pullResist" value="#pullResist"/>
+			<add order="0x40" stat="knockBackPower" value="#knockBackPower"/>
+			<add order="0x40" stat="knockDownPower" value="#knockDownPower"/>
+		</for>
 	</skill>
     <!--
 		Eminent Ability - STR + 2.
