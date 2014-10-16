@@ -2255,23 +2255,17 @@
 		desc_add2: none
 	-->
     <skill id="11188" levels="5" name="Frozen">
-    	<table name="#activeRate">0 0 0 0 100</table>
     	<table name="#abnormal_level">1 2 3 4 5</table>
+    	<table name="#abnormal_time">10 10 10 10 3</table>
+    	<table name="#abnormal_level">NONE NONE NONE NONE STUN</table>
 		<set name="icon" value="icon.skill11017"/>
-		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_effect" value="#abnormal_effect"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
-		<set name="abnormal_type" value="aqua_crash_frozen"/>
+		<set name="abnormal_type" value="aqua_crash_freeze"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<for>
-			<effect name="Debuff">
-				<sub order="0x80" stat="runSpd" value="20"/>
-			</effect>
-		</for>
-		<triggers>
-			<trigger id="11195" level="1" type="ON_SUCCES_FINISH_CAST" chance="#activeRate"/>
-		</triggers>
 	</skill>
     <!--
 		Aqua Crash - Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 s
@@ -2310,7 +2304,7 @@
 		<set name="reuseDelay" value="0"/>
 		<set name="hitTime" value="2280"/>
 		<set name="coolTime" value="300"/>
-		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="aqua_crash"/>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -2326,8 +2320,13 @@
 		<set name="activateRate" value="#activateRate"/>
 		<set name="saveVs" value="MEN"/>
 		<for>
-			<effect name="Stun" displayId="11195" displayLevel="1"/>
+			<effect name="Debuff" displayId="11195" displayLevel="1">
+				<sub order="0x80" stat="runSpd" value="20"/>
+			</effect>
 		</for>
+		<triggers>
+			<trigger id="11196" level="1" type="ON_SUCCES_FINISH_CAST" chance="100" increasing="true"/>
+		</triggers>
 	</skill>
     <!--
 		Elemental Destruction: Fire - Fire Attribute
@@ -2499,14 +2498,16 @@
 	-->
     <skill id="11195" levels="1" name="Aqua Crash - Freeze">
 		<set name="icon" value="icon.skill11011"/>
-		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="aqua_crash_freeze"/>
+		<set name="abnormal_type" value="aqua_crash"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
-			<effect name="Stun"/>
+			<effect name="Debuff">
+				<sub order="0x80" stat="runSpd" value="20"/>
+			</effect>
 		</for>
 	</skill>
     <!--
@@ -2534,9 +2535,15 @@
 	-->
     <skill id="11196" levels="1" name="Frozen">
 		<set name="icon" value="icon.skill11017"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="abnormal_time" value="3"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="aqua_crash_freeze"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Stun"/>
+		</for>
 	</skill>
     <!--
 		Elemental Destruction: Fire - Fire Attribute
