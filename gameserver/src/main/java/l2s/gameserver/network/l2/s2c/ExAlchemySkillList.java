@@ -1,6 +1,6 @@
 package l2s.gameserver.network.l2.s2c;
 
-import java.util.Collection;
+import java.util.List;
 
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.Skill;
@@ -8,7 +8,7 @@ import l2s.gameserver.model.Skill.SkillType;
 
 public class ExAlchemySkillList extends L2GameServerPacket
 {
-	private Collection<Skill> _alchemySkills;
+	private List<Skill> _alchemySkills;
 
 	public ExAlchemySkillList(Player player)
 	{

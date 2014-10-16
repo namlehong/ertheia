@@ -210,6 +210,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 				if(player == null)
 					return skills;
 				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), 0, player.getRace()); 
+				
 			default:
 				return Collections.emptyList();
 		}

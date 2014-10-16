@@ -8,7 +8,7 @@ import l2s.gameserver.model.SkillLearn;
 import l2s.gameserver.model.base.AcquireType;
 
 /**
- * Reworked: VISTALL
+ * Reworked: Hien Son
  */
 public class AcquireSkillInfoPacket extends L2GameServerPacket
 {
@@ -23,7 +23,7 @@ public class AcquireSkillInfoPacket extends L2GameServerPacket
 		if(_learn.getItemId() != 0)
 		{
 			_reqs = new ArrayList<Require>(1);
-			_reqs.add(new Require(99, _learn.getItemId(), _learn.getItemCount(), 50));
+			_reqs.add(new Require(4, _learn.getItemId(), _learn.getItemCount(), 0));
 		}
 	}
 
@@ -42,7 +42,7 @@ public class AcquireSkillInfoPacket extends L2GameServerPacket
 			writeD(temp.type);
 			writeD(temp.itemId);
 			writeQ(temp.count);
-			writeD(temp.unk);
+			writeQ(temp.unk);
 		}
 	}
 
