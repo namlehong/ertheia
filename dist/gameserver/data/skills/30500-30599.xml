@@ -1091,9 +1091,9 @@
 	-->
     <skill id="30522" levels="1" name="Eminent Attack Movement">
 		<set name="icon" value="icon.skill30522"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<triggers>
 			<trigger id="30523" level="1" type="RECEIVE_DAMAGE" chance="5" increasing="true">
 				<player damage="100;0"/>
@@ -1129,9 +1129,8 @@
     <skill id="30523" levels="3" name="Battle Dash">
 		<table name="#runSpd">10 20 50</table>
 		<table name="#abnormal_level">1 2 3</table>
-		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill30523"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -1139,7 +1138,7 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<add order="0x40" stat="runSpd" value="#runSpd"/>
+				<add order="0x60" stat="runSpd" value="#runSpd"/>
 			</effect>
 		</for>
 	</skill>
@@ -1526,10 +1525,18 @@
 		desc_add2: Increases the effect.
 	-->
     <skill id="30543" levels="2" name="Eminent Attribute Resistance">
+    	<table name="#defenceHoly">0 30</table>
+    	<table name="#defenceWind">30 30</table>
+    	<table name="#magicLevel">85 90</table>
 		<set name="icon" value="icon.skill11006"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="magicLevel" value="#magicLevel"/>
+		<for>
+			<add order="0x40" stat="defenceWind" value="#defenceWind"/>
+			<add order="0x40" stat="defenceHoly" value="#defenceHoly"/>
+		</for>
 	</skill>
     <!--
 		Eminent Trait Resistance - Hold/Mental Resistance + 30.
