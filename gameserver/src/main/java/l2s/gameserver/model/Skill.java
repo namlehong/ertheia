@@ -223,6 +223,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		HEAL_HP_CP_PERCENT(HealHpCpPercent.class),
 		HEAL_PERCENT(HealPercent.class),
 		HOT(Continuous.class),
+		INSTANT_TELEPORT(InstanceTeleport.class),
 		KAMAEL_WEAPON_EXCHANGE(KamaelWeaponExchange.class),
 		LETHAL_SHOT(LethalShot.class),
 		LUCK,

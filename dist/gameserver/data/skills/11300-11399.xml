@@ -3124,10 +3124,12 @@
 		<set name="mpConsume2" value="#mpConsume"/>
 		<set name="npcId" value="#npcId"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="reuseDelay" value="10000"/>
+		<set name="reuseDelay" value="400000"/>
 		<set name="skillType" value="SUMMON"/>
 		<set name="summonType" value="SYMBOL"/> <!-- Summon type??? -->
 		<set name="target" value="TARGET_GROUND"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="15"/>
 	</skill>
     <!--
 		Arcane Protection - For 30 sec., Received P./M. Critical Rate - 5%, Pull Resistance and Knock Back / Knock Down Resistance - 5. Debuff Resistance + 5%, HP/MP Recovery Bonus + 5%.
@@ -3191,6 +3193,11 @@
 		LvL.1	description: Consumes 5 Spirit Ores.
 		LvL.2	description: 
 		LvL.3	description: 
+		
+		13426	Instant Portal		12	25
+		13427	Instant Portal		12	25
+		13428	Instant Portal		12	25
+		
 	
 		name: Summon Moving Portal
 		level: 1
@@ -3212,10 +3219,25 @@
 		desc_add2: none
 	-->
     <skill id="11361" levels="3" name="Summon Moving Portal">
+		<table name="#magicLevel">99</table>
+		<table name="#mpConsume">137</table>
+		<table name="#npcId">13426 13427 13428</table>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11361"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="is_saveable_summon" value="false"/>
+		<set name="lifeTime" value="30"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume"/>
+		<set name="npcId" value="#npcId"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="50000"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="summonType" value="SYMBOL"/> <!-- Summon type??? -->
+		<set name="target" value="TARGET_SELF"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="15"/>
 	</skill>
     <!--
 		Summon Moving Portal - An instant Moving Portal is summoned.
@@ -3273,10 +3295,23 @@
 		desc_add2: none
 	-->
     <skill id="11363" levels="3" name="Instant Teleport">
+		<table name="#magicLevel">99</table>
+		<table name="#mpConsume">108</table>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11363"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="is_saveable_summon" value="false"/>
+		<set name="lifeTime" value="30"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume"/>
+		<set name="npcId" value="#npcId"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="50000"/>
+		<set name="skillType" value="INSTANT_TELEPORT"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="itemConsumeId" value="3031"/>
+		<set name="itemConsumeCount" value="1"/>
 	</skill>
     <!--
 		Elemental Dash - Party's Speed + 15.
