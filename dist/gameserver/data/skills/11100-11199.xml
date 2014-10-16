@@ -221,16 +221,20 @@
 		desc_add2: none
 	-->
     <skill id="11106" levels="4" name="Elemental Mass Burst">
-		<set name="icon" value="icon.skill11865"/>
+    	<table name="#abnormal_level">1 2 3 4</table>
+    	<table name="#abnormal_time">15 20 25 30</table>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
 		<table name="#magicLevel">99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="7000"/>
 		<set name="hitTime" value="6008"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="md_down"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill0049"/>
+		<set name="icon" value="icon.skill11865"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
@@ -244,6 +248,11 @@
 		<set name="wind_skill_id" value="11109"/>
 		<set name="earth_skill_id" value="11110"/>
 		<set name="multi_elemental_skill_id" value="11111"/>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Elemental Mass Burst: Fire - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
@@ -273,16 +282,20 @@
 		desc_add2: none
 	-->
     <skill id="11107" levels="4" name="Elemental Mass Burst: Fire">
-		<set name="icon" value="icon.skill11865"/>
+		<table name="#abnormal_level">1 2 3 4</table>
+    	<table name="#abnormal_time">15 20 25 30</table>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
 		<table name="#magicLevel">99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="7000"/>
 		<set name="hitTime" value="6008"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="md_down"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill0049"/>
+		<set name="icon" value="icon.skill11865"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
@@ -291,12 +304,15 @@
 		<set name="skillRadius" value="350"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="elements" value="fire"/>
-		<set name="elementsPower" value="100"/>
 		<set name="reuse_skill_id" value="11106"/>
 		<cond msgId="113">
 			<target hasBuffId="11101"/>
 		</cond>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Elemental Mass Burst: Water - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
@@ -326,16 +342,20 @@
 		desc_add2: none
 	-->
     <skill id="11108" levels="4" name="Elemental Mass Burst: Water">
-		<set name="icon" value="icon.skill11865"/>
+		<table name="#abnormal_level">1 2 3 4</table>
+    	<table name="#abnormal_time">15 20 25 30</table>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
 		<table name="#magicLevel">99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="7000"/>
 		<set name="hitTime" value="6008"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="md_down"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill0049"/>
+		<set name="icon" value="icon.skill11865"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
@@ -344,12 +364,15 @@
 		<set name="skillRadius" value="350"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="elements" value="water"/>
-		<set name="elementsPower" value="100"/>
 		<set name="reuse_skill_id" value="11106"/>
 		<cond msgId="113">
 			<target hasBuffId="11102"/>
 		</cond>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Elemental Mass Burst: Wind - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
@@ -379,16 +402,20 @@
 		desc_add2: none
 	-->
     <skill id="11109" levels="4" name="Elemental Mass Burst: Wind">
-		<set name="icon" value="icon.skill11865"/>
+		<table name="#abnormal_level">1 2 3 4</table>
+    	<table name="#abnormal_time">15 20 25 30</table>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
 		<table name="#magicLevel">99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="7000"/>
 		<set name="hitTime" value="6008"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="md_down"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill0049"/>
+		<set name="icon" value="icon.skill11865"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
@@ -397,12 +424,15 @@
 		<set name="skillRadius" value="350"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="elements" value="wind"/>
-		<set name="elementsPower" value="100"/>
 		<set name="reuse_skill_id" value="11106"/>
 		<cond msgId="113">
 			<target hasBuffId="11103"/>
 		</cond>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Elemental Mass Burst: Earth - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
@@ -432,16 +462,20 @@
 		desc_add2: none
 	-->
     <skill id="11110" levels="4" name="Elemental Mass Burst: Earth">
-		<set name="icon" value="icon.skill11865"/>
+		<table name="#abnormal_level">1 2 3 4</table>
+    	<table name="#abnormal_time">15 20 25 30</table>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
 		<table name="#magicLevel">99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="7000"/>
 		<set name="hitTime" value="6008"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="md_down"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill0049"/>
+		<set name="icon" value="icon.skill11865"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
@@ -450,12 +484,15 @@
 		<set name="skillRadius" value="350"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="elements" value="earth"/>
-		<set name="elementsPower" value="100"/>
 		<set name="reuse_skill_id" value="11106"/>
 		<cond msgId="113">
 			<target hasBuffId="11104"/>
 		</cond>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Elemental Mass Burst: 4 Attributes - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
@@ -485,16 +522,20 @@
 		desc_add2: none
 	-->
     <skill id="11111" levels="4" name="Elemental Mass Burst: 4 Attributes">
-		<set name="icon" value="icon.skill11865"/>
+		<table name="#abnormal_level">1 2 3 4</table>
+    	<table name="#abnormal_time">15 20 25 30</table>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">470 511 537 565</table>
 		<table name="#magicLevel">99</table>
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="reuseDelay" value="7000"/>
 		<set name="hitTime" value="6008"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_type" value="md_down"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill0049"/>
+		<set name="icon" value="icon.skill11865"/>
 		<set name="power" value="#power"/>
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
@@ -503,12 +544,15 @@
 		<set name="skillRadius" value="350"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="elements" value="fire;water;wind;earth"/>
-		<set name="elementsPower" value="100"/>
 		<set name="reuse_skill_id" value="11106"/>
 		<cond msgId="113">
 			<target hasBuffId="11105"/>
 		</cond>
+		<for>
+			<effect name="Debuff">
+				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Elemental Speed Burst - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
@@ -608,6 +652,7 @@
 		<set name="target" value="TARGET_ELEMENTAL_DES"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuse_skill_id" value="11112"/>
 	</skill>
     <!--
 		Elemental Speed Burst: Water - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
@@ -638,7 +683,6 @@
 	-->
     <skill id="11114" levels="4" name="Elemental Speed Burst: Water">
 		<set name="icon" value="icon.skill11865"/>
-		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">517 562 591 622</table>
 		<table name="#magicLevel">99</table>
@@ -656,6 +700,7 @@
 		<set name="target" value="TARGET_ELEMENTAL_DES"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuse_skill_id" value="11112"/>
 	</skill>
     <!--
 		Elemental Speed Burst: Wind - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
@@ -686,7 +731,6 @@
 	-->
     <skill id="11115" levels="4" name="Elemental Speed Burst: Wind">
 		<set name="icon" value="icon.skill11865"/>
-		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">517 562 591 622</table>
 		<table name="#magicLevel">99</table>
@@ -704,6 +748,7 @@
 		<set name="target" value="TARGET_ELEMENTAL_DES"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuse_skill_id" value="11112"/>
 	</skill>
     <!--
 		Elemental Speed Burst: Earth - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
@@ -734,7 +779,6 @@
 	-->
     <skill id="11116" levels="4" name="Elemental Speed Burst: Earth">
 		<set name="icon" value="icon.skill11865"/>
-		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">517 562 591 622</table>
 		<table name="#magicLevel">99</table>
@@ -752,6 +796,7 @@
 		<set name="target" value="TARGET_ELEMENTAL_DES"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuse_skill_id" value="11112"/>
 	</skill>
     <!--
 		Elemental Speed Burst: 4 Attributes - Detonates an Elemental Destruction to inflict damage with 517 Power on a single target.
@@ -782,7 +827,6 @@
 	-->
     <skill id="11117" levels="4" name="Elemental Speed Burst: 4 Attributes">
 		<set name="icon" value="icon.skill11865"/>
-		<set name="icon" value="icon.skill11865"/>
 		<table name="#mpConsume2">137 154 166 179</table>
 		<table name="#power">517 562 591 622</table>
 		<table name="#magicLevel">99</table>
@@ -800,6 +844,7 @@
 		<set name="target" value="TARGET_ELEMENTAL_DES"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuse_skill_id" value="11112"/>
 	</skill>
     <!--
 		Elemental Power Burst - Detonates an Elemental Destruction to inflict severe damage with 569 Power on a single target.
@@ -1720,16 +1765,12 @@
 		<set name="power" value="#power"/>
 		<set name="castRange" value="1100"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume" value="#mpConsume"/>
+		<set name="mpConsume" value="37"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="MDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="saveVs" value="MEN"/>
-		<set name="fire_skill_id" value="11178"/>
-		<set name="water_skill_id" value="11178"/>
-		<set name="wind_skill_id" value="11178"/>
-		<set name="earth_skill_id" value="11178"/>
 		<set name="multi_elemental_skill_id" value="11189"/>
 		<for>
 			<effect name="Debuff" displayId="11178" displayLevel="1">
