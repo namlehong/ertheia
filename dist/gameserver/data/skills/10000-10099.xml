@@ -296,11 +296,13 @@
 			<add order="0x10" stat="STR" value="2"/>
 			<add order="0x40" stat="mDef" value="#mDef"/>
 			<mul order="0x30" stat="concentration" value="0.75"/>
-			<triggers>
-				<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="50">
-					<player damage="50;0"/>
-				</trigger>
-			</triggers>
+			<effect>
+				<triggers>
+					<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="50">
+						<player damage="50;0"/>
+					</trigger>
+				</triggers>
+			</effect>
 		</for>
 	</skill>
     <!--
