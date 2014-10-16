@@ -3042,12 +3042,14 @@
 			<table name="#mDef">146 154 162 170 178 186 194 202 210 218</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<for>
-			<add order="0x10" stat="INT" value="2"/>
-			<add order="0x40" stat="mDef" value="#mDef"/>
-			<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="20">
+		<triggers>
+			<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="100">
 				<player damage="100;0"/>
 			</trigger>
+		</triggers>
+		<for>
+			<add order="0x10" stat="INT" value="2"/>
+			<add order="0x40" stat="mDef" value="#mDef"/>			
 		</for>
 	</skill>
     <!--
