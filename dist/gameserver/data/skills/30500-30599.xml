@@ -595,7 +595,6 @@
 		<set name="hitTime" value="100"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="1"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill30508"/>
 		<set name="castRange" value="300"/>
@@ -649,11 +648,30 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="30509" levels="4" name="Back Step">
+    <skill id="30509" levels="2" name="Back Step">
+    	<table name="#flyRadius">-200 -300</table>
+    	<table name="#magicLevel">85 90</table>
+    	<table name="#mpConsume2">27 30</table>
+		<set name="fly_animation_speed" value="333"/>
+		<set name="fly_radius" value="#flyRadius"/>
+		<set name="fly_to_back" value="true"/>
+		<set name="fly_type" value="DUMMY"/>
+		<set name="flyCourse" value="0"/>
 		<set name="icon" value="icon.skill30509"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+    	<set name="castRange" value="280"/>
+    	<set name="hitTime" value="100"/>
+    	<set name="magicLevel" value="#magicLevel"/>
+    	<set name="mpConsume2" value="#mpConsume2"/>
+    	<set name="reuseDelay" value="60"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="HealPercent" time="0" value="10"/>
+		</for>
 	</skill>
     <!--
 		Air Light - For 10 min., you're less bound by gravity and P. Atk. + 10%.
@@ -1300,7 +1318,7 @@
     <skill id="30530" levels="12" name="Crushing Air">
 		<table name="#mpConsume2">34 35 35 36 36 37 37 37 37 38 38 38</table>
 		<table name="#magicLevel">76 78 80 82 84 86 88 90 92 94 96 98</table>
-		<table name="#activateRate">40 40 43 46 49 60 62 64 66 68 70 75</table>	<!--TODO: Check.-->
+		<table name="#activateRate">40 40 43 46 49 60 62 64 66 68 70 75</table>
 		<set name="reuseDelay" value="30000"/>
 		<set name="coolTime" value="500"/>
 		<set name="castRange" value="400"/>
@@ -1312,7 +1330,6 @@
 		<set name="abnormal_effect" value="OBLATE"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="1"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
 		<set name="icon" value="icon.skill30530"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
