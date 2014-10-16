@@ -556,36 +556,34 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="1509" levels="1" name="Seal of Limit">
-		<!--
-			Last modify:	28.04.2010
-			Description: For 5 minutes, blocks the CP/HP/MP recovery of nearby enemies by 70%.
-		-->
-		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="2000"/>
-		<set name="hitTime" value="1500"/>
-		<set name="abnormal_time" value="300"/>
+    <skill id="1509" levels="6" name="Seal of Limit">
+    	<table name="#magicLevel">81 83 85 90 95 99</table>
+    	<table name="#mpConsume2">90 130 2525 278 306 332</table>
+    	<table name="#power">0.8 0.7 0.6 0.5 0.4 0.3</table>
 		<set name="abnormal_level" value="3"/>
+		<set name="abnormal_time" value="300"/>
 		<set name="abnormal_type" value="limit"/>
+		<set name="activateRate" value="60"/>
+		<set name="affectLimit" value="10;10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill1509"/>
+		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="81"/>
 		<set name="magicType" value="MAGIC"/>
-		<set name="levelModifier" value="1"/>
-		<set name="affectLimit" value="10;10"/>
-		<set name="icon" value="icon.skill1509"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume1" value="11"/>
-		<set name="mpConsume2" value="44"/>
-		<set name="activateRate" value="60"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="skillRadius" value="200"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="DEBUFF"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
 		<set name="saveVs" value="MEN"/>
+		<set name="skillRadius" value="200"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="hpLimit" value="0.3"/>
-				<mul order="0x30" stat="mpLimit" value="0.3"/>
-				<mul order="0x30" stat="cpLimit" value="0.3"/>
+				<mul order="0x30" stat="hpLimit" value="#power"/>
+				<mul order="0x30" stat="mpLimit" value="#power"/>
+				<mul order="0x30" stat="cpLimit" value="#power"/>
 			</effect>
 		</for>
 	</skill>

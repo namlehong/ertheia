@@ -1011,7 +1011,7 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="3000"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="target" value="TARGET_ALLY"/>
 		<enchant type="1" levels="10" group="7" name="Heal">
 			<table name="#heal">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
@@ -2395,6 +2395,7 @@
 		<set name="skillType" value="SLEEP"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="trait" value="SLEEP"/>
+		<set name="delayedEffect" value="11779"/> 
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">30 28 26 25 22 20 18 16 15 12</table>
 			<table name="#magicLevel">99</table>
@@ -2410,7 +2411,7 @@
 		<for>
 			<effect name="Sleep">
 				<triggers>
-					<trigger id="11779" level="#triggerLvl" type="ON_FINISH_EFFECT"/>
+					<trigger id="11779" level="#triggerLvl" type="ON_FINISH_EFFECT" chance="100"/>
 				</triggers>
 			</effect>
 		</for>
@@ -2454,13 +2455,13 @@
 		<set name="magicType" value="SPECIAL"/>
 		<set name="icon" value="icon.skill1394"/>
 		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="runSpd" value="#spd"/>
-				<mul order="0x30" stat="mAtkSpd" value="#spd"/>
-				<mul order="0x30" stat="pAtkSpd" value="#spd"/>
+				<mul order="0x70" stat="runSpd" value="#spd"/>
+				<mul order="0x70" stat="mAtkSpd" value="#spd"/>
+				<mul order="0x70" stat="pAtkSpd" value="#spd"/>
 			</effect>
 		</for>
 	</skill>
@@ -3037,17 +3038,19 @@
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="target" value="TARGET_ONE"/>
-		<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="20">
-			<player damage="100;0"/>
-		</trigger>
+		<set name="target" value="TARGET_ONE"/>		
 		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#mDef">146 154 162 170 178 186 194 202 210 218</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
+		<triggers>
+			<trigger id="10058" level="1" type="RECEIVE_DAMAGE" chance="20">
+				<player damage="100;0"/>
+			</trigger>
+		</triggers>
 		<for>
 			<add order="0x10" stat="INT" value="2"/>
-			<add order="0x40" stat="mDef" value="#mDef"/>
+			<add order="0x40" stat="mDef" value="#mDef"/>			
 		</for>
 	</skill>
     <!--
