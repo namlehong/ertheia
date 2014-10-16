@@ -39,20 +39,19 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 			return;
 		}
 		
-		if(cmd.equals("deposit_items"))
+		if(cmd.equals("deposititems"))
 		{
 			player.sendPacket(new PackageToListPacket(player));
 			return;
 		}
 		
-		if(cmd.equals("withdraw_items"))
+		if(cmd.equals("withdrawitems"))
 		{
 			WarehouseFunctions.showFreightWindow(player);
 			return;
 		}
 		
-		System.out.println("cmd " + cmd);
-		if(cmd.equals("learn_skill"))
+		if(cmd.equals("learnskill"))
 		{
 			System.out.println("Learn skill alchemy");
 			showAcquireList(AcquireType.ALCHEMY, player);
