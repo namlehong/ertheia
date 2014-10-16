@@ -1821,7 +1821,7 @@ public class NpcInstance extends Creature
 		final ExAcquirableSkillListByClass asl = new ExAcquirableSkillListByClass(t, skills.size());
 
 		for(SkillLearn s : skills)
-			asl.addSkill(s.getId(), s.getMinLevel(), s.getLevel(), s.getCost(), 0);
+			asl.addSkill(s.getId(), s.getLevel(), s.getLevel(), s.getMinLevel(), s.getCost(), 0);
 
 		if(skills.size() == 0)
 		{

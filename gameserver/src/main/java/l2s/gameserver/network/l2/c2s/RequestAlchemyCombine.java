@@ -98,7 +98,7 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 				
 				ItemInstance item = activeChar.getInventory().getItemByObjectId(material.getObjectID());
 				
-				if(!item.canBeSold(activeChar))
+				if(!item.canBeSold(activeChar) && item.getItemId() != 57)
 					continue;
 				
 				if(!activeChar.getInventory().destroyItemByObjectId(material.getObjectID(), itemCount))
@@ -107,14 +107,22 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 				
 				stoneAmount += getAirtoneAmount(item, itemCount);
 			}
-			
+			System.out.println("Stone amount " + stoneAmount);
 			//there is a chance 1/5000 to have tempest stone
 			//with the conversion rate 600 air stone to 1 tempest stone
-			if(stoneAmount > 600 && Rnd.chance(0.02))
+			if(stoneAmount > 600)
 			{
-				stoneAmount = (long)Math.floor(stoneAmount/600);
-				ItemFunctions.addItem(activeChar, TEMPEST_STONE, stoneAmount, true);
-				activeChar.sendPacket(new ExAlchemyCombinationResult(TEMPEST_STONE, stoneAmount));
+				if(Rnd.chance(0.02))
+				{
+					stoneAmount = (long)Math.floor(stoneAmount/600);
+					ItemFunctions.addItem(activeChar, TEMPEST_STONE, stoneAmount, true);
+					activeChar.sendPacket(new ExAlchemyCombinationResult(TEMPEST_STONE, stoneAmount));
+				}
+				else
+				{
+					ItemFunctions.addItem(activeChar, AIR_STONE, stoneAmount, true);
+					activeChar.sendPacket(new ExAlchemyCombinationResult(AIR_STONE, stoneAmount));
+				}
 			}
 			else
 			{
