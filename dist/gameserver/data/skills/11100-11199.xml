@@ -2256,16 +2256,20 @@
 	-->
     <skill id="11188" levels="5" name="Frozen">
     	<table name="#abnormal_level">1 2 3 4 5</table>
-    	<table name="#abnormal_time">10 10 10 10 3</table>
+    	<table name="#abnormal_time">10 10 10 10 0</table>
+    	<table name="#abnormal_time2">0 0 0 0 3</table>
     	<table name="#abnormal_effect">STUN STUN STUN STUN STUN</table>
 		<set name="icon" value="icon.skill11017"/>
-		<set name="abnormal_effect" value="#abnormal_effect"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="aqua_crash_freeze"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff" time="#abnormal_time"/>
+			<effect name="Stune" time="#abnormal_time2"/>
+		</for>
 	</skill>
     <!--
 		Aqua Crash - Inflicts damage with 193 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for 2 seconds. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for 3 s
