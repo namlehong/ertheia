@@ -50,7 +50,8 @@ public class ExOlympiadSpelledInfoPacket extends L2GameServerPacket
 		{
 			writeD(temp.skillId);
 			writeH(temp.level);
-			writeD(temp.duration);
+			writeD(0x00); // UNK Ertheia
+			writeH(temp.duration);
 		}
 	}
 }

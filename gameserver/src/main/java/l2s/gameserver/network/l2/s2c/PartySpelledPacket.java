@@ -41,7 +41,8 @@ public class PartySpelledPacket extends L2GameServerPacket
 		{
 			writeD(temp._skillId);
 			writeH(temp._level);
-			writeD(temp._duration);
+			writeD(0x00); // UNK Ertheia
+			writeH(temp._duration);
 		}
 	}
 
