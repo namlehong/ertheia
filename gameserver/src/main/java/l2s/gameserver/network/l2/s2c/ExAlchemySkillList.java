@@ -26,7 +26,10 @@ public class ExAlchemySkillList extends L2GameServerPacket
 			writeC(0);
 			writeC(0);
 			writeC(0);
-			writeC(1);
+			if(skill.getId() == 17943)
+				writeC(0);
+			else
+				writeC(1);
 		}
 	}
 }

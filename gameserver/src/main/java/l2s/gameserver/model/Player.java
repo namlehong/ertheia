@@ -11941,7 +11941,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	public void checkAlchemySkills()
 	{
-		for(Skill skill : getAllSkills())
+		for(Skill skill : getAllSkillsArray())
 		{
 			if(skill.getSkillType() == SkillType.ALCHEMY)
 				_alchemySkills.put(skill.getId(), skill);
