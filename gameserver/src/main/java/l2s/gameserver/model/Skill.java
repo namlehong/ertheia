@@ -275,7 +275,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		UNLOCK(Unlock.class),
 		WATCHER_GAZE(Continuous.class),
 		VITALITY_HEAL(VitalityHeal.class),
-		ALCHEMY(Default.class);
+		TRANSMUTE,
+		COMBINE;
 
 		private final Class<? extends Skill> clazz;
 

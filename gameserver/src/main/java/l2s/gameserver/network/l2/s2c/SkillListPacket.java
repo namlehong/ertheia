@@ -38,7 +38,7 @@ public class SkillListPacket extends L2GameServerPacket
 		writeD(_skills.size());
 		for(Skill temp : _skills)
 		{
-			if(temp.getSkillType() == SkillType.ALCHEMY)
+			if(temp.getSkillType() == SkillType.COMBINE || temp.getSkillType() == SkillType.TRANSMUTE)
 				continue;
 			
 			writeD(temp.isActive() || temp.isToggle() ? 0 : 1); // deprecated? клиентом игнорируется

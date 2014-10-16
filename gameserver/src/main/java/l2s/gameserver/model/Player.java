@@ -11943,7 +11943,13 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		for(Skill skill : getAllSkillsArray())
 		{
-			if(skill.getSkillType() == SkillType.ALCHEMY)
+			if(skill.getSkillType() == SkillType.COMBINE)
+				_alchemySkills.put(skill.getId(), skill);
+		}
+		//make sure combining skills are put in the array before transmuting skills
+		for(Skill skill : getAllSkillsArray())
+		{
+			if(skill.getSkillType() == SkillType.TRANSMUTE)
 				_alchemySkills.put(skill.getId(), skill);
 		}
 	}

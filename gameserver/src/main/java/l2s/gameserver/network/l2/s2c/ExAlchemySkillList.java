@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.Skill;
+import l2s.gameserver.model.Skill.SkillType;
 
 public class ExAlchemySkillList extends L2GameServerPacket
 {
@@ -26,7 +27,7 @@ public class ExAlchemySkillList extends L2GameServerPacket
 			writeC(0);
 			writeC(0);
 			writeC(0);
-			if(skill.getId() == 17943)
+			if(skill.getSkillType() == SkillType.COMBINE)
 				writeC(0);
 			else
 				writeC(1);
