@@ -3,6 +3,8 @@ package l2s.gameserver.network.l2.s2c;
 import java.util.ArrayList;
 import java.util.List;
 
+import l2s.gameserver.network.l2.ServerPacketOpcodes;
+
 /**
  * Reworked: Hien Son
  */
@@ -43,6 +45,14 @@ public class ExAcquirableSkillListAlchemy extends L2GameServerPacket
 	public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements)
 	{
 		_skills.add(new Skill(id, nextLevel, maxLevel, Cost, requirements, 0));
+	}
+
+	@Override
+	protected boolean writeOpcodes()
+	{
+		writeC(0xFE);
+		writeH(0xFA);
+		return true;
 	}
 
 	@Override
