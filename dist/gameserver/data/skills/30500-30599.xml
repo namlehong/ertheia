@@ -317,28 +317,27 @@
 		desc_add2: none
 	-->
     <skill id="30504" levels="13" name="Gravity Hit">
+		<table name="#magicLevel">76 78 80 82 84 85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">75 77 78 79 80 81 82 82 83 83 84 84 85</table>
 		<table name="#power">10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 86081</table>
-		<table name="#magicLevel">76 78 80 82 84 85 87 89 91 93 95 97 99</table>
-		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="9000"/>
 		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="2500"/>
-		<set name="levelModifier" value="2"/>
-		<set name="icon" value="icon.skill30504"/>
-		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill30504"/>
+		<set name="ignorePDef" value="50"/>
+		<set name="levelModifier" value="2"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="9000"/>
+		<set name="ride_state" value="NONE"/>
 		<set name="saveVs" value="CON"/>
-		<set name="shield_ignore_procent" value="50"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dual Fist"/>
 		</cond>
-		<!--TODO: Поднимает в воздух.-->
 	</skill>
     <!--
 		Pressure Punch - Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon.
