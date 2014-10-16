@@ -3413,7 +3413,7 @@
 		<set name="skillType" value="MDAM"/>
 		<set name="target" value="TARGET_ONE"/>
 		<for>
-			<effect name="Debuff">
+			<effect name="Debuff" displayId="11366">
 				<sub order="0x40" stat="runSpd" value="180"/>
 				<mul order="0x30" stat="pAtkSpd" value="0.7"/>
 				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
@@ -3444,10 +3444,23 @@
 		desc_add2: none
 	-->
     <skill id="11366" levels="3" name="Spectral Curse">
+    	<table name="#abnormal_level">1 2 3</table>
+    	<table name="#magicLevel">97 98 99</table>
 		<set name="icon" value="icon.skill0028"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_type" value="spectral_curse"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<for>
+			<effect name="Debuff">
+				<sub order="0x40" stat="runSpd" value="180"/>
+				<mul order="0x30" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x30" stat="mAtkSpd" value="0.7"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Arcane Protection - For 30 sec., Received P./M. Critical Rate - 7%, Pull Resistance and Knock Back / Knock Down Resistance - 10. Debuff Resistance + 10%, HP/MP Recovery Bonus + 10%.
