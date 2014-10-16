@@ -56,5 +56,7 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 			showAcquireList(AcquireType.ALCHEMY, player);
 			return;
 		}
+		
+		super.onBypassFeedback(player, command);
 	}
 }
