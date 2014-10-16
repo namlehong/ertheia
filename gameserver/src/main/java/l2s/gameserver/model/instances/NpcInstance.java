@@ -1819,14 +1819,12 @@ public class NpcInstance extends Creature
 		final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, t);
 
 		final ExAcquirableSkillListByClass asl = new ExAcquirableSkillListByClass(t, skills.size());
-		System.out.println("showAcquireList skills " + skills.size());
-		System.out.println("showAcquireList bf asl " + asl.toString());
+
 		for(SkillLearn s : skills)
 			asl.addSkill(s.getId(), s.getLevel(), s.getLevel(), s.getCost(), 0);
-		System.out.println("showAcquireList af asl " + asl.toString());
+
 		if(skills.size() == 0)
 		{
-			System.out.println("Skill size " + skills.size());
 			player.sendPacket(AcquireSkillDonePacket.STATIC);
 			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
 		}

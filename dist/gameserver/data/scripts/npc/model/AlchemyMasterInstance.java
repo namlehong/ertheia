@@ -53,7 +53,6 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 		
 		if(cmd.equals("learnskill"))
 		{
-			System.out.println("Learn skill alchemy");
 			showAcquireList(AcquireType.ALCHEMY, player);
 			return;
 		}
