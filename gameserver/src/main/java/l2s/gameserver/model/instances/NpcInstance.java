@@ -1833,6 +1833,27 @@ public class NpcInstance extends Creature
 
 		player.sendActionFailed();
 	}
+	
+
+	public static void showAlchemyAcquireList(Player player)
+	{
+		final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableMaxLvlSkills(player, AcquireType.ALCHEMY);
+
+		final ExAcquirableSkillListByClass asl = new ExAcquirableSkillListByClass(AcquireType.ALCHEMY, skills.size());
+
+		for(SkillLearn s : skills)
+			asl.addSkill(s.getId(), s.getLevel(), s.getLevel(), s.getMinLevel(), s.getCost(), 0);
+
+		if(skills.size() == 0)
+		{
+			player.sendPacket(AcquireSkillDonePacket.STATIC);
+			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+		}
+		else
+			player.sendPacket(asl);
+
+		player.sendActionFailed();
+	}
 
 	public static void showSubUnitSkillList(Player player)
 	{

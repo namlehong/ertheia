@@ -135,7 +135,8 @@ public class RequestAquireSkill extends L2GameClientPacket
 				if(trainer != null)
 				{
 					learnSimpleNextLevel(player, skillLearn, skill);
-					NpcInstance.showAcquireList(AcquireType.ALCHEMY, player);
+					NpcInstance.showAlchemyAcquireList(player);
+					player.checkAlchemySkills();
 				}
 				break;
 		default:

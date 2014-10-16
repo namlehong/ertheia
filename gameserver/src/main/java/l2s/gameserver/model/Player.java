@@ -716,7 +716,7 @@ public final class Player extends Playable implements PlayerGroup
 
 	private final TIntObjectMap<Skill> _transformSkills = new TIntObjectHashMap<Skill>();
 
-	private final List<Skill> _alchemySkills = new ArrayList<Skill>();
+	private List<Skill> _alchemySkills;
 	
 	private long _lastMultisellBuyTime = 0L;
 	private long _lastEnchantItemTime = 0L;
@@ -11941,6 +11941,8 @@ public final class Player extends Playable implements PlayerGroup
 
 	public void checkAlchemySkills()
 	{
+		_alchemySkills = new ArrayList<Skill>();
+		
 		for(Skill skill : getAllSkillsArray())
 		{
 			if(skill.getSkillType() == SkillType.COMBINE)

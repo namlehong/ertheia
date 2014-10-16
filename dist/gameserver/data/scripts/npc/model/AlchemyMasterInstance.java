@@ -53,7 +53,7 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 		
 		if(cmd.equals("learnskill"))
 		{
-			showAcquireList(AcquireType.ALCHEMY, player);
+			showAlchemyAcquireList(player);
 			return;
 		}
 		
