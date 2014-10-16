@@ -3,11 +3,15 @@ package npc.model;
 import java.util.StringTokenizer;
 
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.base.AcquireType;
+import l2s.gameserver.network.l2.s2c.PackageToListPacket;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
 import l2s.gameserver.templates.npc.NpcTemplate;
+import l2s.gameserver.utils.WarehouseFunctions;
 
 /**
- * @author Bonux
+ * @Initiator Bonux
+ * @Completor Hien Son - 16/10/2014
  */
 public class AlchemyMasterInstance extends FreightSenderInstance
 {
@@ -32,8 +36,25 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 		{
 			player.sendPacket(new TutorialShowHtmlPacket(TutorialShowHtmlPacket.LARGE_WINDOW, TUTORIAL_PATH));
 			showChatWindow(player, 1);
+			return;
 		}
-		else
-			super.onBypassFeedback(player, command);
+		
+		if(cmd.equals("deposit_items"))
+		{
+			player.sendPacket(new PackageToListPacket(player));
+			return;
+		}
+		
+		if(cmd.equals("withdraw_items"))
+		{
+			WarehouseFunctions.showFreightWindow(player);
+			return;
+		}
+		
+		if(cmd.equals("learn_skill"))
+		{
+			showAcquireList(AcquireType.ALCHEMY, player);
+			return;
+		}
 	}
 }
