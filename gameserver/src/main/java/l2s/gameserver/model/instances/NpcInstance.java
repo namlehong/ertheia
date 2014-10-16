@@ -72,6 +72,7 @@ import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.AcquireSkillDonePacket;
 import l2s.gameserver.network.l2.s2c.AutoAttackStartPacket;
+import l2s.gameserver.network.l2.s2c.ExAcquirableSkillListAlchemy;
 import l2s.gameserver.network.l2.s2c.ExAcquirableSkillListByClass;
 import l2s.gameserver.network.l2.s2c.ExChangeNPCState;
 import l2s.gameserver.network.l2.s2c.ExShowBaseAttributeCancelWindow;
@@ -100,6 +101,7 @@ import l2s.gameserver.utils.HtmlUtils;
 import l2s.gameserver.utils.ItemFunctions;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.ReflectionUtils;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -1819,6 +1821,26 @@ public class NpcInstance extends Creature
 		final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, t);
 
 		final ExAcquirableSkillListByClass asl = new ExAcquirableSkillListByClass(t, skills.size());
+
+		for(SkillLearn s : skills)
+			asl.addSkill(s.getId(), s.getLevel(), s.getLevel(), s.getCost(), 0);
+
+		if(skills.size() == 0)
+		{
+			player.sendPacket(AcquireSkillDonePacket.STATIC);
+			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+		}
+		else
+			player.sendPacket(asl);
+
+		player.sendActionFailed();
+	}
+	
+	public static void showAlchemyAcquireList(Player player)
+	{
+		final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.ALCHEMY);
+
+		final ExAcquirableSkillListAlchemy asl = new ExAcquirableSkillListAlchemy(skills.size());
 
 		for(SkillLearn s : skills)
 			asl.addSkill(s.getId(), s.getLevel(), s.getLevel(), s.getCost(), 0);

@@ -37,7 +37,6 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 	{
 		_skills = new ArrayList<Skill>(size);
 		_type = type;
-		System.out.println("AcquireType ordinal " + _type.ordinal());
 	}
 
 	public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements, int subUnit)

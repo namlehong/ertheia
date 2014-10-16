@@ -3,7 +3,6 @@ package npc.model;
 import java.util.StringTokenizer;
 
 import l2s.gameserver.model.Player;
-import l2s.gameserver.model.base.AcquireType;
 import l2s.gameserver.network.l2.s2c.PackageToListPacket;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
 import l2s.gameserver.templates.npc.NpcTemplate;
@@ -53,7 +52,7 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 		
 		if(cmd.equals("learnskill"))
 		{
-			showAcquireList(AcquireType.ALCHEMY, player);
+			showAlchemyAcquireList(player);
 			return;
 		}
 		
