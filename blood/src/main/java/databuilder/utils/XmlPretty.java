@@ -71,7 +71,7 @@ public class XmlPretty {
 	
 	public static void writeToFile(String filePath, String content){
 		String fileFullPath = MainBuilder._datapack_path + filePath;
-//		content = content.replaceAll("\n*\t* *<!-", "\t<!-");
+		content = content.replaceAll("/>\n*\t* *<!-", "/>\t<!-");
 //		System.out.println(content);
 		try {
 			File file = new File(fileFullPath);

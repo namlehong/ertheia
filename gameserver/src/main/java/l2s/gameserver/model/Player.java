@@ -5233,7 +5233,7 @@ public final class Player extends Playable implements PlayerGroup
 
 				player.getSubClassList().restore();
 
-				player.setActiveSubClass(player.getActiveClassId(), false, true);
+				player.setActiveSubClass(player.getActiveClassId(), false, true, -1);
 
 				player.getMenteeList().restore();
 
@@ -7745,6 +7745,118 @@ public final class Player extends Playable implements PlayerGroup
 
 		final SubClass newClass = new SubClass(this);
 		newClass.setType(type);
+        int parentClass = -1;
+        if ( newId.isOfLevel(ClassLevel.AWAKED))
+        {
+            switch (classId)
+            {
+                case 148:
+                    parentClass = 90;
+                    break;
+                case 149:
+                    parentClass = 91;
+                    break;
+                case 150:
+                    parentClass = 90;
+                    break;
+                case 151:
+                    parentClass = 106;
+                    break;
+                case 152:
+                    parentClass = 88;
+                    break;
+                case 153:
+                    parentClass = 89;
+                    break;
+                case 154:
+                    parentClass = 113;
+                    break;
+                case 155:
+                    parentClass = 114;
+                    break;
+                case 156:
+                    parentClass = 118;
+                    break;
+                case 157:
+                    parentClass = 131;
+                    break;
+                case 158:
+                    parentClass = 93;
+                    break;
+                case 159:
+                    parentClass = 101;
+                    break;
+                case 160:
+                    parentClass = 108;
+                    break;
+                case 161:
+                    parentClass = 117;
+                    break;
+                case 162:
+                    parentClass = 92;
+                    break;
+                case 163:
+                    parentClass = 102;
+                    break;
+                case 164:
+                    parentClass = 109;
+                    break;
+                case 165:
+                    parentClass = 134;
+                    break;
+                case 166:
+                    parentClass = 94;
+                    break;
+                case 167:
+                    parentClass = 95;
+                    break;
+                case 168:
+                    parentClass = 103;
+                    break;
+                case 169:
+                    parentClass = 110;
+                    break;
+                case 170:
+                    if(this.getSex() == Sex.MALE)
+                        parentClass = 132;
+                    else
+                        parentClass = 133;
+                    break;
+                case 171:
+                    parentClass = 98;
+                    break;
+                case 172:
+                    parentClass = 100;
+                    break;
+                case 173:
+                    parentClass = 107;
+                    break;
+                case 174:
+                    parentClass = 115;
+                    break;
+                case 175:
+                    parentClass = 116;
+                    break;
+                case 176:
+                    parentClass = 96;
+                    break;
+                case 177:
+                    parentClass = 104;
+                    break;
+                case 178:
+                    parentClass = 111;
+                    break;
+                case 179:
+                    parentClass = 97;
+                    break;
+                case 180:
+                    parentClass = 105;
+                    break;
+                case 181:
+                    parentClass = 106;
+                    break;
+            }
+        }
 		newClass.setClassId(classId);
 		if(exp > 0L)
 			newClass.setExp(exp, true);
@@ -7762,7 +7874,7 @@ public final class Player extends Playable implements PlayerGroup
 		if(!CharacterSubclassDAO.getInstance().insert(getObjectId(), classId, classId, newClass.getExp(), newClass.getSp(), hp, mp, cp, hp, mp, cp, level, false, type, certification, dualCertification, MAX_VITALITY_POINTS, 0, 0))
 			return false;
 
-		setActiveSubClass(classId, storeOld, false);
+		setActiveSubClass(classId, storeOld, false, parentClass);
 
 		rewardSkills(true, false, true, false);
 
@@ -7852,11 +7964,11 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, statement);
 		}
 		getSubClassList().removeByClassId(oldClassId);
-
+        // --here
 		return newClassId <= 0 || addSubClass(newClassId, false, certification, dualCertification, type, exp, sp);
 	}
 
-	public void setActiveSubClass(final int subId, final boolean store, final boolean onRestore)
+	public void setActiveSubClass(final int subId, final boolean store, final boolean onRestore, int parentClass)
 	{
 		if(!onRestore)
 		{
@@ -7886,7 +7998,10 @@ public final class Player extends Playable implements PlayerGroup
 		}
 
 		SubClass newActiveSub = _subClassList.changeActiveSubClass(subId);
-
+        if(parentClass != -1)
+        {
+            setClassId(parentClass, false);
+        }
 		setClassId(subId, false);
 
 		removeAllSkills();
@@ -10736,7 +10851,7 @@ public final class Player extends Playable implements PlayerGroup
 		//TODO: Добавить отмену всех положительных (и наверное отрицательных) эффектов.
 		int classId = sub.getClassId();
 		int oldClassId = getActiveClassId();
-		setActiveSubClass(classId, true, false);
+		setActiveSubClass(classId, true, false, -1);
 		Skill skill = SkillTable.getInstance().getInfo(Skill.SKILL_CONFUSION, 1);
 		skill.getEffects(this, this, false, false);
 		// KIET: test apply mentoring condition on change class

@@ -169,7 +169,7 @@ public final class AwakeningManagerInstance extends NpcInstance
 					if(skill == null)
 						continue;
 
-					skillList.append("<table><tr><td width=40 height=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=200>" + skill.getName(player) + "</td></tr></table>");
+					skillList.append("<table><tr><td width=40 height=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=200>" + skill.getName() + "</td></tr></table>");
 				}
 				showChatWindow(player, "default/awakening_skill_training.htm", "<?SKILL_LIST?>", skillList.toString());
 				return;

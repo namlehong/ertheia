@@ -53,11 +53,18 @@
 	-->
     <skill id="10300" levels="3" name="Last Attack">
 		<table name="#magicLevel">90 95 99</table>
-		<table name="#power">24004 27526 30343</table>
-		<table name="#targetHp">20</table>
+		<table name="#mpConsume">276 297 315</table>
+		<table name="#power">52746 59601 65085</table>
+		<table name="#targetHp">10</table>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1690"/>
+		<set name="icon" value="icon.skill10300"/>
 		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113" addName="1">
@@ -67,6 +74,16 @@
 			</and>
 			<using kind="Sword, Big Sword, Blunt, Big Blunt, Pole, Dual Fist, Dual Blunt, Dual Sword"/>
 		</cond>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#mpConsume">310 306 301 297 292 288 283 279 275 270</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="2" levels="10" group="7" name="Decrease Penalty">
+			<table name="#power">66456 67827 69198 70569 71940 73311 74682 76053 77424 78795</table>
+			<table name="#targetHp">11 12 13 14 15 16 17 18 19 20</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
 		<for>
 			<effect name="HpToOne"/>
 		</for>
@@ -128,14 +145,14 @@
 		desc_add2: none
 	-->
     <skill id="10302" levels="4" name="Triple Sonic Slash">
+		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">98 105 112 119</table>
 		<table name="#power">22531 26017 29503 33377</table>
-		<table name="#magicLevel">85 90 95 99</table>
 		<set name="castRange" value="40"/>
 		<set name="cond_charges" value="3"/>
 		<set name="criticalRate" value="10"/>
 		<set name="hitCancelTime" value="500"/>
-		<set name="hitTime" value="1667"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10302"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
@@ -149,7 +166,7 @@
 		<set name="target" value="TARGET_ONE"/>
 		<set name="useSS" value="false"/>
 		<cond msgId="113">
-			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Ancient Sword, Dual Blunt"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Dual Blunt"/>
 		</cond>
 	</skill>
     <!--
@@ -222,6 +239,7 @@
     <skill id="10304" levels="4" name="Superior Dual Sword Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
+		<table name="#pAtk">709 825 982 1190</table>
 		<set name="icon" value="icon.skill11835"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -231,6 +249,9 @@
 			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Dual Sword, Dual Blunt"/>
 			</mul>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Dual Sword, Dual Blunt"/>
+			</add>
 		</for>
 	</skill>
     <!--
@@ -284,6 +305,9 @@
 		<set name="skillRadius" value="900"/>
 		<set name="skillType" value="AGGRESSION"/>
 		<set name="target" value="TARGET_AURA"/>
+		<cond msgId="113">
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Dual Blunt, Pole"/>
+		</cond>
 		<for>
 			<effect name="Aggression">
 				<mul order="0x30" stat="poleWpnVuln" value="#vuln"/>
@@ -319,17 +343,22 @@
 	-->
     <skill id="10306" levels="4" name="Superior Polearm Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#pAtk">1.02 1.03 1.04 1.05</table>
+		<table name="#pAtk">583 678 807 978</table>
+		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
+		<table name="#poleTargetCount">1 1 2 2</table>
 		<set name="icon" value="icon.skill11836"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
-			<mul order="0x30" stat="pAtk" value="#pAtk">
+			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Pole"/>
 			</mul>
-			<add order="0x40" stat="poleTargetCount" value="1">
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Pole"/>
+			</add>
+			<add order="0x40" stat="poleTargetCount" value="#poleTargetCount">
 				<using kind="Pole"/>
 			</add>
 		</for>
@@ -365,7 +394,7 @@
 		<set name="skillType" value="CONT"/>
 		<set name="target" value="TARGET_SELF"/>
 		<cond msgId="113">
-			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt, Dual Blunt, Dual Fist"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Blunt, Dual Fist"/>
 		</cond>
 		<for>
 			<effect count="-1" name="DamOverTime" time="3" value="150">
@@ -398,18 +427,18 @@
 	-->
     <skill id="10308" levels="1" name="Wild Roar">
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_time" value="300"/>
 		<set name="abnormal_type" value="possession"/>
 		<set name="hitTime" value="2000"/>
 		<set name="icon" value="icon.skill11834"/>
 		<set name="magicLevel" value="85"/>
 		<set name="mpConsume2" value="38"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="reuseDelay" value="3600000"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<cond msgId="113">
-			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Ancient Sword, Dual Fist"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist"/>
 		</cond>
 		<for>
 			<effect>
@@ -450,6 +479,7 @@
     <skill id="10309" levels="4" name="Superior Fist Weapon Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
+		<table name="#pAtk">709 825 982 1190</table>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill11837"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -459,6 +489,9 @@
 			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Dual Fist"/>
 			</mul>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Dual Fist"/>
+			</add>
 		</for>
 	</skill>
     <!--
@@ -499,7 +532,7 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<cond msgId="113">
-			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt, Dual Blunt, Dual Fist"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Blunt, Dual Fist, Pole"/>
 		</cond>
 		<for>
 			<effect>
@@ -510,7 +543,7 @@
     <!--
 		Superior Two-handed Weapon Mastery - When a two-handed sword or two handed blunt is equipped, P. Atk. + 2 % and additional + 709.
 
-		LvL.1	description: + 2 % and additional + 709.
+		LvL.1	description: + 2% and additional + 709.
 		LvL.2	description: + 3% and additional + 825.
 		LvL.3	description: + 4% and additional + 982.
 		LvL.4	description: + 5% and additional + 1190.
@@ -537,8 +570,9 @@
     <skill id="10311" levels="4" name="Superior Two-handed Weapon Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#pAtkMul">1.02 1.03 1.04 1.05</table>
-		<set name="magicLevel" value="#magicLevel"/>
+		<table name="#pAtk">709 825 982 1190</table>
 		<set name="icon" value="icon.skill11838"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -546,6 +580,9 @@
 			<mul order="0x30" stat="pAtk" value="#pAtkMul">
 				<using kind="Big Blunt, Big Sword"/>
 			</mul>
+			<add order="0x40" stat="pAtk" value="#pAtk">
+				<using kind="Big Blunt, Big Sword"/>
+			</add>
 		</for>
 	</skill>
     <!--
@@ -621,7 +658,6 @@
 		<set name="coolTime" value="500"/>
 		<set name="fly_type" value="CHARGE"/>
 		<set name="hitTime" value="500"/>
-		<set name="icon" value="icon.skill0217"/>
 		<set name="icon" value="icon.skill10313"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
@@ -635,7 +671,7 @@
 		<set name="trait" value="SHOCK"/>
 		<cond msgId="113">
 			<target min_distance="200"/>
-			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt, Dual Blunt, Dual Fist"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Blunt, Dual Fist, Pole"/>
 		</cond>
 		<for>
 			<effect name="Stun"/>
@@ -665,19 +701,18 @@
 		desc_add2: none
 	-->
     <skill id="10314" levels="4" name="Disarmament">
+		<table name="#abnormal_time">5</table>
 		<table name="#activateRate">50 60 65 70</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#abnormal_time">5</table>
 		<set name="abnormal_effect" value="DOT_BLEEDING"/>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="disarm"/>
 		<set name="activateRate" value="#activateRate"/>
-		<set name="coolTime" value="500"/>
 		<set name="castRange" value="40"/>
+		<set name="coolTime" value="500"/>
 		<set name="hitCancelTime" value="500"/>
 		<set name="hitTime" value="1000"/>
-		<set name="icon" value="icon.skill0485"/>
 		<set name="icon" value="icon.skill0485"/>
 		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -690,7 +725,7 @@
 		<set name="target" value="TARGET_ONE"/>
 		<set name="trait" value="DISARM"/>
 		<cond msgId="113">
-			<using kind="Dual Sword,Sword,Big Sword,Blunt,Big Blunt, Dual Blunt, Dual Fist"/>
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Blunt, Dual Fist, Pole"/>
 		</cond>
 		<for>
 			<effect name="Disarm">
@@ -702,7 +737,7 @@
     <!--
 		Superior Polearm Mastery - When a spear is equipped, P. Atk. + 2 % and additional P. Atk. + 583.
 
-		LvL.1	description: + 2 % and additional P Atk. + 583.
+		LvL.1	description: + 2% and additional P Atk. + 583.
 		LvL.2	description: + 3% and additional P Atk. + 678.
 	
 		name: Superior Polearm Mastery
@@ -727,6 +762,7 @@
     <skill id="10315" levels="2" name="Superior Polearm Mastery">
 		<table name="#magicLevel">85 90</table>
 		<table name="#pAtkMul">1.02 1.03</table>
+		<table name="#pAtk">583 678</table>
 		<set name="icon" value="icon.skill11836"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
@@ -736,7 +772,7 @@
 			<mul order="0x40" stat="pAtk" value="#pAtkMul">
 				<using kind="Pole"/>
 			</mul>
-			<add order="0x40" stat="poleTargetCount" value="1">
+			<add order="0x40" stat="pAtk" value="#pAtk">
 				<using kind="Pole"/>
 			</add>
 		</for>
@@ -769,13 +805,17 @@
 		desc_add2: none
 	-->
     <skill id="10316" levels="1" name="Bloodthirst">
+    	<table name="#pvpBonus">1.05 1.06 1.06 1.07</table>
 		<set name="icon" value="icon.skill0193"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="target" value="TARGET_NONE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="magicLevel" value="85"/>
 		<for>
 			<effect>
-				<!-- add pvp bonus -->
+				<mul order="0x30" stat="pvpPhysDmgBonus" value="#pvpBonus"/>
+				<mul order="0x30" stat="pvpPhysSkillDmgBonus" value="#pvpBonus"/>
+				<mul order="0x30" stat="pvpMagicSkillDmgBonus" value="#pvpBonus"/>
 			</effect>
 		</for>
 	</skill>
@@ -809,14 +849,13 @@
     <skill id="10317" levels="4" name="Thunder Slasher">
 		<table name="#activateRate">32 34 38 40</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#mpConsume2">98 105 112 119</table>
+		<table name="#mpConsume2">122 124 129 133</table>
 		<table name="#power">26003 30494 35883 37680</table>
 		<set name="abnormal_effect" value="STUN"/>
 		<set name="abnormal_level" value="4"/>
 		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_type" value="stun"/>
 		<set name="activateRate" value="#activateRate"/>
-		<set name="castRange" value="600"/>
 		<set name="cond_charges" value="3"/>
 		<set name="criticalRate" value="10"/>
 		<set name="hitCancelTime" value="500"/>
@@ -830,6 +869,7 @@
 		<set name="power" value="#power"/>
 		<set name="reuseDelay" value="15000"/>
 		<set name="ride_state" value="NONE"/>
+		<set name="shieldignore" value="true"/>
 		<set name="skillRadius" value="300"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="2.0"/>
@@ -893,7 +933,7 @@
 		<set name="target" value="TARGET_ONE"/>
 		<set name="useSS" value="false"/>
 		<cond msgId="113">
-			<using kind="Sword, Blunt, Dual Sword"/>
+			<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword"/>
 		</cond>
 	</skill>
     <!--
@@ -920,10 +960,23 @@
 		desc_add2: none
 	-->
     <skill id="10319" levels="1" name="Duelist's Fury">
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="hitTime" value="300"/>
 		<set name="icon" value="icon.skll10319"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pAtk" value="1.3"/>
+				<add order="0x40" stat="runSpd" value="66"/>
+				<mul order="0x30" stat="debuffResist" value="1.3"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Faceoff - Engages target in 1:1 combat. Ignores all normal attacks, skills, and debuffs, except those of the opponent. Increases your P. Atk., Spd., and debuff resistance.
@@ -982,10 +1035,42 @@
 		desc_add2: none
 	-->
     <skill id="10321" levels="4" name="Thunder Spear">
+    	<table name="#activateRate">32 34 38 40</table>
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">122 124 129 133</table>
+		<table name="#power">22536 26428 29542 32656</table>
+		<set name="abnormal_effect" value="STUN"/>
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_time" value="9"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="900"/>
+		<set name="cond_charges" value="3"/>
+		<set name="criticalRate" value="10"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2500"/>
 		<set name="icon" value="icon.skll10321"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="shieldignore" value="true"/>
+		<set name="skillRadius" value="300"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="SHOCK"/>
+		<cond msgId="113">
+			<using kind="Pole"/>
+		</cond>
+		<for>
+			<effect name="Stun"/>
+			<effect name="RemoveTarget" time="0" chance="100"/>
+		</for>
 	</skill>
     <!--
 		Wolf's Cry - Shouts loudly to invoke the power of the Wolf. For 5 minutes, P. Def. and M. Def. + 50%, Max HP + 25%, and Spd. + 20. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword.
@@ -1011,10 +1096,27 @@
 		desc_add2: none
 	-->
     <skill id="10322" levels="1" name="Wolf's Cry">
+		<set name="abnormal_time" value="300"/>
+		<set name="abnormal_type" value="possession"/>
+		<set name="hitTime" value="2000"/>
 		<set name="icon" value="icon.skll10320"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="abnormal_level" value="1"/>
+		<cond msgId="113">
+			<using kind="Dual Sword, Sword, Big Sword, Blunt, Big Blunt, Dual Fist, Dual Blunt, Pole"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x30" stat="pDef" value="1.5"/>
+				<mul order="0x30" stat="mDef" value="1.5"/>
+				<mul order="0x30" stat="maxHp" value="1.25"/>
+				<add order="0x40" stat="runSpd" value="20"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Self Heal (Warrior) - Recovers 10% of Max HP.
@@ -1041,9 +1143,15 @@
 	-->
     <skill id="10323" levels="1" name="Self Heal (Warrior)">
 		<set name="icon" value="icon.skill0000"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="1"/>
+		<set name="mpConsume2" value="1"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<for>
+			<effect name="HealPercent" time="0" value="10"/>
+		</for>
 	</skill>
     <!--
 		Momentum Master - Power of skills that consume Momentum increase by 10%.
@@ -1074,11 +1182,11 @@
     <skill id="10324" levels="3" name="Momentum Master">
 		<table name="#magicLevel">97 98 99</table>
 		<table name="#pSkillPower">1.1 1.15 1.20</table>
-		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill10324"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
 				<mul order="0x30" stat="pSkillPower" value="#pSkillPower">
@@ -1119,23 +1227,25 @@
 	-->
     <skill id="10325" levels="3" name="Dreadful Roar">
 		<table name="#effectPoint">633 644 653</table>
-		<table name="#mpConsume2">149 151 154</table>
 		<table name="#magicLevel">97 98 99</table>
-		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="reuseDelay" value="120000"/>
-		<set name="hitTime" value="1500"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="MAGIC"/>
-		<set name="icon" value="icon.skill10325"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="isCancel" value="true"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
+		<table name="#mpConsume2">149 151 154</table>
 		<set name="activateRate" value="100"/>
 		<set name="effectPoint" value="#effectPoint"/>
-		<set name="target" value="TARGET_AREA"/>
-		<set name="skillType" value="DEBUFF"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill10325"/>
+		<set name="isCancel" value="true"/>
+		<set name="itemConsumeCount" value="10"/>
+		<set name="itemConsumeId" value="1785"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reflectable" value="false"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AREA"/>
 		<for>
 			<effect name="i_dispel_by_category" time="0">
 				<def name="abnormal_category" value="slot_buff"/>
@@ -1172,18 +1282,36 @@
 		desc_add2: none
 	-->
     <skill id="10326" levels="3" name="Bloody Fury">
+    	<table name="#level">90 95 99</table>
+    	<table name="#pAtk">450 600 850</table>
+    	<table name="#pSkill">1.05 1.1 1.2</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_type" value="possession"/>
 		<set name="icon" value="icon.skill10326"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#level"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="coolTime" value="200"/>
+    	<set name="hitTime" value="2000"/>
+    	<set name="magicLevel" value="#level"/>
+		<for>
+			<effect>
+				<mul order="0x30" stat="hpLimit" value="0.7"/>
+				<add order="0x40" stat="pAtk" value="#pAtk"/>
+				<mul order="0x30" stat="pSkillPower" value="#pSkill"/>
+			</effect>
+		</for>
 	</skill>
     <!--
-		Momentum Flash - Attacks target with17348 Power added to P. Atk. Requires a sword/dagger/blunt weapon/fist weapon. Damage increases when using Momentum, which you can use up to 3. Over-hit. Critical.
+		Momentum Flash - Attacks target with 17348 Power added to P. Atk. Requires a sword/dagger/blunt weapon/fist weapon. Damage increases when using Momentum, which you can use up to 3. Over-hit. Critical.
 
-		LvL.1	description: Attacks target with17348 Power added to P Atk.	mp_consume: 98
-		LvL.2	description: Attacks target with20033 Power added to P Atk.	mp_consume: 105
-		LvL.3	description: Attacks target with22717 Power added to P Atk.	mp_consume: 112
-		LvL.4	description: Attacks target with25700 Power added to P Atk.	mp_consume: 119
+		LvL.1	description: Attacks target with 17348 Power added to P Atk.	mp_consume: 98
+		LvL.2	description: Attacks target with 20033 Power added to P Atk.	mp_consume: 105
+		LvL.3	description: Attacks target with 22717 Power added to P Atk.	mp_consume: 112
+		LvL.4	description: Attacks target with 25700 Power added to P Atk.	mp_consume: 119
 	
 		name: Momentum Flash
 		level: 1
@@ -1205,10 +1333,31 @@
 		desc_add2: none
 	-->
     <skill id="10327" levels="4" name="Momentum Flash">
+		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#mpConsume2">98 105 112 119</table>
+		<table name="#power">17348 20033 22717 25700</table>
+		<set name="castRange" value="600"/>
+		<set name="chargeBoost" value="true"/>
+		<set name="cond_charges" value="3"/>
+		<set name="coolTime" value="500"/>
+		<set name="criticalRate" value="10"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10327"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="nextAction" value="attack"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="overHit" value="true"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="useSS" value="false"/>
+		<cond msgId="113">
+			<using kind="Sword, Big Sword, Blunt, Big Blunt, Dual Sword"/>
+		</cond>
 	</skill>
     <!--
 		Soul Berserker - When equipped with a sword or blunt weapon, P. Atk. +10%, P. Critical Damage + 10%, and P. Skill MP Consumption + 10%.

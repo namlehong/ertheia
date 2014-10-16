@@ -17,6 +17,7 @@ import l2s.gameserver.data.xml.parser.OptionDataParser;
 import l2s.gameserver.data.xml.parser.VariationDataParser;
 import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.templates.item.ItemTemplate;
+import databuilder.xml.builder.AlchemyRecipeBuilder;
 import databuilder.xml.builder.ItemBuilder;
 import databuilder.xml.builder.NpcBuilder;
 import databuilder.xml.builder.SkillBuilder;
@@ -203,8 +204,9 @@ public class MainBuilder
 //		buildSpawn();
 //		testLonging();
 //		SkillTest.getInstance();
-		SkillTest.getInstance().testSkill();
+//		SkillTest.getInstance().testSkill();
 //		buildRaidSpawn();
+		AlchemyRecipeBuilder.getInstance().save();
 	}
 	
 	

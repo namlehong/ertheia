@@ -3,7 +3,10 @@ package l2s.gameserver.network.l2.c2s;
 import l2s.commons.lang.reference.HardReference;
 import l2s.commons.threading.RunnableImpl;
 import l2s.gameserver.ThreadPoolManager;
+import l2s.gameserver.data.xml.holder.SkillAcquireHolder;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.Skill;
+import l2s.gameserver.model.SkillLearn;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.ClassLevel;
 import l2s.gameserver.model.base.ClassType2;
@@ -13,7 +16,12 @@ import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.components.UsmVideo;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
+import l2s.gameserver.tables.SkillTable;
 import l2s.gameserver.utils.ItemFunctions;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Bonux
@@ -135,9 +143,10 @@ public class RequestChangeToAwakenedClass extends L2GameClientPacket
 			else if(activeChar.isDualClassActive())
 				ItemFunctions.addItem(activeChar, AwakeningManagerInstance.CHAOS_POMANDER_DUAL_CLASS, 2, true);
 
-			activeChar.setClassId(requestAwakeningId, false);
-			activeChar.broadcastUserInfo(true);
-			activeChar.broadcastPacket(new SocialActionPacket(activeChar.getObjectId(), SocialActionPacket.AWAKENING));
+            activeChar.setClassId(requestAwakeningId, false);
+            activeChar.broadcastUserInfo(true);
+            activeChar.broadcastPacket(new SocialActionPacket(activeChar.getObjectId(), SocialActionPacket.AWAKENING));
+
 
 			if(!activeChar.getVarBoolean("@awake_manual_video"))
 			{

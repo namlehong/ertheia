@@ -32,9 +32,11 @@
 		<table name="#mpConsume2">18 21 24 27</table>
 		<table name="#power">11903 13957 15601 17244</table>
 		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="500"/>
 		<set name="criticalRate" value="15"/>
 		<set name="effectPoint" value="337"/>
-		<set name="hitTime" value="1000"/>
+		<set name="hitTime" value="1030"/>
 		<set name="icon" value="icon.skill10700"/>
 		<set name="levelModifier" value="1"/>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -79,17 +81,19 @@
 		desc_add2: none
 	-->
     <skill id="10701" levels="4" name="Superior Vitality">
-		<set name="icon" value="icon.skill0211"/>
 		<table name="#hpcpatt">1.05 1.07 1.1 1.15</table>
 		<table name="#magicLevel">85 90 95 99</table>
+		<set name="icon" value="icon.skill0211"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<mul order="0x30" stat="maxHp" value="#hpcpatt"/>
 			<mul order="0x30" stat="maxCp" value="#hpcpatt"/>
-			<mul order="0x30" stat="pAtk" value="#hpcpatt"/>
+			<mul order="0x30" stat="pvePhysDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="pveMagicSkillDmgBonus" value="1.3"/>
+			<mul order="0x30" stat="pvePhysSkillDmgBonus" value="1.3"/>
 		</for>
 	</skill>
     <!--
@@ -259,17 +263,17 @@
 		desc_add2: none
 	-->
     <skill id="10749" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="7000"/>
-		<set name="coolTime" value="296"/>
-		<set name="hitTime" value="1600"/>
-		<set name="power" value="15000"/>
-		<set name="castRange" value="100"/>
-		<set name="icon" value="icon.skill10317"/>
 		<table name="#mpConsume2">65</table>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill10317"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="15000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Heavy Hit - Inflicts a powerful blow on target.
@@ -295,19 +299,19 @@
 		desc_add2: none
 	-->
     <skill id="10750" levels="1" name="Heavy Hit">
-		<set name="reuseDelay" value="7000"/>
-		<set name="coolTime" value="296"/>
-		<set name="hitTime" value="1600"/>
-		<set name="magicLevel" value="85"/>
-		<set name="icon" value="icon.skill10317"/>
 		<table name="#mpConsume2">92</table>
 		<set name="castRange" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="icon" value="icon.skill10317"/>
+		<set name="magicLevel" value="85"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="power" value="15000"/>
-		<set name="saveVs" value="CON"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="15000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 	</skill>
     <!--
 		Superior Bow/Crossbow Mastery - STR + 2 and P. Accuracy + 8. P. Atk. + 1316 and Atk. Spd. + 12% when using a bow or crossbow. Depending on your STR, the Cooldown resets or the abnormal status duration increases + 2 times.
@@ -346,8 +350,8 @@
 		desc_add2: none
 	-->
     <skill id="10751" levels="1" name="Superior Bow/Crossbow Mastery">
-		<table name="#pAtk">1316</table>
 		<table name="#magicLevel">85</table>
+		<table name="#pAtk">1316</table>
 		<set name="analog_skills" value="473;208;330;331"/>
 		<set name="icon" value="icon.skill10751"/>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -359,8 +363,8 @@
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
-			<add order="0x10" stat="STR" value="2">
-			</add>
+			<add order="0x10" stat="STR" value="2"/>
+			<add order="0x40" stat="pAccCombat" value="8"/>
 			<mul order="0x30" stat="pAtkSpd" value="1.12">
 				<using kind="Bow, Crossbow"/>
 			</mul>
@@ -407,7 +411,7 @@
 		desc_add2: none
 	-->
     <skill id="10752" levels="1" name="Superior Light Armor Mastery">
-		<table name="#pDef">89</table>
+		<table name="#pDef">1386</table>
 		<set name="analog_skills" value="173;171;832;227;233;236;252;258;465;148"/>
 		<set name="icon" value="icon.skill10752"/>
 		<set name="magicLevel" value="85"/>
@@ -415,7 +419,7 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<enchant type="1" levels="10" group="7" name="Def">
-			<table name="#pDef">103 109 116 122 129 135 141 148 154 161</table>
+			<table name="#pDef">1426 1466 1506 1546 1586 1626 1666 1706 1746 1792</table>
 		</enchant>
 		<for>
 			<add order="0x10" stat="STR" value="2"/>
@@ -583,7 +587,7 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<enchant type="1" levels="10" group="7" name="Def">
+		<enchant type="1" levels="10" group="7" name="Power">
 			<table name="#power">21 22 23 24 25 26 27 28 29 30</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
@@ -681,15 +685,16 @@
 		desc_add2: none
 	-->
     <skill id="10757" levels="4" name="Dead Eye Stance">
-		<set name="abnormal_type" value="stance"/>	<!--TODO: Такого значения на оффе нету. Переделать на досуге.-->
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume">10 10 10 10</table>
 		<table name="#patk">1.1 1.12 1.15 1.2</table>
 		<table name="#power">1.05 1.06 1.07 1.1</table>
+		<set name="abnormal_type" value="stance"/>
 		<set name="abnormal_time" value="1800"/>
 		<set name="analog_skills" value="131;835"/>
+		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1000"/>
-		<set name="icon" value="icon.skill10758"/>
+		<set name="icon" value="icon.skill10757"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -742,6 +747,7 @@
 		<set name="abnormal_time" value="1800"/>
 		<set name="abnormal_type" value="stance"/>
 		<set name="analog_skills" value="131;835"/>
+		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10758"/>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -796,8 +802,9 @@
 		<set name="abnormal_time" value="1800"/>
 		<set name="abnormal_type" value="stance"/>
 		<set name="analog_skills" value="131;835"/>
+		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1000"/>
-		<set name="icon" value="icon.skill10758"/>
+		<set name="icon" value="icon.skill10759"/>
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -967,35 +974,37 @@
 		<table name="#element">none</table>
 		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<table name="#mpConsume2">60 61 63 65 67 69 71 74</table>
+		<table name="#mpConsume2">90 100 103 107 110 114 117 121</table>
 		<table name="#powerPvP">0</table>
 		<table name="#pwr">20814 21546 23011 24476 25941 27906 28871 30336</table>
+		<table name="#reuseDelay">5000</table>
 		<set name="abnormal_effect" value="KNOCKBACK"/>
-		<set name="reuseDelay" value="5000"/>
-		<set name="coolTime" value="349"/>
-		<set name="hitTime" value="2200"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10760"/>
-		<set name="castRange" value="1100"/>
-		<set name="criticalRate" value="15"/>
 		<set name="activateRate" value="45"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="elementsPower" value="#elementPower"/>
+		<set name="analog_skills" value="19;507"/>
+		<set name="castRange" value="1100"/>
+		<set name="coolTime" value="349"/>
+		<set name="criticalRate" value="15"/>
 		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="2200"/>
+		<set name="icon" value="icon.skill10760"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="powerPvP" value="#powerPvP"/>
 		<set name="power" value="#pwr"/>
-		<set name="SSBoost" value="2.0"/>
-		<set name="skillType" value="PDAM"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="400"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="SSBoost" value="2.0"/>
 		<set name="target" value="TARGET_AREA"/>
-		<set name="analog_skills" value="19;507"/>
 		<cond msgId="113">
 			<using kind="Crossbow, Bow"/>
 		</cond>
 		<effect name="KnockBack" chance="85"/>
 		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
 			<table name="#mpConsume2">113 106 99 91 84 77 70 62 55 48</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
@@ -1005,35 +1014,43 @@
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
+			<table name="#pwr">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
+			<table name="#reuseDelay">4900 4800 4700 4600 4500 4400 4300 4200 4100 4000</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
@@ -1189,75 +1206,87 @@
 		desc_add2: none
 	-->
     <skill id="10761" levels="8" name="Bow Strike">
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 88 90 92 94 96 98</table>
-		<set name="reuseDelay" value="5000"/>
-		<set name="coolTime" value="349"/>
-		<set name="hitTime" value="1200"/>
-		<set name="abnormal_effect" value="KNOCKBACK"/>
-		<set name="abnormal_time" value="1"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="icon" value="icon.skill10761"/>
-		<table name="#pwr">2681 2771 2952 3133 3313 3494 3675 3855</table>
 		<table name="#mpConsume2">60 61 63 65 67 69 71 74</table>
 		<table name="#powerPvP">0</table>
-		<table name="#elementPower">0</table>
-		<table name="#element">none</table>
+		<table name="#pwr">2681 2771 2952 3133 3313 3494 3675 3855</table>
+		<table name="#reuseDelay">5000</table>
+		<set name="abnormal_effect" value="KNOCKBACK"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="1"/>
+		<set name="abnormal_type" value="stun"/>
+		<set name="castRange" value="40"/>
+		<set name="coolTime" value="349"/>
 		<set name="criticalRate" value="15"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
+		<set name="hitTime" value="1200"/>
+		<set name="icon" value="icon.skill10761"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="overHit" value="true"/>
-		<set name="elementsPower" value="#elementPower"/>
-		<set name="elements" value="#element"/>
-		<set name="powerPvP" value="#powerPvP"/>
 		<set name="power" value="#pwr"/>
+		<set name="powerPvP" value="#powerPvP"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="saveVs" value="CON"/>
 		<set name="skillType" value="PDAM"/>
-		<set name="trait" value="KNOCKBACK"/>
 		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="KNOCKBACK"/>
 		<cond msgId="113">
 			<using kind="Crossbow, Bow"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2">113 106 99 91 84 77 70 62 55 48</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
+			<table name="#mpConsume2">69 65 60 56 51 47 42 38 34 29</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
-			<table name="#powerPvP">31801 32534 33266 33998 34731 35463 36196 36928 37661 38393</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
+			<table name="#powerPvP">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
 			<table name="#element">fire</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
 			<table name="#element">water</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
 			<table name="#element">wind</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
 			<table name="#element">earth</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
 			<table name="#element">Holy</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
 			<table name="#element">unholy</table>
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
+			<table name="#pwr">4036 4126 4216 4307 4397 4487 4578 4668 4758 4848</table>
+			<table name="#reuseDelay">4900 4800 4700 4600 4500 4400 4300 4200 4100 4000</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<for>
@@ -1425,7 +1454,6 @@
 		<set name="analog_skills" value="369;105"/>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="250"/>
-		<set name="criticalRate" value="10"/>
 		<set name="criticalRate" value="15"/>
 		<set name="elements" value="#element"/>
 		<set name="elementsPower" value="#elementPower"/>
@@ -1642,6 +1670,7 @@
 		<table name="#mpConsume2">117 119 123 128 132 136 140 144</table>
 		<table name="#powerPvP">0</table>
 		<table name="#pwr">22198 22974 24524 26075 27625 29176 30726 32277</table>
+		<table name="#reuseDelay">7000</table>
 		<set name="analog_skills" value="343;627"/>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="850"/>
@@ -1658,7 +1687,7 @@
 		<set name="overHit" value="true"/>
 		<set name="power" value="#pwr"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="reuseDelay" value="7000"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="1.5"/>
 		<set name="target" value="TARGET_ONE"/>
@@ -1733,14 +1762,14 @@
 	-->
     <skill id="10764" levels="1" name="Knock Back">
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0101"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Knock Back - Knock Back
@@ -1767,14 +1796,14 @@
 	-->
     <skill id="10765" levels="1" name="Knock Back">
 		<set name="abnormal_effect" value="STUN"/>
-		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="2"/>
 		<set name="abnormal_type" value="stun"/>
-		<set name="magicLevel" value="97"/>
 		<set name="icon" value="icon.skill0101"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Additional Effect - Critical Exposure
@@ -1801,14 +1830,15 @@
 	-->
     <skill id="10766" levels="1" name="Additional Effect">
 		<set name="abnormal_effect" value="REAL_TARGET"/>
-		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
 		<set name="abnormal_type" value="public_slot"/>
-		<set name="magicLevel" value="97"/>
+		<set name="castRange" value="600"/>
 		<set name="icon" value="icon.skill0522"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_ONE"/>
 		<for>
 			<sub order="0x40" stat="critDamRcpt" value="100"/>
 		</for>
@@ -1867,9 +1897,6 @@
 		desc_add2: none
 	-->
     <skill id="10768" levels="1" name="Blink">
-		<!--
-			Уровень: 1; Описание: Повышает Уклонение.
-		-->
 		<set name="coolTime" value="200"/>
 		<set name="hitTime" value="300"/>
 		<set name="icon" value="icon.skill10768"/>
@@ -2108,6 +2135,7 @@
 		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#magicLevel">99</table>
+			<table name="#power">31777 32571 33365 34159 34953 35747 36541 37335 38129 38923</table>
 			<table name="#reuseDelay">9900 9800 9700 9600 9500 9400 9300 9200 9100 9000</table>
 		</enchant>
 		<for>
@@ -2497,6 +2525,7 @@
 		<table name="#mpConsume2">124 128 133 137 142 146 151 155</table>
 		<table name="#powerPvP">0</table>
 		<table name="#pwr">23391 25018 26645 28272 29900 31527 33154 34718</table>
+		<table name="#reuseDelay">7000</table>
 		<set name="analog_skills" value="987"/>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="349"/>
@@ -2512,7 +2541,7 @@
 		<set name="overHit" value="true"/>
 		<set name="power" value="#pwr"/>
 		<set name="powerPvP" value="#powerPvP"/>
-		<set name="reuseDelay" value="7000"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="250"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="SSBoost" value="2.0"/>
@@ -2522,35 +2551,44 @@
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">145 136 127 117 108 99 89 80 71 62</table>
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 		</enchant>
 		<enchant type="2" name="Duel">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#powerPvP">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#element">fire</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#element">water</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#element">wind</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#element">earth</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#element">Holy</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#element">unholy</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
+			<table name="#pwr">35595 36408 37222 38035 38849 39662 40476 41290 42103 42917</table>
 			<table name="#reuseDelay">6900 6800 6700 6600 6500 6400 6300 6200 6100 6000</table>
 		</enchant>
 	</skill>
@@ -2735,44 +2773,53 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#mpConsume2">144 135 126 117 107 98 89 80 70 61</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="2" name="Duel">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#powerPvP">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="3" name="Fire Attack">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#element">fire</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="4" name="Water Attack">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#element">water</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="5" name="Wind Attack">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#element">wind</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="6" name="Earth Attack">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#element">earth</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="7" name="Holy Attack">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#element">Holy</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="8" name="Dark Attack">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#element">unholy</table>
 			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
+			<table name="#pwr">34292 35077 35861 36646 37430 38215 38999 39784 40568 41353</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">14000 14000 13000 13000 12000 12000 11000 11000 10000 10000</table>
 		</enchant>
@@ -2804,14 +2851,15 @@
 		<!--
 			Уровень: 1; Описание: Не используется.
 		-->
-		<set name="reuseDelay" value="15000"/>
+		<set name="castRange" value="900"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="2200"/>
-		<set name="magicLevel" value="98"/>
 		<set name="icon" value="icon.skill0773"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="98"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Quick Evasion - Momentarily teleports 300 backward.
@@ -2857,6 +2905,8 @@
 		<table name="#mpConsume2">27 32 33 33</table>
 		<table name="#flyRadius">-300 -350 -400 -450</table>
 		<table name="#magicLevel">85 90 95 99</table>
+		<table name="#castRange">300 350 400 450</table>
+		<set name="castRange" value="#castRange"/>
 		<set name="fly_animation_speed" value="333"/>
 		<set name="fly_radius" value="#flyRadius"/>
 		<set name="fly_to_back" value="true"/>
@@ -2870,8 +2920,9 @@
 		<set name="reuseDelay" value="15000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<enchant type="1" levels="10" group="7" name="Дистанция">
+		<enchant type="1" levels="10" group="7" name="Distance">
 			<table name="#flyRadius">-460 -470 -480 -490 -500 -510 -520 -530 -540 -550</table>
+			<table name="#castRange">460 470 480 490 500 510 520 530 540 550</table>
 		</enchant>
 	</skill>
     <!--
@@ -2915,7 +2966,7 @@
 	-->
     <skill id="10775" levels="3" name="Confusion Decoy">
 		<table name="#magicLevel">87 93 99</table>
-		<table name="#mpConsume2">60 75 88</table>
+		<table name="#mpConsume2">60 66 72</table>
 		<table name="#npcId">13074 13075 13076</table>
 		<set name="analog_skills" value="525"/>
 		<set name="coolTime" value="500"/>
@@ -2929,7 +2980,7 @@
 		<set name="reuseDelay" value="600000"/>
 		<set name="skillType" value="DECOY"/>
 		<set name="target" value="TARGET_SELF"/>
-		<enchant type="1" levels="10" group="7" name="Стоимость">
+		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">69 66 63 60 57 54 51 48 46 43</table>
 		</enchant>
 	</skill>
@@ -3026,6 +3077,7 @@
 		desc_add2: none
 	-->
     <skill id="10776" levels="4" name="Final Ultimate Escape">
+		<table name="#stunPower">0</table>
 		<table name="#abnormal_time">30</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mEvasRate">60 70 80 90</table>
@@ -3033,6 +3085,7 @@
 		<table name="#pEvasRate">60 70 80 90</table>
 		<table name="#pSkillEvasion">80 85 90 95</table>
 		<table name="#reuseDelay">900000</table>
+		<table name="#runSpd">0</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="avoid_up_special"/>
@@ -3055,6 +3108,12 @@
 		<enchant type="2" name="Time">
 			<table name="#abnormal_time">31 32 33 34 35 36 37 38 39 40</table>
 		</enchant>
+		<enchant type="3" name="Wind Walk">
+			<table name="#runSpd">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Stun">
+			<table name="#stunPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">873000 846000 819000 792000 765000 738000 711000 684000 657000 630000</table>
 		</enchant>
@@ -3065,6 +3124,8 @@
 				<add order="0x40" stat="pEvasRate" value="#pEvasRate"/>
 				<add order="0x40" stat="pSkillEvasion" value="#pSkillEvasion"/>
 				<mul order="0x30" stat="mDef" value="1.2"/>
+				<add order="0x40" stat="runSpd" value="#runSpd"/>
+				<add order="0x40" stat="stunPower" value="#stunPower"/>
 			</effect>
 		</for>
 	</skill>
@@ -3182,7 +3243,7 @@
 		<set name="skillType" value="SHIFT_AGGRESSION"/>
 		<set name="target" value="TARGET_PARTY_ONE"/>
 		<set name="trait" value="DERANGEMENT"/>
-		<enchant type="1" levels="10" group="7" name="Стоимость">
+		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">81 78 74 71 68 64 61 57 54 51</table>
 		</enchant>
 		<cond msgId="113">
@@ -3287,6 +3348,8 @@
 		<table name="#mpConsume2">39 42 46 48</table>
 		<table name="#pAtkSpd">1.2 1.3 1.4 1.5</table>
 		<table name="#reuseDelay">120000</table>
+		<table name="#rootPower">0</table>
+		<table name="#stunPower">0</table>
 		<set name="abnormal_effect" value="REAL_TARGET"/>
 		<set name="abnormal_level" value="4"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
@@ -3308,7 +3371,13 @@
 			<table name="#mpConsume2">45 42 39 36 33 30 27 24 22 19</table>
 		</enchant>
 		<enchant type="2" name="Time">
-			<table name="#abnormal_time">21 22 23 24 25 26 27 28 29 30</table>
+			<table name="#abnormal_time">31 32 33 34 35 36 37 38 39 40</table>
+		</enchant>
+		<enchant type="3" name="Chance Stun">
+			<table name="#stunPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Hold">
+			<table name="#rootPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">116000 112000 109000 105000 102000 98000 94000 91000 87000 84000</table>
@@ -3317,7 +3386,8 @@
 			<effect>
 				<mul order="0x30" stat="pAtkSpd" value="#pAtkSpd"/>
 				<mul order="0x30" stat="pAtk" value="0.85"/>
-				<using kind="Bow, Crossbow"/>
+				<add order="0x40" stat="stunPower" value="#stunPower"/>
+				<add order="0x40" stat="rootPower" value="#rootPower"/>
 			</effect>
 		</for>
 	</skill>
@@ -3469,17 +3539,21 @@
 	-->
     <skill id="10780" levels="6" name="Slow Shot">
 		<table name="#activateRate">77</table> 
+		<table name="#element">none</table>
+		<table name="#elementPower">0</table>
 		<table name="#magicLevel">85 86 89 92 95 98</table>
 		<table name="#mpConsume2">94 96 101 106 111 116</table>
 		<table name="#pwr">9338 9670 10669 11667 12666 13664</table>
 		<table name="#reuseDelay">30000</table>
 		<set name="abnormal_level" value="3"/>
-		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="speed_down"/>
 		<set name="activateRate" value="#activateRate"/>
 		<set name="analog_skills" value="354"/>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="349"/>
+		<set name="elements" value="#element"/>
+		<set name="elementsPower" value="#elementPower"/>
 		<set name="hitTime" value="2099"/>
 		<set name="icon" value="icon.skill10780"/>
 		<set name="levelModifier" value="1"/>
@@ -3495,20 +3569,59 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
 			<table name="#mpConsume2">109 102 95 88 81 74 67 60 53 46</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
-		<enchant type="2" name="chance">
+		<enchant type="2" name="Chance">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
 			<table name="#activateRate">78 79 80 81 82 83 84 85 86 87</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
+		<enchant type="3" name="Fire Attack">
+			<table name="#element">fire</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="4" name="Water Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">water</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="5" name="Wind Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">wind</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="6" name="Earth Attack ">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">earth</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="7" name="Holy Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">Holy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="8" name="Dark Attack">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
+			<table name="#element">unholy</table>
+			<table name="#elementPower">30 33 36 40 43 46 50 53 56 60</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
 		<enchant type="9" name="Recycle">
+			<table name="#pwr">14330 14663 14996 15328 15661 15994 16327 16660 16992 17325</table>
 			<table name="#magicLevel">99</table>
 			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 21000</table>
 		</enchant>
 		<for>
 			<effect time="20">
-				<mul order="0x50" stat="runSpd" value="0.7"/>
+				<add order="0x40" stat="runSpd" value="70"/>
 			</effect>
 		</for>
 	</skill>
@@ -3562,23 +3675,35 @@
 		desc_add2: none
 	-->
     <skill id="10781" levels="1" name="Phoenix Arrow">
+    	<table name="#activateRate">77</table> 
+		<table name="#mpConsume2">1067</table>
+		<table name="#pwr">45215</table>
+		<table name="#reuseDelay">30000</table>
 		<set name="castRange" value="1100"/>
 		<set name="coolTime" value="300"/>
-		<set name="elements" value="fire"/>
 		<set name="hitTime" value="7500"/>
 		<set name="icon" value="icon.skill10781"/>
 		<set name="magicLevel" value="95"/>
-		<set name="magicType" value="ITEM"/>
-		<set name="mpConsume2" value="1067"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="power" value="45215"/>
-		<set name="reuseDelay" value="30000"/>
+		<set name="power" value="#pwr"/>
+		<set name="reuseDelay" value="#reuseDelay"/>
 		<set name="skillRadius" value="180"/>
 		<set name="skillType" value="PDAM"/>
 		<set name="target" value="TARGET_AREA"/>
 		<cond msgId="113">
 			<using kind="Crossbow, Bow"/>
 		</cond>
+		<enchant type="1" levels="10" group="7" name="Cost">
+			<table name="#pwr">46273 47330 48388 49445 50503 51560 52618 53677 54733 55792</table>
+			<table name="#mpConsume2">1178 1131 1083 1037 989 942 896 848 801 753</table>
+			<table name="#magicLevel">99</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
+			<table name="#pwr">46273 47330 48388 49445 50503 51560 52618 53677 54733 55792</table>
+			<table name="#magicLevel">99</table>
+			<table name="#reuseDelay">29000 28000 27000 26000 25000 24000 23000 22000 21000 21000</table>
+		</enchant>
 	</skill>
     <!--
 		Deadly Move 2 - Death blow! Please do not use.
@@ -3604,15 +3729,16 @@
 		desc_add2: none
 	-->
     <skill id="10782" levels="1" name="Deadly Move 2">
-		<set name="reuseDelay" value="3600000"/>
 		<set name="coolTime" value="300"/>
 		<set name="hitTime" value="2200"/>
-		<set name="magicLevel" value="97"/>
-		<set name="magicType" value="ITEM"/>
 		<set name="icon" value="icon.skill10782"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="97"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_NONE"/>
+    	<set name="castRange" value="600"/>
+    	<set name="mpConsume2" value="226"/>
 	</skill>
     <!--
 		Mind's Eye - For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%.
@@ -3714,17 +3840,18 @@
 		<table name="#pAccCombat">25 30 35 40</table>
 		<table name="#pCritDamage">1.7 1.9 2.1 2.3</table>
 		<table name="#reuseDelay">600000</table>
+		<table name="#rootPower">0</table>
+		<table name="#stunPower">0</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="#abnormal_time"/>
 		<set name="abnormal_type" value="possession"/>
 		<set name="analog_skills" value="413;414;521;313"/>
-		<set name="coolTime" value="200"/>
-		<set name="hitTime" value="1200"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="3000"/>
 		<set name="icon" value="icon.skill10783"/>
 		<set name="icon" value="icon.skill10783"/>
 		<set name="isReuseDelayPermanent" value="true"/>
 		<set name="magicLevel" value="#magicLevel"/>
-		<set name="magicType" value="ITEM"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="#reuseDelay"/>
@@ -3734,11 +3861,16 @@
 			<using kind="Crossbow, Bow"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Cost">
-			<table name="#mpConsume2">45 42 39 36 33 30 27 24 22 19</table>
+			<table name="#mpConsume2">60 56 52 48 44 40 37 33 29 25</table>
 		</enchant>
 		<enchant type="2" name="Time">
-			<table name="#abnormal_time">61 62 63 64 65 66 67 68 69 70</table>
 			<table name="#abnormal_time">62 64 66 68 70 72 74 76 78 80</table>
+		</enchant>
+		<enchant type="3" name="Chance Stun">
+			<table name="#stunPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Hold">
+			<table name="#rootPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">582000 564000 546000 528000 510000 492000 474000 456000 438000 420000</table>
@@ -3754,6 +3886,12 @@
 				<mul order="0x30" stat="pCritDamage" value="#pCritDamage">
 					<using kind="Crossbow, Bow"/>
 				</mul>
+				<add order="0x40" stat="stunPower" value="#stunPower">
+					<using kind="Crossbow, Bow"/>
+				</add>
+				<add order="0x40" stat="rootPower" value="#rootPower">
+					<using kind="Crossbow, Bow"/>
+				</add>
 			</effect>
 		</for>
 	</skill>
@@ -3870,10 +4008,10 @@
 		<cond msgId="113">
 			<using kind="Crossbow, Bow"/>
 		</cond>
-		<enchant type="1" levels="10" group="7" name="Стоимость">
+		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">67 64 61 58 56 53 50 47 44 42</table>
 		</enchant>
-		<enchant type="2" name="Дистанция">
+		<enchant type="2" name="Distance">
 			<table name="#skillRadius">310 320 330 340 350 360 370 380 390 400</table>
 		</enchant>
 		<for>
@@ -3966,11 +4104,12 @@
 		<table name="#mpConsume2">66 69 72</table>
 		<table name="#power">80</table>
 		<table name="#reuseDelay">15000</table>
+		<table name="#runSpd">1.0</table>
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="time_bomb"/>
 		<set name="activateRate" value="#power"/>
-		<set name="castRange" value="900"/>
+		<set name="castRange" value="1100"/>
 		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill10786"/>
 		<set name="magicLevel" value="#magicLevel"/>
@@ -3984,15 +4123,19 @@
 		<enchant type="1" levels="10" group="7" name="Cost">
 			<table name="#mpConsume2">69 66 63 60 57 54 51 48 46 43</table>
 		</enchant>
-		<enchant type="2" name="chance">
+		<enchant type="2" name="Chance">
 			<table name="#power">81 82 82 83 84 84 85 86 86 87</table>
 		</enchant>
-		<enchant type="9" name="reuse">
+		<enchant type="2" name="Entangle">
+			<table name="#runSpd">0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9</table>
+		</enchant>
+		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">14000 14000 13000 13000 12000 12000 11000 11000 10000 10000</table>
 		</enchant>
 		<for>
 			<effect name="Debuff">
-				<sub order="0x30" stat="pAccCombat" value="10"/>
+				<sub order="0x40" stat="pAccCombat" value="10"/>
+				<mul order="0x30" stat="runSpd" value="#runSpd"/>
 				<triggers>
 					<trigger id="10803" level="1" type="ON_EXIT_EFFECT"/>
 				</triggers>
@@ -4388,10 +4531,10 @@
 		<enchant type="2" name="Stun">
 			<table name="#stunPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
-		<enchant type="3" name="Knockdown">
-+			<table name="#knockPower">1 2 3 4 5 6 7 8 9 10</table>
-+		</enchant>
-		<enchant type="4" name="Root">
+		<enchant type="3" name="Chance Knockdown">
+			<table name="#knockPower">1 2 3 4 5 6 7 8 9 10</table>
+		</enchant>
+		<enchant type="4" name="Chance Hold">
 			<table name="#rootPower">1 2 3 4 5 6 7 8 9 10</table>
 		</enchant>
 		<for>
@@ -4448,6 +4591,7 @@
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">71 78 84 86 86 86 86 86</table>
 		<table name="#power">2065 2135 2206 2277 2347 2417 2488 2557</table>
+		<set name="castRange" value="400"/>
 		<set name="coolTime" value="750"/>
 		<set name="fly_animation_speed" value="333"/>
 		<set name="fly_radius" value="400"/>
@@ -4535,18 +4679,19 @@
 		desc_add2: none
 	-->
     <skill id="10796" levels="1" name="Hawk Gust">
-		<set name="reuseDelay" value="120000"/>
+		<set name="abnormal_effect" value="KNOCKDOWN"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_type" value="knockdown"/>
+		<set name="castRange" value="600"/>
 		<set name="coolTime" value="100"/>
 		<set name="hitTime" value="500"/>
-		<set name="abnormal_effect" value="KNOCKDOWN"/>
-		<set name="abnormal_time" value="5"/>
-		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_type" value="knockdown"/>
-		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill0092"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_NONE"/>
 	</skill>
     <!--
 		Thunder Feather Blast - Hurls feathers toward the enemy.
@@ -4593,6 +4738,7 @@
 		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">71 78 84 86 86 86 86 86</table>
 		<table name="#power">2065 2135 2206 2277 2347 2417 2488 2557</table>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="769"/>
 		<set name="criticalRate" value="15"/>
 		<set name="hitTime" value="1080"/>
@@ -4661,6 +4807,7 @@
 		<set name="abnormal_level" value="3"/>
 		<set name="abnormal_time" value="15"/>
 		<set name="abnormal_type" value="bleeding"/>
+		<set name="castRange" value="40"/>
 		<set name="coolTime" value="769"/>
 		<set name="hitTime" value="1080"/>
 		<set name="icon" value="icon.skill0096"/>

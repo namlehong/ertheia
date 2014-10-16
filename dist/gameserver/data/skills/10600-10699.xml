@@ -24,10 +24,11 @@
 	-->
     <skill id="10606" levels="1" name="Shadow Dodge">
 		<set name="abnormal_time" value="10"/>
+		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11862"/>
 		<set name="magicLevel" value="99"/>
-		<set name="magicType" value="ITEM"/>
+		<set name="mpConsume2" value="38"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="120000"/>
 		<set name="skillType" value="BUFF"/>
@@ -66,12 +67,13 @@
 	-->
     <skill id="10607" levels="1" name="Maximum Mortality">
 		<set name="abnormal_time" value="60"/>
+		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10607"/>
 		<set name="lethal2DepensencyAddon" value="20"/>
 		<set name="lethal2SkillDepencensyAddon" value="10607"/>
 		<set name="magicLevel" value="99"/>
-		<set name="magicType" value="ITEM"/>
+		<set name="mpConsume2" value="38"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="300000"/>
 		<set name="skillType" value="BUFF"/>
@@ -151,10 +153,28 @@
 		desc_add2: none
 	-->
     <skill id="10609" levels="1" name="Critical Chances">
+		<table name="#time">300</table>
+		<set name="abnormal_time" value="#time"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10878"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="lethal2DepensencyAddon" value="15"/>
+		<set name="lethal2SkillDepencensyAddon" value="10609"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="36"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Dagger, Dual Dagger"/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="pCritDamageStatic" value="304"/>
+				<mul order="0x30" stat="blowRate" value="1.1"/>
+				<add order="0x40" stat="pCritRate" value="40"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Critical Expansions - Max P. Critical increases. Applies when a dagger or dual dagger is equipped.
@@ -213,8 +233,8 @@
 		<set name="abnormal_level" value="1"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_type" value="avoid_skill_special"/>
-		<set name="coolTime" value="100"/>
-		<set name="hitTime" value="900"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill11863"/>
 		<set name="magicLevel" value="85"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
@@ -224,7 +244,7 @@
 		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
-				<add order="0x40" stat="reflectPSkillDam" value="50"/> <!--maybe more or less? !-->
+				<add order="0x40" stat="reflectPSkillDam" value="90"/> <!--maybe more or less? !-->
 			</effect>
 		</for>
 	</skill>
@@ -253,6 +273,7 @@
 	-->
     <skill id="10654" levels="1" name="Maximum Mortality">
 		<set name="abnormal_time" value="60"/>
+		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10607"/>
 		<set name="lethal2DepensencyAddon" value="20"/>
@@ -264,7 +285,7 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<cond msgId="113" addName="1">
-			<using kind="Dagger,Dual Dagger"/>
+			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 		<for>
 			<effect>
@@ -337,9 +358,26 @@
 		desc_add2: none
 	-->
     <skill id="10656" levels="1" name="Critical Prowess">
+		<table name="#time">300</table>
+		<set name="abnormal_time" value="#time"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill10656"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="lethal2DepensencyAddon" value="5"/>
+		<set name="lethal2SkillDepencensyAddon" value="10656"/>
+		<set name="magicLevel" value="85"/>
+		<set name="mpConsume2" value="36"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<cond msgId="113">
+			<using kind="Dagger, Dual Dagger"/>
+		</cond>
+		<for>
+			<effect>
+				<add order="0x40" stat="pCritDamageStatic" value="608"/>
+				<add order="0x40" stat="pCritRate" value="40"/>
+			</effect>
+		</for>
 	</skill>
 </list>
