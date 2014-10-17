@@ -4,6 +4,7 @@ import java.util.StringTokenizer;
 
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.AcquireType;
+import l2s.gameserver.model.base.Race;
 import l2s.gameserver.network.l2.s2c.PackageToListPacket;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
 import l2s.gameserver.templates.npc.NpcTemplate;
@@ -53,7 +54,10 @@ public class AlchemyMasterInstance extends FreightSenderInstance
 		
 		if(cmd.equals("learnskill"))
 		{
-			showAlchemyAcquireList(player);
+			if(player.getRace() == Race.ERTHEIA)
+				showAlchemyAcquireList(player);
+			else
+				showChatWindow(player, 2);
 			return;
 		}
 		
