@@ -107,6 +107,10 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 				
 				stoneAmount += getAirtoneAmount(item, itemCount);
 			}
+			
+			if(materialList.size() > 2)
+				stoneAmount = (long) Math.floor(stoneAmount*5/3);
+			
 			System.out.println("Stone amount " + stoneAmount);
 			//there is a chance 1/5000 to have tempest stone
 			//with the conversion rate 600 air stone to 1 tempest stone
