@@ -1837,7 +1837,7 @@ public class NpcInstance extends Creature
 
 	public static void showAlchemyAcquireList(Player player)
 	{
-		final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableMaxLvlSkills(player, AcquireType.ALCHEMY);
+		final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.ALCHEMY);
 
 		final ExAcquirableSkillListByClass asl = new ExAcquirableSkillListByClass(AcquireType.ALCHEMY, skills.size());
 
