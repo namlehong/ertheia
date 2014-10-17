@@ -33,7 +33,7 @@ public class DestroySummon extends Skill
 				if(target.isSummon())
 				{
 					((Servitor) target).unSummon(false);
-					getEffects(activeChar, target, false);
+//					getEffects(activeChar, target, false);
 				}
 			}
 
