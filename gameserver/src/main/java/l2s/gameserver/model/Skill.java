@@ -203,6 +203,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		DEBUFF(Continuous.class),
 		DELETE_HATE(DeleteHate.class),
 		DESTROY_SUMMON(DestroySummon.class),
+		DESTROY_MY_SUMMON(DestroySummon.class),
 		DEFUSE_TRAP(DefuseTrap.class),
 		DETECT_TRAP(DetectTrap.class),
 		DISCORD(Continuous.class),
