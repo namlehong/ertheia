@@ -62,6 +62,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 	private List<SkillLearn> _chaosSkillTree = new ArrayList<SkillLearn>();
 	private List<SkillLearn> _dualChaosSkillTree = new ArrayList<SkillLearn>();
 	private List<SkillLearn> _abilitySkillTree = new ArrayList<SkillLearn>();
+	private List<SkillLearn> _alchemySkillTree = new ArrayList<SkillLearn>();
 
 	// Abilities properties
 	private long _abilitiesRefreshPrice = 0L;
@@ -204,6 +205,12 @@ public final class SkillAcquireHolder extends AbstractHolder
 				if(player == null)
 					return skills;
 				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), 0, player.getRace());
+			case ALCHEMY:
+				skills = _alchemySkillTree;
+				if(player == null)
+					return skills;
+				return getAvaliableList(skills, player.getAllSkillsArray(), player.getLevel(), 0, player.getRace()); 
+				
 			default:
 				return Collections.emptyList();
 		}
@@ -370,6 +377,16 @@ public final class SkillAcquireHolder extends AbstractHolder
 				if(skills == null)
 				{
 					info("Ability skill tree is not defined !");
+					return Collections.emptyList();
+				}
+				if(player == null)
+					return skills;
+				return getAvaliableMaxLvlSkillList(skills, player.getAllSkillsArray(), player.getLevel(), 0, player.getRace());
+			case ALCHEMY:
+				skills = _alchemySkillTree;
+				if(skills == null)
+				{
+					info("Alchemy skill tree is not defined !");
 					return Collections.emptyList();
 				}
 				if(player == null)
@@ -565,6 +582,9 @@ public final class SkillAcquireHolder extends AbstractHolder
 			case ABILITY:
 				skills = _abilitySkillTree;
 				break;
+			case ALCHEMY:
+				skills = _alchemySkillTree;
+				break;
 			default:
 				return null;
 		}
@@ -668,6 +688,12 @@ public final class SkillAcquireHolder extends AbstractHolder
 					return false;
 
 				skills = _abilitySkillTree;
+				break;
+			case ALCHEMY:
+				if(!player.isAllowAlchemy())
+					return false;
+
+				skills = _alchemySkillTree;
 				break;
 			default:
 				return false;
@@ -917,6 +943,11 @@ public final class SkillAcquireHolder extends AbstractHolder
 	{
 		_abilitySkillTree.addAll(s);
 	}
+	
+	public void addAllAlchemySkillLearns(List<SkillLearn> s)
+	{
+		_alchemySkillTree.addAll(s);
+	}
 
 	public void setAbilitiesRefreshPrice(long value)
 	{
@@ -971,6 +1002,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 		info("load " + _chaosSkillTree.size() + " chaos skill learns.");
 		info("load " + _dualChaosSkillTree.size() + " dual-chaos skill learns.");
 		info("load " + _abilitySkillTree.size() + " abilities skill learns.");
+		info("load " + _alchemySkillTree.size() + " alchemy skill learns.");
 	}
 
 	//@Deprecated

@@ -275,7 +275,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		TRAP_ACTIVATION(TrapActivation.class),
 		UNLOCK(Unlock.class),
 		WATCHER_GAZE(Continuous.class),
-		VITALITY_HEAL(VitalityHeal.class);
+		VITALITY_HEAL(VitalityHeal.class),
+		TRANSMUTE,
+		COMBINE;
 
 		private final Class<? extends Skill> clazz;
 

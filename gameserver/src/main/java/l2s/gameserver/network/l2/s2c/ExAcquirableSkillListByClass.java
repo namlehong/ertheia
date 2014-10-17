@@ -18,15 +18,17 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 		public int id;
 		public int nextLevel;
 		public int maxLevel;
+		public int requireLevel;
 		public int cost;
 		public int requirements;
 		public int subUnit;
 
-		Skill(int id, int nextLevel, int maxLevel, int cost, int requirements, int subUnit)
+		Skill(int id, int nextLevel, int maxLevel, int requireLevel, int cost, int requirements, int subUnit)
 		{
 			this.id = id;
 			this.nextLevel = nextLevel;
 			this.maxLevel = maxLevel;
+			this.requireLevel = requireLevel;
 			this.cost = cost;
 			this.requirements = requirements;
 			this.subUnit = subUnit;
@@ -39,14 +41,14 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 		_type = type;
 	}
 
-	public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements, int subUnit)
+	public void addSkill(int id, int nextLevel, int maxLevel, int requireLevel, int Cost, int requirements, int subUnit)
 	{
-		_skills.add(new Skill(id, nextLevel, maxLevel, Cost, requirements, subUnit));
+		_skills.add(new Skill(id, nextLevel, maxLevel, requireLevel, Cost, requirements, subUnit));
 	}
 
-	public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements)
+	public void addSkill(int id, int nextLevel, int maxLevel, int requireLevel, int Cost, int requirements)
 	{
-		_skills.add(new Skill(id, nextLevel, maxLevel, Cost, requirements, 0));
+		_skills.add(new Skill(id, nextLevel, maxLevel, requireLevel, Cost, requirements, 0));
 	}
 
 	@Override
@@ -60,7 +62,7 @@ public class ExAcquirableSkillListByClass extends L2GameServerPacket
 			writeD(temp.id);
 			writeH(temp.nextLevel);
 			writeH(temp.maxLevel);
-			writeC(0x00);
+			writeC(temp.requireLevel);
 			writeQ(temp.cost);
 			writeC(0x01); // UNK
 			/*writeD(temp.requirements);

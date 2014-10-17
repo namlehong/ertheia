@@ -126,6 +126,7 @@ import l2s.gameserver.model.GameObjectTasks.UnJailTask;
 import l2s.gameserver.model.GameObjectTasks.WaterTask;
 import l2s.gameserver.model.Request.L2RequestType;
 import l2s.gameserver.model.Skill.AddedSkill;
+import l2s.gameserver.model.Skill.SkillType;
 import l2s.gameserver.model.Zone.ZoneType;
 import l2s.gameserver.model.actor.basestats.PlayerBaseStats;
 import l2s.gameserver.model.actor.instances.creature.Effect;
@@ -715,6 +716,8 @@ public final class Player extends Playable implements PlayerGroup
 
 	private final TIntObjectMap<Skill> _transformSkills = new TIntObjectHashMap<Skill>();
 
+	private List<Skill> _alchemySkills;
+	
 	private long _lastMultisellBuyTime = 0L;
 	private long _lastEnchantItemTime = 0L;
 
@@ -5639,6 +5642,9 @@ public final class Player extends Playable implements PlayerGroup
 
 			// Restore Hero skills at main class only
 			checkHeroSkills();
+			
+			//Restore alchemy skills
+			checkAlchemySkills();
 
 			// Restore clan skills
 			if(_clan != null)
@@ -12037,4 +12043,41 @@ public final class Player extends Playable implements PlayerGroup
 			onTeleported();
 		}
 	}
+	
+	/********************
+	*** Alchemy system.***
+	******* START *******
+	********************/
+	
+	public boolean isAllowAlchemy()
+	{
+		return (getRace() == Race.ERTHEIA)&& getLevel() >= 40;
+	}
+
+	public void checkAlchemySkills()
+	{
+		_alchemySkills = new ArrayList<Skill>();
+		
+		for(Skill skill : getAllSkillsArray())
+		{
+			if(skill.getSkillType() == SkillType.COMBINE)
+				_alchemySkills.add(skill);
+		}
+		//make sure combining skills are put in the array before transmuting skills
+		for(Skill skill : getAllSkillsArray())
+		{
+			if(skill.getSkillType() == SkillType.TRANSMUTE)
+				_alchemySkills.add(skill);
+		}
+	}
+	
+	public List<Skill> getAlchemySkills()
+	{
+		return _alchemySkills;
+	}
+	
+	/********************
+	*** Alchemy system.***
+	******* END *******
+	********************/
 }

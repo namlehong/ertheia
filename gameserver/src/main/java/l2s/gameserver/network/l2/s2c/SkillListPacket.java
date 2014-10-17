@@ -5,6 +5,7 @@ import java.util.List;
 
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.Skill;
+import l2s.gameserver.model.Skill.SkillType;
 import l2s.gameserver.tables.SkillTreeTable;
 
 /**
@@ -37,6 +38,9 @@ public class SkillListPacket extends L2GameServerPacket
 		writeD(_skills.size());
 		for(Skill temp : _skills)
 		{
+			if(temp.getSkillType() == SkillType.COMBINE || temp.getSkillType() == SkillType.TRANSMUTE)
+				continue;
+			
 			writeD(temp.isActive() || temp.isToggle() ? 0 : 1); // deprecated? клиентом игнорируется
 			if(temp.getChainIndex() != -1 && temp.getChainSkillId() != 0 && _player.getSkillChainDetails().containsKey(temp.getChainIndex()))
 			{
