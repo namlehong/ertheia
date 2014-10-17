@@ -143,9 +143,10 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 		long itemPrice;
 		
 		if(item.getItemId() != 57) 
-			itemPrice = item.getReferencePrice();
+			itemPrice = item.getReferencePrice()*itemCount;
 		else 
 			itemPrice = itemCount;
+		System.out.println("Item price " + itemPrice);
 		
 		long fiftyMul = (long) Math.floor(itemPrice / 50000);
 		long adenaLeft = (long) itemPrice%50000;
