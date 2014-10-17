@@ -13,6 +13,7 @@ import gnu.trove.set.hash.TIntHashSet;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -413,7 +414,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 			int skillId = temp.getId();
 			int skillLvl = temp.getLevel();
-			if(!skillLearnMap.containsKey(skillId) || skillLearnMap.containsKey(skillId) && temp.isFreeAutoGet() == skillLearnMap.get(skillId).isFreeAutoGet() && skillLvl > skillLearnMap.get(skillId).getLevel())
+			if(!skillLearnMap.containsKey(skillId) || skillLearnMap.containsKey(skillId) && skillLvl > skillLearnMap.get(skillId).getLevel())
 				skillLearnMap.put(skillId, temp);
 		}
 
