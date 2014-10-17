@@ -67,6 +67,7 @@ public class DiePacket extends L2GameServerPacket
 		writeC(0); //show die animation
 		writeD(get(RestartType.AGATHION));//agathion ress button
 		writeD(0x00); //additional free space
+		writeQ(0); //additional 8 bytes
 	}
 
 	private void put(RestartType t, boolean b)
