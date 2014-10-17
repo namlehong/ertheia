@@ -3359,15 +3359,20 @@
 		<enchant type="3" name="Power">
 			<table name="#crit">516 616 716 816 916 1016 1116 1216 1316 1416</table>
 			<table name="#magicLevel">99</table>
-		</enchant>
-		<triggers>
+		</enchant>		
+		<!--<triggers>
 			<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
-		</triggers>
+		</triggers> -->
 		<for>
+			<effect name="ShadowStep" time="0"/>
 			<effect name="RemoveTarget" time="0" isReflectable="false" chance="#chancer">
 				<def name="doStopTarget" value="true"/>
 			</effect>
-			<effect name="Stun" chance="#chance" time="9"/>
+			<effect name="Stun" chance="#chance" time="9">
+				<triggers>
+					<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
+				</triggers>
+			</effect>
 			<effect name="Debuff" time="15">
 				<add order="0x40" stat="pCritDamageStatic" value="486"/>
 				<mul order="0x30" stat="hpLimit" value="0.5"/>
