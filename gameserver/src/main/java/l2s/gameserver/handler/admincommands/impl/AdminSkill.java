@@ -243,6 +243,7 @@ public class AdminSkill implements IAdminCommandHandler
 			}
 		}
 		activeChar.sendMessage("You removed all skills from target: " + player.getName() + ".");
+		activeChar.checkAlchemySkills();
 		showSkillsPage(activeChar);
 	}
 

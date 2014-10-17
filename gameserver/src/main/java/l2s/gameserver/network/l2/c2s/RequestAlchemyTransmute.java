@@ -65,6 +65,7 @@ public final class RequestAlchemyTransmute extends L2GameClientPacket
 		if(activeChar.isFishing())
 		{
 			activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING);
+			activeChar.sendActionFailed();
 			return;
 		}
 
@@ -73,12 +74,14 @@ public final class RequestAlchemyTransmute extends L2GameClientPacket
 		if(recipe == null || recipe.getMaterials().length == 0)
 		{
 			activeChar.sendPacket(SystemMsg.EXPERIMENT_FAILED_PLEASE_TRY_AGAIN);
+			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if(activeChar.getSkillLevel(alchemySkillId, 0) < alchemySkillLevel)
 		{
 			activeChar.sendPacket(SystemMsg.YOU_MUST_LEARN_THE_NECESSARY_SKILL_FIRST);
+			activeChar.sendActionFailed();
 			return;
 		}
 		boolean isSuccess = Rnd.chance(recipe.getSuccessRate());
