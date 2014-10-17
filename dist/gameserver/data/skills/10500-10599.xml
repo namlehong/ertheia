@@ -4392,16 +4392,22 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<triggers>
+		<!--<triggers>
 			<trigger id="10557" level="#triggerLevel" type="CRIT" chance="#triggerChance"/>
-		</triggers>
+		</triggers> -->
 		<for>
 			<add order="0x40" stat="pCritDamageStatic" value="609"/>
 			<mul order="0x30" stat="SkillCritChanceMod" value="#SkillCritChanceMod"/>
 			<add order="0x40" stat="pCritRate" value="#sideCritChanceRcpt">
 				<target direction="side"/>
 			</add>
+			<add order="0x40" stat="pCritDamage" value="#sideCritChanceRcpt">
+				<target direction="side"/>
+			</add>			
 			<add order="0x40" stat="pCritRate" value="#behindCritChanceRcpt">
+				<target direction="behind"/>
+			</add>
+			<add order="0x40" stat="pCritDamage" value="#behindCritChanceRcpt">
 				<target direction="behind"/>
 			</add>
 		</for>
