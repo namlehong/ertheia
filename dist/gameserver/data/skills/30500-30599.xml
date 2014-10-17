@@ -659,7 +659,7 @@
 		<set name="icon" value="icon.skill30509"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="skillType" value="BUFF"/>
-		<set name="target" value="TARGET_ONE"/>
+		<set name="target" value="TARGET_SELF"/>
     	<set name="castRange" value="280"/>
     	<set name="hitTime" value="100"/>
     	<set name="magicLevel" value="#magicLevel"/>
@@ -669,6 +669,7 @@
 			<using kind="Dual Fist"/>
 		</cond>
 		<for>
+			<effect name="TargetableDisable"/>
 			<effect name="HealPercent" time="0" value="10"/>
 		</for>
 	</skill>
