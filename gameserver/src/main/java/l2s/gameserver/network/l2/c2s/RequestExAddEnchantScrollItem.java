@@ -57,7 +57,6 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 
 		if(!itemToEnchant.canBeEnchanted() || itemToEnchant.isStackable())
 		{
-			player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
 			player.sendPacket(SystemMsg.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
 			return;
 		}

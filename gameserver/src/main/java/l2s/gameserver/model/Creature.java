@@ -4018,7 +4018,7 @@ public abstract class Creature extends GameObject
 		{
 			_running = true;
 			broadcastPacket(new ChangeMoveTypePacket(this));
-			if(isNpc())
+			if(isNpc() && !isDead())
 				broadcastPacket(new NpcInfoState(getObjectId(), 4));
 		}
 	}
