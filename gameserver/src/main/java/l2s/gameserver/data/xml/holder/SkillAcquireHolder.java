@@ -413,7 +413,7 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 			int skillId = temp.getId();
 			int skillLvl = temp.getLevel();
-			if(!skillLearnMap.containsKey(skillId) || skillLearnMap.containsKey(skillId) && skillLvl > skillLearnMap.get(skillId).getLevel())
+			if(!skillLearnMap.containsKey(skillId) || skillLearnMap.containsKey(skillId) && temp.isFreeAutoGet() == skillLearnMap.get(skillId).isFreeAutoGet() && skillLvl > skillLearnMap.get(skillId).getLevel())
 				skillLearnMap.put(skillId, temp);
 		}
 
