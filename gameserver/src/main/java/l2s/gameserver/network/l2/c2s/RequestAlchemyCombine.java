@@ -88,6 +88,7 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 			}
 
 			long stoneAmount = 0;
+			long totalPrice = 0;
 			
 			for(CombineMaterial material : materialList)
 			{
@@ -105,13 +106,15 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 					continue;
 				activeChar.sendPacket(SystemMessagePacket.removeItems(item.getItemId(), itemCount));
 				
-				stoneAmount += getAirtoneAmount(item, itemCount);
+				totalPrice = totalPrice + item.getReferencePrice()*itemCount;
 			}
+			
+			stoneAmount = getAirtoneAmount(totalPrice);
 			
 			if(materialList.size() > 2)
 				stoneAmount = (long) Math.floor(stoneAmount*5/3);
 			
-			System.out.println("Stone amount " + stoneAmount);
+			//System.out.println("Stone amount " + stoneAmount);
 			//there is a chance 1/5000 to have tempest stone
 			//with the conversion rate 600 air stone to 1 tempest stone
 			if(stoneAmount > 600)
@@ -141,16 +144,9 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 
 	}
 	
-	private long getAirtoneAmount(ItemInstance item, long itemCount)
+	private long getAirtoneAmount(long itemPrice)
 	{
 		long stoneCount = 0;
-		long itemPrice;
-		
-		if(item.getItemId() != 57) 
-			itemPrice = item.getReferencePrice()*itemCount;
-		else 
-			itemPrice = itemCount;
-		System.out.println("Item price " + itemPrice);
 		
 		long fiftyMul = (long) Math.floor(itemPrice / 50000);
 		long adenaLeft = (long) itemPrice%50000;
