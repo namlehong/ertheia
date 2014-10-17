@@ -7,5 +7,7 @@ public enum EnchantType
 {
 	ALL,
 	ARMOR,
-	WEAPON
+	WEAPON,
+	GIANT_WEAPON,
+	GIANT_ARMOR
 }

@@ -17,6 +17,7 @@ import l2s.gameserver.stats.Formulas;
 import l2s.gameserver.templates.item.ItemGrade;
 import l2s.gameserver.templates.item.ItemTemplate;
 import l2s.gameserver.templates.item.support.EnchantScroll;
+import l2s.gameserver.templates.item.support.EnchantType;
 import l2s.gameserver.templates.item.support.EnchantVariation;
 import l2s.gameserver.templates.item.support.EnchantVariation.EnchantLevel;
 import l2s.gameserver.utils.ItemFunctions;
@@ -134,6 +135,7 @@ public class RequestEnchantItem extends L2GameClientPacket
 				switch(enchantScroll.getType())
 				{
 					case ARMOR:
+					case GIANT_ARMOR:
 						if(itemType == ItemTemplate.TYPE2_WEAPON)
 						{
 							player.sendPacket(EnchantResultPacket.CANCEL);
@@ -143,6 +145,7 @@ public class RequestEnchantItem extends L2GameClientPacket
 						}
 						break;
 					case WEAPON:
+					case GIANT_WEAPON:
 						if(itemType == ItemTemplate.TYPE2_SHIELD_ARMOR || itemType == ItemTemplate.TYPE2_ACCESSORY)
 						{
 							player.sendPacket(EnchantResultPacket.CANCEL);
@@ -185,6 +188,10 @@ public class RequestEnchantItem extends L2GameClientPacket
 			}
 
 			int newEnchantLvl = item.getEnchantLevel() + 1;
+			
+			if(enchantScroll.getType() == EnchantType.GIANT_ARMOR || enchantScroll.getType() == EnchantType.GIANT_WEAPON)
+				newEnchantLvl += Math.round(Math.random()*2);
+			
 			EnchantLevel enchantLevel = variation.getLevel(newEnchantLvl);
 			if(enchantLevel == null)
 			{
