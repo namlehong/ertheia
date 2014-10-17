@@ -3363,11 +3363,11 @@
 		<!--<triggers>
 			<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
 		</triggers> -->
-		<for>
-			<effect name="ShadowStep" time="0"/>
+		<for>			
 			<effect name="RemoveTarget" time="0" isReflectable="false" chance="#chancer">
 				<def name="doStopTarget" value="true"/>
 			</effect>
+			<effect name="ShadowStep" time="0"/>
 			<effect name="Stun" chance="#chance" time="9">
 				<triggers>
 					<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
@@ -4407,15 +4407,15 @@
 			<add order="0x40" stat="pCritRate" value="#sideCritChanceRcpt">
 				<target direction="side"/>
 			</add>
-			<add order="0x40" stat="pCritDamage" value="#sideCritChanceRcpt">
+			<mul order="0x30" stat="pCritDamage" value="1.4">
 				<target direction="side"/>
-			</add>			
+			</mul>			
 			<add order="0x40" stat="pCritRate" value="#behindCritChanceRcpt">
 				<target direction="behind"/>
 			</add>
-			<add order="0x40" stat="pCritDamage" value="#behindCritChanceRcpt">
+			<mul order="0x30" stat="pCritDamage" value="1.7">
 				<target direction="behind"/>
-			</add>
+			</mul>
 		</for>
 	</skill>
     <!--
@@ -5523,11 +5523,21 @@
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 		<for>
-			<effect>
-				<add order="0x40" stat="pCritDamageStatic" value="304"/>
-				<mul order="0x30" stat="blowRate" value="1.1"/>
-				<add order="0x40" stat="pCritRate" value="40"/>
-			</effect>
+			<add order="0x40" stat="pCritDamageStatic" value="304"/>
+			<mul order="0x30" stat="blowRate" value="1.1"/>
+			<add order="0x40" stat="pCritRate" value="40"/>
+			<add order="0x40" stat="pCritRate" value="20">
+				<target direction="side"/>
+			</add>
+			<mul order="0x30" stat="pCritDamage" value="1.2">
+				<target direction="side"/>
+			</mul>			
+			<add order="0x40" stat="pCritRate" value="40">
+				<target direction="behind"/>
+			</add>
+			<mul order="0x30" stat="pCritDamage" value="1.4">
+				<target direction="behind"/>
+			</mul>
 		</for>
 	</skill>
 </list>
