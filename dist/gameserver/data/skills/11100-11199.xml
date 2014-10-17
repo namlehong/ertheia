@@ -54,6 +54,7 @@
     <skill id="11101" levels="1" name="Elemental Destruction: Fire">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="elemental_destruction_fire"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -87,6 +88,7 @@
     <skill id="11102" levels="1" name="Elemental Destruction: Water">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="elemental_destruction_water"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -120,6 +122,7 @@
     <skill id="11103" levels="1" name="Elemental Destruction: Wind">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="elemental_destruction_wind"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -153,6 +156,7 @@
     <skill id="11104" levels="1" name="Elemental Destruction: Earth">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="elemental_destruction_earth"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -186,6 +190,7 @@
     <skill id="11105" levels="1" name="Elemental Destruction: 4 Attributes">
 		<set name="icon" value="icon.skill11866"/>
 		<set name="abnormal_time" value="10"/>
+		<set name="abnormal_type" value="elemental_destruction_4"/>
 		<set name="target" value="TARGET_ONE"/>
 		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
@@ -248,11 +253,6 @@
 		<set name="wind_skill_id" value="11109"/>
 		<set name="earth_skill_id" value="11110"/>
 		<set name="multi_elemental_skill_id" value="11111"/>
-		<for>
-			<effect name="Debuff" displayId="11106">
-				<mul order="0x70" stat="mDef" value="0.8"/>
-			</effect>
-		</for>
 	</skill>
     <!--
 		Elemental Mass Burst: Fire - Detonates an Elemental Destruction to inflict damage on nearby enemies with 569 Power. For 15 seconds, M. Def. - 20%.
@@ -311,6 +311,10 @@
 		<for>
 			<effect name="Debuff" displayId="11106">
 				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="elemental_destruction_fire"/>
+				<def name="max_abnormal_level" value="9"/>
 			</effect>
 		</for>
 	</skill>
@@ -372,6 +376,10 @@
 			<effect name="Debuff" displayId="11106">
 				<mul order="0x70" stat="mDef" value="0.8"/>
 			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="elemental_destruction_water"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
 		</for>
 	</skill>
     <!--
@@ -431,6 +439,10 @@
 		<for>
 			<effect name="Debuff" displayId="11106">
 				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="elemental_destruction_wind"/>
+				<def name="max_abnormal_level" value="9"/>
 			</effect>
 		</for>
 	</skill>
@@ -492,6 +504,10 @@
 			<effect name="Debuff" displayId="11106">
 				<mul order="0x70" stat="mDef" value="0.8"/>
 			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="elemental_destruction_earth"/>
+				<def name="max_abnormal_level" value="9"/>
+			</effect>
 		</for>
 	</skill>
     <!--
@@ -551,6 +567,10 @@
 		<for>
 			<effect name="Debuff" displayId="11106">
 				<mul order="0x70" stat="mDef" value="0.8"/>
+			</effect>
+			<effect name="i_dispel_by_slot" time="0">
+				<def name="abnormal_type" value="elemental_destruction_4"/>
+				<def name="max_abnormal_level" value="9"/>
 			</effect>
 		</for>
 	</skill>
@@ -1605,7 +1625,7 @@
 		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="reuseDelay" value="15000"/>
-		<set name="skillType" value="DESTROY_SUMMON"/>>
+		<set name="skillType" value="DESTROY_MY_SUMMON"/>>
 		<set name="target" value="TARGET_ONE_SERVITOR"/>
 		<for>
 			<self_effect name="DebuffImmunity" time="3"/>
