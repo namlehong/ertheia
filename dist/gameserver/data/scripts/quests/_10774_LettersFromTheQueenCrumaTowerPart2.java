@@ -205,10 +205,10 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 		if(player.getVarBoolean("@received_navari_letter_5th"))
 			return;
 		
-		System.out.println("Player enter");
+		//System.out.println("Player enter");
 		if(checkStartCondition(player))
 		{
-			System.out.println("Player enter and fit quest condition");
+			//System.out.println("Player enter and fit quest condition");
 			Quest q = QuestManager.getQuest(10774);
 			player.processQuestEvent(q.getName(), "start_quest_delay", null);
 		}
