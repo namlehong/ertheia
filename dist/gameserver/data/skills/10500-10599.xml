@@ -2433,6 +2433,11 @@
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">582000 564000 546000 528000 510000 492000 474000 456000 438000 420000</table>
 		</enchant>
+		<triggers>
+			<trigger id="10544" level="#triggerLvl" type="RECEIVE_DAMAGE" chance="#triggerChance">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
 		<for>
 			<effect>
 				<mul order="0x30" stat="mDef" value="1.2"/>
@@ -2443,13 +2448,14 @@
 				<add order="0x40" stat="debuffResist" value="#debuffResist"/>
 				<add order="0x40" stat="bleedPower" value="#bleedPower"/>
 			</effect>
-			<effect>
+			
+			<!--<effect>
 				<triggers>
 					<trigger id="10544" level="#triggerLvl" type="RECEIVE_DAMAGE" chance="#triggerChance">
 						<player damage="1;0"/>
 					</trigger>
 				</triggers>
-			</effect>
+			</effect> -->
 		</for>
 	</skill>
     <!--
