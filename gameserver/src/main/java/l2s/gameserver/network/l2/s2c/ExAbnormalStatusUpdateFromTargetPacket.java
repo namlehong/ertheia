@@ -49,7 +49,7 @@ public class ExAbnormalStatusUpdateFromTargetPacket extends L2GameServerPacket
 			writeH(temp.dat);
 			writeH(temp.comboId); // combo type ???
 			writeH(temp.duration);
-			//writeD(temp.effectorObjectId); // Buffer OID
+			writeD(temp.effectorObjectId); // Buffer OID
 		}
 	}
 }
