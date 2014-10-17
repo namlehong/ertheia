@@ -24,11 +24,13 @@ public final class EnchantItemHolder extends AbstractHolder
 
 	public void addEnchantScroll(EnchantScroll enchantScroll)
 	{
+		System.out.println("add enchant id " + enchantScroll.getItemId());
 		_enchantScrolls.put(enchantScroll.getItemId(), enchantScroll);
 	}
 
 	public EnchantScroll getEnchantScroll(int id)
 	{
+		System.out.println("enchant scroll id " + id);
 		return _enchantScrolls.get(id);
 	}
 
