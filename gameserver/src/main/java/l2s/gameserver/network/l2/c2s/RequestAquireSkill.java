@@ -134,6 +134,8 @@ public class RequestAquireSkill extends L2GameClientPacket
 			case ALCHEMY:
 				if(trainer != null)
 				{
+					System.out.println("skillLearn id " + skillLearn.getId() + " cost " + skillLearn.getCost() + " item " + skillLearn.getItemCount() + " level " + skillLearn.getLevel() + " minlevel " + skillLearn.getMinLevel());
+					System.out.println("skill ud " + skill.getName() + " level " + skill.getLevel());
 					learnSimpleNextLevel(player, skillLearn, skill);
 					NpcInstance.showAlchemyAcquireList(player);
 					player.checkAlchemySkills();
@@ -150,6 +152,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 	private static void learnSimpleNextLevel(Player player, SkillLearn skillLearn, Skill skill)
 	{
 		final int skillLevel = player.getSkillLevel(skillLearn.getId(), 0);
+		System.out.println("skillLevel != skillLearn.getLevel() - 1 " + (skillLevel != skillLearn.getLevel() - 1));
 		if(skillLevel != skillLearn.getLevel() - 1)
 			return;
 
@@ -160,6 +163,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 	{
 		if(player.getSp() < skillLearn.getCost())
 		{
+			System.out.println("no sp");
 			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
 			return;
 		}
@@ -168,6 +172,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 			if(!player.consumeItem(skillLearn.getItemId(), skillLearn.getItemCount()))
 				return;
 
+		System.out.println("get skill");
 		player.sendPacket(new SystemMessagePacket(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
 
 		player.setSp(player.getSp() - skillLearn.getCost());
