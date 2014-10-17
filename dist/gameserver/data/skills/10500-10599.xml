@@ -3360,18 +3360,15 @@
 			<table name="#crit">516 616 716 816 916 1016 1116 1216 1316 1416</table>
 			<table name="#magicLevel">99</table>
 		</enchant>		
-		<!--<triggers>
+		<triggers>
 			<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
-		</triggers> -->
+		</triggers> 
 		<for>			
 			<effect name="RemoveTarget" time="0" isReflectable="false" chance="#chancer">
 				<def name="doStopTarget" value="true"/>
 			</effect>
 			<effect name="ShadowStep" time="0"/>
 			<effect name="Stun" chance="#chance" time="9">
-				<triggers>
-					<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
-				</triggers>
 			</effect>
 			<effect name="Debuff" time="15">
 				<add order="0x40" stat="pCritDamageStatic" value="486"/>
@@ -5523,21 +5520,23 @@
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 		<for>
-			<add order="0x40" stat="pCritDamageStatic" value="304"/>
-			<mul order="0x30" stat="blowRate" value="1.1"/>
-			<add order="0x40" stat="pCritRate" value="40"/>
-			<add order="0x40" stat="pCritRate" value="20">
-				<target direction="side"/>
-			</add>
-			<mul order="0x30" stat="pCritDamage" value="1.2">
-				<target direction="side"/>
-			</mul>			
-			<add order="0x40" stat="pCritRate" value="40">
-				<target direction="behind"/>
-			</add>
-			<mul order="0x30" stat="pCritDamage" value="1.4">
-				<target direction="behind"/>
-			</mul>
+			<effect>
+				<add order="0x40" stat="pCritDamageStatic" value="304"/>
+				<mul order="0x30" stat="blowRate" value="1.1"/>
+				<add order="0x40" stat="pCritRate" value="40"/>
+				<add order="0x40" stat="pCritRate" value="20">
+					<target direction="side"/>
+				</add>
+				<mul order="0x30" stat="pCritDamage" value="1.2">
+					<target direction="side"/>
+				</mul>			
+				<add order="0x40" stat="pCritRate" value="40">
+					<target direction="behind"/>
+				</add>
+				<mul order="0x30" stat="pCritDamage" value="1.4">
+					<target direction="behind"/>
+				</mul>
+			</effect>
 		</for>
 	</skill>
 </list>
