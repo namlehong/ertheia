@@ -3252,6 +3252,7 @@
 		<set name="skillType" value="CONT"/>
 		<set name="target" value="TARGET_SELF"/>
 		<for>
+			<effect name="TargetableDisable"/>
 			<effect count="-1" name="FakeDeath" value="300" time="1"/>
 		</for>
 	</skill>
@@ -5151,8 +5152,8 @@
 		</enchant>
 		<for>
 			<effect name="Bluff" time="0"/>
-			<effect name="RemoveTarget" time="0" chance="80"/>
-			<effect name="Stun" chance="100">
+			<!--<effect name="RemoveTarget" time="0" chance="80"/> -->
+			<effect name="Stun" chance="#activateRate">
 				<!--<triggers>
 					<trigger id="10555" level="1" type="ON_EXIT_EFFECT"/>
 				</triggers>-->
