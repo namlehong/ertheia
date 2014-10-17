@@ -1594,10 +1594,22 @@
 		desc_add2: none
 	-->
     <skill id="11152" levels="1" name="Sacrificial Soul">
+		<table name="#castRange">1100</table>
+		<table name="#mpConsume2">276</table>
+		<set name="castRange" value="#castRange"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill1395"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="97"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="15000"/>
+		<set name="skillType" value="DESTROY_SUMMON"/>>
+		<set name="target" value="TARGET_ONE_SUMMON"/>
+		<for>
+			<self_effect name="DebuffImmunity" time="3"/>
+		</for>
 	</skill>
     <!--
 		Shadow Snare Zone - Pulls nearby enemies to the center.
