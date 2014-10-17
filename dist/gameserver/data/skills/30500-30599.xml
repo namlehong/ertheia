@@ -317,28 +317,27 @@
 		desc_add2: none
 	-->
     <skill id="30504" levels="13" name="Gravity Hit">
+		<table name="#magicLevel">76 78 80 82 84 85 87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">75 77 78 79 80 81 82 82 83 83 84 84 85</table>
 		<table name="#power">10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 86081</table>
-		<table name="#magicLevel">76 78 80 82 84 85 87 89 91 93 95 97 99</table>
-		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="9000"/>
 		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="2500"/>
-		<set name="levelModifier" value="2"/>
-		<set name="icon" value="icon.skill30504"/>
-		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2500"/>
+		<set name="icon" value="icon.skill30504"/>
+		<set name="ignorePDef" value="50"/>
+		<set name="levelModifier" value="2"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="9000"/>
+		<set name="ride_state" value="NONE"/>
 		<set name="saveVs" value="CON"/>
-		<set name="shield_ignore_procent" value="50"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dual Fist"/>
 		</cond>
-		<!--TODO: Поднимает в воздух.-->
 	</skill>
     <!--
 		Pressure Punch - Attacks target with 17266 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon.
@@ -371,23 +370,23 @@
 		desc_add2: none
 	-->
     <skill id="30505" levels="7" name="Pressure Punch">
+		<table name="#magicLevel">87 89 91 93 95 97 99</table>
 		<table name="#mpConsume2">149 150 151 151 152 153 155</table>
 		<table name="#power">17266 19164 21530 24475 28150 32755 38563</table>
-		<table name="#magicLevel">87 89 91 93 95 97 99</table>
-		<set name="ride_state" value="NONE"/>
-		<set name="reuseDelay" value="30000"/>
 		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="2000"/>
-		<set name="levelModifier" value="2"/>
-		<set name="icon" value="icon.skill30505"/>
-		<set name="power" value="#power"/>
 		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2000"/>
+		<set name="icon" value="icon.skill30505"/>
+		<set name="levelModifier" value="2"/>
 		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="PDAM"/>
-		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="nextAction" value="attack"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="#power"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="ride_state" value="NONE"/>
 		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="target" value="TARGET_ONE"/>
 		<cond msgId="113">
 			<using kind="Dual Fist"/>
 		</cond>
@@ -595,7 +594,6 @@
 		<set name="hitTime" value="100"/>
 		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="1"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
 		<set name="magicLevel" value="#magicLevel"/>
 		<set name="icon" value="icon.skill30508"/>
 		<set name="castRange" value="300"/>
@@ -649,11 +647,31 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="30509" levels="4" name="Back Step">
+    <skill id="30509" levels="2" name="Back Step">
+    	<table name="#flyRadius">-200 -300</table>
+    	<table name="#magicLevel">85 90</table>
+    	<table name="#mpConsume2">27 30</table>
+		<set name="fly_animation_speed" value="333"/>
+		<set name="fly_radius" value="#flyRadius"/>
+		<set name="fly_to_back" value="true"/>
+		<set name="fly_type" value="DUMMY"/>
+		<set name="flyCourse" value="0"/>
 		<set name="icon" value="icon.skill30509"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="castRange" value="280"/>
+    	<set name="hitTime" value="100"/>
+    	<set name="magicLevel" value="#magicLevel"/>
+    	<set name="mpConsume2" value="#mpConsume2"/>
+    	<set name="reuseDelay" value="60000"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect name="TargetableDisable"/>
+			<effect name="HealPercent" time="0" value="10"/>
+		</for>
 	</skill>
     <!--
 		Air Light - For 10 min., you're less bound by gravity and P. Atk. + 10%.
@@ -682,31 +700,32 @@
 		desc_add2: none
 	-->
     <skill id="30511" levels="3" name="Air Light">
-		<table name="#mpConsume2">20 44 45</table>
-		<table name="#magicLevel">40 85 95</table>
 		<table name="#abnormal_level">1 2 3</table>
+		<table name="#magicLevel">40 85 95</table>
+		<table name="#mpConsume2">20 44 45</table>
+		<table name="#pAtk">1.1 1.15 1.2</table>
 		<table name="#pDef">1.1 1.15 1.2</table>
 		<table name="#resist">0 15 20</table>
-		<set name="reuseDelay" value="30000"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="1500"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="abnormal_time" value="600"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
-		<set name="magicLevel" value="#magicLevel"/>
+		<set name="abnormal_time" value="600"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill30511"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
-				<mul order="0x30" stat="pDef" value="#pDef"/>
-				<add order="0x40" stat="knockDownPower" value="#resist"/>
-				<add order="0x40" stat="knockBackPower" value="#resist"/>
-				<add order="0x40" stat="pullPower" value="#resist"/>
-				<add order="0x40" stat="airjokePower" value="#resist"/>
+				<mul order="0x50" stat="pDef" value="#pDef"/>
+				<mul order="0x50" stat="pAtk" value="#pAtk"/>
+				<add order="0x60" stat="knockDownPower" value="#resist"/>
+				<add order="0x60" stat="knockBackPower" value="#resist"/>
+				<add order="0x60" stat="pullPower" value="#resist"/>
+				<add order="0x60" stat="airjokePower" value="#resist"/>
 			</effect>
 		</for>
 	</skill>
@@ -819,8 +838,8 @@
 	-->
     <skill id="30515" levels="1" name="Spallation">
 		<set name="icon" value="icon.skill30515"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 	</skill>
     <!--
@@ -848,9 +867,23 @@
 	-->
     <skill id="30516" levels="1" name="Gravity Barrier">
 		<set name="icon" value="icon.skill30516"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="coolTime" value="500"/>
+    	<set name="hitTime" value="1000"/>
+    	<set name="magicLevel" value="85"/>
+    	<set name="mpConsume2" value="30"/>
+    	<set name="reuseDelay" value="300000"/>
+		<for>
+			<effect name="DebuffImmunity"/>
+			<effect name="Invulnerable"/>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="10"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Heavy Hand - Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon.
@@ -884,32 +917,32 @@
 		desc_add2: none
 	-->
     <skill id="30517" levels="8" name="Heavy Hand">
-		<table name="#mpConsume2">73 74 75 75 75 76 76 77</table>
-		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
 		<table name="#activateRate">50 52 54 56 58 60 62 65</table>	<!--TODO: Check.-->
-		<set name="reuseDelay" value="60000"/>
-		<set name="coolTime" value="500"/>
-		<set name="hitTime" value="2000"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="activateRate" value="#activateRate"/>
+		<table name="#magicLevel">85 87 89 91 93 95 97 99</table>
+		<table name="#mpConsume2">73 74 75 75 75 76 76 77</table>
 		<set name="abnormal_effect" value="GREAT_GRAVITY"/>
-		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
 		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
 		<set name="abnormal_type" value="root_physically"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="2000"/>
 		<set name="icon" value="icon.skill30517"/>
-		<set name="target" value="TARGET_AURA"/>
-		<set name="skillType" value="DEBUFF"/>
-		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="trait" value="HOLD"/>
-		<set name="saveVs" value="CON"/>
 		<set name="levelModifier" value="2"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="60000"/>
+		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_AURA"/>
+		<set name="trait" value="HOLD"/>
 		<cond msgId="113">
 			<using kind="Dual Fist"/>
 		</cond>
 		<for>
-			<effect name="Root"/>
+			<effect name="Root" time="10"/>
 		</for>
 	</skill>
     <!--
@@ -1001,10 +1034,27 @@
 		desc_add2: none
 	-->
     <skill id="30519" levels="1" name="Warped Space">
+    	<set name="mpConsume2" value="772"/>
+    	<set name="magicLevel" value="85"/>
+    	<set name="hitTime" value="2500"/>
+    	<set name="coolTime" value="500"/>
+    	<set name="abnormal_time" value="30"/>
+    	<set name="abnormal_level" value="1"/>
+    	<set name="reuseDelay" value="600000"/>
 		<set name="icon" value="icon.skill30519"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x70" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x70" stat="mAtkSpd" value="0.7"/>
+				<mul order="0x70" stat="runSpd" value="0.7"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Steel Mind - For 30 sec., HP stays at 1. Speed + 50, P. Atk. + 15%, P. Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90. Normal attacks have normal damage x 5. When duration ends, 30% o
@@ -1032,10 +1082,39 @@
 		desc_add2: none
 	-->
     <skill id="30520" levels="2" name="Steel Mind">
+    	<table name="#magicLevel">85 90</table>
+    	<table name="#mpConsume2">221 232</table>
+    	<table name="#pAtk">1.15 1.3</table>
+    	<table name="#pCritDamage">1.1 1.15</table>
+    	<table name="#runSpd">50 70</table>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="30"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill30520"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+		<triggers>
+			<trigger id="1258" level="4" type="ON_EXIT_EFFECT" chance="100"/>
+		</triggers>
+		<for>
+			<effect name="DeathImmunity"/>
+			<effect>
+				<add order="0x60" stat="runSpd" value="#runSpd"/>
+				<mul order="0x50" stat="pAtk" value="#pAtk"/>
+				<mul order="0x50" stat="pCritDamage" value="#pCritDamage"/>
+				<add order="0x60" stat="knockBackPower" value="90"/>
+				<add order="0x60" stat="knockDownPower" value="90"/>
+				<add order="0x60" stat="pullPower" value="90"/>
+				<add order="0x60" stat="airjokePower" value="90"/>
+				<mul order="0x50" stat="pvpPhysDmgBonus" value="5"/>
+				<mul order="0x50" stat="pvePhysDmgBonus" value="5"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Damage Up - Inflicts normal damage x 4.
@@ -1091,9 +1170,9 @@
 	-->
     <skill id="30522" levels="1" name="Eminent Attack Movement">
 		<set name="icon" value="icon.skill30522"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<triggers>
 			<trigger id="30523" level="1" type="RECEIVE_DAMAGE" chance="5" increasing="true">
 				<player damage="100;0"/>
@@ -1129,9 +1208,8 @@
     <skill id="30523" levels="3" name="Battle Dash">
 		<table name="#runSpd">10 20 50</table>
 		<table name="#abnormal_level">1 2 3</table>
-		<set name="abnormal_time" value="10"/>	<!--TODO: Check.-->
+		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
 		<set name="magicLevel" value="85"/>
 		<set name="icon" value="icon.skill30523"/>
 		<set name="target" value="TARGET_SELF"/>
@@ -1139,7 +1217,7 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<for>
 			<effect>
-				<add order="0x40" stat="runSpd" value="#runSpd"/>
+				<add order="0x60" stat="runSpd" value="#runSpd"/>
 			</effect>
 		</for>
 	</skill>
@@ -1298,32 +1376,35 @@
 		desc_add2: none
 	-->
     <skill id="30530" levels="12" name="Crushing Air">
-		<table name="#mpConsume2">34 35 35 36 36 37 37 37 37 38 38 38</table>
+		<table name="#activateRate">40 40 43 46 49 60 62 64 66 68 70 75</table>
 		<table name="#magicLevel">76 78 80 82 84 86 88 90 92 94 96 98</table>
-		<table name="#activateRate">40 40 43 46 49 60 62 64 66 68 70 75</table>	<!--TODO: Check.-->
-		<set name="reuseDelay" value="30000"/>
-		<set name="coolTime" value="500"/>
-		<set name="castRange" value="400"/>
-		<set name="hitTime" value="1000"/>
-		<set name="hitCancelTime" value="500"/>
-		<set name="mpConsume2" value="#mpConsume2"/>
-		<set name="magicLevel" value="#magicLevel"/>
-		<set name="activateRate" value="#activateRate"/>
+		<table name="#mpConsume2">34 35 35 36 36 37 37 37 37 38 38 38</table>
 		<set name="abnormal_effect" value="OBLATE"/>
-		<set name="abnormal_time" value="10"/>
 		<set name="abnormal_level" value="1"/>
-		<!--TODO: <set name="abnormal_type" value=""/>-->
+		<set name="abnormal_time" value="10"/>
+		<set name="activateRate" value="#activateRate"/>
+		<set name="castRange" value="400"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="hitTime" value="1000"/>
 		<set name="icon" value="icon.skill30530"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="DEBUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="mpConsume2" value="#mpConsume2"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="trait" value="DERANGEMENT"/>
+		<set name="reuseDelay" value="30000"/>
 		<set name="saveVs" value="CON"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="DERANGEMENT"/>
 		<cond msgId="113">
 			<using kind="Dual Fist"/>
 		</cond>
 		<for>
-			<effect name="Immobilize"/>
+			<effect>
+				<mul order="0x70" stat="pAtkSpd" value="0.8"/>
+				<mul order="0x70" stat="mAtkSpd" value="0.8"/>
+				<mul order="0x70" stat="runSpd" value="0.05"/>
+			</effect>
 		</for>
 	</skill>
     <!--
@@ -1526,10 +1607,18 @@
 		desc_add2: Increases the effect.
 	-->
     <skill id="30543" levels="2" name="Eminent Attribute Resistance">
+    	<table name="#defenceHoly">0 30</table>
+    	<table name="#defenceWind">30 30</table>
+    	<table name="#magicLevel">85 90</table>
 		<set name="icon" value="icon.skill11006"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="magicLevel" value="#magicLevel"/>
+		<for>
+			<add order="0x40" stat="defenceWind" value="#defenceWind"/>
+			<add order="0x40" stat="defenceHoly" value="#defenceHoly"/>
+		</for>
 	</skill>
     <!--
 		Eminent Trait Resistance - Hold/Mental Resistance + 30.
@@ -1557,10 +1646,24 @@
 		desc_add2: Increases the effect.
 	-->
     <skill id="30544" levels="2" name="Eminent Trait Resistance">
+    	<table name="#knockBackPower">0 30</table>
+    	<table name="#knockDownPower">0 30</table>
+    	<table name="#magicLevel">85 90</table>
+    	<table name="#mentalResist">30 30</table>
+    	<table name="#pullResist">0 30</table>
+    	<table name="#rootResist">30 30</table>
 		<set name="icon" value="icon.skill10005"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
-		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="magicLevel" value="#magicLevel"/>
+		<for>
+			<add order="0x40" stat="rootResist" value="#rootResist"/>
+			<add order="0x40" stat="mentalResist" value="#mentalResist"/>
+			<add order="0x40" stat="pullResist" value="#pullResist"/>
+			<add order="0x40" stat="knockBackPower" value="#knockBackPower"/>
+			<add order="0x40" stat="knockDownPower" value="#knockDownPower"/>
+		</for>
 	</skill>
     <!--
 		Eminent Ability - STR + 2.
@@ -1589,12 +1692,14 @@
 		desc_add2: none
 	-->
     <skill id="30545" levels="3" name="Eminent Ability">
-		<table name="#STR">2 4 14</table>
 		<table name="#activateSkillMasterySTR">0 1 1</table>
+		<table name="#STR">2 4 14</table>
+    	<table name="#magicLevel">85 90 95</table>
 		<set name="icon" value="icon.skill0430"/>
-		<set name="target" value="TARGET_SELF"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="magicLevel" value="#magicLevel"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<add order="0x10" stat="STR" value="#STR"/>
 			<set order="0x100" stat="activateSkillMasterySTR" value="#activateSkillMasterySTR"/>

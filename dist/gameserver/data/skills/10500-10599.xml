@@ -2433,6 +2433,11 @@
 		<enchant type="9" name="Recycle">
 			<table name="#reuseDelay">582000 564000 546000 528000 510000 492000 474000 456000 438000 420000</table>
 		</enchant>
+		<triggers>
+			<trigger id="10544" level="#triggerLvl" type="RECEIVE_DAMAGE" chance="#triggerChance">
+				<player damage="1;0"/>
+			</trigger>
+		</triggers>
 		<for>
 			<effect>
 				<mul order="0x30" stat="mDef" value="1.2"/>
@@ -2443,13 +2448,14 @@
 				<add order="0x40" stat="debuffResist" value="#debuffResist"/>
 				<add order="0x40" stat="bleedPower" value="#bleedPower"/>
 			</effect>
-			<effect>
+			
+			<!--<effect>
 				<triggers>
 					<trigger id="10544" level="#triggerLvl" type="RECEIVE_DAMAGE" chance="#triggerChance">
 						<player damage="1;0"/>
 					</trigger>
 				</triggers>
-			</effect>
+			</effect> -->
 		</for>
 	</skill>
     <!--
@@ -3246,6 +3252,7 @@
 		<set name="skillType" value="CONT"/>
 		<set name="target" value="TARGET_SELF"/>
 		<for>
+			<effect name="TargetableDisable"/>
 			<effect count="-1" name="FakeDeath" value="300" time="1"/>
 		</for>
 	</skill>
@@ -3352,15 +3359,17 @@
 		<enchant type="3" name="Power">
 			<table name="#crit">516 616 716 816 916 1016 1116 1216 1316 1416</table>
 			<table name="#magicLevel">99</table>
-		</enchant>
+		</enchant>		
 		<triggers>
 			<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
-		</triggers>
-		<for>
+		</triggers> 
+		<for>			
 			<effect name="RemoveTarget" time="0" isReflectable="false" chance="#chancer">
 				<def name="doStopTarget" value="true"/>
 			</effect>
-			<effect name="Stun" chance="#chance" time="9"/>
+			<effect name="ShadowStep" time="0"/>
+			<effect name="Stun" chance="#chance" time="9">
+			</effect>
 			<effect name="Debuff" time="15">
 				<add order="0x40" stat="pCritDamageStatic" value="486"/>
 				<mul order="0x30" stat="hpLimit" value="0.5"/>
@@ -4227,7 +4236,7 @@
 	-->
     <skill id="10540" levels="5" name="Throw Sand">
 		<table name="#abnormal_level">1 2 3 4 5</table>
-		<table name="#accPhysical"> 12 13 14 15 16 </table>
+		<table name="#accPhysical"> 20 25 30 35 40 </table>
 		<table name="#activateRate">50 55 60 65 70 75</table>
 		<table name="#bleedResist">0</table>
 		<table name="#paralyzeResist">0</table>
@@ -4287,11 +4296,11 @@
 		</enchant>
 		<for>
 			<effect name="Debuff">
-				<sub order="0x40" stat="pAccCombat" value="#accPhysical"/>
-				<sub order="0x40" stat="paralyzeResist" value="#paralyzeResist"/>
-				<sub order="0x40" stat="bleedResist" value="#bleedResist"/>
-				<sub order="0x40" stat="poisonResist" value="#poisonResist"/>
-				<sub order="0x40" stat="stunResist" value="#stunResist"/>
+				<sub order="0x70" stat="pAccCombat" value="#accPhysical"/>
+				<sub order="0x70" stat="paralyzeResist" value="#paralyzeResist"/>
+				<sub order="0x70" stat="bleedResist" value="#bleedResist"/>
+				<sub order="0x70" stat="poisonResist" value="#poisonResist"/>
+				<sub order="0x70" stat="stunResist" value="#stunResist"/>
 			</effect>
 			<effect name="Aggression"/>
 		</for>
@@ -4386,18 +4395,24 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<triggers>
+		<!--<triggers>
 			<trigger id="10557" level="#triggerLevel" type="CRIT" chance="#triggerChance"/>
-		</triggers>
+		</triggers> -->
 		<for>
 			<add order="0x40" stat="pCritDamageStatic" value="609"/>
 			<mul order="0x30" stat="SkillCritChanceMod" value="#SkillCritChanceMod"/>
 			<add order="0x40" stat="pCritRate" value="#sideCritChanceRcpt">
 				<target direction="side"/>
 			</add>
+			<mul order="0x30" stat="pCritDamage" value="1.4">
+				<target direction="side"/>
+			</mul>			
 			<add order="0x40" stat="pCritRate" value="#behindCritChanceRcpt">
 				<target direction="behind"/>
 			</add>
+			<mul order="0x30" stat="pCritDamage" value="1.7">
+				<target direction="behind"/>
+			</mul>
 		</for>
 	</skill>
     <!--
@@ -5139,11 +5154,11 @@
 		</enchant>
 		<for>
 			<effect name="Bluff" time="0"/>
-			<effect name="RemoveTarget" time="0" chance="80"/>
-			<effect name="Stun" chance="65">
-				<triggers>
+			<!--<effect name="RemoveTarget" time="0" chance="80"/> -->
+			<effect name="Stun" chance="#activateRate">
+				<!--<triggers>
 					<trigger id="10555" level="1" type="ON_EXIT_EFFECT"/>
-				</triggers>
+				</triggers>-->
 			</effect>
 		</for>
 	</skill>
@@ -5506,9 +5521,20 @@
 		</cond>
 		<for>
 			<effect>
-				<add order="0x40" stat="pCritDamageStatic" value="304"/>
-				<mul order="0x30" stat="blowRate" value="1.1"/>
-				<add order="0x40" stat="pCritRate" value="40"/>
+				<add order="0x60" stat="pCritDamageStatic" value="304"/>
+				<mul order="0x50" stat="blowRate" value="1.1"/>
+				<add order="0x60" stat="pCritRate" value="20">
+					<target direction="side"/>
+				</add>
+				<mul order="0x50" stat="pCritDamage" value="1.2">
+					<target direction="side"/>
+				</mul>			
+				<add order="0x60" stat="pCritRate" value="40">
+					<target direction="behind"/>
+				</add>
+				<mul order="0x50" stat="pCritDamage" value="1.4">
+					<target direction="behind"/>
+				</mul>
 			</effect>
 		</for>
 	</skill>

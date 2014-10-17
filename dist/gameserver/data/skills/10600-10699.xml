@@ -170,9 +170,20 @@
 		</cond>
 		<for>
 			<effect>
-				<add order="0x40" stat="pCritDamageStatic" value="304"/>
-				<mul order="0x30" stat="blowRate" value="1.1"/>
-				<add order="0x40" stat="pCritRate" value="40"/>
+				<add order="0x60" stat="pCritDamageStatic" value="304"/>
+				<mul order="0x50" stat="blowRate" value="1.15"/>
+				<add order="0x60" stat="pCritRate" value="30">
+					<target direction="side"/>
+				</add>
+				<mul order="0x50" stat="pCritDamage" value="1.3">
+					<target direction="side"/>
+				</mul>			
+				<add order="0x60" stat="pCritRate" value="50">
+					<target direction="behind"/>
+				</add>
+				<mul order="0x50" stat="pCritDamage" value="1.5">
+					<target direction="behind"/>
+				</mul>
 			</effect>
 		</for>
 	</skill>
@@ -375,8 +386,20 @@
 		</cond>
 		<for>
 			<effect>
-				<add order="0x40" stat="pCritDamageStatic" value="608"/>
-				<add order="0x40" stat="pCritRate" value="40"/>
+				<add order="0x60" stat="pCritDamageStatic" value="608"/>
+				<mul order="0x50" stat="blowRate" value="1.05"/>
+				<add order="0x60" stat="pCritRate" value="30">
+					<target direction="side"/>
+				</add>
+				<mul order="0x50" stat="pCritDamage" value="1.3">
+					<target direction="side"/>
+				</mul>			
+				<add order="0x60" stat="pCritRate" value="50">
+					<target direction="behind"/>
+				</add>
+				<mul order="0x50" stat="pCritDamage" value="1.5">
+					<target direction="behind"/>
+				</mul>
 			</effect>
 		</for>
 	</skill>
