@@ -1033,10 +1033,27 @@
 		desc_add2: none
 	-->
     <skill id="30519" levels="1" name="Warped Space">
+    	<set name="mpConsume2" value="772"/>
+    	<set name="magicLevel" value="85"/>
+    	<set name="hitTime" value="2500"/>
+    	<set name="coolTime" value="500"/>
+    	<set name="abnormal_time" value="30"/>
+    	<set name="abnormal_level" value="1"/>
+    	<set name="reuseDelay" value="600000"/>
 		<set name="icon" value="icon.skill30519"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<cond msgId="113">
+			<using kind="Dual Fist"/>
+		</cond>
+		<for>
+			<effect>
+				<mul order="0x70" stat="pAtkSpd" value="0.7"/>
+				<mul order="0x70" stat="mAtkSpd" value="0.7"/>
+				<mul order="0x70" stat="runSpd" value="0.7"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Steel Mind - For 30 sec., HP stays at 1. Speed + 50, P. Atk. + 15%, P. Critical Damage + 10%, Skill Critical Damage + 10%, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 90. Normal attacks have normal damage x 5. When duration ends, 30% o
@@ -1080,9 +1097,11 @@
 		<set name="reuseDelay" value="300000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
+		<triggers>
+			<trigger id="1258" level="4" type="ON_EXIT_EFFECT" chance="100"/>
+		</triggers>
 		<for>
 			<effect name="DeathImmunity"/>
-			<effect name="HealPercent" time="0" value="30"/>
 			<effect>
 				<add order="0x60" stat="runSpd" value="#runSpd"/>
 				<mul order="0x50" stat="pAtk" value="#pAtk"/>
