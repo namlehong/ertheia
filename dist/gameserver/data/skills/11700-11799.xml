@@ -26,6 +26,7 @@
 		desc_add2: none
 	-->
     <skill id="11746" levels="1" name="Superior Inquisition">
+    	<table name="#bonusDmg">1.5 1.55 1.6</table>
 		<set name="icon" value="icon.skill1520"/>
 		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_TOGGLE"/>
@@ -33,9 +34,9 @@
 		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect time="-1">
-				<mul order="0x30" stat="pvePhysDmgBonus" value="1.50"/>
-				<mul order="0x30" stat="pveMagicSkillDmgBonus" value="1.50"/>
-				<mul order="0x30" stat="pvePhysSkillDmgBonus" value="1.50"/>
+				<mul order="0x30" stat="pvePhysDmgBonus" value="#bonusDmg"/>
+				<mul order="0x30" stat="pveMagicSkillDmgBonus" value="#bonusDmg"/>
+				<mul order="0x30" stat="pvePhysSkillDmgBonus" value="#bonusDmg"/>
 				<mul order="0x30" stat="mpConsum" value="1.30"/>
 			</effect>
 		</for>
