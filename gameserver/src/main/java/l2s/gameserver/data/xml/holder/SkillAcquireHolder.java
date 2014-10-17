@@ -433,10 +433,16 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 		return skillLearnMap.values();
 	}
-	
 
 	private Collection<SkillLearn> getAvaliableAlchemySkillList(Collection<SkillLearn> skillLearns, Skill[] skills, int level, int dualClassLevel, Race race)
 	{
+		TIntIntMap skillLvls = new TIntIntHashMap();
+		for(Skill skill : skills)
+		{
+			if(skill == null)
+				continue;
+			skillLvls.put(skill.getId(), skill.getLevel());
+		}
 		Map<Integer, SkillLearn> skillLearnMap = new TreeMap<Integer, SkillLearn>();
 		for(SkillLearn temp : skillLearns)
 		{
@@ -448,22 +454,8 @@ public final class SkillAcquireHolder extends AbstractHolder
 
 			int skillId = temp.getId();
 			int skillLvl = temp.getLevel();
-			if(!skillLearnMap.containsKey(skillId) || skillLearnMap.containsKey(skillId) && skillLvl > skillLearnMap.get(skillId).getLevel())
-				skillLearnMap.put(skillId, temp);
-		}
-
-		for(Skill skill : skills)
-		{
-			int skillId = skill.getId();
-			if(!skillLearnMap.containsKey(skillId))
-				continue;
-
-			SkillLearn temp = skillLearnMap.get(skillId);
-			if(temp == null)
-				continue;
-
-			if(temp.getLevel() <= skill.getLevel())
-				skillLearnMap.remove(skillId);
+			if(!skillLvls.containsKey(skillId) && skillLvl == 1 || skillLvls.containsKey(skillId) && (skillLvl - skillLvls.get(skillId)) == 1)
+				skillLearnMap.put(temp.getId(), temp);
 		}
 
 		return skillLearnMap.values();

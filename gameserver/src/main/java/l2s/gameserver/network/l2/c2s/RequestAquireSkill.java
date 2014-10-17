@@ -135,7 +135,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 				if(trainer != null)
 				{
 					System.out.println("skillLearn id " + skillLearn.getId() + " cost " + skillLearn.getCost() + " item " + skillLearn.getItemCount() + " level " + skillLearn.getLevel() + " minlevel " + skillLearn.getMinLevel());
-					System.out.println("skill ud " + skill.getName() + " level " + skill.getLevel());
+					System.out.println("skill id " + skill.getName() + " level " + skill.getLevel());
 					learnSimpleNextLevel(player, skillLearn, skill);
 					NpcInstance.showAlchemyAcquireList(player);
 					player.checkAlchemySkills();
