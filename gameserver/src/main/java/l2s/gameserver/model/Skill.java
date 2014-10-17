@@ -1763,7 +1763,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			reflectedSkill = false;
 
 		boolean reflected = false;
-		if(reflectedSkill)
+//		if(reflectedSkill)
+		// dont check reflect skill for effect
+		if(isReflectable())
 		{
 			if(!self && isOffensive() && effected != effector && !effector.isTrap())
 			{

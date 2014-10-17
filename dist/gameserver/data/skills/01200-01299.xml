@@ -7610,7 +7610,7 @@
     <skill id="1263" levels="21" name="Curse Gloom">
 		<table name="#activateRate">80</table>
 		<table name="#mpConsume">39 44 48 52 54 55 58 60 62 64 65 67 69 71 73 75 77 79 82 84 86</table>
-		<table name="#mDefDown">15 15 15 15 15 20 20 20 20 30 30 30 30 40 40 40 40 50 50 50 50</table>
+		<table name="#mDefDown">0.85 0.85 0.85 0.85 0.85 0.80 0.80 0.80 0.80 0.70 0.70 0.70 0.70 0.60 0.60 0.60 0.60 0.50 0.50 0.50 0.50</table>
 		<table name="#elementDamAmplified">10 10 10 10 10 20 20 20 20 30 30 30 30 40 40 40 40 50 50 50 50</table>
 		<table name="#power">47 52 57 63 66 68 71 74 77 79 82 84 87 93 96 99 102 105 108 112 115</table>
 		<table name="#magicLevel">44 48 52 56 58 60 62 64 66 68 70 72 74 77 79 81 83 85 90 95 99</table>
@@ -7648,13 +7648,13 @@
 		-->
 		<for>
 			<effect name="Debuff">
-				<mul order="0x30" stat="mDef" value="#mDefDown"/>
-				<sub order="0x40" stat="defenceFire" value="#elementDamAmplified"/>
-				<sub order="0x40" stat="defenceWater" value="#elementDamAmplified"/>
-				<sub order="0x40" stat="defenceWind" value="#elementDamAmplified"/>
-				<sub order="0x40" stat="defenceEarth" value="#elementDamAmplified"/>
-				<sub order="0x40" stat="defenceHoly" value="#elementDamAmplified"/>
-				<sub order="0x40" stat="defenceUnholy" value="#elementDamAmplified"/>
+				<mul order="0x70" stat="mDef" value="#mDefDown"/>
+				<sub order="0x80" stat="defenceFire" value="#elementDamAmplified"/>
+				<sub order="0x80" stat="defenceWater" value="#elementDamAmplified"/>
+				<sub order="0x80" stat="defenceWind" value="#elementDamAmplified"/>
+				<sub order="0x80" stat="defenceEarth" value="#elementDamAmplified"/>
+				<sub order="0x80" stat="defenceHoly" value="#elementDamAmplified"/>
+				<sub order="0x80" stat="defenceUnholy" value="#elementDamAmplified"/>
 			</effect>
 		</for>
 	</skill>
