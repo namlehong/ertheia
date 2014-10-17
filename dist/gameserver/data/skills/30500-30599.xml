@@ -866,9 +866,23 @@
 	-->
     <skill id="30516" levels="1" name="Gravity Barrier">
 		<set name="icon" value="icon.skill30516"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
+    	<set name="coolTime" value="500"/>
+    	<set name="hitTime" value="1000"/>
+    	<set name="magicLevel" value="85"/>
+    	<set name="mpConsume2" value="30"/>
+    	<set name="reuseDelay" value="300000"/>
+		<for>
+			<effect name="DebuffImmunity"/>
+			<effect name="Invulnerable"/>
+			<effect name="i_dispel_by_category" time="0">
+				<def name="abnormal_category" value="slot_debuff"/>
+				<def name="dispel_chance" value="100"/>
+				<def name="max_count" value="10"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Heavy Hand - Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon.
