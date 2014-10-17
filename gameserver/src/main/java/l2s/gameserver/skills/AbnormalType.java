@@ -438,6 +438,11 @@ public enum AbnormalType
 	aqua_crash,
 	aqua_crash_frozen,
 	aqua_crash_freeze,
+	elemental_destruction_fire,
+	elemental_destruction_water,
+	elemental_destruction_earth,
+	elemental_destruction_wind,
+	elemental_destruction_4,
 
 	//custom
 	gerold_buff;
