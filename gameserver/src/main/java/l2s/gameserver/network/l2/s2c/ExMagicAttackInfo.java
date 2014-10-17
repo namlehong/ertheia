@@ -6,19 +6,19 @@ package l2s.gameserver.network.l2.s2c;
  */
 public class ExMagicAttackInfo extends L2GameServerPacket
 {
-	private final int _targetId, _skillId;
+	private final int _casterObjID, _targetObjID;
 
-	public ExMagicAttackInfo(int targetId, int skillId)
+	public ExMagicAttackInfo(int casterObjID, int targetObjID)
 	{
-		_targetId = targetId;
-		_skillId = skillId;
+		_casterObjID = casterObjID;
+		_targetObjID = targetObjID;
 	}
 
 	@Override
 	protected void writeImpl()
 	{
-		writeD(_targetId);
-		writeD(_skillId);
-		writeD(0x01);
+		writeD(_casterObjID);
+		writeD(_targetObjID);
+		writeD(0x03);
 	}
 }

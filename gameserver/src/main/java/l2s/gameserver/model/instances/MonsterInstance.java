@@ -38,6 +38,7 @@ import l2s.gameserver.model.reward.RewardItem;
 import l2s.gameserver.model.reward.RewardList;
 import l2s.gameserver.model.reward.RewardType;
 import l2s.gameserver.network.l2.components.SystemMsg;
+import l2s.gameserver.network.l2.s2c.ExMagicAttackInfo;
 import l2s.gameserver.network.l2.s2c.MagicSkillUse;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.SystemMessage;
@@ -861,6 +862,7 @@ public class MonsterInstance extends NpcInstance
 		if(xp > 0 && killer.getObjectId() == overhitAttackerId)
 		{
 			int overHitExp = calculateOverhitExp(xp);
+			killer.sendPacket(new ExMagicAttackInfo(killer.getObjectId(), this.getObjectId()));
 			killer.sendPacket(SystemMsg.OVERHIT, new SystemMessage(SystemMessage.ACQUIRED_S1_BONUS_EXPERIENCE_THROUGH_OVER_HIT).addNumber(overHitExp));
 			xp += overHitExp;
 		}
