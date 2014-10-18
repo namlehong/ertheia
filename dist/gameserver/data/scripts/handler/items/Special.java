@@ -1,7 +1,8 @@
 package handler.items;
 
 import org.apache.commons.lang3.ArrayUtils;
-import l2s.commons.util.Rnd;
+
+import l2s.gameserver.data.xml.holder.InstantZoneHolder;
 import l2s.gameserver.instancemanager.QuestManager;
 import l2s.gameserver.instancemanager.ReflectionManager;
 import l2s.gameserver.model.GameObject;
@@ -14,11 +15,12 @@ import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.network.l2.components.CustomMessage;
 import l2s.gameserver.network.l2.components.SystemMsg;
-import l2s.gameserver.network.l2.s2c.MagicSkillUse;
+import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.NpcHtmlMessagePacket;
 import l2s.gameserver.network.l2.s2c.SystemMessage;
 import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.tables.SkillTable;
+import l2s.gameserver.templates.InstantZone;
 import l2s.gameserver.utils.Location;
 import bosses.AntharasManager;
 import bosses.ValakasManager;
@@ -81,6 +83,18 @@ public class Special extends SimpleItemHandler
 				return use34033(player, ctrl);
 			case 17603:
 				return use17603(player, ctrl);
+			case 35556:
+				return useKartiaTicket(player, ctrl, item, 205);
+			case 35557:
+				return useKartiaTicket(player, ctrl, item, 206);
+			case 35558:
+				return useKartiaTicket(player, ctrl, item, 207);
+			case 35559:
+				return useKartiaTicket(player, ctrl, item, 208);
+			case 35560:
+				return useKartiaTicket(player, ctrl, item, 209);
+			case 35561:
+				return useKartiaTicket(player, ctrl, item, 210);
 			default:
 				return false;
 		}
@@ -172,7 +186,6 @@ public class Special extends SimpleItemHandler
 			{
 				useItem(player, 13809, 1);
 				player.getReflection().openDoor(_door);
-				player.broadcastPacket(new MagicSkillUse(player, player, 2634, 1, 0, 0));
 				return false;
 			}
 			else
@@ -429,6 +442,42 @@ public class Special extends SimpleItemHandler
 		return false;
 	}
 
+	// Kartia Extra Ticket
+	private boolean useKartiaTicket(Player player, boolean ctrl, ItemInstance item, int instanceID)
+	{
+		int itemId = item.getItemId();
+		
+		String itemName = "item" + itemId; //the real name is too long
+		
+		long instanceReuse = player.getInstanceReuse(instanceID);
+		
+		int itemReuse = player.getVarInt(itemName);
+		
+		InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(instanceID);
+		
+		if(InstantZoneHolder.getInstance().getMinutesToNextEntrance(instanceID, player) > 0)
+		{
+			if(itemReuse == 0)
+			{
+				player.removeInstanceReuse(205);
+				Functions.removeItem(player, itemId, 1);
+				player.setVar(itemName, 1, instanceReuse);
+				player.sendPacket(new ExShowScreenMessage("Bạn có thể tham gia "+ iz.getName() + " thêm 1 lần nữa.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
+			else
+			{
+				player.sendPacket(new ExShowScreenMessage("Chỉ có thể sử dụng loại vé này 1 lần trong 24h.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
+		}
+		else
+		{
+			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
+			
+		}
+		
+		return true;
+	}
+	
 	private static long useItem(Player player, int itemId, long count)
 	{
 		player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(itemId));
