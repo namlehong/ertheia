@@ -331,6 +331,27 @@
 		desc_add2: none
 	-->
     <skill id="30005" levels="4" name="Storm Sign">
+    	
+		<set name="abnormal_effect" value="STIGMA_STORM"/>
+		<set name="abnormal_time" value="50"/>  <!-- testing purpose -->
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="stigma_storm"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="icon" value="icon.skill30027"/>
+		<!--<set name="activateRate" value="40"/>-->
+		<set name="isSelfDispellable" value="false"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="DEBUFF"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect>
+				<mul order="0x70" stat="mDef" value="0.5"/>
+				<sub order="0x80" stat="runSpd" value="100"/>
+			</effect>
+		</for>
+		<!--
 		<set name="abnormal_level" value="9"/>
 		<set name="abnormal_time" value="60"/>
 		<set name="abnormal_type" value="invincibility_special"/>
@@ -340,13 +361,7 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<for>
-			<effect>
-				<add order="0x40" stat="runSpd" value="5"/>
-				<add order="0x40" stat="regHp" value="10"/> <!-- TODO: Верное значение -->
-				<add order="0x40" stat="regMp" value="10"/> <!-- TODO: Верное значение -->
-			</effect>
-		</for>
+		-->
 	</skill>
     <!--
 		Storm Rage - Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon.
