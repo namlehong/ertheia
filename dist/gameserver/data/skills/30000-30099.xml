@@ -1437,8 +1437,9 @@
 		desc_add2: none
 	-->
     <skill id="30027" levels="1" name="Destructive Bolt">
+    	<!--
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
-		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_time" value="5"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="power" value="150"/>
@@ -1452,6 +1453,36 @@
 			<effect name="Debuff">
 				<triggers>
 					<trigger id="30005" level="4" type="ON_FINISH_EFFECT" chance="100"/>
+				</triggers>
+			</effect>
+		</for>
+		-->
+		<set name="abnormal_effect" value="SLEEP"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_type" value="sleep"/>
+		<set name="activateRate" value="100"/>
+		<set name="analog_skills" value="1201;1394;1069"/>
+		<set name="castRange" value="600"/>
+		<set name="effectPoint" value="655"/>
+		<set name="hitTime" value="1500"/>
+		<set name="icon" value="icon.skill11778"/>
+		<set name="levelModifier" value="2"/>
+		<set name="levelModifier" value="2"/>
+		<set name="magicLevel" value="98"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="mpConsume2" value="26"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="SLEEP"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="trait" value="SLEEP"/>
+		<set name="delayedEffect" value="11779"/> 
+		<for>
+			<effect name="Sleep">
+				<triggers>
+					<trigger id="11779" level="5" type="ON_FINISH_EFFECT" chance="100"/>
 				</triggers>
 			</effect>
 		</for>
