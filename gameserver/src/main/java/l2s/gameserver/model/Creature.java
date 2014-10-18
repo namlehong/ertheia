@@ -1221,7 +1221,7 @@ public abstract class Creature extends GameObject
 
 	public void useTriggers(GameObject target, TriggerType type, Skill ex, Skill owner, StatTemplate triggersOwner, double damage)
 	{
-		Set<TriggerInfo> triggers = null;;
+		Set<TriggerInfo> triggers = null;
 		switch(type)
 		{
 			case ON_START_EFFECT:
