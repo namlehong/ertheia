@@ -133,7 +133,7 @@
 		<table name="#abnormal_effect">NONE NONE STIGMA_STORM</table>
 		<set name="castRange" value="1100"/>
 		<set name="abnormal_effect" value="#abnormal_effect"/>
-		<set name="abnormal_time" value="5"/>
+		<set name="abnormal_time" value="50"/>  <!-- testing purpose -->
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_type" value="stigma_storm"/>
 		<set name="magicType" value="SPECIAL"/>
@@ -331,10 +331,24 @@
 		desc_add2: none
 	-->
     <skill id="30005" levels="4" name="Storm Sign">
+		<set name="castRange" value="1100"/>
+		<set name="abnormal_effect" value="STIGMA_STORM"/>
+		<set name="abnormal_time" value="50"/> <!-- testing purpose -->
+		<set name="abnormal_level" value="4"/>
+		<set name="abnormal_type" value="stigma_storm"/>
+		<set name="magicType" value="SPECIAL"/>
 		<set name="icon" value="icon.skill30027"/>
-		<set name="target" value="TARGET_NONE"/>
-		<set name="skillType" value="NOTDONE"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="DEBUFF"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="trait" value="DERANGEMENT"/>
+		<set name="saveVs" value="MEN"/>
+		<for>
+			<effect>
+				<mul order="0x70" stat="mDef" value="0.5"/>
+				<sub order="0x80" stat="runSpd" value="100"/>
+			</effect>
+		</for>
 	</skill>
     <!--
 		Storm Rage - Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon.
@@ -1254,7 +1268,7 @@
 				<mul order="0x30" stat="critDamRcpt" value="1.5"/>
 				<add order="0x80" stat="runSpd" value="70"/>
 				<triggers>
-					<trigger id="30027" level="1" type="RECEIVE_DAMAGE" chance="25">
+					<trigger id="30027" level="1" type="RECEIVE_DAMAGE" chance="100">
 						<player damage="10;0"/>
 					</trigger>
 				</triggers>
@@ -1424,6 +1438,7 @@
 	-->
     <skill id="30027" levels="1" name="Destructive Bolt">
 		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="20"/>
 		<set name="magicLevel" value="85"/>
 		<set name="magicType" value="MAGIC"/>
 		<set name="power" value="150"/>
@@ -1433,6 +1448,14 @@
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="castRange" value="1100"/>
 		<set name="saveVs" value="MEN"/>
+		<set name="delayedEffect" value="5447"/>
+		<for>
+			<effect name="Debuff">
+				<triggers>
+					<trigger id="30005" level="4" type="ON_FINISH_EFFECT" chance="100"/>
+				</triggers>
+			</effect>
+		</for>
 		<!--TODO: С 10% вероятностью накладывает Клеймо Шторма Ур. 4.-->
 	</skill>
     <!--
