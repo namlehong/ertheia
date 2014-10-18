@@ -1,0 +1,38 @@
+<!DOCTYPE list SYSTEM "instances.dtd">
+<list>
+	<!-- Rim Pailaka - Goddess Of Darkness -->
+	<instance id="302" name="Pailaka (Goddess Of Darkness)" maxChannels="10" collapseIfEmpty="10" timelimit="60" dispelBuffs="false">
+		<collapse on-party-dismiss="true" timer="60"/>
+		<level min="91" max="95"/>
+		<party min="2" max="7"/>
+		<return loc="147144 26632 -2230"/>
+		<teleport loc="51192 -12232 -9409"/>
+		<remove itemId="0" count="0" necessary="false"/>
+		<give itemId="0" count="0"/>
+		<quest id="0"/>
+		<reuse resetReuse="30 6 * * *" setUponEntry="true" sharedReuseGroup="4"/>
+		<spawns>
+			<!-- Cuspis lv90 - Archer-->
+			<spawn mobId="41010" count="8" respawn="60" type="point">
+				<coords loc="49688 -11784 -9392 49151"/>
+				<coords loc="49432 -11784 -9392 49151"/>
+				<coords loc="49176 -11784 -9392 49151"/>
+				<coords loc="49688 -12680 -9392 16383"/>
+				<coords loc="49432 -12680 -9392 16383"/>
+				<coords loc="49432 -12680 -9392 16383"/>
+				<coords loc="48888 -11960 -9392 62180"/>
+				<coords loc="48888 -12520 -9392 0"/>
+			</spawn>
+			<!-- Regius lv90 - Knight-->
+			<spawn mobId="41006" count="2" respawn="90" type="point">
+				<coords loc="48856 -12360 -9384 0"/>
+				<coords loc="48856 -12120 -9384 0"/>
+			</spawn>
+			
+			<!-- Teleporter-->
+			<spawn mobId="33513" count="1" respawn="0" type="point">
+				<coords loc="51384 -12232 -9408 0"/>
+			</spawn>
+		</spawns>
+	</instance>
+</list>
