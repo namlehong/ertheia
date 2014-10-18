@@ -331,22 +331,20 @@
 		desc_add2: none
 	-->
     <skill id="30005" levels="4" name="Storm Sign">
-		<set name="castRange" value="1100"/>
-		<set name="abnormal_effect" value="STIGMA_STORM"/>
-		<set name="abnormal_time" value="50"/> <!-- testing purpose -->
-		<set name="abnormal_level" value="4"/>
-		<set name="abnormal_type" value="stigma_storm"/>
-		<set name="magicType" value="SPECIAL"/>
-		<set name="icon" value="icon.skill30027"/>
-		<set name="target" value="TARGET_ONE"/>
-		<set name="skillType" value="BUFF"/>
+		<set name="abnormal_level" value="9"/>
+		<set name="abnormal_time" value="60"/>
+		<set name="abnormal_type" value="invincibility_special"/>
+		<set name="icon" value="icon.skill11758"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="magicType" value="MAGIC"/>
 		<set name="operateType" value="OP_ACTIVE"/>
-		<set name="trait" value="DERANGEMENT"/>
-		<set name="saveVs" value="MEN"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target" value="TARGET_SELF"/>
 		<for>
 			<effect>
-				<mul order="0x70" stat="mDef" value="0.5"/>
-				<sub order="0x80" stat="runSpd" value="100"/>
+				<add order="0x40" stat="runSpd" value="5"/>
+				<add order="0x40" stat="regHp" value="10"/> <!-- TODO: Верное значение -->
+				<add order="0x40" stat="regMp" value="10"/> <!-- TODO: Верное значение -->
 			</effect>
 		</for>
 	</skill>
@@ -1452,7 +1450,8 @@
 		<for>
 			<effect name="Debuff">
 				<triggers>
-					<trigger id="30005" level="4" type="ON_FINISH_EFFECT"/>
+					<trigger id="30005" level="4" type="ON_EXIT_EFFECT"/>
+					<trigger id="10803" level="1" type="ON_EXIT_EFFECT"/>
 				</triggers>
 			</effect>
 		</for>
@@ -1481,7 +1480,7 @@
 		<for>
 			<effect name="Sleep">
 				<triggers>
-					<trigger id="30002" level="1" type="ON_EXIT_EFFECT"/>
+					<trigger id="11833" level="1" type="ON_EXIT_EFFECT"/>
 				</triggers>
 			</effect>
 		</for>
