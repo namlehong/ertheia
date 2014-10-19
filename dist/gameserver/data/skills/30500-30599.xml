@@ -1092,7 +1092,7 @@
     	<table name="#pCritDamage">1.1 1.15</table>
     	<table name="#runSpd">50 70</table>
 		<set name="abnormal_level" value="1"/>
-		<set name="abnormal_time" value="30"/>
+		<set name="abnormal_time" value="3"/> <!-- FIXME -->
 		<set name="coolTime" value="500"/>
 		<set name="hitTime" value="1500"/>
 		<set name="icon" value="icon.skill30520"/>
@@ -1102,9 +1102,6 @@
 		<set name="reuseDelay" value="300000"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
-		<triggers>
-			<trigger id="30525" level="1" type="ON_EXIT_EFFECT" chance="100"/>
-		</triggers>
 		<for>
 			<effect name="DeathImmunity"/>
 			<effect>
@@ -1117,6 +1114,9 @@
 				<add order="0x60" stat="airjokePower" value="90"/>
 				<mul order="0x50" stat="pvpPhysDmgBonus" value="5"/>
 				<mul order="0x50" stat="pvePhysDmgBonus" value="5"/>
+				<triggers>
+					<trigger id="30525" level="1" type="ON_EXIT_EFFECT" chance="100"/>
+				</triggers>
 			</effect>
 		</for>
 	</skill>
@@ -1258,7 +1258,6 @@
 	<skill id="30525" levels="1" name="Dummy Heal"> <!-- FIXME ... infuture -->
 		<set name="effectPoint" value="30"/>
 		<set name="icon" value="icon.skill10298"/>
-		<set name="magicLevel" value="85"/>
 		<set name="operateType" value="OP_ACTIVE"/>
 		<set name="power" value="30"/>
 		<set name="skillType" value="HEAL_PERCENT"/>
