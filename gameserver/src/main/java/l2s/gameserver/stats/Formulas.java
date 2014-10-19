@@ -1850,7 +1850,8 @@ public class Formulas
 		double karmaLooseMul = KarmaIncreaseDataHolder.getInstance().getData(player.getLevel());
 		if(exp > 0) // Received exp
 			exp /= Config.KARMA_RATE_KARMA_LOST == -1 ? Config.RATE_XP_BY_LVL[player.getLevel()] : Config.KARMA_RATE_KARMA_LOST;
-		return (int) ((Math.abs(exp) / karmaLooseMul) / 15);
+		return (int) ((Math.abs(exp) / karmaLooseMul) / 3000);
+		//with rate 3000, a 85 level player needs to kill around 10 mob with 11m (GoG) xp to clear 1000 Karma
 	}
 
 	public static boolean calcCraftingMastery(Player player)
