@@ -1103,7 +1103,7 @@
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
 		<triggers>
-			<trigger id="1258" level="4" type="ON_EXIT_EFFECT" chance="100"/>
+			<trigger id="30525" level="1" type="ON_EXIT_EFFECT" chance="100"/>
 		</triggers>
 		<for>
 			<effect name="DeathImmunity"/>
@@ -1253,6 +1253,16 @@
 		<set name="target" value="TARGET_NONE"/>
 		<set name="skillType" value="NOTDONE"/>
 		<set name="operateType" value="OP_ACTIVE"/>
+	</skill>
+	
+	<skill id="30525" levels="1" name="Dummy Heal"> <!-- FIXME ... infuture -->
+		<set name="effectPoint" value="30"/>
+		<set name="icon" value="icon.skill10298"/>
+		<set name="magicLevel" value="85"/>
+		<set name="operateType" value="OP_ACTIVE"/>
+		<set name="power" value="30"/>
+		<set name="skillType" value="HEAL_PERCENT"/>
+		<set name="target" value="TARGET_SELF"/>
 	</skill>
     <!--
 		Heavy Punch - Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate.
