@@ -3748,8 +3748,7 @@
 		desc_add2: none
 	-->
     <skill id="10535" levels="4" name="Scorpion Poison">
-		<table name="#activationChance12"> 10 15 20 25 </table>
-		<table name="#activationChance34"> 0 0 20 25 </table>
+		<table name="#activationChance12"> 1 2 3 4 </table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#MgicTriggeredLevel"> 1 1 2 2 </table>
 		<table name="#PhysTriggeredLevel"> 1 2 3 4 </table>
@@ -3763,13 +3762,12 @@
 			<using kind="Dagger, Dual Dagger"/>
 		</cond>
 		<enchant type="1" levels="10" group="7" name="Chance">
-			<table name="#activationChance12"> 45 46 47 48 49 50 51 52 53 54 </table>
-			<table name="#activationChance34"> 45 46 47 48 49 50 51 52 53 54 </table>
+			<table name="#activationChance12"> 5 5 6 6 7 7 8 8 9 10 </table>
 			<table name="#mpConsume1">0</table>
 			<table name="#magicLevel">99</table>
 		</enchant>
 		<triggers>
-			<trigger id="10538" level="#PhysTriggeredLevel" type="ATTACK" chance="#activationChance12">
+			<trigger id="10537" level="#PhysTriggeredLevel" type="ATTACK" chance="#activationChance12">
 				<player damage="1;0"/>
 			</trigger>
 		</triggers>
@@ -3801,13 +3799,13 @@
 	-->
     <skill id="10537" levels="2" name="Block Magic">
 		<table name="#abnormal_level">1 2</table>
-		<table name="#activateRate">20 20</table>
+		<!--<table name="#activateRate">20 20</table>-->
 		<table name="#magicLevel">95 99</table>
 		<set name="abnormal_effect" value="SILENCE"/>
 		<set name="abnormal_level" value="#abnormal_level"/>
 		<set name="abnormal_time" value="5"/>
 		<set name="abnormal_type" value="silence"/>
-		<set name="activateRate" value="#activateRate"/>
+		<!--<set name="activateRate" value="#activateRate"/>-->
 		<set name="castRange" value="500"/>
 		<set name="coolTime" value="100"/>
 		<set name="hitTime" value="1500"/>
@@ -3822,7 +3820,9 @@
 		<set name="target" value="TARGET_ONE"/>
 		<set name="trait" value="DERANGEMENT"/>
 		<for>
-			<effect name="Mute"/>
+			<effect name="Mute">
+				<sub order="0x80" stat="runSpd" value="55"/>
+			</effect>
 		</for>
 	</skill>
     <!--
