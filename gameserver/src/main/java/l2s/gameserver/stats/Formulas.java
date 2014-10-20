@@ -1113,7 +1113,7 @@ public class Formulas
 				rate *= 1.2;
 				break;
 			default:
-				rate = 1.0;
+				rate *= 1.0;
 				break;
 		}
 
