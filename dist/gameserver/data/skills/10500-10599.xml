@@ -443,6 +443,11 @@
 		<set name="operateType" value="OP_PASSIVE"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="target" value="TARGET_SELF"/>
+		<triggers>
+			<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100">
+				<using skill="10529"/>
+			</trigger>
+		</triggers>
 		<for>
 			<add order="0x40" stat="pAtk" value="200"/>
 		</for>
@@ -3359,10 +3364,9 @@
 			<table name="#critDamAmplified">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1</table>
 			<table name="#magicLevel">99</table>
 		</enchant>		
-		<triggers>
-			<!--<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>-->
-			<trigger id="10530" level="1" type="ON_SUCCES_FINISH_CAST" chance="#triggerSkillChance"/>
-		</triggers> 
+		<!--<triggers>
+			<trigger id="10530" level="1" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="100"/>
+		</triggers> -->
 		<for>			
 			<effect name="RemoveTarget" time="0" isReflectable="false" chance="#chancer">
 				<def name="doStopTarget" value="true"/>
