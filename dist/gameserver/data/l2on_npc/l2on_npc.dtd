@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT list (npc)*>
+<!ELEMENT npc (set|action)*>
+<!ATTLIST npc
+	id CDATA #REQUIRED
+	name CDATA #REQUIRED>
+<!ELEMENT set (#PCDATA)>
+<!ATTLIST set
+	name CDATA #REQUIRED
+	value CDATA #REQUIRED>
+<!ELEMENT location (map)*>
+<!ELEMENT similar (npc)*>
+<!ATTLIST map
+	x CDATA #IMPLIED
+	y CDATA #IMPLIED
+	zone CDATA #IMPLIED>
