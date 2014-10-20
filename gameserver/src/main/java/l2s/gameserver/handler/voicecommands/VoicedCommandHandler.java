@@ -38,7 +38,7 @@ public class VoicedCommandHandler extends AbstractHolder
 		registerVoicedCommandHandler(new Cfg());
 //		registerVoicedCommandHandler(new Offline());
 		registerVoicedCommandHandler(new Repair());
-		registerVoicedCommandHandler(new ServerInfo());
+//		registerVoicedCommandHandler(new ServerInfo());
 		registerVoicedCommandHandler(new Wedding());
 		registerVoicedCommandHandler(new WhoAmI());
 		/* CCP Guard START

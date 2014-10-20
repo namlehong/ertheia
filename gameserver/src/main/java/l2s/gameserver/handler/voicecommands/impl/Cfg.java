@@ -22,7 +22,7 @@ public class Cfg extends Functions implements IVoicedCommandHandler
 		if(!Config.ALLOW_VOICED_COMMANDS)
 			return false;
 
-		if(command.equals("cfg"))
+		if(command.equals("cfg2"))
 			if(args != null)
 			{
 				String[] param = args.split(" ");
