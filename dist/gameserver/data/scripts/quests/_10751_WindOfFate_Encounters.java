@@ -37,6 +37,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	private static final int MYSTERIOUS_WIZARD = 33980;
 
 	private static final int NAVARI_BOX_MARAUDER = 40266;
+	private static final int NAVARI_BOX_WIZARD = 40267;
 	private static final int WIND_SPIRIT_RELIC = 39535;
 
 	private static final int SKELETON_WARRIOR = 27528;
@@ -244,13 +245,20 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			int newClassId;
 			
 			if(player.isMageClass())
+			{
+				st.giveItems(NAVARI_BOX_WIZARD, 1);
 				newClassId = SAYHA_MAGE_ID;
+			}
 			else
+			{
+				st.giveItems(NAVARI_BOX_MARAUDER, 1);
 				newClassId = MARAUDER_CLASS_ID;
+			}
+				
 			
 			st.takeItems(WIND_SPIRIT_RELIC, 2);
 			
-			st.giveItems(NAVARI_BOX_MARAUDER, 1);
+			
 			st.addExpAndSp(2700000, 648);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
