@@ -213,9 +213,11 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 				
 			}
 			
+			return null;
+			
 		}
 		
-		if(event.equalsIgnoreCase("33980-1.htm"))
+		if(event.equalsIgnoreCase("33980-2.htm"))
 		{
 			st.giveItems(WIND_SPIRIT_RELIC, 1);
 			player.sendPacket(new ExShowScreenMessage(RETURN_GLUDIO, 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
@@ -402,7 +404,7 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	@Override
 	public boolean checkStartCondition(Player player)
 	{
-QuestState st = player.getQuestState("_10751_WindOfFate_Encounters");
+		QuestState st = player.getQuestState("_10751_WindOfFate_Encounters");
 		
 		boolean result = (player.getLevel() >= minLevel && 
 				player.getLevel() <= maxLevel && 
