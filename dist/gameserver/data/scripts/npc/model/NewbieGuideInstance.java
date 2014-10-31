@@ -76,7 +76,7 @@ public class NewbieGuideInstance extends NpcInstance
 		String cmd = st.nextToken();
 		if(cmd.equalsIgnoreCase("buffs"))
 		{
-			if(player.getLevel() > MAX_SUPPORT_LEVEL || player.isAwaked())
+			if(player.getLevel() > MAX_SUPPORT_LEVEL)
 			{
 				showChatWindow(player, "newbie_guide/blessing_list002.htm");
 				return;
