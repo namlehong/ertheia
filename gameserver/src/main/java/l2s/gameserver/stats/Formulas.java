@@ -106,7 +106,7 @@ public class Formulas
 			info.damage += Math.max(0., attacker.calcStat(Stats.P_SKILL_POWER, skill.getPower(target)));
 
 			if(info.blow && skill.isBehind() && ss) // For backstab affects power, but is less than a factor
-				info.damage *= 3;
+				info.damage *= 1.5;
 
 			//Rechargeable skills have permanent damage
 			if(!skill.isChargeBoost())
