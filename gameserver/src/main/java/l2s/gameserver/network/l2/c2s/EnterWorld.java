@@ -331,7 +331,7 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.unsetVar("offline");
 
 		// на всякий случай
-		activeChar.sendActionFailed();
+		//activeChar.sendActionFailed();
 
 		if(first && activeChar.isGM() && Config.SAVE_GM_EFFECTS && activeChar.getPlayerAccess().CanUseGMCommand)
 		{
