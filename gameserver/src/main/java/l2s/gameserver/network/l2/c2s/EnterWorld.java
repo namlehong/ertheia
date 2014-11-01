@@ -325,9 +325,6 @@ public class EnterWorld extends L2GameClientPacket
 			else if(activeChar.getPrivateStoreType() == Player.STORE_PRIVATE_MANUFACTURE)
 				sendPacket(new RecipeShopMsg(activeChar));
 
-		if(activeChar.isDead())
-			sendPacket(new DiePacket(activeChar));
-
 		activeChar.unsetVar("offline");
 
 		// на всякий случай
@@ -468,6 +465,13 @@ public class EnterWorld extends L2GameClientPacket
 
 		if(first)
 			activeChar.useTriggers(activeChar, TriggerType.ON_ENTER_WORLD, null, null, 0);
+		
+		activeChar.broadcastStatusUpdate();
+		
+		if(activeChar.isDead())
+		{
+			sendPacket(new DiePacket(activeChar));
+		}
 	}
 
 	private void loadTutorial(Player player)
