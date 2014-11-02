@@ -50,7 +50,7 @@ public class RequestMenteeAdd extends L2GameClientPacket
 
 		// Только после перерождения можно стать наставником
 //		if(!activeChar.isAwaked())
-		if(Mentoring.canBecomeMentor(activeChar))
+		if(!Mentoring.canBecomeMentor(activeChar))
 		{
 			activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR));
 			return;
