@@ -1,11 +1,11 @@
 package l2s.gameserver.network.l2.c2s;
 
 import l2s.gameserver.model.Player;
-import l2s.gameserver.network.l2.s2c.ListMenteeWaiting;
+import l2s.gameserver.network.l2.s2c.ListMenteeWaitingPacket;
 
 /**
  * Created with IntelliJ IDEA. User: Darvin Date: 02.07.12 Time: 0:48 Приходит при нажатии наставником кнопки "+" в окне учеников Ответом на пакет
- * является {@link l2s.gameserver.network.l2.s2c.ListMenteeWaiting}
+ * является {@link l2s.gameserver.network.l2.s2c.ListMenteeWaitingPacket}
  */
 public class RequestMenteeWaitingList extends L2GameClientPacket
 {
@@ -21,7 +21,7 @@ public class RequestMenteeWaitingList extends L2GameClientPacket
 		{
 			return;
 		}
-		activeChar.sendPacket(new ListMenteeWaiting(activeChar, this.page, this.minLevel, this.maxLevel));
+		activeChar.sendPacket(new ListMenteeWaitingPacket(activeChar, this.page, this.minLevel, this.maxLevel));
 	}
 
 	@Override
