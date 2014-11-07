@@ -27,6 +27,7 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 	protected void writeImpl()
 	{
 		writeD(0x00); // UNK
+		writeC(0x00); // blank
 		writeQ(0x00); // blank
 		writeD(0x00); // blank
 		writeD(_products.size());
