@@ -58,7 +58,10 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 			writeD(0x00); //UNK
 			writeD(0x00); //UNK
 			//writeD(1); // Увеличение уровня (Дефолт = 1)
-			writeD(product.getComponents().size()); // Number item in the product.
+			writeC(0x00);
+			writeC(0x00);
+			writeC(0x00);
+			writeC(product.getComponents().size()); // Number item in the product.
 
 			for(ProductItemComponent component : product.getComponents())
 			{
