@@ -68,17 +68,18 @@ public final class ProductDataParser extends AbstractFileParser<ProductDataHolde
 				int category = Integer.parseInt(element.attributeValue("category"));
 				int price = Integer.parseInt(element.attributeValue("price"));
 				boolean isEvent = element.attributeValue("is_event") == null ? false : Boolean.parseBoolean(element.attributeValue("is_event"));
-				boolean isSale = element.attributeValue("on_sale") == null ? false : Boolean.parseBoolean(element.attributeValue("on_sale"));
+				boolean isSale = element.attributeValue("is_sale") == null ? false : Boolean.parseBoolean(element.attributeValue("is_sale"));
 				boolean isNew = element.attributeValue("is_new") == null ? false : Boolean.parseBoolean(element.attributeValue("is_new"));
 				boolean isBest = element.attributeValue("is_best") == null ? false : Boolean.parseBoolean(element.attributeValue("is_best"));
 				long startTimeSale = element.attributeValue("sale_start_date") == null ? 0 : getMillisecondsFromString(element.attributeValue("sale_start_date"));
 				long endTimeSale = element.attributeValue("sale_end_date") == null ? 0 : getMillisecondsFromString(element.attributeValue("sale_end_date"));
+				boolean onSale = element.attributeValue("on_sale") == null ? false : Boolean.parseBoolean(element.attributeValue("on_sale"));
 				int discount = element.attributeValue("discount") == null ? 0 : Integer.parseInt(element.attributeValue("discount"));
 				int locationId = element.attributeValue("location_id") == null ? -1 : Integer.parseInt(element.attributeValue("location_id"));
 
 				int tabId = getProductTabId(isEvent, isSale, isNew, isBest);
 
-				ProductItem product = new ProductItem(productId, category, price, tabId, startTimeSale, endTimeSale, isSale, discount, locationId);
+				ProductItem product = new ProductItem(productId, category, price, tabId, startTimeSale, endTimeSale, onSale, discount, locationId);
 				for(Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
 				{
 					Element subElement = subIterator.next();
@@ -101,10 +102,10 @@ public final class ProductDataParser extends AbstractFileParser<ProductDataHolde
 		if(isEvent)
 			return 1;
 
-		if(isNew)
-			return 2;
-
 		if(isSale)
+			return 2;
+		
+		if(isNew)
 			return 3;
 		
 		if(isBest)
