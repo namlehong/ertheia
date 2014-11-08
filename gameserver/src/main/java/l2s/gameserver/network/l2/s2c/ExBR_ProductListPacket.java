@@ -26,7 +26,7 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0x00); // UNK
+		writeD(4457953); // UNK
 		writeC(0x00); // blank
 		writeD(0x00); // blank
 		writeD(0x00); // blank
@@ -39,9 +39,8 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 			writeD(product.getId()); //product id
 			writeH(product.getCategory()); //category 1 - enchant 2 - supplies  3 - decoration 4 - package 5 - other
 			writeD(product.getPoints(true)); //points
+			writeC(product.getTabId()); // show product isNew, isEvent, isSale, isBest
 			writeD(0x00); //UNK
-			writeC(0x00); //UNK
-			//writeD(product.getTabId()); // show tab 2-th group - 1 показывает окошко про итем
 			//writeD(Rnd.get(0,4)); // Categories Home (0 - do not show on the main (default), 1 - top window, 2 - Featured Products 3 - unknown 4 - Top Sellers) // Glory Days 488
 			writeD((int) (product.getStartTimeSale() / 1000)); // start sale unix date in seconds
 			writeD((int) (product.getEndTimeSale() / 1000)); // end sale unix date in seconds
@@ -52,12 +51,16 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 			writeC(product.getEndMin()); // end min
 			writeD(0); // stock
 			writeD(-1); // max stock
-			// Glory Days 488
-			writeD(product.getDiscount()); // % скидки
+			
+			writeC(0x00); //UNK
+			writeC(0x00); //level restriction
+			writeC(0x00); //UNK
+			writeC(0x00); //UNK
+			
 			writeD(0x00); //UNK
 			writeD(0x00); //UNK
 			writeD(0x00); //UNK
-			//writeD(1); // Увеличение уровня (Дефолт = 1)
+			
 			writeC(0x00);
 			writeC(0x00);
 			writeC(0x00);
