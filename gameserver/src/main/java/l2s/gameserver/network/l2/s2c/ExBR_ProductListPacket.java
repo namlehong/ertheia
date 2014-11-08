@@ -40,7 +40,10 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 			writeH(product.getCategory()); //category 1 - enchant 2 - supplies  3 - decoration 4 - package 5 - other
 			writeD(product.getPoints(true)); //points
 			writeC(product.getTabId()); // show product isNew, isEvent, isSale, isBest
-			writeD(0x00); //UNK
+			writeC(product.getTabId()); // show product isNew, isEvent, isSale, isBest
+			writeC(0x00); //UNK
+			writeC(0x00); //UNK
+			writeC(0x00); //UNK
 			//writeD(Rnd.get(0,4)); // Categories Home (0 - do not show on the main (default), 1 - top window, 2 - Featured Products 3 - unknown 4 - Top Sellers) // Glory Days 488
 			writeD((int) (product.getStartTimeSale() / 1000)); // start sale unix date in seconds
 			writeD((int) (product.getEndTimeSale() / 1000)); // end sale unix date in seconds
