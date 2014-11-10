@@ -191,7 +191,7 @@ public class Config
 				}
 			}
 
-			_log.info("Loaded " + SERVER_NAMES.size() + " server names");
+			_log.info("Loaded " + SERVER_FENCES.size() + " server fences");
 		}
 		catch(Exception e)
 		{
