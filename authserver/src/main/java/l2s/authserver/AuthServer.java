@@ -9,8 +9,10 @@ import l2s.authserver.network.gamecomm.GameServerCommunication;
 import l2s.authserver.network.l2.L2LoginClient;
 import l2s.authserver.network.l2.L2LoginPacketHandler;
 import l2s.authserver.network.l2.SelectorHelper;
+import l2s.authserver.utils.PIDHelper;
 import l2s.commons.net.nio.impl.SelectorConfig;
 import l2s.commons.net.nio.impl.SelectorThread;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +32,7 @@ public class AuthServer
 
 	public AuthServer() throws Throwable
 	{
+		PIDHelper.writePID();
 		Config.initCrypt();
 		GameServerManager.getInstance();
 

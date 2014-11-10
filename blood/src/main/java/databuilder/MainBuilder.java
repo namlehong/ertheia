@@ -23,7 +23,10 @@ import databuilder.xml.builder.NpcBuilder;
 import databuilder.xml.builder.SkillBuilder;
 import databuilder.xml.builder.SkillTest;
 import databuilder.xml.builder.SpawnBuilder;
+import databuilder.xml.holder.L2onNpcHolder;
 import databuilder.xml.parser.L2onDropParser;
+import databuilder.xml.parser.L2onMixerParser;
+import databuilder.xml.parser.L2onNpcParser;
 import databuilder.xml.parser.NpcDropParser;
 import databuilder.xml.parser.NpcGaiParser;
 import databuilder.xml.parser.NpcParser;
@@ -207,6 +210,9 @@ public class MainBuilder
 //		SkillTest.getInstance().testSkill();
 //		buildRaidSpawn();
 //		AlchemyRecipeBuilder.getInstance().save();
+		L2onNpcParser.getInstance().load();
+		L2onMixerParser.getInstance().load();
+		System.out.println(L2onNpcHolder.getInstance().getNpcInfo(20001));
 	}
 	
 	
