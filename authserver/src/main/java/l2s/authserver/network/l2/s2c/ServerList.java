@@ -7,6 +7,9 @@ import java.util.List;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.tuple.Pair;
+
+import l2s.authserver.Config;
+import l2s.authserver.Config.Fence;
 import l2s.authserver.GameServerManager;
 import l2s.authserver.accounts.Account;
 import l2s.authserver.network.gamecomm.GameServer;
@@ -92,8 +95,16 @@ public final class ServerList extends L2LoginServerPacket
 			}
 
 			Pair<Integer, int[]> entry = account.getAccountInfo(gs.getId());
-
-			_servers.add(new ServerData(gs.getId(), ip, gs.getPort(), gs.isPvp(), gs.isShowingBrackets(), gs.getServerType(), gs.getOnline(), gs.getMaxPlayers(), gs.isOnline(), entry == null ? 0 : entry.getKey(), gs.getAgeLimit(), entry == null ? ArrayUtils.EMPTY_INT_ARRAY : entry.getValue()));
+			
+			List<Fence> fenceList = Config.getFences(gs.getId());
+			
+			if(fenceList.size() > 0){
+				for(Fence fence: fenceList){
+					_servers.add(new ServerData(fence.id, fence.ip, fence.port, gs.isPvp(), gs.isShowingBrackets(), gs.getServerType(), gs.getOnline(), gs.getMaxPlayers(), gs.isOnline(), entry == null ? 0 : entry.getKey(), gs.getAgeLimit(), entry == null ? ArrayUtils.EMPTY_INT_ARRAY : entry.getValue()));
+				}
+			}else{
+				_servers.add(new ServerData(gs.getId(), ip, gs.getPort(), gs.isPvp(), gs.isShowingBrackets(), gs.getServerType(), gs.getOnline(), gs.getMaxPlayers(), gs.isOnline(), entry == null ? 0 : entry.getKey(), gs.getAgeLimit(), entry == null ? ArrayUtils.EMPTY_INT_ARRAY : entry.getValue()));
+			}
 		}
 	}
 

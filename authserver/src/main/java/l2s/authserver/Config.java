@@ -2,10 +2,13 @@ package l2s.authserver;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.security.KeyPairGenerator;
 import java.security.spec.RSAKeyGenParameterSpec;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -13,10 +16,12 @@ import java.util.Map;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+
 import l2s.authserver.crypt.PasswordHash;
 import l2s.authserver.crypt.ScrambledKeyPair;
 import l2s.commons.configuration.ExProperties;
 import l2s.commons.util.Rnd;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +31,7 @@ public class Config
 
 	public static final String LOGIN_CONFIGURATION_FILE = "config/authserver.properties";
 	public static final String SERVER_NAMES_FILE = "config/servername.xml";
+	public static final String SERVER_FENCES_FILE = "config/fence.xml";
 
 	public static String LOGIN_HOST;
 	public static int PORT_LOGIN;
@@ -72,6 +78,15 @@ public class Config
 	public static boolean LOGIN_LOG;
 
 	public static boolean CHEAT_PASSWORD_CHECK;
+	
+	public static final Map<Integer, Fence> SERVER_FENCES = new HashMap<Integer, Fence>();
+	
+	public static class Fence{
+		public int id;
+		public InetAddress ip;
+		public int port;
+		public int parent_id;
+	}
 
 	// it has no instancies
 	private Config()
@@ -82,6 +97,7 @@ public class Config
 	{
 		loadConfiguration();
 		loadServerNames();
+		loadServerFences();
 	}
 
 	public final static void initCrypt() throws Throwable
@@ -143,6 +159,55 @@ public class Config
 		{
 			_log.error("", e);
 		}
+	}
+	
+	public final static void loadServerFences()
+	{
+		SERVER_FENCES.clear();
+
+		try
+		{
+			SAXReader reader = new SAXReader(true);
+			Document document = reader.read(new File(SERVER_FENCES_FILE));
+
+			Element root = document.getRootElement();
+
+			for(Iterator<Element> itr = root.elementIterator(); itr.hasNext(); )
+			{
+				Element node = itr.next();
+				if(node.getName().equalsIgnoreCase("server"))
+				{
+					Integer parent_id = Integer.valueOf(node.attributeValue("id"));
+//					String name = node.attributeValue("name");
+//					SERVER_NAMES.put(id, name);
+					for(Element fenceElement: node.elements()){
+						Fence fence = new Fence();
+						fence.id = Integer.valueOf(fenceElement.attributeValue("id"));
+						fence.ip = InetAddress.getByName(fenceElement.attributeValue("ip"));
+						fence.port = Integer.valueOf(fenceElement.attributeValue("p"));
+						fence.parent_id = parent_id;
+						SERVER_FENCES.put(fence.id, fence);
+					}
+				}
+			}
+
+			_log.info("Loaded " + SERVER_NAMES.size() + " server names");
+		}
+		catch(Exception e)
+		{
+			_log.error("", e);
+		}
+	}
+	
+	public final static List<Fence> getFences(int parent_id){
+		List<Fence> result = new ArrayList<Fence>();
+		
+		for(Fence fence: SERVER_FENCES.values()){
+			if(fence.parent_id == parent_id)
+				result.add(fence);
+		}
+		
+		return result;
 	}
 
 	public final static void loadConfiguration()
