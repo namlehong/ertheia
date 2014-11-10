@@ -68,15 +68,16 @@ public final class ProductDataParser extends AbstractFileParser<ProductDataHolde
 				int category = Integer.parseInt(element.attributeValue("category"));
 				int price = Integer.parseInt(element.attributeValue("price"));
 				boolean isEvent = element.attributeValue("is_event") == null ? false : Boolean.parseBoolean(element.attributeValue("is_event"));
-				boolean isBest = element.attributeValue("is_best") == null ? false : Boolean.parseBoolean(element.attributeValue("is_best"));
+				boolean isSale = element.attributeValue("is_sale") == null ? false : Boolean.parseBoolean(element.attributeValue("is_sale"));
 				boolean isNew = element.attributeValue("is_new") == null ? false : Boolean.parseBoolean(element.attributeValue("is_new"));
-				boolean onSale = element.attributeValue("on_sale") == null ? false : Boolean.parseBoolean(element.attributeValue("on_sale"));
+				boolean isBest = element.attributeValue("is_best") == null ? false : Boolean.parseBoolean(element.attributeValue("is_best"));
 				long startTimeSale = element.attributeValue("sale_start_date") == null ? 0 : getMillisecondsFromString(element.attributeValue("sale_start_date"));
 				long endTimeSale = element.attributeValue("sale_end_date") == null ? 0 : getMillisecondsFromString(element.attributeValue("sale_end_date"));
+				boolean onSale = element.attributeValue("on_sale") == null ? false : Boolean.parseBoolean(element.attributeValue("on_sale"));
 				int discount = element.attributeValue("discount") == null ? 0 : Integer.parseInt(element.attributeValue("discount"));
 				int locationId = element.attributeValue("location_id") == null ? -1 : Integer.parseInt(element.attributeValue("location_id"));
 
-				int tabId = getProductTabId(isEvent, isBest, isNew);
+				int tabId = getProductTabId(isEvent, isSale, isNew, isBest);
 
 				ProductItem product = new ProductItem(productId, category, price, tabId, startTimeSale, endTimeSale, onSale, discount, locationId);
 				for(Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
@@ -96,20 +97,21 @@ public final class ProductDataParser extends AbstractFileParser<ProductDataHolde
 		}
 	}
 
-	private static int getProductTabId(boolean isEvent, boolean isBest, boolean isNew)
+	private static int getProductTabId(boolean isEvent, boolean isSale, boolean isNew, boolean isBest)
 	{
-		int val = 0;
-
 		if(isEvent)
-			val |= EVENT_MASK;
+			return 1;
 
-		if(isBest)
-			val |= BEST_MASK;
-
+		if(isSale)
+			return 2;
+		
 		if(isNew)
-			val |= NEW_MASK;
-
-		return val;
+			return 3;
+		
+		if(isBest)
+			return 4;
+		
+		return 0;
 	}
 
 	private static long getMillisecondsFromString(String datetime)

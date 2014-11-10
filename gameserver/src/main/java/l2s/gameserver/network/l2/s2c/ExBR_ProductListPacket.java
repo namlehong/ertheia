@@ -26,7 +26,12 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeD(0x00); // UNK
+		writeD(4457953); // UNK
+		writeC(0x00); // blank
+		writeD(0x00); // blank
+		writeD(0x00); // blank
+		writeD(0x00); // blank
+		
 		writeD(_products.size());
 
 		for(ProductItem product : _products)
@@ -34,8 +39,12 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 			writeD(product.getId()); //product id
 			writeH(product.getCategory()); //category 1 - enchant 2 - supplies  3 - decoration 4 - package 5 - other
 			writeD(product.getPoints(true)); //points
-			writeD(product.getTabId()); // show tab 2-th group - 1 показывает окошко про итем
-			writeD(Rnd.get(0,4)); // категория главной страницы (0 - не показывать на главное (дефолт), 1 - верхнее окно, 2 - рекомендуемый товар, 3 - неизвестно, 4 - популярные товары)  // Glory Days 488
+			writeC(product.getTabId()); // show product isNew, isEvent, isSale, isBest
+			writeC(product.getTabId()); // show product isNew, isEvent, isSale, isBest
+			writeC(0x00); //UNK
+			writeC(0x00); //UNK
+			writeC(0x00); //UNK
+			//writeD(Rnd.get(0,4)); // Categories Home (0 - do not show on the main (default), 1 - top window, 2 - Featured Products 3 - unknown 4 - Top Sellers) // Glory Days 488
 			writeD((int) (product.getStartTimeSale() / 1000)); // start sale unix date in seconds
 			writeD((int) (product.getEndTimeSale() / 1000)); // end sale unix date in seconds
 			writeC(127); // day week (127 = not daily goods)
@@ -45,10 +54,20 @@ public class ExBR_ProductListPacket extends L2GameServerPacket
 			writeC(product.getEndMin()); // end min
 			writeD(0); // stock
 			writeD(-1); // max stock
-			// Glory Days 488
-			writeD(product.getDiscount()); // % скидки
-			//writeD(1); // Увеличение уровня (Дефолт = 1)
-			writeD(product.getComponents().size()); // Количество итемов в продукте.
+			
+			writeC(0x00); //UNK
+			writeC(0x00); //level restriction
+			writeC(0x00); //UNK
+			writeC(0x00); //UNK
+			
+			writeD(0x00); //UNK
+			writeD(0x00); //UNK
+			writeD(0x00); //UNK
+			
+			writeC(0x00);
+			writeC(0x00);
+			writeC(0x00);
+			writeC(product.getComponents().size()); // Number item in the product.
 
 			for(ProductItemComponent component : product.getComponents())
 			{
