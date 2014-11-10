@@ -1,6 +1,8 @@
 package l2s.authserver.network.l2.c2s;
 
+import l2s.authserver.Config;
 import l2s.authserver.GameServerManager;
+import l2s.authserver.Config.Fence;
 import l2s.authserver.accounts.Account;
 import l2s.authserver.network.gamecomm.GameServer;
 import l2s.authserver.network.l2.L2LoginClient;
@@ -49,7 +51,13 @@ public class RequestServerLogin extends L2LoginClientPacket
 		}
 
 		Account account = client.getAccount();
-		GameServer gs = GameServerManager.getInstance().getGameServerById(_serverId);
+		GameServer gs;
+		Fence fence = Config.SERVER_FENCES.get(_serverId);
+		if(fence != null){
+			gs = GameServerManager.getInstance().getGameServerById(fence.parent_id);
+		}else{
+			gs = GameServerManager.getInstance().getGameServerById(_serverId);
+		}
 		if(gs == null || !gs.isAuthed() || gs.isGmOnly() && account.getAccessLevel() < 100 || gs.getOnline() >= gs.getMaxPlayers() && account.getAccessLevel() < 50)
 		{
 			System.out.println("RequestServerLogin 3");
