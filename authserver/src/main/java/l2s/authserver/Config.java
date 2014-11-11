@@ -84,6 +84,7 @@ public class Config
 	public static class Fence{
 		public int id;
 		public InetAddress ip;
+		public InetAddress vip_ip;
 		public int port;
 		public int parent_id;
 	}
@@ -184,6 +185,7 @@ public class Config
 						Fence fence = new Fence();
 						fence.id = Integer.valueOf(fenceElement.attributeValue("id"));
 						fence.ip = InetAddress.getByName(fenceElement.attributeValue("ip"));
+						fence.vip_ip = InetAddress.getByName(fenceElement.attributeValue("vip_ip"));
 						fence.port = Integer.valueOf(fenceElement.attributeValue("port"));
 						fence.parent_id = parent_id;
 						SERVER_FENCES.put(fence.id, fence);
