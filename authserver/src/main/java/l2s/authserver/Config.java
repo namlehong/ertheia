@@ -7,6 +7,7 @@ import java.net.UnknownHostException;
 import java.security.KeyPairGenerator;
 import java.security.spec.RSAKeyGenParameterSpec;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -17,6 +18,7 @@ import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
+import l2s.authserver.accounts.Account;
 import l2s.authserver.crypt.PasswordHash;
 import l2s.authserver.crypt.ScrambledKeyPair;
 import l2s.commons.configuration.ExProperties;
@@ -87,6 +89,17 @@ public class Config
 		public InetAddress vip_ip;
 		public int port;
 		public int parent_id;
+		public List<String> allows_accounts;
+		
+		public InetAddress getIP(Account user){
+			if(allows_accounts.size() > 0 && allows_accounts.contains(user.getLogin()))
+				return vip_ip;
+			
+			if(allows_accounts.size() == 0 && user.getAccessLevel() > 0)
+				return vip_ip;
+			
+			return ip;
+		}
 	}
 
 	// it has no instancies
@@ -188,6 +201,7 @@ public class Config
 						fence.vip_ip = InetAddress.getByName(fenceElement.attributeValue("vip_ip"));
 						fence.port = Integer.valueOf(fenceElement.attributeValue("port"));
 						fence.parent_id = parent_id;
+						fence.allows_accounts = Arrays.asList(fenceElement.attributeValue("port").split(","));
 						SERVER_FENCES.put(fence.id, fence);
 					}
 				}
