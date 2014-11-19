@@ -210,7 +210,7 @@ public class Config
 						fence.parent_id = parent_id;
 						String allow_accounts = fenceElement.attributeValue("allow_accounts");
 						System.out.println("allow_accounts:"+allow_accounts);
-						if(!allow_accounts.isEmpty()){
+						if(allow_accounts != null && !allow_accounts.isEmpty()){
 							fence.allows_accounts = Arrays.asList(allow_accounts.split(","));
 						}else{
 							fence.allows_accounts = new ArrayList<String>();
