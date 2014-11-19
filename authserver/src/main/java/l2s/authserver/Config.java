@@ -208,7 +208,8 @@ public class Config
 						fence.vip_ip = InetAddress.getByName(fenceElement.attributeValue("vip_ip"));
 						fence.port = Integer.valueOf(fenceElement.attributeValue("port"));
 						fence.parent_id = parent_id;
-						String allow_accounts = fenceElement.attributeValue("port");
+						String allow_accounts = fenceElement.attributeValue("allow_accounts");
+						System.out.println("allow_accounts:"+allow_accounts);
 						if(!allow_accounts.isEmpty()){
 							fence.allows_accounts = Arrays.asList(allow_accounts.split(","));
 						}else{
