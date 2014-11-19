@@ -92,6 +92,13 @@ public class Config
 		public List<String> allows_accounts;
 		
 		public InetAddress getIP(Account user){
+			
+			System.out.println("===DEBUG===");
+			System.out.println("id:"+this.id);
+			System.out.println("size:"+this.allows_accounts.size());
+			System.out.println("user:"+user);
+			System.out.println("getAccessLevel:"+user.getAccessLevel());
+			
 			if(allows_accounts.size() > 0 && allows_accounts.contains(user.getLogin()))
 				return vip_ip;
 			
