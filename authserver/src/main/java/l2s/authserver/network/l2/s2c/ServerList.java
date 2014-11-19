@@ -118,6 +118,7 @@ public final class ServerList extends L2LoginServerPacket
 		{
 			writeC(server.serverId);
 			InetAddress i4 = server.ip;
+			System.out.println("ip:+"+server.ip);
 			byte[] raw = i4.getAddress();
 			writeC(raw[0] & 0xff);
 			writeC(raw[1] & 0xff);
