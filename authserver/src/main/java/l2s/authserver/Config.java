@@ -89,7 +89,7 @@ public class Config
 		public InetAddress vip_ip;
 		public int port;
 		public int parent_id;
-		public List<String> allows_accounts;
+		public List<String> allows_accounts = new ArrayList<String>();
 		
 		public InetAddress getIP(Account user){
 			
@@ -208,12 +208,11 @@ public class Config
 						fence.vip_ip = InetAddress.getByName(fenceElement.attributeValue("vip_ip"));
 						fence.port = Integer.valueOf(fenceElement.attributeValue("port"));
 						fence.parent_id = parent_id;
-						String allow_accounts = fenceElement.attributeValue("allow_accounts");
-						System.out.println("allow_accounts:"+allow_accounts);
-						if(allow_accounts != null && !allow_accounts.isEmpty()){
-							fence.allows_accounts = Arrays.asList(allow_accounts.split(","));
-						}else{
-							fence.allows_accounts = new ArrayList<String>();
+						
+						for(Element fenceChildElement: fenceElement.elements()){
+							if(fenceChildElement.getName().equalsIgnoreCase("allow_account")){
+								fence.allows_accounts.add(fenceChildElement.attributeValue("value"));
+							}
 						}
 						
 						SERVER_FENCES.put(fence.id, fence);
