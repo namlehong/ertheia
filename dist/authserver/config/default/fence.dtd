@@ -3,10 +3,13 @@
 <!ELEMENT server (fence)*>
 <!ATTLIST server
 	id CDATA #REQUIRED>
-<!ELEMENT fence (#PCDATA)>
+<!ELEMENT fence (allow_account)*>
 <!ATTLIST fence
 	id CDATA #REQUIRED
 	ip CDATA #REQUIRED
 	vip_ip CDATA #REQUIRED
 	allow_accounts CDATA #IMPLIED
 	port CDATA #REQUIRED>
+<!ELEMENT allow_account (#PCDATA)>
+<!ATTLIST fence
+	value CDATA #REQUIRED>
