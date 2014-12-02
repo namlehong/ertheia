@@ -87,7 +87,9 @@ class Blood {
         			if(diff > 0) // spawn more
         			{
         				//_log.info("diff > 0");
-        				FPCSpawnStatus.OFFLINE.getRandom().spawn();
+        				FPCInfo randomOffline = FPCSpawnStatus.OFFLINE.getRandom();
+        				if(randomOffline != null)
+        					randomOffline.spawn();
         			}
         			else // kick more
         			{
