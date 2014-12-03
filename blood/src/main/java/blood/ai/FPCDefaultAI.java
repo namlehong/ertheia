@@ -1256,16 +1256,20 @@ public class FPCDefaultAI extends PlayerAI
 					debug("is moving");
 					return Rnd.chance(25);
 				}
-				
+				debug("(actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) " + (actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) );
+				debug("GeoEngine.canSeeTarget(actor, target, false) " + GeoEngine.canSeeTarget(actor, target, false));
 				if ((actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) && GeoEngine.canSeeTarget(actor, target, false))
 				{
+					debug("client stop moving");
 					clientStopMoving();
 					_pathfindFails = 0;
 					setAttackTimeout(getMaxAttackTimeout() + System.currentTimeMillis());
 					
-					if(attackTime > now) 
+					if(attackTime > now)
+					{
+						debug("attackTime " + attackTime + " > now " + now);
 						return true;
-					
+					}
 					int reuse = getReuseDelay(target);
 					debug("Now: " + now + " Attack Reuse: " + reuse);
 					
