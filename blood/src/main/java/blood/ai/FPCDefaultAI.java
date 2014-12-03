@@ -1242,13 +1242,20 @@ public class FPCDefaultAI extends PlayerAI
 			{
 				Creature target = currentTask.target.get();
 				
-				if (!checkTarget(target, MAX_PURSUE_RANGE))
-					return true;
+				debug("ATTACK target " + target.getName());
 				
+				if (!checkTarget(target, MAX_PURSUE_RANGE))
+				{
+					debug("target is too far");
+					return true;
+				}
 				setAttackTarget(target);
 				
 				if (actor.isMoving)
+				{
+					debug("is moving");
 					return Rnd.chance(25);
+				}
 				
 				if ((actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) && GeoEngine.canSeeTarget(actor, target, false))
 				{
@@ -1263,7 +1270,7 @@ public class FPCDefaultAI extends PlayerAI
 					debug("Now: " + now + " Attack Reuse: " + reuse);
 					
 					attackTime = now + reuse - 75;
-					
+					debug("do attack");
 					actor.doAttack(target);
 					//set the summon attack also
 					
@@ -1279,7 +1286,7 @@ public class FPCDefaultAI extends PlayerAI
 				
 				if (actor.isMovementDisabled() || !getIsMobile())
 					return true;
-				
+				debug("try move to target");
 				tryMoveToTarget(target);
 			}
 				break;
