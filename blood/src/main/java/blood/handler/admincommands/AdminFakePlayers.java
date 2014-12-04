@@ -7,6 +7,7 @@ import l2s.gameserver.model.GameObject;
 import l2s.gameserver.model.GameObjectsStorage;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.items.ItemInstance;
+import l2s.gameserver.tables.FakePlayersTable;
 //import l2s.gameserver.tables.PetDataTable;
 //import l2s.gameserver.templates.item.ItemTemplate.Grade;
 import l2s.gameserver.utils.ItemFunctions;
@@ -162,6 +163,11 @@ public class AdminFakePlayers implements IAdminCommandHandler
 				
 			case admin_fp_check:
 				String report;
+				int totalOnline = 0;
+				int totalFPC = 0;
+				for(Player player : GameObjectsStorage.getAllPlayersForIterate())
+					totalOnline++;
+				
 				for(FPCSpawnStatus status: FPCSpawnStatus.values())
 		    	{
 					report = "Status: " + status + " size: " + status.getSize();
@@ -173,7 +179,13 @@ public class AdminFakePlayers implements IAdminCommandHandler
 		    	{
 		    		report = "Role: " + role + " size: " + role.getSize() + " quota: "+role.getQuota();
 		    		activeChar.sendMessage(report);
+		    		totalFPC += role.getSize();
 		    	}
+
+				report = "Total online: " + totalOnline + " players";
+				activeChar.sendMessage(report);
+				report = "Real player online: " + (totalOnline - totalFPC) + " players";
+				activeChar.sendMessage(report);
 				break;
 			case admin_fp_party_check:
 				GameObject target = activeChar.getTarget();
