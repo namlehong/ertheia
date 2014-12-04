@@ -149,7 +149,7 @@ public final class RequestAlchemyCombine extends L2GameClientPacket
 		long stoneCount = 0;
 		
 		long fiftyMul = (long) Math.floor(itemPrice / 50000);
-		long adenaLeft = (long) itemPrice%50000;
+		long adenaLeft = itemPrice%50000;
 		long oddStoneCount;
 		
 		if(adenaLeft < 20000) oddStoneCount = 0;
