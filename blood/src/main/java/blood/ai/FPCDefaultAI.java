@@ -1242,7 +1242,8 @@ public class FPCDefaultAI extends PlayerAI
 			{
 				Creature target = currentTask.target.get();
 				
-				debug("ATTACK target " + target.getName());
+				if(target == null)
+					return true;
 				
 				if (!checkTarget(target, MAX_PURSUE_RANGE))
 				{
@@ -1253,11 +1254,9 @@ public class FPCDefaultAI extends PlayerAI
 				
 				if (actor.isMoving)
 				{
-					debug("is moving");
 					return Rnd.chance(25);
 				}
-				debug("(actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) " + (actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) );
-				debug("GeoEngine.canSeeTarget(actor, target, false) " + GeoEngine.canSeeTarget(actor, target, false));
+				
 				if ((actor.getRealDistance3D(target) <= (actor.getPhysicalAttackRange() + 40)) && GeoEngine.canSeeTarget(actor, target, false))
 				{
 					debug("client stop moving");
