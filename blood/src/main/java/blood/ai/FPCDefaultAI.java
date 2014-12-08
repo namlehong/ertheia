@@ -1267,7 +1267,7 @@ public class FPCDefaultAI extends PlayerAI
 					if(attackTime > now)
 					{
 						debug("attackTime " + attackTime + " > now " + now);
-						//return true;
+						return true;
 					}
 					else{
 						debug("fuckyou ===================== attackTime " + attackTime + " > now " + now);
