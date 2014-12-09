@@ -227,6 +227,7 @@ public class FPCParty {
 		if(_farmLoc == null)
 		{
 			System.out.println("set loc failed");
+			System.out.println("SET FARM LOC FAIL! lv:"+_averageLevel+" leader:"+_leader);
 			return;
 		}
 		_centerLoc = getBeginLoc();
