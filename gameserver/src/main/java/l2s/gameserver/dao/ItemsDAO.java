@@ -286,6 +286,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			_log.error("Error while restoring item : " + objectId, e);
 			return null;
 		}
+		
+		if(item.getLocData() == -1){
+			_log.info("Error while restoring item : " + item);
+		}
 
 		cache.put(new Element(item.getObjectId(), item));
 
@@ -328,6 +332,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			_log.error("Error while saving item : " + item, e);
 			return;
 		}
+		
+		if(item.getLocData() == -1){
+			_log.info("Error while saving item : " + item);
+		}
 
 		cache.put(new Element(item.getObjectId(), item));
 	}
@@ -359,7 +367,7 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		}
 		
 		if(item.getLocData() == -1){
-			_log.error("Error while updating item : " + item);
+			_log.info("Error while updating item : " + item);
 		}
 
 		cache.putIfAbsent(new Element(item.getObjectId(), item));
