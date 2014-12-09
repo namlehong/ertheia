@@ -75,7 +75,6 @@ public class FPCDefaultAI extends PlayerAI
 	}
 	
 	public static final int TaskDefaultWeight = 10000;
-	public static long attackTime;
 	
 	public static class Task
 	{
@@ -298,6 +297,8 @@ public class FPCDefaultAI extends PlayerAI
 	
 	//protected long _randomAnimationEnd;
 	protected int _pathfindFails;
+	
+	public long attackTime;
 	
 	/** Список заданий */
 	protected final NavigableSet<Task> _tasks = new ConcurrentSkipListSet<Task>(TaskComparator.getInstance());
