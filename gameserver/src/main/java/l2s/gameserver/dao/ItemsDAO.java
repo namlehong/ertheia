@@ -270,6 +270,11 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 		if(ce != null)
 		{
 			item = (ItemInstance) ce.getObjectValue();
+			
+			if(item.getLocData() == -1){
+				_log.info("Error while restore cached item : " + item);
+			}
+			
 			return item;
 		}
 
