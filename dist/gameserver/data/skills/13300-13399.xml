@@ -1480,15 +1480,37 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="13339" levels="1" name="Enchant Heavy Armor Set + 6 (R-grade)">
-		<set name="magicLevel" value="1"/>
+    <skill id="13339" levels="3" name="Enchant Heavy Armor Set + 6 (R-grade)">
+		<set name="magicLevel" value="3"/>
 		<set name="icon" value="icon.skill0231"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pDef">93 93 93</table>
+		<table name="#regMp-1">32 32 32</table>
+		<table name="#regMp-2">0 32 32</table>
+		<table name="#mpConsumePhysical">0 0.93 0.93</table>
+		<table name="#reflectDebuff">0 0 5</table>
 		<for>
-			<add order="0x40" stat="pDef" value="76"/>
-			<add order="0x40" stat="regMp" value="3"/>
+			<add order="0x40" stat="pDef" value="#pDef"/>
+			<add order="0x40" stat="regMp" value="#regMp-1">
+				<and>
+					<player standing="true"/>
+				</and>
+			</add>
+			<add order="0x40" stat="regMp" value="#regMp-1">
+				<and>
+					<player resting="true"/>
+				</and>
+			</add>
+			<add order="0x40" stat="regMp" value="#regMp-2">
+				<and>
+					<player running="true"/>
+				</and>
+			</add>
+			<mul order="0x30" stat="mpConsumePhysical" value="#mpConsumePhysical"/>
+			<add order="0x40" stat="reflectPhysicDebuff" value="#reflectDebuff"/>
+			<add order="0x40" stat="reflectMagicDebuff" value="#reflectDebuff"/>
 		</for>
 	</skill>
     <!--
@@ -1517,15 +1539,40 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="13340" levels="1" name="Enchant Light Armor Set + 6 (R-grade)">
-		<set name="magicLevel" value="1"/>
+    <skill id="13340" levels="3" name="Enchant Light Armor Set + 6 (R-grade)">
+		<set name="magicLevel" value="3"/>
 		<set name="icon" value="icon.skill0233"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#mDef">55 55 55</table>
+		<table name="#pEvasRate">2 2 2</table>
+		<table name="#debuffResist">1.1 1.1 1.1</table>
+		<table name="#regMp">8 8 8</table>
+		<table name="#cooldown">0 0 0.9</table>
+		<table name="#runSpd">0 0 7</table>
+		<table name="#vamp">0 4 4</table>
 		<for>
-			<add order="0x40" stat="mDef" value="52"/>
-			<add order="0x40" stat="pEvasRate" value="3"/>
+			<add order="0x40" stat="mDef" value="#mDef"/>
+			<add order="0x40" stat="pEvasRate" value="#pEvasRate"/>
+			<mul order="0x50" stat="debuffResist" value="#debuffResist"/>
+			<add order="0x40" stat="regMp" value="#regMp">
+				<and>
+					<player standing="true"/>
+				</and>
+			</add>
+			<add order="0x40" stat="regMp" value="#regMp">
+				<and>
+					<player resting="true"/>
+				</and>
+			</add>
+			<mul order="0x30" stat="pReuse" value="#cooldown"/>
+			<mul order="0x30" stat="mReuse" value="#cooldown"/>
+			<mul order="0x30" stat="runSpd" value="#runSpd"/>
+			<add order="0x40" stat="absorbDam" value="#vamp"/>
+			<add order="0x40" stat="absorbBowDam" value="#vamp"/>
+			<add order="0x40" stat="absorbPSkillDam" value="#vamp"/>
+			<add order="0x40" stat="absorbMSkillDam" value="#vamp"/>
 		</for>
 	</skill>
     <!--
@@ -1554,15 +1601,36 @@
 		desc_add1: none
 		desc_add2: none
 	-->
-    <skill id="13341" levels="1" name="Enchant Robe Set + 6 (R-grade)">
-		<set name="magicLevel" value="1"/>
+    <skill id="13341" levels="3" name="Enchant Robe Set + 6 (R-grade)">
+		<set name="magicLevel" value="3"/>
 		<set name="icon" value="icon.skill0234"/>
 		<set name="target" value="TARGET_SELF"/>
 		<set name="skillType" value="BUFF"/>
 		<set name="operateType" value="OP_PASSIVE"/>
+		<table name="#pDef">60 60 60 </table>
+		<table name="#maxLoad">1.3 1.3 1.3</table>
+		<table name="#cooldown">0.97 0.97 0.97</table>
+		<table name="#regMp">8 8 8 </table>
+		<table name="#maxHp">0 4890 4890</table>
+		<table name="#debuffResist">0 0 1.11</table>
+		<table name="#concentration">0 0 0.462</table>
 		<for>
-			<add order="0x40" stat="pDef" value="56"/>
-			<mul order="0x30" stat="maxLoad" value="1.50"/>
+			<add order="0x40" stat="pDef" value="#pDef"/>
+			<mul order="0x30" stat="maxLoad" value="#maxLoad"/>
+			<mul order="0x30" stat="pReuse" value="#cooldown"/>
+			<mul order="0x30" stat="mReuse" value="#cooldown"/>
+			<add order="0x40" stat="regMp" value="#regMp">
+				<and>
+					<player standing="true"/>
+				</and>
+			</add>
+			<add order="0x40" stat="regMp" value="#regMp">
+				<and>
+					<player resting="true"/>
+				</and>
+			<add order="0x40" stat="maxHp" value="#maxHp">
+			<mul order="0x50" stat="debuffResist" value="#debuffResist"/>
+			<mul order="0x30" stat="concentration" value="#concentration"/>
 		</for>
 	</skill>
     <!--
