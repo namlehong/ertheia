@@ -357,6 +357,10 @@ public class ItemsDAO implements JdbcDAO<Integer, ItemInstance>
 			_log.error("Error while updating item : " + item, e);
 			return;
 		}
+		
+		if(item.getLocData() == -1){
+			_log.error("Error while updating item : " + item);
+		}
 
 		cache.putIfAbsent(new Element(item.getObjectId(), item));
 	}
