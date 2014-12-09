@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import l2s.commons.util.Rnd;
+import l2s.gameserver.Config;
+import l2s.gameserver.model.GameObjectsStorage;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.Experience;
@@ -36,6 +38,7 @@ import blood.utils.MerchantFunctions;
 
 public class FPCInfo
 {
+	private static final Object _lock = new Object();
 	private static final Logger 		_log = LoggerFactory.getLogger(FPCInfo.class);
 	// Main variables
 	private Player _actor;
@@ -283,9 +286,45 @@ public class FPCInfo
 		Player player = null;
     	try{
     		player = Player.restore(getObjectId());
+    		
+    		if(player == null)
+    		{
+    			return;
+    		}
+    		
+    		int MyObjectId = player.getObjectId();
+    		Long MyStoreId = player.getStoredId();
+
+    		synchronized (_lock)//TODO [G1ta0] че это за хуйня, и почему она тут
+    		{
+    			for(Player cha : GameObjectsStorage.getAllPlayersForIterate())
+    			{
+    				if(MyStoreId == cha.getStoredId())
+    					continue;
+    				try
+    				{
+    					if(cha.getObjectId() == MyObjectId)
+    					{
+    						_log.warn("Double EnterWorld for char: " + player.getName());
+    						cha.kick();
+    					}
+    				}
+    				catch(Exception e)
+    				{
+    					_log.error("", e);
+    				}
+    			}
+    		}
+    		
+    		player.setOnlineStatus(true);
+    		player.setNonAggroTime(Long.MAX_VALUE);
+    		player.setNonPvpTime(System.currentTimeMillis() + Config.NONPVP_TIME_ONTELEPORT);
+    		
             player.setFakePlayer();
             player.spawnMe();
     		player.setRunning();
+    		player.standUp();
+    		player.startTimers();
     		player.setHeading(Rnd.get(0, 9000));
             player.restoreExp();
             
