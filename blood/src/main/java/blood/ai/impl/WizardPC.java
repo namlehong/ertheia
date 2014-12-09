@@ -27,7 +27,7 @@ public class WizardPC extends MysticPC
 	public WizardPC(Player actor)
 	{
 		super(actor);
-		System.out.println("init new FPCWizzard");
+//		System.out.println("init new FPCWizzard");
 	}
 	
 	protected boolean isAllowClass()
