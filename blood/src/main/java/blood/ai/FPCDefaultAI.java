@@ -1269,9 +1269,7 @@ public class FPCDefaultAI extends PlayerAI
 						debug("attackTime " + attackTime + " > now " + now);
 						return true;
 					}
-					else{
-						debug("fuckyou ===================== attackTime " + attackTime + " > now " + now);
-					}
+					
 					int reuse = getReuseDelay(target);
 					debug("Now: " + now + " Attack Reuse: " + reuse);
 					
