@@ -43,7 +43,7 @@ public final class ArmorSetsParser extends AbstractFileParser<ArmorSetsHolder>
 			Element element = iterator.next();
 			if("set".equalsIgnoreCase(element.getName()))
 			{
-				String[] chests = null, legs = null, head = null, gloves = null, feet = null, shield = null, shield_skills = null, enchant6skills = null;
+				String[] chests = null, legs = null, head = null, gloves = null, feet = null, shield = null, shield_skills = null, enchant6skills = null, enchant7skills = null , enchant8skills = null;
 				if(element.attributeValue("chests") != null)
 					chests = element.attributeValue("chests").split(";");
 				if(element.attributeValue("legs") != null)
@@ -60,8 +60,12 @@ public final class ArmorSetsParser extends AbstractFileParser<ArmorSetsHolder>
 					shield_skills = element.attributeValue("shield_skills").split(";");
 				if(element.attributeValue("enchant6skills") != null)
 					enchant6skills = element.attributeValue("enchant6skills").split(";");
+				if(element.attributeValue("enchant7skills") != null)
+					enchant7skills = element.attributeValue("enchant7skills").split(";");
+				if(element.attributeValue("enchant8skills") != null)
+					enchant8skills = element.attributeValue("enchant8skills").split(";");
 
-				ArmorSet armorSet = new ArmorSet(chests, legs, head, gloves, feet, shield, shield_skills, enchant6skills);
+				ArmorSet armorSet = new ArmorSet(chests, legs, head, gloves, feet, shield, shield_skills, enchant6skills, enchant7skills, enchant8skills);
 				for(Iterator<Element> subIterator = element.elementIterator(); subIterator.hasNext();)
 				{
 					Element subElement = subIterator.next();

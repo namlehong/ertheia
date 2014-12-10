@@ -22,8 +22,10 @@ public final class ArmorSet
 	private final TIntObjectHashMap<List<Skill>> _skills = new TIntObjectHashMap<List<Skill>>();
 	private final List<Skill> _shieldSkills = new ArrayList<Skill>();
 	private final List<Skill> _enchant6skills = new ArrayList<Skill>();
+	private final List<Skill> _enchant7skills = new ArrayList<Skill>();
+	private final List<Skill> _enchant8skills = new ArrayList<Skill>();
 
-	public ArmorSet(String[] chests, String[] legs, String[] head, String[] gloves, String[] feet, String[] shield, String[] shield_skills, String[] enchant6skills)
+	public ArmorSet(String[] chests, String[] legs, String[] head, String[] gloves, String[] feet, String[] shield, String[] shield_skills, String[] enchant6skills, String[] enchant7skills, String[] enchant8skills)
 	{
 		_chests.addAll(parseItemIDs(chests));
 		_legs.addAll(parseItemIDs(legs));
@@ -56,6 +58,34 @@ public final class ArmorSet
 					int skillId = Integer.parseInt(st.nextToken());
 					int skillLvl = Integer.parseInt(st.nextToken());
 					_enchant6skills.add(SkillTable.getInstance().getInfo(skillId, skillLvl));
+				}
+			}
+		}
+		
+		if(enchant7skills != null)
+		{
+			for(String skill : enchant7skills)
+			{
+				StringTokenizer st = new StringTokenizer(skill, "-");
+				if(st.hasMoreTokens())
+				{
+					int skillId = Integer.parseInt(st.nextToken());
+					int skillLvl = Integer.parseInt(st.nextToken());
+					_enchant7skills.add(SkillTable.getInstance().getInfo(skillId, skillLvl));
+				}
+			}
+		}
+		
+		if(enchant8skills != null)
+		{
+			for(String skill : enchant8skills)
+			{
+				StringTokenizer st = new StringTokenizer(skill, "-");
+				if(st.hasMoreTokens())
+				{
+					int skillId = Integer.parseInt(st.nextToken());
+					int skillLvl = Integer.parseInt(st.nextToken());
+					_enchant8skills.add(SkillTable.getInstance().getInfo(skillId, skillLvl));
 				}
 			}
 		}
@@ -242,6 +272,17 @@ public final class ArmorSet
 	{
 		return _enchant6skills;
 	}
+	
+	public List<Skill> getEnchant7skills()
+	{
+		return _enchant7skills;
+	}
+	
+	public List<Skill> getEnchant8skills()
+	{
+		return _enchant8skills;
+	}
+	
 
 	public boolean containShield(Player player)
 	{
@@ -269,6 +310,11 @@ public final class ArmorSet
 	 */
 	public boolean isEnchanted6(Player player)
 	{
+		return isEnchantedSet(player, 6);
+	}
+	
+	public boolean isEnchantedSet(Player player, Integer min_level)
+	{
 		// Player don't have full set
 		if(!containAll(player))
 			return false;
@@ -281,15 +327,15 @@ public final class ArmorSet
 		ItemInstance glovesItem = inv.getPaperdollItem(Inventory.PAPERDOLL_GLOVES);
 		ItemInstance feetItem = inv.getPaperdollItem(Inventory.PAPERDOLL_FEET);
 
-		if(!_chests.isEmpty() && chestItem.getEnchantLevel() < 6)
+		if(!_chests.isEmpty() && chestItem.getEnchantLevel() < min_level)
 			return false;
-		if(!_legs.isEmpty() && legsItem.getEnchantLevel() < 6)
+		if(!_legs.isEmpty() && legsItem.getEnchantLevel() < min_level)
 			return false;
-		if(!_gloves.isEmpty() && glovesItem.getEnchantLevel() < 6)
+		if(!_gloves.isEmpty() && glovesItem.getEnchantLevel() < min_level)
 			return false;
-		if(!_head.isEmpty() && headItem.getEnchantLevel() < 6)
+		if(!_head.isEmpty() && headItem.getEnchantLevel() < min_level)
 			return false;
-		if(!_feet.isEmpty() && feetItem.getEnchantLevel() < 6)
+		if(!_feet.isEmpty() && feetItem.getEnchantLevel() < min_level)
 			return false;
 
 		return true;

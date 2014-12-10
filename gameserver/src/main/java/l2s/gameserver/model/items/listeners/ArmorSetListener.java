@@ -62,7 +62,19 @@ public final class ArmorSetListener implements OnEquipListener
 					}
 					if(armorSet.isEnchanted6(player)) // has all parts of set enchanted to 6 or more
 					{
-						skills = armorSet.getEnchant6skills();
+						if(armorSet.isEnchantedSet(player, 8))
+						{
+							skills = armorSet.getEnchant8skills();
+						}
+						else if (armorSet.isEnchantedSet(player, 7))
+						{
+							skills = armorSet.getEnchant7skills();
+						}
+						else
+						{
+							skills = armorSet.getEnchant6skills();
+						}
+						
 						for(Skill skill : skills)
 						{
 							player.addSkill(skill, false);
