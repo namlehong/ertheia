@@ -64,8 +64,8 @@ public class CreatureTemplate
 		_baseMEN = set.getInteger("baseMEN", 1);
 		_baseDEX = set.getInteger("baseDEX", 1);
 		_baseWIT = set.getInteger("baseWIT", 1);
-		_baseLUC = set.getInteger("baseLUC", 1);
-		_baseCHA = set.getInteger("baseCHA", 1);
+		_baseLUC = set.getInteger("baseLUC", 30);
+		_baseCHA = set.getInteger("baseCHA", 40);
 		_baseHpMax = set.getDouble("baseHpMax", 0);
 		_baseCpMax = set.getDouble("baseCpMax", 0);
 		_baseMpMax = set.getDouble("baseMpMax", 0);
