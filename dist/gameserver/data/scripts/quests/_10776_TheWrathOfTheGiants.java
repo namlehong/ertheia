@@ -86,8 +86,8 @@ public class _10776_TheWrathOfTheGiants extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("30485-6.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 20);
-			st.giveItems(SCROLL_EAC, 4);
+			st.giveItems(STEEL_DOOR_COIN, 20, true);
+			st.giveItems(SCROLL_EAC, 4, true);
 			st.addExpAndSp(4838400, 1161);
 			
 			st.setState(COMPLETED);

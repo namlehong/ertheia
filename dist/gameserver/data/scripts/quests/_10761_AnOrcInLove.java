@@ -91,7 +91,7 @@ public class _10761_AnOrcInLove extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33966-6.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 20);
+			st.giveItems(STEEL_DOOR_COIN, 20, true);
 			st.addExpAndSp(354546, 85);
 			
 			st.setState(COMPLETED);

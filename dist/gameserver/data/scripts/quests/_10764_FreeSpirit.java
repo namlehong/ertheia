@@ -74,7 +74,7 @@ public class _10764_FreeSpirit extends Quest implements ScriptFile
 			st.takeItems(MAGIC_CHAIN_KEY_BUNDLE, 1);
 			st.takeAllItems(LOOSEN_CHAIN);
 			
-			st.giveItems(STEEL_DOOR_COIN, 10);
+			st.giveItems(STEEL_DOOR_COIN, 10, true);
 			st.addExpAndSp(1312934, 315);
 			
 			st.setState(COMPLETED);

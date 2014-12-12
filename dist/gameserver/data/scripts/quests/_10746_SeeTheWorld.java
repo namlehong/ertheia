@@ -98,7 +98,7 @@ public class _10746_SeeTheWorld extends Quest implements ScriptFile
 			else
 				st.giveItems(EMISSARY_BOX_FIGHTER, 1);
 			
-			st.giveItems(ADENA_ID, 43000);
+			st.giveItems(ADENA_ID, 43000, true);
 			st.addExpAndSp(53422, 5);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

@@ -86,7 +86,7 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		{
 			st.takeItems(DOLKIN_REPORT, 1);
 			
-			st.giveItems(ADENA_ID, 48000);
+			st.giveItems(ADENA_ID, 48000, true);
 			
 			if(player.isMageClass())
 				st.giveItems(FAERON_BOX_WIZARD, 1);

@@ -599,7 +599,7 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			st.takeItems(ATELIA1, 1);
 			st.takeItems(ATELIA2, 1);
 			
-			st.giveItems(STEEL_DOOR_COIN, 400);
+			st.giveItems(STEEL_DOOR_COIN, 400, true);
 			st.giveItems(CHAOS_POMANDER, 2);
 			
 			st.setState(COMPLETED);

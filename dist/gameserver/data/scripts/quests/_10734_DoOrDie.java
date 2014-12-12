@@ -124,7 +124,7 @@ public class _10734_DoOrDie extends Quest implements ScriptFile
 					htmltext = "33943-4.htm";
 				else if(cond == 8)
 				{
-					st.giveItems(ADENA_ID, 7000);
+					st.giveItems(ADENA_ID, 7000, true);
 					st.addExpAndSp(805, 2);
 					st.setState(COMPLETED);
 					st.exitCurrentQuest(false);

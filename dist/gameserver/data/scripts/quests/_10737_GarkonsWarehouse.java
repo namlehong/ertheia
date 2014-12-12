@@ -56,7 +56,7 @@ public class _10737_GarkonsWarehouse  extends Quest implements ScriptFile
 		{
 			st.takeItems(APPRENTICE_BOX, 1);
 			
-			st.giveItems(ADENA_ID, 11000);
+			st.giveItems(ADENA_ID, 11000, true);
 			
 			if(st.getPlayer().isMageClass())
 				st.giveItems(APPRENTICE_STAFF, 1);

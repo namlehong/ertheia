@@ -84,7 +84,7 @@ public class _10756_AnInterdimensionalDraft extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33963-7.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 8);
+			st.giveItems(STEEL_DOOR_COIN, 8, true);
 			st.addExpAndSp(174222, 41);
 			
 			st.setState(COMPLETED);

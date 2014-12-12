@@ -47,7 +47,7 @@ public class _10738_AnInnerBeauty  extends Quest implements ScriptFile
 		{
 			st.takeItems(GRAKON_NOTE, 1);
 			
-			st.giveItems(ADENA_ID, 12000);
+			st.giveItems(ADENA_ID, 12000, true);
 			
 			st.addExpAndSp(2625,1);
 			

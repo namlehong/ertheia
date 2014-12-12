@@ -86,8 +86,8 @@ public class _10771_VolatilePower extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("30484-7.htm"))
 		{
 			st.takeAllItems(NORMAL_FRAGMENT_DUST);
-			st.giveItems(STEEL_DOOR_COIN, 20);
-			st.giveItems(SCROLL_EAC, 5);
+			st.giveItems(STEEL_DOOR_COIN, 20, true);
+			st.giveItems(SCROLL_EAC, 5, true);
 			st.addExpAndSp(2708350, 650);
 			
 			st.setState(COMPLETED);

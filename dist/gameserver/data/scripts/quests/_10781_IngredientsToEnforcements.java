@@ -79,8 +79,8 @@ public class _10781_IngredientsToEnforcements extends Quest implements ScriptFil
 		if(event.equalsIgnoreCase("33846-6.htm"))
 		{
 			st.takeAllItems(WIND_SPIRIT_FRAGMENT);
-			st.giveItems(STEEL_DOOR_COIN, 37);
-			st.giveItems(SCROLL_EWB, 5);
+			st.giveItems(STEEL_DOOR_COIN, 37, true);
+			st.giveItems(SCROLL_EWB, 5, true);
 			st.addExpAndSp(3811500, 914);
 			
 			st.setState(COMPLETED);

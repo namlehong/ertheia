@@ -134,8 +134,8 @@ public class _10735_ASpecialPower extends Quest implements ScriptFile
 			
 			if(cond == 7)
 			{
-				st.giveItems(ADENA_ID, 900);
-				st.giveItems(SPIRITSHOT, 500);
+				st.giveItems(ADENA_ID, 900, true);
+				st.giveItems(SPIRITSHOT, 500, true);
 				st.addExpAndSp(3154, 0);
 				st.setState(COMPLETED);
 				st.exitCurrentQuest(false);

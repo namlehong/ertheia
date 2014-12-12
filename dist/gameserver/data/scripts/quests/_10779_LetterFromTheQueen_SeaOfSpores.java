@@ -156,8 +156,8 @@ public class _10779_LetterFromTheQueen_SeaOfSpores extends Quest implements Scri
 		
 		if(event.equalsIgnoreCase("33845-2.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 37);
-			st.giveItems(SCROLL_EWB, 3);
+			st.giveItems(STEEL_DOOR_COIN, 37, true);
+			st.giveItems(SCROLL_EWB, 3, true);
 			st.addExpAndSp(635250, 152);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

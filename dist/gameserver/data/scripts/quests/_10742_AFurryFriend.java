@@ -144,7 +144,7 @@ public class _10742_AFurryFriend extends Quest implements ScriptFile
 			}
 			else if(cond == 2)
 			{
-				st.giveItems(ADENA_ID, 2000);
+				st.giveItems(ADENA_ID, 2000, true);
 				st.addExpAndSp(22973, 2);
 				
 				st.setState(COMPLETED);

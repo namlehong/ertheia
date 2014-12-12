@@ -153,7 +153,7 @@ public class _10760_LettersFromTheQueen_OrcBarrack extends Quest implements Scri
 		
 		if(event.equalsIgnoreCase("30597-3.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 5);
+			st.giveItems(STEEL_DOOR_COIN, 5, true);
 			st.addExpAndSp(242760, 58);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

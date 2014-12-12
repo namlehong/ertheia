@@ -42,7 +42,7 @@ public class _10732_AForeignLand extends Quest implements ScriptFile
 		}
 		else if(event.equalsIgnoreCase("33932-2.htm"))
 		{
-			st.giveItems(ADENA_ID, 3000);
+			st.giveItems(ADENA_ID, 3000, true);
 			st.addExpAndSp(75, 2);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

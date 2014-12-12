@@ -75,8 +75,8 @@ public class _10777_ReportsFromCrumaTowerPart2 extends Quest implements ScriptFi
 		
 		if(event.equalsIgnoreCase("30485-8.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 4);
-			st.giveItems(SCROLL_EAC, 2);
+			st.giveItems(STEEL_DOOR_COIN, 4, true);
+			st.giveItems(SCROLL_EAC, 2, true);
 			st.addExpAndSp(151263, 36);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

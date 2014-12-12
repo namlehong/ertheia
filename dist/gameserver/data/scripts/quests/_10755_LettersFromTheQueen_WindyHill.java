@@ -153,7 +153,7 @@ public class _10755_LettersFromTheQueen_WindyHill extends Quest implements Scrip
 		
 		if(event.equalsIgnoreCase("33963-3.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 5);
+			st.giveItems(STEEL_DOOR_COIN, 5, true);
 			st.addExpAndSp(120960, 29);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

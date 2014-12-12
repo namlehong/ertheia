@@ -85,7 +85,7 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 		{
 			st.takeAllItems(MUSHROOM_SPORE);
 			
-			st.giveItems(ADENA_ID, 62000);
+			st.giveItems(ADENA_ID, 62000, true);
 			st.giveItems(LEATHER_SHOES, 1);
 			st.addExpAndSp(62876, 2);
 			

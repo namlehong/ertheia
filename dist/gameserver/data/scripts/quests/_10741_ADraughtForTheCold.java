@@ -83,7 +83,7 @@ public class _10741_ADraughtForTheCold extends Quest implements ScriptFile
 			st.takeAllItems(SWEET_HONEY);
 			st.takeAllItems(NUTRITIOUS_MEAT);
 			
-			st.giveItems(ADENA_ID, 2000);
+			st.giveItems(ADENA_ID, 2000, true);
 			st.addExpAndSp(22973, 2);
 			
 			st.setState(COMPLETED);

@@ -157,9 +157,9 @@ public class _10769_LettersFromTheQueenCrumaTowerPart1 extends Quest implements 
 		
 		if(event.equalsIgnoreCase("30673-3.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 11);
-			st.giveItems(SCROLL_EWC, 1);
-			st.giveItems(SCROLL_EAC, 1);
+			st.giveItems(STEEL_DOOR_COIN, 11, true);
+			st.giveItems(SCROLL_EWC, 1, true);
+			st.giveItems(SCROLL_EAC, 1, true);
 			st.addExpAndSp(370440, 88);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

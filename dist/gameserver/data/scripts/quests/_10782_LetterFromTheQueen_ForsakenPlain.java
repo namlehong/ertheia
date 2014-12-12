@@ -156,8 +156,8 @@ public class _10782_LetterFromTheQueen_ForsakenPlain extends Quest implements Sc
 		
 		if(event.equalsIgnoreCase("33866-2.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 60);
-			st.giveItems(SCROLL_EAB, 10);
+			st.giveItems(STEEL_DOOR_COIN, 60, true);
+			st.giveItems(SCROLL_EAB, 10, true);
 			st.addExpAndSp(731010, 175);
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);

@@ -81,7 +81,7 @@ public class _10757_QuietingTheStorm extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33963-7.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 7);
+			st.giveItems(STEEL_DOOR_COIN, 7, true);
 			st.addExpAndSp(632051, 151);
 			
 			st.setState(COMPLETED);

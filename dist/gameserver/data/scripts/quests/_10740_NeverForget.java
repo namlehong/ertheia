@@ -109,8 +109,8 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 			
 			if(cond == 3)
 			{
-				st.giveItems(ADENA_ID, 1600);
-				st.giveItems(HEALING_POTION, 100);
+				st.giveItems(ADENA_ID, 1600, true);
+				st.giveItems(HEALING_POTION, 100, true);
 				st.giveItems(KNOWLEDGE_RING, 2);
 				st.addExpAndSp(16851, 0);
 				st.setState(COMPLETED);

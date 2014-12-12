@@ -86,7 +86,7 @@ public class _10758_TheOathOfTheWind extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33963-5.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 3);
+			st.giveItems(STEEL_DOOR_COIN, 3, true);
 			st.addExpAndSp(561645, 134);
 			
 			st.setState(COMPLETED);

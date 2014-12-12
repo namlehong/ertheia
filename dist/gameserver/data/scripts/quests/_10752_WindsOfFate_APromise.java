@@ -312,8 +312,8 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 			
 			st.takeItems(KAIN_PROPHERCY_MACHINE_FRAGMENT, 1);
 			
-			st.giveItems(STEEL_DOOR_COIN, 87);
-			st.giveItems(ADENA_ID, 5000000);
+			st.giveItems(STEEL_DOOR_COIN, 87, true);
+			st.giveItems(ADENA_ID, 5000000, true);
 			st.giveItems(st.getInt("soulcrystal"), 1);
 			st.addExpAndSp(2050000, 0);
 			st.setState(COMPLETED);

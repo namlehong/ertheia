@@ -125,7 +125,7 @@ public class _10744_StrongerThanSteel extends Quest implements ScriptFile
 				st.takeAllItems(LEAFIE_LEAF);
 				st.takeAllItems(TREANT_LEAF);
 				
-				st.giveItems(ADENA_ID, 34000);
+				st.giveItems(ADENA_ID, 34000, true);
 				st.addExpAndSp(112001, 5);
 				
 				st.setState(COMPLETED);

@@ -81,8 +81,8 @@ public class _10784_TheBrokenDevices extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33866-6.htm"))
 		{
 			st.takeAllItems(BROKEN_MAGIC_DEVICE_FRAGMENT);
-			st.giveItems(STEEL_DOOR_COIN, 40);
-			st.giveItems(SCROLL_EAB, 5);
+			st.giveItems(STEEL_DOOR_COIN, 40, true);
+			st.giveItems(SCROLL_EAB, 5, true);
 			st.addExpAndSp(6579090, 1578);
 			
 			st.setState(COMPLETED);

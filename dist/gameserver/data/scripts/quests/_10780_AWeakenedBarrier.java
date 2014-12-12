@@ -88,8 +88,8 @@ public class _10780_AWeakenedBarrier extends Quest implements ScriptFile
 		
 		if(event.equalsIgnoreCase("33846-2.htm"))
 		{
-			st.giveItems(STEEL_DOOR_COIN, 37);
-			st.giveItems(SCROLL_EWB, 5);
+			st.giveItems(STEEL_DOOR_COIN, 37, true);
+			st.giveItems(SCROLL_EWB, 5, true);
 			st.addExpAndSp(3811500, 914);
 			
 			st.setState(COMPLETED);

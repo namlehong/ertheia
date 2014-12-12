@@ -85,8 +85,8 @@ public class _10783_TracesOfAnAmbush extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("33866-6.htm"))
 		{
 			st.takeAllItems(MISSIVE_SCRAP);
-			st.giveItems(STEEL_DOOR_COIN, 34);
-			st.giveItems(SCROLL_EAB, 5);
+			st.giveItems(STEEL_DOOR_COIN, 34, true);
+			st.giveItems(SCROLL_EAB, 5, true);
 			st.addExpAndSp(5482574, 1315);
 			
 			st.setState(COMPLETED);

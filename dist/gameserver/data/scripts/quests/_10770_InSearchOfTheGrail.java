@@ -84,9 +84,9 @@ public class _10770_InSearchOfTheGrail extends Quest implements ScriptFile
 		if(event.equalsIgnoreCase("30484-2.htm"))
 		{
 			st.takeAllItems(SHINING_MYSTERIOUS_FRAGMENT);
-			st.giveItems(STEEL_DOOR_COIN, 30);
-			st.giveItems(SCROLL_EWC, 2);
-			st.giveItems(SCROLL_EAC, 5);
+			st.giveItems(STEEL_DOOR_COIN, 30, true);
+			st.giveItems(SCROLL_EWC, 2, true);
+			st.giveItems(SCROLL_EAC, 5, true);
 			st.addExpAndSp(2342300, 562);
 			
 			st.setState(COMPLETED);
