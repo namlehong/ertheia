@@ -55,6 +55,64 @@ public class SupportMagic extends Functions
 			{40, 75, 5632, 1}, // haste 2
 	};
 
+	public static void getSupportMagic(NpcInstance npc, Player player, boolean servitor)
+	{
+		int lvl = player.getLevel();
+
+		List<Creature> target = new ArrayList<Creature>();
+
+		if(servitor)
+		{
+			Servitor[] servitors = player.getServitors();
+			if(servitors.length > 0)
+			{
+				for(Servitor s : servitors)
+				{
+					if(!s.isSummon())
+						continue;
+
+					target.add(s);
+					for(int[] buff : _summonBuff)
+					{
+						if(lvl >= buff[0] && lvl <= buff[1])
+						{
+							npc.broadcastPacket(new MagicSkillUse(npc, s, buff[2], buff[3], 0, 0));
+							npc.callSkill(SkillTable.getInstance().getInfo(buff[2], buff[3]), target, true);
+						}
+					}
+					target.clear();
+				}
+			}
+		}
+		else
+		{
+			target.add(player);
+
+			if(!player.isMageClass() || player.getTemplate().getRace() == Race.ORC)
+			{
+				for(int[] buff : _warrBuff)
+				{
+					if(lvl >= buff[0] && lvl <= buff[1])
+					{
+						npc.broadcastPacket(new MagicSkillUse(npc, player, buff[2], buff[3], 0, 0));
+						npc.callSkill(SkillTable.getInstance().getInfo(buff[2], buff[3]), target, true);
+					}
+				}
+			}
+			else
+			{
+				for(int[] buff : _mageBuff)
+				{
+					if(lvl >= buff[0] && lvl <= buff[1])
+					{
+						npc.broadcastPacket(new MagicSkillUse(npc, player, buff[2], buff[3], 0, 0));
+						npc.callSkill(SkillTable.getInstance().getInfo(buff[2], buff[3]), target, true);
+					}
+				}
+			}
+		}
+	}
+	
 	public static void doSupportMagic(NpcInstance npc, Player player, boolean servitor)
 	{
 		int lvl = player.getLevel();
