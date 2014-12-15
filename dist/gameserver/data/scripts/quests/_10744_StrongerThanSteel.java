@@ -26,7 +26,7 @@ public class _10744_StrongerThanSteel extends Quest implements ScriptFile
 	private final static int TREANT_LEAF  = 39532;
 	
 	private static final int minLevel = 10;
-	private static final int maxLevel = 20;
+	private static final int maxLevel = 40;
 	
 	@Override
 	public void onLoad()
