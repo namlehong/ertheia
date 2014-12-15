@@ -105,6 +105,7 @@ public class _10740_NeverForget extends Quest implements ScriptFile
 			if(cond == 1)
 			{
 				htmltext = "33951-4.htm";
+				st.setCond(2);
 			}
 			
 			if(cond == 3)
