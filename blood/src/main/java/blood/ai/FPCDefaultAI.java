@@ -1647,6 +1647,9 @@ public class FPCDefaultAI extends PlayerAI
 
 		Player actor = getActor();
 		
+		if(actor == null || target == null)
+			return false;
+		
 		if ((skill == null) || skill.isNotUsedByAI())
 		{
 			return false;
