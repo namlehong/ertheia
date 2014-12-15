@@ -37,7 +37,7 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 	private final static int FAERON_BOX_FIGHTER = 40262;
 	
 	private static final int minLevel = 10;
-	private static final int maxLevel = 20;
+	private static final int maxLevel = 40;
 	
 	@Override
 	public void onLoad()
