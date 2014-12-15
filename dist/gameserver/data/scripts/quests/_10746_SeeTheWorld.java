@@ -5,10 +5,6 @@ import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
-import l2s.gameserver.network.l2.components.NpcString;
-import l2s.gameserver.network.l2.components.UsmVideo;
-import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
-import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import l2s.gameserver.scripts.ScriptFile;
 
 /**

@@ -1,5 +1,6 @@
 package quests;
 
+import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.ItemInstance;
@@ -21,6 +22,7 @@ import l2s.gameserver.network.l2.s2c.MagicSkillUse;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
+import l2s.gameserver.utils.Language;
 
 /**
  * @author Hien Son
@@ -49,10 +51,10 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 	private static final int minLevel = 38;
 	private static final int maxLevel = 99;
 	
-	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari";
-	private static final String CHECK_TELESHA_CORPSE = "Kiểm tra xác của Telesha";
-	private static final String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
-	private static final String RETURN_GLUDIO = "Hãy trở về thị trấn Gludio";
+	private static String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari";
+	private static String CHECK_TELESHA_CORPSE = "Kiểm tra xác của Telesha";
+	private static String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
+	private static String RETURN_GLUDIO = "Hãy trở về thị trấn Gludio";
 
 	private static final String SKELETON_KILL_LIST = "skeleton_kill_list";
 	
@@ -98,6 +100,15 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 		
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
+		
+		if(Config.DEFAULT_LANG != Language.VIETNAMESE)
+		{
+			LETTER_ALERT_STRING = "You received letter from Queen Navari";
+			CHECK_TELESHA_CORPSE = "Check Telesha's corpse";
+			TALK_TO_WIZARD = "Talk to Mysterious Wizard";
+			RETURN_GLUDIO = "Return to Town of Gludio";
+		}
+		
 	}
 
 	@Override
@@ -379,7 +390,14 @@ public class _10751_WindOfFate_Encounters extends Quest implements ScriptFile, O
 			{
 				int count = st.getInt(SKELETON_KILL_LIST);
 				count++;
-				st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn tiêu diệt được " + count + " Skeleton", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
+				if(Config.DEFAULT_LANG == Language.VIETNAMESE)
+				{
+					st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn tiêu diệt được " + count + " Skeleton", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
+				}
+				else
+				{
+					st.getPlayer().sendPacket(new ExShowScreenMessage("You have killed " + count + " Skeleton", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
+				}
 				
 			}
 		if(updateKill(npc, st))

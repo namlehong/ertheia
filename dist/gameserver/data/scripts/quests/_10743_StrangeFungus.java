@@ -1,5 +1,6 @@
 package quests;
 
+import l2s.gameserver.Config;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.entity.Reflection;
@@ -15,6 +16,7 @@ import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
 import l2s.gameserver.network.l2.components.ChatType;
 import l2s.gameserver.network.l2.components.NpcString;
+import l2s.gameserver.utils.Language;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
 import l2s.gameserver.utils.ReflectionUtils;
@@ -92,7 +94,14 @@ public class _10743_StrangeFungus extends Quest implements ScriptFile
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
-			player.sendPacket(new ExShowScreenMessage("Bạn nhận được Leather Shoes, kiểm tra thùng đồ nhé", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			if(Config.DEFAULT_LANG == Language.VIETNAMESE)
+			{
+				player.sendPacket(new ExShowScreenMessage("Bạn nhận được Leather Shoes, kiểm tra thùng đồ nhé", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
+			else
+			{
+				player.sendPacket(new ExShowScreenMessage("You received Leather Shoes, check the inventory", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
 			
 		}
 		

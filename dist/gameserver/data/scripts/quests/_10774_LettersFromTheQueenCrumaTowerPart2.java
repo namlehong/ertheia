@@ -1,23 +1,21 @@
 package quests;
 
+import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
+import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
+import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
+import l2s.gameserver.model.Player;
+import l2s.gameserver.model.actor.listener.CharListenerList;
+import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.items.PcInventory;
-import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
-import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
-import l2s.gameserver.model.Creature;
-import l2s.gameserver.model.Player;
-import l2s.gameserver.model.actor.listener.CharListenerList;
-import l2s.gameserver.model.base.ClassId;
-import l2s.gameserver.model.base.ClassLevel;
-import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
-import l2s.gameserver.network.l2.s2c.ExCallToChangeClass;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
+import l2s.gameserver.utils.Language;
 
 /**
  * @author Hien Son
@@ -38,8 +36,8 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 	private static final int minLevel = 46;
 	private static final int maxLevel = 50;
 	
-	private static final String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
-	private static final String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 52.\nNữ Hoàng Navari sẽ gửi bức thư tiếp theo";
+	private static String LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Nữ Hoàng Navari.";
+	private static String NEXT_LETTER_STRING = "Hãy cố gắng ở đây và tập luyện tới level 52.\nNữ Hoàng Navari sẽ gửi bức thư tiếp theo";
 	
 	@Override
 	public void onLoad()
@@ -66,6 +64,12 @@ public class _10774_LettersFromTheQueenCrumaTowerPart2 extends Quest implements 
 
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
+		
+		if(Config.DEFAULT_LANG != Language.VIETNAMESE)
+		{
+			LETTER_ALERT_STRING = "You received letter from Queen Navari";
+			NEXT_LETTER_STRING = "Stay here and train until level 52.\nQueen Navari will send you next letter";
+		}
 	}
 
 	@Override

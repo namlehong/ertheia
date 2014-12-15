@@ -1,5 +1,6 @@
 package quests;
 
+import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.items.ItemInstance;
@@ -20,6 +21,7 @@ import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.ScriptFile;
+import l2s.gameserver.utils.Language;
 import l2s.gameserver.utils.Location;
 
 /**
@@ -57,11 +59,11 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 	private static final int minLevel = 76;
 	private static final int maxLevel = 99;
 	
-	private static final String KATALIN_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Katalin";
-	private static final String AYANTHE_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Ayanthe";
-	private static final String TALK_TO_GHOST = "Hãy nói chuyện với hồn ma của Von Hellmann";
-	private static final String MOVE_TO_NEXT_PLACE = "Hãy tới nơi mà Von Hellmann đã kể";
-	private static final String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
+	private static String KATALIN_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Katalin";
+	private static String AYANTHE_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Ayanthe";
+	private static String TALK_TO_GHOST = "Hãy nói chuyện với hồn ma của Von Hellmann";
+	private static String MOVE_TO_NEXT_PLACE = "Hãy tới nơi mà Von Hellmann đã kể";
+	private static String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
 
 	private static final String VAMPIRIC_SOLDIER_KILL_LIST = "vamp_kill_list";
 	
@@ -100,6 +102,15 @@ public class _10752_WindsOfFate_APromise extends Quest implements ScriptFile, On
 		
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
+		
+		if(Config.DEFAULT_LANG != Language.VIETNAMESE)
+		{
+			KATALIN_LETTER_ALERT_STRING = "You received letter from Katalin";
+			AYANTHE_LETTER_ALERT_STRING = "You received letter from Ayanthe";
+			TALK_TO_GHOST = "Talk to the ghost of Von Hellmann";
+			MOVE_TO_NEXT_PLACE = "Let's go to the place Von Hellmann mentioned";
+			TALK_TO_WIZARD = "Talk to Mysterious Wizard";
+		}
 	}
 
 	@Override

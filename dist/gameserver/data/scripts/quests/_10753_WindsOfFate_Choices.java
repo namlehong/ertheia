@@ -3,34 +3,32 @@ package quests;
 import java.util.ArrayList;
 import java.util.List;
 
-import ai.chamber_of_prophecies.NpcHealerAI;
-import ai.chamber_of_prophecies.NpcWarriorAI;
-import l2s.commons.util.Rnd;
 import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.QuestManager;
-import l2s.gameserver.model.instances.DoorInstance;
-import l2s.gameserver.model.instances.NpcInstance;
-import l2s.gameserver.model.items.ItemInstance;
-import l2s.gameserver.model.items.PcInventory;
 import l2s.gameserver.listener.actor.player.OnLevelChangeListener;
 import l2s.gameserver.listener.actor.player.OnPlayerEnterListener;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.World;
-import l2s.gameserver.model.WorldRegion;
 import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.entity.Reflection;
+import l2s.gameserver.model.instances.DoorInstance;
+import l2s.gameserver.model.instances.NpcInstance;
+import l2s.gameserver.model.items.ItemInstance;
+import l2s.gameserver.model.items.PcInventory;
 import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
-import l2s.gameserver.network.l2.components.NpcString;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExShowScreenMessage;
 import l2s.gameserver.network.l2.s2c.SocialActionPacket;
 import l2s.gameserver.network.l2.s2c.TutorialCloseHtmlPacket;
 import l2s.gameserver.scripts.Functions;
 import l2s.gameserver.scripts.ScriptFile;
+import l2s.gameserver.utils.Language;
 import l2s.gameserver.utils.Location;
+import ai.chamber_of_prophecies.NpcHealerAI;
+import ai.chamber_of_prophecies.NpcWarriorAI;
 
 /**
  * @author Hien Son
@@ -91,10 +89,10 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 	private static final int minLevel = 85;
 	private static final int maxLevel = 99;
 	
-	private static final String KATALIN_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Katalin";
-	private static final String AYANTHE_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Ayanthe";
-	private static final String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
-	private static final String CHOICE_NOT_REVERSABLE = "Hãy chọn kỹ, lựa chọn này không thể thay đổi";
+	private static String KATALIN_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Katalin";
+	private static String AYANTHE_LETTER_ALERT_STRING = "Bạn vừa nhận được thư từ Ayanthe";
+	private static String TALK_TO_WIZARD = "Hãy nói chuyện với Mysterious Wizard";
+	private static String CHOICE_NOT_REVERSABLE = "Hãy chọn kỹ, lựa chọn này không thể thay đổi";
 	
 	NpcInstance ferin_healer_instance = null;
 	NpcInstance kain_fighter_instance = null;
@@ -151,6 +149,14 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 		
 		addLevelCheck(minLevel, maxLevel);
 		addRaceCheck(false, false, false, false, false, false, true);
+		
+		if(Config.DEFAULT_LANG != Language.VIETNAMESE)
+		{
+			KATALIN_LETTER_ALERT_STRING = "You received letter from Katalin";
+			AYANTHE_LETTER_ALERT_STRING = "You received letter from Ayanthe";
+			TALK_TO_WIZARD = "Talk to Mysterious Wizard";
+			CHOICE_NOT_REVERSABLE = "Choose carefully as this choice is irreversible";
+		}
 	}
 
 	@Override
@@ -164,7 +170,6 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 
 		//System.out.println("quest event " + event.toString());
 		
-		int classId = player.getClassId().getId();
 		if(event.startsWith("UC"))
 		{
 			if(checkStartCondition(player))
@@ -370,7 +375,14 @@ public class _10753_WindsOfFate_Choices extends Quest implements ScriptFile, OnP
 			else
 			{
 				//time is up
-				player.sendPacket(new ExShowScreenMessage("Hết giờ!", 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+				if(Config.DEFAULT_LANG != Language.VIETNAMESE)
+				{
+					player.sendPacket(new ExShowScreenMessage("Hết giờ!", 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+				}
+				else
+				{
+					player.sendPacket(new ExShowScreenMessage("Time's up!", 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+				}
 				st.unset("box_duration");
 				st.takeAllItems(ATHREA_BELONGINGS);
 			}

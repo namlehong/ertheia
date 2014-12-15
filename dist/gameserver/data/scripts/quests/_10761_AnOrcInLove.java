@@ -1,5 +1,6 @@
 package quests;
 
+import l2s.gameserver.Config;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.entity.Reflection;
@@ -15,6 +16,7 @@ import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
 import l2s.gameserver.network.l2.components.ChatType;
 import l2s.gameserver.network.l2.components.NpcString;
+import l2s.gameserver.utils.Language;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
 import l2s.gameserver.utils.ReflectionUtils;
@@ -154,7 +156,14 @@ public class _10761_AnOrcInLove extends Quest implements ScriptFile
 			npcId == TUREK_ORC_ELDER)
 		{
 			int count = st.getInt(TUREK_KILL_LIST);
-			st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn giết được " + count + " Turek Orc", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
+			if(Config.DEFAULT_LANG != Language.VIETNAMESE)
+			{
+				st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn giết được " + count + " Turek Orc", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
+			}
+			else
+			{	
+				st.getPlayer().sendPacket(new ExShowScreenMessage("You killed " + count + " Turek Orc", 2000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, false));
+			}
 			
 		}
 		

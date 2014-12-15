@@ -1,5 +1,6 @@
 package quests;
 
+import l2s.gameserver.Config;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.Race;
 import l2s.gameserver.model.entity.Reflection;
@@ -13,6 +14,7 @@ import l2s.gameserver.network.l2.s2c.ExShowScreenMessage.ScreenMessageAlign;
 import l2s.gameserver.network.l2.s2c.TutorialShowHtmlPacket;
 import l2s.gameserver.network.l2.components.ChatType;
 import l2s.gameserver.network.l2.components.NpcString;
+import l2s.gameserver.utils.Language;
 import l2s.gameserver.utils.Location;
 import l2s.gameserver.utils.NpcUtils;
 import l2s.gameserver.utils.ReflectionUtils;
@@ -97,7 +99,14 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 			st.setState(COMPLETED);
 			st.exitCurrentQuest(false);
 			st.playSound(SOUND_FINISH);
-			st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn vừa nhận được trang bị mới, kiểm tra thùng đồ để sử dụng.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			if(Config.DEFAULT_LANG == Language.VIETNAMESE)
+			{
+				st.getPlayer().sendPacket(new ExShowScreenMessage("Bạn vừa nhận được trang bị mới, kiểm tra thùng đồ để sử dụng.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
+			else
+			{
+				st.getPlayer().sendPacket(new ExShowScreenMessage("You received new items, check your inventory.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
 			
 		}
 		
@@ -159,7 +168,14 @@ public class _10745_TheSecretIngredient extends Quest implements ScriptFile
 		if(npc.getNpcId() == KERAPHON)
 		{
 			st.giveItems(SECRET_INGREDIENT, 1);
-			st.getPlayer().sendPacket(new ExShowScreenMessage("Nói chuyện với Dolkin để ra khỏi tổ Keraphon.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			if(Config.DEFAULT_LANG == Language.VIETNAMESE)
+			{
+				st.getPlayer().sendPacket(new ExShowScreenMessage("Nói chuyện với Dolkin để ra khỏi tổ Keraphon.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
+			else
+			{
+				st.getPlayer().sendPacket(new ExShowScreenMessage("Talk to Dolkin to escape Keraphon's habitat.", 7000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true));
+			}
 			
 		}
 		
